@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ClassLibrary",
+    "\\ProyectoBasesI"
   ],
-  "SelectedNode": "\\C:\\Users\\inmun\\Source\\Repos\\abadillo\\bases-uno",
+  "SelectedNode": "\\ClassLibrary\\ClassLibrary.csproj",
   "PreviewInSolutionExplorer": false
 }
