@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bases-uno", "bases-uno.csproj", "{87B95ED7-7E07-4764-B3BB-98B3B39A176D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bases-uno", "bases-uno.csproj", "{87B95ED7-7E07-4764-B3BB-98B3B39A176D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "..\ClassLibrary\ClassLibrary.csproj", "{B0B7D544-90FD-42B4-B04D-78E4D9B80D74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{87B95ED7-7E07-4764-B3BB-98B3B39A176D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B95ED7-7E07-4764-B3BB-98B3B39A176D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B95ED7-7E07-4764-B3BB-98B3B39A176D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B7D544-90FD-42B4-B04D-78E4D9B80D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B7D544-90FD-42B4-B04D-78E4D9B80D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B7D544-90FD-42B4-B04D-78E4D9B80D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B7D544-90FD-42B4-B04D-78E4D9B80D74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
