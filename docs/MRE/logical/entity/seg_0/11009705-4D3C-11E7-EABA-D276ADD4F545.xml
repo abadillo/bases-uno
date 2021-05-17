@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0DFE761D-AB15-7281-60B7-E08FF2BF4B36" name="Subasta">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="11009705-4D3C-11E7-EABA-D276ADD4F545" name="info">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-15 16:57:49 UTC</createdTime>
+<createdTime>2021-05-17 23:08:30 UTC</createdTime>
 <ownerDesignName>MRE</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -15,9 +15,20 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="fecha" id="B52BF230-5657-8676-B943-43B76984AEE5">
+<Attribute name="significado" id="28686C14-438B-9551-98D9-DF36DE95770C">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 22:23:11 UTC</createdTime>
+<createdTime>2021-05-17 23:36:21 UTC</createdTime>
+<ownerDesignName>MRE</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio" id="C106441C-ED04-8D1B-AF72-BF1A6A33B09B">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 23:43:42 UTC</createdTime>
 <ownerDesignName>MRE</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>

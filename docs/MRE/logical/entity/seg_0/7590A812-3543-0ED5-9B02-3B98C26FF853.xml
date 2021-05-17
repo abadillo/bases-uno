@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0DFE761D-AB15-7281-60B7-E08FF2BF4B36" name="Subasta">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7590A812-3543-0ED5-9B02-3B98C26FF853" name="presencial">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-15 16:57:49 UTC</createdTime>
+<createdTime>2021-05-17 23:18:21 UTC</createdTime>
 <ownerDesignName>MRE</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -11,13 +11,14 @@
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
 <growthPercent>0</growthPercent>
 <growthType>Year</growthType>
+<hierarchicalParent>0DFE761D-AB15-7281-60B7-E08FF2BF4B36</hierarchicalParent>
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="fecha" id="B52BF230-5657-8676-B943-43B76984AEE5">
+<Attribute name="lugar" id="A8F6AB37-5E4B-70C1-5475-0C2175C3DCEF">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 22:23:11 UTC</createdTime>
+<createdTime>2021-05-17 23:19:58 UTC</createdTime>
 <ownerDesignName>MRE</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>

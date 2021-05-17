@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6F58C64C-8117-626F-58A9-ACC2852CA2E6" name="Articulo">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4A557823-75E4-EF80-FF6E-AB3D332CB618" name="historico">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-15 16:57:27 UTC</createdTime>
+<createdTime>2021-05-17 22:22:11 UTC</createdTime>
 <ownerDesignName>MRE</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="nombre" id="4FE37B36-0AFF-FFB6-581F-D658FDAD5280">
+<Attribute name="precio" id="8C2C480B-A43C-BABF-AF48-015C1E226D9C">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-15 16:57:42 UTC</createdTime>
+<createdTime>2021-05-17 22:22:17 UTC</createdTime>
 <ownerDesignName>MRE</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -26,9 +26,20 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="caract_generales" id="F341041C-8289-6D7B-3147-2C6BCB24E5DD">
+<Attribute name="tiempo" id="272401E5-F4CE-4D13-9F46-4EA5BC1728A4">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 23:05:55 UTC</createdTime>
+<createdTime>2021-05-17 23:36:40 UTC</createdTime>
+<ownerDesignName>MRE</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estatus" id="9ED284F0-9C31-B9BC-7DB2-04564191BF73">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 23:49:36 UTC</createdTime>
 <ownerDesignName>MRE</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
