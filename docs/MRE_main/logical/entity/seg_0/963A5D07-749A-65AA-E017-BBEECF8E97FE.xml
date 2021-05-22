@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="963A5D07-749A-65AA-E017-BBEECF8E97FE" name="Coleccionista">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 21:57:48 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cedula" id="40A862D8-0326-6263-AEB2-A6BDBA75AE4C">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:00:58 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="edad" id="13C59153-0275-DE19-E905-C5CA55507F51">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:00:28 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="p_nombre" id="8CE9D1F6-E9D3-D500-3400-4EE049E9E5ED">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:00:34 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="s_nombre" id="3ED5204A-2F10-FC0A-E484-6C37F4440EFB">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:00:44 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="p_apellido" id="15CE5A66-9CDF-AD1F-425E-C2AAEB6D8CDF">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:00:48 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="s_apellido" id="7999C205-3DDE-5198-C3DF-E89009690DAC">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:00:55 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nacionalidad" id="780763E6-A8E8-CA71-6838-98A516C27AF3">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:27:19 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="34C33B4C-C31A-7B6A-66CE-53FA40C506BD">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:27:59 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="03CF64FA-7183-EB3B-0B9D-EF1751CAB52C">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:28:06 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F4B81E89-5059-65A7-7691-479434CCCF0E" name="Coleccionista PK">
+<createdBy>Frank</createdBy>
+<createdTime>2021-05-22 02:40:31 UTC</createdTime>
+<ownerDesignName>MRE_main</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
