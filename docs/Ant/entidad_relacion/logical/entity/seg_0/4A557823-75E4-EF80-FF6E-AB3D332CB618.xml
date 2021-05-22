@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4A557823-75E4-EF80-FF6E-AB3D332CB618" name="historico">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:22:11 UTC</createdTime>
+<ownerDesignName>entidad_relacion</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="precio_base_dolar" id="8C2C480B-A43C-BABF-AF48-015C1E226D9C">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:22:17 UTC</createdTime>
+<ownerDesignName>entidad_relacion</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estatus" id="9ED284F0-9C31-B9BC-7DB2-04564191BF73">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 23:49:36 UTC</createdTime>
+<ownerDesignName>entidad_relacion</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_hora" id="1038CB54-5F08-54B9-24A2-56D0245E5C1C">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-22 19:59:54 UTC</createdTime>
+<ownerDesignName>entidad_relacion</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="significado" id="E7D34554-9D56-2CF9-226C-6E210D31B0CB">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-22 20:03:22 UTC</createdTime>
+<ownerDesignName>entidad_relacion</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="CA6C0F81-7FD7-A64A-E75A-1FA44E7A4836">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-22 20:09:37 UTC</createdTime>
+<generatorID>717AFB4D-E497-2669-40B5-49C0F783C43E</generatorID>
+<ownerDesignName>entidad_relacion</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="2F85C898-8883-FBFB-8D7F-C099E8F62A05">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-22 20:11:49 UTC</createdTime>
+<generatorID>C34DD5AA-9F75-6C64-2797-CD710F39FF55</generatorID>
+<ownerDesignName>entidad_relacion</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>4FE37B36-0AFF-FFB6-581F-D658FDAD5280</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="482AD92A-FE1A-C07B-211F-0C64A0A5D30C" name="historico PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-22 19:55:56 UTC</createdTime>
+<ownerDesignName>entidad_relacion</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CA6C0F81-7FD7-A64A-E75A-1FA44E7A4836</attributeRef>
+<attributeRef>2F85C898-8883-FBFB-8D7F-C099E8F62A05</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
