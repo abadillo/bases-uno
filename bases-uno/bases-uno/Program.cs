@@ -17,7 +17,9 @@ namespace bases_uno
             SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            /// Application.Run(new Form1());
+            Application.Run(new Subastas____());
+            
         }
     }
 }
