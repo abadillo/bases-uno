@@ -456,3 +456,7 @@ $RECYCLE.BIN/
 *.localz
 *.local
 *.DS_Store
+
+
+*.directory
+.directory
