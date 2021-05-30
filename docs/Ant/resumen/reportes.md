@@ -8,6 +8,7 @@
     - Datos personales, nacionalidad, lugar de residencia (ciudad y pais), telefono, e-mail de contacto
     - Lista de sus membresias activas y pasadas, con nombre del club, fecha de inicio, fecha fin (si aplica) y total de años de cada una para el momento de la consulta. Se deben mostrar cronologicamente de manera descendente. 
     - La coleccion de objetos de esa persona
+    
 - **Resumen de Participacion:** por coleccionista: 
     
     *"... para un periodo de tiempo, mostrar la lista de eventos en los que ha participado especificando el rol que desempeñe en cada uno (vendedor o comprador) y cual club representaba. El resumen debe estar organizado por rol - primero como vendedor, segundo como comprador y en cada caso se debe presentar la informacion cronologicamente."*

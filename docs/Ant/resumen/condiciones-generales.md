@@ -10,7 +10,7 @@
  
 2. **Planificacion de un evento de subasta:** 
  
-    * Consultar planificacion de los demes clubes antes de armar el calendario anual de subastas
+    * Consultar planificacion de los demas clubes antes de armar el calendario anual de subastas
 
     * Crear el evento con todos los datos requeridos (si no se realiza, eliminar la informacion registrada)
     
@@ -49,7 +49,7 @@
  
  
     * Presencial ***regular*** o ***virtual***: 
-        1. Por objeto en el orden especificado (uno a la vez), pedir puja validando precio ascendente hasta que se acabe el tiempo - la altima oferta es la ganadora. Registrar precio y coleccionista ganador. 
+        1. Por objeto en el orden especificado (uno a la vez), pedir puja validando precio ascendente hasta que se acabe el tiempo - la ultima oferta es la ganadora. Registrar precio y coleccionista ganador. 
         2. Actualizar historia del objeto 
  
  
@@ -83,7 +83,7 @@
 ### Footers:
 > 2. Precio base es el precio inicial a partir del cual comienzan las pujas u ofertas. 
 
-> 3. Una subasta de caridad puede tener m?s de un club organizador y se puede beneficiar a una o varias organizaciones - cuando son varias, se debe especificar el % que le corresponde recibir a cada organizacion.
+> 3. Una subasta de caridad puede tener mas de un club organizador y se puede beneficiar a una o varias organizaciones - cuando son varias, se debe especificar el % que le corresponde recibir a cada organizacion.
 
 > 4. La automatizacion implica el almacenamiento y procesamiento de la informacion relacionada a los procesos de negocio identificados. 
 
