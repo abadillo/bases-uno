@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7590A812-3543-0ED5-9B02-3B98C26FF853" name="presencial">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="899C925A-A325-AF9C-B35E-9BE2512110A1" name="Local">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 23:18:21 UTC</createdTime>
-<ownerDesignName>MRE_main</ownerDesignName>
+<createdTime>2021-05-17 22:05:07 UTC</createdTime>
+<ownerDesignName>Proyecto</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
@@ -11,20 +11,18 @@
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
 <growthPercent>0</growthPercent>
 <growthType>Year</growthType>
-<hierarchicalParent>0DFE761D-AB15-7281-60B7-E08FF2BF4B36</hierarchicalParent>
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID" id="52F8BD77-F575-3437-59C5-BCA3C1CB00ED">
-<createdBy>Frank</createdBy>
-<createdTime>2021-06-02 23:14:07 UTC</createdTime>
-<generatorID>E05D834A-FC9A-3546-842A-56EF17485EEC</generatorID>
-<ownerDesignName>MRE_main</ownerDesignName>
+<Attribute name="alquilado" id="8DC388DF-E9B7-94C6-AA72-7C6F11FE7EDC">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 22:05:35 UTC</createdTime>
+<ownerDesignName>Proyecto</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<referedAttribute>6A7FB528-D93F-8434-A895-A634F7FEABDA</referedAttribute>
+<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
