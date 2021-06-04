@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AF87CDFA-7288-106F-C35D-8283B80F622F" name="area_interes">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>9875AE5B-C05B-DBC1-D0AA-AFC3D5CD13D2</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombre" id="5E22D1FB-2803-429A-DCD0-450835253C8F">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>331E7CEB-CA1E-D061-E4D1-DB402779EC26</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="area_interes_ID" id="B00313C9-AC86-EFF9-3A2C-20ECBD6F4136">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A5FBEEE3-8853-B310-EBEF-8548A761B41C" name="area_interes_PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="B00313C9-AC86-EFF9-3A2C-20ECBD6F4136"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B35AFA5A-7A89-FF56-CEF5-17D2C728EECD" name="historico">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>4A557823-75E4-EF80-FF6E-AB3D332CB618</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="precio_base_dolar" id="A1A9A6AC-89B1-7A8D-B24B-1F6C85406DF9">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>8C2C480B-A43C-BABF-AF48-015C1E226D9C</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estatus" id="9D790C8B-179D-FC30-6D30-DFE5A2E7F1E7">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>9ED284F0-9C31-B9BC-7DB2-04564191BF73</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_hora" id="7B4DAEF7-4A04-F88A-0ACF-63451509D20C">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>1038CB54-5F08-54B9-24A2-56D0245E5C1C</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="significado" id="98DF5D3D-DC7F-D97F-2A54-F17E4373B0F9">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>E7D34554-9D56-2CF9-226C-6E210D31B0CB</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Coleccionista_cedula" id="6956E326-1C76-3E3E-F45B-3E74A764208F">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>CA6C0F81-7FD7-A64A-E75A-1FA44E7A4836</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="415457B4-91E8-7B60-1D75-6CE9AA775DD9" referredColumn="EF9E428C-4A22-8849-D87E-CD795E4E751D"/>
+</associations>
+</Column>
+<Column name="Articulo_nombre" id="0E23D7A8-FD47-8E49-454F-1CE20BDE396F">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>2F85C898-8883-FBFB-8D7F-C099E8F62A05</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="28515F99-FC37-C1DF-EAF5-2D7247EA7C1B" referredColumn="2104CDFF-8F40-26C3-AE7A-62D443279F7E"/>
+</associations>
+</Column>
+<Column name="cambio_moneda_cambio_moneda_ID" id="EB95D28A-9A39-DF7E-1EE2-B42CDBBDD5C7">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="26EF6805-A454-82C1-ED9A-D83A9BE177A9" referredColumn="8A83C85E-B091-3E70-D5A6-7594C669A2D8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6AF98828-3CD5-6825-1155-8814A6FAA5FE" name="historico_PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>482AD92A-FE1A-C07B-211F-0C64A0A5D30C</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6956E326-1C76-3E3E-F45B-3E74A764208F"/>
+<colUsage columnID="0E23D7A8-FD47-8E49-454F-1CE20BDE396F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3E5D4E5C-2964-D4D2-92BF-745408ADA9AA" name="historico_Articulo_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>C34DD5AA-9F75-6C64-2797-CD710F39FF55</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E23D7A8-FD47-8E49-454F-1CE20BDE396F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F83B254F-363F-ABAA-BC6D-FA4C321BFC0E" name="historico_cambio_moneda_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>8090CF2B-1BF1-4A4A-FF6F-174DF91E6E01</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB95D28A-9A39-DF7E-1EE2-B42CDBBDD5C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1E5D0734-2D6F-367C-1A8B-DA2E241E5086" name="historico_Coleccionista_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>717AFB4D-E497-2669-40B5-49C0F783C43E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6956E326-1C76-3E3E-F45B-3E74A764208F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

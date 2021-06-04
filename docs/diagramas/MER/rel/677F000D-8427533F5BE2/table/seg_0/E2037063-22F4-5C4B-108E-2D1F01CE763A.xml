@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E2037063-22F4-5C4B-108E-2D1F01CE763A" name="sub_org">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>CD556F89-A3D9-9618-08EE-56BD46C47ABD</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="monto" id="DB6A43DD-C768-AC7F-CAC1-7BD66F6D9C09">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>612309B2-AC8B-130E-1335-F71DCC928190</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Organizacion_nombre" id="EFEE75B2-E79B-1455-AB99-F651B09AECC6">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>A6D0E9B1-C65A-50EE-2EBD-B166DD5F9948</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FF82C49C-678F-B06D-0401-2A39C00FF8E8" referredColumn="9A53EE04-F590-2BF2-76DD-7D3076BDE82F"/>
+</associations>
+</Column>
+<Column name="Subasta_id" id="5F48E60B-4BA1-B9C3-5340-67C6F75009A1">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>9422A291-BDD5-8D00-7E80-56E1A1E5E952</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D50CBCB8-C4B6-FD29-0737-65707117170F" referredColumn="7F11D2EA-2297-494E-34AF-63C6EEF264C7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5FE44EB1-9651-C1B4-1A39-1C6C76C5CDFC" name="sub_org_PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>52C3E1D0-DB2B-7453-C59A-25BD61AB938A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EFEE75B2-E79B-1455-AB99-F651B09AECC6"/>
+<colUsage columnID="5F48E60B-4BA1-B9C3-5340-67C6F75009A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DE6C3E94-8275-6140-F627-B35CEBE1A50C" name="sub_org_Organizacion_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>EB06C605-AEDF-F6A4-0BC4-5EDFB7F46721</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EFEE75B2-E79B-1455-AB99-F651B09AECC6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="21A47B2E-AF6E-1FDF-EF24-215B5670F419" name="sub_org_Subasta_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>6A1D3E2E-669B-50C5-3629-A98BF333C457</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F48E60B-4BA1-B9C3-5340-67C6F75009A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

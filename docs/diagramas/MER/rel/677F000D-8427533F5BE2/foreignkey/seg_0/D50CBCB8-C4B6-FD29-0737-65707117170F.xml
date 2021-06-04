@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D50CBCB8-C4B6-FD29-0737-65707117170F" containerWithKeyObject="E2037063-22F4-5C4B-108E-2D1F01CE763A" localFKIndex="21A47B2E-AF6E-1FDF-EF24-215B5670F419" name="sub_org_Subasta_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>6A1D3E2E-669B-50C5-3629-A98BF333C457</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>Subasta</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>01BA17F0-4FE1-6940-447E-0BD1A6D8D115</referredTableID>
+<keyObject>8EA323EE-B80A-47AD-3B59-4CE747D93FA7</keyObject>
+<referredKeyID>8EA323EE-B80A-47AD-3B59-4CE747D93FA7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

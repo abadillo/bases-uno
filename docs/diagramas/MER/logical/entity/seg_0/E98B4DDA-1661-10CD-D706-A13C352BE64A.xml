@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E98B4DDA-1661-10CD-D706-A13C352BE64A" name="ART_SUB">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-22 20:16:44 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nombre" id="D68B4714-A151-E16E-DBEB-31AA4B5B10A9">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-22 20:16:59 UTC</createdTime>
+<generatorID>6CE33504-D4AD-D640-17C5-578401DD6EBF</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>4FE37B36-0AFF-FFB6-581F-D658FDAD5280</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="8D291BF5-3E11-1F8E-988A-5C012C047039">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 17:12:04 UTC</createdTime>
+<generatorID>04706375-74CD-7F2D-73CC-4F9E181B9C0A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>DA79A7AD-8F84-922B-C15A-DA575570CA7A</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B2286FC5-0D3E-E351-CF55-C3381268285A" name="art_sub PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-22 20:16:55 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D68B4714-A151-E16E-DBEB-31AA4B5B10A9</attributeRef>
+<attributeRef>8D291BF5-3E11-1F8E-988A-5C012C047039</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

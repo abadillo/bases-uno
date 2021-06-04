@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4086CAF4-8F48-8F2C-3109-DF50400E9810" name="LUGAR">
+<createdBy>Frank</createdBy>
+<createdTime>2021-06-02 23:12:02 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="6A7FB528-D93F-8434-A895-A634F7FEABDA">
+<createdBy>Frank</createdBy>
+<createdTime>2021-06-02 23:12:08 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="0DC53A56-233E-952F-E894-C0876709DCBF">
+<createdBy>Frank</createdBy>
+<createdTime>2021-06-02 23:12:08 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="ACB8D743-2324-F549-1D5A-4A3F3EEEB9B6">
+<createdBy>Frank</createdBy>
+<createdTime>2021-06-02 23:12:09 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="F839E1A7-1473-9EFF-221E-2E932974A588">
+<createdBy>Frank</createdBy>
+<createdTime>2021-06-02 23:12:27 UTC</createdTime>
+<generatorID>DC698C22-87A9-E35F-C6DE-7B7930D6B3FE</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>6A7FB528-D93F-8434-A895-A634F7FEABDA</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="220543B5-B0D4-2DCB-ACFC-7F03038D4E10" name="lugar PK">
+<createdBy>Frank</createdBy>
+<createdTime>2021-06-02 23:12:13 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6A7FB528-D93F-8434-A895-A634F7FEABDA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

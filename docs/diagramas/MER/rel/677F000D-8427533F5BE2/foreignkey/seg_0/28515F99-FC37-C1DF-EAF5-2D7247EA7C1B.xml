@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="28515F99-FC37-C1DF-EAF5-2D7247EA7C1B" containerWithKeyObject="B35AFA5A-7A89-FF56-CEF5-17D2C728EECD" localFKIndex="3E5D4E5C-2964-D4D2-92BF-745408ADA9AA" name="historico_Articulo_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>C34DD5AA-9F75-6C64-2797-CD710F39FF55</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>Articulo</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6DA60571-F216-D3B1-1C62-1FAB2EBD5E45</referredTableID>
+<keyObject>A338F717-657E-325D-FC5D-EF3AF51100DE</keyObject>
+<referredKeyID>A338F717-657E-325D-FC5D-EF3AF51100DE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>nombre</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

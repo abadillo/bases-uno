@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="11DC2B86-0111-7057-5059-03C73CB70A54" name="area_club">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>6259D9BC-AB2A-C8B6-61E4-D32A009740F5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="area_interes_area_interes_ID" id="AC6A66C0-1F38-2466-F36E-3FCEC263C1B7">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3FFA0C9E-65E5-DAE8-86EA-F2F091DA5AF6" referredColumn="B00313C9-AC86-EFF9-3A2C-20ECBD6F4136"/>
+</associations>
+</Column>
+<Column name="Club_Club_ID" id="6C6B2575-2C8A-4C3F-B713-E7634955B44D">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C2AE5CA3-4CB6-5F67-5884-3B4A82240C9D" referredColumn="6C1B2AC9-8E78-6F86-2080-D63852F1D96E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="58F476AB-494A-A37D-46EB-34E8A1BDE50B" name="area_club_area_interes_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>6DC751B1-762C-2279-22BB-0685915DA761</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC6A66C0-1F38-2466-F36E-3FCEC263C1B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A13C4666-259A-510A-FF9D-4C6CB5656377" name="area_club_Club_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>BC38C492-CB93-7ECC-A8B7-E6C8DE102F4E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6C6B2575-2C8A-4C3F-B713-E7634955B44D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

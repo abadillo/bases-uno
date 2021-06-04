@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="301477F9-D6E6-92EA-305F-8E6C5447A4A5" name="Coleccionista">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>963A5D07-749A-65AA-E017-BBEECF8E97FE</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cedula" id="EF9E428C-4A22-8849-D87E-CD795E4E751D">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="edad" id="3262D8D7-7286-F497-C32D-D355C26E203E">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>13C59153-0275-DE19-E905-C5CA55507F51</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="p_nombre" id="42F47055-B810-199D-28CF-2C2244569CD4">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>8CE9D1F6-E9D3-D500-3400-4EE049E9E5ED</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_nombre" id="5945FED1-C165-3738-9890-053C37A8EBF0">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>3ED5204A-2F10-FC0A-E484-6C37F4440EFB</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="p_apellido" id="33FB5793-362C-B8AE-7E9E-29081CA9012B">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>15CE5A66-9CDF-AD1F-425E-C2AAEB6D8CDF</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="s_apellido" id="8E5C9158-55FB-4B12-EB12-64981BD29AF9">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>7999C205-3DDE-5198-C3DF-E89009690DAC</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nacionalidad" id="8B58A812-E6CD-DF95-C698-776FDAC4AB83">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>780763E6-A8E8-CA71-6838-98A516C27AF3</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="8201A979-1825-A320-5C65-AD7287D4B7A1">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>34C33B4C-C31A-7B6A-66CE-53FA40C506BD</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="699D5DAA-767A-B64C-82C3-C1352936836D">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>03CF64FA-7183-EB3B-0B9D-EF1751CAB52C</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lugar_ID" id="800ECAE4-56BB-4F7E-7FE7-E938C92218B3">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>D6242DB8-9A9E-68F1-1AB8-21DB4A436BA8</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="95CF4677-C2F5-7436-CDA8-C5853A8BCA1A" referredColumn="721B708E-DECB-607C-BCC2-E28D4772A5E1"/>
+</associations>
+</Column>
+<Column name="Coleccionista_cedula" id="07AFE1FB-9C63-4810-623F-FCFA3A9396C2">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>3709E9E9-E0DC-124B-1C0F-DF3026E7518E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C8E63429-50A7-066F-1F42-0A51C6BCDC4B" referredColumn="EF9E428C-4A22-8849-D87E-CD795E4E751D"/>
+</associations>
+</Column>
+<Column name="Representante_Representante_ID" id="1EE85CE5-50F7-B4D8-C3C3-0732F26916B4">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="90B79D7B-5364-EED8-1AB4-6282D2F0349B" referredColumn="088A3A44-4431-36DD-11C9-264A605FD07A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="48A7D489-B193-6FA1-9091-5E56A82E6575" name="Coleccionista_PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>F4B81E89-5059-65A7-7691-479434CCCF0E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF9E428C-4A22-8849-D87E-CD795E4E751D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF928F2C-9461-6B77-58BA-2F87105F51CE" name="Coleccionista_lugar_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>4B633810-2FFE-319D-8D8D-03C5FA0F7731</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="800ECAE4-56BB-4F7E-7FE7-E938C92218B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="55D8C2F7-12DC-BD66-D849-47CD64F3AD4E" name="Coleccionista_Coleccionista_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>A14F521E-6B0D-28B7-B199-5BBDA27DD035</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07AFE1FB-9C63-4810-623F-FCFA3A9396C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1FF2EE9-E9B1-36C8-53EF-6F2221781537" name="Coleccionista_Representante_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>9DCF5196-000E-ABCA-BEDD-5D0AA66245A0</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1EE85CE5-50F7-B4D8-C3C3-0732F26916B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

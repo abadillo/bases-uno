@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="193B5803-91E4-3C64-4424-8700A2EDAC47" name="presencial">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>7590A812-3543-0ED5-9B02-3B98C26FF853</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A8FAC074-9091-60AE-6DC8-554E4897D813">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>DA79A7AD-8F84-922B-C15A-DA575570CA7A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C4C30D8C-4957-A8A5-B2B1-E1E2BBF090B1" referredColumn="7F11D2EA-2297-494E-34AF-63C6EEF264C7"/>
+</associations>
+</Column>
+<Column name="lugar_ID" id="3EE04EC9-FEA9-2990-7D89-985C37B7EFA7">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>52F8BD77-F575-3437-59C5-BCA3C1CB00ED</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7BF60AB-77DB-5BE7-F53B-6C3C29B39FD7" referredColumn="721B708E-DECB-607C-BCC2-E28D4772A5E1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="78E07042-342F-AAB3-50CF-2DCD19C2F486" name="presencial_PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>B85F4499-7328-9A1D-E2F0-4DB1262E0338</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8FAC074-9091-60AE-6DC8-554E4897D813"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="07D40C8C-4C79-519D-D4FF-AF8DA2B1B988" name="presencial_Subasta_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>6F2DE1A7-D395-24B3-760C-AF129D5A192A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8FAC074-9091-60AE-6DC8-554E4897D813"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="103D2D3E-5E39-5830-DC1F-010D6330ED87" name="presencial_lugar_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>E05D834A-FC9A-3546-842A-56EF17485EEC</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EE04EC9-FEA9-2990-7D89-985C37B7EFA7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

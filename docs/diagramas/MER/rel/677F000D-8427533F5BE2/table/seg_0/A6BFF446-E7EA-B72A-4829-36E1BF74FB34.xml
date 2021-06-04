@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A6BFF446-E7EA-B72A-4829-36E1BF74FB34" name="Membresia">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>D322DE48-09D5-BB32-5739-E66F1FBCC71E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="fecha_ingreso" id="CCC932DD-4878-88C3-8F5B-A8388279F3E5">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>61B11D9D-D28B-605A-E9C4-016B776E760D</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_retiro" id="7B7D8EF4-3129-F570-548E-72F947F36E87">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>03894DAD-A180-EE05-BB32-AF078C59DC5D</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rol" id="E53AC968-234D-2F21-E419-2E09B1BEDA77">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>51675DDD-BD3A-EDB0-669B-B09A29EB4D48</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Coleccionista_cedula" id="1AC5F59C-D8EA-5841-259A-A11E7EE72767">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>BC0BB999-CDFF-F712-1FD5-A401C2DA6331</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="505650DD-44BC-CACC-CE26-C360BBB9B60F" referredColumn="EF9E428C-4A22-8849-D87E-CD795E4E751D"/>
+</associations>
+</Column>
+<Column name="Club_Club_ID" id="390146B0-9814-62B6-C786-62FFC67C7BB4">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7A7ED7FE-44EF-2A79-D223-41950F92ACE7" referredColumn="6C1B2AC9-8E78-6F86-2080-D63852F1D96E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE6003D1-2344-B2EF-FC5E-17E27DAAC99E" name="Membresia_PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>5E7160F7-DFD1-DF0E-F2B8-99C33DC1AA98</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1AC5F59C-D8EA-5841-259A-A11E7EE72767"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C3677931-6DBD-3917-9FB1-E58A9B14C663" name="Membresia_Club_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>2D1501C1-4267-C0EE-A67E-C875566F1150</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="390146B0-9814-62B6-C786-62FFC67C7BB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E0B222F-1BB7-30F2-4B6C-B7D8D15D4EE4" name="Membresia_Coleccionista_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<generatorID>D2C8C2C9-17EE-20EF-049B-6D3573278390</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1AC5F59C-D8EA-5841-259A-A11E7EE72767"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
