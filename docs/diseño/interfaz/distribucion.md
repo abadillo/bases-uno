@@ -4,6 +4,7 @@
     - CRUD
     - Ficha club
     - Informe de desempeño
+    - Planificación Anual
 
 2. **Colecionistas (Membresias)**
     - Listado
@@ -14,9 +15,12 @@
     - CRUD
     - Ficha Evento
     - Resultados Evento
-    - Planificacion Anual  **?????**
+    - Selecionar
+    - Estatus
+    - Oferta por Objeto
+    - Finalizar/Cerrar Subasta
 
-4. **Articulos**
+4. **Artículos**
     - CRUD
     - Ficha Comic
     - Historia de un objeto
@@ -28,9 +32,6 @@
     - CRUD
 
 7. **Administracion de Evento**
-    - Selecionar
-    - Estatus
-    - Oferta por Objeto
-    - Finalizar/Cerrar Subasta
+
 
 
