@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="FE7E184A-BFDF-D7FD-4DD3-4C979FC52B21">
+<Attribute name="subasta_id" id="FE7E184A-BFDF-D7FD-4DD3-4C979FC52B21">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 20:31:57 UTC</createdTime>
 <generatorID>15E425FF-C063-8CC2-6D1A-933EB3AED259</generatorID>
@@ -24,12 +24,13 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>0A984D63-4C5A-31A4-7D1C-393BC9AD7289</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="8476424C-DC92-6F3B-6B35-50B798A68730">
+<Attribute name="club_id" id="8476424C-DC92-6F3B-6B35-50B798A68730">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:48:48 UTC</createdTime>
 <generatorID>15E425FF-C063-8CC2-6D1A-933EB3AED259</generatorID>
@@ -42,7 +43,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cedula" id="805F21E6-E931-9F30-BFC1-A72522ED824E">
 <createdBy>antonio2924</createdBy>
@@ -57,7 +58,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>
