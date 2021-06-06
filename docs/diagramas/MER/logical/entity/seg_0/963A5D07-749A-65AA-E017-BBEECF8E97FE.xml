@@ -143,6 +143,7 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>6A7FB528-D93F-8434-A895-A634F7FEABDA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
@@ -157,10 +158,11 @@
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cedula2" id="F6D9BCB1-D32F-145B-E9CD-FEC5431D868B">
 <createdBy>antonio2924</createdBy>
@@ -172,6 +174,7 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
 <referedAttribute>1CA581F8-4979-77FC-3924-51166418395E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>

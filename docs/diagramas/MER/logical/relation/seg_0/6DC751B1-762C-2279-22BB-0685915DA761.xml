@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_33" directorySegmentName="seg_0" id="6DC751B1-762C-2279-22BB-0685915DA761">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="interez-clu_int" directorySegmentName="seg_0" id="6DC751B1-762C-2279-22BB-0685915DA761">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 23:47:42 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
