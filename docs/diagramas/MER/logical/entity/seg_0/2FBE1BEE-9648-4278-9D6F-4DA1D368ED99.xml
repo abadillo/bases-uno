@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="53C76DD6-8E40-8B27-1B45-C68C695E829E">
+<Attribute name="articulo_id" id="53C76DD6-8E40-8B27-1B45-C68C695E829E">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:07:03 UTC</createdTime>
 <generatorID>ED411E70-7E1F-CCEF-3194-B4DFC47A5A05</generatorID>
@@ -24,19 +24,23 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>56E46D56-F168-E59A-4653-5552A400AD96</referedAttribute>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="6BCECBC0-0777-6586-2866-857CE49A0E3B">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 21:08:06 UTC</createdTime>
+<Attribute name="editor_id" id="2264D884-2A50-FEA7-8923-B18A19435F3F">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-06 17:17:02 UTC</createdTime>
 <generatorID>7427D5CC-91A2-36E0-635B-AAF9629D06A2</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>BAC5D8AF-9689-2E18-A33D-D0FF4351126A</referedAttribute>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -51,7 +55,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>53C76DD6-8E40-8B27-1B45-C68C695E829E</attributeRef>
-<attributeRef>6BCECBC0-0777-6586-2866-857CE49A0E3B</attributeRef>
+<attributeRef>2264D884-2A50-FEA7-8923-B18A19435F3F</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
