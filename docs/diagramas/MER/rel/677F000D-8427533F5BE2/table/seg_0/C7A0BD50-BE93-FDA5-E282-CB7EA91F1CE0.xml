@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C7A0BD50-BE93-FDA5-E282-CB7EA91F1CE0" name="Local">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C7A0BD50-BE93-FDA5-E282-CB7EA91F1CE0" name="LOCAL">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>899C925A-A325-AF9C-B35E-9BE2512110A1</generatorID>
@@ -31,6 +31,28 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <isSurrogateColumn>true</isSurrogateColumn>
 </Column>
+<Column name="nombre" id="E9456834-DE3E-B8D8-FE8B-53DBA515C9D8">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:32:11 UTC</createdTime>
+<generatorID>7E9AC710-2A70-BBD1-125B-546A93C196EF</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LUGAR_id" id="587CC675-372C-4CB8-1F71-1E4E73DAC47E">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:32:11 UTC</createdTime>
+<generatorID>EEBE7A49-8A7A-E380-F5EF-C3A9F139ADBA</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E4D8AFB5-B73F-64C3-6AA9-855BA70F7DCB" referredColumn="721B708E-DECB-607C-BCC2-E28D4772A5E1"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="E6396824-C9A3-C75A-F435-C215802F160E" name="Local_PK">
@@ -41,6 +63,17 @@
 <indexState>Primary Constraint</indexState>
 <indexColumnUsage>
 <colUsage columnID="8126CA47-5E71-AF5A-035D-0779B6BD0710"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D931E24-8945-48F1-E73F-0BD7D077DCD6" name="LOCAL_LUGAR_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:32:11 UTC</createdTime>
+<generatorID>FB8A2727-B865-169F-D896-B1512B591222</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="587CC675-372C-4CB8-1F71-1E4E73DAC47E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

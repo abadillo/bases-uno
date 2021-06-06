@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4A557823-75E4-EF80-FF6E-AB3D332CB618" name="HISTORICO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4A557823-75E4-EF80-FF6E-AB3D332CB618" name="ART_COL">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 22:22:11 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
@@ -18,16 +18,6 @@
 <Attribute name="precio_base_dolar" id="8C2C480B-A43C-BABF-AF48-015C1E226D9C">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 22:22:17 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="estatus" id="9ED284F0-9C31-B9BC-7DB2-04564191BF73">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 23:49:36 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -55,28 +45,31 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cedula" id="CA6C0F81-7FD7-A64A-E75A-1FA44E7A4836">
+<Attribute name="id" id="C10F4653-F651-4323-E24F-071C0ED61917">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-22 20:09:37 UTC</createdTime>
+<createdTime>2021-06-05 21:05:28 UTC</createdTime>
+<generatorID>C34DD5AA-9F75-6C64-2797-CD710F39FF55</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>56E46D56-F168-E59A-4653-5552A400AD96</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="308FBA24-0344-5BA9-5523-F8F90489452A">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 22:14:26 UTC</createdTime>
 <generatorID>717AFB4D-E497-2669-40B5-49C0F783C43E</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nombre" id="2F85C898-8883-FBFB-8D7F-C099E8F62A05">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-05-22 20:11:49 UTC</createdTime>
-<generatorID>C34DD5AA-9F75-6C64-2797-CD710F39FF55</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<referedAttribute>4FE37B36-0AFF-FFB6-581F-D658FDAD5280</referedAttribute>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -90,8 +83,8 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>CA6C0F81-7FD7-A64A-E75A-1FA44E7A4836</attributeRef>
-<attributeRef>2F85C898-8883-FBFB-8D7F-C099E8F62A05</attributeRef>
+<attributeRef>C10F4653-F651-4323-E24F-071C0ED61917</attributeRef>
+<attributeRef>308FBA24-0344-5BA9-5523-F8F90489452A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

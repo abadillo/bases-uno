@@ -15,14 +15,16 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="monto" id="612309B2-AC8B-130E-1335-F71DCC928190">
+<Attribute name="porcentaje" id="612309B2-AC8B-130E-1335-F71DCC928190">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 23:26:23 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nombre" id="A6D0E9B1-C65A-50EE-2EBD-B166DD5F9948">
@@ -46,7 +48,9 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>DA79A7AD-8F84-922B-C15A-DA575570CA7A</referedAttribute>
-<use>0</use>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

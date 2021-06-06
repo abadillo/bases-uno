@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B35AFA5A-7A89-FF56-CEF5-17D2C728EECD" name="historico">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B35AFA5A-7A89-FF56-CEF5-17D2C728EECD" name="ART_COL">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>4A557823-75E4-EF80-FF6E-AB3D332CB618</generatorID>
@@ -66,9 +66,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="28515F99-FC37-C1DF-EAF5-2D7247EA7C1B" referredColumn="2104CDFF-8F40-26C3-AE7A-62D443279F7E"/>
-</associations>
 </Column>
 <Column name="cambio_moneda_cambio_moneda_ID" id="EB95D28A-9A39-DF7E-1EE2-B42CDBBDD5C7">
 <createdBy>antonio2924</createdBy>
@@ -84,6 +81,19 @@
 <colAssociation fkAssociation="26EF6805-A454-82C1-ED9A-D83A9BE177A9" referredColumn="8A83C85E-B091-3E70-D5A6-7594C669A2D8"/>
 </associations>
 </Column>
+<Column name="id" id="70676432-C65B-6272-F0B7-36A1FC177ACD">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:32:11 UTC</createdTime>
+<generatorID>C10F4653-F651-4323-E24F-071C0ED61917</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="28515F99-FC37-C1DF-EAF5-2D7247EA7C1B" referredColumn="13F3CB12-2D93-A1A7-E4FB-BD80D9EA4A4F"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="6AF98828-3CD5-6825-1155-8814A6FAA5FE" name="historico_PK">
@@ -96,7 +106,7 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="6956E326-1C76-3E3E-F45B-3E74A764208F"/>
-<colUsage columnID="0E23D7A8-FD47-8E49-454F-1CE20BDE396F"/>
+<colUsage columnID="70676432-C65B-6272-F0B7-36A1FC177ACD"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="3E5D4E5C-2964-D4D2-92BF-745408ADA9AA" name="historico_Articulo_FK">
@@ -107,7 +117,7 @@
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="0E23D7A8-FD47-8E49-454F-1CE20BDE396F"/>
+<colUsage columnID="70676432-C65B-6272-F0B7-36A1FC177ACD"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="F83B254F-363F-ABAA-BC6D-FA4C321BFC0E" name="historico_cambio_moneda_FK">

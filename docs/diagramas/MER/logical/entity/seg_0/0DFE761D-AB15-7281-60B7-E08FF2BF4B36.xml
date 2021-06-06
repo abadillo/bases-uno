@@ -22,8 +22,24 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="21272824-49C7-B69F-3EFF-DE0461A8B788">
+<createdBy>Frank</createdBy>
+<createdTime>2021-05-22 02:43:18 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="fecha_hora" id="B52BF230-5657-8676-B943-43B76984AEE5">
 <createdBy>antonio2924</createdBy>
@@ -37,9 +53,9 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombre" id="21272824-49C7-B69F-3EFF-DE0461A8B788">
-<createdBy>Frank</createdBy>
-<createdTime>2021-05-22 02:43:18 UTC</createdTime>
+<Attribute name="estatus" id="C74AF970-32F9-D14E-A393-561A2016E301">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 18:14:47 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -56,8 +72,9 @@
 <createdBy>Frank</createdBy>
 <createdTime>2021-05-22 02:43:40 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

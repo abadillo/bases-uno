@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="193B5803-91E4-3C64-4424-8700A2EDAC47" name="presencial">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="193B5803-91E4-3C64-4424-8700A2EDAC47" name="PRESENCIAL">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>7590A812-3543-0ED5-9B02-3B98C26FF853</generatorID>
@@ -31,6 +31,20 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="C7BF60AB-77DB-5BE7-F53B-6C3C29B39FD7" referredColumn="721B708E-DECB-607C-BCC2-E28D4772A5E1"/>
+</associations>
+</Column>
+<Column name="LOCAL_Local_ID" id="9C6DC17E-2397-6F22-3C16-0453F9B99E8E">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:32:11 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="382E5342-F1FF-3A76-7A4D-9E69281DEAA5" referredColumn="8126CA47-5E71-AF5A-035D-0779B6BD0710"/>
 </associations>
 </Column>
 </columns>
@@ -67,6 +81,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="3EE04EC9-FEA9-2990-7D89-985C37B7EFA7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14AC40EE-8343-7B70-E7AB-CF5B578BC6C5" name="PRESENCIAL_LOCAL_FK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:32:11 UTC</createdTime>
+<generatorID>E732B9C8-F0FE-1D26-CABC-0B8090A81D4B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9C6DC17E-2397-6F22-3C16-0453F9B99E8E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

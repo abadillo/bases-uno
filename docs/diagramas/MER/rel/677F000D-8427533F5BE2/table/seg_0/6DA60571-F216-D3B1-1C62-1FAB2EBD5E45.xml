@@ -26,6 +26,15 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="id" id="13F3CB12-2D93-A1A7-E4FB-BD80D9EA4A4F">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:32:11 UTC</createdTime>
+<generatorID>56E46D56-F168-E59A-4653-5552A400AD96</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="A338F717-657E-325D-FC5D-EF3AF51100DE" name="Articulo_PK">
@@ -37,7 +46,7 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="2104CDFF-8F40-26C3-AE7A-62D443279F7E"/>
+<colUsage columnID="13F3CB12-2D93-A1A7-E4FB-BD80D9EA4A4F"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

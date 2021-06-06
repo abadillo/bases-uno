@@ -22,7 +22,9 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="fecha_retiro" id="03894DAD-A180-EE05-BB32-AF078C59DC5D">
@@ -32,7 +34,9 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="rol" id="51675DDD-BD3A-EDB0-669B-B09A29EB4D48">
@@ -42,19 +46,39 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cedula" id="BC0BB999-CDFF-F712-1FD5-A401C2DA6331">
+<Attribute name="id" id="91932147-EB46-D9C7-0699-E1DD946A9F36">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-22 20:09:37 UTC</createdTime>
+<createdTime>2021-06-05 21:48:48 UTC</createdTime>
+<generatorID>2D1501C1-4267-C0EE-A67E-C875566F1150</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>9E055C8D-E9ED-DC05-88C8-4D81FE35010B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="DB2EC92F-7576-42E8-072A-50E6A886C1BE">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 22:14:26 UTC</createdTime>
 <generatorID>D2C8C2C9-17EE-20EF-049B-6D3573278390</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -63,12 +87,13 @@
 <createdBy>Frank</createdBy>
 <createdTime>2021-05-22 02:40:31 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>BC0BB999-CDFF-F712-1FD5-A401C2DA6331</attributeRef>
+<attributeRef>DB2EC92F-7576-42E8-072A-50E6A886C1BE</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

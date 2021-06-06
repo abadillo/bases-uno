@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ADD6BF51-2FF1-C37D-6B37-667B7056363C" name="COL_SUB_CLU">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 20:31:03 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="FE7E184A-BFDF-D7FD-4DD3-4C979FC52B21">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 20:31:57 UTC</createdTime>
+<generatorID>15E425FF-C063-8CC2-6D1A-933EB3AED259</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>0A984D63-4C5A-31A4-7D1C-393BC9AD7289</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="8476424C-DC92-6F3B-6B35-50B798A68730">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:48:48 UTC</createdTime>
+<generatorID>15E425FF-C063-8CC2-6D1A-933EB3AED259</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>D1B64C0C-B2BE-F89C-D79D-C34D67DE300C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="805F21E6-E931-9F30-BFC1-A72522ED824E">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 22:14:26 UTC</createdTime>
+<generatorID>C746C77D-FA96-9B86-87A3-ADD8683E50F9</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

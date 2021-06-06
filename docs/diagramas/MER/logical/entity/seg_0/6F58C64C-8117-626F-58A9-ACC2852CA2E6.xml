@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="nombre" id="4FE37B36-0AFF-FFB6-581F-D658FDAD5280">
+<Attribute name="id" id="56E46D56-F168-E59A-4653-5552A400AD96">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-15 16:57:42 UTC</createdTime>
+<createdTime>2021-06-05 21:05:25 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -25,9 +25,9 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="caract_generales" id="F341041C-8289-6D7B-3147-2C6BCB24E5DD">
+<Attribute name="nombre" id="4FE37B36-0AFF-FFB6-581F-D658FDAD5280">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 23:05:55 UTC</createdTime>
+<createdTime>2021-05-15 16:57:42 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -46,7 +46,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>4FE37B36-0AFF-FFB6-581F-D658FDAD5280</attributeRef>
+<attributeRef>56E46D56-F168-E59A-4653-5552A400AD96</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

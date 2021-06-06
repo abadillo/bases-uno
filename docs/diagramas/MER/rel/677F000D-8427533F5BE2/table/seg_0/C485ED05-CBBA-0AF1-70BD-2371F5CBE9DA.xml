@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C485ED05-CBBA-0AF1-70BD-2371F5CBE9DA" name="lugar">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C485ED05-CBBA-0AF1-70BD-2371F5CBE9DA" name="LUGAR">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>4086CAF4-8F48-8F2C-3109-DF50400E9810</generatorID>
@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="ID" id="721B708E-DECB-607C-BCC2-E28D4772A5E1">
+<Column name="id" id="721B708E-DECB-607C-BCC2-E28D4772A5E1">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>6A7FB528-D93F-8434-A895-A634F7FEABDA</generatorID>
@@ -31,7 +31,6 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>ACB8D743-2324-F549-1D5A-4A3F3EEEB9B6</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>

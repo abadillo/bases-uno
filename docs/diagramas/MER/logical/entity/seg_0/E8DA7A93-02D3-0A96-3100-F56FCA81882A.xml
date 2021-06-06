@@ -34,7 +34,24 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>DA79A7AD-8F84-922B-C15A-DA575570CA7A</referedAttribute>
-<use>0</use>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="D1B64C0C-B2BE-F89C-D79D-C34D67DE300C">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:48:48 UTC</createdTime>
+<generatorID>CC468000-1B59-8EE5-7887-12F2B7072A39</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>9E055C8D-E9ED-DC05-88C8-4D81FE35010B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -43,12 +60,14 @@
 <createdBy>Frank</createdBy>
 <createdTime>2021-05-22 02:43:40 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>0A984D63-4C5A-31A4-7D1C-393BC9AD7289</attributeRef>
+<attributeRef>D1B64C0C-B2BE-F89C-D79D-C34D67DE300C</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

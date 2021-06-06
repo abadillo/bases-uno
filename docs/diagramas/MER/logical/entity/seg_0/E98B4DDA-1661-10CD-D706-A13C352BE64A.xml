@@ -15,17 +15,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="nombre" id="D68B4714-A151-E16E-DBEB-31AA4B5B10A9">
+<Attribute name="precio_final_vendido" id="91B9B2C9-88EC-BA7E-D7E3-59DB3D061752">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-22 20:16:59 UTC</createdTime>
-<generatorID>6CE33504-D4AD-D640-17C5-578401DD6EBF</generatorID>
+<createdTime>2021-06-05 20:35:09 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<referedAttribute>4FE37B36-0AFF-FFB6-581F-D658FDAD5280</referedAttribute>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="id" id="8D291BF5-3E11-1F8E-988A-5C012C047039">
 <createdBy>antonio2924</createdBy>
@@ -36,7 +37,36 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>DA79A7AD-8F84-922B-C15A-DA575570CA7A</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="6BCA4566-07C7-6937-A796-251B541C4215">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:05:28 UTC</createdTime>
+<generatorID>6CE33504-D4AD-D640-17C5-578401DD6EBF</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>56E46D56-F168-E59A-4653-5552A400AD96</referedAttribute>
 <use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="1C8CAD9C-FA4C-4384-3261-410B0EA7194B">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 22:14:26 UTC</createdTime>
+<generatorID>4A72FFDC-C802-3BAE-92DB-E3FD725C0037</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -50,7 +80,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>D68B4714-A151-E16E-DBEB-31AA4B5B10A9</attributeRef>
+<attributeRef>6BCA4566-07C7-6937-A796-251B541C4215</attributeRef>
 <attributeRef>8D291BF5-3E11-1F8E-988A-5C012C047039</attributeRef>
 </usedAttributes>
 </identifier>

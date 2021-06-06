@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="01BA17F0-4FE1-6940-447E-0BD1A6D8D115" name="Subasta">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="01BA17F0-4FE1-6940-447E-0BD1A6D8D115" name="SUBASTA">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>0DFE761D-AB15-7281-60B7-E08FF2BF4B36</generatorID>
@@ -17,12 +17,14 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="fecha" id="3DD08635-BB90-6F79-5283-070D06314A13">
+<Column name="fecha_hora" id="3DD08635-BB90-6F79-5283-070D06314A13">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>B52BF230-5657-8676-B943-43B76984AEE5</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -31,8 +33,11 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>21272824-49C7-B69F-3EFF-DE0461A8B788</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Local_Local_ID" id="DE05C3AF-641D-FA08-CCA0-6DDE2D2009AC">
@@ -48,6 +53,18 @@
 <associations>
 <colAssociation fkAssociation="1D31C207-EA55-D68C-90A8-2B0F8E671B44" referredColumn="8126CA47-5E71-AF5A-035D-0779B6BD0710"/>
 </associations>
+</Column>
+<Column name="estatus" id="1A6472BE-E528-8B55-4465-D2A56FB72C56">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-05 21:32:11 UTC</createdTime>
+<generatorID>C74AF970-32F9-D14E-A393-561A2016E301</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

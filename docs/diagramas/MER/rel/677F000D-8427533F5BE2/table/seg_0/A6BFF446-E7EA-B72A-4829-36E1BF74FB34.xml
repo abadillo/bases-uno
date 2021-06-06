@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A6BFF446-E7EA-B72A-4829-36E1BF74FB34" name="Membresia">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A6BFF446-E7EA-B72A-4829-36E1BF74FB34" name="MEMBRESIA">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>D322DE48-09D5-BB32-5739-E66F1FBCC71E</generatorID>
