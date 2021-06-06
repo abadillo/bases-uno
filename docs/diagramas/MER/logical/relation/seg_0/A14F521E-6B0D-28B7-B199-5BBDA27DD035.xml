@@ -11,7 +11,7 @@
 <nameOnSource>representa </nameOnSource>
 <nameOnTarget> </nameOnTarget>
 <optionalSource>true</optionalSource>
-<optionalTarget>false</optionalTarget>
+<optionalTarget>true</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>963A5D07-749A-65AA-E017-BBEECF8E97FE</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>

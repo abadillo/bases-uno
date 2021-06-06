@@ -15,6 +15,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="712752D4-FB94-D43A-F456-F396A47F4058">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-06 21:07:50 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="fecha_ingreso" id="61B11D9D-D28B-605A-E9C4-016B776E760D">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 22:28:55 UTC</createdTime>
@@ -24,7 +36,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="fecha_retiro" id="03894DAD-A180-EE05-BB32-AF078C59DC5D">
@@ -36,7 +48,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="rol" id="51675DDD-BD3A-EDB0-669B-B09A29EB4D48">
@@ -51,7 +63,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id" id="91932147-EB46-D9C7-0699-E1DD946A9F36">
+<Attribute name="club_id" id="91932147-EB46-D9C7-0699-E1DD946A9F36">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:48:48 UTC</createdTime>
 <generatorID>2D1501C1-4267-C0EE-A67E-C875566F1150</generatorID>
@@ -64,9 +76,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cedula" id="DB2EC92F-7576-42E8-072A-50E6A886C1BE">
+<Attribute name="coleccionista_cedula" id="DB2EC92F-7576-42E8-072A-50E6A886C1BE">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 22:14:26 UTC</createdTime>
 <generatorID>D2C8C2C9-17EE-20EF-049B-6D3573278390</generatorID>
@@ -79,7 +91,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -94,6 +106,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>DB2EC92F-7576-42E8-072A-50E6A886C1BE</attributeRef>
+<attributeRef>712752D4-FB94-D43A-F456-F396A47F4058</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -27,6 +27,19 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="mision" id="B1ED325E-6991-A20E-3349-F30E61D0DA8E">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-06 21:20:56 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="A6784AEA-762E-CABE-F752-ABF26CCAD655" name="Organizacion PK">

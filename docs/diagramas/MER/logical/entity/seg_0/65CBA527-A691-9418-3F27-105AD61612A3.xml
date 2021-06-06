@@ -16,6 +16,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="isbn" id="24D43FC5-F815-A244-CC8C-B55570B5DF38">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-06 20:52:20 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="volumen" id="9F04EC64-A40E-210D-7EE9-BE933D4A93EC">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 20:57:33 UTC</createdTime>

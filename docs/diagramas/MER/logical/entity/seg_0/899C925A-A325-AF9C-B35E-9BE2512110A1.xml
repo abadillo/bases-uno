@@ -54,5 +54,21 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="coleccionista_cedula" id="DAE063B3-AA40-28DB-11F8-C05CB53BA773">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-06 21:49:43 UTC</createdTime>
+<generatorID>78730397-D8A9-0366-5317-E4B002DBBEED</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 </Entity>

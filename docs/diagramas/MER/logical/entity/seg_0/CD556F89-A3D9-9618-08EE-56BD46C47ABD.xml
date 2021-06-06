@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombre" id="A6D0E9B1-C65A-50EE-2EBD-B166DD5F9948">
+<Attribute name="organizacion_nombre" id="A6D0E9B1-C65A-50EE-2EBD-B166DD5F9948">
 <createdBy>Frank</createdBy>
 <createdTime>2021-05-22 02:45:12 UTC</createdTime>
 <generatorID>EB06C605-AEDF-F6A4-0BC4-5EDFB7F46721</generatorID>
@@ -41,7 +41,7 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id" id="389EAC8B-26D8-6444-3235-2A509C6A2729">
+<Attribute name="benefica_id" id="389EAC8B-26D8-6444-3235-2A509C6A2729">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 17:19:42 UTC</createdTime>
 <generatorID>47458EE8-40BE-055F-3A05-BB2EDAF0A287</generatorID>
@@ -54,7 +54,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

@@ -28,7 +28,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="club_id" id="8476424C-DC92-6F3B-6B35-50B798A68730">
 <createdBy>antonio2924</createdBy>
@@ -43,9 +43,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cedula" id="805F21E6-E931-9F30-BFC1-A72522ED824E">
+<Attribute name="coleccionista_cedula" id="805F21E6-E931-9F30-BFC1-A72522ED824E">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 22:14:26 UTC</createdTime>
 <generatorID>C746C77D-FA96-9B86-87A3-ADD8683E50F9</generatorID>
@@ -58,7 +58,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

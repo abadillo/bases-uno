@@ -134,7 +134,7 @@
 <dataTypeSize>25</dataTypeSize>
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id" id="D6242DB8-9A9E-68F1-1AB8-21DB4A436BA8">
+<Attribute name="direccion" id="D6242DB8-9A9E-68F1-1AB8-21DB4A436BA8">
 <createdBy>Frank</createdBy>
 <createdTime>2021-06-02 23:14:15 UTC</createdTime>
 <generatorID>4B633810-2FFE-319D-8D8D-03C5FA0F7731</generatorID>
@@ -148,7 +148,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cedula1" id="3709E9E9-E0DC-124B-1C0F-DF3026E7518E">
+<Attribute name="coleccionista_representante_cedula" id="3709E9E9-E0DC-124B-1C0F-DF3026E7518E">
 <createdBy>Frank</createdBy>
 <createdTime>2021-06-02 23:42:09 UTC</createdTime>
 <generatorID>A14F521E-6B0D-28B7-B199-5BBDA27DD035</generatorID>
@@ -162,9 +162,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cedula2" id="F6D9BCB1-D32F-145B-E9CD-FEC5431D868B">
+<Attribute name="representante_cedula" id="F6D9BCB1-D32F-145B-E9CD-FEC5431D868B">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 17:01:13 UTC</createdTime>
 <generatorID>9DCF5196-000E-ABCA-BEDD-5D0AA66245A0</generatorID>
@@ -173,6 +173,7 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <referedAttribute>1CA581F8-4979-77FC-3924-51166418395E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>

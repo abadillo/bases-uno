@@ -71,6 +71,19 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="orden" id="0E525B90-5EFF-1006-C6B4-3E2777D6850B">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-06 21:34:19 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="B2286FC5-0D3E-E351-CF55-C3381268285A" name="art_sub PK">
