@@ -169,9 +169,8 @@
 <createdTime>2021-06-03 17:01:13 UTC</createdTime>
 <generatorID>9DCF5196-000E-ABCA-BEDD-5D0AA66245A0</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>1CA581F8-4979-77FC-3924-51166418395E</referedAttribute>
@@ -186,9 +185,8 @@
 <createdBy>Frank</createdBy>
 <createdTime>2021-05-22 02:40:31 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

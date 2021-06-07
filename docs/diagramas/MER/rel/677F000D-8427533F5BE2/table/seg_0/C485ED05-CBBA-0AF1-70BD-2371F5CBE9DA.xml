@@ -13,7 +13,9 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>6A7FB528-D93F-8434-A895-A634F7FEABDA</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -22,7 +24,9 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>0DC53A56-233E-952F-E894-C0876709DCBF</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -31,17 +35,21 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>ACB8D743-2324-F549-1D5A-4A3F3EEEB9B6</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="lugar_ID" id="C08C27DC-9B13-0AA3-0FB4-F36C996B4FB9">
+<Column name="LUGAR_id" id="C08C27DC-9B13-0AA3-0FB4-F36C996B4FB9">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>F839E1A7-1473-9EFF-221E-2E932974A588</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -51,7 +59,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="84F71E02-EFCF-1786-4F2C-D62C2DF2365B" name="lugar_PK">
+<ind_PK_UK id="84F71E02-EFCF-1786-4F2C-D62C2DF2365B" name="LUGAR_PK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>220543B5-B0D4-2DCB-ACFC-7F03038D4E10</generatorID>
@@ -63,7 +71,7 @@
 <colUsage columnID="721B708E-DECB-607C-BCC2-E28D4772A5E1"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="A2AA42F9-EF6A-9A69-14BB-9C9622E5D7CE" name="lugar_lugar_FK">
+<ind_PK_UK id="A2AA42F9-EF6A-9A69-14BB-9C9622E5D7CE" name="LUGAR_LUGAR_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>DC698C22-87A9-E35F-C6DE-7B7930D6B3FE</generatorID>

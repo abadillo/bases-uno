@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E98B4DDA-1661-10CD-D706-A13C352BE64A" name="ART_SUB">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E98B4DDA-1661-10CD-D706-A13C352BE64A" name="OBJ_SUB">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-22 20:16:44 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
@@ -69,7 +69,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="orden" id="0E525B90-5EFF-1006-C6B4-3E2777D6850B">
 <createdBy>inmun</createdBy>
@@ -98,7 +98,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="precio_base" id="236BED8B-9B0F-66E8-0717-980DD2741A1F">
 <createdBy>inmun</createdBy>

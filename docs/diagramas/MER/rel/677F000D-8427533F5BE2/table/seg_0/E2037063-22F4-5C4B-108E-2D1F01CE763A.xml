@@ -19,12 +19,14 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Organizacion_nombre" id="EFEE75B2-E79B-1455-AB99-F651B09AECC6">
+<Column name="ORGANIZACION_nombre" id="EFEE75B2-E79B-1455-AB99-F651B09AECC6">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>A6D0E9B1-C65A-50EE-2EBD-B166DD5F9948</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -37,7 +39,8 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>9422A291-BDD5-8D00-7E80-56E1A1E5E952</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -45,22 +48,24 @@
 <colAssociation fkAssociation="D50CBCB8-C4B6-FD29-0737-65707117170F" referredColumn="7F11D2EA-2297-494E-34AF-63C6EEF264C7"/>
 </associations>
 </Column>
-<Column name="BENEFICA_id" id="0D72BE1E-B5DA-B97B-4D5B-7B4CB2B6EA0A">
+<Column name="PRESENCIAL_id" id="0D72BE1E-B5DA-B97B-4D5B-7B4CB2B6EA0A">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>389EAC8B-26D8-6444-3235-2A509C6A2729</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="4F702528-327C-1624-3C52-4F15210B6A43" referredColumn="1077AEA3-707B-E88F-F569-044E9EA73EC9"/>
+<colAssociation fkAssociation="9DD6F063-DCEA-2E63-A32F-B0E811EF7CB8" referredColumn="A8FAC074-9091-60AE-6DC8-554E4897D813"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="5FE44EB1-9651-C1B4-1A39-1C6C76C5CDFC" name="sub_org_PK">
+<ind_PK_UK id="5FE44EB1-9651-C1B4-1A39-1C6C76C5CDFC" name="ORG_SUB_PK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>52C3E1D0-DB2B-7453-C59A-25BD61AB938A</generatorID>
@@ -73,7 +78,7 @@
 <colUsage columnID="0D72BE1E-B5DA-B97B-4D5B-7B4CB2B6EA0A"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="DE6C3E94-8275-6140-F627-B35CEBE1A50C" name="sub_org_Organizacion_FK">
+<ind_PK_UK id="DE6C3E94-8275-6140-F627-B35CEBE1A50C" name="ORG_SUB_ORGANIZACION_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>EB06C605-AEDF-F6A4-0BC4-5EDFB7F46721</generatorID>
@@ -95,9 +100,9 @@
 <colUsage columnID="5F48E60B-4BA1-B9C3-5340-67C6F75009A1"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="20282B90-57D1-839A-DBD8-67ADA0B59FB9" name="ORG_SUB_BENEFICA_FK">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 21:32:11 UTC</createdTime>
+<ind_PK_UK id="C0C59202-BB87-211E-8650-F0135A4D8572" name="ORG_SUB_PRESENCIAL_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
 <generatorID>47458EE8-40BE-055F-3A05-BB2EDAF0A287</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <indexState>Foreign Key</indexState>

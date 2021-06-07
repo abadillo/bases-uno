@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1E764BE9-B522-FF6A-B559-ECA1169383FF" containerWithKeyObject="E31533D1-C522-2706-6DDD-5623DAEA046D" localFKIndex="01301A20-32D7-5A81-E3C1-CF173F89910A" name="art_sub_Articulo_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1E764BE9-B522-FF6A-B559-ECA1169383FF" containerWithKeyObject="E31533D1-C522-2706-6DDD-5623DAEA046D" localFKIndex="01301A20-32D7-5A81-E3C1-CF173F89910A" name="ART_SUB_Articulo_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>6CE33504-D4AD-D640-17C5-578401DD6EBF</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<referredTableLongName>Articulo</referredTableLongName>
+<referredTableLongName>OBJETOv1</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>6DA60571-F216-D3B1-1C62-1FAB2EBD5E45</referredTableID>
 <keyObject>A338F717-657E-325D-FC5D-EF3AF51100DE</keyObject>
 <referredKeyID>A338F717-657E-325D-FC5D-EF3AF51100DE</referredKeyID>
 <mandatory>true</mandatory>
-<refColNames>nombre</refColNames>
+<refColNames>id</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>

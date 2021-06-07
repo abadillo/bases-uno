@@ -26,7 +26,9 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>1CA581F8-4979-77FC-3924-51166418395E</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -35,8 +37,11 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>B4A81661-CC68-6282-82CE-E4C1E9B854E5</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="apellido" id="1A48DFD9-3A6E-91B9-6B47-06C80CF1D02C">
@@ -44,31 +49,34 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>72DE09FC-765A-E2F9-199F-79B91D2C324E</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="CD2BB06A-9E6D-54B1-ACE2-04D9B67AB8C8" name="Representante_PK">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-03 16:46:07 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<pk>true</pk>
-<indexState>Primary Constraint</indexState>
-<indexColumnUsage>
-<colUsage columnID="088A3A44-4431-36DD-11C9-264A605FD07A"/>
-</indexColumnUsage>
-</ind_PK_UK>
 <ind_PK_UK id="BC61C089-D553-E9F9-4CC3-6E10696AD439" name="REPRESENTANTE_cedula_UN">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>AF0FE88E-B300-A9DD-4CE7-6BDAC2663E07</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<indexState>Unique Constraint</indexState>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="D509D0B4-77A6-413A-6A8C-99F3666D9998"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CD2BB06A-9E6D-54B1-ACE2-04D9B67AB8C8" name="Representante_PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="088A3A44-4431-36DD-11C9-264A605FD07A"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1406BFFC-92C3-DEAD-AF34-85A169A486F3" name="ART_EDI">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1406BFFC-92C3-DEAD-AF34-85A169A486F3" name="OBJ_EDI">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>2FBE1BEE-9648-4278-9D6F-4DA1D368ED99</generatorID>
@@ -13,7 +13,9 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>53C76DD6-8E40-8B27-1B45-C68C695E829E</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -26,13 +28,26 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>6BCECBC0-0777-6586-2866-857CE49A0E3B</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="F377DAFC-D13E-36D0-594E-895C2B057F1E" referredColumn="72072A62-79FB-FE50-4C4E-E379E55FF188"/>
 </associations>
+</Column>
+<Column name="editor_id" id="A4049625-E8F8-7D4E-9A4B-B62D104066DA">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>2264D884-2A50-FEA7-8923-B18A19435F3F</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -46,7 +61,7 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="471B63A2-F074-72B4-7DEA-C34D513F728C"/>
-<colUsage columnID="877A4952-1CD5-B1C3-4E58-52BD4A0C8A3F"/>
+<colUsage columnID="A4049625-E8F8-7D4E-9A4B-B62D104066DA"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="DDF95C4F-F3B5-F94C-D993-70C3622A8B3E" name="ART_EDI_EDITOR_FK">

@@ -13,7 +13,9 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>DA79A7AD-8F84-922B-C15A-DA575570CA7A</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -25,7 +27,8 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>52F8BD77-F575-3437-59C5-BCA3C1CB00ED</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -46,6 +49,17 @@
 <associations>
 <colAssociation fkAssociation="382E5342-F1FF-3A76-7A4D-9E69281DEAA5" referredColumn="8126CA47-5E71-AF5A-035D-0779B6BD0710"/>
 </associations>
+</Column>
+<Column name="tipo_presencial" id="8F8F7928-503A-1BA5-7DC7-B56E8BB127B3">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>316B3F2B-8082-51E1-3460-ACB026D15A9C</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>29D778CF-361F-532C-A028-7789CDBCCAD9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

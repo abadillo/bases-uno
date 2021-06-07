@@ -13,7 +13,9 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>DA79A7AD-8F84-922B-C15A-DA575570CA7A</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>

@@ -13,7 +13,9 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>DA79A7AD-8F84-922B-C15A-DA575570CA7A</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -60,15 +62,37 @@
 <generatorID>C74AF970-32F9-D14E-A393-561A2016E301</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>5F9C13A7-3027-0D36-BD22-367C71E744C2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="C5BB1711-0DDF-2950-76A4-BBDBA2284AA7">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>A68874E1-0A8A-2B09-1956-64D8FEA5BDC3</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>CDC4B466-D69E-046C-E9D0-85B9E96CA076</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="duracion" id="0618F255-1E76-651E-1E79-C9F2C3EC110F">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>737C785B-60FB-FD9B-13EE-A10314210E78</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="8EA323EE-B80A-47AD-3B59-4CE747D93FA7" name="Subasta_PK">
+<ind_PK_UK id="8EA323EE-B80A-47AD-3B59-4CE747D93FA7" name="SUBASTA_PK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>B85F4499-7328-9A1D-E2F0-4DB1262E0338</generatorID>

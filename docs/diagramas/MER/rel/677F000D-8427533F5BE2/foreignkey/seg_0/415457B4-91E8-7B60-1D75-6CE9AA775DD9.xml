@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="415457B4-91E8-7B60-1D75-6CE9AA775DD9" containerWithKeyObject="B35AFA5A-7A89-FF56-CEF5-17D2C728EECD" localFKIndex="1E5D0734-2D6F-367C-1A8B-DA2E241E5086" name="historico_Coleccionista_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="415457B4-91E8-7B60-1D75-6CE9AA775DD9" containerWithKeyObject="B35AFA5A-7A89-FF56-CEF5-17D2C728EECD" localFKIndex="1E5D0734-2D6F-367C-1A8B-DA2E241E5086" name="ART_COL_COLECCIONISTA_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>717AFB4D-E497-2669-40B5-49C0F783C43E</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<referredTableLongName>Coleccionista</referredTableLongName>
+<referredTableLongName>COLECCIONISTA</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>301477F9-D6E6-92EA-305F-8E6C5447A4A5</referredTableID>
 <keyObject>48A7D489-B193-6FA1-9091-5E56A82E6575</keyObject>

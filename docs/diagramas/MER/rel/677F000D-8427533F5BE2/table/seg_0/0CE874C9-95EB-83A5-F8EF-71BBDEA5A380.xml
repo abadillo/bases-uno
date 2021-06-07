@@ -13,7 +13,9 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>03DEA643-148E-F5D2-2DB1-31538A4DEF5C</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -22,7 +24,9 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>2E651BE1-6D46-425F-8FE8-E582A5E90F1C</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>

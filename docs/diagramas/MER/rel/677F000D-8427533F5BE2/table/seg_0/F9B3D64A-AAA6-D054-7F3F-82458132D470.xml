@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9B3D64A-AAA6-D054-7F3F-82458132D470" name="OBJETO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9B3D64A-AAA6-D054-7F3F-82458132D470" name="COLECCIONABLE">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>21130F45-5C2D-7D10-460B-E6018CF56B2E</generatorID>
@@ -13,7 +13,9 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>56E46D56-F168-E59A-4653-5552A400AD96</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>

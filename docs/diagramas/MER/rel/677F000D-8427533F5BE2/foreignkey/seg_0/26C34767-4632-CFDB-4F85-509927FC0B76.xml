@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="26C34767-4632-CFDB-4F85-509927FC0B76" containerWithKeyObject="C485ED05-CBBA-0AF1-70BD-2371F5CBE9DA" localFKIndex="A2AA42F9-EF6A-9A69-14BB-9C9622E5D7CE" name="lugar_lugar_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="26C34767-4632-CFDB-4F85-509927FC0B76" containerWithKeyObject="C485ED05-CBBA-0AF1-70BD-2371F5CBE9DA" localFKIndex="A2AA42F9-EF6A-9A69-14BB-9C9622E5D7CE" name="LUGAR_LUGAR_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>DC698C22-87A9-E35F-C6DE-7B7930D6B3FE</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<referredTableLongName>lugar</referredTableLongName>
+<referredTableLongName>LUGAR</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>C485ED05-CBBA-0AF1-70BD-2371F5CBE9DA</referredTableID>
 <keyObject>84F71E02-EFCF-1786-4F2C-D62C2DF2365B</keyObject>
 <referredKeyID>84F71E02-EFCF-1786-4F2C-D62C2DF2365B</referredKeyID>
 <mandatory>false</mandatory>
-<refColNames>ID</refColNames>
+<refColNames>id</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>

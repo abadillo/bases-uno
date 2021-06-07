@@ -13,13 +13,27 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>A6DA4A7A-D98B-D131-C6AC-EA5C2D60D4A4</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mision" id="CF9C9103-1B27-BF99-C9E9-2881680C551B">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>B1ED325E-6991-A20E-3349-F30E61D0DA8E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="25F57FBF-B2B3-C02E-2F7F-E9D292C696EF" name="Organizacion_PK">
+<ind_PK_UK id="25F57FBF-B2B3-C02E-2F7F-E9D292C696EF" name="ORGANIZACION_PK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>A6784AEA-762E-CABE-F752-ABF26CCAD655</generatorID>

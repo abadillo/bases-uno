@@ -13,7 +13,9 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>29DA30DB-66F9-C5AD-0831-06A0032B68A4</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -23,8 +25,11 @@
 <generatorID>9A12BCA1-9692-0790-E24B-F7DACADF43BB</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="telefono" id="832E0F77-EE65-E289-D636-6401B55995D0">
@@ -32,8 +37,11 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>F8C520A0-1530-12CA-687D-3D1D4D958CEF</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="red_social" id="D4127B2C-3262-B0FD-C577-6293137F8589">
@@ -41,8 +49,11 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>C0FF9675-295E-4337-64B8-AEC4B50A68F7</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="email" id="FC25E1A1-88A0-A8AD-2F15-011A78F99402">
@@ -50,8 +61,11 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>E7566E57-954A-2278-8CE4-4BCB7ECF6AF0</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Club_ID" id="6C1B2AC9-8E78-6F86-2080-D63852F1D96E">
@@ -67,6 +81,30 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <isSurrogateColumn>true</isSurrogateColumn>
 </Column>
+<Column name="id" id="0D6D6EE4-362C-81DC-F46F-CB90B7E60D14">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>9E055C8D-E9ED-DC05-88C8-4D81FE35010B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="area_interes" id="73AD4E05-DE10-DC7E-B1C8-ECC27D464CD1">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>26D35DC7-27E0-63E0-BC4B-84605713F66E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="58BBD21E-1797-0172-3B07-0F140C958CB4" name="Club_PK">
@@ -77,6 +115,17 @@
 <indexState>Primary Constraint</indexState>
 <indexColumnUsage>
 <colUsage columnID="6C1B2AC9-8E78-6F86-2080-D63852F1D96E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="111580B5-E84F-5B4A-F94D-9A19EEAFED95" name="CLUB_id_UN">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>31CFCB38-FC92-874A-CA03-BB2F6CB66D89</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D6D6EE4-362C-81DC-F46F-CB90B7E60D14"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C2AE5CA3-4CB6-5F67-5884-3B4A82240C9D" containerWithKeyObject="11DC2B86-0111-7057-5059-03C73CB70A54" localFKIndex="A13C4666-259A-510A-FF9D-4C6CB5656377" name="area_club_Club_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C2AE5CA3-4CB6-5F67-5884-3B4A82240C9D" containerWithKeyObject="11DC2B86-0111-7057-5059-03C73CB70A54" localFKIndex="A13C4666-259A-510A-FF9D-4C6CB5656377" name="CLU_INT_CLUB_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>BC38C492-CB93-7ECC-A8B7-E6C8DE102F4E</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<referredTableLongName>Club</referredTableLongName>
+<referredTableLongName>CLUB</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>E813264D-CAB4-986D-E4EC-86DA736CDE88</referredTableID>
 <keyObject>58BBD21E-1797-0172-3B07-0F140C958CB4</keyObject>

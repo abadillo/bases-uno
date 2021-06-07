@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AF87CDFA-7288-106F-C35D-8283B80F622F" name="INTEREZ">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AF87CDFA-7288-106F-C35D-8283B80F622F" name="INTERES">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>9875AE5B-C05B-DBC1-D0AA-AFC3D5CD13D2</generatorID>
@@ -38,32 +38,34 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>9F07A82A-EB3E-16D0-0C99-3A385DFD2987</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="A5FBEEE3-8853-B310-EBEF-8548A761B41C" name="area_interes_PK">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-03 16:46:07 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<pk>true</pk>
-<indexState>Primary Constraint</indexState>
-<indexColumnUsage>
-<colUsage columnID="B00313C9-AC86-EFF9-3A2C-20ECBD6F4136"/>
-</indexColumnUsage>
-</ind_PK_UK>
 <ind_PK_UK id="1449B8BF-64D7-DE86-E378-8A8ABBA27403" name="INTEREZ_id_UN">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>0881486E-75CA-C4A4-B64D-A0248F677267</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<indexState>Unique Constraint</indexState>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="D01912EB-685C-BCAB-A114-4850B1BB84E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A5FBEEE3-8853-B310-EBEF-8548A761B41C" name="area_interes_PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-03 16:46:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="B00313C9-AC86-EFF9-3A2C-20ECBD6F4136"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

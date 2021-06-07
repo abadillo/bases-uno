@@ -13,7 +13,9 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>61B11D9D-D28B-605A-E9C4-016B776E760D</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -22,7 +24,9 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>03894DAD-A180-EE05-BB32-AF078C59DC5D</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -31,7 +35,9 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>51675DDD-BD3A-EDB0-669B-B09A29EB4D48</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -40,7 +46,9 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>BC0BB999-CDFF-F712-1FD5-A401C2DA6331</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -58,13 +66,49 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="6454357F-788E-DB32-351E-6181E12A4D2B">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>712752D4-FB94-D43A-F456-F396A47F4058</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="club_id" id="FCE188D8-E53D-13F8-AD45-AD08916A11F0">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>91932147-EB46-D9C7-0699-E1DD946A9F36</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="7A7ED7FE-44EF-2A79-D223-41950F92ACE7" referredColumn="6C1B2AC9-8E78-6F86-2080-D63852F1D96E"/>
+<colAssociation fkAssociation="7A7ED7FE-44EF-2A79-D223-41950F92ACE7" referredColumn="0D6D6EE4-362C-81DC-F46F-CB90B7E60D14"/>
 </associations>
+</Column>
+<Column name="coleccionista_cedula1" id="70075B96-7CF0-9EFA-AC7C-A7D5337EEBE4">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>DB2EC92F-7576-42E8-072A-50E6A886C1BE</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="EE6003D1-2344-B2EF-FC5E-17E27DAAC99E" name="Membresia_PK">
+<ind_PK_UK id="EE6003D1-2344-B2EF-FC5E-17E27DAAC99E" name="MEMBRESIA_PK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>5E7160F7-DFD1-DF0E-F2B8-99C33DC1AA98</generatorID>
@@ -73,10 +117,11 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="1AC5F59C-D8EA-5841-259A-A11E7EE72767"/>
+<colUsage columnID="70075B96-7CF0-9EFA-AC7C-A7D5337EEBE4"/>
+<colUsage columnID="6454357F-788E-DB32-351E-6181E12A4D2B"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="C3677931-6DBD-3917-9FB1-E58A9B14C663" name="Membresia_Club_FK">
+<ind_PK_UK id="C3677931-6DBD-3917-9FB1-E58A9B14C663" name="MEMBRESIA_CLUB_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>2D1501C1-4267-C0EE-A67E-C875566F1150</generatorID>
@@ -84,10 +129,10 @@
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="390146B0-9814-62B6-C786-62FFC67C7BB4"/>
+<colUsage columnID="FCE188D8-E53D-13F8-AD45-AD08916A11F0"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="6E0B222F-1BB7-30F2-4B6C-B7D8D15D4EE4" name="Membresia_Coleccionista_FK">
+<ind_PK_UK id="6E0B222F-1BB7-30F2-4B6C-B7D8D15D4EE4" name="MEMBRESIA_COLECCIONISTA_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>D2C8C2C9-17EE-20EF-049B-6D3573278390</generatorID>

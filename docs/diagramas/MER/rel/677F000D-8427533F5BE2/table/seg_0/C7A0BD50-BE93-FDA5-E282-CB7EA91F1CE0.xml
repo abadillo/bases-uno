@@ -13,9 +13,11 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>8DC388DF-E9B7-94C6-AA72-7C6F11FE7EDC</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="Local_ID" id="8126CA47-5E71-AF5A-035D-0779B6BD0710">
@@ -36,7 +38,9 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>7E9AC710-2A70-BBD1-125B-546A93C196EF</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -45,12 +49,31 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>EEBE7A49-8A7A-E380-F5EF-C3A9F139ADBA</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="E4D8AFB5-B73F-64C3-6AA9-855BA70F7DCB" referredColumn="721B708E-DECB-607C-BCC2-E28D4772A5E1"/>
+</associations>
+</Column>
+<Column name="COLECCIONISTA_cedula" id="289E9565-902B-5100-A308-E67FF74AABF6">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>DAE063B3-AA40-28DB-11F8-C05CB53BA773</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E6A23DAB-7C84-A47E-29FC-BBFE77799CD1" referredColumn="EF9E428C-4A22-8849-D87E-CD795E4E751D"/>
 </associations>
 </Column>
 </columns>
@@ -74,6 +97,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="587CC675-372C-4CB8-1F71-1E4E73DAC47E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4F32124A-E6F5-0FC4-297A-6CF8AA07BD39" name="LOCAL_COLECCIONISTA_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>78730397-D8A9-0366-5317-E4B002DBBEED</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="289E9565-902B-5100-A308-E67FF74AABF6"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

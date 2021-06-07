@@ -13,7 +13,9 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>A17AC12B-A945-15C3-95E2-E56D2126F74C</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -26,7 +28,10 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>FE7E184A-BFDF-D7FD-4DD3-4C979FC52B21</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -34,8 +39,45 @@
 <colAssociation fkAssociation="936FFEFE-C4EE-B1B3-FCB5-85D3A775EDC9" referredColumn="1B1AE7BD-4AB1-5C83-FA3B-0E1596EA10A6"/>
 </associations>
 </Column>
+<Column name="club_id" id="F41196B8-714E-7A97-65CA-33FD872C7C1A">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>8476424C-DC92-6F3B-6B35-50B798A68730</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="936FFEFE-C4EE-B1B3-FCB5-85D3A775EDC9" referredColumn="FD1D2B4B-DEBD-6214-BFE1-14D4C93855CE"/>
+</associations>
+</Column>
+<Column name="coleccionista_cedula1" id="7CA5BEE4-35F8-23BB-4BDC-FEF62186759C">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>805F21E6-E931-9F30-BFC1-A72522ED824E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C40BD71B-D3C6-C1D5-5104-D5BDAFF74B0F" name="COL_SUB_CLU_PK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 01:17:01 UTC</createdTime>
+<generatorID>B3EE6C1C-0E52-2121-F1C6-08E579D9471E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
 <ind_PK_UK id="62C29CFB-4160-101A-CA97-30B8A1964B62" name="COL_SUB_CLU_COLECCIONISTA_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
@@ -56,6 +98,7 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="93A888D9-7DC6-A8C2-64BC-2270D41072C0"/>
+<colUsage columnID="F41196B8-714E-7A97-65CA-33FD872C7C1A"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

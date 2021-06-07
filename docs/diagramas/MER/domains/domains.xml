@@ -39,14 +39,8 @@
          <fileName>domains</fileName>
          <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
          <listOfValues>
-            <valueDef value="&apos; Dinamica Americana&apos;" description=""/>
-            <valueDef value="A la Baja" description=""/>
             <valueDef value="Dinamica Ascendente" description=""/>
-            <valueDef value="Dinamica descendente" description=""/>
-            <valueDef value="Round Robin" description=""/>
             <valueDef value="Silenciosa" description=""/>
-            <valueDef value="Sobre Cerrado de Primer Precio" description=""/>
-            <valueDef value="Sobre Cerrado de Segundo Precio" description=""/>
          </listOfValues>
       </Domain>
       <Domain class="oracle.dbtools.crest.model.design.Domain" name="Unknown" id="DOM3000004">

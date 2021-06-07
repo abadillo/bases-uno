@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="21130F45-5C2D-7D10-460B-E6018CF56B2E" name="OBJETO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="21130F45-5C2D-7D10-460B-E6018CF56B2E" name="COLECCIONABLE">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 20:58:36 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
