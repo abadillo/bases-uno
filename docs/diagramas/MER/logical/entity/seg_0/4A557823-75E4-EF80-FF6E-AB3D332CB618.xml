@@ -15,30 +15,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="precio_base_dolar" id="8C2C480B-A43C-BABF-AF48-015C1E226D9C">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 22:22:17 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT022</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="fecha_hora" id="1038CB54-5F08-54B9-24A2-56D0245E5C1C">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-05-22 19:59:54 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="significado" id="E7D34554-9D56-2CF9-226C-6E210D31B0CB">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-22 20:03:22 UTC</createdTime>

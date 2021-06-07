@@ -10,7 +10,7 @@
 <identifying>true</identifying>
 <nameOnSource>posee</nameOnSource>
 <nameOnTarget> </nameOnTarget>
-<optionalSource>true</optionalSource>
+<optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>6F58C64C-8117-626F-58A9-ACC2852CA2E6</sourceEntity>

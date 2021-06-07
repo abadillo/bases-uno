@@ -40,20 +40,6 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="pagina_web" id="9A12BCA1-9692-0790-E24B-F7DACADF43BB">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 21:57:13 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="telefono" id="F8C520A0-1530-12CA-687D-3D1D4D958CEF">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 21:57:27 UTC</createdTime>
@@ -66,19 +52,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="red_social" id="C0FF9675-295E-4337-64B8-AEC4B50A68F7">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 21:57:32 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="email" id="E7566E57-954A-2278-8CE4-4BCB7ECF6AF0">
 <createdBy>antonio2924</createdBy>
@@ -93,9 +66,9 @@
 <dataTypeSize>25</dataTypeSize>
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="area interes" id="26D35DC7-27E0-63E0-BC4B-84605713F66E">
-<createdBy>inmun</createdBy>
-<createdTime>2021-06-06 23:47:18 UTC</createdTime>
+<Attribute name="pagina_web" id="9A12BCA1-9692-0790-E24B-F7DACADF43BB">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 21:57:13 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -103,8 +76,22 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="red_social" id="C0FF9675-295E-4337-64B8-AEC4B50A68F7">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 21:57:32 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

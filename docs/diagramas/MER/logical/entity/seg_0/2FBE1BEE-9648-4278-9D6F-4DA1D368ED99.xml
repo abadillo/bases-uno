@@ -15,20 +15,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="articulo_id" id="53C76DD6-8E40-8B27-1B45-C68C695E829E">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 21:07:03 UTC</createdTime>
-<generatorID>ED411E70-7E1F-CCEF-3194-B4DFC47A5A05</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<referedAttribute>56E46D56-F168-E59A-4653-5552A400AD96</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="editor_id" id="2264D884-2A50-FEA7-8923-B18A19435F3F">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-06 17:17:02 UTC</createdTime>
@@ -43,6 +29,20 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id" id="5956B89C-D2DB-B1A1-0E5A-167F9537F294">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-07 03:15:33 UTC</createdTime>
+<generatorID>719E4F0A-F4F9-5B13-55AF-A621AA1EE1B6</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>56E46D56-F168-E59A-4653-5552A400AD96</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="2E6CF99A-C11E-E711-A0E6-1B7EA63197FE" name="ART_EDI PK">
@@ -54,8 +54,8 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>53C76DD6-8E40-8B27-1B45-C68C695E829E</attributeRef>
 <attributeRef>2264D884-2A50-FEA7-8923-B18A19435F3F</attributeRef>
+<attributeRef>5956B89C-D2DB-B1A1-0E5A-167F9537F294</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

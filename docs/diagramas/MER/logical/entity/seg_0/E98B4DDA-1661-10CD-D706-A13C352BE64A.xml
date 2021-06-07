@@ -15,7 +15,31 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="precio_final_vendido" id="91B9B2C9-88EC-BA7E-D7E3-59DB3D061752">
+<Attribute name="orden" id="0E525B90-5EFF-1006-C6B4-3E2777D6850B">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-06 21:34:19 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio_base_dolar" id="236BED8B-9B0F-66E8-0717-980DD2741A1F">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 00:09:08 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT022</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio_vendido_dolar" id="91B9B2C9-88EC-BA7E-D7E3-59DB3D061752">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 20:35:09 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
@@ -26,6 +50,17 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT022</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_hora_compra" id="E32EBBD0-17AC-6FA5-79BE-51A69F7AF066">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-07 03:35:36 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="subasta_id" id="8D291BF5-3E11-1F8E-988A-5C012C047039">
@@ -64,34 +99,6 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="orden" id="0E525B90-5EFF-1006-C6B4-3E2777D6850B">
-<createdBy>inmun</createdBy>
-<createdTime>2021-06-06 21:34:19 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="postor" id="73483803-F1E0-0F8D-A921-6A2EF92227E2">
-<createdBy>inmun</createdBy>
-<createdTime>2021-06-07 00:02:16 UTC</createdTime>
-<generatorID>7A61633D-8AAB-91F6-CCF0-0DF5C00FEAF5</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -99,31 +106,6 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="precio_base" id="236BED8B-9B0F-66E8-0717-980DD2741A1F">
-<createdBy>inmun</createdBy>
-<createdTime>2021-06-07 00:09:08 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT022</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="segundo_precio" id="8110A868-D502-DED5-E0DA-626CA5D6EA6D">
-<createdBy>inmun</createdBy>
-<createdTime>2021-06-07 00:09:41 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT022</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

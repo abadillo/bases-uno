@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ADD6BF51-2FF1-C37D-6B37-667B7056363C" name="COL_SUB_CLU">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4284E23F-669B-A517-3ABE-EAC590620E2C" name="CLU_SUB_COL">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 20:31:03 UTC</createdTime>
+<createdTime>2021-06-07 03:09:38 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -15,10 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="subasta_id" id="FE7E184A-BFDF-D7FD-4DD3-4C979FC52B21">
+<Attribute name="subasta_id" id="ACF81EA0-1020-5824-F112-6E01A12FFE40">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 20:31:57 UTC</createdTime>
-<generatorID>15E425FF-C063-8CC2-6D1A-933EB3AED259</generatorID>
+<createdTime>2021-06-07 03:09:49 UTC</createdTime>
+<generatorID>F366BACA-466E-82E6-D3FC-9B134428013B</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -28,12 +28,12 @@
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="club_id" id="8476424C-DC92-6F3B-6B35-50B798A68730">
+<Attribute name="club_id" id="298D7F7B-59FF-2544-4006-687215FE70B1">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 21:48:48 UTC</createdTime>
-<generatorID>15E425FF-C063-8CC2-6D1A-933EB3AED259</generatorID>
+<createdTime>2021-06-07 03:09:49 UTC</createdTime>
+<generatorID>F366BACA-466E-82E6-D3FC-9B134428013B</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -43,12 +43,12 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="coleccionista_cedula" id="805F21E6-E931-9F30-BFC1-A72522ED824E">
+<Attribute name="cedula" id="FED3381E-6E6D-2321-0458-F691C5C1BC3C">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 22:14:26 UTC</createdTime>
-<generatorID>C746C77D-FA96-9B86-87A3-ADD8683E50F9</generatorID>
+<createdTime>2021-06-07 03:09:53 UTC</createdTime>
+<generatorID>917C7CCF-B53B-7E83-2191-559BD8F7F2DE</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -58,18 +58,23 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="B3EE6C1C-0E52-2121-F1C6-08E579D9471E" name="COL_SUB_CLU PK">
-<createdBy>inmun</createdBy>
-<createdTime>2021-06-06 23:45:52 UTC</createdTime>
+<identifier id="DC6CDC72-6F63-E24A-FEE8-BAC9D92E0A19" name="CLU_SUB_COL PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-07 03:09:49 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<usedAttributes>
+<attributeRef>ACF81EA0-1020-5824-F112-6E01A12FFE40</attributeRef>
+<attributeRef>298D7F7B-59FF-2544-4006-687215FE70B1</attributeRef>
+<attributeRef>FED3381E-6E6D-2321-0458-F691C5C1BC3C</attributeRef>
+</usedAttributes>
 </identifier>
 </identifiers>
 </Entity>

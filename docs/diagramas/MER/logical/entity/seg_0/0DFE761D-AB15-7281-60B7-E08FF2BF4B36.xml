@@ -65,18 +65,6 @@
 <domain>5F9C13A7-3027-0D36-BD22-367C71E744C2</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="tipo" id="A68874E1-0A8A-2B09-1956-64D8FEA5BDC3">
-<createdBy>inmun</createdBy>
-<createdTime>2021-06-06 21:33:02 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<domain>CDC4B466-D69E-046C-E9D0-85B9E96CA076</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="duracion" id="737C785B-60FB-FD9B-13EE-A10314210E78">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-06 23:47:48 UTC</createdTime>

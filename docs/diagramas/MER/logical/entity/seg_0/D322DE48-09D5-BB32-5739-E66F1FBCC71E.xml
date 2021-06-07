@@ -15,16 +15,16 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="712752D4-FB94-D43A-F456-F396A47F4058">
-<createdBy>inmun</createdBy>
-<createdTime>2021-06-06 21:07:50 UTC</createdTime>
+<Attribute name="rol" id="51675DDD-BD3A-EDB0-669B-B09A29EB4D48">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-05-17 23:46:03 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="fecha_ingreso" id="61B11D9D-D28B-605A-E9C4-016B776E760D">
@@ -46,21 +46,10 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="rol" id="51675DDD-BD3A-EDB0-669B-B09A29EB4D48">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 23:46:03 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="club_id" id="91932147-EB46-D9C7-0699-E1DD946A9F36">
@@ -105,7 +94,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>DB2EC92F-7576-42E8-072A-50E6A886C1BE</attributeRef>
-<attributeRef>712752D4-FB94-D43A-F456-F396A47F4058</attributeRef>
+<attributeRef>91932147-EB46-D9C7-0699-E1DD946A9F36</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

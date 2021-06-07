@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="coleccionista-col_sub_clu" directorySegmentName="seg_0" id="C746C77D-FA96-9B86-87A3-ADD8683E50F9">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_28" directorySegmentName="seg_0" id="917C7CCF-B53B-7E83-2191-559BD8F7F2DE">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 20:31:44 UTC</createdTime>
+<createdTime>2021-06-07 03:09:53 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
@@ -13,7 +13,7 @@
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>963A5D07-749A-65AA-E017-BBEECF8E97FE</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>ADD6BF51-2FF1-C37D-6B37-667B7056363C</targetEntity>
+<targetEntity>4284E23F-669B-A517-3ABE-EAC590620E2C</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

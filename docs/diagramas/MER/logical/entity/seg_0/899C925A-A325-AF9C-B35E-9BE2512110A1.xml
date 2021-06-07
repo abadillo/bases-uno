@@ -15,6 +15,16 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id " id="9C3622C1-FFC1-CD4C-7634-035C6B4AE56C">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-07 02:56:58 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="nombre" id="7E9AC710-2A70-BBD1-125B-546A93C196EF">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 17:10:57 UTC</createdTime>
@@ -68,7 +78,21 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B618BBD6-2FA6-6C53-4D32-8F7AD6B5EEBE" name="LOCAL PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-07 02:57:01 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9C3622C1-FFC1-CD4C-7634-035C6B4AE56C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

@@ -11,10 +11,6 @@
 
 
 2. Subastas:
-    * atributos:
-        * fecha
-        * **duracion aproximada**
-        * nombre
     * misc: 
         * el lugar puede ser alquilado o dispuesto por algun miembro
     * **importante**:
@@ -31,14 +27,6 @@
         * registra el inicio de su membres?a y estar? activo hasta que decida retirarse. 
         * Los coleccionistas pueden tener membres?as activas en m?ltiples clubes
 
-5. Coleccionistas:
-    * atributos:
-        * nombre
-        * nacionalidad
-        * lugar residencia ( pais , ciduad )
-        * telefono
-        * email contacto
-    
 6. Articulo_Subasta :
     * atributos:
         * precio vendido
@@ -52,3 +40,7 @@
         
         
 * # cambiar articulo por objeto y objeto por articulo
+
+
+
+CAMBIAR NOMBRE DE SUB_COL_CLUB
