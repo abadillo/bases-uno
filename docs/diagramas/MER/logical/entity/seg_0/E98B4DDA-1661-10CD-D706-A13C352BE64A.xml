@@ -22,6 +22,7 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT022</logicalDatatype>
@@ -38,9 +39,8 @@
 <referedAttribute>DA79A7AD-8F84-922B-C15A-DA575570CA7A</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="articulo_id" id="6BCA4566-07C7-6937-A796-251B541C4215">
 <createdBy>antonio2924</createdBy>
@@ -56,7 +56,7 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="coleccionista_cedula" id="1C8CAD9C-FA4C-4384-3261-410B0EA7194B">
+<Attribute name="dueno" id="1C8CAD9C-FA4C-4384-3261-410B0EA7194B">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 22:14:26 UTC</createdTime>
 <generatorID>4A72FFDC-C802-3BAE-92DB-E3FD725C0037</generatorID>
@@ -69,7 +69,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="orden" id="0E525B90-5EFF-1006-C6B4-3E2777D6850B">
 <createdBy>inmun</createdBy>
@@ -82,6 +82,47 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="postor" id="73483803-F1E0-0F8D-A921-6A2EF92227E2">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 00:02:16 UTC</createdTime>
+<generatorID>7A61633D-8AAB-91F6-CCF0-0DF5C00FEAF5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio_base" id="236BED8B-9B0F-66E8-0717-980DD2741A1F">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 00:09:08 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT022</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="segundo_precio" id="8110A868-D502-DED5-E0DA-626CA5D6EA6D">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-07 00:09:41 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT022</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

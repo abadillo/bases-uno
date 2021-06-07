@@ -299,6 +299,21 @@
 <point x="1073" y="597"/>
 </points>
 </Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="7A61633D-8AAB-91F6-CCF0-0DF5C00FEAF5" otype="Relation" vid_source="EA604450-B0B6-BD19-4465-2F88DA56A149" vid_target="45F8613B-C379-7564-AFBC-8D675A1C9704">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<backgroundColor>-16777216</backgroundColor>
+<lineWidth>1</lineWidth>
+<sourceLabel class="oracle.dbtools.crest.model.design.Label">
+<site>0</site>
+<labelBounds x="1031" y="579" width="36" height="30"/>
+<noBackgroundColor>true</noBackgroundColor>
+<noForegroundColor>true</noForegroundColor>
+</sourceLabel>
+<points>
+<point x="1073" y="609"/>
+<point x="549" y="609"/>
+</points>
+</Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="9DCF5196-000E-ABCA-BEDD-5D0AA66245A0" otype="Relation" vid_source="EF2F9C1F-B41E-8C74-6D77-4B269CB08420" vid_target="EA604450-B0B6-BD19-4465-2F88DA56A149">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <backgroundColor>-16777216</backgroundColor>
@@ -311,7 +326,7 @@
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="1113" y="826" width="67" height="30"/>
+<labelBounds x="1113" y="834" width="67" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>

@@ -93,6 +93,19 @@
 <dataTypeSize>25</dataTypeSize>
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="area interes" id="26D35DC7-27E0-63E0-BC4B-84605713F66E">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-06 23:47:18 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="31CFCB38-FC92-874A-CA03-BB2F6CB66D89" name="CLUB PK">
