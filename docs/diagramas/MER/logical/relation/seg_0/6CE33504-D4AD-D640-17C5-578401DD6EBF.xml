@@ -8,8 +8,8 @@
 </engineerTo>
 <sourcePk>53B38367-C813-450F-C318-480B0405E486</sourcePk>
 <identifying>true</identifying>
-<nameOnSource>pertenece</nameOnSource>
-<nameOnTarget> </nameOnTarget>
+<nameOnSource>subasta</nameOnSource>
+<nameOnTarget>  </nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
