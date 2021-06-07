@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipos de Lugares" id="4E8529C6-451A-E63E-B528-DC3519C2B251">
+         <createdBy>inmun</createdBy>
+         <createdTime>2020-12-28 22:08:17 UTC</createdTime>
+         <ownerDesignName>System</ownerDesignName>
+         <importedID>4E8529C6-451A-E63E-B528-DC3519C2B251</importedID>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>domains</fileName>
+         <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+         <listOfValues>
+            <valueDef value="Ciudad" description=""/>
+            <valueDef value="Direccion" description=""/>
+            <valueDef value="Estado" description=""/>
+            <valueDef value="Pais" description=""/>
+         </listOfValues>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Estatus_Subasta" id="5F9C13A7-3027-0D36-BD22-367C71E744C2">
+         <createdBy>inmun</createdBy>
+         <createdTime>2021-06-07 00:00:58 UTC</createdTime>
+         <ownerDesignName>MER</ownerDesignName>
+         <importedID>5F9C13A7-3027-0D36-BD22-367C71E744C2</importedID>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>domains</fileName>
+         <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+         <listOfValues>
+            <valueDef value="Activa" description=""/>
+            <valueDef value="Finalizada" description=""/>
+            <valueDef value="Programada" description=""/>
+         </listOfValues>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipo_Subasta" id="CDC4B466-D69E-046C-E9D0-85B9E96CA076">
+         <createdBy>inmun</createdBy>
+         <createdTime>2021-06-07 00:00:58 UTC</createdTime>
+         <ownerDesignName>MER</ownerDesignName>
+         <importedID>CDC4B466-D69E-046C-E9D0-85B9E96CA076</importedID>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>domains</fileName>
+         <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+         <listOfValues>
+            <valueDef value="&apos; Dinamica Americana&apos;" description=""/>
+            <valueDef value="A la Baja" description=""/>
+            <valueDef value="Dinamica Ascendente" description=""/>
+            <valueDef value="Dinamica descendente" description=""/>
+            <valueDef value="Round Robin" description=""/>
+            <valueDef value="Silenciosa" description=""/>
+            <valueDef value="Sobre Cerrado de Primer Precio" description=""/>
+            <valueDef value="Sobre Cerrado de Segundo Precio" description=""/>
+         </listOfValues>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Unknown" id="DOM3000004">
+         <createdBy>inmun</createdBy>
+         <createdTime>2020-12-28 18:47:15 UTC</createdTime>
+         <ownerDesignName>System</ownerDesignName>
+         <importedID>DOM3000004</importedID>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>domains</fileName>
+         <logicalDatatype>LOGDT017</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>
