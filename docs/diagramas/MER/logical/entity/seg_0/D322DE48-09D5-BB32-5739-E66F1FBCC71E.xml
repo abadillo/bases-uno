@@ -65,7 +65,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="coleccionista_cedula" id="DB2EC92F-7576-42E8-072A-50E6A886C1BE">
 <createdBy>antonio2924</createdBy>
@@ -80,7 +80,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -95,6 +95,7 @@
 <usedAttributes>
 <attributeRef>DB2EC92F-7576-42E8-072A-50E6A886C1BE</attributeRef>
 <attributeRef>91932147-EB46-D9C7-0699-E1DD946A9F36</attributeRef>
+<attributeRef>61B11D9D-D28B-605A-E9C4-016B776E760D</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
