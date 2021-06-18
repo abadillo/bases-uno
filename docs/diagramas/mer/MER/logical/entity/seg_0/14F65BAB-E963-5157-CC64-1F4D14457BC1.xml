@@ -53,19 +53,6 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="email" id="E7566E57-954A-2278-8CE4-4BCB7ECF6AF0">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 21:57:39 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="pagina_web" id="9A12BCA1-9692-0790-E24B-F7DACADF43BB">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 21:57:13 UTC</createdTime>
@@ -80,18 +67,77 @@
 <dataTypeSize>25</dataTypeSize>
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="red_social" id="C0FF9675-295E-4337-64B8-AEC4B50A68F7">
+<Attribute name="documento_identidad" id="E98CBAD6-25EC-6795-CFE6-5BD1C794B0F2">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 21:57:32 UTC</createdTime>
+<createdTime>2021-06-17 23:10:01 UTC</createdTime>
+<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>DB2EC92F-7576-42E8-072A-50E6A886C1BE</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="club_id" id="5CD3B51E-9B4E-F72C-6C21-34E890EBC690">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:10:01 UTC</createdTime>
+<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>91932147-EB46-D9C7-0699-E1DD946A9F36</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_ingreso" id="B1AB06B9-B318-967E-A570-8A59994DB947">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:10:01 UTC</createdTime>
+<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>61B11D9D-D28B-605A-E9C4-016B776E760D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="proposito" id="2FD04D5E-60CA-FE12-BC8A-8120E6338E43">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:12:32 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="B03EF1E9-8BAC-711A-45E5-CA5523F853F1">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:23:34 UTC</createdTime>
+<generatorID>362E2E1E-F790-4E5C-292C-484193A227FE</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>6A7FB528-D93F-8434-A895-A634F7FEABDA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

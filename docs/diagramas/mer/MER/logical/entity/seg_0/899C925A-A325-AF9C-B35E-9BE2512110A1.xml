@@ -64,7 +64,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="coleccionista_cedula" id="DAE063B3-AA40-28DB-11F8-C05CB53BA773">
+<Attribute name="documento_identidad" id="DAE063B3-AA40-28DB-11F8-C05CB53BA773">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-06 21:49:43 UTC</createdTime>
 <generatorID>78730397-D8A9-0366-5317-E4B002DBBEED</generatorID>
@@ -79,6 +79,26 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="A2FB85C2-3C8B-3EF9-07EC-BFB3F0143A92">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:50:19 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="5C378DC4-DA1D-BED2-746D-BC4369EAE531">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:50:24 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

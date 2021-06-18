@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="cedula" id="40A862D8-0326-6263-AEB2-A6BDBA75AE4C">
+<Attribute name="documento_identidad" id="40A862D8-0326-6263-AEB2-A6BDBA75AE4C">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 22:00:58 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
@@ -75,38 +75,11 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>25</dataTypeSize>
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nacionalidad" id="780763E6-A8E8-CA71-6838-98A516C27AF3">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 22:27:19 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="edad" id="13C59153-0275-DE19-E905-C5CA55507F51">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 22:00:28 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="telefono" id="34C33B4C-C31A-7B6A-66CE-53FA40C506BD">
 <createdBy>antonio2924</createdBy>
@@ -121,7 +94,7 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="email" id="03CF64FA-7183-EB3B-0B9D-EF1751CAB52C">
+<Attribute name="fecha_nacimiento" id="03CF64FA-7183-EB3B-0B9D-EF1751CAB52C">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 22:28:06 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
@@ -130,9 +103,8 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="direccion" id="D6242DB8-9A9E-68F1-1AB8-21DB4A436BA8">
 <createdBy>Frank</createdBy>
@@ -148,7 +120,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="coleccionista_representante_cedula" id="3709E9E9-E0DC-124B-1C0F-DF3026E7518E">
+<Attribute name="documento_identidad1" id="3709E9E9-E0DC-124B-1C0F-DF3026E7518E">
 <createdBy>Frank</createdBy>
 <createdTime>2021-06-02 23:42:09 UTC</createdTime>
 <generatorID>A14F521E-6B0D-28B7-B199-5BBDA27DD035</generatorID>
@@ -162,9 +134,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="representante_cedula" id="F6D9BCB1-D32F-145B-E9CD-FEC5431D868B">
+<Attribute name="documento_identidad_rep1" id="F6D9BCB1-D32F-145B-E9CD-FEC5431D868B">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 17:01:13 UTC</createdTime>
 <generatorID>9DCF5196-000E-ABCA-BEDD-5D0AA66245A0</generatorID>
@@ -174,6 +146,20 @@
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>1CA581F8-4979-77FC-3924-51166418395E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="B1DE4551-1DC8-68FA-2123-908C816B6869">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:01:05 UTC</createdTime>
+<generatorID>67816DE6-9029-567A-DDAB-5F55C40CFD92</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>6A7FB528-D93F-8434-A895-A634F7FEABDA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

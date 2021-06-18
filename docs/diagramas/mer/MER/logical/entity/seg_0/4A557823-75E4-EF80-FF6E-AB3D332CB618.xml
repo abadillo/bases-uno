@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4A557823-75E4-EF80-FF6E-AB3D332CB618" name="OBJ_COL">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4A557823-75E4-EF80-FF6E-AB3D332CB618" name="DUENO_HISTORICO">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 22:22:11 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
@@ -15,6 +15,26 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="AEE059DB-AC94-1835-35E1-EFBC31C9CDCF">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:38:47 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_registro" id="5A3D1F93-D1DF-D7E2-2F47-62C681E6F631">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:38:51 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="significado" id="E7D34554-9D56-2CF9-226C-6E210D31B0CB">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-22 20:03:22 UTC</createdTime>
@@ -28,21 +48,7 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="articulo_id" id="C10F4653-F651-4323-E24F-071C0ED61917">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 21:05:28 UTC</createdTime>
-<generatorID>C34DD5AA-9F75-6C64-2797-CD710F39FF55</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<referedAttribute>56E46D56-F168-E59A-4653-5552A400AD96</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="coleccionista_cedula" id="308FBA24-0344-5BA9-5523-F8F90489452A">
+<Attribute name="documento_identidad" id="308FBA24-0344-5BA9-5523-F8F90489452A">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 22:14:26 UTC</createdTime>
 <generatorID>717AFB4D-E497-2669-40B5-49C0F783C43E</generatorID>
@@ -55,7 +61,42 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_Comic" id="60E8DF24-D70E-2554-4D99-869113D21E47">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:36:50 UTC</createdTime>
+<generatorID>66479672-486E-E833-03E1-2DF8D4E77A18</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>E56192EA-4B71-3493-0736-87472C4E843A</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="5D8864BA-F1C4-DF2F-2F9D-D66741FBFC67">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:36:52 UTC</createdTime>
+<generatorID>4F733C51-AFAE-D549-E29B-F7E2E3C27854</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>317C3163-1F0F-61FE-FAB8-E28C65D68221</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio_dolar" id="0428C4DE-3F96-91D4-3771-1572AEFA8CF6">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:38:09 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -68,8 +109,9 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>C10F4653-F651-4323-E24F-071C0ED61917</attributeRef>
 <attributeRef>308FBA24-0344-5BA9-5523-F8F90489452A</attributeRef>
+<attributeRef>AEE059DB-AC94-1835-35E1-EFBC31C9CDCF</attributeRef>
+<attributeRef>5A3D1F93-D1DF-D7E2-2F47-62C681E6F631</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

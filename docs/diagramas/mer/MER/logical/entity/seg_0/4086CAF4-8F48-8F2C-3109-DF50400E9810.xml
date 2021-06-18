@@ -66,6 +66,17 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="nacionalidad" id="C041BDA8-C7D9-4EFA-A59C-CF7ABAFD8246">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:50:44 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="220543B5-B0D4-2DCB-ACFC-7F03038D4E10" name="lugar PK">

@@ -1,19 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="coleccionsta-art_sub" directorySegmentName="seg_0" id="4A72FFDC-C802-3BAE-92DB-E3FD725C0037">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_32" directorySegmentName="seg_0" id="4E8870B0-254E-B8B0-9194-800465946B51">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 20:37:27 UTC</createdTime>
+<createdTime>2021-06-17 22:43:15 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<sourcePk>F4B81E89-5059-65A7-7691-479434CCCF0E</sourcePk>
+<sourcePk>DC6CDC72-6F63-E24A-FEE8-BAC9D92E0A19</sourcePk>
 <identifying>false</identifying>
 <nameOnSource> </nameOnSource>
-<nameOnTarget>pertenece</nameOnTarget>
+<nameOnTarget>ganador</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>true</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>963A5D07-749A-65AA-E017-BBEECF8E97FE</sourceEntity>
+<sourceEntity>4284E23F-669B-A517-3ABE-EAC590620E2C</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>E98B4DDA-1661-10CD-D706-A13C352BE64A</targetEntity>
 <transferable>true</transferable>

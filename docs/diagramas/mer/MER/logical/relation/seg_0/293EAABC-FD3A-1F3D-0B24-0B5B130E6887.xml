@@ -1,21 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="articulo-art_sub" directorySegmentName="seg_0" id="6CE33504-D4AD-D640-17C5-578401DD6EBF">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_35" directorySegmentName="seg_0" id="293EAABC-FD3A-1F3D-0B24-0B5B130E6887">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-22 20:16:59 UTC</createdTime>
+<createdTime>2021-06-17 22:59:19 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<sourcePk>53B38367-C813-450F-C318-480B0405E486</sourcePk>
+<sourcePk>B85F4499-7328-9A1D-E2F0-4DB1262E0338</sourcePk>
 <identifying>true</identifying>
-<nameOnSource>subasta</nameOnSource>
-<nameOnTarget>  </nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>6F58C64C-8117-626F-58A9-ACC2852CA2E6</sourceEntity>
+<sourceEntity>0DFE761D-AB15-7281-60B7-E08FF2BF4B36</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>E98B4DDA-1661-10CD-D706-A13C352BE64A</targetEntity>
+<targetEntity>4284E23F-669B-A517-3ABE-EAC590620E2C</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

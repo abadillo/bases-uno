@@ -27,18 +27,16 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id" id="2E651BE1-6D46-425F-8FE8-E582A5E90F1C">
+<Attribute name="id" id="84590B57-7D34-D778-EB4A-9EA8C0F91578">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 21:05:28 UTC</createdTime>
-<generatorID>775494E2-75B4-4B8D-5E3B-0B3D7E63469B</generatorID>
+<createdTime>2021-06-17 22:35:59 UTC</createdTime>
+<generatorID>AD1231D8-7B70-299D-6434-5B14156959C3</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<referedAttribute>56E46D56-F168-E59A-4653-5552A400AD96</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<referedAttribute>E56192EA-4B71-3493-0736-87472C4E843A</referedAttribute>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -53,7 +51,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>2E651BE1-6D46-425F-8FE8-E582A5E90F1C</attributeRef>
+<attributeRef>84590B57-7D34-D778-EB4A-9EA8C0F91578</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

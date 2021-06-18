@@ -1,19 +1,18 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="articulo-art_col" directorySegmentName="seg_0" id="C34DD5AA-9F75-6C64-2797-CD710F39FF55">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_29" directorySegmentName="seg_0" id="66479672-486E-E833-03E1-2DF8D4E77A18">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-22 20:11:49 UTC</createdTime>
+<createdTime>2021-06-17 22:36:50 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<sourcePk>53B38367-C813-450F-C318-480B0405E486</sourcePk>
-<identifying>true</identifying>
-<nameOnSource>pertenece</nameOnSource>
-<nameOnTarget> </nameOnTarget>
-<optionalSource>false</optionalSource>
+<sourcePk>4BD57397-CBF4-9CE1-938C-2370EE279FF6</sourcePk>
+<arc>0581506C-D924-AFE1-5BA0-33330129805F</arc>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>6F58C64C-8117-626F-58A9-ACC2852CA2E6</sourceEntity>
+<sourceEntity>6ACE3C63-6D3F-3BB8-E827-F117C8108011</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>4A557823-75E4-EF80-FF6E-AB3D332CB618</targetEntity>
 <transferable>true</transferable>

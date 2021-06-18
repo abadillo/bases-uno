@@ -11,11 +11,30 @@
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
 <growthPercent>0</growthPercent>
 <growthType>Year</growthType>
-<hierarchicalParent>6F58C64C-8117-626F-58A9-ACC2852CA2E6</hierarchicalParent>
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="317C3163-1F0F-61FE-FAB8-E28C65D68221">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:33:54 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="titulo" id="83D231DF-9891-C50B-1D65-7B79FEEBD4F9">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:33:55 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="volumen" id="9F04EC64-A40E-210D-7EE9-BE933D4A93EC">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 20:57:33 UTC</createdTime>
@@ -23,6 +42,7 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -59,6 +79,7 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT022</logicalDatatype>
@@ -114,5 +135,29 @@
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="editor" id="249A0E90-4F61-9044-E503-162AF064A295">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:33:03 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3A474DE5-A848-3666-8657-D821965DEE9A" name="COMIC PK">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:34:06 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>317C3163-1F0F-61FE-FAB8-E28C65D68221</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

@@ -41,6 +41,16 @@
 <dataTypeSize>25</dataTypeSize>
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="descripcion" id="048F024F-3D26-2608-6504-5E59BB78922B">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:15:20 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="0881486E-75CA-C4A4-B64D-A0248F677267" name="INTEREZ PK">

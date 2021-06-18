@@ -27,54 +27,76 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombre" id="21272824-49C7-B69F-3EFF-DE0461A8B788">
-<createdBy>Frank</createdBy>
-<createdTime>2021-05-22 02:43:18 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="fecha_hora" id="B52BF230-5657-8676-B943-43B76984AEE5">
+<Attribute name="fecha" id="CE42B42F-B132-79D2-AA92-0A1449ACA363">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-05-17 22:23:11 UTC</createdTime>
+<createdTime>2021-06-17 22:46:01 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="estatus" id="C74AF970-32F9-D14E-A393-561A2016E301">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 18:14:47 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
 <use>0</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
-<domain>5F9C13A7-3027-0D36-BD22-367C71E744C2</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="duracion" id="737C785B-60FB-FD9B-13EE-A10314210E78">
-<createdBy>inmun</createdBy>
-<createdTime>2021-06-06 23:47:48 UTC</createdTime>
+<Attribute name="hora_inicio" id="5BECB2F6-FB91-E504-BAC8-3E8E04CFEF61">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:45:36 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT014</logicalDatatype>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hora_cierre" id="AE796236-9ED4-F94F-6879-C40A5D0A3FBB">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:45:23 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="41C3A15F-867C-9846-F6D0-8FA1A1C8658F">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:46:36 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="caridad" id="21F83A5D-A063-60D1-492F-2C953FEAF373">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:46:38 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cancelado" id="B7B84614-3FC6-0B1C-A52D-CF3197D31DE5">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:46:54 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id " id="93D90A32-1B20-F904-9785-F5B39D872813">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:45:08 UTC</createdTime>
+<generatorID>78B91DC4-65B1-1F59-0E63-4ACB518A3496</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>9C3622C1-FFC1-CD4C-7634-035C6B4AE56C</referedAttribute>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

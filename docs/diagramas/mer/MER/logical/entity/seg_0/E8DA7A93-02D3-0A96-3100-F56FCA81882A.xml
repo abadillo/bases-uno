@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E8DA7A93-02D3-0A96-3100-F56FCA81882A" name="CLU_SUB">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E8DA7A93-02D3-0A96-3100-F56FCA81882A" name="ORG_INV">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 23:24:14 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="rol" id="AC25AAFE-86EC-8AD1-93BB-85C8AD112980">
+<Attribute name="id" id="AC25AAFE-86EC-8AD1-93BB-85C8AD112980">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 23:24:26 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
@@ -39,8 +39,7 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="club_id" id="D1B64C0C-B2BE-F89C-D79D-C34D67DE300C">
 <createdBy>antonio2924</createdBy>
@@ -55,7 +54,22 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="247703DD-1CE1-91EA-81A5-553639CC876A">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:19:07 UTC</createdTime>
+<generatorID>84D911DC-2EDA-C3FD-AF5D-6C581FB7AF84</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>9E055C8D-E9ED-DC05-88C8-4D81FE35010B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -70,6 +84,7 @@
 <usedAttributes>
 <attributeRef>0A984D63-4C5A-31A4-7D1C-393BC9AD7289</attributeRef>
 <attributeRef>D1B64C0C-B2BE-F89C-D79D-C34D67DE300C</attributeRef>
+<attributeRef>AC25AAFE-86EC-8AD1-93BB-85C8AD112980</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

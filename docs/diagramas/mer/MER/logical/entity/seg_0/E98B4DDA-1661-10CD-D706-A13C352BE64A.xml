@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E98B4DDA-1661-10CD-D706-A13C352BE64A" name="OBJ_SUB">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E98B4DDA-1661-10CD-D706-A13C352BE64A" name="LISTADO">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-22 20:16:44 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
@@ -15,6 +15,16 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="E5BC155C-9B54-5F5C-853E-18A56966AE8B">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:56:59 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="orden" id="0E525B90-5EFF-1006-C6B4-3E2777D6850B">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-06 21:34:19 UTC</createdTime>
@@ -22,6 +32,7 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -52,14 +63,13 @@
 <logicalDatatype>LOGDT022</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fecha_hora_compra" id="E32EBBD0-17AC-6FA5-79BE-51A69F7AF066">
+<Attribute name="duracion minima" id="119E23ED-204B-3D27-D5D5-28368D02F7DF">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-06-07 03:35:36 UTC</createdTime>
+<createdTime>2021-06-17 22:57:50 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
@@ -77,35 +87,72 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="articulo_id" id="6BCA4566-07C7-6937-A796-251B541C4215">
+<Attribute name="documento_identidad" id="B6D95037-76C7-5EF4-3157-E86665B7664F">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 21:05:28 UTC</createdTime>
-<generatorID>6CE33504-D4AD-D640-17C5-578401DD6EBF</generatorID>
+<createdTime>2021-06-17 22:37:32 UTC</createdTime>
+<generatorID>2D119C6B-5EC6-7333-AB04-5E3AC8BA0EF5</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<referedAttribute>56E46D56-F168-E59A-4653-5552A400AD96</referedAttribute>
+<referedAttribute>308FBA24-0344-5BA9-5523-F8F90489452A</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="postor" id="1C8CAD9C-FA4C-4384-3261-410B0EA7194B">
+<Attribute name="id_" id="E9CECE04-8261-C090-0CE2-E0451F5B6D77">
 <createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 22:14:26 UTC</createdTime>
-<generatorID>4A72FFDC-C802-3BAE-92DB-E3FD725C0037</generatorID>
+<createdTime>2021-06-17 22:38:50 UTC</createdTime>
+<generatorID>2D119C6B-5EC6-7333-AB04-5E3AC8BA0EF5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>AEE059DB-AC94-1835-35E1-EFBC31C9CDCF</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_registro" id="4BC0EEA7-781F-8A77-3C45-13E393052038">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 22:38:56 UTC</createdTime>
+<generatorID>2D119C6B-5EC6-7333-AB04-5E3AC8BA0EF5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>5A3D1F93-D1DF-D7E2-2F47-62C681E6F631</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="6DAC7A08-0674-C6D6-4764-DBC379B36A55">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:00:15 UTC</createdTime>
+<generatorID>4E8870B0-254E-B8B0-9194-800465946B51</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
+<referedAttribute>B278E228-D001-773F-5797-C2266445B7BA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_inscripcion" id="D3054222-43C7-CEB5-4605-C3D7FC2E216D">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:22:08 UTC</createdTime>
+<generatorID>4E8870B0-254E-B8B0-9194-800465946B51</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>D207DD13-BD0F-8DB8-436A-5902DCDAAE46</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -118,7 +165,6 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>6BCA4566-07C7-6937-A796-251B541C4215</attributeRef>
 <attributeRef>8D291BF5-3E11-1F8E-988A-5C012C047039</attributeRef>
 </usedAttributes>
 </identifier>
