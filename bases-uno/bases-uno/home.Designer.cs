@@ -32,52 +32,56 @@ namespace bases_uno
 		/// </summary>
 		private void InitializeComponent()
 		{
-            /// Logos
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Subastas____));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            /// Static panels
             this.stpanel1 = new System.Windows.Forms.Panel();
             this.stpanel3 = new System.Windows.Forms.Panel();
-            this.stpanel4 = new System.Windows.Forms.Panel();
-            this.stpanel13 = new System.Windows.Forms.Panel();
-            this.stpanel12 = new System.Windows.Forms.Panel();
-            this.stpanel11 = new System.Windows.Forms.Panel();
-            this.stpanel10 = new System.Windows.Forms.Panel();
-            this.stpanel9 = new System.Windows.Forms.Panel();
-            this.stpanel8 = new System.Windows.Forms.Panel();
-            this.stpanel2 = new System.Windows.Forms.Panel();
-            this.stpanel6 = new System.Windows.Forms.Panel();
-            this.stpanel7 = new System.Windows.Forms.Panel();
-
-            /// Dinamic panels
             this.dipanel0 = new System.Windows.Forms.Panel();
-            this.dipanel1 = new System.Windows.Forms.Panel();
-
-            /// Regular buttons
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-
-            /// Icon buttons
+            this.stpanel4 = new System.Windows.Forms.Panel();
+            this.stpanel13 = new System.Windows.Forms.Panel();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.stpanel12 = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.stpanel11 = new System.Windows.Forms.Panel();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.stpanel10 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.stpanel9 = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.stpanel8 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-
+            this.stpanel2 = new System.Windows.Forms.Panel();
+            this.stpanel6 = new System.Windows.Forms.Panel();
+            this.stpanel7 = new System.Windows.Forms.Panel();
+            this.dipanel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.stpanel1.SuspendLayout();
             this.stpanel3.SuspendLayout();
+            this.dipanel0.SuspendLayout();
             this.stpanel4.SuspendLayout();
             this.stpanel2.SuspendLayout();
-            this.dipanel0.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.stpanel6.SuspendLayout();
             this.stpanel7.SuspendLayout();
             this.SuspendLayout();
-
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(74)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::bases_uno.Properties.Resources.logo;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(294, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // stpanel1
             // 
@@ -130,8 +134,9 @@ namespace bases_uno
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(234, 50);
             this.button6.TabIndex = 5;
-            this.button6.Text = "Opcion ...";
+            this.button6.Text = "Opcion Z";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -406,19 +411,6 @@ namespace bases_uno
             this.stpanel2.Size = new System.Drawing.Size(304, 179);
             this.stpanel2.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(74)))));
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::bases_uno.Properties.Resources.logo;
-            this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(294, 169);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // stpanel6
             // 
             this.stpanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
@@ -459,17 +451,18 @@ namespace bases_uno
             this.Controls.Add(this.stpanel6);
             this.Controls.Add(this.stpanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.Name = "Subastas____";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Subastas___";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.stpanel1.ResumeLayout(false);
             this.stpanel3.ResumeLayout(false);
             this.dipanel0.ResumeLayout(false);
             this.stpanel4.ResumeLayout(false);
             this.stpanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.stpanel6.ResumeLayout(false);
             this.stpanel7.ResumeLayout(false);
             this.ResumeLayout(false);
