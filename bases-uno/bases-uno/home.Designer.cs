@@ -32,42 +32,52 @@ namespace bases_uno
 		/// </summary>
 		private void InitializeComponent()
 		{
+            /// Logos
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            /// Static panels
             this.stpanel1 = new System.Windows.Forms.Panel();
             this.stpanel3 = new System.Windows.Forms.Panel();
-            this.dipanel5 = new System.Windows.Forms.Panel();
+            this.stpanel4 = new System.Windows.Forms.Panel();
+            this.stpanel13 = new System.Windows.Forms.Panel();
+            this.stpanel12 = new System.Windows.Forms.Panel();
+            this.stpanel11 = new System.Windows.Forms.Panel();
+            this.stpanel10 = new System.Windows.Forms.Panel();
+            this.stpanel9 = new System.Windows.Forms.Panel();
+            this.stpanel8 = new System.Windows.Forms.Panel();
+            this.stpanel2 = new System.Windows.Forms.Panel();
+            this.stpanel6 = new System.Windows.Forms.Panel();
+            this.stpanel7 = new System.Windows.Forms.Panel();
+
+            /// Dinamic panels
+            this.dipanel0 = new System.Windows.Forms.Panel();
+            this.dipanel1 = new System.Windows.Forms.Panel();
+
+            /// Regular buttons
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.stpanel4 = new System.Windows.Forms.Panel();
-            this.stpanel13 = new System.Windows.Forms.Panel();
+
+            /// Icon buttons
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.stpanel12 = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.stpanel11 = new System.Windows.Forms.Panel();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.stpanel10 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.stpanel9 = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.stpanel8 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.stpanel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.stpanel6 = new System.Windows.Forms.Panel();
-            this.stpanel7 = new System.Windows.Forms.Panel();
-            this.dipanel14 = new System.Windows.Forms.Panel();
+
             this.stpanel1.SuspendLayout();
             this.stpanel3.SuspendLayout();
-            this.dipanel5.SuspendLayout();
             this.stpanel4.SuspendLayout();
             this.stpanel2.SuspendLayout();
+            this.dipanel0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.stpanel6.SuspendLayout();
             this.stpanel7.SuspendLayout();
             this.SuspendLayout();
+
             // 
             // stpanel1
             // 
@@ -83,7 +93,7 @@ namespace bases_uno
             // stpanel3
             // 
             this.stpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(149)))), ((int)(((byte)(163)))));
-            this.stpanel3.Controls.Add(this.dipanel5);
+            this.stpanel3.Controls.Add(this.dipanel0);
             this.stpanel3.Controls.Add(this.stpanel4);
             this.stpanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpanel3.Location = new System.Drawing.Point(0, 179);
@@ -91,21 +101,21 @@ namespace bases_uno
             this.stpanel3.Size = new System.Drawing.Size(304, 482);
             this.stpanel3.TabIndex = 1;
             // 
-            // dipanel5
+            // dipanel0
             // 
-            this.dipanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(69)))), ((int)(((byte)(89)))));
-            this.dipanel5.Controls.Add(this.button6);
-            this.dipanel5.Controls.Add(this.button5);
-            this.dipanel5.Controls.Add(this.button4);
-            this.dipanel5.Controls.Add(this.button3);
-            this.dipanel5.Controls.Add(this.button2);
-            this.dipanel5.Controls.Add(this.button1);
-            this.dipanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel5.Location = new System.Drawing.Point(68, 0);
-            this.dipanel5.Name = "dipanel5";
-            this.dipanel5.Padding = new System.Windows.Forms.Padding(1);
-            this.dipanel5.Size = new System.Drawing.Size(236, 482);
-            this.dipanel5.TabIndex = 1;
+            this.dipanel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(69)))), ((int)(((byte)(89)))));
+            this.dipanel0.Controls.Add(this.button6);
+            this.dipanel0.Controls.Add(this.button5);
+            this.dipanel0.Controls.Add(this.button4);
+            this.dipanel0.Controls.Add(this.button3);
+            this.dipanel0.Controls.Add(this.button2);
+            this.dipanel0.Controls.Add(this.button1);
+            this.dipanel0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dipanel0.Location = new System.Drawing.Point(68, 0);
+            this.dipanel0.Name = "dipanel0";
+            this.dipanel0.Padding = new System.Windows.Forms.Padding(1);
+            this.dipanel0.Size = new System.Drawing.Size(236, 482);
+            this.dipanel0.TabIndex = 1;
             // 
             // button6
             // 
@@ -423,7 +433,7 @@ namespace bases_uno
             // stpanel7
             // 
             this.stpanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.stpanel7.Controls.Add(this.dipanel14);
+            this.stpanel7.Controls.Add(this.dipanel1);
             this.stpanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpanel7.Location = new System.Drawing.Point(0, 0);
             this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -432,13 +442,13 @@ namespace bases_uno
             this.stpanel7.Size = new System.Drawing.Size(880, 661);
             this.stpanel7.TabIndex = 0;
             // 
-            // dipanel14
+            // dipanel1
             // 
-            this.dipanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel14.Location = new System.Drawing.Point(15, 15);
-            this.dipanel14.Name = "dipanel14";
-            this.dipanel14.Size = new System.Drawing.Size(850, 631);
-            this.dipanel14.TabIndex = 0;
+            this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dipanel1.Location = new System.Drawing.Point(15, 15);
+            this.dipanel1.Name = "dipanel1";
+            this.dipanel1.Size = new System.Drawing.Size(850, 631);
+            this.dipanel1.TabIndex = 0;
             // 
             // Subastas____
             // 
@@ -456,7 +466,7 @@ namespace bases_uno
             this.Text = "Subastas___";
             this.stpanel1.ResumeLayout(false);
             this.stpanel3.ResumeLayout(false);
-            this.dipanel5.ResumeLayout(false);
+            this.dipanel0.ResumeLayout(false);
             this.stpanel4.ResumeLayout(false);
             this.stpanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -468,7 +478,7 @@ namespace bases_uno
 
         private Panel stpanel1;
         private Panel stpanel3;
-        private Panel dipanel5;
+        private Panel dipanel0;
         private Panel stpanel2;
         private Button button6;
         private Button button5;
@@ -492,7 +502,7 @@ namespace bases_uno
         private FontAwesome.Sharp.IconButton iconButton5;
         private Panel stpanel13;
         private FontAwesome.Sharp.IconButton iconButton6;
-        private Panel dipanel14;
+        private Panel dipanel1;
 
         #endregion
 
