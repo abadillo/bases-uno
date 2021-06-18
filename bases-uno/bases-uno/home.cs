@@ -16,5 +16,27 @@ namespace bases_uno
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stpanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+    }
 }
