@@ -98,6 +98,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassModell.cs" />
     <Compile Include="Comic.cs" />
     <Compile Include="ConnectionDB.cs" />
     <Compile Include="ManyToMany.cs" />

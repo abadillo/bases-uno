@@ -19,7 +19,7 @@ namespace Engine
         SqlConnection conn = new SqlConnection(settings.ConnectionString);
         public NpgsqlCommand Script;
         public NpgsqlDataReader Reader;     
-        public NpgsqlConnection Conexion = new NpgsqlConnection(settings.ConnectionString);
+        public NpgsqlConnection Connection = new NpgsqlConnection(settings.ConnectionString);
         #endregion
 
         #region CRUDs
@@ -161,7 +161,7 @@ namespace Engine
         {
             try
             {
-                Conexion.Open();
+                Connection.Open();
 
                 return true;
             }
@@ -177,7 +177,7 @@ namespace Engine
         {
             try
             {
-                Conexion.Close();
+                Connection.Close();
             }
             finally { }
         }
