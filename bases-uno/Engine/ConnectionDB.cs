@@ -26,30 +26,30 @@ namespace Engine
         /// <summary>
         /// Inserta <typeparamref name="Tipo"/> en la BD 
         /// </summary>
-        public abstract void Insertar();
+        public abstract void Insert();
 
         /// <summary>
         /// Busca <typeparamref name="Tipo"/> en la Base de Datos
         /// </summary>
         /// <returns>Lista con todos los objetos de la tabla de la <typeparamref name="Tipo"/></returns>
-        public abstract List<Tipo> Todos();
+        public abstract List<Tipo> ListAll();
 
         /// <summary>
         /// Busca especificamente <typeparamref name="Tipo"/> en la base de datos
         /// </summary>
         /// <param name="codigo">Codigo de tipo <typeparamref name="Codigo"/> para la busqueda</param>
         /// <returns>La instancia especifica en la tabla de <typeparamref name="Tipo"/></returns>
-        public abstract Tipo Leer(Codigo codigo);
+        public abstract Tipo Read(Codigo codigo);
 
         /// <summary>
         /// Actualiza a informacion de <typeparamref name="Tipo"/> en la BD
         /// </summary>
-        public abstract void Actualizar();
+        public abstract void Update();
 
         /// <summary>
         /// Elimina a <typeparamref name="Tipo"/> de la BD
         /// </summary>
-        public abstract void Eliminar();
+        public abstract void Delete();
         #endregion
 
         #region Lectura con el Reader
