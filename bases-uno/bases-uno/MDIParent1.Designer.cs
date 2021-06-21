@@ -1,10 +1,9 @@
-﻿
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace bases_uno
 {
-    partial class MasterPage
+    partial class MDIParent1
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +31,7 @@ namespace bases_uno
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterPage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIParent1));
             this.stpanel1 = new System.Windows.Forms.Panel();
             this.stpanel3 = new System.Windows.Forms.Panel();
             this.dipanel0 = new System.Windows.Forms.Panel();
@@ -44,27 +43,24 @@ namespace bases_uno
             this.button1 = new System.Windows.Forms.Button();
             this.stpanel4 = new System.Windows.Forms.Panel();
             this.stpanel13 = new System.Windows.Forms.Panel();
-            this.stpanel12 = new System.Windows.Forms.Panel();
-            this.stpanel11 = new System.Windows.Forms.Panel();
-            this.stpanel10 = new System.Windows.Forms.Panel();
-            this.stpanel9 = new System.Windows.Forms.Panel();
-            this.stpanel8 = new System.Windows.Forms.Panel();
-            this.stpanel2 = new System.Windows.Forms.Panel();
-            this.stpanel6 = new System.Windows.Forms.Panel();
-            this.stpanel7 = new System.Windows.Forms.Panel();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.stpanel12 = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.stpanel11 = new System.Windows.Forms.Panel();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.stpanel10 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.stpanel9 = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.stpanel8 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.stpanel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.stpanel1.SuspendLayout();
             this.stpanel3.SuspendLayout();
             this.dipanel0.SuspendLayout();
             this.stpanel4.SuspendLayout();
             this.stpanel2.SuspendLayout();
-            this.stpanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +73,7 @@ namespace bases_uno
             this.stpanel1.Location = new System.Drawing.Point(0, 0);
             this.stpanel1.Name = "stpanel1";
             this.stpanel1.Size = new System.Drawing.Size(304, 661);
-            this.stpanel1.TabIndex = 0;
+            this.stpanel1.TabIndex = 5;
             // 
             // stpanel3
             // 
@@ -121,7 +117,6 @@ namespace bases_uno
             this.button6.TabIndex = 5;
             this.button6.Text = "Opcion Z";
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -186,7 +181,6 @@ namespace bases_uno
             this.button2.TabIndex = 1;
             this.button2.Text = "Opcion ...";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -225,7 +219,6 @@ namespace bases_uno
             this.stpanel4.Padding = new System.Windows.Forms.Padding(1);
             this.stpanel4.Size = new System.Drawing.Size(68, 482);
             this.stpanel4.TabIndex = 0;
-            this.stpanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.stpanel4_Paint);
             // 
             // stpanel13
             // 
@@ -235,84 +228,6 @@ namespace bases_uno
             this.stpanel13.Name = "stpanel13";
             this.stpanel13.Size = new System.Drawing.Size(66, 2);
             this.stpanel13.TabIndex = 12;
-            // 
-            // stpanel12
-            // 
-            this.stpanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.stpanel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.stpanel12.Location = new System.Drawing.Point(1, 413);
-            this.stpanel12.Name = "stpanel12";
-            this.stpanel12.Size = new System.Drawing.Size(66, 2);
-            this.stpanel12.TabIndex = 10;
-            // 
-            // stpanel11
-            // 
-            this.stpanel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.stpanel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stpanel11.Location = new System.Drawing.Point(1, 271);
-            this.stpanel11.Name = "stpanel11";
-            this.stpanel11.Size = new System.Drawing.Size(66, 2);
-            this.stpanel11.TabIndex = 8;
-            // 
-            // stpanel10
-            // 
-            this.stpanel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.stpanel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stpanel10.Location = new System.Drawing.Point(1, 203);
-            this.stpanel10.Name = "stpanel10";
-            this.stpanel10.Size = new System.Drawing.Size(66, 2);
-            this.stpanel10.TabIndex = 6;
-            // 
-            // stpanel9
-            // 
-            this.stpanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.stpanel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stpanel9.Location = new System.Drawing.Point(1, 135);
-            this.stpanel9.Name = "stpanel9";
-            this.stpanel9.Size = new System.Drawing.Size(66, 2);
-            this.stpanel9.TabIndex = 4;
-            // 
-            // stpanel8
-            // 
-            this.stpanel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.stpanel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stpanel8.Location = new System.Drawing.Point(1, 67);
-            this.stpanel8.Name = "stpanel8";
-            this.stpanel8.Size = new System.Drawing.Size(66, 2);
-            this.stpanel8.TabIndex = 2;
-            // 
-            // stpanel2
-            // 
-            this.stpanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(74)))));
-            this.stpanel2.Controls.Add(this.pictureBox1);
-            this.stpanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stpanel2.Location = new System.Drawing.Point(0, 0);
-            this.stpanel2.Name = "stpanel2";
-            this.stpanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.stpanel2.Size = new System.Drawing.Size(304, 179);
-            this.stpanel2.TabIndex = 0;
-            // 
-            // stpanel6
-            // 
-            this.stpanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.stpanel6.Controls.Add(this.stpanel7);
-            this.stpanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stpanel6.Location = new System.Drawing.Point(304, 0);
-            this.stpanel6.Margin = new System.Windows.Forms.Padding(0);
-            this.stpanel6.Name = "stpanel6";
-            this.stpanel6.Size = new System.Drawing.Size(880, 661);
-            this.stpanel6.TabIndex = 1;
-            // 
-            // stpanel7
-            // 
-            this.stpanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.stpanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stpanel7.Location = new System.Drawing.Point(0, 0);
-            this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
-            this.stpanel7.Name = "stpanel7";
-            this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
-            this.stpanel7.Size = new System.Drawing.Size(880, 661);
-            this.stpanel7.TabIndex = 0;
             // 
             // iconButton6
             // 
@@ -331,6 +246,15 @@ namespace bases_uno
             this.iconButton6.TabIndex = 11;
             this.iconButton6.UseVisualStyleBackColor = false;
             // 
+            // stpanel12
+            // 
+            this.stpanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.stpanel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.stpanel12.Location = new System.Drawing.Point(1, 413);
+            this.stpanel12.Name = "stpanel12";
+            this.stpanel12.Size = new System.Drawing.Size(66, 2);
+            this.stpanel12.TabIndex = 10;
+            // 
             // iconButton5
             // 
             this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
@@ -348,6 +272,15 @@ namespace bases_uno
             this.iconButton5.TabIndex = 9;
             this.iconButton5.UseVisualStyleBackColor = false;
             // 
+            // stpanel11
+            // 
+            this.stpanel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.stpanel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.stpanel11.Location = new System.Drawing.Point(1, 271);
+            this.stpanel11.Name = "stpanel11";
+            this.stpanel11.Size = new System.Drawing.Size(66, 2);
+            this.stpanel11.TabIndex = 8;
+            // 
             // iconButton4
             // 
             this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
@@ -364,7 +297,15 @@ namespace bases_uno
             this.iconButton4.Size = new System.Drawing.Size(66, 66);
             this.iconButton4.TabIndex = 7;
             this.iconButton4.UseVisualStyleBackColor = false;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // stpanel10
+            // 
+            this.stpanel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.stpanel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.stpanel10.Location = new System.Drawing.Point(1, 203);
+            this.stpanel10.Name = "stpanel10";
+            this.stpanel10.Size = new System.Drawing.Size(66, 2);
+            this.stpanel10.TabIndex = 6;
             // 
             // iconButton3
             // 
@@ -383,6 +324,15 @@ namespace bases_uno
             this.iconButton3.TabIndex = 5;
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
+            // stpanel9
+            // 
+            this.stpanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.stpanel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.stpanel9.Location = new System.Drawing.Point(1, 135);
+            this.stpanel9.Name = "stpanel9";
+            this.stpanel9.Size = new System.Drawing.Size(66, 2);
+            this.stpanel9.TabIndex = 4;
+            // 
             // iconButton2
             // 
             this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
@@ -400,6 +350,15 @@ namespace bases_uno
             this.iconButton2.TabIndex = 3;
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
+            // stpanel8
+            // 
+            this.stpanel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.stpanel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.stpanel8.Location = new System.Drawing.Point(1, 67);
+            this.stpanel8.Name = "stpanel8";
+            this.stpanel8.Size = new System.Drawing.Size(66, 2);
+            this.stpanel8.TabIndex = 2;
+            // 
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
@@ -416,7 +375,17 @@ namespace bases_uno
             this.iconButton1.Size = new System.Drawing.Size(66, 66);
             this.iconButton1.TabIndex = 0;
             this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // stpanel2
+            // 
+            this.stpanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(74)))));
+            this.stpanel2.Controls.Add(this.pictureBox1);
+            this.stpanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.stpanel2.Location = new System.Drawing.Point(0, 0);
+            this.stpanel2.Name = "stpanel2";
+            this.stpanel2.Padding = new System.Windows.Forms.Padding(5);
+            this.stpanel2.Size = new System.Drawing.Size(304, 179);
+            this.stpanel2.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -431,46 +400,44 @@ namespace bases_uno
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // MasterPage
+            // MDIParent1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.stpanel6);
             this.Controls.Add(this.stpanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
-            this.Name = "MasterPage";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Subastas";
-            this.Load += new System.EventHandler(this.MasterPage_Load);
+            this.Name = "MDIParent1";
+            this.Text = "8 Bit Subastas";
             this.stpanel1.ResumeLayout(false);
             this.stpanel3.ResumeLayout(false);
             this.dipanel0.ResumeLayout(false);
             this.stpanel4.ResumeLayout(false);
             this.stpanel2.ResumeLayout(false);
-            this.stpanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
-
+        #endregion
         private Panel stpanel1;
         private Panel stpanel3;
         private Panel dipanel0;
-        private Panel stpanel2;
         private Button button6;
         private Button button5;
         private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
-        private PictureBox pictureBox1;
         private Panel stpanel4;
+        private Panel stpanel13;
+        private FontAwesome.Sharp.IconButton iconButton6;
+        private Panel stpanel12;
+        private FontAwesome.Sharp.IconButton iconButton5;
         private Panel stpanel11;
         private FontAwesome.Sharp.IconButton iconButton4;
         private Panel stpanel10;
@@ -479,34 +446,10 @@ namespace bases_uno
         private FontAwesome.Sharp.IconButton iconButton2;
         private Panel stpanel8;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private Panel stpanel12;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private Panel stpanel13;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        private Panel stpanel6;
-        private Panel stpanel7;
-
-        #endregion
-
-        /// CUSTOM 
-        /// 
-        /*
-		protected override void WndProc(ref Message m)
-		{
-			switch (m.Msg)
-			{
-				case 0x84:
-					base.WndProc(ref m);
-					if ((int)m.Result == 0x1)
-						m.Result = (IntPtr)0x2;
-					return;
-
-			}
-
-			base.WndProc(ref m);
-			
-		}
-		*/
-
+        private Panel stpanel2;
+        private PictureBox pictureBox1;
     }
 }
+
+
+

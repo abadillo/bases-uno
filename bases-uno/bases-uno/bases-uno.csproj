@@ -104,20 +104,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DataSets\TestDataSet.cs">
       <DependentUpon>TestDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\comics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\comics.Designer.cs">
+      <DependentUpon>comics.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MasterPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MasterPage.Designer.cs">
-      <DependentUpon>MasterPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\home.cs">
       <SubType>Form</SubType>
@@ -139,11 +145,14 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\comics.resx">
+      <DependentUpon>comics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MasterPage.resx">
-      <DependentUpon>MasterPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\home.resx">
       <DependentUpon>home.cs</DependentUpon>
@@ -186,6 +195,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\logo.png" />
+    <Content Include="assets\icon.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
