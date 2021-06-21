@@ -16,7 +16,8 @@ namespace Engine
         //Retrieve Connection String By Name
         static string sConn = "bases_uno.Properties.Settings.DBConnectionString";
         static ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[sConn];
-        SqlConnection conn = new SqlConnection(settings.ConnectionString);
+        string connection = settings.ConnectionString;
+        NpgsqlConnection conn = new NpgsqlConnection(settings.ConnectionString);
         public NpgsqlCommand Script;
         public NpgsqlDataReader Reader;     
         public NpgsqlConnection Connection = new NpgsqlConnection(settings.ConnectionString);

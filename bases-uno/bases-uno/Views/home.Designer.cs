@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace bases_uno
 {
-	partial class Subastas____
+	partial class Subastas
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -32,7 +32,7 @@ namespace bases_uno
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Subastas____));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Subastas));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.stpanel1 = new System.Windows.Forms.Panel();
             this.stpanel3 = new System.Windows.Forms.Panel();
@@ -61,48 +61,48 @@ namespace bases_uno
             this.stpanel7 = new System.Windows.Forms.Panel();
             this.dipanel1 = new System.Windows.Forms.Panel();
             this.mnpanel1 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxSynopsis = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.spacerpanel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxCover = new System.Windows.Forms.TextBox();
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxEditor = new System.Windows.Forms.TextBox();
             this.iconButton11 = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPages = new System.Windows.Forms.TextBox();
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBoxPublicationPrice = new System.Windows.Forms.TextBox();
             this.iconButton19 = new FontAwesome.Sharp.IconButton();
             this.label13 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBoxColor = new System.Windows.Forms.TextBox();
             this.iconButton18 = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxTitel = new System.Windows.Forms.TextBox();
             this.iconButton17 = new FontAwesome.Sharp.IconButton();
             this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxVolume = new System.Windows.Forms.TextBox();
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxPublicationDate = new System.Windows.Forms.TextBox();
             this.iconButton16 = new FontAwesome.Sharp.IconButton();
             this.label10 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxNumber = new System.Windows.Forms.TextBox();
             this.iconButton15 = new FontAwesome.Sharp.IconButton();
             this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.iconButton14 = new FontAwesome.Sharp.IconButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -204,7 +204,6 @@ namespace bases_uno
             this.button6.TabIndex = 5;
             this.button6.Text = "Opcion Z";
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -269,7 +268,6 @@ namespace bases_uno
             this.button2.TabIndex = 1;
             this.button2.Text = "Opcion ...";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -308,7 +306,6 @@ namespace bases_uno
             this.stpanel4.Padding = new System.Windows.Forms.Padding(1);
             this.stpanel4.Size = new System.Drawing.Size(68, 482);
             this.stpanel4.TabIndex = 0;
-            this.stpanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.stpanel4_Paint);
             // 
             // stpanel13
             // 
@@ -387,7 +384,6 @@ namespace bases_uno
             this.iconButton4.Size = new System.Drawing.Size(66, 66);
             this.iconButton4.TabIndex = 7;
             this.iconButton4.UseVisualStyleBackColor = false;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // stpanel10
             // 
@@ -466,7 +462,6 @@ namespace bases_uno
             this.iconButton1.Size = new System.Drawing.Size(66, 66);
             this.iconButton1.TabIndex = 0;
             this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // stpanel2
             // 
@@ -514,7 +509,7 @@ namespace bases_uno
             // 
             // mnpanel1
             // 
-            this.mnpanel1.Controls.Add(this.textBox5);
+            this.mnpanel1.Controls.Add(this.textBoxSynopsis);
             this.mnpanel1.Controls.Add(this.label7);
             this.mnpanel1.Controls.Add(this.spacerpanel2);
             this.mnpanel1.Controls.Add(this.tableLayoutPanel2);
@@ -526,22 +521,19 @@ namespace bases_uno
             this.mnpanel1.Name = "mnpanel1";
             this.mnpanel1.Size = new System.Drawing.Size(850, 583);
             this.mnpanel1.TabIndex = 9;
-            this.mnpanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
             // 
-            // textBox5
+            // textBoxSynopsis
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox5.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox5.Location = new System.Drawing.Point(0, 355);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(836, 177);
-            this.textBox5.TabIndex = 24;
-            this.textBox5.Text = resources.GetString("textBox5.Text");
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBoxSynopsis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxSynopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSynopsis.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBoxSynopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxSynopsis.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxSynopsis.Location = new System.Drawing.Point(0, 355);
+            this.textBoxSynopsis.Multiline = true;
+            this.textBoxSynopsis.Name = "textBoxSynopsis";
+            this.textBoxSynopsis.Size = new System.Drawing.Size(836, 177);
+            this.textBoxSynopsis.TabIndex = 24;
             // 
             // label7
             // 
@@ -591,7 +583,7 @@ namespace bases_uno
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textBox4);
+            this.panel6.Controls.Add(this.textBoxCover);
             this.panel6.Controls.Add(this.iconButton12);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -600,19 +592,18 @@ namespace bases_uno
             this.panel6.Size = new System.Drawing.Size(412, 39);
             this.panel6.TabIndex = 10;
             // 
-            // textBox4
+            // textBoxCover
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox4.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox4.Location = new System.Drawing.Point(174, 0);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(201, 22);
-            this.textBox4.TabIndex = 16;
-            this.textBox4.Text = "no";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxCover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxCover.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCover.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxCover.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxCover.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxCover.Location = new System.Drawing.Point(174, 0);
+            this.textBoxCover.Name = "textBoxCover";
+            this.textBoxCover.Size = new System.Drawing.Size(201, 27);
+            this.textBoxCover.TabIndex = 16;
+            this.textBoxCover.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton12
             // 
@@ -641,13 +632,13 @@ namespace bases_uno
             this.label6.ForeColor = System.Drawing.Color.LightGray;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 24);
+            this.label6.Size = new System.Drawing.Size(107, 29);
             this.label6.TabIndex = 14;
             this.label6.Text = "cubierta";
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.textBoxEditor);
             this.panel5.Controls.Add(this.iconButton11);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -656,19 +647,18 @@ namespace bases_uno
             this.panel5.Size = new System.Drawing.Size(412, 39);
             this.panel5.TabIndex = 9;
             // 
-            // textBox2
+            // textBoxEditor
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox2.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox2.Location = new System.Drawing.Point(95, 0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(280, 22);
-            this.textBox2.TabIndex = 16;
-            this.textBox2.Text = "Mark Knopfler";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxEditor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxEditor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEditor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxEditor.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxEditor.Location = new System.Drawing.Point(95, 0);
+            this.textBoxEditor.Name = "textBoxEditor";
+            this.textBoxEditor.Size = new System.Drawing.Size(280, 27);
+            this.textBoxEditor.TabIndex = 16;
+            this.textBoxEditor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton11
             // 
@@ -697,13 +687,13 @@ namespace bases_uno
             this.label5.ForeColor = System.Drawing.Color.LightGray;
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 24);
+            this.label5.Size = new System.Drawing.Size(81, 29);
             this.label5.TabIndex = 14;
             this.label5.Text = "editor";
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.textBoxPages);
             this.panel4.Controls.Add(this.iconButton9);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -712,19 +702,18 @@ namespace bases_uno
             this.panel4.Size = new System.Drawing.Size(412, 36);
             this.panel4.TabIndex = 8;
             // 
-            // textBox1
+            // textBoxPages
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox1.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox1.Location = new System.Drawing.Point(191, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 22);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "50";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxPages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxPages.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPages.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxPages.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxPages.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxPages.Location = new System.Drawing.Point(191, 0);
+            this.textBoxPages.Name = "textBoxPages";
+            this.textBoxPages.Size = new System.Drawing.Size(184, 27);
+            this.textBoxPages.TabIndex = 16;
+            this.textBoxPages.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton9
             // 
@@ -753,13 +742,13 @@ namespace bases_uno
             this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 24);
+            this.label4.Size = new System.Drawing.Size(105, 29);
             this.label4.TabIndex = 14;
             this.label4.Text = "paginas";
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.textBox12);
+            this.panel13.Controls.Add(this.textBoxPublicationPrice);
             this.panel13.Controls.Add(this.iconButton19);
             this.panel13.Controls.Add(this.label13);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -768,19 +757,18 @@ namespace bases_uno
             this.panel13.Size = new System.Drawing.Size(412, 36);
             this.panel13.TabIndex = 7;
             // 
-            // textBox12
+            // textBoxPublicationPrice
             // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox12.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox12.Location = new System.Drawing.Point(191, 0);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(184, 22);
-            this.textBox12.TabIndex = 16;
-            this.textBox12.Text = "10$";
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxPublicationPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxPublicationPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPublicationPrice.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxPublicationPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxPublicationPrice.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxPublicationPrice.Location = new System.Drawing.Point(191, 0);
+            this.textBoxPublicationPrice.Name = "textBoxPublicationPrice";
+            this.textBoxPublicationPrice.Size = new System.Drawing.Size(184, 27);
+            this.textBoxPublicationPrice.TabIndex = 16;
+            this.textBoxPublicationPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton19
             // 
@@ -809,13 +797,13 @@ namespace bases_uno
             this.label13.ForeColor = System.Drawing.Color.LightGray;
             this.label13.Location = new System.Drawing.Point(0, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(183, 24);
+            this.label13.Size = new System.Drawing.Size(228, 29);
             this.label13.TabIndex = 14;
             this.label13.Text = "precio publicacion";
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.textBox11);
+            this.panel12.Controls.Add(this.textBoxColor);
             this.panel12.Controls.Add(this.iconButton18);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -824,19 +812,18 @@ namespace bases_uno
             this.panel12.Size = new System.Drawing.Size(412, 36);
             this.panel12.TabIndex = 6;
             // 
-            // textBox11
+            // textBoxColor
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox11.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox11.Location = new System.Drawing.Point(174, 0);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(201, 22);
-            this.textBox11.TabIndex = 16;
-            this.textBox11.Text = "si";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxColor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxColor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxColor.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxColor.Location = new System.Drawing.Point(174, 0);
+            this.textBoxColor.Name = "textBoxColor";
+            this.textBoxColor.Size = new System.Drawing.Size(201, 27);
+            this.textBoxColor.TabIndex = 16;
+            this.textBoxColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton18
             // 
@@ -865,13 +852,13 @@ namespace bases_uno
             this.label12.ForeColor = System.Drawing.Color.LightGray;
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 24);
+            this.label12.Size = new System.Drawing.Size(72, 29);
             this.label12.TabIndex = 14;
             this.label12.Text = "color";
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.textBox10);
+            this.panel11.Controls.Add(this.textBoxTitel);
             this.panel11.Controls.Add(this.iconButton17);
             this.panel11.Controls.Add(this.label11);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -880,20 +867,18 @@ namespace bases_uno
             this.panel11.Size = new System.Drawing.Size(412, 36);
             this.panel11.TabIndex = 5;
             // 
-            // textBox10
+            // textBoxTitel
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox10.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox10.Location = new System.Drawing.Point(75, 0);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(300, 22);
-            this.textBox10.TabIndex = 16;
-            this.textBox10.Text = "The Last of Us";
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.textBoxTitel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxTitel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTitel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxTitel.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxTitel.Location = new System.Drawing.Point(75, 0);
+            this.textBoxTitel.Name = "textBoxTitel";
+            this.textBoxTitel.Size = new System.Drawing.Size(300, 27);
+            this.textBoxTitel.TabIndex = 16;
+            this.textBoxTitel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton17
             // 
@@ -922,13 +907,13 @@ namespace bases_uno
             this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 24);
+            this.label11.Size = new System.Drawing.Size(70, 29);
             this.label11.TabIndex = 14;
             this.label11.Text = "titulo";
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.textBox3);
+            this.panel7.Controls.Add(this.textBoxVolume);
             this.panel7.Controls.Add(this.iconButton10);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -937,19 +922,18 @@ namespace bases_uno
             this.panel7.Size = new System.Drawing.Size(412, 36);
             this.panel7.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxVolume
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox3.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox3.Location = new System.Drawing.Point(191, 0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 22);
-            this.textBox3.TabIndex = 16;
-            this.textBox3.Text = "5";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxVolume.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxVolume.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxVolume.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxVolume.Location = new System.Drawing.Point(191, 0);
+            this.textBoxVolume.Name = "textBoxVolume";
+            this.textBoxVolume.Size = new System.Drawing.Size(184, 27);
+            this.textBoxVolume.TabIndex = 16;
+            this.textBoxVolume.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton10
             // 
@@ -978,13 +962,13 @@ namespace bases_uno
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 24);
+            this.label3.Size = new System.Drawing.Size(111, 29);
             this.label3.TabIndex = 14;
             this.label3.Text = "volumen";
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.textBox9);
+            this.panel10.Controls.Add(this.textBoxPublicationDate);
             this.panel10.Controls.Add(this.iconButton16);
             this.panel10.Controls.Add(this.label10);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -993,19 +977,18 @@ namespace bases_uno
             this.panel10.Size = new System.Drawing.Size(412, 36);
             this.panel10.TabIndex = 4;
             // 
-            // textBox9
+            // textBoxPublicationDate
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox9.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox9.Location = new System.Drawing.Point(212, 0);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(163, 22);
-            this.textBox9.TabIndex = 16;
-            this.textBox9.Text = "15/02/2008";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxPublicationDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxPublicationDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPublicationDate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxPublicationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxPublicationDate.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxPublicationDate.Location = new System.Drawing.Point(212, 0);
+            this.textBoxPublicationDate.Name = "textBoxPublicationDate";
+            this.textBoxPublicationDate.Size = new System.Drawing.Size(163, 27);
+            this.textBoxPublicationDate.TabIndex = 16;
+            this.textBoxPublicationDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton16
             // 
@@ -1034,13 +1017,13 @@ namespace bases_uno
             this.label10.ForeColor = System.Drawing.Color.LightGray;
             this.label10.Location = new System.Drawing.Point(0, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(175, 24);
+            this.label10.Size = new System.Drawing.Size(217, 29);
             this.label10.TabIndex = 14;
             this.label10.Text = "fecha publicacion";
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.textBox8);
+            this.panel9.Controls.Add(this.textBoxNumber);
             this.panel9.Controls.Add(this.iconButton15);
             this.panel9.Controls.Add(this.label9);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1049,19 +1032,18 @@ namespace bases_uno
             this.panel9.Size = new System.Drawing.Size(412, 36);
             this.panel9.TabIndex = 3;
             // 
-            // textBox8
+            // textBoxNumber
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox8.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox8.Location = new System.Drawing.Point(191, 0);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(184, 22);
-            this.textBox8.TabIndex = 16;
-            this.textBox8.Text = "1";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNumber.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxNumber.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxNumber.Location = new System.Drawing.Point(191, 0);
+            this.textBoxNumber.Name = "textBoxNumber";
+            this.textBoxNumber.Size = new System.Drawing.Size(184, 27);
+            this.textBoxNumber.TabIndex = 16;
+            this.textBoxNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton15
             // 
@@ -1090,13 +1072,13 @@ namespace bases_uno
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 24);
+            this.label9.Size = new System.Drawing.Size(101, 29);
             this.label9.TabIndex = 14;
             this.label9.Text = "numero";
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.textBox7);
+            this.panel8.Controls.Add(this.textBoxID);
             this.panel8.Controls.Add(this.iconButton14);
             this.panel8.Controls.Add(this.label8);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1105,19 +1087,18 @@ namespace bases_uno
             this.panel8.Size = new System.Drawing.Size(412, 36);
             this.panel8.TabIndex = 2;
             // 
-            // textBox7
+            // textBoxID
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox7.ForeColor = System.Drawing.Color.LightGray;
-            this.textBox7.Location = new System.Drawing.Point(174, 0);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(201, 22);
-            this.textBox7.TabIndex = 16;
-            this.textBox7.Text = "15";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxID.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxID.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxID.Location = new System.Drawing.Point(174, 0);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(201, 27);
+            this.textBoxID.TabIndex = 16;
+            this.textBoxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton14
             // 
@@ -1146,7 +1127,7 @@ namespace bases_uno
             this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 24);
+            this.label8.Size = new System.Drawing.Size(35, 29);
             this.label8.TabIndex = 14;
             this.label8.Text = "id";
             // 
@@ -1240,14 +1221,12 @@ namespace bases_uno
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(569, 51);
+            this.label1.Size = new System.Drawing.Size(0, 63);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Informacion: The Last Of Us ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Subastas____
+            // Subastas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1184, 661);
@@ -1257,9 +1236,9 @@ namespace bases_uno
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
-            this.Name = "Subastas____";
+            this.Name = "Subastas";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Subastas___";
+            this.Text = "Subastas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.stpanel1.ResumeLayout(false);
             this.stpanel3.ResumeLayout(false);
@@ -1334,43 +1313,43 @@ namespace bases_uno
         private Panel mnpanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel6;
-        private TextBox textBox4;
+        private TextBox textBoxCover;
         private FontAwesome.Sharp.IconButton iconButton12;
         private Label label6;
         private Panel panel5;
-        private TextBox textBox2;
+        private TextBox textBoxEditor;
         private FontAwesome.Sharp.IconButton iconButton11;
         private Label label5;
         private Panel panel4;
-        private TextBox textBox1;
+        private TextBox textBoxPages;
         private FontAwesome.Sharp.IconButton iconButton9;
         private Label label4;
         private Panel panel13;
-        private TextBox textBox12;
+        private TextBox textBoxPublicationPrice;
         private FontAwesome.Sharp.IconButton iconButton19;
         private Label label13;
         private Panel panel12;
-        private TextBox textBox11;
+        private TextBox textBoxColor;
         private FontAwesome.Sharp.IconButton iconButton18;
         private Label label12;
         private Panel panel11;
-        private TextBox textBox10;
+        private TextBox textBoxTitel;
         private FontAwesome.Sharp.IconButton iconButton17;
         private Label label11;
         private Panel panel7;
-        private TextBox textBox3;
+        private TextBox textBoxVolume;
         private FontAwesome.Sharp.IconButton iconButton10;
         private Label label3;
         private Panel panel10;
-        private TextBox textBox9;
+        private TextBox textBoxPublicationDate;
         private FontAwesome.Sharp.IconButton iconButton16;
         private Label label10;
         private Panel panel9;
-        private TextBox textBox8;
+        private TextBox textBoxNumber;
         private FontAwesome.Sharp.IconButton iconButton15;
         private Label label9;
         private Panel panel8;
-        private TextBox textBox7;
+        private TextBox textBoxID;
         private FontAwesome.Sharp.IconButton iconButton14;
         private Label label8;
         private Label label2;
@@ -1378,7 +1357,7 @@ namespace bases_uno
         private VScrollBar vScrollBar1;
         private Label label7;
         private Panel spacerpanel2;
-        private TextBox textBox5;
+        private TextBox textBoxSynopsis;
 
         #endregion
 

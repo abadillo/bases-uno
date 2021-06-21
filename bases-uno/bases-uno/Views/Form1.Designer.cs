@@ -1,4 +1,6 @@
 ﻿
+using bases_uno.Reports.DataSets;
+
 namespace bases_uno
 {
     partial class Form1
@@ -32,9 +34,9 @@ namespace bases_uno
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.TestDataSet = new bases_uno.TestDataSet();
+            this.TestDataSet = new bases_uno.Reports.DataSets.TestDataSet();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataTable1TableAdapter = new bases_uno.TestDataSetTableAdapters.DataTable1TableAdapter();
+            this.DataTable1TableAdapter = new bases_uno.Reports.DataSets.TestDataSetTableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.TestDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +87,7 @@ namespace bases_uno
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource DataTable1BindingSource;
         private TestDataSet TestDataSet;
-        private TestDataSetTableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
+        private Reports.DataSets.TestDataSetTableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
     }
 }
 

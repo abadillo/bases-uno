@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace bases_uno
 {
-	public partial class Subastas____ : Form
+	public partial class MasterPage : Form
 	{
-		public Subastas____()
+		public MasterPage()
 		{
 			InitializeComponent();
 		}
@@ -98,6 +98,11 @@ namespace bases_uno
         }
 
         private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MasterPage_Load(object sender, EventArgs e)
         {
 
         }

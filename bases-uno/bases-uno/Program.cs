@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Engine;
 
 namespace bases_uno
 {
@@ -18,8 +19,7 @@ namespace bases_uno
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             /// Application.Run(new Form1());
-            Application.Run(new Subastas____());
-            
+            Application.Run(new Subastas());
         }
     }
 }

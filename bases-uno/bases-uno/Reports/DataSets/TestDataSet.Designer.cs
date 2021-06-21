@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace bases_uno {
+namespace bases_uno.Reports.DataSets {
     
     
     /// <summary>
@@ -734,7 +734,7 @@ namespace bases_uno {
         }
     }
 }
-namespace bases_uno.TestDataSetTableAdapters {
+namespace bases_uno.Reports.DataSets.TestDataSetTableAdapters {
     
     
     /// <summary>
