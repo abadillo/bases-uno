@@ -57,6 +57,12 @@ namespace bases_uno.Views
             this.stpanel8 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.stpanel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.hrpanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnadelante = new FontAwesome.Sharp.IconButton();
+            this.btnatras = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.mainpanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.stpanel1.SuspendLayout();
@@ -64,6 +70,9 @@ namespace bases_uno.Views
             this.dipanel0.SuspendLayout();
             this.stpanel4.SuspendLayout();
             this.stpanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.hrpanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -405,15 +414,93 @@ namespace bases_uno.Views
             this.stpanel2.Size = new System.Drawing.Size(304, 179);
             this.stpanel2.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.panel1.Controls.Add(this.hrpanel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(304, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(15);
+            this.panel1.Size = new System.Drawing.Size(880, 93);
+            this.panel1.TabIndex = 2;
+            // 
+            // hrpanel
+            // 
+            this.hrpanel.Controls.Add(this.panel2);
+            this.hrpanel.Controls.Add(this.label1);
+            this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.hrpanel.Location = new System.Drawing.Point(15, 15);
+            this.hrpanel.Name = "hrpanel";
+            this.hrpanel.Size = new System.Drawing.Size(850, 48);
+            this.hrpanel.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnadelante);
+            this.panel2.Controls.Add(this.btnatras);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(710, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(140, 48);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnadelante
+            // 
+            this.btnadelante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.btnadelante.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnadelante.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnadelante.FlatAppearance.BorderSize = 0;
+            this.btnadelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadelante.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
+            this.btnadelante.IconColor = System.Drawing.Color.LightGray;
+            this.btnadelante.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnadelante.Location = new System.Drawing.Point(74, 0);
+            this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
+            this.btnadelante.Name = "btnadelante";
+            this.btnadelante.Size = new System.Drawing.Size(66, 48);
+            this.btnadelante.TabIndex = 5;
+            this.btnadelante.UseVisualStyleBackColor = false;
+            this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
+            // 
+            // btnatras
+            // 
+            this.btnatras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.btnatras.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnatras.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnatras.FlatAppearance.BorderSize = 0;
+            this.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnatras.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btnatras.IconColor = System.Drawing.Color.LightGray;
+            this.btnatras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnatras.Location = new System.Drawing.Point(0, 0);
+            this.btnatras.Margin = new System.Windows.Forms.Padding(0);
+            this.btnatras.Name = "btnatras";
+            this.btnatras.Size = new System.Drawing.Size(66, 48);
+            this.btnatras.TabIndex = 4;
+            this.btnatras.UseVisualStyleBackColor = false;
+            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 51);
+            this.label1.TabIndex = 0;
+            // 
             // mainpanel
             // 
             this.mainpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(304, 0);
+            this.mainpanel.Location = new System.Drawing.Point(304, 93);
             this.mainpanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(880, 661);
-            this.mainpanel.TabIndex = 1;
+            this.mainpanel.Size = new System.Drawing.Size(880, 568);
+            this.mainpanel.TabIndex = 3;
             // 
             // index
             // 
@@ -422,6 +509,7 @@ namespace bases_uno.Views
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.mainpanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.stpanel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -437,6 +525,10 @@ namespace bases_uno.Views
             this.dipanel0.ResumeLayout(false);
             this.stpanel4.ResumeLayout(false);
             this.stpanel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.hrpanel.ResumeLayout(false);
+            this.hrpanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -465,6 +557,12 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton iconButton5;
         private Panel stpanel13;
         private FontAwesome.Sharp.IconButton iconButton6;
+        private Panel panel1;
+        private Panel hrpanel;
+        private Panel panel2;
+        private FontAwesome.Sharp.IconButton btnadelante;
+        private FontAwesome.Sharp.IconButton btnatras;
+        private Label label1;
         private Panel mainpanel;
 
         #endregion

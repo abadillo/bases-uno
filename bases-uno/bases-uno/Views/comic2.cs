@@ -17,7 +17,7 @@ namespace bases_uno.Views
         {
             InitializeComponent();
 			Comic comic = new Comic(1);
-			label1.Text = "Comic: " + comic.Titel;
+			
 			
 			Update();
 		}

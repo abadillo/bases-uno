@@ -32,6 +32,12 @@ namespace bases_uno.Views
             this.stpanel7 = new System.Windows.Forms.Panel();
             this.dipanel1 = new System.Windows.Forms.Panel();
             this.mnpanel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxSynopsis = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.spacerpanel2 = new System.Windows.Forms.Panel();
@@ -77,22 +83,11 @@ namespace bases_uno.Views
             this.iconButton14 = new FontAwesome.Sharp.IconButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.spacerpanel = new System.Windows.Forms.Panel();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.hrpanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.mnpanel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -104,9 +99,6 @@ namespace bases_uno.Views
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.hrpanel.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // stpanel7
@@ -118,17 +110,16 @@ namespace bases_uno.Views
             this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
             this.stpanel7.Name = "stpanel7";
             this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
-            this.stpanel7.Size = new System.Drawing.Size(864, 758);
+            this.stpanel7.Size = new System.Drawing.Size(864, 634);
             this.stpanel7.TabIndex = 1;
             // 
             // dipanel1
             // 
             this.dipanel1.Controls.Add(this.mnpanel1);
-            this.dipanel1.Controls.Add(this.hrpanel);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dipanel1.Location = new System.Drawing.Point(15, 15);
             this.dipanel1.Name = "dipanel1";
-            this.dipanel1.Size = new System.Drawing.Size(834, 728);
+            this.dipanel1.Size = new System.Drawing.Size(834, 604);
             this.dipanel1.TabIndex = 0;
             // 
             // mnpanel1
@@ -141,13 +132,98 @@ namespace bases_uno.Views
             this.mnpanel1.Controls.Add(this.spacerpanel2);
             this.mnpanel1.Controls.Add(this.tableLayoutPanel2);
             this.mnpanel1.Controls.Add(this.label2);
-            this.mnpanel1.Controls.Add(this.spacerpanel);
             this.mnpanel1.Controls.Add(this.vScrollBar1);
             this.mnpanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mnpanel1.Location = new System.Drawing.Point(0, 48);
+            this.mnpanel1.Location = new System.Drawing.Point(0, 0);
             this.mnpanel1.Name = "mnpanel1";
-            this.mnpanel1.Size = new System.Drawing.Size(834, 680);
+            this.mnpanel1.Size = new System.Drawing.Size(834, 604);
             this.mnpanel1.TabIndex = 9;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btneliminar, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 556);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(820, 40);
+            this.tableLayoutPanel1.TabIndex = 27;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.LightGray;
+            this.button3.Location = new System.Drawing.Point(549, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(268, 34);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Undefined";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.LightGray;
+            this.button2.Location = new System.Drawing.Point(276, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(267, 34);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Undefined";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.btneliminar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btneliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.ForeColor = System.Drawing.Color.LightGray;
+            this.btneliminar.Location = new System.Drawing.Point(3, 3);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(267, 34);
+            this.btneliminar.TabIndex = 0;
+            this.btneliminar.Text = "ELIMINAR";
+            this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // label14
+            // 
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.LightGray;
+            this.label14.Location = new System.Drawing.Point(0, 516);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(820, 40);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Opciones";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 493);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(820, 23);
+            this.panel1.TabIndex = 25;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // textBoxSynopsis
             // 
@@ -156,7 +232,7 @@ namespace bases_uno.Views
             this.textBoxSynopsis.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBoxSynopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxSynopsis.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxSynopsis.Location = new System.Drawing.Point(0, 355);
+            this.textBoxSynopsis.Location = new System.Drawing.Point(0, 316);
             this.textBoxSynopsis.Multiline = true;
             this.textBoxSynopsis.Name = "textBoxSynopsis";
             this.textBoxSynopsis.Size = new System.Drawing.Size(820, 177);
@@ -167,7 +243,7 @@ namespace bases_uno.Views
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.LightGray;
-            this.label7.Location = new System.Drawing.Point(0, 315);
+            this.label7.Location = new System.Drawing.Point(0, 276);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(820, 40);
             this.label7.TabIndex = 23;
@@ -176,7 +252,7 @@ namespace bases_uno.Views
             // spacerpanel2
             // 
             this.spacerpanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.spacerpanel2.Location = new System.Drawing.Point(0, 292);
+            this.spacerpanel2.Location = new System.Drawing.Point(0, 253);
             this.spacerpanel2.Name = "spacerpanel2";
             this.spacerpanel2.Size = new System.Drawing.Size(820, 23);
             this.spacerpanel2.TabIndex = 22;
@@ -197,7 +273,7 @@ namespace bases_uno.Views
             this.tableLayoutPanel2.Controls.Add(this.panel9, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel8, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 79);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 40);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -763,191 +839,35 @@ namespace bases_uno.Views
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(0, 39);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(820, 40);
             this.label2.TabIndex = 20;
             this.label2.Text = "General";
-            // 
-            // spacerpanel
-            // 
-            this.spacerpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.spacerpanel.Location = new System.Drawing.Point(0, 0);
-            this.spacerpanel.Name = "spacerpanel";
-            this.spacerpanel.Size = new System.Drawing.Size(820, 39);
-            this.spacerpanel.TabIndex = 19;
             // 
             // vScrollBar1
             // 
             this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
             this.vScrollBar1.Location = new System.Drawing.Point(820, 0);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(14, 680);
+            this.vScrollBar1.Size = new System.Drawing.Size(14, 604);
             this.vScrollBar1.TabIndex = 0;
-            // 
-            // hrpanel
-            // 
-            this.hrpanel.Controls.Add(this.panel2);
-            this.hrpanel.Controls.Add(this.label1);
-            this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.hrpanel.Location = new System.Drawing.Point(0, 0);
-            this.hrpanel.Name = "hrpanel";
-            this.hrpanel.Size = new System.Drawing.Size(834, 48);
-            this.hrpanel.TabIndex = 8;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.iconButton8);
-            this.panel2.Controls.Add(this.iconButton7);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(694, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(140, 48);
-            this.panel2.TabIndex = 1;
-            // 
-            // iconButton8
-            // 
-            this.iconButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton8.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
-            this.iconButton8.IconColor = System.Drawing.Color.LightGray;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.Location = new System.Drawing.Point(74, 0);
-            this.iconButton8.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Size = new System.Drawing.Size(66, 48);
-            this.iconButton8.TabIndex = 5;
-            this.iconButton8.UseVisualStyleBackColor = false;
-            // 
-            // iconButton7
-            // 
-            this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconButton7.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.iconButton7.IconColor = System.Drawing.Color.LightGray;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.Location = new System.Drawing.Point(0, 0);
-            this.iconButton7.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(66, 48);
-            this.iconButton7.TabIndex = 4;
-            this.iconButton7.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 51);
-            this.label1.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.LightGray;
-            this.label14.Location = new System.Drawing.Point(0, 555);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(820, 40);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Opciones";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 532);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(820, 23);
-            this.panel1.TabIndex = 25;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 595);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(820, 40);
-            this.tableLayoutPanel1.TabIndex = 27;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.LightGray;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "ELIMINAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.LightGray;
-            this.button2.Location = new System.Drawing.Point(276, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(267, 34);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "ELIMINAR";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.LightGray;
-            this.button3.Location = new System.Drawing.Point(549, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(268, 34);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "ELIMINAR";
-            this.button3.UseVisualStyleBackColor = false;
+            this.vScrollBar1.Visible = false;
             // 
             // comic1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 758);
+            this.ClientSize = new System.Drawing.Size(864, 634);
             this.Controls.Add(this.stpanel7);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "comic1";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);
             this.mnpanel1.ResumeLayout(false);
             this.mnpanel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -969,10 +889,6 @@ namespace bases_uno.Views
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.hrpanel.ResumeLayout(false);
-            this.hrpanel.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1027,17 +943,11 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton iconButton14;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel spacerpanel;
         private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.Panel hrpanel;
-        private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton iconButton7;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
     }

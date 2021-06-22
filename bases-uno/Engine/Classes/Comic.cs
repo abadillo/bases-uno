@@ -11,7 +11,7 @@ namespace Engine
     {
         #region Atributes
         public int ID { get; set; }
-        public string Titel { get; set; }
+        public string Titlel { get; set; }
         public int Volume { get; set; }
         public int Number { get; set; }
         public DateTime PublicationDate { get; set; }
@@ -28,7 +28,7 @@ namespace Engine
            string synopsis, int pages, bool cover, string editor, int volumen = 0, float publicationPrice = 0)
         {
             ID = id;
-            Titel = titel;
+            Titlel = titel;
             Number = number;
             PublicationDate = publicationDate;
             Color = color;
@@ -44,7 +44,7 @@ namespace Engine
             int pages, bool cover, string editor, int volumen = 0, float publicationPrice = 0)
         {
             ID = 0;
-            Titel = titel;
+            Titlel = titel;
             Number = number;
             PublicationDate = publicationDate;
             Color = color;
@@ -62,7 +62,7 @@ namespace Engine
             if (!(comic == null))
             {
                 ID = comic.ID;
-                Titel = comic.Titel;
+                Titlel = comic.Titlel;
                 Number = comic.Number;
                 PublicationDate = comic.PublicationDate;
                 Color = comic.Color;
@@ -126,7 +126,7 @@ namespace Engine
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("titulo", Titel);
+                Script.Parameters.AddWithValue("titulo", Titlel);
                 Script.Parameters.AddWithValue("numero", Number);
                 Script.Parameters.AddWithValue("fecha_pub", PublicationDate);
                 Script.Parameters.AddWithValue("color", Color);
@@ -241,7 +241,7 @@ namespace Engine
                         Script = new NpgsqlCommand(Query, Connection);
 
                         Script.Parameters.AddWithValue("id", ID);
-                        Script.Parameters.AddWithValue("titulo", Titel);
+                        Script.Parameters.AddWithValue("titulo", Titlel);
                         Script.Parameters.AddWithValue("numero", Number);
                         Script.Parameters.AddWithValue("fecha_pub", PublicationDate);
                         Script.Parameters.AddWithValue("color", Color);
@@ -259,7 +259,7 @@ namespace Engine
                         Script = new NpgsqlCommand(Query, Connection);
 
                         Script.Parameters.AddWithValue("id", ID);
-                        Script.Parameters.AddWithValue("titulo", Titel);
+                        Script.Parameters.AddWithValue("titulo", Titlel);
                         Script.Parameters.AddWithValue("numero", Number);
                         Script.Parameters.AddWithValue("fecha_pub", PublicationDate);
                         Script.Parameters.AddWithValue("precio_pub", PublicationPrice);
@@ -279,7 +279,7 @@ namespace Engine
                     Script = new NpgsqlCommand(Query, Connection);
 
                     Script.Parameters.AddWithValue("id", ID);
-                    Script.Parameters.AddWithValue("titulo", Titel);
+                    Script.Parameters.AddWithValue("titulo", Titlel);
                     Script.Parameters.AddWithValue("volumen", Volume);
                     Script.Parameters.AddWithValue("numero", Number);
                     Script.Parameters.AddWithValue("fecha_pub", PublicationDate);
@@ -298,7 +298,7 @@ namespace Engine
                     Script = new NpgsqlCommand(Query, Connection);
 
                     Script.Parameters.AddWithValue("id", ID);
-                    Script.Parameters.AddWithValue("titulo", Titel);
+                    Script.Parameters.AddWithValue("titulo", Titlel);
                     Script.Parameters.AddWithValue("volumen", Volume);
                     Script.Parameters.AddWithValue("numero", Number);
                     Script.Parameters.AddWithValue("fecha_pub", PublicationDate);

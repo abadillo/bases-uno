@@ -13,13 +13,15 @@ namespace bases_uno.Views
 {
     public partial class comic1 : Form
     {
+
+        public int id = 1;
+
         public comic1()
         {
             InitializeComponent();
-			Comic comic = new Comic(1);
-			label1.Text = "Comic: " + comic.Titel;
+			Comic comic = new Comic(id);
 			textBoxID.Text = comic.ID.ToString();
-			textBoxTitel.Text = comic.Titel;
+			textBoxTitel.Text = comic.Titlel;
 			textBoxPublicationDate.Text = comic.PublicationDate.ToString();
 			textBoxColor.Text = comic.Color ? "Si" : "No";
 			textBoxCover.Text = comic.Cover ? "Si" : "No";
@@ -42,9 +44,14 @@ namespace bases_uno.Views
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void iconButton8_Click(object sender, EventArgs e)
         {
+           ;
+        }
 
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            /// comic.delete(id)
         }
     }
 }
