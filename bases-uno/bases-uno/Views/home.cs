@@ -9,27 +9,39 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace bases_uno
+namespace bases_uno.Views
+
 {
 	public partial class Subastas : Form
 	{
 		public Subastas()
 		{
 			InitializeComponent();
-			Comic comic = new Comic(1);
-			label1.Text = "Informacion: " + comic.Titel;
-			textBoxID.Text = comic.ID.ToString();
-			textBoxTitel.Text = comic.Titel;
-			textBoxPublicationDate.Text = comic.PublicationDate.ToString();
-			textBoxColor.Text = comic.Color ? "Si" : "No";
-			textBoxCover.Text = comic.Cover ? "Si" : "No";
-			textBoxVolume.Text = (comic.Volume == 0) ? comic.Volume.ToString() : "";
-			textBoxNumber.Text = comic.Number.ToString();
-			textBoxPublicationPrice.Text = (comic.PublicationPrice == 0) ? comic.PublicationPrice.ToString() : "";
-			textBoxPages.Text = comic.Pages.ToString();
-			textBoxEditor.Text = comic.Editor;
-			textBoxSynopsis.Text = comic.Synopsis;
-			Update();
+
 		}
+
+		private void AbrirFormEnPanel(object formHijo)
+		{
+			if (this.mainpanel.Controls.Count > 0)
+				this.mainpanel.Controls.RemoveAt(0);
+			Form fh = formHijo as Form;
+			fh.TopLevel = false;
+			fh.FormBorderStyle = FormBorderStyle.None;
+			fh.Dock = DockStyle.Fill;
+			this.mainpanel.Controls.Add(fh);
+			this.mainpanel.Tag = fh;
+			fh.Show();
+		}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+			Form2 fm = new Form2();
+			AbrirFormEnPanel(fm);
+		}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

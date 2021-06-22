@@ -1,20 +1,21 @@
-﻿using System;
+﻿using Engine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using Engine;
-
 
 namespace bases_uno.Views
 {
-    public partial class comics : bases_uno.MDIParent1
+    public partial class Form2 : Form
     {
-        public comics()
+        public Form2()
         {
-			InitializeComponent();
+            InitializeComponent();
 			Comic comic = new Comic(1);
 			label1.Text = "Informacion: " + comic.Titel;
 			textBoxID.Text = comic.ID.ToString();
