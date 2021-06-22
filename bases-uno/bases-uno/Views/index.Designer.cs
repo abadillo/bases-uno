@@ -162,8 +162,9 @@ namespace bases_uno.Views
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(234, 50);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Opcion ...";
+            this.button4.Text = "2";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -178,7 +179,7 @@ namespace bases_uno.Views
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(234, 50);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Opcion ...";
+            this.button3.Text = "1";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -195,7 +196,7 @@ namespace bases_uno.Views
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(234, 50);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Opcion ...";
+            this.button2.Text = "Listado";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -212,7 +213,7 @@ namespace bases_uno.Views
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(234, 50);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Subastas";
+            this.button1.Text = "Comics";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // stpanel4
@@ -248,7 +249,7 @@ namespace bases_uno.Views
             // 
             // iconButton6
             // 
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
             this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton6.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton6.FlatAppearance.BorderSize = 0;
@@ -378,7 +379,7 @@ namespace bases_uno.Views
             // 
             // iconButton1
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton1.FlatAppearance.BorderSize = 0;
@@ -414,7 +415,7 @@ namespace bases_uno.Views
             this.mainpanel.Size = new System.Drawing.Size(880, 661);
             this.mainpanel.TabIndex = 1;
             // 
-            // Subastas
+            // index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -422,13 +423,14 @@ namespace bases_uno.Views
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.stpanel1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
-            this.Name = "Subastas";
+            this.Name = "index";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Subastas";
+            this.Text = "8 Bit Subastas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.stpanel1.ResumeLayout(false);
             this.stpanel3.ResumeLayout(false);

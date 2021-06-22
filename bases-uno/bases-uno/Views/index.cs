@@ -33,13 +33,19 @@ namespace bases_uno.Views
 			fh.Show();
 		}
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
 			comic1 fm = new comic1();
 			AbrirFormEnPanel(fm);
 		}
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
+        {
+			comic2 fm = new comic2();
+			AbrirFormEnPanel(fm);
+		}
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

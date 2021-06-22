@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace bases_uno.Views
 {
-    public partial class Form2 : Form
+    public partial class comic1 : Form
     {
-        public Form2()
+        public comic1()
         {
             InitializeComponent();
 			Comic comic = new Comic(1);
-			label1.Text = "Informacion: " + comic.Titel;
+			label1.Text = "Comic: " + comic.Titel;
 			textBoxID.Text = comic.ID.ToString();
 			textBoxTitel.Text = comic.Titel;
 			textBoxPublicationDate.Text = comic.PublicationDate.ToString();
@@ -31,5 +31,20 @@ namespace bases_uno.Views
 			textBoxSynopsis.Text = comic.Synopsis;
 			Update();
 		}
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
