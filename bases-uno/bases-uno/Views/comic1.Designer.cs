@@ -178,6 +178,7 @@ namespace bases_uno.Views
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.LightGray;
@@ -193,6 +194,7 @@ namespace bases_uno.Views
             this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.btneliminar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btneliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btneliminar.FlatAppearance.BorderSize = 0;
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.LightGray;
@@ -235,6 +237,7 @@ namespace bases_uno.Views
             this.textBoxSynopsis.Location = new System.Drawing.Point(0, 316);
             this.textBoxSynopsis.Multiline = true;
             this.textBoxSynopsis.Name = "textBoxSynopsis";
+            this.textBoxSynopsis.ReadOnly = true;
             this.textBoxSynopsis.Size = new System.Drawing.Size(820, 177);
             this.textBoxSynopsis.TabIndex = 24;
             // 
@@ -304,6 +307,7 @@ namespace bases_uno.Views
             this.textBoxCover.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxCover.Location = new System.Drawing.Point(166, 0);
             this.textBoxCover.Name = "textBoxCover";
+            this.textBoxCover.ReadOnly = true;
             this.textBoxCover.Size = new System.Drawing.Size(201, 22);
             this.textBoxCover.TabIndex = 16;
             this.textBoxCover.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -359,6 +363,7 @@ namespace bases_uno.Views
             this.textBoxEditor.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxEditor.Location = new System.Drawing.Point(87, 0);
             this.textBoxEditor.Name = "textBoxEditor";
+            this.textBoxEditor.ReadOnly = true;
             this.textBoxEditor.Size = new System.Drawing.Size(280, 22);
             this.textBoxEditor.TabIndex = 16;
             this.textBoxEditor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -414,6 +419,7 @@ namespace bases_uno.Views
             this.textBoxPages.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxPages.Location = new System.Drawing.Point(183, 0);
             this.textBoxPages.Name = "textBoxPages";
+            this.textBoxPages.ReadOnly = true;
             this.textBoxPages.Size = new System.Drawing.Size(184, 22);
             this.textBoxPages.TabIndex = 16;
             this.textBoxPages.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -469,6 +475,7 @@ namespace bases_uno.Views
             this.textBoxPublicationPrice.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxPublicationPrice.Location = new System.Drawing.Point(183, 0);
             this.textBoxPublicationPrice.Name = "textBoxPublicationPrice";
+            this.textBoxPublicationPrice.ReadOnly = true;
             this.textBoxPublicationPrice.Size = new System.Drawing.Size(184, 22);
             this.textBoxPublicationPrice.TabIndex = 16;
             this.textBoxPublicationPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -524,6 +531,7 @@ namespace bases_uno.Views
             this.textBoxColor.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxColor.Location = new System.Drawing.Point(166, 0);
             this.textBoxColor.Name = "textBoxColor";
+            this.textBoxColor.ReadOnly = true;
             this.textBoxColor.Size = new System.Drawing.Size(201, 22);
             this.textBoxColor.TabIndex = 16;
             this.textBoxColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -579,6 +587,7 @@ namespace bases_uno.Views
             this.textBoxTitel.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxTitel.Location = new System.Drawing.Point(67, 0);
             this.textBoxTitel.Name = "textBoxTitel";
+            this.textBoxTitel.ReadOnly = true;
             this.textBoxTitel.Size = new System.Drawing.Size(300, 22);
             this.textBoxTitel.TabIndex = 16;
             this.textBoxTitel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -634,6 +643,7 @@ namespace bases_uno.Views
             this.textBoxVolume.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxVolume.Location = new System.Drawing.Point(183, 0);
             this.textBoxVolume.Name = "textBoxVolume";
+            this.textBoxVolume.ReadOnly = true;
             this.textBoxVolume.Size = new System.Drawing.Size(184, 22);
             this.textBoxVolume.TabIndex = 16;
             this.textBoxVolume.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -684,12 +694,13 @@ namespace bases_uno.Views
             // 
             this.textBoxPublicationDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxPublicationDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPublicationDate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxPublicationDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxPublicationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxPublicationDate.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxPublicationDate.Location = new System.Drawing.Point(204, 0);
+            this.textBoxPublicationDate.Location = new System.Drawing.Point(175, 0);
             this.textBoxPublicationDate.Name = "textBoxPublicationDate";
-            this.textBoxPublicationDate.Size = new System.Drawing.Size(163, 22);
+            this.textBoxPublicationDate.ReadOnly = true;
+            this.textBoxPublicationDate.Size = new System.Drawing.Size(192, 22);
             this.textBoxPublicationDate.TabIndex = 16;
             this.textBoxPublicationDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -715,7 +726,7 @@ namespace bases_uno.Views
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.LightGray;
             this.label10.Location = new System.Drawing.Point(0, 0);
@@ -744,6 +755,7 @@ namespace bases_uno.Views
             this.textBoxNumber.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxNumber.Location = new System.Drawing.Point(183, 0);
             this.textBoxNumber.Name = "textBoxNumber";
+            this.textBoxNumber.ReadOnly = true;
             this.textBoxNumber.Size = new System.Drawing.Size(184, 22);
             this.textBoxNumber.TabIndex = 16;
             this.textBoxNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -799,6 +811,7 @@ namespace bases_uno.Views
             this.textBoxID.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxID.Location = new System.Drawing.Point(166, 0);
             this.textBoxID.Name = "textBoxID";
+            this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(201, 22);
             this.textBoxID.TabIndex = 16;
             this.textBoxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
