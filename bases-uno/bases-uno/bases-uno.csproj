@@ -110,11 +110,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\Form2.cs">
+    <Compile Include="Views\comic1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Views\comic1.Designer.cs">
+      <DependentUpon>comic1.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\DataSets\TestDataSet.cs">
       <DependentUpon>TestDataSet.xsd</DependentUpon>
@@ -125,11 +125,11 @@
     <Compile Include="Views\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\home.cs">
+    <Compile Include="Views\index.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\home.Designer.cs">
-      <DependentUpon>home.cs</DependentUpon>
+    <Compile Include="Views\index.Designer.cs">
+      <DependentUpon>index.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,14 +145,14 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Views\comic1.resx">
+      <DependentUpon>comic1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\home.resx">
-      <DependentUpon>home.cs</DependentUpon>
+    <EmbeddedResource Include="Views\index.resx">
+      <DependentUpon>index.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -191,8 +191,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\logo.png" />
-    <Content Include="assets\icon.ico" />
+    <None Include="Assets\logo.png" />
+    <Content Include="Assets\icon.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

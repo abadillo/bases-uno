@@ -12,9 +12,9 @@ using System.Windows.Forms;
 namespace bases_uno.Views
 
 {
-	public partial class Subastas : Form
+	public partial class index : Form
 	{
-		public Subastas()
+		public index()
 		{
 			InitializeComponent();
 
@@ -35,7 +35,7 @@ namespace bases_uno.Views
 
         private void button2_Click(object sender, EventArgs e)
         {
-			Form2 fm = new Form2();
+			comic1 fm = new comic1();
 			AbrirFormEnPanel(fm);
 		}
 

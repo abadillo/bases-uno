@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace bases_uno.Views
 {
-    partial class Subastas
+    partial class index
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace bases_uno.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Subastas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(index));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.stpanel1 = new System.Windows.Forms.Panel();
             this.stpanel3 = new System.Windows.Forms.Panel();
