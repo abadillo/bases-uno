@@ -13,8 +13,14 @@ namespace bases_uno.Views
 {
     public partial class comic2 : Form
     {
-        public comic2()
+
+        public index parent;
+
+       
+        public comic2( index parent)
         {
+            this.parent = parent;
+            
             InitializeComponent();
 			Comic comic = new Comic(1);
 			
