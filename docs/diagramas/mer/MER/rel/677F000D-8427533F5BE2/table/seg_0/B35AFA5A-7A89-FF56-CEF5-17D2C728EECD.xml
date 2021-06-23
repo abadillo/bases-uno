@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B35AFA5A-7A89-FF56-CEF5-17D2C728EECD" name="OBJ_COL">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B35AFA5A-7A89-FF56-CEF5-17D2C728EECD" name="DUENO_HISTORICO">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>4A557823-75E4-EF80-FF6E-AB3D332CB618</generatorID>
@@ -56,10 +56,11 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>CA6C0F81-7FD7-A64A-E75A-1FA44E7A4836</generatorID>
 <ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -105,7 +106,7 @@
 <colAssociation fkAssociation="28515F99-FC37-C1DF-EAF5-2D7247EA7C1B" referredColumn="13F3CB12-2D93-A1A7-E4FB-BD80D9EA4A4F"/>
 </associations>
 </Column>
-<Column name="coleccionista_cedula" id="0C2E08A5-2ACE-259D-20FA-307A6F8B40C0">
+<Column name="documento_identidad" id="0C2E08A5-2ACE-259D-20FA-307A6F8B40C0">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-07 01:17:01 UTC</createdTime>
 <generatorID>308FBA24-0344-5BA9-5523-F8F90489452A</generatorID>
@@ -113,13 +114,70 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="E0D52EFE-C61B-F125-978A-716E288128CE">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>AEE059DB-AC94-1835-35E1-EFBC31C9CDCF</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_registro" id="495F234F-B46E-9C08-9C1C-97DBD49BCD97">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>5A3D1F93-D1DF-D7E2-2F47-62C681E6F631</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COLECCIONABLEv1_id" id="D522EA99-BD73-7461-F50A-3AEBA7273CCD">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>60E8DF24-D70E-2554-4D99-869113D21E47</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E5B84E21-2301-6FB8-DEC8-8D267DBE0BE9" referredColumn="4F3D50A2-45FB-51EF-E825-B78EA1A63DB2"/>
+</associations>
+</Column>
+<Column name="COMIC_id1" id="1424740E-F795-86FD-91C5-5DB89F27B65A">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>5D8864BA-F1C4-DF2F-2F9D-D66741FBFC67</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="954D7FBD-CEE5-1791-E0AF-8CE97A01181D" referredColumn="E38B7F91-DE77-7FF3-1177-80E4F5366B97"/>
+</associations>
+</Column>
+<Column name="precio_dolar" id="6A807C9A-2208-873B-1025-078591930793">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>0428C4DE-3F96-91D4-3771-1572AEFA8CF6</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="6AF98828-3CD5-6825-1155-8814A6FAA5FE" name="ART_COL_PK">
+<ind_PK_UK id="6AF98828-3CD5-6825-1155-8814A6FAA5FE" name="DUENO_HISTORICO_PK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>482AD92A-FE1A-C07B-211F-0C64A0A5D30C</generatorID>
@@ -128,8 +186,9 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="70676432-C65B-6272-F0B7-36A1FC177ACD"/>
 <colUsage columnID="0C2E08A5-2ACE-259D-20FA-307A6F8B40C0"/>
+<colUsage columnID="E0D52EFE-C61B-F125-978A-716E288128CE"/>
+<colUsage columnID="495F234F-B46E-9C08-9C1C-97DBD49BCD97"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="3E5D4E5C-2964-D4D2-92BF-745408ADA9AA" name="ART_COL_Articulo_FK">
@@ -154,7 +213,7 @@
 <colUsage columnID="EB95D28A-9A39-DF7E-1EE2-B42CDBBDD5C7"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="1E5D0734-2D6F-367C-1A8B-DA2E241E5086" name="ART_COL_COLECCIONISTA_FK">
+<ind_PK_UK id="1E5D0734-2D6F-367C-1A8B-DA2E241E5086" name="DUENO_HISTORICO_COLECCIONISTA_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>717AFB4D-E497-2669-40B5-49C0F783C43E</generatorID>
@@ -163,6 +222,28 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="6956E326-1C76-3E3E-F45B-3E74A764208F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F7B77AD4-C00E-086B-643A-18697A6D0515" name="DUENO_HISTORICO_COLECCIONABLEv1_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>66479672-486E-E833-03E1-2DF8D4E77A18</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D522EA99-BD73-7461-F50A-3AEBA7273CCD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EE996B66-F84C-59E3-2E1A-451B4AB09BE4" name="DUENO_HISTORICO_COMIC_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>4F733C51-AFAE-D549-E29B-F7E2E3C27854</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1424740E-F795-86FD-91C5-5DB89F27B65A"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

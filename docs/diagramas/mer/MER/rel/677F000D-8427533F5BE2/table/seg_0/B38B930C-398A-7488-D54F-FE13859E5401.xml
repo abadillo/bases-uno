@@ -21,7 +21,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <isSurrogateColumn>true</isSurrogateColumn>
 </Column>
-<Column name="cedula" id="D509D0B4-77A6-413A-6A8C-99F3666D9998">
+<Column name="documento_identidad" id="D509D0B4-77A6-413A-6A8C-99F3666D9998">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>1CA581F8-4979-77FC-3924-51166418395E</generatorID>
@@ -56,9 +56,18 @@
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="fecha_nacimiento" id="AB4208B1-15DA-9466-45BF-44FF9230B4A5">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>7FB92B53-05C2-2EF5-1258-5979D7AEDDAF</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="BC61C089-D553-E9F9-4CC3-6E10696AD439" name="REPRESENTANTE_cedula_UN">
+<ind_PK_UK id="BC61C089-D553-E9F9-4CC3-6E10696AD439" name="REPRESENTANTE_PKv2">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>AF0FE88E-B300-A9DD-4CE7-6BDAC2663E07</generatorID>

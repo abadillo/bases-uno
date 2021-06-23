@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E2037063-22F4-5C4B-108E-2D1F01CE763A" name="ORG_SUB">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E2037063-22F4-5C4B-108E-2D1F01CE763A" name="ORG_PRE">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>CD556F89-A3D9-9618-08EE-56BD46C47ABD</generatorID>
@@ -30,15 +30,13 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="FF82C49C-678F-B06D-0401-2A39C00FF8E8" referredColumn="9A53EE04-F590-2BF2-76DD-7D3076BDE82F"/>
-</associations>
 </Column>
 <Column name="Subasta_id" id="5F48E60B-4BA1-B9C3-5340-67C6F75009A1">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>9422A291-BDD5-8D00-7E80-56E1A1E5E952</generatorID>
 <ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
@@ -63,9 +61,47 @@
 <colAssociation fkAssociation="9DD6F063-DCEA-2E63-A32F-B0E811EF7CB8" referredColumn="A8FAC074-9091-60AE-6DC8-554E4897D813"/>
 </associations>
 </Column>
+<Column name="ORGANIZACION_CARIDAD_id" id="C0B4A9A0-64BE-49AB-42F7-2992CD101608">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>A4ACBA6B-422D-73E5-BBFF-B9043530E272</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FF82C49C-678F-B06D-0401-2A39C00FF8E8" referredColumn="47AD048A-DC0B-C25A-9B61-CE76C5BFB07D"/>
+</associations>
+</Column>
+<Column name="monto_recibido" id="F0F90342-6442-B6EF-83A5-D493A2B1A086">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>582D84E1-D4A0-8BFF-6354-F77FCA69488D</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUBASTA_id2" id="79D1274F-8337-CAD6-6487-1833CA008F0E">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>C385F1CF-B80F-F45F-1D60-A762ADB7EE92</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="675DCC66-77E8-9ECE-804B-D5E13BA9C9A4" referredColumn="7F11D2EA-2297-494E-34AF-63C6EEF264C7"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="5FE44EB1-9651-C1B4-1A39-1C6C76C5CDFC" name="ORG_SUB_PK">
+<ind_PK_UK id="5FE44EB1-9651-C1B4-1A39-1C6C76C5CDFC" name="ORG_PRE_PK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>52C3E1D0-DB2B-7453-C59A-25BD61AB938A</generatorID>
@@ -74,11 +110,11 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="EFEE75B2-E79B-1455-AB99-F651B09AECC6"/>
-<colUsage columnID="0D72BE1E-B5DA-B97B-4D5B-7B4CB2B6EA0A"/>
+<colUsage columnID="C0B4A9A0-64BE-49AB-42F7-2992CD101608"/>
+<colUsage columnID="79D1274F-8337-CAD6-6487-1833CA008F0E"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="DE6C3E94-8275-6140-F627-B35CEBE1A50C" name="ORG_SUB_ORGANIZACION_FK">
+<ind_PK_UK id="DE6C3E94-8275-6140-F627-B35CEBE1A50C" name="ORG_PRE_ORGANIZACION_CARIDAD_FK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>EB06C605-AEDF-F6A4-0BC4-5EDFB7F46721</generatorID>
@@ -86,7 +122,7 @@
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="EFEE75B2-E79B-1455-AB99-F651B09AECC6"/>
+<colUsage columnID="C0B4A9A0-64BE-49AB-42F7-2992CD101608"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="21A47B2E-AF6E-1FDF-EF24-215B5670F419" name="sub_org_Subasta_FK">
@@ -109,6 +145,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="0D72BE1E-B5DA-B97B-4D5B-7B4CB2B6EA0A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5C9B0F9F-451E-4481-A50B-7AF16A2E56A4" name="ORG_PRE_SUBASTA_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>C9E895E6-7A8D-8C91-8749-AE9D52144F1B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79D1274F-8337-CAD6-6487-1833CA008F0E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

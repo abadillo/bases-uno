@@ -34,6 +34,19 @@
 <colAssociation fkAssociation="A88160B8-009C-73AB-C2A1-555012A8BC08" referredColumn="D066A2C5-5F37-467B-D67B-7F0D30E5F154"/>
 </associations>
 </Column>
+<Column name="COLECCIONABLEv1_id" id="0B8CF69D-6644-424F-56D3-D1CB05F85E87">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>84590B57-7D34-D778-EB4A-9EA8C0F91578</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="65F0B0AE-FA3F-7675-94ED-7328C2D8E6C6" referredColumn="4F3D50A2-45FB-51EF-E825-B78EA1A63DB2"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="DF9D72F4-C632-1BB4-1A5D-C6F4C7CDE65C" name="CARACTERISTICA_PK">
@@ -57,6 +70,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="B38014BC-0549-4DB1-B9F1-7292EA154B14"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C79AE145-2777-061E-32AB-B9E10AE14E74" name="CARACTERISTICA_COLECCIONABLEv1_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>AD1231D8-7B70-299D-6434-5B14156959C3</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B8CF69D-6644-424F-56D3-D1CB05F85E87"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

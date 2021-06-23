@@ -24,6 +24,7 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>03894DAD-A180-EE05-BB32-AF078C59DC5D</generatorID>
 <ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -46,10 +47,11 @@
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>BC0BB999-CDFF-F712-1FD5-A401C2DA6331</generatorID>
 <ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -87,14 +89,14 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="7A7ED7FE-44EF-2A79-D223-41950F92ACE7" referredColumn="0D6D6EE4-362C-81DC-F46F-CB90B7E60D14"/>
 </associations>
 </Column>
-<Column name="coleccionista_cedula1" id="70075B96-7CF0-9EFA-AC7C-A7D5337EEBE4">
+<Column name="documento_identidad" id="70075B96-7CF0-9EFA-AC7C-A7D5337EEBE4">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-07 01:17:01 UTC</createdTime>
 <generatorID>DB2EC92F-7576-42E8-072A-50E6A886C1BE</generatorID>
@@ -102,7 +104,32 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email_contacto" id="4694BA43-79B0-7D8B-C85D-0719BFD969C5">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>FD021FF9-C5C6-544A-FAF6-DBD5038C4851</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLUB_id1" id="BAE49895-FC72-211D-7930-299BC58897FF">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>7FCE32A7-4A22-ED52-96EE-C9FF3E58D145</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -118,7 +145,19 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="70075B96-7CF0-9EFA-AC7C-A7D5337EEBE4"/>
-<colUsage columnID="6454357F-788E-DB32-351E-6181E12A4D2B"/>
+<colUsage columnID="FCE188D8-E53D-13F8-AD45-AD08916A11F0"/>
+<colUsage columnID="CCC932DD-4878-88C3-8F5B-A8388279F3E5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="553307A4-8189-5ADE-0528-162BA1FCD0B2" name="MEMBRESIA__IDX">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="BAE49895-FC72-211D-7930-299BC58897FF"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="C3677931-6DBD-3917-9FB1-E58A9B14C663" name="MEMBRESIA_CLUB_FK">

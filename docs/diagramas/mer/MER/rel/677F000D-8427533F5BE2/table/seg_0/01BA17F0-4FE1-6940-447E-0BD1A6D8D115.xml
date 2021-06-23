@@ -90,6 +90,73 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="fecha" id="3D61AE6A-1494-B8DC-79A6-D77A0634376F">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>CE42B42F-B132-79D2-AA92-0A1449ACA363</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hora_inicio" id="782E1D05-AB92-868D-A7AA-167AF60E482A">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>5BECB2F6-FB91-E504-BAC8-3E8E04CFEF61</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hora_cierre" id="723183EF-AA4C-F5F3-7C67-399F3EEDABBF">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>AE796236-9ED4-F94F-6879-C40A5D0A3FBB</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo2" id="1A122B50-4FA0-071C-8E3F-849D39B9A4BC">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>41C3A15F-867C-9846-F6D0-8FA1A1C8658F</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="caridad" id="6C645886-DF73-2B62-88CD-4F647B83E188">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>21F83A5D-A063-60D1-492F-2C953FEAF373</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cancelado" id="3B4B6455-D7BB-9F65-A26D-4E76833A1F83">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>B7B84614-3FC6-0B1C-A52D-CF3197D31DE5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOCAL_id" id="6A77A17A-E02C-0E3C-5D34-87BA248A1B87">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>93D90A32-1B20-F904-9785-F5B39D872813</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ED04A813-E022-9107-6EF4-809A3F71721C" referredColumn="D96BDFDA-605B-0A96-D37C-325CED958389"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="8EA323EE-B80A-47AD-3B59-4CE747D93FA7" name="SUBASTA_PK">
@@ -113,6 +180,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="DE05C3AF-641D-FA08-CCA0-6DDE2D2009AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DFE348EC-51F7-99AF-0060-F9BA8E98BE73" name="SUBASTA_LOCAL_FKv1">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>78B91DC4-65B1-1F59-0E63-4ACB518A3496</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A77A17A-E02C-0E3C-5D34-87BA248A1B87"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

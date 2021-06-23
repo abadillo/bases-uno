@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cedula" id="EF9E428C-4A22-8849-D87E-CD795E4E751D">
+<Column name="documento_identidad" id="EF9E428C-4A22-8849-D87E-CD795E4E751D">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</generatorID>
@@ -32,7 +32,7 @@
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="p_nombre" id="42F47055-B810-199D-28CF-2C2244569CD4">
+<Column name="primer_nombre" id="42F47055-B810-199D-28CF-2C2244569CD4">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>8CE9D1F6-E9D3-D500-3400-4EE049E9E5ED</generatorID>
@@ -44,7 +44,7 @@
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="s_nombre" id="5945FED1-C165-3738-9890-053C37A8EBF0">
+<Column name="segundo_nombre" id="5945FED1-C165-3738-9890-053C37A8EBF0">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>3ED5204A-2F10-FC0A-E484-6C37F4440EFB</generatorID>
@@ -57,7 +57,7 @@
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="p_apellido" id="33FB5793-362C-B8AE-7E9E-29081CA9012B">
+<Column name="primer_apellido" id="33FB5793-362C-B8AE-7E9E-29081CA9012B">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>15CE5A66-9CDF-AD1F-425E-C2AAEB6D8CDF</generatorID>
@@ -69,12 +69,11 @@
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="s_apellido" id="8E5C9158-55FB-4B12-EB12-64981BD29AF9">
+<Column name="segundo_apellido" id="8E5C9158-55FB-4B12-EB12-64981BD29AF9">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>7999C205-3DDE-5198-C3DF-E89009690DAC</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -106,16 +105,15 @@
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="email" id="699D5DAA-767A-B64C-82C3-C1352936836D">
+<Column name="fecha_nacimiento" id="699D5DAA-767A-B64C-82C3-C1352936836D">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>03CF64FA-7183-EB3B-0B9D-EF1751CAB52C</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="LUGAR_id" id="800ECAE4-56BB-4F7E-7FE7-E938C92218B3">
@@ -133,7 +131,7 @@
 <colAssociation fkAssociation="95CF4677-C2F5-7436-CDA8-C5853A8BCA1A" referredColumn="721B708E-DECB-607C-BCC2-E28D4772A5E1"/>
 </associations>
 </Column>
-<Column name="COLECCIONISTA_cedula" id="07AFE1FB-9C63-4810-623F-FCFA3A9396C2">
+<Column name="COLECCIONISTA_documento_identidad" id="07AFE1FB-9C63-4810-623F-FCFA3A9396C2">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <generatorID>3709E9E9-E0DC-124B-1C0F-DF3026E7518E</generatorID>
@@ -143,7 +141,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -175,6 +173,21 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="90B79D7B-5364-EED8-1AB4-6282D2F0349B" referredColumn="D509D0B4-77A6-413A-6A8C-99F3666D9998"/>
+</associations>
+</Column>
+<Column name="LUGAR_id1" id="44AAA52B-D1DA-969D-AC22-8A9401B98EA1">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>B1DE4551-1DC8-68FA-2123-908C816B6869</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91904BFB-EE94-9996-CDDB-3BDAE17D827D" referredColumn="721B708E-DECB-607C-BCC2-E28D4772A5E1"/>
 </associations>
 </Column>
 </columns>
@@ -222,6 +235,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="DFB04537-0CF7-5FBB-47CF-B26D1C8F587D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="07EE1223-F363-600A-59A8-391850FC06C9" name="COLECCIONISTA_LUGAR_FKv1">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>67816DE6-9029-567A-DDAB-5F55C40CFD92</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44AAA52B-D1DA-969D-AC22-8A9401B98EA1"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

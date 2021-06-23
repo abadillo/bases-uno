@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4D94F7EC-4078-CE5D-B421-F8A9936197CB" containerWithKeyObject="E31533D1-C522-2706-6DDD-5623DAEA046D" localFKIndex="44819900-853E-4ECC-C1FC-1CC817151A15" name="LISTADO_PARTICIPANTE_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>4E8870B0-254E-B8B0-9194-800465946B51</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>PARTICIPANTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>16DF708B-D5FA-B24D-F6FF-0F6F25428D6B</referredTableID>
+<keyObject>19DB89A1-59A9-0C7D-E16C-A2B126ED9FE9</keyObject>
+<referredKeyID>19DB89A1-59A9-0C7D-E16C-A2B126ED9FE9</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>SUBASTA_id,id_inscripcion</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

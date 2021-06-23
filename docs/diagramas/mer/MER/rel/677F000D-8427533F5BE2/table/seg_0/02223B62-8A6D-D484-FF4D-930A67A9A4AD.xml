@@ -27,6 +27,7 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>9F04EC64-A40E-210D-7EE9-BE933D4A93EC</generatorID>
 <ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -60,6 +61,7 @@
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>BBFC11A7-7A76-C199-174E-11AA8185C818</generatorID>
 <ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT022</logicalDatatype>
@@ -123,15 +125,53 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="id2" id="E38B7F91-DE77-7FF3-1177-80E4F5366B97">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>317C3163-1F0F-61FE-FAB8-E28C65D68221</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="titulo" id="892FAE97-4B17-CF5E-BDB0-7F5428D3A455">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>83D231DF-9891-C50B-1D65-7B79FEEBD4F9</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="editor" id="11C8A8B3-C010-72F5-6EB3-AC12FC206757">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>249A0E90-4F61-9044-E503-162AF064A295</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F10D2BF8-E09B-A14A-A01C-AB8543118055" name="COMIC_PKv2">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>3A474DE5-A848-3666-8657-D821965DEE9A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E38B7F91-DE77-7FF3-1177-80E4F5366B97"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="A06A008D-001A-1CFA-7FB3-3E03F9699918" name="COMIC_PK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:32:11 UTC</createdTime>
 <generatorID>53B38367-C813-450F-C318-480B0405E486</generatorID>
 <ownerDesignName>MER</ownerDesignName>
-<pk>true</pk>
-<indexState>Primary Constraint</indexState>
+<indexState>Unique Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="5448AC7F-C484-63AF-CDA0-CA63B2B07199"/>

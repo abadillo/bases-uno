@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D3C6406F-95BD-E3F1-ABAB-D88D43B7E9F9" containerWithKeyObject="E31533D1-C522-2706-6DDD-5623DAEA046D" localFKIndex="5981E23C-75B3-F620-2244-12C3393CC3DE" name="LISTADO_SUBASTA_FK">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-05 21:32:11 UTC</createdTime>
-<generatorID>04706375-74CD-7F2D-73CC-4F9E181B9C0A</generatorID>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="675DCC66-77E8-9ECE-804B-D5E13BA9C9A4" containerWithKeyObject="E2037063-22F4-5C4B-108E-2D1F01CE763A" localFKIndex="5C9B0F9F-451E-4481-A50B-7AF16A2E56A4" name="ORG_PRE_SUBASTA_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>C9E895E6-7A8D-8C91-8749-AE9D52144F1B</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <referredTableLongName>SUBASTA</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

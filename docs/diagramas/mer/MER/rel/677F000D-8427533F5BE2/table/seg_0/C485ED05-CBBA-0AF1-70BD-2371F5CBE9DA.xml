@@ -57,6 +57,16 @@
 <colAssociation fkAssociation="26C34767-4632-CFDB-4F85-509927FC0B76" referredColumn="721B708E-DECB-607C-BCC2-E28D4772A5E1"/>
 </associations>
 </Column>
+<Column name="nacionalidad" id="671A87DE-8064-CA90-355B-32A47F0BACB0">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>C041BDA8-C7D9-4EFA-A59C-CF7ABAFD8246</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="84F71E02-EFCF-1786-4F2C-D62C2DF2365B" name="LUGAR_PK">

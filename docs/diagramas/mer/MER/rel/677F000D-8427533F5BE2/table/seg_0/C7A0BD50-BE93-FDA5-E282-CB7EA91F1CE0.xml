@@ -59,7 +59,7 @@
 <colAssociation fkAssociation="E4D8AFB5-B73F-64C3-6AA9-855BA70F7DCB" referredColumn="721B708E-DECB-607C-BCC2-E28D4772A5E1"/>
 </associations>
 </Column>
-<Column name="COLECCIONISTA_cedula" id="289E9565-902B-5100-A308-E67FF74AABF6">
+<Column name="COLECCIONISTA_documento_identidad" id="289E9565-902B-5100-A308-E67FF74AABF6">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-07 01:17:01 UTC</createdTime>
 <generatorID>DAE063B3-AA40-28DB-11F8-C05CB53BA773</generatorID>
@@ -69,21 +69,59 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="E6A23DAB-7C84-A47E-29FC-BBFE77799CD1" referredColumn="EF9E428C-4A22-8849-D87E-CD795E4E751D"/>
 </associations>
 </Column>
+<Column name="id" id="D96BDFDA-605B-0A96-D37C-325CED958389">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>9C3622C1-FFC1-CD4C-7634-035C6B4AE56C</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="522389AA-1993-B2DA-FE74-BA8802ED9446">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>A2FB85C2-3C8B-3EF9-07EC-BFB3F0143A92</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="A1DA7236-4821-4AB9-0DEB-E0CD5313761D">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>5C378DC4-DA1D-BED2-746D-BC4369EAE531</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2F8FE2E1-D422-D46D-B0FD-B3C01A5FDF84" name="LOCAL_id_UN">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:02:45 UTC</createdTime>
+<generatorID>B618BBD6-2FA6-6C53-4D32-8F7AD6B5EEBE</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D96BDFDA-605B-0A96-D37C-325CED958389"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="E6396824-C9A3-C75A-F435-C215802F160E" name="Local_PK">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 16:46:07 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
-<pk>true</pk>
-<indexState>Primary Constraint</indexState>
+<indexState>Unique Constraint</indexState>
 <indexColumnUsage>
 <colUsage columnID="8126CA47-5E71-AF5A-035D-0779B6BD0710"/>
 </indexColumnUsage>
