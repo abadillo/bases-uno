@@ -29,7 +29,7 @@ namespace bases_uno.Views
 
 		}
 
-		private void InsertForm(object form)
+		public void InsertForm(object form)
 		{
 			if (this.mainpanel.Controls.Count > 0)
 				this.mainpanel.Controls.RemoveAt(0);
@@ -59,13 +59,13 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-			comic2 mf = new comic2();
+			comic2 mf = new comic2( this );
 			InsertForm(mf);
 		}
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-			comicr mf = new comicr();
+			comicr mf = new comicr( this );
 			InsertForm(mf);
 		}
     }

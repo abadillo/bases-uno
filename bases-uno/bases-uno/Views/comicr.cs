@@ -14,13 +14,17 @@ namespace bases_uno.Views
     public partial class comicr : Form
     {
 
-      
+        public index parent;
 
-        public comicr()
+        public comicr(  index parent )
         {
+            this.parent = parent;
             InitializeComponent();
 		
 		}
+       
+
+
 
         private void label14_Click(object sender, EventArgs e)
         {
@@ -75,6 +79,12 @@ namespace bases_uno.Views
         private void label13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            comic2 mf = new comic2( parent);
+            parent.InsertForm(mf);
         }
     }
 }
