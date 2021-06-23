@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace bases_uno.Views
 {
-    public partial class comic1 : Form
+    public partial class comicl : Form
     {
 
         public int id = 1;
@@ -19,42 +19,15 @@ namespace bases_uno.Views
         public index parent;
        
 
-        public comic1(index parent)
+        public comicl(index parent)
         {
             this.parent = parent;
 
             InitializeComponent();
-			Comic comic = new Comic(id);
-			textBoxID.Text = comic.ID.ToString();
-			textBoxTitel.Text = comic.Titlel;
-			textBoxPublicationDate.Text = comic.PublicationDate.ToString();
-			textBoxColor.Text = comic.Color ? "Si" : "No";
-			textBoxCover.Text = comic.Cover ? "Si" : "No";
-			textBoxVolume.Text = (comic.Volume == 0) ? comic.Volume.ToString() : "";
-			textBoxNumber.Text = comic.Number.ToString();
-			textBoxPublicationPrice.Text = (comic.PublicationPrice == 0) ? comic.PublicationPrice.ToString() : "";
-			textBoxPages.Text = comic.Pages.ToString();
-			textBoxEditor.Text = comic.Editor;
-			textBoxSynopsis.Text = comic.Synopsis;
-
-            label1.Text = "Comic: " + comic.Titlel;
+			
+            label1.Text = "Listado Comics";
             Update();
 		}
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void iconButton8_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
@@ -81,6 +54,21 @@ namespace bases_uno.Views
         {
             /// comicl mf = new comicl(parent);
             /// parent.InsertForm(mf);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnpanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

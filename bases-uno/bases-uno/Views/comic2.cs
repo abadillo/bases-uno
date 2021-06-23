@@ -16,16 +16,19 @@ namespace bases_uno.Views
 
         public index parent;
 
-       
+        public int id = 1;
+
+
         public comic2( index parent)
         {
             this.parent = parent;
             
             InitializeComponent();
-			Comic comic = new Comic(1);
-			
-			
-			Update();
+			Comic comic = new Comic(id);
+
+            label1.Text = "Comic: " + comic.Titlel;
+
+            Update();
 		}
 
         private void label2_Click(object sender, EventArgs e)
@@ -42,6 +45,12 @@ namespace bases_uno.Views
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnatras_Click(object sender, EventArgs e)
+        {
+            comic1 mf = new comic1(parent);
+            parent.InsertForm(mf);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace bases_uno.Views
 {
-    partial class comic2
+    partial class comicl
     {
         /// <summary>
         /// Required designer variable.
@@ -37,10 +37,7 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.label2 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
-            this.dipanel1.SuspendLayout();
             this.hrpanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,18 +53,16 @@ namespace bases_uno.Views
             this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
             this.stpanel7.Name = "stpanel7";
             this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
-            this.stpanel7.Size = new System.Drawing.Size(864, 805);
+            this.stpanel7.Size = new System.Drawing.Size(864, 757);
             this.stpanel7.TabIndex = 1;
             // 
             // dipanel1
             // 
-            this.dipanel1.Controls.Add(this.reportViewer1);
-            this.dipanel1.Controls.Add(this.label2);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dipanel1.Location = new System.Drawing.Point(15, 104);
             this.dipanel1.Name = "dipanel1";
-            this.dipanel1.Size = new System.Drawing.Size(834, 686);
-            this.dipanel1.TabIndex = 14;
+            this.dipanel1.Size = new System.Drawing.Size(834, 638);
+            this.dipanel1.TabIndex = 12;
             // 
             // panel1
             // 
@@ -75,7 +70,8 @@ namespace bases_uno.Views
             this.panel1.Location = new System.Drawing.Point(15, 63);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 41);
-            this.panel1.TabIndex = 13;
+            this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // hrpanel
             // 
@@ -85,7 +81,8 @@ namespace bases_uno.Views
             this.hrpanel.Location = new System.Drawing.Point(15, 15);
             this.hrpanel.Name = "hrpanel";
             this.hrpanel.Size = new System.Drawing.Size(834, 48);
-            this.hrpanel.TabIndex = 12;
+            this.hrpanel.TabIndex = 10;
+            this.hrpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.hrpanel_Paint);
             // 
             // panel2
             // 
@@ -114,6 +111,7 @@ namespace bases_uno.Views
             this.btnadelante.TabIndex = 5;
             this.btnadelante.UseVisualStyleBackColor = false;
             this.btnadelante.Visible = false;
+            this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
             // 
             // btnatras
             // 
@@ -131,6 +129,7 @@ namespace bases_uno.Views
             this.btnatras.Size = new System.Drawing.Size(66, 48);
             this.btnatras.TabIndex = 4;
             this.btnatras.UseVisualStyleBackColor = false;
+            this.btnatras.Visible = false;
             this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
             // 
             // label1
@@ -144,38 +143,16 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 51);
             this.label1.TabIndex = 0;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 40);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(834, 646);
-            this.reportViewer1.TabIndex = 21;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(834, 40);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Ficha Comic";
-            // 
-            // comic2
+            // comicl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 805);
+            this.ClientSize = new System.Drawing.Size(864, 757);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "comic2";
+            this.Name = "comicl";
             this.Text = "8 Bit Subastas";
-            this.Load += new System.EventHandler(this.comic2_Load);
             this.stpanel7.ResumeLayout(false);
-            this.dipanel1.ResumeLayout(false);
             this.hrpanel.ResumeLayout(false);
             this.hrpanel.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -193,7 +170,5 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton btnadelante;
         private FontAwesome.Sharp.IconButton btnatras;
         private System.Windows.Forms.Label label1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.Label label2;
     }
 }

@@ -20,12 +20,9 @@ namespace bases_uno.Views
 		public index()
 		{
 			InitializeComponent();
-			Comic comic = new Comic(id);
-			label1.Text = "Comic: " + comic.Titlel;
-			Update();
+			/// Comic comic = new Comic(id);
+			/// Update();
 
-			comic1 mf = new comic1();
-			InsertForm(mf);
 
 		}
 
@@ -44,7 +41,8 @@ namespace bases_uno.Views
 
         private void button3_Click(object sender, EventArgs e)
         {
-		
+			comicr mf = new comicr(this);
+			InsertForm(mf);
 		}
 
         private void button4_Click(object sender, EventArgs e)
@@ -54,19 +52,18 @@ namespace bases_uno.Views
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnadelante_Click(object sender, EventArgs e)
-        {
-			comic2 mf = new comic2( this );
+			comicl mf = new comicl(this);
 			InsertForm(mf);
+			 
+
+			
+
 		}
 
-        private void btnatras_Click(object sender, EventArgs e)
-        {
-			comicr mf = new comicr( this );
-			InsertForm(mf);
-		}
-    }
+
+
+
+
+
+	}
 }

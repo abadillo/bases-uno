@@ -110,6 +110,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\comicl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\comicl.Designer.cs">
+      <DependentUpon>comicl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\comicr.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\comicl.resx">
+      <DependentUpon>comicl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\comicr.resx">
       <DependentUpon>comicr.cs</DependentUpon>
     </EmbeddedResource>

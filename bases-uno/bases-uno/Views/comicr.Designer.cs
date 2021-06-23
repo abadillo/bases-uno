@@ -31,7 +31,6 @@ namespace bases_uno.Views
         {
             this.stpanel7 = new System.Windows.Forms.Panel();
             this.dipanel1 = new System.Windows.Forms.Panel();
-            this.mnpanel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btncrear = new System.Windows.Forms.Button();
@@ -41,16 +40,20 @@ namespace bases_uno.Views
             this.label7 = new System.Windows.Forms.Label();
             this.spacerpanel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.textBoxTitel = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBoxEditor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBoxPages = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.textBoxPublicationPrice = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.textBoxVolume = new System.Windows.Forms.TextBox();
@@ -61,67 +64,63 @@ namespace bases_uno.Views
             this.panel9 = new System.Windows.Forms.Panel();
             this.textBoxNumber = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxTitel = new System.Windows.Forms.TextBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBoxPublicationPrice = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.hrpanel = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnadelante = new FontAwesome.Sharp.IconButton();
+            this.btnatras = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
-            this.mnpanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.hrpanel.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // stpanel7
             // 
             this.stpanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.stpanel7.Controls.Add(this.dipanel1);
+            this.stpanel7.Controls.Add(this.panel3);
+            this.stpanel7.Controls.Add(this.hrpanel);
             this.stpanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpanel7.Location = new System.Drawing.Point(0, 0);
             this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
             this.stpanel7.Name = "stpanel7";
             this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
-            this.stpanel7.Size = new System.Drawing.Size(864, 718);
+            this.stpanel7.Size = new System.Drawing.Size(864, 807);
             this.stpanel7.TabIndex = 1;
             // 
             // dipanel1
             // 
-            this.dipanel1.Controls.Add(this.mnpanel1);
+            this.dipanel1.Controls.Add(this.tableLayoutPanel1);
+            this.dipanel1.Controls.Add(this.label14);
+            this.dipanel1.Controls.Add(this.panel1);
+            this.dipanel1.Controls.Add(this.textBoxSynopsis);
+            this.dipanel1.Controls.Add(this.label7);
+            this.dipanel1.Controls.Add(this.spacerpanel2);
+            this.dipanel1.Controls.Add(this.tableLayoutPanel2);
+            this.dipanel1.Controls.Add(this.label2);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel1.Location = new System.Drawing.Point(15, 15);
+            this.dipanel1.Location = new System.Drawing.Point(15, 104);
             this.dipanel1.Name = "dipanel1";
             this.dipanel1.Size = new System.Drawing.Size(834, 688);
-            this.dipanel1.TabIndex = 0;
-            // 
-            // mnpanel1
-            // 
-            this.mnpanel1.Controls.Add(this.tableLayoutPanel1);
-            this.mnpanel1.Controls.Add(this.label14);
-            this.mnpanel1.Controls.Add(this.panel1);
-            this.mnpanel1.Controls.Add(this.textBoxSynopsis);
-            this.mnpanel1.Controls.Add(this.label7);
-            this.mnpanel1.Controls.Add(this.spacerpanel2);
-            this.mnpanel1.Controls.Add(this.tableLayoutPanel2);
-            this.mnpanel1.Controls.Add(this.label2);
-            this.mnpanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mnpanel1.Location = new System.Drawing.Point(0, 0);
-            this.mnpanel1.Name = "mnpanel1";
-            this.mnpanel1.Size = new System.Drawing.Size(834, 688);
-            this.mnpanel1.TabIndex = 9;
+            this.dipanel1.TabIndex = 14;
             // 
             // tableLayoutPanel1
             // 
@@ -138,7 +137,7 @@ namespace bases_uno.Views
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 40);
-            this.tableLayoutPanel1.TabIndex = 27;
+            this.tableLayoutPanel1.TabIndex = 35;
             // 
             // btncancelar
             // 
@@ -155,7 +154,6 @@ namespace bases_uno.Views
             this.btncancelar.TabIndex = 1;
             this.btncancelar.Text = "CANCELAR";
             this.btncancelar.UseVisualStyleBackColor = false;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btncrear
             // 
@@ -172,7 +170,6 @@ namespace bases_uno.Views
             this.btncrear.TabIndex = 0;
             this.btncrear.Text = "Añadir";
             this.btncrear.UseVisualStyleBackColor = false;
-            this.btncrear.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // label14
             // 
@@ -182,9 +179,8 @@ namespace bases_uno.Views
             this.label14.Location = new System.Drawing.Point(0, 579);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(834, 40);
-            this.label14.TabIndex = 26;
+            this.label14.TabIndex = 34;
             this.label14.Text = "Opciones";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // panel1
             // 
@@ -192,8 +188,7 @@ namespace bases_uno.Views
             this.panel1.Location = new System.Drawing.Point(0, 556);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 23);
-            this.panel1.TabIndex = 25;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 33;
             // 
             // textBoxSynopsis
             // 
@@ -207,7 +202,7 @@ namespace bases_uno.Views
             this.textBoxSynopsis.Name = "textBoxSynopsis";
             this.textBoxSynopsis.ReadOnly = true;
             this.textBoxSynopsis.Size = new System.Drawing.Size(834, 177);
-            this.textBoxSynopsis.TabIndex = 24;
+            this.textBoxSynopsis.TabIndex = 32;
             // 
             // label7
             // 
@@ -217,7 +212,7 @@ namespace bases_uno.Views
             this.label7.Location = new System.Drawing.Point(0, 339);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(834, 40);
-            this.label7.TabIndex = 23;
+            this.label7.TabIndex = 31;
             this.label7.Text = "Sinopsis";
             // 
             // spacerpanel2
@@ -226,7 +221,7 @@ namespace bases_uno.Views
             this.spacerpanel2.Location = new System.Drawing.Point(0, 316);
             this.spacerpanel2.Name = "spacerpanel2";
             this.spacerpanel2.Size = new System.Drawing.Size(834, 23);
-            this.spacerpanel2.TabIndex = 22;
+            this.spacerpanel2.TabIndex = 30;
             // 
             // tableLayoutPanel2
             // 
@@ -252,7 +247,79 @@ namespace bases_uno.Views
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(834, 276);
-            this.tableLayoutPanel2.TabIndex = 21;
+            this.tableLayoutPanel2.TabIndex = 29;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(420, 113);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 30, 10);
+            this.panel2.Size = new System.Drawing.Size(411, 49);
+            this.panel2.TabIndex = 11;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.LightGray;
+            this.radioButton2.Location = new System.Drawing.Point(367, 10);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(14, 29);
+            this.radioButton2.TabIndex = 15;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.LightGray;
+            this.label8.Location = new System.Drawing.Point(0, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 24);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "cubierta";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.textBoxTitel);
+            this.panel11.Controls.Add(this.label11);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.panel11.Size = new System.Drawing.Size(411, 49);
+            this.panel11.TabIndex = 5;
+            // 
+            // textBoxTitel
+            // 
+            this.textBoxTitel.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxTitel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTitel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxTitel.ForeColor = System.Drawing.Color.Black;
+            this.textBoxTitel.Location = new System.Drawing.Point(0, 27);
+            this.textBoxTitel.Name = "textBoxTitel";
+            this.textBoxTitel.Size = new System.Drawing.Size(381, 22);
+            this.textBoxTitel.TabIndex = 16;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.LightGray;
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 24);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "titulo";
             // 
             // panel5
             // 
@@ -324,43 +391,6 @@ namespace bases_uno.Views
             this.label4.TabIndex = 14;
             this.label4.Text = "paginas";
             // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label6);
-            this.panel13.Controls.Add(this.textBoxPublicationPrice);
-            this.panel13.Controls.Add(this.label13);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(3, 168);
-            this.panel13.Name = "panel13";
-            this.panel13.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.panel13.Size = new System.Drawing.Size(411, 49);
-            this.panel13.TabIndex = 7;
-            // 
-            // textBoxPublicationPrice
-            // 
-            this.textBoxPublicationPrice.BackColor = System.Drawing.Color.LightGray;
-            this.textBoxPublicationPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPublicationPrice.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBoxPublicationPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxPublicationPrice.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPublicationPrice.Location = new System.Drawing.Point(0, 24);
-            this.textBoxPublicationPrice.Name = "textBoxPublicationPrice";
-            this.textBoxPublicationPrice.Size = new System.Drawing.Size(215, 22);
-            this.textBoxPublicationPrice.TabIndex = 16;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.LightGray;
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(183, 24);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "precio publicacion";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
             // panel12
             // 
             this.panel12.Controls.Add(this.radioButton1);
@@ -371,6 +401,20 @@ namespace bases_uno.Views
             this.panel12.Padding = new System.Windows.Forms.Padding(0, 10, 30, 10);
             this.panel12.Size = new System.Drawing.Size(411, 49);
             this.panel12.TabIndex = 6;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.LightGray;
+            this.radioButton1.Location = new System.Drawing.Point(367, 10);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(14, 29);
+            this.radioButton1.TabIndex = 15;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -383,7 +427,6 @@ namespace bases_uno.Views
             this.label12.Size = new System.Drawing.Size(57, 24);
             this.label12.TabIndex = 14;
             this.label12.Text = "color";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // panel7
             // 
@@ -419,7 +462,6 @@ namespace bases_uno.Views
             this.label3.Size = new System.Drawing.Size(90, 24);
             this.label3.TabIndex = 14;
             this.label3.Text = "volumen";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel10
             // 
@@ -455,7 +497,6 @@ namespace bases_uno.Views
             this.label10.Size = new System.Drawing.Size(175, 24);
             this.label10.TabIndex = 14;
             this.label10.Text = "fecha publicacion";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // panel9
             // 
@@ -491,105 +532,18 @@ namespace bases_uno.Views
             this.label9.Size = new System.Drawing.Size(82, 24);
             this.label9.TabIndex = 14;
             this.label9.Text = "numero";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // label2
+            // panel13
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(834, 40);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "General";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.LightGray;
-            this.label11.Location = new System.Drawing.Point(0, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 24);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "titulo";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // textBoxTitel
-            // 
-            this.textBoxTitel.BackColor = System.Drawing.Color.LightGray;
-            this.textBoxTitel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTitel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxTitel.ForeColor = System.Drawing.Color.Black;
-            this.textBoxTitel.Location = new System.Drawing.Point(0, 27);
-            this.textBoxTitel.Name = "textBoxTitel";
-            this.textBoxTitel.Size = new System.Drawing.Size(381, 22);
-            this.textBoxTitel.TabIndex = 16;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.textBoxTitel);
-            this.panel11.Controls.Add(this.label11);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(3, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.panel11.Size = new System.Drawing.Size(411, 49);
-            this.panel11.TabIndex = 5;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButton1.Location = new System.Drawing.Point(367, 10);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 29);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(420, 113);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 30, 10);
-            this.panel2.Size = new System.Drawing.Size(411, 49);
-            this.panel2.TabIndex = 11;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButton2.Location = new System.Drawing.Point(367, 10);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 29);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(0, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 24);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "cubierta";
+            this.panel13.Controls.Add(this.label6);
+            this.panel13.Controls.Add(this.textBoxPublicationPrice);
+            this.panel13.Controls.Add(this.label13);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(3, 168);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.panel13.Size = new System.Drawing.Size(411, 49);
+            this.panel13.TabIndex = 7;
             // 
             // label6
             // 
@@ -603,27 +557,138 @@ namespace bases_uno.Views
             this.label6.TabIndex = 17;
             this.label6.Text = "15 €";
             // 
+            // textBoxPublicationPrice
+            // 
+            this.textBoxPublicationPrice.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxPublicationPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPublicationPrice.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBoxPublicationPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxPublicationPrice.ForeColor = System.Drawing.Color.Black;
+            this.textBoxPublicationPrice.Location = new System.Drawing.Point(0, 24);
+            this.textBoxPublicationPrice.Name = "textBoxPublicationPrice";
+            this.textBoxPublicationPrice.Size = new System.Drawing.Size(215, 22);
+            this.textBoxPublicationPrice.TabIndex = 16;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.LightGray;
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(183, 24);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "precio publicacion";
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.LightGray;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(834, 40);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "General";
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(15, 63);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(834, 41);
+            this.panel3.TabIndex = 13;
+            // 
+            // hrpanel
+            // 
+            this.hrpanel.Controls.Add(this.panel6);
+            this.hrpanel.Controls.Add(this.label1);
+            this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.hrpanel.Location = new System.Drawing.Point(15, 15);
+            this.hrpanel.Name = "hrpanel";
+            this.hrpanel.Size = new System.Drawing.Size(834, 48);
+            this.hrpanel.TabIndex = 12;
+            this.hrpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.hrpanel_Paint);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnadelante);
+            this.panel6.Controls.Add(this.btnatras);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(694, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(140, 48);
+            this.panel6.TabIndex = 1;
+            // 
+            // btnadelante
+            // 
+            this.btnadelante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.btnadelante.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnadelante.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnadelante.FlatAppearance.BorderSize = 0;
+            this.btnadelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadelante.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
+            this.btnadelante.IconColor = System.Drawing.Color.LightGray;
+            this.btnadelante.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnadelante.Location = new System.Drawing.Point(74, 0);
+            this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
+            this.btnadelante.Name = "btnadelante";
+            this.btnadelante.Size = new System.Drawing.Size(66, 48);
+            this.btnadelante.TabIndex = 5;
+            this.btnadelante.UseVisualStyleBackColor = false;
+            // 
+            // btnatras
+            // 
+            this.btnatras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.btnatras.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnatras.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnatras.FlatAppearance.BorderSize = 0;
+            this.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnatras.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btnatras.IconColor = System.Drawing.Color.LightGray;
+            this.btnatras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnatras.Location = new System.Drawing.Point(0, 0);
+            this.btnatras.Margin = new System.Windows.Forms.Padding(0);
+            this.btnatras.Name = "btnatras";
+            this.btnatras.Size = new System.Drawing.Size(66, 48);
+            this.btnatras.TabIndex = 4;
+            this.btnatras.UseVisualStyleBackColor = false;
+            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 51);
+            this.label1.TabIndex = 0;
+            // 
             // comicr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 718);
+            this.ClientSize = new System.Drawing.Size(864, 807);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "comicr";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);
-            this.mnpanel1.ResumeLayout(false);
-            this.mnpanel1.PerformLayout();
+            this.dipanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -632,10 +697,11 @@ namespace bases_uno.Views
             this.panel10.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.hrpanel.ResumeLayout(false);
+            this.hrpanel.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -644,21 +710,30 @@ namespace bases_uno.Views
 
         private System.Windows.Forms.Panel stpanel7;
         private System.Windows.Forms.Panel dipanel1;
-        private System.Windows.Forms.Panel mnpanel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btncancelar;
+        private System.Windows.Forms.Button btncrear;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxSynopsis;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel spacerpanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.TextBox textBoxTitel;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox textBoxEditor;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBoxPages;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox textBoxPublicationPrice;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox textBoxVolume;
@@ -669,19 +744,15 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox textBoxNumber;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btncrear;
-        private System.Windows.Forms.Button btncancelar;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBoxTitel;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxPublicationPrice;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel hrpanel;
+        private System.Windows.Forms.Panel panel6;
+        private FontAwesome.Sharp.IconButton btnadelante;
+        private FontAwesome.Sharp.IconButton btnatras;
+        private System.Windows.Forms.Label label1;
     }
 }
