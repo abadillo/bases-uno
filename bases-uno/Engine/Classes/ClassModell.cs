@@ -7,7 +7,7 @@ using Npgsql;
 
 namespace Engine.Classes
 {
-    class ClassModell : DBConnection.ConnectionDB<ClassModell, int>
+    class ClassModell : DBConnection.CRUD<ClassModell, int>
     {
         #region Atributes
         public int ID { get; set; }
@@ -102,38 +102,6 @@ namespace Engine.Classes
             {
                 Connection.Close();
             }
-        }
-
-        public override List<ClassModell> ListAll()
-        {
-            List<ClassModell> list = new List<ClassModell>();
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM modelo";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, Connection);
-
-                Reader = Script.ExecuteReader();
-
-                while (Reader.Read())
-                {
-                    ClassModell modell= new ClassModell(ReadInt(0), ReadString(1));
-
-                    list.Add(modell);
-                }
-            }
-            catch
-            {
-                list = new List<ClassModell>();
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return list;
         }
 
         public override ClassModell Read(int id)

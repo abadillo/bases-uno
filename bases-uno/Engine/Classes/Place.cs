@@ -7,7 +7,7 @@ using Npgsql;
 
 namespace Engine.Classes
 {
-    class Place : DBConnection.ConnectionDB<Place, int>
+    public class Place : DBConnection.CRUD<Place, int>
     {
 
         #region Atributes
@@ -113,38 +113,6 @@ namespace Engine.Classes
             {
                 Connection.Close();
             }
-        }
-
-        public override List<Place> ListAll()
-        {
-            List<Place> list = new List<Place>();
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM lugar";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, Connection);
-
-                Reader = Script.ExecuteReader();
-
-                while (Reader.Read())
-                {
-                    Place place = new Place(ReadInt(0), ReadString(1), ReadString(2), ReadInt(3));
-
-                    list.Add(place);
-                }
-            }
-            catch
-            {
-                list = new List<Place>();
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return list;
         }
 
         public override Place Read(int id)

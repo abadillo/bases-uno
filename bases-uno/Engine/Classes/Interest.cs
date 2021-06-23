@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    class Interest : DBConnection.ConnectionDB<Interest, int>
+    public class Interest : DBConnection.CRUD<Interest, int>
     {
         #region Atributes
         public int ID { get; set; }
@@ -90,38 +90,6 @@ namespace Engine.Classes
             {
                 Connection.Close();
             }
-        }
-
-        public override List<Interest> ListAll()
-        {
-            List<Interest> list = new List<Interest>();
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM interes";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, Connection);
-
-                Reader = Script.ExecuteReader();
-
-                while (Reader.Read())
-                {
-                    Interest interest = new Interest(ReadInt(0), ReadString(1), ReadString(2));
-
-                    list.Add(interest);
-                }
-            }
-            catch
-            {
-                list = new List<Interest>();
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return list;
         }
 
         public override Interest Read(int id)

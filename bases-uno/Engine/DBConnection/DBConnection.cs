@@ -1,16 +1,14 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
-using System.Data.SqlClient;
-using DocumentFormat.OpenXml.CustomProperties;
 
 namespace Engine.DBConnection
 {
-    public abstract class ConnectionDB<Tipo, Codigo>
+    public class DBConnection
     {
         #region Atributos para establecer la conexion
         //Retrieve Connection String By Name
@@ -19,38 +17,35 @@ namespace Engine.DBConnection
         string connection = settings.ConnectionString;
         NpgsqlConnection conn = new NpgsqlConnection(settings.ConnectionString);
         public NpgsqlCommand Script;
-        public NpgsqlDataReader Reader;     
+        public NpgsqlDataReader Reader;
         public NpgsqlConnection Connection = new NpgsqlConnection(settings.ConnectionString);
         #endregion
 
-        #region CRUDs
-        /// <summary>
-        /// Inserta <typeparamref name="Tipo"/> en la BD 
-        /// </summary>
-        public abstract void Insert();
+        #region Manejo de Conexion
+        public bool OpenConnection()
+        {
+            try
+            {
+                Connection.Open();
 
-        /// <summary>
-        /// Busca <typeparamref name="Tipo"/> en la Base de Datos
-        /// </summary>
-        /// <returns>Lista con todos los objetos de la tabla de la <typeparamref name="Tipo"/></returns>
-        public abstract List<Tipo> ListAll();
+                return true;
+            }
+            catch
+            {
+                CloseConnection();
+            }
 
-        /// <summary>
-        /// Busca especificamente <typeparamref name="Tipo"/> en la base de datos
-        /// </summary>
-        /// <param name="codigo">Codigo de tipo <typeparamref name="Codigo"/> para la busqueda</param>
-        /// <returns>La instancia especifica en la tabla de <typeparamref name="Tipo"/></returns>
-        public abstract Tipo Read(Codigo codigo);
+            return false;
+        }
 
-        /// <summary>
-        /// Actualiza a informacion de <typeparamref name="Tipo"/> en la BD
-        /// </summary>
-        public abstract void Update();
-
-        /// <summary>
-        /// Elimina a <typeparamref name="Tipo"/> de la BD
-        /// </summary>
-        public abstract void Delete();
+        public void CloseConnection()
+        {
+            try
+            {
+                Connection.Close();
+            }
+            finally { }
+        }
         #endregion
 
         #region Lectura con el Reader
@@ -154,33 +149,6 @@ namespace Engine.DBConnection
             {
                 return false;
             }
-        }
-        #endregion
-
-        #region Manejo de Conexion
-        public bool OpenConnection()
-        {
-            try
-            {
-                Connection.Open();
-
-                return true;
-            }
-            catch
-            {
-                CloseConnection();
-            }
-
-            return false;
-        }
-
-        public void CloseConnection()
-        {
-            try
-            {
-                Connection.Close();
-            }
-            finally { }
         }
         #endregion
     }
