@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AAFE833C-980B-7FC3-2571-764C57358380" containerWithKeyObject="54C70DBF-AAB0-341B-6DE3-83FF9137D153" localFKIndex="22CB3E7C-0093-E7B7-700A-38991AAF4CB6" name="DUENO_HISTORICO_COMIC_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>4F733C51-AFAE-D549-E29B-F7E2E3C27854</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>COMIC</referredTableLongName>
+<arc>74D75AF1-D516-8C2F-3FC4-E981199ABEAD</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>51EA660F-2CDC-40BD-04B4-F847E8FF6294</referredTableID>
+<keyObject>8C2A0BE7-CC92-9C84-565B-3721EC10B5DF</keyObject>
+<referredKeyID>8C2A0BE7-CC92-9C84-565B-3721EC10B5DF</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

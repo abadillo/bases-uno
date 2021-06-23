@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="78359068-BEA9-919F-C8E5-954DEDA58327" containerWithKeyObject="A7688754-C45B-C261-A56F-3864825DE87A" localFKIndex="74376D32-91FE-D98E-4A97-5E15562BB9E7" name="CLUB_MEMBRESIA_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>MEMBRESIA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D48DABFA-B59F-D31D-B083-DFA155C83F59</referredTableID>
+<keyObject>CB07FA78-8F55-191B-079C-3B4D516DC767</keyObject>
+<referredKeyID>CB07FA78-8F55-191B-079C-3B4D516DC767</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COLECCIONISTA_documento_identidad,CLUB_id,fecha_ingreso</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

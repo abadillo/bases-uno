@@ -1,41 +1,45 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Npgsql;
 
 namespace Engine.Classes
 {
-    class ClassModell : DBConnection.ConnectionDB<ClassModell, int>
+    class Interest : DBConnection.ConnectionDB<Interest, int>
     {
         #region Atributes
         public int ID { get; set; }
-        public string OtherData { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
         #endregion
 
         #region Constructors
         // Se crea con toda la informacion de la instancia de clase
-        public ClassModell(int id,string otherData)
+        public Interest(int id, string name, string description = "")
         {
             ID = id;
-            OtherData = otherData;
+            Name = name;
+            Description = description;
         }
 
         //Usualmente se usa cuando se va a hacer un insert de una clase cuya clave es un SERIAL
-        public ClassModell(string otherData)
+        public Interest(string name, string description = "")
         {
-            OtherData = otherData;
+            Name = name;
+            Description = description;
         }
 
         //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
-        public ClassModell(int id)
+        public Interest(int id)
         {
-            ClassModell modell = Read(id);
-            if (!(modell == null))
+            Interest interest = Read(id);
+            if (!(interest == null))
             {
-                ID = modell.ID;
-                OtherData = modell.OtherData;
+                ID = interest.ID;
+                Name = interest.Name;
+                Description = interest.Description;
             }
         }
         #endregion
@@ -47,7 +51,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM modelo WHERE id = @id";
+                string Query = "DELETE FROM interes WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -66,29 +70,14 @@ namespace Engine.Classes
         {
             try
             {
-                #region Modelo Caso ID no es SERIAL
-                OpenConnection();
-
-                string Query = "INSERT INTO modelo (id, otherData) " +
-                    "VALUES (@id, @otherData)";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
-
-                Script.Prepare();
-
-                Script.ExecuteNonQuery();
-                #endregion
-
-                #region Modelo Caso ID es SERIAL
                 Connection.Open();
 
-                string Query2 = "INSERT INTO modelo (otherData) " +
-                    "VALUES (@otherData) RETURNING id";
-                Script = new NpgsqlCommand(Query2, Connection);
+                string Query = "INSERT INTO modelo (nombre, descripcion) " +
+                    "VALUES (@nombre, @descripcion) RETURNING id";
+                Script = new NpgsqlCommand(Query, Connection);
 
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script.Parameters.AddWithValue("nombre", Name);
+                Script.Parameters.AddWithValue("descripcion", Description);
 
                 Reader = Script.ExecuteReader();
 
@@ -96,7 +85,6 @@ namespace Engine.Classes
                 {
                     ID = ReadInt(0);
                 }
-                #endregion
             }
             finally
             {
@@ -104,29 +92,29 @@ namespace Engine.Classes
             }
         }
 
-        public override List<ClassModell> ListAll()
+        public override List<Interest> ListAll()
         {
-            List<ClassModell> list = new List<ClassModell>();
+            List<Interest> list = new List<Interest>();
 
             try
             {
                 OpenConnection();
 
-                string Query = "SELECT * FROM modelo";
+                string Query = "SELECT * FROM interes";
                 NpgsqlCommand Script = new NpgsqlCommand(Query, Connection);
 
                 Reader = Script.ExecuteReader();
 
                 while (Reader.Read())
                 {
-                    ClassModell modell= new ClassModell(ReadInt(0), ReadString(1));
+                    Interest interest = new Interest(ReadInt(0), ReadString(1), ReadString(2));
 
-                    list.Add(modell);
+                    list.Add(interest);
                 }
             }
             catch
             {
-                list = new List<ClassModell>();
+                list = new List<Interest>();
             }
             finally
             {
@@ -136,15 +124,15 @@ namespace Engine.Classes
             return list;
         }
 
-        public override ClassModell Read(int id)
+        public override Interest Read(int id)
         {
-            ClassModell modell = null;
+            Interest interest = null;
 
             try
             {
                 OpenConnection();
 
-                string Query = "SELECT * FROM modelo WHERE id = @id";
+                string Query = "SELECT * FROM interes WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", id);
@@ -152,19 +140,19 @@ namespace Engine.Classes
 
                 if (Reader.Read())
                 {
-                    modell = new ClassModell(ReadInt(0), ReadString(1));
+                    interest = new Interest(ReadInt(0), ReadString(1), ReadString(2));
                 }
             }
             catch
             {
-                modell = null;
+                interest = null;
             }
             finally
             {
                 CloseConnection();
             }
 
-            return modell;
+            return interest;
         }
 
         public override void Update()
@@ -173,12 +161,13 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE modelo SET otherData = @otherData " +
+                string Query = "UPDATE interes SET nombre = @nombre, descripcion = @descripcion " +
                         "WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script.Parameters.AddWithValue("nombre", Name);
+                Script.Parameters.AddWithValue("descripcion", Description);
 
                 Script.Prepare();
 

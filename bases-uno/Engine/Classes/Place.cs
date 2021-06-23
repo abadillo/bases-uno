@@ -7,35 +7,43 @@ using Npgsql;
 
 namespace Engine.Classes
 {
-    class ClassModell : DBConnection.ConnectionDB<ClassModell, int>
+    class Place : DBConnection.ConnectionDB<Place, int>
     {
+
         #region Atributes
         public int ID { get; set; }
-        public string OtherData { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public int LocationID { get; set; }
         #endregion
 
         #region Constructors
         // Se crea con toda la informacion de la instancia de clase
-        public ClassModell(int id,string otherData)
+        public Place(int id, string name, string type, int locationID = 0)
         {
             ID = id;
-            OtherData = otherData;
+            Name = name;
+            Type = type;
+            LocationID = locationID;
         }
 
         //Usualmente se usa cuando se va a hacer un insert de una clase cuya clave es un SERIAL
-        public ClassModell(string otherData)
+        public Place(string name, string type, int locationID = 0)
         {
-            OtherData = otherData;
+            Name = name;
+            Type = type;
+            LocationID = locationID;
         }
 
         //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
-        public ClassModell(int id)
+        public Place(int id)
         {
-            ClassModell modell = Read(id);
-            if (!(modell == null))
+            Place place = Read(id);
+            if (!(place == null))
             {
-                ID = modell.ID;
-                OtherData = modell.OtherData;
+                ID = place.ID;
+                Type = place.Type;
+                LocationID = place.LocationID;
             }
         }
         #endregion
@@ -47,7 +55,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM modelo WHERE id = @id";
+                string Query = "DELETE FROM lugar WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -66,29 +74,33 @@ namespace Engine.Classes
         {
             try
             {
-                #region Modelo Caso ID no es SERIAL
-                OpenConnection();
-
-                string Query = "INSERT INTO modelo (id, otherData) " +
-                    "VALUES (@id, @otherData)";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
-
-                Script.Prepare();
-
-                Script.ExecuteNonQuery();
-                #endregion
-
-                #region Modelo Caso ID es SERIAL
                 Connection.Open();
 
-                string Query2 = "INSERT INTO modelo (otherData) " +
-                    "VALUES (@otherData) RETURNING id";
-                Script = new NpgsqlCommand(Query2, Connection);
+                string Query = "INSERT INTO lugar (nombre, tipo";
 
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                if (!(LocationID == 0))
+                {
+                    Query += ", lugar_id";
+                }
+
+                Query += ") VALUES (@nombre, @tipo";
+
+                if (!(LocationID == 0))
+                {
+                    Query += ", @lugar_id";
+                }
+
+                Query += ") RETURNING id";
+
+                Script = new NpgsqlCommand(Query, Connection);
+
+                Script.Parameters.AddWithValue("nombre", Name);
+                Script.Parameters.AddWithValue("tipo", Type);
+
+                if (!(LocationID == 0))
+                {
+                    Script.Parameters.AddWithValue("lugar_id", LocationID);
+                }
 
                 Reader = Script.ExecuteReader();
 
@@ -96,7 +108,6 @@ namespace Engine.Classes
                 {
                     ID = ReadInt(0);
                 }
-                #endregion
             }
             finally
             {
@@ -104,29 +115,29 @@ namespace Engine.Classes
             }
         }
 
-        public override List<ClassModell> ListAll()
+        public override List<Place> ListAll()
         {
-            List<ClassModell> list = new List<ClassModell>();
+            List<Place> list = new List<Place>();
 
             try
             {
                 OpenConnection();
 
-                string Query = "SELECT * FROM modelo";
+                string Query = "SELECT * FROM lugar";
                 NpgsqlCommand Script = new NpgsqlCommand(Query, Connection);
 
                 Reader = Script.ExecuteReader();
 
                 while (Reader.Read())
                 {
-                    ClassModell modell= new ClassModell(ReadInt(0), ReadString(1));
+                    Place place = new Place(ReadInt(0), ReadString(1), ReadString(2), ReadInt(3));
 
-                    list.Add(modell);
+                    list.Add(place);
                 }
             }
             catch
             {
-                list = new List<ClassModell>();
+                list = new List<Place>();
             }
             finally
             {
@@ -136,15 +147,15 @@ namespace Engine.Classes
             return list;
         }
 
-        public override ClassModell Read(int id)
+        public override Place Read(int id)
         {
-            ClassModell modell = null;
+            Place place = null;
 
             try
             {
                 OpenConnection();
 
-                string Query = "SELECT * FROM modelo WHERE id = @id";
+                string Query = "SELECT * FROM lugar WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", id);
@@ -152,19 +163,19 @@ namespace Engine.Classes
 
                 if (Reader.Read())
                 {
-                    modell = new ClassModell(ReadInt(0), ReadString(1));
+                    place = new Place(ReadInt(0), ReadString(1), ReadString(2), ReadInt(3));
                 }
             }
             catch
             {
-                modell = null;
+                place = null;
             }
             finally
             {
                 CloseConnection();
             }
 
-            return modell;
+            return place;
         }
 
         public override void Update()
@@ -173,12 +184,21 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE modelo SET otherData = @otherData " +
-                        "WHERE id = @id";
+                string Query = "UPDATE lugar SET nombre = @nombre, tipo = @tipo";
+                if (!(LocationID == 0))
+                {
+                    Query += ", lugar_id = @lugar_id";
+                }
+                Query += " WHERE id = @id";
+
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script.Parameters.AddWithValue("tipo", Type);
+                if (!(LocationID == 0))
+                {
+                    Script.Parameters.AddWithValue("lugar_id", LocationID);
+                }
 
                 Script.Prepare();
 

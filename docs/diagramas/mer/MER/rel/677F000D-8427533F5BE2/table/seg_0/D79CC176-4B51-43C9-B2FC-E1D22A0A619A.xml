@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D79CC176-4B51-43C9-B2FC-E1D22A0A619A" name="ORG_SUB">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>CD556F89-A3D9-9618-08EE-56BD46C47ABD</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="porcentaje" id="9AAF296A-C06F-DD10-CC2C-6EA325C9F5A6">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>612309B2-AC8B-130E-1335-F71DCC928190</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="monto_recibido" id="DDEDFC4C-209B-4632-5DC0-A631237505D1">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>582D84E1-D4A0-8BFF-6354-F77FCA69488D</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT022</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORGANIZACION_CARIDAD_id" id="F05E7EFA-57E6-620B-C15C-186B1FFF2FBF">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>A4ACBA6B-422D-73E5-BBFF-B9043530E272</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1600BADC-3FA8-0848-BB80-57AF04F56933" referredColumn="0222ACCA-B650-8DF4-3B56-EBBD1F34F103"/>
+</associations>
+</Column>
+<Column name="SUBASTA_id" id="4D821E93-7693-BD77-50F9-1B9D48DA97C3">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>C385F1CF-B80F-F45F-1D60-A762ADB7EE92</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="613D40AE-70F9-32FA-9D7B-BFEEDCD209FF" referredColumn="660A89C3-672E-E13B-464C-21DF26FECB19"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="88EE921E-0A9E-B347-97A6-F888AEC3868A" name="ORG_SUB_PK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>52C3E1D0-DB2B-7453-C59A-25BD61AB938A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F05E7EFA-57E6-620B-C15C-186B1FFF2FBF"/>
+<colUsage columnID="4D821E93-7693-BD77-50F9-1B9D48DA97C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BD8150CB-6D38-3C06-3BC2-229DA8EAA525" name="ORG_SUB_SUBASTA_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>C9E895E6-7A8D-8C91-8749-AE9D52144F1B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D821E93-7693-BD77-50F9-1B9D48DA97C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A42F1B3-8226-4C90-A000-9EA4535CB3ED" name="ORG_SUB_ORGANIZACION_CARIDAD_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>EB06C605-AEDF-F6A4-0BC4-5EDFB7F46721</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F05E7EFA-57E6-620B-C15C-186B1FFF2FBF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9CD70520-9EE5-F240-DBD8-043B69FCE9E6" name="CLU_INT">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>6259D9BC-AB2A-C8B6-61E4-D32A009740F5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="INTERES_id" id="C6881DC3-856A-1FD6-4B65-FC1AC4AA9FBF">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>0FD2DE59-CBB3-699E-6200-64CB922FC888</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="211EA3CD-6AF9-DC6B-85A3-617EECABCC9B" referredColumn="A02E1705-9B93-924E-54EC-047DAAFCEF97"/>
+</associations>
+</Column>
+<Column name="CLUB_id" id="D067FADD-73BC-DC3D-9E9D-32C1D46AF52A">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>1547B99E-8CF9-7DD9-0323-85F1B30AF957</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="63B1D4EA-0F5C-FDD5-6D8B-7FB1805AD7B6" referredColumn="4BDF460A-0899-76D0-BEEF-B70BA09A6511"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DE0777B7-3806-7CA7-DB02-0CABEA920EAC" name="CLU_INT_PK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>6088E600-B48B-A710-4FD3-F80694830B84</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6881DC3-856A-1FD6-4B65-FC1AC4AA9FBF"/>
+<colUsage columnID="D067FADD-73BC-DC3D-9E9D-32C1D46AF52A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4F41B97-4709-318D-B97F-4819F5E6C87A" name="CLU_INT_INTERES_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>6DC751B1-762C-2279-22BB-0685915DA761</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6881DC3-856A-1FD6-4B65-FC1AC4AA9FBF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C6E823ED-AF68-D040-C7D1-44B449CF12B0" name="CLU_INT_CLUB_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>BC38C492-CB93-7ECC-A8B7-E6C8DE102F4E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D067FADD-73BC-DC3D-9E9D-32C1D46AF52A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="domains">
 <domains>
-<Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipos de Lugares" id="4E8529C6-451A-E63E-B528-DC3519C2B251">
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipos_de_Lugares" id="4E8529C6-451A-E63E-B528-DC3519C2B251">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-23 15:07:35 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 
-namespace Engine
+namespace Engine.Classes
 {
-    public class Comic : ConnectionDB<Comic, int>
+    public class Comic : DBConnection.ConnectionDB<Comic, int>
     {
         #region Atributes
         public int ID { get; set; }

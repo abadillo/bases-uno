@@ -8,7 +8,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using DocumentFormat.OpenXml.CustomProperties;
 
-namespace Engine
+namespace Engine.DBConnection
 {
     public abstract class ConnectionDB<Tipo, Codigo>
     {

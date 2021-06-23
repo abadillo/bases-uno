@@ -1,12 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="domains">
    <domains>
-      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipos de Lugares" id="4E8529C6-451A-E63E-B528-DC3519C2B251">
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipos_de_Lugares" id="4E8529C6-451A-E63E-B528-DC3519C2B251">
          <createdBy>inmun</createdBy>
          <createdTime>2020-12-28 22:08:17 UTC</createdTime>
-         <ownerDesignName>System</ownerDesignName>
+         <ownerDesignName>domains</ownerDesignName>
          <avTSortOrder>0</avTSortOrder>
-         <fileName>defaultdomains</fileName>
+         <fileName>domains</fileName>
          <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
          <listOfValues>
             <valueDef value="Ciudad" description=""/>

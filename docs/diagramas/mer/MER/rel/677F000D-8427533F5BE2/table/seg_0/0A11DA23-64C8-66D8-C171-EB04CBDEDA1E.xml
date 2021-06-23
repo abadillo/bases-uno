@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0A11DA23-64C8-66D8-C171-EB04CBDEDA1E" name="ORG_INV">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>E8DA7A93-02D3-0A96-3100-F56FCA81882A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F8363B98-31F9-36A1-DEC6-8511CA9C9BDB">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>AC25AAFE-86EC-8AD1-93BB-85C8AD112980</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUBASTA_id" id="78DAFCFF-168B-0D06-B010-9390A072B645">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>0A984D63-4C5A-31A4-7D1C-393BC9AD7289</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9874C722-D026-E523-E3A7-D9BB3DFAEB2A" referredColumn="660A89C3-672E-E13B-464C-21DF26FECB19"/>
+</associations>
+</Column>
+<Column name="CLUB_id" id="D5D1D815-1EB4-942E-198D-9988AF105DC9">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>D1B64C0C-B2BE-F89C-D79D-C34D67DE300C</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A9BAB97F-1132-A937-E977-FAD7CEF62AC6" referredColumn="4BDF460A-0899-76D0-BEEF-B70BA09A6511"/>
+</associations>
+</Column>
+<Column name="CLUB_id2" id="65C5A6AD-59E3-8E49-D01E-789A1EA60050">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>247703DD-1CE1-91EA-81A5-553639CC876A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4FFA63D0-EAA3-2E71-28F2-055FD15ACA3F" referredColumn="4BDF460A-0899-76D0-BEEF-B70BA09A6511"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2840A2D5-7E40-80A0-0C98-A7FAEE34AA7C" name="ORG_INV_PK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>7DFC708B-93B1-370D-9E1D-2AB8E862BD8F</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8363B98-31F9-36A1-DEC6-8511CA9C9BDB"/>
+<colUsage columnID="78DAFCFF-168B-0D06-B010-9390A072B645"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0EE47515-BBA2-370D-5BEE-F6812DA61641" name="ORG_INV_CLUB_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>CC468000-1B59-8EE5-7887-12F2B7072A39</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5D1D815-1EB4-942E-198D-9988AF105DC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="47C1C5FB-33C5-8D44-819D-98A488B1C4F3" name="ORG_INV_CLUB_FKv2">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>84D911DC-2EDA-C3FD-AF5D-6C581FB7AF84</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65C5A6AD-59E3-8E49-D01E-789A1EA60050"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1A89A61-38D8-9511-78F2-7DEB9344A66B" name="ORG_INV_SUBASTA_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>09DE8A6A-165C-B01F-F2CD-666CC5E3A70A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78DAFCFF-168B-0D06-B010-9390A072B645"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

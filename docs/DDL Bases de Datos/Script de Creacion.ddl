@@ -189,6 +189,11 @@ CREATE TABLE LUGAR
 ALTER TABLE LUGAR ADD CONSTRAINT LUGAR_PK PRIMARY KEY  (id)
 ;
 
+ALTER TABLE LUGAR 
+    ADD 
+    CHECK ( tipo IN ('Direccion', 'Ciudad', 'Estado', 'Pais') )
+; 
+
 CREATE TABLE MEMBRESIA 
     (
      fecha_ingreso DATE NOT NULL , 

@@ -1,0 +1,201 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="57DE827E-7049-F379-9586-9BF9A9F28C7B" name="LISTADO">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>E98B4DDA-1661-10CD-D706-A13C352BE64A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="E5CD194B-A752-0CC3-CAF3-5FA4559255BA">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>E5BC155C-9B54-5F5C-853E-18A56966AE8B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="orden" id="9DC48044-79DE-1660-BD13-66804BB54588">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>0E525B90-5EFF-1006-C6B4-3E2777D6850B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio_base_dolar" id="3CE38D26-FB1B-3185-4DE4-65F326449C7B">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>236BED8B-9B0F-66E8-0717-980DD2741A1F</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT022</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio_vendido_dolar" id="56024768-8211-5CBB-60C8-82BC3A6C28B0">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>91B9B2C9-88EC-BA7E-D7E3-59DB3D061752</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT022</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUBASTA_id" id="EE018D02-6F20-D2F0-BE59-2B7C57D728E6">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>8D291BF5-3E11-1F8E-988A-5C012C047039</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE581BD3-19B9-EF4E-62AA-1E611BFE2756" referredColumn="660A89C3-672E-E13B-464C-21DF26FECB19"/>
+</associations>
+</Column>
+<Column name="DUENO_HISTORICO_COLECCIONISTA_documento_identidad" id="EA20691A-F145-6AE6-9F33-7318E6431F6A">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>B6D95037-76C7-5EF4-3157-E86665B7664F</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1063B09B-D0D1-6B86-3D43-67C607C6BA1F" referredColumn="1A15F26D-6B56-1352-D6B0-79220DC4B3B0"/>
+</associations>
+</Column>
+<Column name="DUENO_HISTORICO_fecha_registro" id="45FB43B5-3D35-C306-FE98-1D5E3B6EBFCD">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>4BC0EEA7-781F-8A77-3C45-13E393052038</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1063B09B-D0D1-6B86-3D43-67C607C6BA1F" referredColumn="24BA34AB-C2CC-C1FE-9980-746F5B25F0E4"/>
+</associations>
+</Column>
+<Column name="PARTICIPANTE_subasta_id" id="24A7CCA0-4F1A-EAC6-327D-03AC2A3F8783">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>6DAC7A08-0674-C6D6-4764-DBC379B36A55</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3817FD9-0D7F-6A28-5D5F-BCA30976497E" referredColumn="1B5E6245-E104-3BD4-74AD-7A4FB2D6BD36"/>
+</associations>
+</Column>
+<Column name="DUENO_HISTORICO_id" id="4E089D08-3470-321D-634C-A592C59C334A">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>7512256A-FF29-150F-4E11-35C78FFE26FE</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1063B09B-D0D1-6B86-3D43-67C607C6BA1F" referredColumn="6B75E1D6-2B06-7041-1B9A-AA7298016097"/>
+</associations>
+</Column>
+<Column name="PARTICIPANTE_id_inscripcion" id="C30F2F61-7040-2D9A-80B4-14C726278E88">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>DA2CF657-6A09-6A93-40ED-D50376669DA3</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3817FD9-0D7F-6A28-5D5F-BCA30976497E" referredColumn="D0B98FA0-A3F7-CF25-8475-2D6073EE4AA2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0B465ED3-1B73-FCA3-4AFC-2678B6DD625E" name="LISTADO_PK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>B2286FC5-0D3E-E351-CF55-C3381268285A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE018D02-6F20-D2F0-BE59-2B7C57D728E6"/>
+<colUsage columnID="E5CD194B-A752-0CC3-CAF3-5FA4559255BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1EE2460-527B-37C1-E1A9-571065D78634" name="LISTADO_DUENO_HISTORICO_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>2D119C6B-5EC6-7333-AB04-5E3AC8BA0EF5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA20691A-F145-6AE6-9F33-7318E6431F6A"/>
+<colUsage columnID="45FB43B5-3D35-C306-FE98-1D5E3B6EBFCD"/>
+<colUsage columnID="4E089D08-3470-321D-634C-A592C59C334A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="86D47906-78E7-79FF-25AB-921A0C3F4943" name="LISTADO_SUBASTA_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>04706375-74CD-7F2D-73CC-4F9E181B9C0A</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE018D02-6F20-D2F0-BE59-2B7C57D728E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FB01141A-2EE2-389F-95D8-98C06900DFD9" name="LISTADO_PARTICIPANTE_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>4E8870B0-254E-B8B0-9194-800465946B51</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24A7CCA0-4F1A-EAC6-327D-03AC2A3F8783"/>
+<colUsage columnID="C30F2F61-7040-2D9A-80B4-14C726278E88"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

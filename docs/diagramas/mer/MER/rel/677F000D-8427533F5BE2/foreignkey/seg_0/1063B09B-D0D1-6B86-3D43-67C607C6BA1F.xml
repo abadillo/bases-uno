@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1063B09B-D0D1-6B86-3D43-67C607C6BA1F" containerWithKeyObject="57DE827E-7049-F379-9586-9BF9A9F28C7B" localFKIndex="A1EE2460-527B-37C1-E1A9-571065D78634" name="LISTADO_DUENO_HISTORICO_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>2D119C6B-5EC6-7333-AB04-5E3AC8BA0EF5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>DUENO_HISTORICO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>54C70DBF-AAB0-341B-6DE3-83FF9137D153</referredTableID>
+<keyObject>F67C2E06-38C6-0D77-DA97-ED8CA818DF17</keyObject>
+<referredKeyID>F67C2E06-38C6-0D77-DA97-ED8CA818DF17</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>COLECCIONISTA_documento_identidad,fecha_registro,id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

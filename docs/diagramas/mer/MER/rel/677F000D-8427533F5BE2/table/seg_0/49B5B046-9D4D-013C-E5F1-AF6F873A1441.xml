@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="49B5B046-9D4D-013C-E5F1-AF6F873A1441" name="LOCAL">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>899C925A-A325-AF9C-B35E-9BE2512110A1</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="FCEC3BF1-515E-B673-5A05-94A54DDEBB20">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>9C3622C1-FFC1-CD4C-7634-035C6B4AE56C</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="78FA3618-0BF8-9E47-5C8A-37A4A552D70C">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>7E9AC710-2A70-BBD1-125B-546A93C196EF</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="alquilado" id="E96CF6B7-2FE4-91C8-2932-5B1E9FC5DC23">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>8DC388DF-E9B7-94C6-AA72-7C6F11FE7EDC</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LUGAR_id" id="11493681-ADE3-A284-2767-DA997B6EC664">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>EEBE7A49-8A7A-E380-F5EF-C3A9F139ADBA</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36A4A9AB-C9AA-862E-C2EC-797FDBF24C30" referredColumn="5F2034F8-A3DD-BBC4-D94E-B0F2C161059F"/>
+</associations>
+</Column>
+<Column name="COLECCIONISTA_documento_identidad" id="E9931634-9BE7-DA7D-1AE7-EB9E1AFB5419">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>DAE063B3-AA40-28DB-11F8-C05CB53BA773</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="622D0219-D76E-C22F-61F3-BAD4CA645809" referredColumn="ABFF52F9-A502-931C-3DD4-91EB3944A963"/>
+</associations>
+</Column>
+<Column name="tipo" id="EE0349F8-60E3-B355-49E5-58290C00A4AC">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>A2FB85C2-3C8B-3EF9-07EC-BFB3F0143A92</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<use>0</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<domain>90FC57D5-CFB3-F822-6ED5-0A5FFB0144DA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="67DA2660-C011-51F4-5088-2A1D1567F6CE" name="LOCAL_PK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>B618BBD6-2FA6-6C53-4D32-8F7AD6B5EEBE</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCEC3BF1-515E-B673-5A05-94A54DDEBB20"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2CB0851C-8DFB-B23A-DAA5-417F5BC02969" name="LOCAL_COLECCIONISTA_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>78730397-D8A9-0366-5317-E4B002DBBEED</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9931634-9BE7-DA7D-1AE7-EB9E1AFB5419"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="38AA0F7D-0C4E-FC50-5445-192FD3CA35A1" name="LOCAL_LUGAR_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>FB8A2727-B865-169F-D896-B1512B591222</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="11493681-ADE3-A284-2767-DA997B6EC664"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,180 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A7688754-C45B-C261-A56F-3864825DE87A" name="CLUB">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>14F65BAB-E963-5157-CC64-1F4D14457BC1</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="4BDF460A-0899-76D0-BEEF-B70BA09A6511">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>9E055C8D-E9ED-DC05-88C8-4D81FE35010B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_fundacion" id="CFE65187-CD3A-C90D-2182-751C907EC223">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>29DA30DB-66F9-C5AD-0831-06A0032B68A4</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="FE15653A-04CC-348A-D88C-1F7C438BB055">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>F8C520A0-1530-12CA-687D-3D1D4D958CEF</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pagina_web" id="C470DDB2-F676-F78C-2601-9C1AB9BDAA8D">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>9A12BCA1-9692-0790-E24B-F7DACADF43BB</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="proposito" id="2A1FCCE2-AA12-E16E-71F1-60699B885B78">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>2FD04D5E-60CA-FE12-BC8A-8120E6338E43</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBRESIA_COLECCIONISTA_documento_identidad" id="61959AE6-4B63-3153-593D-9975216AE477">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>E98CBAD6-25EC-6795-CFE6-5BD1C794B0F2</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78359068-BEA9-919F-C8E5-954DEDA58327" referredColumn="410411FD-F161-81BB-C718-8BE923F1BE2D"/>
+</associations>
+</Column>
+<Column name="MEMBRESIA_CLUB_id" id="C5356356-BBA2-6E1F-2729-0D58FC7F9ED2">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>5CD3B51E-9B4E-F72C-6C21-34E890EBC690</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78359068-BEA9-919F-C8E5-954DEDA58327" referredColumn="6AD7E5CC-E04E-7FF7-4FFC-192197906118"/>
+</associations>
+</Column>
+<Column name="MEMBRESIA_fecha_ingreso" id="5159C07C-DC00-8CAE-8D5E-FB6A7FC5CA32">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>B1AB06B9-B318-967E-A570-8A59994DB947</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78359068-BEA9-919F-C8E5-954DEDA58327" referredColumn="ED14BD9B-8931-7EFA-4DBC-1D7724DB2AB8"/>
+</associations>
+</Column>
+<Column name="LUGAR_id" id="D025AA19-BD07-B520-8C63-6A11164719B2">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>B03EF1E9-8BAC-711A-45E5-CA5523F853F1</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8FDED194-51C3-E253-7E75-3E3FB311BB42" referredColumn="5F2034F8-A3DD-BBC4-D94E-B0F2C161059F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8C7083EC-94F2-AC34-9F04-090204C43B13" name="CLUB_PK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>31CFCB38-FC92-874A-CA03-BB2F6CB66D89</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BDF460A-0899-76D0-BEEF-B70BA09A6511"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AD87ECEC-A1E0-B43B-B895-6D6C7BADF940" name="CLUB__IDX">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="61959AE6-4B63-3153-593D-9975216AE477"/>
+<colUsage columnID="C5356356-BBA2-6E1F-2729-0D58FC7F9ED2"/>
+<colUsage columnID="5159C07C-DC00-8CAE-8D5E-FB6A7FC5CA32"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C227772A-183E-C118-0E77-D35574A386C1" name="CLUB_LUGAR_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>362E2E1E-F790-4E5C-292C-484193A227FE</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D025AA19-BD07-B520-8C63-6A11164719B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74376D32-91FE-D98E-4A97-5E15562BB9E7" name="CLUB_MEMBRESIA_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61959AE6-4B63-3153-593D-9975216AE477"/>
+<colUsage columnID="C5356356-BBA2-6E1F-2729-0D58FC7F9ED2"/>
+<colUsage columnID="5159C07C-DC00-8CAE-8D5E-FB6A7FC5CA32"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

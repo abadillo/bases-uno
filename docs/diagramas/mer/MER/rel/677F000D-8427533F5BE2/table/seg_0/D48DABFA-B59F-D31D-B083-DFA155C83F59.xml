@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D48DABFA-B59F-D31D-B083-DFA155C83F59" name="MEMBRESIA">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>D322DE48-09D5-BB32-5739-E66F1FBCC71E</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="fecha_ingreso" id="ED14BD9B-8931-7EFA-4DBC-1D7724DB2AB8">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>61B11D9D-D28B-605A-E9C4-016B776E760D</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_retiro" id="D6E82068-B542-5DD7-CF89-6449E1A86ACF">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>03894DAD-A180-EE05-BB32-AF078C59DC5D</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLUB_id" id="6AD7E5CC-E04E-7FF7-4FFC-192197906118">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>91932147-EB46-D9C7-0699-E1DD946A9F36</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F5F065A0-2734-B2AC-6264-C40BC78C1300" referredColumn="4BDF460A-0899-76D0-BEEF-B70BA09A6511"/>
+</associations>
+</Column>
+<Column name="COLECCIONISTA_documento_identidad" id="410411FD-F161-81BB-C718-8BE923F1BE2D">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>DB2EC92F-7576-42E8-072A-50E6A886C1BE</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="04CE5884-31A8-6F5C-09EA-A1049FC0A32B" referredColumn="ABFF52F9-A502-931C-3DD4-91EB3944A963"/>
+</associations>
+</Column>
+<Column name="email_contacto" id="ABA4BD00-D03A-7818-2560-EB8A733EB16E">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>FD021FF9-C5C6-544A-FAF6-DBD5038C4851</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CB07FA78-8F55-191B-079C-3B4D516DC767" name="MEMBRESIA_PK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>5E7160F7-DFD1-DF0E-F2B8-99C33DC1AA98</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="410411FD-F161-81BB-C718-8BE923F1BE2D"/>
+<colUsage columnID="6AD7E5CC-E04E-7FF7-4FFC-192197906118"/>
+<colUsage columnID="ED14BD9B-8931-7EFA-4DBC-1D7724DB2AB8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E2006A3-D458-5444-F775-650C85B95522" name="MEMBRESIA_CLUB_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>2D1501C1-4267-C0EE-A67E-C875566F1150</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6AD7E5CC-E04E-7FF7-4FFC-192197906118"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6F9324E-74C1-9312-4F46-82DA74DA9AAD" name="MEMBRESIA_COLECCIONISTA_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 20:08:47 UTC</createdTime>
+<generatorID>D2C8C2C9-17EE-20EF-049B-6D3573278390</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="410411FD-F161-81BB-C718-8BE923F1BE2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

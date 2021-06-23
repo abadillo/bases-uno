@@ -100,7 +100,9 @@
   <ItemGroup>
     <Compile Include="Classes\ClassModell.cs" />
     <Compile Include="Classes\Comic.cs" />
-    <Compile Include="Classes\Subasta.cs" />
+    <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\Interest.cs" />
+    <Compile Include="Classes\Place.cs" />
     <Compile Include="DBConnection\ConnectionDB.cs" />
     <Compile Include="ManyToMany.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
