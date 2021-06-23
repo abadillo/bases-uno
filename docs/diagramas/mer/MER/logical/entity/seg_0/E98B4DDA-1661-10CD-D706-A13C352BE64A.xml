@@ -22,7 +22,9 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="orden" id="0E525B90-5EFF-1006-C6B4-3E2777D6850B">
@@ -63,16 +65,6 @@
 <logicalDatatype>LOGDT022</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="duracion minima" id="119E23ED-204B-3D27-D5D5-28368D02F7DF">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-17 22:57:50 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="subasta_id" id="8D291BF5-3E11-1F8E-988A-5C012C047039">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 17:12:04 UTC</createdTime>
@@ -87,7 +79,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="documento_identidad" id="B6D95037-76C7-5EF4-3157-E86665B7664F">
+<Attribute name="dueno_historico_coleccionista_documento_identidad" id="B6D95037-76C7-5EF4-3157-E86665B7664F">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 22:37:32 UTC</createdTime>
 <generatorID>2D119C6B-5EC6-7333-AB04-5E3AC8BA0EF5</generatorID>
@@ -98,23 +90,10 @@
 <referedAttribute>308FBA24-0344-5BA9-5523-F8F90489452A</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_" id="E9CECE04-8261-C090-0CE2-E0451F5B6D77">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-17 22:38:50 UTC</createdTime>
-<generatorID>2D119C6B-5EC6-7333-AB04-5E3AC8BA0EF5</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<referedAttribute>AEE059DB-AC94-1835-35E1-EFBC31C9CDCF</referedAttribute>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="fecha_registro" id="4BC0EEA7-781F-8A77-3C45-13E393052038">
+<Attribute name="dueno_historico_fecha_registro" id="4BC0EEA7-781F-8A77-3C45-13E393052038">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 22:38:56 UTC</createdTime>
 <generatorID>2D119C6B-5EC6-7333-AB04-5E3AC8BA0EF5</generatorID>
@@ -123,10 +102,11 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>5A3D1F93-D1DF-D7E2-2F47-62C681E6F631</referedAttribute>
-<use>0</use>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="6DAC7A08-0674-C6D6-4764-DBC379B36A55">
+<Attribute name="participante_subasta_id" id="6DAC7A08-0674-C6D6-4764-DBC379B36A55">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 23:00:15 UTC</createdTime>
 <generatorID>4E8870B0-254E-B8B0-9194-800465946B51</generatorID>
@@ -141,9 +121,23 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_inscripcion" id="D3054222-43C7-CEB5-4605-C3D7FC2E216D">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-17 23:22:08 UTC</createdTime>
+<Attribute name="dueno_historico_id" id="7512256A-FF29-150F-4E11-35C78FFE26FE">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 17:13:12 UTC</createdTime>
+<generatorID>2D119C6B-5EC6-7333-AB04-5E3AC8BA0EF5</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>5CDDD49D-9CCD-4C83-0CBD-5594DA7EF08E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="participante_id_inscripcion" id="DA2CF657-6A09-6A93-40ED-D50376669DA3">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 17:37:42 UTC</createdTime>
 <generatorID>4E8870B0-254E-B8B0-9194-800465946B51</generatorID>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
@@ -151,7 +145,9 @@
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>D207DD13-BD0F-8DB8-436A-5902DCDAAE46</referedAttribute>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -160,12 +156,14 @@
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-22 20:16:55 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>8D291BF5-3E11-1F8E-988A-5C012C047039</attributeRef>
+<attributeRef>E5BC155C-9B54-5F5C-853E-18A56966AE8B</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

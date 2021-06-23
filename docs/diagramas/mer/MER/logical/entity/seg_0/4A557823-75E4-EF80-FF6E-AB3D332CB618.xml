@@ -15,14 +15,16 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="AEE059DB-AC94-1835-35E1-EFBC31C9CDCF">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-17 22:38:47 UTC</createdTime>
+<Attribute name="id" id="5CDDD49D-9CCD-4C83-0CBD-5594DA7EF08E">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 17:12:46 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="fecha_registro" id="5A3D1F93-D1DF-D7E2-2F47-62C681E6F631">
@@ -32,7 +34,9 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="significado" id="E7D34554-9D56-2CF9-226C-6E210D31B0CB">
@@ -48,7 +52,7 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="documento_identidad" id="308FBA24-0344-5BA9-5523-F8F90489452A">
+<Attribute name="coleccionista_documento_identidad" id="308FBA24-0344-5BA9-5523-F8F90489452A">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 22:14:26 UTC</createdTime>
 <generatorID>717AFB4D-E497-2669-40B5-49C0F783C43E</generatorID>
@@ -59,11 +63,10 @@
 <referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_Comic" id="60E8DF24-D70E-2554-4D99-869113D21E47">
+<Attribute name="coleccionable_id" id="60E8DF24-D70E-2554-4D99-869113D21E47">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 22:36:50 UTC</createdTime>
 <generatorID>66479672-486E-E833-03E1-2DF8D4E77A18</generatorID>
@@ -72,19 +75,9 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>E56192EA-4B71-3493-0736-87472C4E843A</referedAttribute>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id1" id="5D8864BA-F1C4-DF2F-2F9D-D66741FBFC67">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-17 22:36:52 UTC</createdTime>
-<generatorID>4F733C51-AFAE-D549-E29B-F7E2E3C27854</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<referedAttribute>317C3163-1F0F-61FE-FAB8-E28C65D68221</referedAttribute>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="precio_dolar" id="0428C4DE-3F96-91D4-3771-1572AEFA8CF6">
@@ -95,7 +88,23 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT022</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comic_id" id="D7149BB3-D1F2-F36D-808F-5706A9623B93">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 14:39:54 UTC</createdTime>
+<generatorID>4F733C51-AFAE-D549-E29B-F7E2E3C27854</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>317C3163-1F0F-61FE-FAB8-E28C65D68221</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -104,14 +113,15 @@
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-22 19:55:56 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>308FBA24-0344-5BA9-5523-F8F90489452A</attributeRef>
-<attributeRef>AEE059DB-AC94-1835-35E1-EFBC31C9CDCF</attributeRef>
 <attributeRef>5A3D1F93-D1DF-D7E2-2F47-62C681E6F631</attributeRef>
+<attributeRef>5CDDD49D-9CCD-4C83-0CBD-5594DA7EF08E</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

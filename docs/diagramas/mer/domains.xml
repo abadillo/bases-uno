@@ -28,6 +28,26 @@
             <valueDef value="Programada" description=""/>
          </listOfValues>
       </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipo_Local" directorySegmentName="seg_0" id="90FC57D5-CFB3-F822-6ED5-0A5FFB0144DA">
+         <createdBy>inmun</createdBy>
+         <createdTime>2021-06-23 18:06:18 UTC</createdTime>
+         <ownerDesignName>domains</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>domains</fileName>
+         <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+         <listOfValues>
+            <valueDef value="Alquilado" description=""/>
+            <valueDef value="De un Miembro" description=""/>
+         </listOfValues>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipo_Plataforma" directorySegmentName="seg_0" id="A6BD3A28-A13E-8784-55CC-617F2706B7CC">
+         <createdBy>inmun</createdBy>
+         <createdTime>2021-06-23 15:06:02 UTC</createdTime>
+         <ownerDesignName>domains</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>domains</fileName>
+         <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+      </Domain>
       <Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipo_Subasta" directorySegmentName="seg_0" id="CDC4B466-D69E-046C-E9D0-85B9E96CA076">
          <createdBy>inmun</createdBy>
          <createdTime>2021-06-06 23:54:36 UTC</createdTime>
@@ -36,14 +56,8 @@
          <fileName>domains</fileName>
          <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
          <listOfValues>
-            <valueDef value="&apos; Dinamica Americana&apos;" description=""/>
-            <valueDef value="A la Baja" description=""/>
-            <valueDef value="Dinamica Ascendente" description=""/>
-            <valueDef value="Dinamica descendente" description=""/>
-            <valueDef value="Round Robin" description=""/>
-            <valueDef value="Silenciosa" description=""/>
-            <valueDef value="Sobre Cerrado de Primer Precio" description=""/>
-            <valueDef value="Sobre Cerrado de Segundo Precio" description=""/>
+            <valueDef value="Presencial" description=""/>
+            <valueDef value="Virtual" description=""/>
          </listOfValues>
       </Domain>
       <Domain class="oracle.dbtools.crest.model.design.Domain" name="Unknown" id="DOM3000004">

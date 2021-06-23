@@ -3,8 +3,8 @@
 <domains>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipos de Lugares" id="4E8529C6-451A-E63E-B528-DC3519C2B251">
 <createdBy>inmun</createdBy>
-<createdTime>2020-12-28 22:08:17 UTC</createdTime>
-<ownerDesignName>System</ownerDesignName>
+<createdTime>2021-06-23 15:07:35 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
 <importedID>4E8529C6-451A-E63E-B528-DC3519C2B251</importedID>
 <avTSortOrder>0</avTSortOrder>
 <fileName>domains</fileName>
@@ -18,7 +18,7 @@
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Estatus_Subasta" id="5F9C13A7-3027-0D36-BD22-367C71E744C2">
 <createdBy>inmun</createdBy>
-<createdTime>2021-06-07 00:00:58 UTC</createdTime>
+<createdTime>2021-06-23 15:07:35 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <importedID>5F9C13A7-3027-0D36-BD22-367C71E744C2</importedID>
 <avTSortOrder>0</avTSortOrder>
@@ -30,17 +30,39 @@
 <valueDef value="Programada" description=""/>
 </listOfValues>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipo_Local" id="90FC57D5-CFB3-F822-6ED5-0A5FFB0144DA">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 18:13:11 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<importedID>90FC57D5-CFB3-F822-6ED5-0A5FFB0144DA</importedID>
+<avTSortOrder>0</avTSortOrder>
+<fileName>domains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<listOfValues>
+<valueDef value="Alquilado" description=""/>
+<valueDef value="De un Miembro" description=""/>
+</listOfValues>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipo_Plataforma" id="A6BD3A28-A13E-8784-55CC-617F2706B7CC">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 15:07:35 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<importedID>A6BD3A28-A13E-8784-55CC-617F2706B7CC</importedID>
+<avTSortOrder>0</avTSortOrder>
+<fileName>domains</fileName>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Tipo_Subasta" id="CDC4B466-D69E-046C-E9D0-85B9E96CA076">
 <createdBy>inmun</createdBy>
-<createdTime>2021-06-07 00:00:58 UTC</createdTime>
+<createdTime>2021-06-23 15:07:35 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <importedID>CDC4B466-D69E-046C-E9D0-85B9E96CA076</importedID>
 <avTSortOrder>0</avTSortOrder>
 <fileName>domains</fileName>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <listOfValues>
-<valueDef value="Dinamica Ascendente" description=""/>
-<valueDef value="Silenciosa" description=""/>
+<valueDef value="Presencial" description=""/>
+<valueDef value="Virtual" description=""/>
 </listOfValues>
 </Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="Unknown" id="DOM3000004">

@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ED413128-210B-E3E4-D922-8B568250E2DB" name="INTERES">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 18:13:53 UTC</createdTime>
+<generatorID>9875AE5B-C05B-DBC1-D0AA-AFC3D5CD13D2</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A01CA480-02A6-E5E8-A186-F736F71ACE94">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 18:13:53 UTC</createdTime>
+<generatorID>9F07A82A-EB3E-16D0-0C99-3A385DFD2987</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="4D506851-6972-31A6-E022-2708D1DD1541">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 18:13:53 UTC</createdTime>
+<generatorID>331E7CEB-CA1E-D061-E4D1-DB402779EC26</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="7F8528CC-55D2-230F-8865-421AA37A88EB">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 18:13:53 UTC</createdTime>
+<generatorID>048F024F-3D26-2608-6504-5E59BB78922B</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DAC59849-6C60-8C6B-9566-B847770CA4E0" name="INTERES_PK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 18:13:53 UTC</createdTime>
+<generatorID>0881486E-75CA-C4A4-B64D-A0248F677267</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A01CA480-02A6-E5E8-A186-F736F71ACE94"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -24,9 +24,8 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="fecha_fundacion" id="29DA30DB-66F9-C5AD-0831-06A0032B68A4">
 <createdBy>antonio2924</createdBy>
@@ -37,7 +36,7 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="telefono" id="F8C520A0-1530-12CA-687D-3D1D4D958CEF">
@@ -49,9 +48,8 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="pagina_web" id="9A12BCA1-9692-0790-E24B-F7DACADF43BB">
 <createdBy>antonio2924</createdBy>
@@ -63,55 +61,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>25,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="documento_identidad" id="E98CBAD6-25EC-6795-CFE6-5BD1C794B0F2">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-17 23:10:01 UTC</createdTime>
-<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>DB2EC92F-7576-42E8-072A-50E6A886C1BE</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="club_id" id="5CD3B51E-9B4E-F72C-6C21-34E890EBC690">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-17 23:10:01 UTC</createdTime>
-<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>91932147-EB46-D9C7-0699-E1DD946A9F36</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="fecha_ingreso" id="B1AB06B9-B318-967E-A570-8A59994DB947">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-17 23:10:01 UTC</createdTime>
-<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>61B11D9D-D28B-605A-E9C4-016B776E760D</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="proposito" id="2FD04D5E-60CA-FE12-BC8A-8120E6338E43">
@@ -122,10 +72,54 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="B03EF1E9-8BAC-711A-45E5-CA5523F853F1">
+<Attribute name="membresia_coleccionista_documento_identidad" id="E98CBAD6-25EC-6795-CFE6-5BD1C794B0F2">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:10:01 UTC</createdTime>
+<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>DB2EC92F-7576-42E8-072A-50E6A886C1BE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="membresia_club_id" id="5CD3B51E-9B4E-F72C-6C21-34E890EBC690">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:10:01 UTC</createdTime>
+<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>91932147-EB46-D9C7-0699-E1DD946A9F36</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="membresia_fecha_ingreso" id="B1AB06B9-B318-967E-A570-8A59994DB947">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:10:01 UTC</createdTime>
+<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>61B11D9D-D28B-605A-E9C4-016B776E760D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lugar_id" id="B03EF1E9-8BAC-711A-45E5-CA5523F853F1">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 23:23:34 UTC</createdTime>
 <generatorID>362E2E1E-F790-4E5C-292C-484193A227FE</generatorID>
@@ -136,7 +130,7 @@
 <referedAttribute>6A7FB528-D93F-8434-A895-A634F7FEABDA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -145,8 +139,9 @@
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:47:48 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

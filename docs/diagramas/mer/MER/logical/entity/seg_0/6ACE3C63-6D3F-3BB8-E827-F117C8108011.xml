@@ -22,7 +22,9 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nombre" id="E00263E0-1ACF-44AD-B5AF-8BC531DB1F5C">
@@ -32,17 +34,21 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="descripcion detallada" id="38C96985-B5E8-A8F3-C909-E16D9360C58E">
+<Attribute name="descripcion_detallada" id="38C96985-B5E8-A8F3-C909-E16D9360C58E">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 22:35:40 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -51,8 +57,9 @@
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 22:34:56 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

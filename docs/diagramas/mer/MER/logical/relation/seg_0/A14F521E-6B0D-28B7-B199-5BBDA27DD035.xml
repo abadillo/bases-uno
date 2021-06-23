@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="coleccionista-coleccionista" directorySegmentName="seg_0" id="A14F521E-6B0D-28B7-B199-5BBDA27DD035">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Coleccionista-Coleccionista" directorySegmentName="seg_0" id="A14F521E-6B0D-28B7-B199-5BBDA27DD035">
 <createdBy>Frank</createdBy>
 <createdTime>2021-06-02 23:42:09 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>

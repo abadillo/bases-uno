@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="194B8D16-8C67-ECAA-5FC2-654341A43AAF" containerWithKeyObject="3B325E67-92CD-7BD4-5EEF-4F8198D66698" localFKIndex="7839C19F-3696-0E4A-D5FA-E71D869856C6" name="ORG_SUB_ORGANIZACION_CARIDAD_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 18:13:53 UTC</createdTime>
+<generatorID>EB06C605-AEDF-F6A4-0BC4-5EDFB7F46721</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>ORGANIZACION_CARIDAD</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AF95608D-36E4-DFD9-6244-418229B24B80</referredTableID>
+<keyObject>24FD86F1-D8B3-FC21-1BEE-478F205A76EF</keyObject>
+<referredKeyID>24FD86F1-D8B3-FC21-1BEE-478F205A76EF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

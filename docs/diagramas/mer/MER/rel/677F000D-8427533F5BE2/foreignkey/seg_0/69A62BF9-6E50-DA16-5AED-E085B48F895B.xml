@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="69A62BF9-6E50-DA16-5AED-E085B48F895B" containerWithKeyObject="D1C55AEF-99B1-061C-51A2-3333F885ED86" localFKIndex="9BA353F1-E44E-3212-1F57-BAA8699BB265" name="DUENO_HISTORICO_COLECCIONABLE_FK">
+<createdBy>inmun</createdBy>
+<createdTime>2021-06-23 18:13:53 UTC</createdTime>
+<generatorID>66479672-486E-E833-03E1-2DF8D4E77A18</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<referredTableLongName>COLECCIONABLE</referredTableLongName>
+<arc>2E94C9EA-E228-4EE6-5D61-E33C744BDA2F</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F7C53819-F6E3-3DCA-EB82-7AAFA0AA01FA</referredTableID>
+<keyObject>354BAFA3-321C-9E0A-92D4-7B24E1BA4CCC</keyObject>
+<referredKeyID>354BAFA3-321C-9E0A-92D4-7B24E1BA4CCC</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

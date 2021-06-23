@@ -41,7 +41,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="club_id" id="D1B64C0C-B2BE-F89C-D79D-C34D67DE300C">
+<Attribute name="club_invitado_id" id="D1B64C0C-B2BE-F89C-D79D-C34D67DE300C">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 21:48:48 UTC</createdTime>
 <generatorID>CC468000-1B59-8EE5-7887-12F2B7072A39</generatorID>
@@ -52,11 +52,10 @@
 <referedAttribute>9E055C8D-E9ED-DC05-88C8-4D81FE35010B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="247703DD-1CE1-91EA-81A5-553639CC876A">
+<Attribute name="club_organizador_id" id="247703DD-1CE1-91EA-81A5-553639CC876A">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 23:19:07 UTC</createdTime>
 <generatorID>84D911DC-2EDA-C3FD-AF5D-6C581FB7AF84</generatorID>
@@ -67,9 +66,8 @@
 <referedAttribute>9E055C8D-E9ED-DC05-88C8-4D81FE35010B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -77,12 +75,14 @@
 <createdBy>Frank</createdBy>
 <createdTime>2021-05-22 02:43:40 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>AC25AAFE-86EC-8AD1-93BB-85C8AD112980</attributeRef>
+<attributeRef>0A984D63-4C5A-31A4-7D1C-393BC9AD7289</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

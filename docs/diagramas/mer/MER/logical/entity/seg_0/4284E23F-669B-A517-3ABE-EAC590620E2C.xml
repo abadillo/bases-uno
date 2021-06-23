@@ -15,7 +15,19 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="B278E228-D001-773F-5797-C2266445B7BA">
+<Attribute name="id_inscripcion" id="D207DD13-BD0F-8DB8-436A-5902DCDAAE46">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-17 23:21:49 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="subasta_id" id="B278E228-D001-773F-5797-C2266445B7BA">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 22:59:19 UTC</createdTime>
 <generatorID>293EAABC-FD3A-1F3D-0B24-0B5B130E6887</generatorID>
@@ -29,7 +41,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="documento_identidad" id="06FC499C-8276-55C6-43D8-1DF1C160E1F7">
+<Attribute name="coleccionista_documento_identidad" id="06FC499C-8276-55C6-43D8-1DF1C160E1F7">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 23:00:46 UTC</createdTime>
 <generatorID>13482A34-6719-70CF-B349-F04050169517</generatorID>
@@ -40,8 +52,7 @@
 <referedAttribute>DB2EC92F-7576-42E8-072A-50E6A886C1BE</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="club_id1" id="F1B815CC-88A1-75F3-71B3-660BDCD1C6BB">
@@ -55,8 +66,7 @@
 <referedAttribute>91932147-EB46-D9C7-0699-E1DD946A9F36</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="fecha_ingreso" id="01E77802-D9C7-BE44-F41D-FD6683EC9926">
@@ -73,16 +83,6 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_inscripcion" id="D207DD13-BD0F-8DB8-436A-5902DCDAAE46">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-17 23:21:49 UTC</createdTime>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="autorizado" id="3863EC00-1F3C-2A68-03B4-AA3D7A771400">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 23:22:10 UTC</createdTime>
@@ -91,8 +91,11 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -100,8 +103,9 @@
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-07 03:09:49 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

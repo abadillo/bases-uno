@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CD556F89-A3D9-9618-08EE-56BD46C47ABD" name="ORG_PRE">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CD556F89-A3D9-9618-08EE-56BD46C47ABD" name="ORG_SUB">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-05-17 23:25:52 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
@@ -27,18 +27,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id" id="A4ACBA6B-422D-73E5-BBFF-B9043530E272">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-07 02:53:35 UTC</createdTime>
-<generatorID>EB06C605-AEDF-F6A4-0BC4-5EDFB7F46721</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<referedAttribute>942554F9-C53B-28D4-A96E-422F8D7B1FCB</referedAttribute>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="monto_recibido" id="582D84E1-D4A0-8BFF-6354-F77FCA69488D">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 22:44:21 UTC</createdTime>
@@ -47,10 +35,25 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT022</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="C385F1CF-B80F-F45F-1D60-A762ADB7EE92">
+<Attribute name="organizacion_id" id="A4ACBA6B-422D-73E5-BBFF-B9043530E272">
+<createdBy>antonio2924</createdBy>
+<createdTime>2021-06-07 02:53:35 UTC</createdTime>
+<generatorID>EB06C605-AEDF-F6A4-0BC4-5EDFB7F46721</generatorID>
+<ownerDesignName>MER</ownerDesignName>
+<engineerTo>
+<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
+</engineerTo>
+<referedAttribute>942554F9-C53B-28D4-A96E-422F8D7B1FCB</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="subasta_id" id="C385F1CF-B80F-F45F-1D60-A762ADB7EE92">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 22:44:57 UTC</createdTime>
 <generatorID>C9E895E6-7A8D-8C91-8749-AE9D52144F1B</generatorID>

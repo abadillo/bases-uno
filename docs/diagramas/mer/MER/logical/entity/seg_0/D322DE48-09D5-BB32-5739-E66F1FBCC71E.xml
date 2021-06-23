@@ -51,11 +51,10 @@
 <referedAttribute>9E055C8D-E9ED-DC05-88C8-4D81FE35010B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="documento_identidad" id="DB2EC92F-7576-42E8-072A-50E6A886C1BE">
+<Attribute name="coleccionista_documento_identidad" id="DB2EC92F-7576-42E8-072A-50E6A886C1BE">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 22:14:26 UTC</createdTime>
 <generatorID>D2C8C2C9-17EE-20EF-049B-6D3573278390</generatorID>
@@ -66,9 +65,8 @@
 <referedAttribute>40A862D8-0326-6263-AEB2-A6BDBA75AE4C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="email_contacto" id="FD021FF9-C5C6-544A-FAF6-DBD5038C4851">
 <createdBy>antonio2924</createdBy>
@@ -78,24 +76,10 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id" id="7FCE32A7-4A22-ED52-96EE-C9FF3E58D145">
-<createdBy>antonio2924</createdBy>
-<createdTime>2021-06-17 23:09:11 UTC</createdTime>
-<generatorID>13EB9DAF-EF4F-E41E-D452-E1A9E45B4EAA</generatorID>
-<ownerDesignName>MER</ownerDesignName>
-<engineerTo>
-<item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>9E055C8D-E9ED-DC05-88C8-4D81FE35010B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

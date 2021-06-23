@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="subasta-art_sub" directorySegmentName="seg_0" id="04706375-74CD-7F2D-73CC-4F9E181B9C0A">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Listado-Subasta" directorySegmentName="seg_0" id="04706375-74CD-7F2D-73CC-4F9E181B9C0A">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 17:12:04 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>

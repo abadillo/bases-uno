@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_29" directorySegmentName="seg_0" id="66479672-486E-E833-03E1-2DF8D4E77A18">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Coleccionable-Dueno_Historico" directorySegmentName="seg_0" id="66479672-486E-E833-03E1-2DF8D4E77A18">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 22:36:50 UTC</createdTime>
 <ownerDesignName>MER</ownerDesignName>
