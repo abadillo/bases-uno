@@ -110,28 +110,28 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\comicl.cs">
+    <Compile Include="Views\comic\comicl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\comicl.Designer.cs">
+    <Compile Include="Views\comic\comicl.Designer.cs">
       <DependentUpon>comicl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\comicr.cs">
+    <Compile Include="Views\comic\comicr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\comicr.Designer.cs">
+    <Compile Include="Views\comic\comicr.Designer.cs">
       <DependentUpon>comicr.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\comic2.cs">
+    <Compile Include="Views\comic\comic2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\comic2.Designer.cs">
+    <Compile Include="Views\comic\comic2.Designer.cs">
       <DependentUpon>comic2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\comic1.cs">
+    <Compile Include="Views\comic\comic1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\comic1.Designer.cs">
+    <Compile Include="Views\comic\comic1.Designer.cs">
       <DependentUpon>comic1.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\DataSets\TestDataSet.cs">
@@ -181,22 +181,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TestDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Views\comicl.resx">
+    <EmbeddedResource Include="Views\comic\comicl.resx">
       <DependentUpon>comicl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\comicr.resx">
+    <EmbeddedResource Include="Views\comic\comicr.resx">
       <DependentUpon>comicr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\comic2.resx">
+    <EmbeddedResource Include="Views\comic\comic2.resx">
       <DependentUpon>comic2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\comic1.resx">
+    <EmbeddedResource Include="Views\comic\comic1.resx">
       <DependentUpon>comic1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Components\itemcomic.resx">

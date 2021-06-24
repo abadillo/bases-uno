@@ -74,7 +74,7 @@ namespace bases_uno.Views
                 comic.Cover = radioButton2.Checked;
                 comic.Color = radioButton1.Checked;
 
-                MessageBox.Show("Está seguro que desea modificar este Comic?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                MessageBox.Show("¿Está seguro que desea modificar este Comic?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 comic.Update();
 
@@ -98,7 +98,7 @@ namespace bases_uno.Views
             try
             {
 
-                MessageBox.Show("Está seguro que desea eliminar este Comic?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                MessageBox.Show("¿Está seguro que desea eliminar este Comic?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 comic.Delete();
                 comicl mf = new comicl(parent);
 
