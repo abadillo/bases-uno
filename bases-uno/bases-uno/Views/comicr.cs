@@ -14,7 +14,10 @@ namespace bases_uno.Views
     public partial class comicr : Form
     {
 
+        public double cambioeuro = 0.84;
+
         public index parent;
+        public Comic comic = new Comic(0);
 
         public comicr(  index parent )
         {
@@ -24,11 +27,61 @@ namespace bases_uno.Views
             Update();
         }
        
-
-
-        private void btneliminar_Click(object sender, EventArgs e)
+        private void hrpanel_Paint(object sender, PaintEventArgs e)
         {
-            /// comic.delete(id)
+
+        }
+
+        private void btnatras_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+       
+
+        private void registrar()
+        {
+            try
+            {
+
+                Console.WriteLine(radioButton1.Checked);
+
+                comic.Titlel = textBoxTitel.Text;
+                comic.Editor = textBoxEditor.Text;
+                comic.Synopsis = textBoxSynopsis.Text;
+                comic.Volume = int.Parse(textBoxVolume.Text);
+                comic.Number = int.Parse(textBoxNumber.Text);
+                comic.Pages = int.Parse(textBoxPages.Text);
+                comic.PublicationPrice = float.Parse(textBoxPublicationPrice.Text);
+                comic.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
+                comic.Cover = radioButton2.Checked;
+                comic.Color = radioButton1.Checked;
+
+                comic.Insert();
+
+                MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK ,MessageBoxIcon.Information);
+
+                // comic1 mf = new comic1( new Comic() );
+                comicl mf = new comicl(parent);
+                parent.InsertForm(mf);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+
+        private void btncrear_Click(object sender, EventArgs e)
+        {
+            registrar();
+
+        }
+        private void btnadelante_Click(object sender, EventArgs e)
+        {
+            registrar();
         }
 
 
@@ -38,25 +91,23 @@ namespace bases_uno.Views
             parent.InsertForm(mf);
         }
 
-        private void hrpanel_Paint(object sender, PaintEventArgs e)
+        private void textBoxPublicationPrice_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+                label6.Text = (cambioeuro * float.Parse(textBoxPublicationPrice.Text)) + " €";
+            }
+            catch (Exception)
+            {
 
+                //throw;
+            }
+           
         }
 
-        private void btnatras_Click(object sender, EventArgs e)
+        private void textBoxPublicationPrice_MouseHover(object sender, EventArgs e)
         {
-            comicl mf = new comicl(parent);
-            parent.InsertForm(mf);
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnadelante_Click(object sender, EventArgs e)
-        {
-
+              
         }
     }
 }

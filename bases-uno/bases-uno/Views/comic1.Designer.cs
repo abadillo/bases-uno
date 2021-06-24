@@ -38,8 +38,9 @@ namespace bases_uno.Views
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxSynopsis = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.spacerpanel2 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBoxCover = new System.Windows.Forms.TextBox();
@@ -91,6 +92,7 @@ namespace bases_uno.Views
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.spacerpanel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -127,7 +129,6 @@ namespace bases_uno.Views
             this.dipanel1.Controls.Add(this.label14);
             this.dipanel1.Controls.Add(this.panel3);
             this.dipanel1.Controls.Add(this.textBoxSynopsis);
-            this.dipanel1.Controls.Add(this.label7);
             this.dipanel1.Controls.Add(this.spacerpanel2);
             this.dipanel1.Controls.Add(this.tableLayoutPanel2);
             this.dipanel1.Controls.Add(this.label2);
@@ -148,7 +149,7 @@ namespace bases_uno.Views
             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btneliminar, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 556);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 551);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -171,6 +172,7 @@ namespace bases_uno.Views
             this.button3.TabIndex = 2;
             this.button3.Text = "Undefined";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             // 
             // button2
             // 
@@ -187,6 +189,7 @@ namespace bases_uno.Views
             this.button2.TabIndex = 1;
             this.button2.Text = "Undefined";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
             // 
             // btneliminar
             // 
@@ -203,13 +206,14 @@ namespace bases_uno.Views
             this.btneliminar.TabIndex = 0;
             this.btneliminar.Text = "ELIMINAR";
             this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // label14
             // 
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.LightGray;
-            this.label14.Location = new System.Drawing.Point(0, 516);
+            this.label14.Location = new System.Drawing.Point(0, 511);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(816, 40);
             this.label14.TabIndex = 34;
@@ -218,7 +222,7 @@ namespace bases_uno.Views
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 493);
+            this.panel3.Location = new System.Drawing.Point(0, 488);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(816, 23);
             this.panel3.TabIndex = 33;
@@ -230,31 +234,54 @@ namespace bases_uno.Views
             this.textBoxSynopsis.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBoxSynopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxSynopsis.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxSynopsis.Location = new System.Drawing.Point(0, 316);
+            this.textBoxSynopsis.Location = new System.Drawing.Point(0, 311);
             this.textBoxSynopsis.Multiline = true;
             this.textBoxSynopsis.Name = "textBoxSynopsis";
             this.textBoxSynopsis.ReadOnly = true;
             this.textBoxSynopsis.Size = new System.Drawing.Size(816, 177);
             this.textBoxSynopsis.TabIndex = 32;
             // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.LightGray;
-            this.label7.Location = new System.Drawing.Point(0, 276);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(816, 40);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Sinopsis";
-            // 
             // spacerpanel2
             // 
+            this.spacerpanel2.Controls.Add(this.iconButton1);
+            this.spacerpanel2.Controls.Add(this.label7);
             this.spacerpanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.spacerpanel2.Location = new System.Drawing.Point(0, 253);
             this.spacerpanel2.Name = "spacerpanel2";
-            this.spacerpanel2.Size = new System.Drawing.Size(816, 23);
+            this.spacerpanel2.Padding = new System.Windows.Forms.Padding(0, 20, 4, 0);
+            this.spacerpanel2.Size = new System.Drawing.Size(816, 58);
             this.spacerpanel2.TabIndex = 30;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 35;
+            this.iconButton1.Location = new System.Drawing.Point(775, 20);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(37, 38);
+            this.iconButton1.TabIndex = 32;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.LightGray;
+            this.label7.Location = new System.Drawing.Point(0, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(228, 38);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Sinopsis";
             // 
             // tableLayoutPanel2
             // 
@@ -326,6 +353,7 @@ namespace bases_uno.Views
             this.iconButton12.Size = new System.Drawing.Size(37, 39);
             this.iconButton12.TabIndex = 15;
             this.iconButton12.UseVisualStyleBackColor = false;
+            this.iconButton12.Click += new System.EventHandler(this.iconButton12_Click);
             // 
             // label6
             // 
@@ -382,6 +410,7 @@ namespace bases_uno.Views
             this.iconButton11.Size = new System.Drawing.Size(37, 39);
             this.iconButton11.TabIndex = 15;
             this.iconButton11.UseVisualStyleBackColor = false;
+            this.iconButton11.Click += new System.EventHandler(this.iconButton11_Click);
             // 
             // label5
             // 
@@ -438,6 +467,7 @@ namespace bases_uno.Views
             this.iconButton9.Size = new System.Drawing.Size(37, 36);
             this.iconButton9.TabIndex = 15;
             this.iconButton9.UseVisualStyleBackColor = false;
+            this.iconButton9.Click += new System.EventHandler(this.iconButton9_Click);
             // 
             // label4
             // 
@@ -494,6 +524,7 @@ namespace bases_uno.Views
             this.iconButton19.Size = new System.Drawing.Size(37, 36);
             this.iconButton19.TabIndex = 15;
             this.iconButton19.UseVisualStyleBackColor = false;
+            this.iconButton19.Click += new System.EventHandler(this.iconButton19_Click);
             // 
             // label13
             // 
@@ -550,6 +581,7 @@ namespace bases_uno.Views
             this.iconButton18.Size = new System.Drawing.Size(37, 36);
             this.iconButton18.TabIndex = 15;
             this.iconButton18.UseVisualStyleBackColor = false;
+            this.iconButton18.Click += new System.EventHandler(this.iconButton18_Click);
             // 
             // label12
             // 
@@ -606,6 +638,7 @@ namespace bases_uno.Views
             this.iconButton17.Size = new System.Drawing.Size(37, 36);
             this.iconButton17.TabIndex = 15;
             this.iconButton17.UseVisualStyleBackColor = false;
+            this.iconButton17.Click += new System.EventHandler(this.iconButton17_Click);
             // 
             // label11
             // 
@@ -662,6 +695,7 @@ namespace bases_uno.Views
             this.iconButton10.Size = new System.Drawing.Size(37, 36);
             this.iconButton10.TabIndex = 15;
             this.iconButton10.UseVisualStyleBackColor = false;
+            this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
             // 
             // label3
             // 
@@ -718,6 +752,7 @@ namespace bases_uno.Views
             this.iconButton16.Size = new System.Drawing.Size(37, 36);
             this.iconButton16.TabIndex = 15;
             this.iconButton16.UseVisualStyleBackColor = false;
+            this.iconButton16.Click += new System.EventHandler(this.iconButton16_Click);
             // 
             // label10
             // 
@@ -774,6 +809,7 @@ namespace bases_uno.Views
             this.iconButton15.Size = new System.Drawing.Size(37, 36);
             this.iconButton15.TabIndex = 15;
             this.iconButton15.UseVisualStyleBackColor = false;
+            this.iconButton15.Click += new System.EventHandler(this.iconButton15_Click);
             // 
             // label9
             // 
@@ -830,6 +866,7 @@ namespace bases_uno.Views
             this.iconButton14.Size = new System.Drawing.Size(37, 36);
             this.iconButton14.TabIndex = 15;
             this.iconButton14.UseVisualStyleBackColor = false;
+            this.iconButton14.Visible = false;
             // 
             // label8
             // 
@@ -861,7 +898,6 @@ namespace bases_uno.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 41);
             this.panel1.TabIndex = 11;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // hrpanel
             // 
@@ -872,7 +908,6 @@ namespace bases_uno.Views
             this.hrpanel.Name = "hrpanel";
             this.hrpanel.Size = new System.Drawing.Size(834, 48);
             this.hrpanel.TabIndex = 10;
-            this.hrpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.hrpanel_Paint);
             // 
             // panel2
             // 
@@ -944,6 +979,7 @@ namespace bases_uno.Views
             this.dipanel1.ResumeLayout(false);
             this.dipanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.spacerpanel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -1033,5 +1069,6 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton iconButton14;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

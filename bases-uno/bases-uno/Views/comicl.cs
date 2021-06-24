@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using bases_uno.Views.Components;
 
 
 namespace bases_uno.Views
@@ -18,7 +19,7 @@ namespace bases_uno.Views
 
         public index parent;
 
-        public Components.itemcomic[] itemlist;
+        public itemcomic[] itemlist;
         public List<Comic> list = Query.Comics();
 
 
@@ -82,6 +83,9 @@ namespace bases_uno.Views
 
         }
 
-       
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

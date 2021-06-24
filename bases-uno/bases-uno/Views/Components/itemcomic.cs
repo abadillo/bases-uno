@@ -29,7 +29,6 @@ namespace bases_uno.Views.Components
            
             label2.Text = comic.Editor + "     " + comic.PublicationDate.ToString();
            
-            /// label3.Text = (comic.Volume == 0) ? comic.Volume.ToString() : "";
             label3.Text = "Volumen: " + ( (comic.Volume == 0) ? comic.Volume.ToString() : "" ) + "\n" + "Numero: " + comic.Number.ToString() + "\n" + "Paginas: " + comic.Pages.ToString();
            
             Update();

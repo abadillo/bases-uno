@@ -35,12 +35,8 @@ namespace bases_uno.Views
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(index));
             this.stpanel1 = new System.Windows.Forms.Panel();
             this.stpanel3 = new System.Windows.Forms.Panel();
-            this.dipanel0 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.menupanel = new System.Windows.Forms.Panel();
             this.stpanel4 = new System.Windows.Forms.Panel();
-            this.stpanel13 = new System.Windows.Forms.Panel();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.stpanel12 = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
@@ -55,9 +51,13 @@ namespace bases_uno.Views
             this.stpanel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainpanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.stpanel13 = new System.Windows.Forms.Panel();
             this.stpanel1.SuspendLayout();
             this.stpanel3.SuspendLayout();
-            this.dipanel0.SuspendLayout();
             this.stpanel4.SuspendLayout();
             this.stpanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,7 +77,7 @@ namespace bases_uno.Views
             // stpanel3
             // 
             this.stpanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(149)))), ((int)(((byte)(163)))));
-            this.stpanel3.Controls.Add(this.dipanel0);
+            this.stpanel3.Controls.Add(this.menupanel);
             this.stpanel3.Controls.Add(this.stpanel4);
             this.stpanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stpanel3.Location = new System.Drawing.Point(0, 179);
@@ -85,73 +85,24 @@ namespace bases_uno.Views
             this.stpanel3.Size = new System.Drawing.Size(304, 482);
             this.stpanel3.TabIndex = 1;
             // 
-            // dipanel0
+            // menupanel
             // 
-            this.dipanel0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(69)))), ((int)(((byte)(89)))));
-            this.dipanel0.Controls.Add(this.button3);
-            this.dipanel0.Controls.Add(this.button2);
-            this.dipanel0.Controls.Add(this.button1);
-            this.dipanel0.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel0.Location = new System.Drawing.Point(68, 0);
-            this.dipanel0.Name = "dipanel0";
-            this.dipanel0.Padding = new System.Windows.Forms.Padding(1);
-            this.dipanel0.Size = new System.Drawing.Size(236, 482);
-            this.dipanel0.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Location = new System.Drawing.Point(1, 101);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(234, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Registro";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(1, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(234, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Listado";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(1, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Comics";
-            this.button1.UseVisualStyleBackColor = false;
+            this.menupanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.menupanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menupanel.Location = new System.Drawing.Point(68, 0);
+            this.menupanel.Margin = new System.Windows.Forms.Padding(0);
+            this.menupanel.Name = "menupanel";
+            this.menupanel.Size = new System.Drawing.Size(236, 482);
+            this.menupanel.TabIndex = 6;
             // 
             // stpanel4
             // 
             this.stpanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
             this.stpanel4.Controls.Add(this.stpanel13);
+            this.stpanel4.Controls.Add(this.iconButton8);
+            this.stpanel4.Controls.Add(this.panel1);
+            this.stpanel4.Controls.Add(this.iconButton7);
+            this.stpanel4.Controls.Add(this.panel2);
             this.stpanel4.Controls.Add(this.iconButton6);
             this.stpanel4.Controls.Add(this.stpanel12);
             this.stpanel4.Controls.Add(this.iconButton5);
@@ -170,15 +121,6 @@ namespace bases_uno.Views
             this.stpanel4.Size = new System.Drawing.Size(68, 482);
             this.stpanel4.TabIndex = 0;
             // 
-            // stpanel13
-            // 
-            this.stpanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.stpanel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.stpanel13.Location = new System.Drawing.Point(1, 339);
-            this.stpanel13.Name = "stpanel13";
-            this.stpanel13.Size = new System.Drawing.Size(66, 2);
-            this.stpanel13.TabIndex = 12;
-            // 
             // iconButton6
             // 
             this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
@@ -195,6 +137,7 @@ namespace bases_uno.Views
             this.iconButton6.Size = new System.Drawing.Size(66, 66);
             this.iconButton6.TabIndex = 11;
             this.iconButton6.UseVisualStyleBackColor = false;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // stpanel12
             // 
@@ -238,7 +181,7 @@ namespace bases_uno.Views
             this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Dolly;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.GlobeAmericas;
             this.iconButton4.IconColor = System.Drawing.Color.LightGray;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.Location = new System.Drawing.Point(1, 205);
@@ -247,6 +190,7 @@ namespace bases_uno.Views
             this.iconButton4.Size = new System.Drawing.Size(66, 66);
             this.iconButton4.TabIndex = 7;
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // stpanel10
             // 
@@ -264,7 +208,7 @@ namespace bases_uno.Views
             this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton3.FlatAppearance.BorderSize = 0;
             this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.IdCard;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Hiking;
             this.iconButton3.IconColor = System.Drawing.Color.LightGray;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton3.Location = new System.Drawing.Point(1, 137);
@@ -273,6 +217,7 @@ namespace bases_uno.Views
             this.iconButton3.Size = new System.Drawing.Size(66, 66);
             this.iconButton3.TabIndex = 5;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // stpanel9
             // 
@@ -359,7 +304,67 @@ namespace bases_uno.Views
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(880, 661);
             this.mainpanel.TabIndex = 5;
-            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(1, 407);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(66, 2);
+            this.panel1.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(1, 339);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(66, 2);
+            this.panel2.TabIndex = 15;
+            // 
+            // iconButton7
+            // 
+            this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton7.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton7.FlatAppearance.BorderSize = 0;
+            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Dolly;
+            this.iconButton7.IconColor = System.Drawing.Color.LightGray;
+            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton7.Location = new System.Drawing.Point(1, 341);
+            this.iconButton7.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton7.Name = "iconButton7";
+            this.iconButton7.Size = new System.Drawing.Size(66, 66);
+            this.iconButton7.TabIndex = 17;
+            this.iconButton7.UseVisualStyleBackColor = false;
+            // 
+            // iconButton8
+            // 
+            this.iconButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.iconButton8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton8.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton8.FlatAppearance.BorderSize = 0;
+            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.IdCard;
+            this.iconButton8.IconColor = System.Drawing.Color.LightGray;
+            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton8.Location = new System.Drawing.Point(1, 409);
+            this.iconButton8.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton8.Name = "iconButton8";
+            this.iconButton8.Size = new System.Drawing.Size(66, 66);
+            this.iconButton8.TabIndex = 18;
+            this.iconButton8.UseVisualStyleBackColor = false;
+            // 
+            // stpanel13
+            // 
+            this.stpanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.stpanel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.stpanel13.Location = new System.Drawing.Point(1, 475);
+            this.stpanel13.Name = "stpanel13";
+            this.stpanel13.Size = new System.Drawing.Size(66, 2);
+            this.stpanel13.TabIndex = 19;
             // 
             // index
             // 
@@ -378,7 +383,6 @@ namespace bases_uno.Views
             this.Text = "8 Bit Subastas";
             this.stpanel1.ResumeLayout(false);
             this.stpanel3.ResumeLayout(false);
-            this.dipanel0.ResumeLayout(false);
             this.stpanel4.ResumeLayout(false);
             this.stpanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -388,11 +392,7 @@ namespace bases_uno.Views
 
         private Panel stpanel1;
         private Panel stpanel3;
-        private Panel dipanel0;
         private Panel stpanel2;
-        private Button button3;
-        private Button button2;
-        private Button button1;
         private PictureBox pictureBox1;
         private Panel stpanel4;
         private Panel stpanel11;
@@ -405,9 +405,14 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton iconButton1;
         private Panel stpanel12;
         private FontAwesome.Sharp.IconButton iconButton5;
-        private Panel stpanel13;
         private FontAwesome.Sharp.IconButton iconButton6;
         private Panel mainpanel;
+        private Panel menupanel;
+        private Panel stpanel13;
+        private FontAwesome.Sharp.IconButton iconButton8;
+        private Panel panel1;
+        private FontAwesome.Sharp.IconButton iconButton7;
+        private Panel panel2;
 
         #endregion
 

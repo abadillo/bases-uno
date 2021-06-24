@@ -156,6 +156,7 @@ namespace bases_uno.Views
             this.btncancelar.TabIndex = 1;
             this.btncancelar.Text = "CANCELAR";
             this.btncancelar.UseVisualStyleBackColor = false;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btncrear
             // 
@@ -172,6 +173,7 @@ namespace bases_uno.Views
             this.btncrear.TabIndex = 0;
             this.btncrear.Text = "Añadir";
             this.btncrear.UseVisualStyleBackColor = false;
+            this.btncrear.Click += new System.EventHandler(this.btncrear_Click);
             // 
             // label14
             // 
@@ -194,6 +196,7 @@ namespace bases_uno.Views
             // 
             // textBoxSynopsis
             // 
+            this.textBoxSynopsis.AcceptsReturn = true;
             this.textBoxSynopsis.BackColor = System.Drawing.Color.LightGray;
             this.textBoxSynopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSynopsis.Dock = System.Windows.Forms.DockStyle.Top;
@@ -379,6 +382,7 @@ namespace bases_uno.Views
             this.textBoxPages.Name = "textBoxPages";
             this.textBoxPages.Size = new System.Drawing.Size(372, 22);
             this.textBoxPages.TabIndex = 16;
+            this.textBoxPages.Text = "0";
             // 
             // label4
             // 
@@ -451,6 +455,7 @@ namespace bases_uno.Views
             this.textBoxVolume.Name = "textBoxVolume";
             this.textBoxVolume.Size = new System.Drawing.Size(372, 22);
             this.textBoxVolume.TabIndex = 16;
+            this.textBoxVolume.Text = "0";
             // 
             // label3
             // 
@@ -486,6 +491,7 @@ namespace bases_uno.Views
             this.textBoxPublicationDate.Name = "textBoxPublicationDate";
             this.textBoxPublicationDate.Size = new System.Drawing.Size(372, 22);
             this.textBoxPublicationDate.TabIndex = 16;
+            this.textBoxPublicationDate.Text = "dd/mm/yyyy";
             // 
             // label10
             // 
@@ -521,6 +527,7 @@ namespace bases_uno.Views
             this.textBoxNumber.Name = "textBoxNumber";
             this.textBoxNumber.Size = new System.Drawing.Size(372, 22);
             this.textBoxNumber.TabIndex = 16;
+            this.textBoxNumber.Text = "0";
             // 
             // label9
             // 
@@ -549,14 +556,14 @@ namespace bases_uno.Views
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Right;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Location = new System.Drawing.Point(215, 24);
+            this.label6.Location = new System.Drawing.Point(337, 24);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 24);
+            this.label6.Size = new System.Drawing.Size(35, 24);
             this.label6.TabIndex = 17;
-            this.label6.Text = "15 €";
+            this.label6.Text = "0 €";
             // 
             // textBoxPublicationPrice
             // 
@@ -569,6 +576,9 @@ namespace bases_uno.Views
             this.textBoxPublicationPrice.Name = "textBoxPublicationPrice";
             this.textBoxPublicationPrice.Size = new System.Drawing.Size(215, 22);
             this.textBoxPublicationPrice.TabIndex = 16;
+            this.textBoxPublicationPrice.Text = "0";
+            this.textBoxPublicationPrice.TextChanged += new System.EventHandler(this.textBoxPublicationPrice_TextChanged);
+            this.textBoxPublicationPrice.MouseHover += new System.EventHandler(this.textBoxPublicationPrice_MouseHover);
             // 
             // label13
             // 

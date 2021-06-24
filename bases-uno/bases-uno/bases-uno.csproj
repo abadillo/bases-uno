@@ -143,6 +143,24 @@
     <Compile Include="Views\Components\itemcomic.Designer.cs">
       <DependentUpon>itemcomic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Components\Submenus\menulugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Components\Submenus\menulugar.Designer.cs">
+      <DependentUpon>menulugar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\Submenus\menuinteres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Components\Submenus\menuinteres.Designer.cs">
+      <DependentUpon>menuinteres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\Submenus\menucomic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Components\Submenus\menucomic.Designer.cs">
+      <DependentUpon>menucomic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +201,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Components\itemcomic.resx">
       <DependentUpon>itemcomic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\Submenus\menulugar.resx">
+      <DependentUpon>menulugar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\Submenus\menuinteres.resx">
+      <DependentUpon>menuinteres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\Submenus\menucomic.resx">
+      <DependentUpon>menucomic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

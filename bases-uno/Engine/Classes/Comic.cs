@@ -104,23 +104,23 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO comic (titulo, numero, fecha_pub, color, sinopsis, paginas, cubierta, editor";
+                string Query = "INSERT INTO comic (titulo, numero, fecha_publicacion, color, sinopsis, paginas, cubierta, editor";
                 if (!(Volume == 0))
                 {
                     Query += ", volumen";
                 }
                 if (!(PublicationPrice == 0))
                 {
-                    Query += ", precio_pub";
+                    Query += ", precio_publicacion";
                 }
-                Query += ") VALUES (@titulo, @numero, @fecha_pub, @color, @sinopsis, @paginas, @cubierta, @editor";
+                Query += ") VALUES (@titulo, @numero, @fecha_publicacion, @color, @sinopsis, @paginas, @cubierta, @editor";
                 if (!(Volume == 0))
                 {
                     Query += ", @volumen";
                 }
                 if (!(PublicationPrice == 0))
                 {
-                    Query += ", @precio_pub";
+                    Query += ", @precio_publicacion";
                 }
                 Query += ") RETURNING id";
                 Script = new NpgsqlCommand(Query, Connection);
@@ -128,7 +128,7 @@ namespace Engine.Classes
                 Script.Parameters.AddWithValue("id", ID);
                 Script.Parameters.AddWithValue("titulo", Titlel);
                 Script.Parameters.AddWithValue("numero", Number);
-                Script.Parameters.AddWithValue("fecha_pub", PublicationDate);
+                Script.Parameters.AddWithValue("fecha_publicacion", PublicationDate);
                 Script.Parameters.AddWithValue("color", Color);
                 Script.Parameters.AddWithValue("sinopsis", Synopsis);
                 Script.Parameters.AddWithValue("paginas", Pages);
@@ -140,7 +140,7 @@ namespace Engine.Classes
                 }
                 if (!(PublicationPrice == 0))
                 {
-                    Script.Parameters.AddWithValue("precio_pub", PublicationPrice);
+                    Script.Parameters.AddWithValue("precio_publicacion", PublicationPrice);
                 }
 
                 Reader = Script.ExecuteReader();
@@ -201,7 +201,7 @@ namespace Engine.Classes
                     
                     if (PublicationPrice == 0)
                     {
-                        Query = "UPDATE comic SET titulo = @titulo, numero = @numero, fecha_pub = @fecha_pub, " +
+                        Query = "UPDATE comic SET titulo = @titulo, numero = @numero, fecha_publicacion = @fecha_publicacion, " +
                             "color = @color, sinopsis = @sinopsis, paginas = @paginas, cubierta = @cubierta, " +
                             "editor = @editor " +
                             "WHERE id = @id";
@@ -210,7 +210,7 @@ namespace Engine.Classes
                         Script.Parameters.AddWithValue("id", ID);
                         Script.Parameters.AddWithValue("titulo", Titlel);
                         Script.Parameters.AddWithValue("numero", Number);
-                        Script.Parameters.AddWithValue("fecha_pub", PublicationDate);
+                        Script.Parameters.AddWithValue("fecha_publicacion", PublicationDate);
                         Script.Parameters.AddWithValue("color", Color);
                         Script.Parameters.AddWithValue("sinopsis", Synopsis);
                         Script.Parameters.AddWithValue("paginas", Pages);
@@ -219,8 +219,8 @@ namespace Engine.Classes
                     }
                     else
                     {
-                        Query = "UPDATE comic SET titulo = @titulo, numero = @numero, fecha_pub = @fecha_pub, " +
-                            "precio_pub = @precio_pub, color = @color, sinopsis = @sinopsis, paginas = @paginas, " +
+                        Query = "UPDATE comic SET titulo = @titulo, numero = @numero, fecha_publicacion = @fecha_publicacion, " +
+                            "precio_publicacion = @precio_publicacion, color = @color, sinopsis = @sinopsis, paginas = @paginas, " +
                             "cubierta = @cubierta, editor = @editor " +
                             "WHERE id = @id";
                         Script = new NpgsqlCommand(Query, Connection);
@@ -228,8 +228,8 @@ namespace Engine.Classes
                         Script.Parameters.AddWithValue("id", ID);
                         Script.Parameters.AddWithValue("titulo", Titlel);
                         Script.Parameters.AddWithValue("numero", Number);
-                        Script.Parameters.AddWithValue("fecha_pub", PublicationDate);
-                        Script.Parameters.AddWithValue("precio_pub", PublicationPrice);
+                        Script.Parameters.AddWithValue("fecha_publicacion", PublicationDate);
+                        Script.Parameters.AddWithValue("precio_publicacion", PublicationPrice);
                         Script.Parameters.AddWithValue("color", Color);
                         Script.Parameters.AddWithValue("sinopsis", Synopsis);
                         Script.Parameters.AddWithValue("paginas", Pages);
@@ -240,7 +240,7 @@ namespace Engine.Classes
                 else if (PublicationPrice == 0)
                 {
                     Query = "UPDATE comic SET titulo = @titulo, volumen = @volumen, numero = @numero, " +
-                        "fecha_pub = @fecha_pub, color = @color, sinopsis = @sinopsis, paginas = @paginas, " +
+                        "fecha_publicacion = @fecha_publicacion, color = @color, sinopsis = @sinopsis, paginas = @paginas, " +
                         "cubierta = @cubierta, editor = @editor " +
                         "WHERE id = @id";
                     Script = new NpgsqlCommand(Query, Connection);
@@ -249,7 +249,7 @@ namespace Engine.Classes
                     Script.Parameters.AddWithValue("titulo", Titlel);
                     Script.Parameters.AddWithValue("volumen", Volume);
                     Script.Parameters.AddWithValue("numero", Number);
-                    Script.Parameters.AddWithValue("fecha_pub", PublicationDate);
+                    Script.Parameters.AddWithValue("fecha_publicacion", PublicationDate);
                     Script.Parameters.AddWithValue("color", Color);
                     Script.Parameters.AddWithValue("sinopsis", Synopsis);
                     Script.Parameters.AddWithValue("paginas", Pages);
@@ -259,7 +259,7 @@ namespace Engine.Classes
                 else
                 {
                     Query = "UPDATE comic SET titulo = @titulo, volumen = @volumen, numero = @numero, " +
-                        "fecha_pub = @fecha_pub, precio_pub = @precio_pub, color = @color, " +
+                        "fecha_publicacion = @fecha_publicacion, precio_publicacion = @precio_publicacion, color = @color, " +
                         "sinopsis = @sinopsis, paginas = @paginas, cubierta = @cubierta, editor = @editor " +
                         "WHERE id = @id";
                     Script = new NpgsqlCommand(Query, Connection);
@@ -268,8 +268,8 @@ namespace Engine.Classes
                     Script.Parameters.AddWithValue("titulo", Titlel);
                     Script.Parameters.AddWithValue("volumen", Volume);
                     Script.Parameters.AddWithValue("numero", Number);
-                    Script.Parameters.AddWithValue("fecha_pub", PublicationDate);
-                    Script.Parameters.AddWithValue("precio_pub", PublicationPrice);
+                    Script.Parameters.AddWithValue("fecha_publicacion", PublicationDate);
+                    Script.Parameters.AddWithValue("precio_publicacion", PublicationPrice);
                     Script.Parameters.AddWithValue("color", Color);
                     Script.Parameters.AddWithValue("sinopsis", Synopsis);
                     Script.Parameters.AddWithValue("paginas", Pages);

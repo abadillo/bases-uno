@@ -7,8 +7,10 @@ using Engine;
 
 namespace bases_uno
 {
+
     static class Program
     {
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

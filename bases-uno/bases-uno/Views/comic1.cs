@@ -42,35 +42,7 @@ namespace bases_uno.Views
             Update();
 		}
 
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void iconButton8_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btneliminar_Click(object sender, EventArgs e)
-        {
-            /// comic.delete(id)
-        }
-
-        private void hrpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
@@ -82,6 +54,74 @@ namespace bases_uno.Views
         {
             comicl mf = new comicl(parent);
             parent.InsertForm(mf);
+        }
+
+     
+        public void enableinput (TextBox input)
+        {
+            input.ReadOnly = false;
+            input.ForeColor = Color.Black;
+            input.BackColor = Color.LightGray;
+
+        }
+
+        private void iconButton17_Click(object sender, EventArgs e)
+        {
+            enableinput(textBoxTitel);
+        }
+
+        private void iconButton15_Click(object sender, EventArgs e)
+        {
+            enableinput(textBoxNumber);
+        }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            enableinput(textBoxVolume);
+        }
+
+        private void iconButton16_Click(object sender, EventArgs e)
+        {
+            enableinput(textBoxPublicationDate);
+        }
+
+        private void iconButton19_Click(object sender, EventArgs e)
+        {
+            enableinput(textBoxPublicationPrice);
+        }
+
+        private void iconButton18_Click(object sender, EventArgs e)
+        {
+            enableinput(textBoxColor);
+        }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+            enableinput(textBoxPages);
+        }
+
+        private void iconButton12_Click(object sender, EventArgs e)
+        {
+            enableinput(textBoxCover);
+        }
+
+        private void iconButton11_Click(object sender, EventArgs e)
+        {
+            enableinput(textBoxEditor);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            enableinput(textBoxSynopsis);
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("Está seguro que desea eliminar este Comic?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+
+
         }
     }
 }
