@@ -48,7 +48,7 @@ CREATE TABLE COLECCIONABLE
     (
      id SERIAL , 
      nombre VARCHAR (50) NOT NULL , 
-     descripcion_detallada VARCHAR (50) NOT NULL 
+     descripcion_detallada VARCHAR (100) NOT NULL 
     )
 ;
 
@@ -132,7 +132,7 @@ CREATE TABLE INTERES
     (
      id SERIAL , 
      nombre VARCHAR (50) NOT NULL , 
-     descripcion VARCHAR (50) NOT NULL 
+     descripcion VARCHAR (100) NOT NULL 
     )
 ;
 

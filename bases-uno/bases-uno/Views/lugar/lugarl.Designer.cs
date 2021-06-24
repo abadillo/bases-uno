@@ -1,7 +1,7 @@
 ﻿
 namespace bases_uno.Views
 {
-    partial class comic2
+    partial class lugarl
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +31,7 @@ namespace bases_uno.Views
         {
             this.stpanel7 = new System.Windows.Forms.Panel();
             this.dipanel1 = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.label2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.hrpanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -56,43 +55,30 @@ namespace bases_uno.Views
             this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
             this.stpanel7.Name = "stpanel7";
             this.stpanel7.Padding = new System.Windows.Forms.Padding(20, 18, 20, 18);
-            this.stpanel7.Size = new System.Drawing.Size(1152, 991);
+            this.stpanel7.Size = new System.Drawing.Size(1152, 932);
             this.stpanel7.TabIndex = 1;
+            this.stpanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.stpanel7_Paint);
             // 
             // dipanel1
             // 
-            this.dipanel1.AutoScroll = true;
-            this.dipanel1.Controls.Add(this.reportViewer1);
-            this.dipanel1.Controls.Add(this.label2);
+            this.dipanel1.Controls.Add(this.flowLayoutPanel1);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel1.Location = new System.Drawing.Point(20, 127);
+            this.dipanel1.Location = new System.Drawing.Point(20, 95);
             this.dipanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dipanel1.Name = "dipanel1";
-            this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 24, 0);
-            this.dipanel1.Size = new System.Drawing.Size(1112, 846);
-            this.dipanel1.TabIndex = 14;
+            this.dipanel1.Size = new System.Drawing.Size(1112, 819);
+            this.dipanel1.TabIndex = 12;
             // 
-            // reportViewer1
+            // flowLayoutPanel1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 49);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1088, 797);
-            this.reportViewer1.TabIndex = 21;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1088, 49);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Ficha Comic";
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1112, 819);
+            this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel1
             // 
@@ -100,8 +86,9 @@ namespace bases_uno.Views
             this.panel1.Location = new System.Drawing.Point(20, 77);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1112, 50);
-            this.panel1.TabIndex = 13;
+            this.panel1.Size = new System.Drawing.Size(1112, 18);
+            this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // hrpanel
             // 
@@ -112,7 +99,8 @@ namespace bases_uno.Views
             this.hrpanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hrpanel.Name = "hrpanel";
             this.hrpanel.Size = new System.Drawing.Size(1112, 59);
-            this.hrpanel.TabIndex = 12;
+            this.hrpanel.TabIndex = 10;
+            this.hrpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.hrpanel_Paint);
             // 
             // panel2
             // 
@@ -142,6 +130,7 @@ namespace bases_uno.Views
             this.btnadelante.TabIndex = 5;
             this.btnadelante.UseVisualStyleBackColor = false;
             this.btnadelante.Visible = false;
+            this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
             // 
             // btnatras
             // 
@@ -159,6 +148,7 @@ namespace bases_uno.Views
             this.btnatras.Size = new System.Drawing.Size(88, 59);
             this.btnatras.TabIndex = 4;
             this.btnatras.UseVisualStyleBackColor = false;
+            this.btnatras.Visible = false;
             this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
             // 
             // label1
@@ -173,17 +163,17 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 63);
             this.label1.TabIndex = 0;
             // 
-            // comic2
+            // lugarl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 991);
+            this.ClientSize = new System.Drawing.Size(1152, 932);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "comic2";
+            this.Name = "lugarl";
             this.Text = "8 Bit Subastas";
-            this.Load += new System.EventHandler(this.comic2_Load);
+            this.Load += new System.EventHandler(this.lugarl_Load);
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);
             this.hrpanel.ResumeLayout(false);
@@ -203,7 +193,6 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton btnadelante;
         private FontAwesome.Sharp.IconButton btnatras;
         private System.Windows.Forms.Label label1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
