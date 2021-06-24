@@ -24,13 +24,13 @@ namespace bases_uno.Views.Components.Submenus
 
         private void button2_Click(object sender, EventArgs e)
         {
-            comicl panel = new comicl(parent);
+            lugarl panel = new lugarl(parent);
             parent.InsertForm(panel);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            comicr panel = new comicr(parent);
+            lugarr panel = new lugarr(parent);
             parent.InsertForm(panel);
         }
     }

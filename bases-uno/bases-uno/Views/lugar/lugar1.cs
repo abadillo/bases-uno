@@ -28,71 +28,52 @@ namespace bases_uno.Views
 
             InitializeComponent();
 			Place lugar = new Place(id);
-			// textBoxID.Text = lugar.ID.ToString();
-			// textBoxTitel.Text = lugar.Titlel;
-			// textBoxPublicationDate.Text = lugar.PublicationDate.ToString();
-			// radioButton1.Checked = lugar.Color ? true : false;
-            // radioButton2.Checked = lugar.Cover ? true : false;
-            // textBoxVolume.Text = (lugar.Volume == 0) ? lugar.Volume.ToString() : "";
-			// textBoxNumber.Text = lugar.Number.ToString();
-			// textBoxPublicationPrice.Text = (lugar.PublicationPrice == 0) ? lugar.PublicationPrice.ToString() : "";
-			// textBoxPages.Text = lugar.Pages.ToString();
-			// textBoxEditor.Text = lugar.Editor;
-			// textBoxSynopsis.Text = lugar.Synopsis;
+            textBoxID.Text = lugar.ID.ToString();
+            textBoxName.Text = lugar.Name;
+            textBoxLocationID.Text = lugar.LocationID.ToString();
+            comboBoxType.SelectedItem = lugar.Type;
 
-            // label1.Text = "Lugar: " + lugar.Titlel;
+            label1.Text = "Lugar: " + lugar.Name;
             Update();
 
             this.lugar = lugar;
 		}
 
+      
+
         private void Modificar()
         {
-            // try
-            // {
-            //     lugar.Titlel = textBoxTitel.Text;
-            //     lugar.Editor = textBoxEditor.Text;
-            //     lugar.Synopsis = textBoxSynopsis.Text;
-            //     if (textBoxVolume.Text == "")
-            //     {
-            //         lugar.Volume = 0;
-            //     }
-            //     else
-            //     {
-            //         lugar.Volume = int.Parse(textBoxVolume.Text);
-            //     }
-            //     lugar.Number = int.Parse(textBoxNumber.Text);
-            //     lugar.Pages = int.Parse(textBoxPages.Text);
-            //     if (textBoxPublicationPrice.Text == "")
-            //     {
-            //         lugar.PublicationPrice = 0;
-            //     }
-            //     else
-            //     {
-            //         lugar.PublicationPrice = int.Parse(textBoxPublicationPrice.Text);
-            //     }
-            //     lugar.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
-            //     lugar.Cover = radioButton2.Checked;
-            //     lugar.Color = radioButton1.Checked;
+            lugar.Name = textBoxName.Text;
+            lugar.LocationID = int.Parse(textBoxLocationID.Text);
+            lugar.Type = comboBoxType.SelectedItem.ToString(); 
 
-            //     MessageBox.Show("¿Está seguro que desea modificar este Lugar?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Lugar?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            //     lugar.Update();
+            if (dialogResult == DialogResult.Yes)
 
-            //     MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    lugar.Update();
+
+                    MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lugar1 form = new lugar1(parent, lugar.ID);
+                    parent.InsertForm(form);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
 
-            //     lugar1 form = new lugar1(parent, lugar.ID);
-            //     parent.InsertForm(form);
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
 
-            // }
-            // catch (Exception ex)
-            // {
-            //     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            // }
 
         }
+
 
         private void Eliminar()
         {
@@ -130,10 +111,10 @@ namespace bases_uno.Views
 
         }
 
-        public void EnableRadio(RadioButton input, FontAwesome.Sharp.IconButton iconbutton)
+        public void EnableCombo(ComboBox combo, FontAwesome.Sharp.IconButton iconbutton)
         {
             iconbutton.Enabled = false;
-            input.Enabled = true;
+            combo.Enabled = true;
 
         }
 
@@ -151,81 +132,43 @@ namespace bases_uno.Views
             parent.InsertForm(mf);
         }
 
-
         private void iconButton17_Click(object sender, EventArgs e)
         {
-            EnableInput(textBoxTitel, iconButton17);
+            EnableInput(textBoxName, iconButton17);
         }
 
         private void iconButton15_Click(object sender, EventArgs e)
         {
-            EnableInput(textBoxNumber, iconButton15);
+            EnableCombo(comboBoxType, iconButton15);
         }
 
-        private void iconButton10_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxVolume, iconButton10);
-        }
-
-        private void iconButton16_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxPublicationDate, iconButton16);
-        }
-
-        private void iconButton19_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxPublicationPrice, iconButton19);
-        }
-
-        private void iconButton18_Click(object sender, EventArgs e)
-        {
-            EnableRadio(radioButton1, iconButton18);
-        }
-
-        private void iconButton9_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxPages, iconButton9);
-        }
-
-        private void iconButton12_Click(object sender, EventArgs e)
-        {
-            EnableRadio(radioButton2, iconButton12);
-        }
-
-        private void iconButton11_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxEditor, iconButton11);
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxSynopsis, iconButton1);
-        }
-
-        private void btneliminar_Click(object sender, EventArgs e)
-        {
-            Eliminar();
-
-
-
-        }
+       
 
         private void iconButton14_Click(object sender, EventArgs e)
         {
             // id no se modifica
         }
 
-
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            lugar1 mf = new lugar1(parent, lugar.ID);
-            parent.InsertForm(mf);
+            lugar1 form = new lugar1(parent, lugar.ID);
+            parent.InsertForm(form);
         }
 
-      
         private void btnmodificar_Click(object sender, EventArgs e)
         {
             Modificar();
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            Eliminar();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            EnableInput(textBoxLocationID, iconButton1);
+
         }
     }
 }

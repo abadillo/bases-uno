@@ -28,7 +28,7 @@ namespace bases_uno.Views
             InitializeComponent();
 			Place lugar = new Place(id);
 
-            // label1.Text = "Lugar: " + lugar.Titlel;
+            label1.Text = "Lugar: " + lugar.Name;
 
             Update();
 		}

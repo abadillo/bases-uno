@@ -70,8 +70,8 @@ namespace bases_uno.Views
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            /// comicl mf = new comicl(parent);
-            /// parent.InsertForm(mf);
+            /// comicl form = new comicl(parent);
+            /// parent.InsertForm(form);
         }
 
      

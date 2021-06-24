@@ -579,7 +579,6 @@ namespace bases_uno.Views
             this.textBoxPublicationPrice.TabIndex = 16;
             this.textBoxPublicationPrice.Text = "0";
             this.textBoxPublicationPrice.TextChanged += new System.EventHandler(this.textBoxPublicationPrice_TextChanged);
-            this.textBoxPublicationPrice.MouseHover += new System.EventHandler(this.textBoxPublicationPrice_MouseHover);
             // 
             // label13
             // 
@@ -621,7 +620,6 @@ namespace bases_uno.Views
             this.hrpanel.Name = "hrpanel";
             this.hrpanel.Size = new System.Drawing.Size(834, 48);
             this.hrpanel.TabIndex = 12;
-            this.hrpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.hrpanel_Paint);
             // 
             // panel6
             // 

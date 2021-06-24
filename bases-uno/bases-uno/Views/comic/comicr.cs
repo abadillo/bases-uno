@@ -27,17 +27,14 @@ namespace bases_uno.Views
             Update();
         }
        
-        private void hrpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-          
-        }
+            comicl form = new comicl(parent);
+            parent.InsertForm(form);
 
-       
+        }
+              
 
         private void registrar()
         {
@@ -61,9 +58,9 @@ namespace bases_uno.Views
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK ,MessageBoxIcon.Information);
 
-                // comic1 mf = new comic1( new Comic() );
-                comicl mf = new comicl(parent);
-                parent.InsertForm(mf);
+                // comic1 form = new comic1( new Comic() );
+                comicl form = new comicl(parent);
+                parent.InsertForm(form);
 
             }
             catch (Exception ex)
@@ -87,8 +84,8 @@ namespace bases_uno.Views
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            comicl mf = new comicl(parent);
-            parent.InsertForm(mf);
+            comicl form = new comicl(parent);
+            parent.InsertForm(form);
         }
 
         private void textBoxPublicationPrice_TextChanged(object sender, EventArgs e)
@@ -105,9 +102,5 @@ namespace bases_uno.Views
            
         }
 
-        private void textBoxPublicationPrice_MouseHover(object sender, EventArgs e)
-        {
-              
-        }
     }
 }

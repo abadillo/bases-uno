@@ -25,25 +25,19 @@ namespace bases_uno.Views.Components
 
             InitializeComponent();
                         
-            //label1.Text = lugar.Titlel;
-           
-            //label2.Text = lugar.Editor + "     " + lugar.PublicationDate.ToString();
-           
-            //label3.Text = "Volumen: " + ( (lugar.Volume == 0) ? lugar.Volume.ToString() : "" ) + "\n" + "Numero: " + lugar.Number.ToString() + "\n" + "Paginas: " + lugar.Pages.ToString();
-           
+            label1.Text = lugar.Name;
+            label2.Text = lugar.Type;
+            label3.Text = "Localidad: " + lugar.LocationID;
+
             Update();
 
         }
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            lugar1 mf = new lugar1(parent, id);
-            parent.InsertForm(mf);
+            lugar1 form = new lugar1(parent, id);
+            parent.InsertForm(form);
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

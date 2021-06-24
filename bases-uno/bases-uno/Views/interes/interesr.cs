@@ -44,9 +44,9 @@ namespace bases_uno.Views
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK ,MessageBoxIcon.Information);
 
-                // interes1 mf = new interes1( new Interes() );
-                interesl mf = new interesl(parent);
-                parent.InsertForm(mf);
+                // interes1 form = new interes1( new Interes() );
+                interesl form = new interesl(parent);
+                parent.InsertForm(form);
 
             }
             catch (Exception ex)
@@ -70,9 +70,14 @@ namespace bases_uno.Views
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            interesl mf = new interesl(parent);
-            parent.InsertForm(mf);
+            interesl form = new interesl(parent);
+            parent.InsertForm(form);
         }
 
+        private void btnatras_Click(object sender, EventArgs e)
+        {
+            interesl form = new interesl(parent);
+            parent.InsertForm(form);
+        }
     }
 }

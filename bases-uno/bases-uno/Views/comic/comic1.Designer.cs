@@ -349,6 +349,7 @@ namespace bases_uno.Views
             this.iconButton12.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton12.IconSize = 35;
+            this.iconButton12.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton12.Location = new System.Drawing.Point(365, 0);
             this.iconButton12.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton12.Name = "iconButton12";
@@ -406,6 +407,7 @@ namespace bases_uno.Views
             this.iconButton11.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton11.IconSize = 35;
+            this.iconButton11.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton11.Location = new System.Drawing.Point(365, 0);
             this.iconButton11.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton11.Name = "iconButton11";
@@ -463,6 +465,7 @@ namespace bases_uno.Views
             this.iconButton9.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton9.IconSize = 35;
+            this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton9.Location = new System.Drawing.Point(365, 0);
             this.iconButton9.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton9.Name = "iconButton9";
@@ -520,6 +523,7 @@ namespace bases_uno.Views
             this.iconButton19.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton19.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton19.IconSize = 35;
+            this.iconButton19.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton19.Location = new System.Drawing.Point(365, 0);
             this.iconButton19.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton19.Name = "iconButton19";
@@ -578,6 +582,7 @@ namespace bases_uno.Views
             this.iconButton18.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton18.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton18.IconSize = 35;
+            this.iconButton18.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton18.Location = new System.Drawing.Point(365, 0);
             this.iconButton18.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton18.Name = "iconButton18";
@@ -635,6 +640,7 @@ namespace bases_uno.Views
             this.iconButton17.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton17.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton17.IconSize = 35;
+            this.iconButton17.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton17.Location = new System.Drawing.Point(365, 0);
             this.iconButton17.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton17.Name = "iconButton17";
@@ -692,6 +698,7 @@ namespace bases_uno.Views
             this.iconButton10.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton10.IconSize = 35;
+            this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton10.Location = new System.Drawing.Point(365, 0);
             this.iconButton10.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton10.Name = "iconButton10";
@@ -749,6 +756,7 @@ namespace bases_uno.Views
             this.iconButton16.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton16.IconSize = 35;
+            this.iconButton16.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton16.Location = new System.Drawing.Point(365, 0);
             this.iconButton16.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton16.Name = "iconButton16";
@@ -806,6 +814,7 @@ namespace bases_uno.Views
             this.iconButton15.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton15.IconSize = 35;
+            this.iconButton15.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton15.Location = new System.Drawing.Point(365, 0);
             this.iconButton15.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton15.Name = "iconButton15";
@@ -864,6 +873,7 @@ namespace bases_uno.Views
             this.iconButton14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton14.IconSize = 35;
+            this.iconButton14.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton14.Location = new System.Drawing.Point(365, 0);
             this.iconButton14.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton14.Name = "iconButton14";

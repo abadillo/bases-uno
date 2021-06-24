@@ -272,7 +272,6 @@ namespace bases_uno.Views
             this.hrpanel.Name = "hrpanel";
             this.hrpanel.Size = new System.Drawing.Size(834, 48);
             this.hrpanel.TabIndex = 12;
-           
             // 
             // panel6
             // 

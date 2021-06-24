@@ -132,7 +132,7 @@ namespace bases_uno.Views
             // 
             // iconButton8
             // 
-            this.iconButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.iconButton8.BackColor = System.Drawing.Color.Gray;
             this.iconButton8.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton8.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton8.FlatAppearance.BorderSize = 0;
@@ -158,7 +158,7 @@ namespace bases_uno.Views
             // 
             // iconButton7
             // 
-            this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.iconButton7.BackColor = System.Drawing.Color.Gray;
             this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton7.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton7.FlatAppearance.BorderSize = 0;
@@ -291,7 +291,7 @@ namespace bases_uno.Views
             // 
             // iconButton2
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.iconButton2.BackColor = System.Drawing.Color.Gray;
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton2.FlatAppearance.BorderSize = 0;
@@ -317,7 +317,7 @@ namespace bases_uno.Views
             // 
             // iconButton1
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.iconButton1.BackColor = System.Drawing.Color.Gray;
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton1.FlatAppearance.BorderSize = 0;
