@@ -30,9 +30,9 @@ namespace bases_uno.Views
 			textBoxID.Text = comic.ID.ToString();
 			textBoxTitel.Text = comic.Titlel;
 			textBoxPublicationDate.Text = comic.PublicationDate.ToString();
-			radioButton1.Checked = comic.Color ? true : false;
-            radioButton2.Checked = comic.Cover ? true : false;
-            textBoxVolume.Text = (comic.Volume == 0) ? comic.Volume.ToString() : "";
+			radioButton1.Checked = comic.Color;
+            radioButton2.Checked = comic.Cover;
+            textBoxVolume.Text = (comic.Volume == 0) ? "" : comic.Volume.ToString();
 			textBoxNumber.Text = comic.Number.ToString();
 			textBoxPublicationPrice.Text = (comic.PublicationPrice == 0) ? comic.PublicationPrice.ToString() : "";
 			textBoxPages.Text = comic.Pages.ToString();
