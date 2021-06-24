@@ -61,11 +61,13 @@ namespace bases_uno.Views
             // 
             // dipanel1
             // 
+            this.dipanel1.AutoScroll = true;
             this.dipanel1.Controls.Add(this.reportViewer1);
             this.dipanel1.Controls.Add(this.label2);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dipanel1.Location = new System.Drawing.Point(15, 104);
             this.dipanel1.Name = "dipanel1";
+            this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 18, 0);
             this.dipanel1.Size = new System.Drawing.Size(834, 686);
             this.dipanel1.TabIndex = 14;
             // 
@@ -75,7 +77,7 @@ namespace bases_uno.Views
             this.reportViewer1.Location = new System.Drawing.Point(0, 40);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(834, 646);
+            this.reportViewer1.Size = new System.Drawing.Size(816, 646);
             this.reportViewer1.TabIndex = 21;
             // 
             // label2
@@ -85,7 +87,7 @@ namespace bases_uno.Views
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(834, 40);
+            this.label2.Size = new System.Drawing.Size(816, 40);
             this.label2.TabIndex = 22;
             this.label2.Text = "Ficha Comic";
             // 

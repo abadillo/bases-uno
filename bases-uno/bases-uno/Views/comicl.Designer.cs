@@ -63,17 +63,19 @@ namespace bases_uno.Views
             // 
             this.dipanel1.Controls.Add(this.flowLayoutPanel1);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel1.Location = new System.Drawing.Point(15, 104);
+            this.dipanel1.Location = new System.Drawing.Point(15, 78);
             this.dipanel1.Name = "dipanel1";
-            this.dipanel1.Size = new System.Drawing.Size(834, 638);
+            this.dipanel1.Size = new System.Drawing.Size(834, 664);
             this.dipanel1.TabIndex = 12;
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(834, 638);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(834, 664);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -81,7 +83,7 @@ namespace bases_uno.Views
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(834, 41);
+            this.panel1.Size = new System.Drawing.Size(834, 15);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 

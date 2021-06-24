@@ -51,7 +51,7 @@ namespace bases_uno.Views.Components
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(834, 92);
+            this.panel1.Size = new System.Drawing.Size(801, 92);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -60,7 +60,7 @@ namespace bases_uno.Views.Components
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(474, 10);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(284, 72);
+            this.panel3.Size = new System.Drawing.Size(251, 72);
             this.panel3.TabIndex = 1;
             // 
             // label3
@@ -69,8 +69,9 @@ namespace bases_uno.Views.Components
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(284, 72);
+            this.label3.Size = new System.Drawing.Size(251, 72);
             this.label3.TabIndex = 30;
             this.label3.Text = "some stuff2";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -85,7 +86,7 @@ namespace bases_uno.Views.Components
             this.btnadelante.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.btnadelante.IconColor = System.Drawing.Color.LightGray;
             this.btnadelante.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnadelante.Location = new System.Drawing.Point(758, 10);
+            this.btnadelante.Location = new System.Drawing.Point(725, 10);
             this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
             this.btnadelante.Name = "btnadelante";
             this.btnadelante.Size = new System.Drawing.Size(66, 72);
@@ -132,7 +133,7 @@ namespace bases_uno.Views.Components
             this.BackColor = System.Drawing.Color.LightGray;
             this.Controls.Add(this.panel1);
             this.Name = "itemcomic";
-            this.Size = new System.Drawing.Size(834, 95);
+            this.Size = new System.Drawing.Size(801, 95);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

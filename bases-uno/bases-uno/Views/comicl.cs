@@ -28,7 +28,7 @@ namespace bases_uno.Views
 
             InitializeComponent();
 			
-            label1.Text = "Listado Comics";
+            label1.Text = "Listado: Comics";
 
 
             for (int i = 0; i < list.Count; i++)

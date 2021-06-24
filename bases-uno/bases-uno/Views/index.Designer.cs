@@ -54,7 +54,6 @@ namespace bases_uno.Views
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.stpanel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.stpanel1.SuspendLayout();
             this.stpanel3.SuspendLayout();
@@ -351,15 +350,6 @@ namespace bases_uno.Views
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar1.Location = new System.Drawing.Point(1170, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(14, 661);
-            this.vScrollBar1.TabIndex = 4;
-            this.vScrollBar1.Visible = false;
-            // 
             // mainpanel
             // 
             this.mainpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
@@ -367,7 +357,7 @@ namespace bases_uno.Views
             this.mainpanel.Location = new System.Drawing.Point(304, 0);
             this.mainpanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(866, 661);
+            this.mainpanel.Size = new System.Drawing.Size(880, 661);
             this.mainpanel.TabIndex = 5;
             this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
@@ -378,7 +368,6 @@ namespace bases_uno.Views
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.mainpanel);
-            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.stpanel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -418,7 +407,6 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton iconButton5;
         private Panel stpanel13;
         private FontAwesome.Sharp.IconButton iconButton6;
-        private VScrollBar vScrollBar1;
         private Panel mainpanel;
 
         #endregion
