@@ -72,7 +72,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO modelo (nombre, descripcion) " +
+                string Query = "INSERT INTO interes (nombre, descripcion) " +
                     "VALUES (@nombre, @descripcion) RETURNING id";
                 Script = new NpgsqlCommand(Query, Connection);
 
