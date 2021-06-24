@@ -49,15 +49,27 @@ namespace bases_uno.Views
         {
             try
             {
-
-
                 comic.Titlel = textBoxTitel.Text;
                 comic.Editor = textBoxEditor.Text;
                 comic.Synopsis = textBoxSynopsis.Text;
-                comic.Volume = int.Parse(textBoxVolume.Text);
+                if (textBoxVolume.Text == "")
+                {
+                    comic.Volume = 0;
+                }
+                else
+                {
+                    comic.Volume = int.Parse(textBoxVolume.Text);
+                }
                 comic.Number = int.Parse(textBoxNumber.Text);
                 comic.Pages = int.Parse(textBoxPages.Text);
-                comic.PublicationPrice = float.Parse(textBoxPublicationPrice.Text);
+                if (textBoxPublicationPrice.Text == "")
+                {
+                    comic.PublicationPrice = 0;
+                }
+                else
+                {
+                    comic.PublicationPrice = int.Parse(textBoxPublicationPrice.Text);
+                }
                 comic.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
                 comic.Cover = radioButton2.Checked;
                 comic.Color = radioButton1.Checked;
