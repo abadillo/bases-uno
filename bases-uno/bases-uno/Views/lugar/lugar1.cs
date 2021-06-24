@@ -1,4 +1,5 @@
-﻿using Engine.Classes;
+﻿using Engine.DBConnection;
+using Engine.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace bases_uno.Views
         public int id;
 
         public index parent;
-        public Lugar lugar;
+        public Place lugar;
        
 
         public lugar1(index parent, int id )
@@ -26,7 +27,7 @@ namespace bases_uno.Views
             this.id = id;
 
             InitializeComponent();
-			Lugar lugar = new Lugar(id);
+			Place lugar = new Place(id);
 			// textBoxID.Text = lugar.ID.ToString();
 			// textBoxTitel.Text = lugar.Titlel;
 			// textBoxPublicationDate.Text = lugar.PublicationDate.ToString();
@@ -81,8 +82,8 @@ namespace bases_uno.Views
             //     MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-            //     lugar1 mf = new lugar1(parent, lugar.ID);
-            //     parent.InsertForm(mf);
+            //     lugar1 form = new lugar1(parent, lugar.ID);
+            //     parent.InsertForm(form);
 
             // }
             // catch (Exception ex)
@@ -95,21 +96,30 @@ namespace bases_uno.Views
 
         private void Eliminar()
         {
-            try
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea eliminar este Lugar?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dialogResult == DialogResult.Yes)
+
+                try
+                {
+                    lugar.Delete();
+                    MessageBox.Show("Eliminacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lugarl form = new lugarl(parent);
+                    parent.InsertForm(form);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            else if (dialogResult == DialogResult.No)
             {
-
-                MessageBox.Show("¿Está seguro que desea eliminar este Lugar?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                lugar.Delete();
-                lugarl mf = new lugarl(parent);
-
-            }
-            catch (Exception)
-            {
-
-                //throw;
+                //do something else
             }
 
         }
+     
 
         public void EnableInput(TextBox input, FontAwesome.Sharp.IconButton iconbutton)
         {

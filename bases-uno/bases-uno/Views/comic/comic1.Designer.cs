@@ -118,8 +118,8 @@ namespace bases_uno.Views
             this.stpanel7.Location = new System.Drawing.Point(0, 0);
             this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
             this.stpanel7.Name = "stpanel7";
-            this.stpanel7.Padding = new System.Windows.Forms.Padding(20, 18, 20, 18);
-            this.stpanel7.Size = new System.Drawing.Size(1152, 932);
+            this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
+            this.stpanel7.Size = new System.Drawing.Size(864, 757);
             this.stpanel7.TabIndex = 1;
             // 
             // dipanel1
@@ -133,11 +133,10 @@ namespace bases_uno.Views
             this.dipanel1.Controls.Add(this.tableLayoutPanel2);
             this.dipanel1.Controls.Add(this.label2);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel1.Location = new System.Drawing.Point(20, 127);
-            this.dipanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dipanel1.Location = new System.Drawing.Point(15, 104);
             this.dipanel1.Name = "dipanel1";
-            this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 24, 0);
-            this.dipanel1.Size = new System.Drawing.Size(1112, 787);
+            this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 18, 0);
+            this.dipanel1.Size = new System.Drawing.Size(834, 638);
             this.dipanel1.TabIndex = 12;
             // 
             // tableLayoutPanel1
@@ -150,13 +149,12 @@ namespace bases_uno.Views
             this.tableLayoutPanel1.Controls.Add(this.btnmodificar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btneliminar, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 677);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 551);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1088, 49);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(816, 40);
             this.tableLayoutPanel1.TabIndex = 35;
             // 
             // btncancelar
@@ -168,10 +166,9 @@ namespace bases_uno.Views
             this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancelar.ForeColor = System.Drawing.Color.Black;
-            this.btncancelar.Location = new System.Drawing.Point(366, 4);
-            this.btncancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncancelar.Location = new System.Drawing.Point(275, 3);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(354, 41);
+            this.btncancelar.Size = new System.Drawing.Size(266, 34);
             this.btncancelar.TabIndex = 2;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = false;
@@ -186,10 +183,9 @@ namespace bases_uno.Views
             this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnmodificar.Location = new System.Drawing.Point(4, 4);
-            this.btnmodificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmodificar.Location = new System.Drawing.Point(3, 3);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(354, 41);
+            this.btnmodificar.Size = new System.Drawing.Size(266, 34);
             this.btnmodificar.TabIndex = 1;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = false;
@@ -204,10 +200,9 @@ namespace bases_uno.Views
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.LightGray;
-            this.btneliminar.Location = new System.Drawing.Point(728, 4);
-            this.btneliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btneliminar.Location = new System.Drawing.Point(547, 3);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(356, 41);
+            this.btneliminar.Size = new System.Drawing.Size(266, 34);
             this.btneliminar.TabIndex = 0;
             this.btneliminar.Text = "ELIMINAR";
             this.btneliminar.UseVisualStyleBackColor = false;
@@ -218,20 +213,18 @@ namespace bases_uno.Views
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.LightGray;
-            this.label14.Location = new System.Drawing.Point(0, 628);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(0, 511);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(1088, 49);
+            this.label14.Size = new System.Drawing.Size(816, 40);
             this.label14.TabIndex = 34;
             this.label14.Text = "Opciones";
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 600);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(0, 488);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1088, 28);
+            this.panel3.Size = new System.Drawing.Size(816, 23);
             this.panel3.TabIndex = 33;
             // 
             // textBoxSynopsis
@@ -241,12 +234,12 @@ namespace bases_uno.Views
             this.textBoxSynopsis.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBoxSynopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxSynopsis.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxSynopsis.Location = new System.Drawing.Point(0, 382);
-            this.textBoxSynopsis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSynopsis.Location = new System.Drawing.Point(0, 311);
+            this.textBoxSynopsis.MaxLength = 1000;
             this.textBoxSynopsis.Multiline = true;
             this.textBoxSynopsis.Name = "textBoxSynopsis";
             this.textBoxSynopsis.ReadOnly = true;
-            this.textBoxSynopsis.Size = new System.Drawing.Size(1088, 218);
+            this.textBoxSynopsis.Size = new System.Drawing.Size(816, 177);
             this.textBoxSynopsis.TabIndex = 32;
             // 
             // spacerpanel2
@@ -254,11 +247,10 @@ namespace bases_uno.Views
             this.spacerpanel2.Controls.Add(this.iconButton1);
             this.spacerpanel2.Controls.Add(this.label7);
             this.spacerpanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.spacerpanel2.Location = new System.Drawing.Point(0, 311);
-            this.spacerpanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spacerpanel2.Location = new System.Drawing.Point(0, 253);
             this.spacerpanel2.Name = "spacerpanel2";
-            this.spacerpanel2.Padding = new System.Windows.Forms.Padding(0, 25, 5, 0);
-            this.spacerpanel2.Size = new System.Drawing.Size(1088, 71);
+            this.spacerpanel2.Padding = new System.Windows.Forms.Padding(0, 20, 4, 0);
+            this.spacerpanel2.Size = new System.Drawing.Size(816, 58);
             this.spacerpanel2.TabIndex = 30;
             // 
             // iconButton1
@@ -273,10 +265,10 @@ namespace bases_uno.Views
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
-            this.iconButton1.Location = new System.Drawing.Point(1034, 25);
+            this.iconButton1.Location = new System.Drawing.Point(775, 20);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(49, 46);
+            this.iconButton1.Size = new System.Drawing.Size(37, 38);
             this.iconButton1.TabIndex = 32;
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
@@ -286,10 +278,9 @@ namespace bases_uno.Views
             this.label7.Dock = System.Windows.Forms.DockStyle.Left;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.LightGray;
-            this.label7.Location = new System.Drawing.Point(0, 25);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(0, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(304, 46);
+            this.label7.Size = new System.Drawing.Size(228, 38);
             this.label7.TabIndex = 31;
             this.label7.Text = "Sinopsis";
             // 
@@ -309,8 +300,7 @@ namespace bases_uno.Views
             this.tableLayoutPanel2.Controls.Add(this.panel9, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel8, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 49);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 40);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -318,7 +308,7 @@ namespace bases_uno.Views
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1088, 262);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 213);
             this.tableLayoutPanel2.TabIndex = 29;
             // 
             // panel6
@@ -327,10 +317,9 @@ namespace bases_uno.Views
             this.panel6.Controls.Add(this.iconButton12);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(4, 212);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Location = new System.Drawing.Point(3, 171);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(536, 46);
+            this.panel6.Size = new System.Drawing.Size(402, 39);
             this.panel6.TabIndex = 10;
             // 
             // radioButton2
@@ -340,10 +329,10 @@ namespace bases_uno.Views
             this.radioButton2.Enabled = false;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButton2.Location = new System.Drawing.Point(470, 0);
+            this.radioButton2.Location = new System.Drawing.Point(351, 0);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(17, 46);
+            this.radioButton2.Size = new System.Drawing.Size(14, 39);
             this.radioButton2.TabIndex = 16;
             this.radioButton2.TabStop = true;
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -360,10 +349,10 @@ namespace bases_uno.Views
             this.iconButton12.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton12.IconSize = 35;
-            this.iconButton12.Location = new System.Drawing.Point(487, 0);
+            this.iconButton12.Location = new System.Drawing.Point(365, 0);
             this.iconButton12.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton12.Name = "iconButton12";
-            this.iconButton12.Size = new System.Drawing.Size(49, 46);
+            this.iconButton12.Size = new System.Drawing.Size(37, 39);
             this.iconButton12.TabIndex = 15;
             this.iconButton12.UseVisualStyleBackColor = false;
             this.iconButton12.Click += new System.EventHandler(this.iconButton12_Click);
@@ -375,9 +364,8 @@ namespace bases_uno.Views
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.LightGray;
             this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 29);
+            this.label6.Size = new System.Drawing.Size(85, 24);
             this.label6.TabIndex = 14;
             this.label6.Text = "cubierta";
             // 
@@ -387,10 +375,9 @@ namespace bases_uno.Views
             this.panel5.Controls.Add(this.iconButton11);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(548, 212);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(411, 171);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(536, 46);
+            this.panel5.Size = new System.Drawing.Size(402, 39);
             this.panel5.TabIndex = 9;
             // 
             // textBoxEditor
@@ -400,11 +387,10 @@ namespace bases_uno.Views
             this.textBoxEditor.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBoxEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxEditor.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxEditor.Location = new System.Drawing.Point(114, 0);
-            this.textBoxEditor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEditor.Location = new System.Drawing.Point(85, 0);
             this.textBoxEditor.Name = "textBoxEditor";
             this.textBoxEditor.ReadOnly = true;
-            this.textBoxEditor.Size = new System.Drawing.Size(373, 27);
+            this.textBoxEditor.Size = new System.Drawing.Size(280, 22);
             this.textBoxEditor.TabIndex = 16;
             this.textBoxEditor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -420,10 +406,10 @@ namespace bases_uno.Views
             this.iconButton11.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton11.IconSize = 35;
-            this.iconButton11.Location = new System.Drawing.Point(487, 0);
+            this.iconButton11.Location = new System.Drawing.Point(365, 0);
             this.iconButton11.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton11.Name = "iconButton11";
-            this.iconButton11.Size = new System.Drawing.Size(49, 46);
+            this.iconButton11.Size = new System.Drawing.Size(37, 39);
             this.iconButton11.TabIndex = 15;
             this.iconButton11.UseVisualStyleBackColor = false;
             this.iconButton11.Click += new System.EventHandler(this.iconButton11_Click);
@@ -435,9 +421,8 @@ namespace bases_uno.Views
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.LightGray;
             this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 29);
+            this.label5.Size = new System.Drawing.Size(63, 24);
             this.label5.TabIndex = 14;
             this.label5.Text = "editor";
             // 
@@ -447,10 +432,9 @@ namespace bases_uno.Views
             this.panel4.Controls.Add(this.iconButton9);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(548, 160);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(411, 129);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(536, 44);
+            this.panel4.Size = new System.Drawing.Size(402, 36);
             this.panel4.TabIndex = 8;
             // 
             // textBoxPages
@@ -460,11 +444,10 @@ namespace bases_uno.Views
             this.textBoxPages.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBoxPages.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxPages.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxPages.Location = new System.Drawing.Point(242, 0);
-            this.textBoxPages.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPages.Location = new System.Drawing.Point(181, 0);
             this.textBoxPages.Name = "textBoxPages";
             this.textBoxPages.ReadOnly = true;
-            this.textBoxPages.Size = new System.Drawing.Size(245, 27);
+            this.textBoxPages.Size = new System.Drawing.Size(184, 22);
             this.textBoxPages.TabIndex = 16;
             this.textBoxPages.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -480,10 +463,10 @@ namespace bases_uno.Views
             this.iconButton9.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton9.IconSize = 35;
-            this.iconButton9.Location = new System.Drawing.Point(487, 0);
+            this.iconButton9.Location = new System.Drawing.Point(365, 0);
             this.iconButton9.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton9.Name = "iconButton9";
-            this.iconButton9.Size = new System.Drawing.Size(49, 44);
+            this.iconButton9.Size = new System.Drawing.Size(37, 36);
             this.iconButton9.TabIndex = 15;
             this.iconButton9.UseVisualStyleBackColor = false;
             this.iconButton9.Click += new System.EventHandler(this.iconButton9_Click);
@@ -495,9 +478,8 @@ namespace bases_uno.Views
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 29);
+            this.label4.Size = new System.Drawing.Size(83, 24);
             this.label4.TabIndex = 14;
             this.label4.Text = "paginas";
             // 
@@ -507,10 +489,9 @@ namespace bases_uno.Views
             this.panel13.Controls.Add(this.iconButton19);
             this.panel13.Controls.Add(this.label13);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(548, 108);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Location = new System.Drawing.Point(411, 87);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(536, 44);
+            this.panel13.Size = new System.Drawing.Size(402, 36);
             this.panel13.TabIndex = 7;
             // 
             // textBoxPublicationPrice
@@ -520,11 +501,10 @@ namespace bases_uno.Views
             this.textBoxPublicationPrice.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBoxPublicationPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxPublicationPrice.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxPublicationPrice.Location = new System.Drawing.Point(242, 0);
-            this.textBoxPublicationPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPublicationPrice.Location = new System.Drawing.Point(181, 0);
             this.textBoxPublicationPrice.Name = "textBoxPublicationPrice";
             this.textBoxPublicationPrice.ReadOnly = true;
-            this.textBoxPublicationPrice.Size = new System.Drawing.Size(245, 27);
+            this.textBoxPublicationPrice.Size = new System.Drawing.Size(184, 22);
             this.textBoxPublicationPrice.TabIndex = 16;
             this.textBoxPublicationPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -540,10 +520,10 @@ namespace bases_uno.Views
             this.iconButton19.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton19.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton19.IconSize = 35;
-            this.iconButton19.Location = new System.Drawing.Point(487, 0);
+            this.iconButton19.Location = new System.Drawing.Point(365, 0);
             this.iconButton19.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton19.Name = "iconButton19";
-            this.iconButton19.Size = new System.Drawing.Size(49, 44);
+            this.iconButton19.Size = new System.Drawing.Size(37, 36);
             this.iconButton19.TabIndex = 15;
             this.iconButton19.UseVisualStyleBackColor = false;
             this.iconButton19.Click += new System.EventHandler(this.iconButton19_Click);
@@ -555,9 +535,8 @@ namespace bases_uno.Views
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.LightGray;
             this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(228, 29);
+            this.label13.Size = new System.Drawing.Size(183, 24);
             this.label13.TabIndex = 14;
             this.label13.Text = "precio publicacion";
             // 
@@ -567,10 +546,9 @@ namespace bases_uno.Views
             this.panel12.Controls.Add(this.iconButton18);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(4, 160);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Location = new System.Drawing.Point(3, 129);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(536, 44);
+            this.panel12.Size = new System.Drawing.Size(402, 36);
             this.panel12.TabIndex = 6;
             // 
             // radioButton1
@@ -580,10 +558,10 @@ namespace bases_uno.Views
             this.radioButton1.Enabled = false;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButton1.Location = new System.Drawing.Point(470, 0);
+            this.radioButton1.Location = new System.Drawing.Point(351, 0);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(17, 44);
+            this.radioButton1.Size = new System.Drawing.Size(14, 36);
             this.radioButton1.TabIndex = 16;
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -600,10 +578,10 @@ namespace bases_uno.Views
             this.iconButton18.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton18.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton18.IconSize = 35;
-            this.iconButton18.Location = new System.Drawing.Point(487, 0);
+            this.iconButton18.Location = new System.Drawing.Point(365, 0);
             this.iconButton18.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton18.Name = "iconButton18";
-            this.iconButton18.Size = new System.Drawing.Size(49, 44);
+            this.iconButton18.Size = new System.Drawing.Size(37, 36);
             this.iconButton18.TabIndex = 15;
             this.iconButton18.UseVisualStyleBackColor = false;
             this.iconButton18.Click += new System.EventHandler(this.iconButton18_Click);
@@ -615,9 +593,8 @@ namespace bases_uno.Views
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.LightGray;
             this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 29);
+            this.label12.Size = new System.Drawing.Size(57, 24);
             this.label12.TabIndex = 14;
             this.label12.Text = "color";
             // 
@@ -627,10 +604,9 @@ namespace bases_uno.Views
             this.panel11.Controls.Add(this.iconButton17);
             this.panel11.Controls.Add(this.label11);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(4, 56);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Location = new System.Drawing.Point(3, 45);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(536, 44);
+            this.panel11.Size = new System.Drawing.Size(402, 36);
             this.panel11.TabIndex = 5;
             // 
             // textBoxTitel
@@ -640,11 +616,10 @@ namespace bases_uno.Views
             this.textBoxTitel.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBoxTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxTitel.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxTitel.Location = new System.Drawing.Point(87, 0);
-            this.textBoxTitel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTitel.Location = new System.Drawing.Point(65, 0);
             this.textBoxTitel.Name = "textBoxTitel";
             this.textBoxTitel.ReadOnly = true;
-            this.textBoxTitel.Size = new System.Drawing.Size(400, 27);
+            this.textBoxTitel.Size = new System.Drawing.Size(300, 22);
             this.textBoxTitel.TabIndex = 16;
             this.textBoxTitel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -660,10 +635,10 @@ namespace bases_uno.Views
             this.iconButton17.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton17.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton17.IconSize = 35;
-            this.iconButton17.Location = new System.Drawing.Point(487, 0);
+            this.iconButton17.Location = new System.Drawing.Point(365, 0);
             this.iconButton17.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton17.Name = "iconButton17";
-            this.iconButton17.Size = new System.Drawing.Size(49, 44);
+            this.iconButton17.Size = new System.Drawing.Size(37, 36);
             this.iconButton17.TabIndex = 15;
             this.iconButton17.UseVisualStyleBackColor = false;
             this.iconButton17.Click += new System.EventHandler(this.iconButton17_Click);
@@ -675,9 +650,8 @@ namespace bases_uno.Views
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(0, 0);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 29);
+            this.label11.Size = new System.Drawing.Size(54, 24);
             this.label11.TabIndex = 14;
             this.label11.Text = "titulo";
             // 
@@ -687,10 +661,9 @@ namespace bases_uno.Views
             this.panel7.Controls.Add(this.iconButton10);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(548, 4);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Location = new System.Drawing.Point(411, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(536, 44);
+            this.panel7.Size = new System.Drawing.Size(402, 36);
             this.panel7.TabIndex = 1;
             // 
             // textBoxVolume
@@ -700,11 +673,10 @@ namespace bases_uno.Views
             this.textBoxVolume.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBoxVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxVolume.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxVolume.Location = new System.Drawing.Point(242, 0);
-            this.textBoxVolume.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxVolume.Location = new System.Drawing.Point(181, 0);
             this.textBoxVolume.Name = "textBoxVolume";
             this.textBoxVolume.ReadOnly = true;
-            this.textBoxVolume.Size = new System.Drawing.Size(245, 27);
+            this.textBoxVolume.Size = new System.Drawing.Size(184, 22);
             this.textBoxVolume.TabIndex = 16;
             this.textBoxVolume.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -720,10 +692,10 @@ namespace bases_uno.Views
             this.iconButton10.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton10.IconSize = 35;
-            this.iconButton10.Location = new System.Drawing.Point(487, 0);
+            this.iconButton10.Location = new System.Drawing.Point(365, 0);
             this.iconButton10.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton10.Name = "iconButton10";
-            this.iconButton10.Size = new System.Drawing.Size(49, 44);
+            this.iconButton10.Size = new System.Drawing.Size(37, 36);
             this.iconButton10.TabIndex = 15;
             this.iconButton10.UseVisualStyleBackColor = false;
             this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
@@ -735,9 +707,8 @@ namespace bases_uno.Views
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 29);
+            this.label3.Size = new System.Drawing.Size(90, 24);
             this.label3.TabIndex = 14;
             this.label3.Text = "volumen";
             // 
@@ -747,10 +718,9 @@ namespace bases_uno.Views
             this.panel10.Controls.Add(this.iconButton16);
             this.panel10.Controls.Add(this.label10);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(4, 108);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Location = new System.Drawing.Point(3, 87);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(536, 44);
+            this.panel10.Size = new System.Drawing.Size(402, 36);
             this.panel10.TabIndex = 4;
             // 
             // textBoxPublicationDate
@@ -760,11 +730,10 @@ namespace bases_uno.Views
             this.textBoxPublicationDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxPublicationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxPublicationDate.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxPublicationDate.Location = new System.Drawing.Point(217, 0);
-            this.textBoxPublicationDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPublicationDate.Location = new System.Drawing.Point(175, 0);
             this.textBoxPublicationDate.Name = "textBoxPublicationDate";
             this.textBoxPublicationDate.ReadOnly = true;
-            this.textBoxPublicationDate.Size = new System.Drawing.Size(270, 27);
+            this.textBoxPublicationDate.Size = new System.Drawing.Size(190, 22);
             this.textBoxPublicationDate.TabIndex = 16;
             this.textBoxPublicationDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -780,10 +749,10 @@ namespace bases_uno.Views
             this.iconButton16.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton16.IconSize = 35;
-            this.iconButton16.Location = new System.Drawing.Point(487, 0);
+            this.iconButton16.Location = new System.Drawing.Point(365, 0);
             this.iconButton16.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton16.Name = "iconButton16";
-            this.iconButton16.Size = new System.Drawing.Size(49, 44);
+            this.iconButton16.Size = new System.Drawing.Size(37, 36);
             this.iconButton16.TabIndex = 15;
             this.iconButton16.UseVisualStyleBackColor = false;
             this.iconButton16.Click += new System.EventHandler(this.iconButton16_Click);
@@ -795,9 +764,8 @@ namespace bases_uno.Views
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.LightGray;
             this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(217, 29);
+            this.label10.Size = new System.Drawing.Size(175, 24);
             this.label10.TabIndex = 14;
             this.label10.Text = "fecha publicacion";
             // 
@@ -807,10 +775,9 @@ namespace bases_uno.Views
             this.panel9.Controls.Add(this.iconButton15);
             this.panel9.Controls.Add(this.label9);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(548, 56);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Location = new System.Drawing.Point(411, 45);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(536, 44);
+            this.panel9.Size = new System.Drawing.Size(402, 36);
             this.panel9.TabIndex = 3;
             // 
             // textBoxNumber
@@ -820,11 +787,10 @@ namespace bases_uno.Views
             this.textBoxNumber.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBoxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxNumber.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxNumber.Location = new System.Drawing.Point(242, 0);
-            this.textBoxNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNumber.Location = new System.Drawing.Point(181, 0);
             this.textBoxNumber.Name = "textBoxNumber";
             this.textBoxNumber.ReadOnly = true;
-            this.textBoxNumber.Size = new System.Drawing.Size(245, 27);
+            this.textBoxNumber.Size = new System.Drawing.Size(184, 22);
             this.textBoxNumber.TabIndex = 16;
             this.textBoxNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -840,10 +806,10 @@ namespace bases_uno.Views
             this.iconButton15.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton15.IconSize = 35;
-            this.iconButton15.Location = new System.Drawing.Point(487, 0);
+            this.iconButton15.Location = new System.Drawing.Point(365, 0);
             this.iconButton15.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton15.Name = "iconButton15";
-            this.iconButton15.Size = new System.Drawing.Size(49, 44);
+            this.iconButton15.Size = new System.Drawing.Size(37, 36);
             this.iconButton15.TabIndex = 15;
             this.iconButton15.UseVisualStyleBackColor = false;
             this.iconButton15.Click += new System.EventHandler(this.iconButton15_Click);
@@ -855,9 +821,8 @@ namespace bases_uno.Views
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 29);
+            this.label9.Size = new System.Drawing.Size(82, 24);
             this.label9.TabIndex = 14;
             this.label9.Text = "numero";
             // 
@@ -867,10 +832,9 @@ namespace bases_uno.Views
             this.panel8.Controls.Add(this.iconButton14);
             this.panel8.Controls.Add(this.label8);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(4, 4);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(536, 44);
+            this.panel8.Size = new System.Drawing.Size(402, 36);
             this.panel8.TabIndex = 2;
             // 
             // textBoxID
@@ -880,11 +844,10 @@ namespace bases_uno.Views
             this.textBoxID.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxID.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxID.Location = new System.Drawing.Point(219, 0);
-            this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxID.Location = new System.Drawing.Point(164, 0);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(268, 27);
+            this.textBoxID.Size = new System.Drawing.Size(201, 22);
             this.textBoxID.TabIndex = 16;
             this.textBoxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -901,10 +864,10 @@ namespace bases_uno.Views
             this.iconButton14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton14.IconSize = 35;
-            this.iconButton14.Location = new System.Drawing.Point(487, 0);
+            this.iconButton14.Location = new System.Drawing.Point(365, 0);
             this.iconButton14.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton14.Name = "iconButton14";
-            this.iconButton14.Size = new System.Drawing.Size(49, 44);
+            this.iconButton14.Size = new System.Drawing.Size(37, 36);
             this.iconButton14.TabIndex = 15;
             this.iconButton14.UseVisualStyleBackColor = false;
             this.iconButton14.Click += new System.EventHandler(this.iconButton14_Click);
@@ -916,9 +879,8 @@ namespace bases_uno.Views
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 29);
+            this.label8.Size = new System.Drawing.Size(27, 24);
             this.label8.TabIndex = 14;
             this.label8.Text = "id";
             // 
@@ -928,19 +890,17 @@ namespace bases_uno.Views
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1088, 49);
+            this.label2.Size = new System.Drawing.Size(816, 40);
             this.label2.TabIndex = 28;
             this.label2.Text = "General";
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(20, 77);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(15, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1112, 50);
+            this.panel1.Size = new System.Drawing.Size(834, 41);
             this.panel1.TabIndex = 11;
             // 
             // hrpanel
@@ -948,10 +908,9 @@ namespace bases_uno.Views
             this.hrpanel.Controls.Add(this.panel2);
             this.hrpanel.Controls.Add(this.label1);
             this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.hrpanel.Location = new System.Drawing.Point(20, 18);
-            this.hrpanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hrpanel.Location = new System.Drawing.Point(15, 15);
             this.hrpanel.Name = "hrpanel";
-            this.hrpanel.Size = new System.Drawing.Size(1112, 59);
+            this.hrpanel.Size = new System.Drawing.Size(834, 48);
             this.hrpanel.TabIndex = 10;
             // 
             // panel2
@@ -959,10 +918,9 @@ namespace bases_uno.Views
             this.panel2.Controls.Add(this.btnadelante);
             this.panel2.Controls.Add(this.btnatras);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(925, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(694, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 59);
+            this.panel2.Size = new System.Drawing.Size(140, 48);
             this.panel2.TabIndex = 1;
             // 
             // btnadelante
@@ -975,10 +933,10 @@ namespace bases_uno.Views
             this.btnadelante.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             this.btnadelante.IconColor = System.Drawing.Color.LightGray;
             this.btnadelante.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnadelante.Location = new System.Drawing.Point(99, 0);
+            this.btnadelante.Location = new System.Drawing.Point(74, 0);
             this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
             this.btnadelante.Name = "btnadelante";
-            this.btnadelante.Size = new System.Drawing.Size(88, 59);
+            this.btnadelante.Size = new System.Drawing.Size(66, 48);
             this.btnadelante.TabIndex = 5;
             this.btnadelante.UseVisualStyleBackColor = false;
             this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
@@ -996,7 +954,7 @@ namespace bases_uno.Views
             this.btnatras.Location = new System.Drawing.Point(0, 0);
             this.btnatras.Margin = new System.Windows.Forms.Padding(0);
             this.btnatras.Name = "btnatras";
-            this.btnatras.Size = new System.Drawing.Size(88, 59);
+            this.btnatras.Size = new System.Drawing.Size(66, 48);
             this.btnatras.TabIndex = 4;
             this.btnatras.UseVisualStyleBackColor = false;
             this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
@@ -1008,19 +966,17 @@ namespace bases_uno.Views
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 63);
+            this.label1.Size = new System.Drawing.Size(0, 51);
             this.label1.TabIndex = 0;
             // 
             // comic1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 932);
+            this.ClientSize = new System.Drawing.Size(864, 757);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "comic1";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);

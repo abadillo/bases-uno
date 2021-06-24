@@ -45,68 +45,83 @@ namespace bases_uno.Views
             this.comic = comic;
 		}
 
+     
         private void Modificar()
         {
-            try
+            comic.Titlel = textBoxTitel.Text;
+            comic.Editor = textBoxEditor.Text;
+            comic.Synopsis = textBoxSynopsis.Text;
+            if (textBoxVolume.Text == "")
             {
-                comic.Titlel = textBoxTitel.Text;
-                comic.Editor = textBoxEditor.Text;
-                comic.Synopsis = textBoxSynopsis.Text;
-                if (textBoxVolume.Text == "")
-                {
-                    comic.Volume = 0;
-                }
-                else
-                {
-                    comic.Volume = int.Parse(textBoxVolume.Text);
-                }
-                comic.Number = int.Parse(textBoxNumber.Text);
-                comic.Pages = int.Parse(textBoxPages.Text);
-                if (textBoxPublicationPrice.Text == "")
-                {
-                    comic.PublicationPrice = 0;
-                }
-                else
-                {
-                    comic.PublicationPrice = int.Parse(textBoxPublicationPrice.Text);
-                }
-                comic.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
-                comic.Cover = radioButton2.Checked;
-                comic.Color = radioButton1.Checked;
-
-                MessageBox.Show("¿Está seguro que desea modificar este Comic?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                comic.Update();
-
-                MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                comic1 mf = new comic1(parent, comic.ID);
-                parent.InsertForm(mf);
-
+                comic.Volume = 0;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                comic.Volume = int.Parse(textBoxVolume.Text);
             }
+            comic.Number = int.Parse(textBoxNumber.Text);
+            comic.Pages = int.Parse(textBoxPages.Text);
+            if (textBoxPublicationPrice.Text == "")
+            {
+                comic.PublicationPrice = 0;
+            }
+            else
+            {
+                comic.PublicationPrice = int.Parse(textBoxPublicationPrice.Text);
+            }
+            comic.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
+            comic.Cover = radioButton2.Checked;
+            comic.Color = radioButton1.Checked;
+
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Comic?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dialogResult == DialogResult.Yes)
+
+                try
+                {
+                    comic.Update();
+
+                    MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    comic1 form = new comic1(parent, comic.ID);
+                    parent.InsertForm(form);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+
 
         }
 
         private void Eliminar()
         {
-            try
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea eliminar este Comic?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dialogResult == DialogResult.Yes)
+
+                try
+                {
+                    comic.Delete();
+                    MessageBox.Show("Eliminacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    comicl form = new comicl(parent);
+                    parent.InsertForm(form);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            else if (dialogResult == DialogResult.No)
             {
-
-                MessageBox.Show("¿Está seguro que desea eliminar este Comic?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                comic.Delete();
-                comicl mf = new comicl(parent);
-
-            }
-            catch (Exception)
-            {
-
-                //throw;
+                //do something else
             }
 
         }

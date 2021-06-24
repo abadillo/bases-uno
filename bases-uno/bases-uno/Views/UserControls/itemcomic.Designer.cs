@@ -1,7 +1,7 @@
 ﻿
 namespace bases_uno.Views.Components
 {
-    partial class iteminteres
+    partial class itemcomic
     {
         /// <summary> 
         /// Required designer variable.
@@ -106,7 +106,7 @@ namespace bases_uno.Views.Components
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(0, 43);
@@ -124,15 +124,15 @@ namespace bases_uno.Views.Components
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(464, 37);
             this.label1.TabIndex = 29;
-            this.label1.Text = "interes tile";
+            this.label1.Text = "comic tile";
             // 
-            // iteminteres
+            // itemcomic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.Controls.Add(this.panel1);
-            this.Name = "iteminteres";
+            this.Name = "itemcomic";
             this.Size = new System.Drawing.Size(801, 95);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

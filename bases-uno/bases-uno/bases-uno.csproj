@@ -137,28 +137,40 @@
     <Compile Include="Reports\DataSets\TestDataSet.cs">
       <DependentUpon>TestDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Views\Components\itemcomic.cs">
+    <Compile Include="Views\UserControls\itemcomic.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Components\itemcomic.Designer.cs">
+    <Compile Include="Views\UserControls\itemcomic.Designer.cs">
       <DependentUpon>itemcomic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Components\Submenus\menulugar.cs">
+    <Compile Include="Views\UserControls\iteminteres.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\iteminteres.Designer.cs">
+      <DependentUpon>iteminteres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\itemlugar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\itemlugar.Designer.cs">
+      <DependentUpon>itemlugar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menulugar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Components\Submenus\menulugar.Designer.cs">
+    <Compile Include="Views\UserControls\Submenus\menulugar.Designer.cs">
       <DependentUpon>menulugar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Components\Submenus\menuinteres.cs">
+    <Compile Include="Views\UserControls\Submenus\menuinteres.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Components\Submenus\menuinteres.Designer.cs">
+    <Compile Include="Views\UserControls\Submenus\menuinteres.Designer.cs">
       <DependentUpon>menuinteres.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Components\Submenus\menucomic.cs">
+    <Compile Include="Views\UserControls\Submenus\menucomic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Components\Submenus\menucomic.Designer.cs">
+    <Compile Include="Views\UserControls\Submenus\menucomic.Designer.cs">
       <DependentUpon>menucomic.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Form1.cs">
@@ -181,6 +193,54 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TestDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Views\interes\interes1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\interes\interes1.Designer.cs">
+      <DependentUpon>interes1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\interes\interes2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\interes\interes2.Designer.cs">
+      <DependentUpon>interes2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\interes\interesl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\interes\interesl.Designer.cs">
+      <DependentUpon>interesl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\interes\interesr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\interes\interesr.Designer.cs">
+      <DependentUpon>interesr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\lugar\lugar1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\lugar\lugar1.Designer.cs">
+      <DependentUpon>lugar1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\lugar\lugar2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\lugar\lugar2.Designer.cs">
+      <DependentUpon>lugar2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\lugar\lugarl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\lugar\lugarl.Designer.cs">
+      <DependentUpon>lugarl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\lugar\lugarr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\lugar\lugarr.Designer.cs">
+      <DependentUpon>lugarr.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\comic\comicl.resx">
       <DependentUpon>comicl.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,16 +253,22 @@
     <EmbeddedResource Include="Views\comic\comic1.resx">
       <DependentUpon>comic1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Components\itemcomic.resx">
+    <EmbeddedResource Include="Views\UserControls\itemcomic.resx">
       <DependentUpon>itemcomic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Components\Submenus\menulugar.resx">
+    <EmbeddedResource Include="Views\UserControls\iteminteres.resx">
+      <DependentUpon>iteminteres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\itemlugar.resx">
+      <DependentUpon>itemlugar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Submenus\menulugar.resx">
       <DependentUpon>menulugar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Components\Submenus\menuinteres.resx">
+    <EmbeddedResource Include="Views\UserControls\Submenus\menuinteres.resx">
       <DependentUpon>menuinteres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Components\Submenus\menucomic.resx">
+    <EmbeddedResource Include="Views\UserControls\Submenus\menucomic.resx">
       <DependentUpon>menucomic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
@@ -222,6 +288,30 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\Report1.rdlc" />
+    <EmbeddedResource Include="Views\interes\interes1.resx">
+      <DependentUpon>interes1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\interes\interes2.resx">
+      <DependentUpon>interes2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\interes\interesl.resx">
+      <DependentUpon>interesl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\interes\interesr.resx">
+      <DependentUpon>interesr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\lugar\lugar1.resx">
+      <DependentUpon>lugar1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\lugar\lugar2.resx">
+      <DependentUpon>lugar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\lugar\lugarl.resx">
+      <DependentUpon>lugarl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\lugar\lugarr.resx">
+      <DependentUpon>lugarr.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

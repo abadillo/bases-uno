@@ -1,4 +1,5 @@
-﻿using Engine.Classes;
+﻿using Engine.DBConnection;
+using Engine.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,7 @@ namespace bases_uno.Views
             this.id = id;
             
             InitializeComponent();
-			Lugar lugar = new Lugar(id);
+			Place lugar = new Place(id);
 
             // label1.Text = "Lugar: " + lugar.Titlel;
 

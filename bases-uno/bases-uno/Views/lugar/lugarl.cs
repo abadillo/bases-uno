@@ -1,5 +1,5 @@
-﻿using Engine.Classes;
-using Engine.DBConnection;
+﻿using Engine.DBConnection;
+using Engine.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +20,7 @@ namespace bases_uno.Views
         public index parent;
 
         public itemlugar[] itemlist;
-        public List<Lugar> list = Query.Places();
+        public List<Place> list = Query.Places();
 
 
         public lugarl(index parent)

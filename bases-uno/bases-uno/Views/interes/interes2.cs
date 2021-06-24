@@ -1,4 +1,5 @@
-﻿using Engine.Classes;
+﻿using Engine.DBConnection;
+using Engine.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,28 +26,20 @@ namespace bases_uno.Views
             this.id = id;
             
             InitializeComponent();
-			Interes interes = new Interes(id);
+            Interest interes = new Interest(id);
 
-            // label1.Text = "Interes: " + interes.Titlel;
+            label1.Text = "Interes: " + interes.Name;
 
             Update();
 		}
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void interes2_Load(object sender, EventArgs e)
         {
 
             this.reportViewer1.RefreshReport();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnatras_Click(object sender, EventArgs e)
         {

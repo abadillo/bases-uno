@@ -1,5 +1,5 @@
-﻿using Engine.Classes;
-using Engine.DBConnection;
+﻿using Engine.DBConnection;
+using Engine.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +20,9 @@ namespace bases_uno.Views
         public index parent;
 
         public iteminteres[] itemlist;
-        public List<Interes> list = Query.Interests();
+        
+        public List<Interest> list = Query.Interests();
+
 
 
         public interesl(index parent)
@@ -45,47 +47,6 @@ namespace bases_uno.Views
 		}
 
 
-        private void interesl_Load(object sender, EventArgs e)
-        {
-          
-
-        }
-
-
-
-        private void hrpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnadelante_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnatras_Click(object sender, EventArgs e)
-        {
-            /// interesl mf = new interesl(parent);
-            /// parent.InsertForm(mf);
-        }
-
-     
-
       
-
-        private void stpanel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

@@ -17,7 +17,7 @@ namespace bases_uno.Views
         public double cambioeuro = 0.84;
 
         public index parent;
-        public Interes interes = new Interes(0);
+        public Interest interes = new Interest(0);
 
         public interesr(  index parent )
         {
@@ -27,15 +27,6 @@ namespace bases_uno.Views
             Update();
         }
        
-        private void hrpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnatras_Click(object sender, EventArgs e)
-        {
-          
-        }
 
        
 
@@ -44,18 +35,10 @@ namespace bases_uno.Views
             try
             {
 
-                Console.WriteLine(radioButton1.Checked);
+                //Console.WriteLine(radioButton1.Checked);
 
-                // interes.Titlel = textBoxTitel.Text;
-                // interes.Editor = textBoxEditor.Text;
-                // interes.Synopsis = textBoxSynopsis.Text;
-                // interes.Volume = int.Parse(textBoxVolume.Text);
-                // interes.Number = int.Parse(textBoxNumber.Text);
-                // interes.Pages = int.Parse(textBoxPages.Text);
-                // interes.PublicationPrice = float.Parse(textBoxPublicationPrice.Text);
-                // interes.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
-                // interes.Cover = radioButton2.Checked;
-                // interes.Color = radioButton1.Checked;
+                interes.Name = textBoxName.Text;
+                interes.Description = textBoxDescription.Text;
 
                 interes.Insert();
 
@@ -91,23 +74,5 @@ namespace bases_uno.Views
             parent.InsertForm(mf);
         }
 
-        private void textBoxPublicationPrice_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                // label6.Text = (cambioeuro * float.Parse(textBoxPublicationPrice.Text)) + " €";
-            }
-            catch (Exception)
-            {
-
-                //throw;
-            }
-           
-        }
-
-        private void textBoxPublicationPrice_MouseHover(object sender, EventArgs e)
-        {
-              
-        }
     }
 }

@@ -17,7 +17,7 @@ namespace bases_uno.Views.Components
         public int id;
         public index parent;
 
-        public itemlugar( Lugar lugar, index parent )
+        public itemlugar( Place lugar, index parent )
         {
 
             this.parent = parent;

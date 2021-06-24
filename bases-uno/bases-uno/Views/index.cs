@@ -80,18 +80,27 @@ namespace bases_uno.Views
         {
 			menucomic menu = new menucomic(this);
 			ButtonEnable(iconButton6, menu);
+
+			comicl form = new comicl(this);
+			InsertForm(form);
 		}
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
 			menulugar menu = new menulugar(this);
 			ButtonEnable(iconButton4, menu);
+
+			lugarl form = new lugarl(this);
+			InsertForm(form);
 		}
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
 			menuinteres menu = new menuinteres(this);
 			ButtonEnable(iconButton3, menu);
+
+			interesl form = new interesl(this);
+			InsertForm(form);
 
 		}
     }

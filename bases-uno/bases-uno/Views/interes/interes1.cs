@@ -1,12 +1,6 @@
 ﻿using Engine.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace bases_uno.Views
@@ -17,97 +11,84 @@ namespace bases_uno.Views
         public int id;
 
         public index parent;
-        public Interes interes;
-       
+        public Interest interes;
 
-        public interes1(index parent, int id )
+
+        public interes1(index parent, int id)
         {
             this.parent = parent;
             this.id = id;
 
             InitializeComponent();
-			Interes interes = new Interes(id);
-			// textBoxID.Text = interes.ID.ToString();
-			// textBoxTitel.Text = interes.Titlel;
-			// textBoxPublicationDate.Text = interes.PublicationDate.ToString();
-			// radioButton1.Checked = interes.Color ? true : false;
-            // radioButton2.Checked = interes.Cover ? true : false;
-            // textBoxVolume.Text = (interes.Volume == 0) ? interes.Volume.ToString() : "";
-			// textBoxNumber.Text = interes.Number.ToString();
-			// textBoxPublicationPrice.Text = (interes.PublicationPrice == 0) ? interes.PublicationPrice.ToString() : "";
-			// textBoxPages.Text = interes.Pages.ToString();
-			// textBoxEditor.Text = interes.Editor;
-			// textBoxSynopsis.Text = interes.Synopsis;
+            Interest interes = new Interest(id);
+            textBoxID.Text = interes.ID.ToString();
+            textBoxName.Text = interes.Name;
+            textBoxDescription.Text = interes.Description;
 
-            // label1.Text = "Interes: " + interes.Titlel;
+            label1.Text = "Interes: " + interes.Name;
             Update();
 
             this.interes = interes;
-		}
+        }
 
         private void Modificar()
         {
-            // try
-            // {
-            //     interes.Titlel = textBoxTitel.Text;
-            //     interes.Editor = textBoxEditor.Text;
-            //     interes.Synopsis = textBoxSynopsis.Text;
-            //     if (textBoxVolume.Text == "")
-            //     {
-            //         interes.Volume = 0;
-            //     }
-            //     else
-            //     {
-            //         interes.Volume = int.Parse(textBoxVolume.Text);
-            //     }
-            //     interes.Number = int.Parse(textBoxNumber.Text);
-            //     interes.Pages = int.Parse(textBoxPages.Text);
-            //     if (textBoxPublicationPrice.Text == "")
-            //     {
-            //         interes.PublicationPrice = 0;
-            //     }
-            //     else
-            //     {
-            //         interes.PublicationPrice = int.Parse(textBoxPublicationPrice.Text);
-            //     }
-            //     interes.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
-            //     interes.Cover = radioButton2.Checked;
-            //     interes.Color = radioButton1.Checked;
+            interes.Name = textBoxName.Text;
+            interes.Description = textBoxDescription.Text;
 
-            //     MessageBox.Show("¿Está seguro que desea modificar este Interes?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Interes?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            //     interes.Update();
+            if (dialogResult == DialogResult.Yes)
 
-            //     MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    interes.Update();
+
+                    MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    interes1 form = new interes1(parent, interes.ID);
+                    parent.InsertForm(form);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
 
-            //     interes1 mf = new interes1(parent, interes.ID);
-            //     parent.InsertForm(mf);
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
 
-            // }
-            // catch (Exception ex)
-            // {
-            //     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            // }
 
         }
 
         private void Eliminar()
         {
-            try
+
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea eliminar este Interes?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dialogResult == DialogResult.Yes)
+         
+                try
+                {
+                    interes.Delete();
+                    MessageBox.Show("Eliminacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    interesl form = new interesl(parent);
+                    parent.InsertForm(form);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            
+
+            else if (dialogResult == DialogResult.No)
             {
-
-                MessageBox.Show("¿Está seguro que desea eliminar este Interes?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                interes.Delete();
-                interesl mf = new interesl(parent);
-
+                //do something else
             }
-            catch (Exception)
-            {
 
-                //throw;
-            }
 
         }
 
@@ -144,52 +125,17 @@ namespace bases_uno.Views
 
         private void iconButton17_Click(object sender, EventArgs e)
         {
-            EnableInput(textBoxTitel, iconButton17);
+            EnableInput(textBoxName, iconButton17);
         }
 
-        private void iconButton15_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxNumber, iconButton15);
-        }
 
-        private void iconButton10_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxVolume, iconButton10);
-        }
 
-        private void iconButton16_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxPublicationDate, iconButton16);
-        }
 
-        private void iconButton19_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxPublicationPrice, iconButton19);
-        }
 
-        private void iconButton18_Click(object sender, EventArgs e)
-        {
-            EnableRadio(radioButton1, iconButton18);
-        }
-
-        private void iconButton9_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxPages, iconButton9);
-        }
-
-        private void iconButton12_Click(object sender, EventArgs e)
-        {
-            EnableRadio(radioButton2, iconButton12);
-        }
-
-        private void iconButton11_Click(object sender, EventArgs e)
-        {
-            EnableInput(textBoxEditor, iconButton11);
-        }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            EnableInput(textBoxSynopsis, iconButton1);
+            EnableInput(textBoxDescription, iconButton1);
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
@@ -212,7 +158,7 @@ namespace bases_uno.Views
             parent.InsertForm(mf);
         }
 
-      
+
         private void btnmodificar_Click(object sender, EventArgs e)
         {
             Modificar();

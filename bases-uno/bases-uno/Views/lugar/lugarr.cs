@@ -1,4 +1,5 @@
-﻿using Engine.Classes;
+﻿using Engine.DBConnection;
+using Engine.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace bases_uno.Views
         public double cambioeuro = 0.84;
 
         public index parent;
-        public Lugar lugar = new Lugar(0);
+        public Place lugar = new Place(0);
 
         public lugarr(  index parent )
         {

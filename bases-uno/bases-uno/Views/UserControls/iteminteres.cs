@@ -17,7 +17,7 @@ namespace bases_uno.Views.Components
         public int id;
         public index parent;
 
-        public iteminteres( Interes interes, index parent )
+        public iteminteres( Interest interes, index parent )
         {
 
             this.parent = parent;
@@ -25,11 +25,9 @@ namespace bases_uno.Views.Components
 
             InitializeComponent();
                         
-            //label1.Text = interes.Titlel;
+            label1.Text = interes.Name;
            
-            //label2.Text = interes.Editor + "     " + interes.PublicationDate.ToString();
-           
-            //label3.Text = "Volumen: " + ( (interes.Volume == 0) ? interes.Volume.ToString() : "" ) + "\n" + "Numero: " + interes.Number.ToString() + "\n" + "Paginas: " + interes.Pages.ToString();
+            label2.Text = interes.Description;
            
             Update();
 
