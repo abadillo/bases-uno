@@ -82,10 +82,10 @@ CREATE TABLE COMIC
      numero INTEGER NOT NULL , 
      fecha_publicacion DATE NOT NULL , 
      precio_publicacion REAL , 
-     color BIT NOT NULL , 
+     color BOOLEAN NOT NULL , 
      sinopsis VARCHAR (50) NOT NULL , 
      paginas INTEGER NOT NULL , 
-     cubierta BIT NOT NULL , 
+     cubierta BOOLEAN NOT NULL , 
      editor VARCHAR (50) NOT NULL 
     )
 ;
@@ -161,7 +161,7 @@ CREATE TABLE LOCAL
     (
      id SERIAL , 
      nombre VARCHAR (50) NOT NULL , 
-     alquilado BIT NOT NULL , 
+     alquilado BOOLEAN NOT NULL , 
      LUGAR_id INTEGER NOT NULL , 
      COLECCIONISTA_documento_identidad INTEGER , 
      tipo VARCHAR (50) NOT NULL 
@@ -256,7 +256,7 @@ CREATE TABLE PARTICIPANTE
      MEMBRESIA_COLECCIONISTA_documento_identidad INTEGER NOT NULL , 
      MEMBRESIA_CLUB_id INTEGER NOT NULL , 
      MEMBRESIA_fecha_ingreso DATE NOT NULL , 
-     autorizado BIT 
+     autorizado BOOLEAN 
     )
 ;
 
@@ -282,8 +282,8 @@ CREATE TABLE SUBASTA
      hora_inicio TIME NOT NULL , 
      hora_cierre TIME NOT NULL , 
      tipo VARCHAR (50) NOT NULL , 
-     caridad BIT NOT NULL , 
-     cancelado BIT NOT NULL , 
+     caridad BOOLEAN NOT NULL , 
+     cancelado BOOLEAN NOT NULL , 
      LOCAL_id INTEGER NOT NULL 
     )
 ; 
