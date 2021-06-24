@@ -83,7 +83,7 @@ CREATE TABLE COMIC
      fecha_publicacion DATE NOT NULL , 
      precio_publicacion REAL , 
      color BOOLEAN NOT NULL , 
-     sinopsis VARCHAR (50) NOT NULL , 
+     sinopsis VARCHAR (1000) NOT NULL , 
      paginas INTEGER NOT NULL , 
      cubierta BOOLEAN NOT NULL , 
      editor VARCHAR (50) NOT NULL 
