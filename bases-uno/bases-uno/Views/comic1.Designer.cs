@@ -32,8 +32,8 @@ namespace bases_uno.Views
             this.stpanel7 = new System.Windows.Forms.Panel();
             this.dipanel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btncancelar = new System.Windows.Forms.Button();
+            this.btnmodificar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,7 +43,6 @@ namespace bases_uno.Views
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBoxCover = new System.Windows.Forms.TextBox();
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -59,7 +58,6 @@ namespace bases_uno.Views
             this.iconButton19 = new FontAwesome.Sharp.IconButton();
             this.label13 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.textBoxColor = new System.Windows.Forms.TextBox();
             this.iconButton18 = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -89,6 +87,8 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -145,9 +145,9 @@ namespace bases_uno.Views
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btneliminar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btncancelar, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnmodificar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btneliminar, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 551);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -157,39 +157,39 @@ namespace bases_uno.Views
             this.tableLayoutPanel1.Size = new System.Drawing.Size(816, 40);
             this.tableLayoutPanel1.TabIndex = 35;
             // 
-            // button3
+            // btncancelar
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.LightGray;
-            this.button3.Location = new System.Drawing.Point(547, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(266, 34);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Undefined";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Visible = false;
+            this.btncancelar.BackColor = System.Drawing.Color.LightGray;
+            this.btncancelar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btncancelar.FlatAppearance.BorderSize = 0;
+            this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelar.ForeColor = System.Drawing.Color.Black;
+            this.btncancelar.Location = new System.Drawing.Point(275, 3);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(266, 34);
+            this.btncancelar.TabIndex = 2;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = false;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
-            // button2
+            // btnmodificar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.LightGray;
-            this.button2.Location = new System.Drawing.Point(275, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(266, 34);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Undefined";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Visible = false;
+            this.btnmodificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.btnmodificar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnmodificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnmodificar.FlatAppearance.BorderSize = 0;
+            this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodificar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnmodificar.Location = new System.Drawing.Point(3, 3);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(266, 34);
+            this.btnmodificar.TabIndex = 1;
+            this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.UseVisualStyleBackColor = false;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btneliminar
             // 
@@ -200,7 +200,7 @@ namespace bases_uno.Views
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.LightGray;
-            this.btneliminar.Location = new System.Drawing.Point(3, 3);
+            this.btneliminar.Location = new System.Drawing.Point(547, 3);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(266, 34);
             this.btneliminar.TabIndex = 0;
@@ -312,7 +312,7 @@ namespace bases_uno.Views
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textBoxCover);
+            this.panel6.Controls.Add(this.radioButton2);
             this.panel6.Controls.Add(this.iconButton12);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -320,20 +320,6 @@ namespace bases_uno.Views
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(402, 39);
             this.panel6.TabIndex = 10;
-            // 
-            // textBoxCover
-            // 
-            this.textBoxCover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBoxCover.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCover.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxCover.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxCover.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxCover.Location = new System.Drawing.Point(164, 0);
-            this.textBoxCover.Name = "textBoxCover";
-            this.textBoxCover.ReadOnly = true;
-            this.textBoxCover.Size = new System.Drawing.Size(201, 22);
-            this.textBoxCover.TabIndex = 16;
-            this.textBoxCover.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton12
             // 
@@ -540,7 +526,7 @@ namespace bases_uno.Views
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.textBoxColor);
+            this.panel12.Controls.Add(this.radioButton1);
             this.panel12.Controls.Add(this.iconButton18);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -548,20 +534,6 @@ namespace bases_uno.Views
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(402, 36);
             this.panel12.TabIndex = 6;
-            // 
-            // textBoxColor
-            // 
-            this.textBoxColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBoxColor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxColor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxColor.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxColor.Location = new System.Drawing.Point(164, 0);
-            this.textBoxColor.Name = "textBoxColor";
-            this.textBoxColor.ReadOnly = true;
-            this.textBoxColor.Size = new System.Drawing.Size(201, 22);
-            this.textBoxColor.TabIndex = 16;
-            this.textBoxColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton18
             // 
@@ -852,6 +824,7 @@ namespace bases_uno.Views
             // 
             this.iconButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.iconButton14.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton14.Enabled = false;
             this.iconButton14.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton14.FlatAppearance.BorderSize = 0;
             this.iconButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -866,7 +839,7 @@ namespace bases_uno.Views
             this.iconButton14.Size = new System.Drawing.Size(37, 36);
             this.iconButton14.TabIndex = 15;
             this.iconButton14.UseVisualStyleBackColor = false;
-            this.iconButton14.Visible = false;
+            this.iconButton14.Click += new System.EventHandler(this.iconButton14_Click);
             // 
             // label8
             // 
@@ -966,6 +939,36 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 51);
             this.label1.TabIndex = 0;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radioButton1.Enabled = false;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.LightGray;
+            this.radioButton1.Location = new System.Drawing.Point(351, 0);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(14, 36);
+            this.radioButton1.TabIndex = 16;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radioButton2.Enabled = false;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.LightGray;
+            this.radioButton2.Location = new System.Drawing.Point(351, 0);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(14, 39);
+            this.radioButton2.TabIndex = 16;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // comic1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1019,8 +1022,8 @@ namespace bases_uno.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel dipanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btncancelar;
+        private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel3;
@@ -1029,7 +1032,6 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel spacerpanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBoxCover;
         private FontAwesome.Sharp.IconButton iconButton12;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
@@ -1045,7 +1047,6 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton iconButton19;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox textBoxColor;
         private FontAwesome.Sharp.IconButton iconButton18;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel11;
@@ -1070,5 +1071,7 @@ namespace bases_uno.Views
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

@@ -53,7 +53,6 @@ namespace bases_uno.Views
             this.textBoxPages = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.textBoxVolume = new System.Windows.Forms.TextBox();
@@ -75,6 +74,7 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -407,20 +407,6 @@ namespace bases_uno.Views
             this.panel12.Size = new System.Drawing.Size(402, 49);
             this.panel12.TabIndex = 6;
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButton1.Location = new System.Drawing.Point(358, 10);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 29);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -679,6 +665,20 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 51);
             this.label1.TabIndex = 0;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.LightGray;
+            this.radioButton1.Location = new System.Drawing.Point(358, 10);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(14, 29);
+            this.radioButton1.TabIndex = 15;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // comicr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -745,7 +745,6 @@ namespace bases_uno.Views
         private System.Windows.Forms.TextBox textBoxPages;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox textBoxVolume;
@@ -766,5 +765,6 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton btnadelante;
         private FontAwesome.Sharp.IconButton btnatras;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
