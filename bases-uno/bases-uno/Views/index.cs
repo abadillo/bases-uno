@@ -20,9 +20,10 @@ namespace bases_uno.Views
 		public index()
 		{
 			InitializeComponent();
-			/// Comic comic = new Comic(id);
-			/// Update();
+			
 
+			comicl mf = new comicl(this);
+			InsertForm(mf);
 
 		}
 
@@ -60,10 +61,9 @@ namespace bases_uno.Views
 
 		}
 
+        private void mainpanel_Paint(object sender, PaintEventArgs e)
+        {
 
-
-
-
-
-	}
+        }
+    }
 }

@@ -1,4 +1,4 @@
-﻿using Engine;
+﻿using Engine.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +50,11 @@ namespace bases_uno.Views
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnadelante_Click(object sender, EventArgs e)
         {
 
         }

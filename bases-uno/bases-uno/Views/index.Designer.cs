@@ -369,6 +369,7 @@ namespace bases_uno.Views
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(866, 661);
             this.mainpanel.TabIndex = 5;
+            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
             // index
             // 

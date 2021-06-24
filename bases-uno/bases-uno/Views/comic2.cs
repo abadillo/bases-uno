@@ -1,4 +1,4 @@
-﻿using Engine;
+﻿using Engine.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,12 +16,13 @@ namespace bases_uno.Views
 
         public index parent;
 
-        public int id = 1;
+        public int id;
 
 
-        public comic2( index parent)
+        public comic2( index parent, int id )
         {
             this.parent = parent;
+            this.id = id;
             
             InitializeComponent();
 			Comic comic = new Comic(id);
@@ -49,7 +50,7 @@ namespace bases_uno.Views
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            comic1 mf = new comic1(parent);
+            comic1 mf = new comic1(parent, id);
             parent.InsertForm(mf);
         }
     }

@@ -30,12 +30,6 @@ namespace bases_uno.Views
         private void InitializeComponent()
         {
             this.stpanel7 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.hrpanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnadelante = new FontAwesome.Sharp.IconButton();
-            this.btnatras = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.dipanel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
@@ -88,9 +82,13 @@ namespace bases_uno.Views
             this.iconButton14 = new FontAwesome.Sharp.IconButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.hrpanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnadelante = new FontAwesome.Sharp.IconButton();
+            this.btnatras = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
-            this.hrpanel.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -104,6 +102,8 @@ namespace bases_uno.Views
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.hrpanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // stpanel7
@@ -119,83 +119,6 @@ namespace bases_uno.Views
             this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
             this.stpanel7.Size = new System.Drawing.Size(864, 757);
             this.stpanel7.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(15, 63);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(834, 41);
-            this.panel1.TabIndex = 11;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
-            // 
-            // hrpanel
-            // 
-            this.hrpanel.Controls.Add(this.panel2);
-            this.hrpanel.Controls.Add(this.label1);
-            this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.hrpanel.Location = new System.Drawing.Point(15, 15);
-            this.hrpanel.Name = "hrpanel";
-            this.hrpanel.Size = new System.Drawing.Size(834, 48);
-            this.hrpanel.TabIndex = 10;
-            this.hrpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.hrpanel_Paint);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnadelante);
-            this.panel2.Controls.Add(this.btnatras);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(694, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(140, 48);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnadelante
-            // 
-            this.btnadelante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.btnadelante.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnadelante.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnadelante.FlatAppearance.BorderSize = 0;
-            this.btnadelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnadelante.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
-            this.btnadelante.IconColor = System.Drawing.Color.LightGray;
-            this.btnadelante.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnadelante.Location = new System.Drawing.Point(74, 0);
-            this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
-            this.btnadelante.Name = "btnadelante";
-            this.btnadelante.Size = new System.Drawing.Size(66, 48);
-            this.btnadelante.TabIndex = 5;
-            this.btnadelante.UseVisualStyleBackColor = false;
-            this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
-            // 
-            // btnatras
-            // 
-            this.btnatras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.btnatras.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnatras.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnatras.FlatAppearance.BorderSize = 0;
-            this.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnatras.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.btnatras.IconColor = System.Drawing.Color.LightGray;
-            this.btnatras.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnatras.Location = new System.Drawing.Point(0, 0);
-            this.btnatras.Margin = new System.Windows.Forms.Padding(0);
-            this.btnatras.Name = "btnatras";
-            this.btnatras.Size = new System.Drawing.Size(66, 48);
-            this.btnatras.TabIndex = 4;
-            this.btnatras.UseVisualStyleBackColor = false;
-            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 51);
-            this.label1.TabIndex = 0;
             // 
             // dipanel1
             // 
@@ -929,6 +852,83 @@ namespace bases_uno.Views
             this.label2.TabIndex = 28;
             this.label2.Text = "General";
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(15, 63);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(834, 41);
+            this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // hrpanel
+            // 
+            this.hrpanel.Controls.Add(this.panel2);
+            this.hrpanel.Controls.Add(this.label1);
+            this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.hrpanel.Location = new System.Drawing.Point(15, 15);
+            this.hrpanel.Name = "hrpanel";
+            this.hrpanel.Size = new System.Drawing.Size(834, 48);
+            this.hrpanel.TabIndex = 10;
+            this.hrpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.hrpanel_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnadelante);
+            this.panel2.Controls.Add(this.btnatras);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(694, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(140, 48);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnadelante
+            // 
+            this.btnadelante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.btnadelante.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnadelante.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnadelante.FlatAppearance.BorderSize = 0;
+            this.btnadelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadelante.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
+            this.btnadelante.IconColor = System.Drawing.Color.LightGray;
+            this.btnadelante.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnadelante.Location = new System.Drawing.Point(74, 0);
+            this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
+            this.btnadelante.Name = "btnadelante";
+            this.btnadelante.Size = new System.Drawing.Size(66, 48);
+            this.btnadelante.TabIndex = 5;
+            this.btnadelante.UseVisualStyleBackColor = false;
+            this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
+            // 
+            // btnatras
+            // 
+            this.btnatras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.btnatras.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnatras.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.btnatras.FlatAppearance.BorderSize = 0;
+            this.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnatras.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btnatras.IconColor = System.Drawing.Color.LightGray;
+            this.btnatras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnatras.Location = new System.Drawing.Point(0, 0);
+            this.btnatras.Margin = new System.Windows.Forms.Padding(0);
+            this.btnatras.Name = "btnatras";
+            this.btnatras.Size = new System.Drawing.Size(66, 48);
+            this.btnatras.TabIndex = 4;
+            this.btnatras.UseVisualStyleBackColor = false;
+            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 51);
+            this.label1.TabIndex = 0;
+            // 
             // comic1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -939,9 +939,6 @@ namespace bases_uno.Views
             this.Name = "comic1";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
-            this.hrpanel.ResumeLayout(false);
-            this.hrpanel.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);
             this.dipanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -966,6 +963,9 @@ namespace bases_uno.Views
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.hrpanel.ResumeLayout(false);
+            this.hrpanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,5 @@
-﻿using Engine;
+﻿using Engine.Classes;
+using Engine.DBConnection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,15 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace bases_uno.Views
 {
     public partial class comicl : Form
     {
 
-        public int id = 1;
-
         public index parent;
-       
+
+        public Components.itemcomic[] itemlist;
+        public List<Comic> list = Query.Comics();
+
 
         public comicl(index parent)
         {
@@ -26,13 +29,28 @@ namespace bases_uno.Views
             InitializeComponent();
 			
             label1.Text = "Listado Comics";
+
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                /// Console.WriteLine(list[i]);
+
+                Components.itemcomic item = new Components.itemcomic(list[i], parent);
+
+                flowLayoutPanel1.Controls.Add(item);
+            }
+
             Update();
 		}
 
-        private void btneliminar_Click(object sender, EventArgs e)
+
+        private void comicl_Load(object sender, EventArgs e)
         {
-            /// comic.delete(id)
+          
+
         }
+
+
 
         private void hrpanel_Paint(object sender, PaintEventArgs e)
         {
@@ -46,8 +64,7 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            comic2 mf = new comic2(parent);
-            parent.InsertForm(mf);
+           
         }
 
         private void btnatras_Click(object sender, EventArgs e)
@@ -56,19 +73,15 @@ namespace bases_uno.Views
             /// parent.InsertForm(mf);
         }
 
-        private void label2_Click(object sender, EventArgs e)
+     
+
+      
+
+        private void stpanel7_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void mnpanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

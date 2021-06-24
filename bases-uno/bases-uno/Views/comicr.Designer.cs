@@ -637,6 +637,7 @@ namespace bases_uno.Views
             this.btnadelante.Size = new System.Drawing.Size(66, 48);
             this.btnadelante.TabIndex = 5;
             this.btnadelante.UseVisualStyleBackColor = false;
+            this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
             // 
             // btnatras
             // 

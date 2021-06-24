@@ -1,4 +1,4 @@
-﻿using Engine;
+﻿using Engine.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,14 +14,15 @@ namespace bases_uno.Views
     public partial class comic1 : Form
     {
 
-        public int id = 1;
+        public int id;
 
         public index parent;
        
 
-        public comic1(index parent)
+        public comic1(index parent, int id )
         {
             this.parent = parent;
+            this.id = id;
 
             InitializeComponent();
 			Comic comic = new Comic(id);
@@ -73,14 +74,14 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            comic2 mf = new comic2(parent);
+            comic2 mf = new comic2(parent, id);
             parent.InsertForm(mf);
         }
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            /// comicl mf = new comicl(parent);
-            /// parent.InsertForm(mf);
+            comicl mf = new comicl(parent);
+            parent.InsertForm(mf);
         }
     }
 }
