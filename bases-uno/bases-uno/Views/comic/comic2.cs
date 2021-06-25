@@ -39,7 +39,9 @@ namespace bases_uno.Views
 
         private void comic2_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'comicDataSet.comic' table. You can move, or remove it, as needed.
+            this.comicTableAdapter.Fill(this.comicDataSet.comic);
+            this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }
 
@@ -52,6 +54,10 @@ namespace bases_uno.Views
         {
             comic1 form = new comic1(parent, id);
             parent.InsertForm(form);
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
         }
     }
 }

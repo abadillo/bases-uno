@@ -111,7 +111,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="subasta_jagDataSet.Designer.cs">
+    <Compile Include="Reports\DataSets\ComicDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\subasta_jagDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
@@ -139,9 +144,6 @@
     </Compile>
     <Compile Include="Views\comic\comic1.Designer.cs">
       <DependentUpon>comic1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\DataSets\TestDataSet.cs">
-      <DependentUpon>TestDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Views\Reporte_comic.cs">
       <SubType>Form</SubType>
@@ -200,11 +202,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="Reports\DataSets\TestDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TestDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Views\interes\interes1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +250,7 @@
     <Compile Include="Views\lugar\lugarr.Designer.cs">
       <DependentUpon>lugarr.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\ComicReport.rdlc" />
     <EmbeddedResource Include="Reports\Reporte_comic.rdlc" />
     <EmbeddedResource Include="Views\comic\comicl.resx">
       <DependentUpon>comicl.cs</DependentUpon>
@@ -303,7 +301,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reports\Report1.rdlc" />
     <EmbeddedResource Include="Views\interes\interes1.resx">
       <DependentUpon>interes1.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,26 +335,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Reports\DataSets\TestDataSet.xsc">
-      <DependentUpon>TestDataSet.xsd</DependentUpon>
+    <None Include="Reports\DataSets\ComicDataSet.xsc">
+      <DependentUpon>ComicDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSets\TestDataSet.xsd">
+    <None Include="Reports\DataSets\ComicDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TestDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>ComicDataSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reports\DataSets\TestDataSet.xss">
-      <DependentUpon>TestDataSet.xsd</DependentUpon>
+    <None Include="Reports\DataSets\ComicDataSet.xss">
+      <DependentUpon>ComicDataSet.xsd</DependentUpon>
     </None>
-    <None Include="subasta_jagDataSet.xsc">
+    <None Include="Reports\DataSets\subasta_jagDataSet.xsc">
       <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
     </None>
-    <None Include="subasta_jagDataSet.xsd">
+    <None Include="Reports\DataSets\subasta_jagDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>subasta_jagDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="subasta_jagDataSet.xss">
+    <None Include="Reports\DataSets\subasta_jagDataSet.xss">
       <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>

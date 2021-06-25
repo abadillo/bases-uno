@@ -16,7 +16,7 @@
           </Border>
         </Style>
       </Image>
-      <Tablix Name="Tablix2">
+      <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
@@ -35,7 +35,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox9">
+                    <Textbox Name="Textbox1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -43,15 +43,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>id</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -67,7 +65,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox11">
+                    <Textbox Name="Textbox3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -75,15 +73,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>titulo</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -99,23 +95,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox13">
+                    <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>volumen</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Value>sinopsis</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox13</rd:DefaultName>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -144,9 +138,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!id.Value</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -176,9 +168,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!titulo.Value</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -200,23 +190,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="volumen">
+                    <Textbox Name="sinopsis">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!volumen.Value</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Value>=Fields!sinopsis.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>volumen</rd:DefaultName>
+                      <rd:DefaultName>sinopsis</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -247,13 +235,13 @@
               <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
-              <Group Name="Detalles" />
+              <Group Name="Details" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>subasta_jagDataSet</DataSetName>
-        <Top>3.48933cm</Top>
-        <Left>4.81224cm</Left>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>3.14537cm</Top>
+        <Left>4.27766cm</Left>
         <Height>1.2cm</Height>
         <Width>7.5cm</Width>
         <ZIndex>1</ZIndex>
@@ -282,18 +270,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="subasta_jagDataSet">
+    <DataSource Name="ComicDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>33229946-c53c-4471-b56c-23d0920ac41a</rd:DataSourceID>
+      <rd:DataSourceID>aaefdf9f-9ea4-4f74-a375-801283bfffd9</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="subasta_jagDataSet">
+    <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>subasta_jagDataSet</DataSourceName>
+        <DataSourceName>ComicDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -343,8 +331,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>subasta_jagDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Frank\Source\Repos\No_sirve\bases-uno\bases-uno\subasta_jagDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>ComicDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\OneDrive\Documentos\GitHub\bases-uno\bases-uno\bases-uno\Reports\DataSets\ComicDataSet.xsd</rd:SchemaPath>
         <rd:TableName>comic</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

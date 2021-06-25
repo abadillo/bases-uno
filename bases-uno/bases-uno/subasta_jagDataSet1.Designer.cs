@@ -20,9 +20,9 @@ namespace bases_uno {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("subasta_jagDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("subasta_jagDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class subasta_jagDataSet : global::System.Data.DataSet {
+    public partial class subasta_jagDataSet1 : global::System.Data.DataSet {
         
         private clu_intDataTable tableclu_int;
         
@@ -64,7 +64,7 @@ namespace bases_uno {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public subasta_jagDataSet() {
+        public subasta_jagDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -75,7 +75,7 @@ namespace bases_uno {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected subasta_jagDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected subasta_jagDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -382,7 +382,7 @@ namespace bases_uno {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            subasta_jagDataSet cln = ((subasta_jagDataSet)(base.Clone()));
+            subasta_jagDataSet1 cln = ((subasta_jagDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -607,9 +607,9 @@ namespace bases_uno {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "subasta_jagDataSet";
+            this.DataSetName = "subasta_jagDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/subasta_jagDataSet.xsd";
+            this.Namespace = "http://tempuri.org/subasta_jagDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableclu_int = new clu_intDataTable();
@@ -769,7 +769,7 @@ namespace bases_uno {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            subasta_jagDataSet ds = new subasta_jagDataSet();
+            subasta_jagDataSet1 ds = new subasta_jagDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -1082,7 +1082,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1463,7 +1463,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1756,7 +1756,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2165,7 +2165,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2577,7 +2577,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2899,7 +2899,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3250,7 +3250,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3543,7 +3543,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3936,7 +3936,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4273,7 +4273,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4580,7 +4580,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4900,7 +4900,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5205,7 +5205,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5508,7 +5508,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5801,7 +5801,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6134,7 +6134,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6439,7 +6439,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6806,7 +6806,7 @@ namespace bases_uno {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                subasta_jagDataSet ds = new subasta_jagDataSet();
+                subasta_jagDataSet1 ds = new subasta_jagDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -9331,7 +9331,7 @@ namespace bases_uno {
         }
     }
 }
-namespace bases_uno.subasta_jagDataSetTableAdapters {
+namespace bases_uno.subasta_jagDataSet1TableAdapters {
     
     
     /// <summary>
@@ -9557,7 +9557,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.clu_intDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.clu_intDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9570,9 +9570,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.clu_intDataTable GetData() {
+        public virtual subasta_jagDataSet1.clu_intDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.clu_intDataTable dataTable = new subasta_jagDataSet.clu_intDataTable();
+            subasta_jagDataSet1.clu_intDataTable dataTable = new subasta_jagDataSet1.clu_intDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9580,14 +9580,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.clu_intDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.clu_intDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "clu_int");
         }
         
@@ -10146,7 +10146,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.clubDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.clubDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10159,9 +10159,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.clubDataTable GetData() {
+        public virtual subasta_jagDataSet1.clubDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.clubDataTable dataTable = new subasta_jagDataSet.clubDataTable();
+            subasta_jagDataSet1.clubDataTable dataTable = new subasta_jagDataSet1.clubDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10169,14 +10169,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.clubDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.clubDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "club");
         }
         
@@ -10600,7 +10600,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.coleccionableDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.coleccionableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10613,9 +10613,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.coleccionableDataTable GetData() {
+        public virtual subasta_jagDataSet1.coleccionableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.coleccionableDataTable dataTable = new subasta_jagDataSet.coleccionableDataTable();
+            subasta_jagDataSet1.coleccionableDataTable dataTable = new subasta_jagDataSet1.coleccionableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10623,14 +10623,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.coleccionableDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.coleccionableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "coleccionable");
         }
         
@@ -11315,7 +11315,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.coleccionistaDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.coleccionistaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11328,9 +11328,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.coleccionistaDataTable GetData() {
+        public virtual subasta_jagDataSet1.coleccionistaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.coleccionistaDataTable dataTable = new subasta_jagDataSet.coleccionistaDataTable();
+            subasta_jagDataSet1.coleccionistaDataTable dataTable = new subasta_jagDataSet1.coleccionistaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11338,14 +11338,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.coleccionistaDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.coleccionistaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "coleccionista");
         }
         
@@ -12177,7 +12177,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.comicDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.comicDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12190,9 +12190,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.comicDataTable GetData() {
+        public virtual subasta_jagDataSet1.comicDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.comicDataTable dataTable = new subasta_jagDataSet.comicDataTable();
+            subasta_jagDataSet1.comicDataTable dataTable = new subasta_jagDataSet1.comicDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12200,14 +12200,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.comicDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.comicDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "comic");
         }
         
@@ -12797,7 +12797,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.contactoDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.contactoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12810,9 +12810,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.contactoDataTable GetData() {
+        public virtual subasta_jagDataSet1.contactoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.contactoDataTable dataTable = new subasta_jagDataSet.contactoDataTable();
+            subasta_jagDataSet1.contactoDataTable dataTable = new subasta_jagDataSet1.contactoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12820,14 +12820,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.contactoDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.contactoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "contacto");
         }
         
@@ -13438,7 +13438,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.dueno_historicoDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.dueno_historicoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -13451,9 +13451,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.dueno_historicoDataTable GetData() {
+        public virtual subasta_jagDataSet1.dueno_historicoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.dueno_historicoDataTable dataTable = new subasta_jagDataSet.dueno_historicoDataTable();
+            subasta_jagDataSet1.dueno_historicoDataTable dataTable = new subasta_jagDataSet1.dueno_historicoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13461,14 +13461,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.dueno_historicoDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.dueno_historicoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "dueno_historico");
         }
         
@@ -13921,7 +13921,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.interesDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.interesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -13934,9 +13934,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.interesDataTable GetData() {
+        public virtual subasta_jagDataSet1.interesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.interesDataTable dataTable = new subasta_jagDataSet.interesDataTable();
+            subasta_jagDataSet1.interesDataTable dataTable = new subasta_jagDataSet1.interesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13944,14 +13944,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.interesDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.interesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "interes");
         }
         
@@ -14609,7 +14609,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.listadoDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.listadoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14622,9 +14622,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.listadoDataTable GetData() {
+        public virtual subasta_jagDataSet1.listadoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.listadoDataTable dataTable = new subasta_jagDataSet.listadoDataTable();
+            subasta_jagDataSet1.listadoDataTable dataTable = new subasta_jagDataSet1.listadoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -14632,14 +14632,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.listadoDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.listadoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "listado");
         }
         
@@ -15251,7 +15251,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.localDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.localDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -15264,9 +15264,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.localDataTable GetData() {
+        public virtual subasta_jagDataSet1.localDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.localDataTable dataTable = new subasta_jagDataSet.localDataTable();
+            subasta_jagDataSet1.localDataTable dataTable = new subasta_jagDataSet1.localDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -15274,14 +15274,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.localDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.localDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "local");
         }
         
@@ -15738,7 +15738,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.lugarDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.lugarDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -15751,9 +15751,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.lugarDataTable GetData() {
+        public virtual subasta_jagDataSet1.lugarDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.lugarDataTable dataTable = new subasta_jagDataSet.lugarDataTable();
+            subasta_jagDataSet1.lugarDataTable dataTable = new subasta_jagDataSet1.lugarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -15761,14 +15761,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.lugarDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.lugarDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "lugar");
         }
         
@@ -16281,7 +16281,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.membresiaDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.membresiaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -16294,9 +16294,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.membresiaDataTable GetData() {
+        public virtual subasta_jagDataSet1.membresiaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.membresiaDataTable dataTable = new subasta_jagDataSet.membresiaDataTable();
+            subasta_jagDataSet1.membresiaDataTable dataTable = new subasta_jagDataSet1.membresiaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -16304,14 +16304,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.membresiaDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.membresiaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "membresia");
         }
         
@@ -16774,7 +16774,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.org_invDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.org_invDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -16787,9 +16787,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.org_invDataTable GetData() {
+        public virtual subasta_jagDataSet1.org_invDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.org_invDataTable dataTable = new subasta_jagDataSet.org_invDataTable();
+            subasta_jagDataSet1.org_invDataTable dataTable = new subasta_jagDataSet1.org_invDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -16797,14 +16797,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.org_invDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.org_invDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "org_inv");
         }
         
@@ -17259,7 +17259,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.org_subDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.org_subDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -17272,9 +17272,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.org_subDataTable GetData() {
+        public virtual subasta_jagDataSet1.org_subDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.org_subDataTable dataTable = new subasta_jagDataSet.org_subDataTable();
+            subasta_jagDataSet1.org_subDataTable dataTable = new subasta_jagDataSet1.org_subDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -17282,14 +17282,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.org_subDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.org_subDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "org_sub");
         }
         
@@ -17660,7 +17660,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.organizacion_caridadDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.organizacion_caridadDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -17673,9 +17673,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.organizacion_caridadDataTable GetData() {
+        public virtual subasta_jagDataSet1.organizacion_caridadDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.organizacion_caridadDataTable dataTable = new subasta_jagDataSet.organizacion_caridadDataTable();
+            subasta_jagDataSet1.organizacion_caridadDataTable dataTable = new subasta_jagDataSet1.organizacion_caridadDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -17683,14 +17683,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.organizacion_caridadDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.organizacion_caridadDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "organizacion_caridad");
         }
         
@@ -18186,7 +18186,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.participanteDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.participanteDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -18199,9 +18199,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.participanteDataTable GetData() {
+        public virtual subasta_jagDataSet1.participanteDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.participanteDataTable dataTable = new subasta_jagDataSet.participanteDataTable();
+            subasta_jagDataSet1.participanteDataTable dataTable = new subasta_jagDataSet1.participanteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -18209,14 +18209,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.participanteDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.participanteDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "participante");
         }
         
@@ -18641,7 +18641,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.representanteDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.representanteDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -18654,9 +18654,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.representanteDataTable GetData() {
+        public virtual subasta_jagDataSet1.representanteDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.representanteDataTable dataTable = new subasta_jagDataSet.representanteDataTable();
+            subasta_jagDataSet1.representanteDataTable dataTable = new subasta_jagDataSet1.representanteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -18664,14 +18664,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.representanteDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.representanteDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "representante");
         }
         
@@ -19204,7 +19204,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(subasta_jagDataSet.subastaDataTable dataTable) {
+        public virtual int Fill(subasta_jagDataSet1.subastaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -19217,9 +19217,9 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual subasta_jagDataSet.subastaDataTable GetData() {
+        public virtual subasta_jagDataSet1.subastaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            subasta_jagDataSet.subastaDataTable dataTable = new subasta_jagDataSet.subastaDataTable();
+            subasta_jagDataSet1.subastaDataTable dataTable = new subasta_jagDataSet1.subastaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -19227,14 +19227,14 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet.subastaDataTable dataTable) {
+        public virtual int Update(subasta_jagDataSet1.subastaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(subasta_jagDataSet dataSet) {
+        public virtual int Update(subasta_jagDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "subasta");
         }
         
@@ -19889,7 +19889,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(subasta_jagDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(subasta_jagDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clu_intTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.clu_int.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -20061,7 +20061,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(subasta_jagDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(subasta_jagDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clu_intTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.clu_int.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -20215,7 +20215,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(subasta_jagDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(subasta_jagDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._subastaTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.subasta.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -20393,7 +20393,7 @@ namespace bases_uno.subasta_jagDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(subasta_jagDataSet dataSet) {
+        public virtual int UpdateAll(subasta_jagDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
