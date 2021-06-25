@@ -233,6 +233,13 @@ namespace bases_uno.Views
             Modificar();
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Reporte_comic NuevaReport = new Reporte_comic();
+
+            NuevaReport.Show();
+        }
     }
 }

@@ -95,6 +95,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -110,6 +111,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="subasta_jagDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Views\comic\comicl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="Reports\DataSets\TestDataSet.cs">
       <DependentUpon>TestDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reporte_comic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reporte_comic.Designer.cs">
+      <DependentUpon>Reporte_comic.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\itemcomic.cs">
       <SubType>UserControl</SubType>
@@ -241,6 +253,7 @@
     <Compile Include="Views\lugar\lugarr.Designer.cs">
       <DependentUpon>lugarr.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\Reporte_comic.rdlc" />
     <EmbeddedResource Include="Views\comic\comicl.resx">
       <DependentUpon>comicl.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\comic\comic1.resx">
       <DependentUpon>comic1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reporte_comic.resx">
+      <DependentUpon>Reporte_comic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemcomic.resx">
       <DependentUpon>itemcomic.cs</DependentUpon>
@@ -332,6 +348,17 @@
     </None>
     <None Include="Reports\DataSets\TestDataSet.xss">
       <DependentUpon>TestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="subasta_jagDataSet.xsc">
+      <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="subasta_jagDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>subasta_jagDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="subasta_jagDataSet.xss">
+      <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
