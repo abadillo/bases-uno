@@ -50,8 +50,8 @@ namespace bases_uno.Views
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            comic1 mf = new comic1(parent, id);
-            parent.InsertForm(mf);
+            comic1 form = new comic1(parent, id);
+            parent.InsertForm(form);
         }
     }
 }

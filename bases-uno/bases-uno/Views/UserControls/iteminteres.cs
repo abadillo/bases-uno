@@ -35,8 +35,8 @@ namespace bases_uno.Views.Components
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            interes1 mf = new interes1(parent, id);
-            parent.InsertForm(mf);
+            interes1 form = new interes1(parent, id);
+            parent.InsertForm(form);
         }
 
         private void label3_Click(object sender, EventArgs e)

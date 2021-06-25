@@ -122,14 +122,14 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            lugar2 mf = new lugar2(parent, id);
-            parent.InsertForm(mf);
+            lugar2 form = new lugar2(parent, id);
+            parent.InsertForm(form);
         }
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            lugarl mf = new lugarl(parent);
-            parent.InsertForm(mf);
+            lugarl form = new lugarl(parent);
+            parent.InsertForm(form);
         }
 
         private void iconButton17_Click(object sender, EventArgs e)

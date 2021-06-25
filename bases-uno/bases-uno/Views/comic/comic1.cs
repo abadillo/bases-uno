@@ -146,14 +146,14 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            comic2 mf = new comic2(parent, id);
-            parent.InsertForm(mf);
+            comic2 form = new comic2(parent, id);
+            parent.InsertForm(form);
         }
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            comicl mf = new comicl(parent);
-            parent.InsertForm(mf);
+            comicl form = new comicl(parent);
+            parent.InsertForm(form);
         }
 
 
@@ -223,8 +223,8 @@ namespace bases_uno.Views
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            comic1 mf = new comic1(parent, comic.ID);
-            parent.InsertForm(mf);
+            comic1 form = new comic1(parent, comic.ID);
+            parent.InsertForm(form);
         }
 
       

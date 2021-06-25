@@ -112,14 +112,14 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            interes2 mf = new interes2(parent, id);
-            parent.InsertForm(mf);
+            interes2 form = new interes2(parent, id);
+            parent.InsertForm(form);
         }
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            interesl mf = new interesl(parent);
-            parent.InsertForm(mf);
+            interesl form = new interesl(parent);
+            parent.InsertForm(form);
         }
 
 
@@ -154,8 +154,8 @@ namespace bases_uno.Views
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            interes1 mf = new interes1(parent, interes.ID);
-            parent.InsertForm(mf);
+            interes1 form = new interes1(parent, interes.ID);
+            parent.InsertForm(form);
         }
 
 

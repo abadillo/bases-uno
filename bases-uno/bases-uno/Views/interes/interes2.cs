@@ -43,8 +43,8 @@ namespace bases_uno.Views
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            interes1 mf = new interes1(parent, id);
-            parent.InsertForm(mf);
+            interes1 form = new interes1(parent, id);
+            parent.InsertForm(form);
         }
     }
 }
