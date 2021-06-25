@@ -116,6 +116,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ComicDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\DataSets\DataSet.cs">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DataSets\subasta_jagDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -251,7 +259,8 @@
       <DependentUpon>lugarr.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Reports\ComicReport.rdlc" />
-    <EmbeddedResource Include="Reports\Reporte_comic.rdlc" />
+    <EmbeddedResource Include="Reports\ReportInteres.rdlc" />
+    <EmbeddedResource Include="Reports\ReportLugar.rdlc" />
     <EmbeddedResource Include="Views\comic\comicl.resx">
       <DependentUpon>comicl.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +354,17 @@
     </None>
     <None Include="Reports\DataSets\ComicDataSet.xss">
       <DependentUpon>ComicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSets\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSets\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
     <None Include="Reports\DataSets\subasta_jagDataSet.xsc">
       <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>

@@ -40,6 +40,8 @@ namespace bases_uno.Views
 
         private void lugar2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet.lugar' table. You can move, or remove it, as needed.
+            this.lugarTableAdapter.Fill(this.dataSet.lugar);
 
             this.reportViewer1.RefreshReport();
         }

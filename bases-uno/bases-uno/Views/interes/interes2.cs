@@ -36,6 +36,8 @@ namespace bases_uno.Views
        
         private void interes2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet.interes' table. You can move, or remove it, as needed.
+            this.interesTableAdapter.Fill(this.dataSet.interes);
 
             this.reportViewer1.RefreshReport();
         }

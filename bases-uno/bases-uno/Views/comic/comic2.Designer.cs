@@ -31,8 +31,11 @@ namespace bases_uno.Views
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.comicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comicDataSet = new bases_uno.Reports.DataSets.ComicDataSet();
             this.stpanel7 = new System.Windows.Forms.Panel();
             this.dipanel1 = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.hrpanel = new System.Windows.Forms.Panel();
@@ -40,17 +43,24 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.comicDataSet = new bases_uno.Reports.DataSets.ComicDataSet();
-            this.comicBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comicTableAdapter = new bases_uno.Reports.DataSets.ComicDataSetTableAdapters.comicTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.comicBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comicDataSet)).BeginInit();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.hrpanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comicDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comicBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // comicBindingSource
+            // 
+            this.comicBindingSource.DataMember = "comic";
+            this.comicBindingSource.DataSource = this.comicDataSet;
+            // 
+            // comicDataSet
+            // 
+            this.comicDataSet.DataSetName = "ComicDataSet";
+            this.comicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // stpanel7
             // 
@@ -79,6 +89,18 @@ namespace bases_uno.Views
             this.dipanel1.Size = new System.Drawing.Size(1112, 837);
             this.dipanel1.TabIndex = 14;
             // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet2";
+            reportDataSource1.Value = this.comicBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "bases_uno.Reports.ComicReport.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 52);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1112, 524);
+            this.reportViewer1.TabIndex = 23;
+            // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -87,7 +109,7 @@ namespace bases_uno.Views
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1112, 49);
+            this.label2.Size = new System.Drawing.Size(1088, 49);
             this.label2.TabIndex = 22;
             this.label2.Text = "Ficha Comic";
             // 
@@ -170,28 +192,6 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 63);
             this.label1.TabIndex = 0;
             // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet2";
-            reportDataSource1.Value = this.comicBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "bases_uno.Reports.ComicReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 52);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1112, 524);
-            this.reportViewer1.TabIndex = 23;
-            // 
-            // comicDataSet
-            // 
-            this.comicDataSet.DataSetName = "ComicDataSet";
-            this.comicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // comicBindingSource
-            // 
-            this.comicBindingSource.DataMember = "comic";
-            this.comicBindingSource.DataSource = this.comicDataSet;
-            // 
             // comicTableAdapter
             // 
             this.comicTableAdapter.ClearBeforeFill = true;
@@ -207,13 +207,13 @@ namespace bases_uno.Views
             this.Name = "comic2";
             this.Text = "8 Bit Subastas";
             this.Load += new System.EventHandler(this.comic2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.comicBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comicDataSet)).EndInit();
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);
             this.hrpanel.ResumeLayout(false);
             this.hrpanel.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comicDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comicBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

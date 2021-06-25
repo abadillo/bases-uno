@@ -41,6 +41,8 @@ namespace bases_uno.Views
         {
             // TODO: This line of code loads data into the 'comicDataSet.comic' table. You can move, or remove it, as needed.
             this.comicTableAdapter.Fill(this.comicDataSet.comic);
+            reportViewer1.AutoSize = true;
+            reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
         }

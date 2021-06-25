@@ -2,38 +2,26 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Image Name="Image1">
-        <Source>Embedded</Source>
-        <Value>logo1</Value>
-        <Sizing>FitProportional</Sizing>
-        <Height>1.00222in</Height>
-        <Width>3.62502in</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
-      <Tablix Name="Tablix3">
+      <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.20834in</Width>
+              <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.20834in</Width>
+              <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.20834in</Width>
+              <Width>1in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.26112in</Height>
+              <Height>0.25in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox14">
+                    <Textbox Name="Textbox1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -41,15 +29,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>id</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox14</rd:DefaultName>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -65,23 +51,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox16">
+                    <Textbox Name="Textbox3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>titulo</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Value>nombre</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -97,23 +81,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox18">
+                    <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>volumen</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Value>descripcion</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox18</rd:DefaultName>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -130,7 +112,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.26112in</Height>
+              <Height>0.25in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -142,14 +124,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!id.Value</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>id</rd:DefaultName>
@@ -168,25 +146,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="titulo">
+                    <Textbox Name="nombre">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!titulo.Value</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Value>=Fields!nombre.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>titulo</rd:DefaultName>
+                      <rd:DefaultName>nombre</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -202,25 +176,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="volumen">
+                    <Textbox Name="descripcion">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!volumen.Value</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Value>=Fields!descripcion.Value</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>volumen</rd:DefaultName>
+                      <rd:DefaultName>descripcion</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -255,27 +225,34 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet2</DataSetName>
-        <Top>1.01611in</Top>
-        <Height>0.52224in</Height>
-        <Width>3.62502in</Width>
-        <ZIndex>1</ZIndex>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>1.52444in</Top>
+        <Height>0.5in</Height>
+        <Width>3in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Image Name="Image1">
+        <Source>Embedded</Source>
+        <Value>logo</Value>
+        <Sizing>FitProportional</Sizing>
+        <Height>1.48278in</Height>
+        <Width>3in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
     </ReportItems>
-    <Height>1.53835in</Height>
-    <Style>
-      <Border>
-        <Style>None</Style>
-      </Border>
-      <BackgroundColor>DarkBlue</BackgroundColor>
-    </Style>
+    <Height>2.03833in</Height>
+    <Style />
   </Body>
-  <Width>3.62502in</Width>
+  <Width>3in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -285,18 +262,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ComicDataSet">
+    <DataSource Name="DataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>5fb4b8e4-5869-4090-920f-2e9b82f7868b</rd:DataSourceID>
+      <rd:DataSourceID>f08c86dc-7714-45fe-a5a9-e681e1d8e108</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet2">
+    <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>ComicDataSet</DataSourceName>
+        <DataSourceName>DataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -304,59 +281,27 @@
           <DataField>id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="titulo">
-          <DataField>titulo</DataField>
+        <Field Name="nombre">
+          <DataField>nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="volumen">
-          <DataField>volumen</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="numero">
-          <DataField>numero</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="fecha_publicacion">
-          <DataField>fecha_publicacion</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="precio_publicacion">
-          <DataField>precio_publicacion</DataField>
-          <rd:TypeName>System.Single</rd:TypeName>
-        </Field>
-        <Field Name="color">
-          <DataField>color</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="sinopsis">
-          <DataField>sinopsis</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="paginas">
-          <DataField>paginas</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="cubierta">
-          <DataField>cubierta</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="editor">
-          <DataField>editor</DataField>
+        <Field Name="descripcion">
+          <DataField>descripcion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ComicDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\OneDrive\Documentos\GitHub\bases-uno\bases-uno\bases-uno\Reports\DataSets\ComicDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>comic</rd:TableName>
+        <rd:DataSetName>DataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\OneDrive\Documentos\GitHub\bases-uno\bases-uno\bases-uno\Reports\DataSets\DataSet.xsd</rd:SchemaPath>
+        <rd:TableName>interes</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>comicTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>interesTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <EmbeddedImages>
-    <EmbeddedImage Name="logo1">
+    <EmbeddedImage Name="logo">
       <MIMEType>image/png</MIMEType>
       <ImageData>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
@@ -455,5 +400,5 @@ u4hoXnRNhf8LjDHGOHOeOVAL9+/f/+Hp06ffAcC7d+/Suru7/6SqajIAJCUl6W0/VVXFy5cv4fF4cPv2
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>85c1c710-8c93-4e9d-a786-353d18e662e8</rd:ReportID>
+  <rd:ReportID>a9ebd52b-c5e9-406d-837c-e9b4990307b6</rd:ReportID>
 </Report>
