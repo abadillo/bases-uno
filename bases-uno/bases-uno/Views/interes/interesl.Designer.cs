@@ -59,9 +59,9 @@ namespace bases_uno.Views
             // 
             this.dipanel1.Controls.Add(this.flowLayoutPanel1);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel1.Location = new System.Drawing.Point(15, 78);
+            this.dipanel1.Location = new System.Drawing.Point(15, 82);
             this.dipanel1.Name = "dipanel1";
-            this.dipanel1.Size = new System.Drawing.Size(834, 664);
+            this.dipanel1.Size = new System.Drawing.Size(834, 660);
             this.dipanel1.TabIndex = 12;
             // 
             // flowLayoutPanel1
@@ -71,13 +71,13 @@ namespace bases_uno.Views
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(834, 664);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(834, 660);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(15, 63);
+            this.panel1.Location = new System.Drawing.Point(15, 67);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 15);
             this.panel1.TabIndex = 11;
@@ -89,7 +89,7 @@ namespace bases_uno.Views
             this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.hrpanel.Location = new System.Drawing.Point(15, 15);
             this.hrpanel.Name = "hrpanel";
-            this.hrpanel.Size = new System.Drawing.Size(834, 48);
+            this.hrpanel.Size = new System.Drawing.Size(834, 52);
             this.hrpanel.TabIndex = 10;
             // 
             // panel2
@@ -97,7 +97,7 @@ namespace bases_uno.Views
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(694, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(140, 48);
+            this.panel2.Size = new System.Drawing.Size(140, 52);
             this.panel2.TabIndex = 1;
             // 
             // label1

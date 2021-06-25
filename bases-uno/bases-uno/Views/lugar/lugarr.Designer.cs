@@ -37,6 +37,9 @@ namespace bases_uno.Views
             this.label14 = new System.Windows.Forms.Label();
             this.spacerpanel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -50,18 +53,15 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
             this.hrpanel.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // stpanel7
@@ -87,10 +87,10 @@ namespace bases_uno.Views
             this.dipanel1.Controls.Add(this.tableLayoutPanel2);
             this.dipanel1.Controls.Add(this.label2);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel1.Location = new System.Drawing.Point(15, 104);
+            this.dipanel1.Location = new System.Drawing.Point(15, 108);
             this.dipanel1.Name = "dipanel1";
             this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 18, 0);
-            this.dipanel1.Size = new System.Drawing.Size(834, 683);
+            this.dipanel1.Size = new System.Drawing.Size(834, 679);
             this.dipanel1.TabIndex = 14;
             // 
             // tableLayoutPanel1
@@ -180,6 +180,46 @@ namespace bases_uno.Views
             this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 108);
             this.tableLayoutPanel2.TabIndex = 29;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.comboBoxType);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 57);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.panel1.Size = new System.Drawing.Size(402, 48);
+            this.panel1.TabIndex = 6;
+            // 
+            // comboBoxType
+            // 
+            this.comboBoxType.BackColor = System.Drawing.Color.LightGray;
+            this.comboBoxType.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Items.AddRange(new object[] {
+            "Pais",
+            "Estado",
+            "Ciudad",
+            "Direccion"});
+            this.comboBoxType.Location = new System.Drawing.Point(0, 24);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(372, 24);
+            this.comboBoxType.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.ForeColor = System.Drawing.Color.LightGray;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 24);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "tipo";
+            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.textBoxName);
@@ -265,7 +305,7 @@ namespace bases_uno.Views
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(15, 63);
+            this.panel3.Location = new System.Drawing.Point(15, 67);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(834, 41);
             this.panel3.TabIndex = 13;
@@ -277,7 +317,7 @@ namespace bases_uno.Views
             this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.hrpanel.Location = new System.Drawing.Point(15, 15);
             this.hrpanel.Name = "hrpanel";
-            this.hrpanel.Size = new System.Drawing.Size(834, 48);
+            this.hrpanel.Size = new System.Drawing.Size(834, 52);
             this.hrpanel.TabIndex = 12;
             // 
             // panel6
@@ -287,7 +327,7 @@ namespace bases_uno.Views
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(694, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(140, 48);
+            this.panel6.Size = new System.Drawing.Size(140, 52);
             this.panel6.TabIndex = 1;
             // 
             // btnadelante
@@ -303,7 +343,7 @@ namespace bases_uno.Views
             this.btnadelante.Location = new System.Drawing.Point(74, 0);
             this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
             this.btnadelante.Name = "btnadelante";
-            this.btnadelante.Size = new System.Drawing.Size(66, 48);
+            this.btnadelante.Size = new System.Drawing.Size(66, 52);
             this.btnadelante.TabIndex = 5;
             this.btnadelante.UseVisualStyleBackColor = false;
             this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
@@ -321,7 +361,7 @@ namespace bases_uno.Views
             this.btnatras.Location = new System.Drawing.Point(0, 0);
             this.btnatras.Margin = new System.Windows.Forms.Padding(0);
             this.btnatras.Name = "btnatras";
-            this.btnatras.Size = new System.Drawing.Size(66, 48);
+            this.btnatras.Size = new System.Drawing.Size(66, 52);
             this.btnatras.TabIndex = 4;
             this.btnatras.UseVisualStyleBackColor = false;
             this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
@@ -337,46 +377,6 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 51);
             this.label1.TabIndex = 0;
             // 
-            // comboBoxType
-            // 
-            this.comboBoxType.BackColor = System.Drawing.Color.LightGray;
-            this.comboBoxType.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBoxType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Items.AddRange(new object[] {
-            "Pais",
-            "Estado",
-            "Ciudad",
-            "Direccion"});
-            this.comboBoxType.Location = new System.Drawing.Point(0, 24);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(372, 24);
-            this.comboBoxType.TabIndex = 36;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.comboBoxType);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 57);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.panel1.Size = new System.Drawing.Size(402, 48);
-            this.panel1.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 24);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "tipo";
-            // 
             // lugarr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +390,8 @@ namespace bases_uno.Views
             this.dipanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -397,8 +399,6 @@ namespace bases_uno.Views
             this.hrpanel.ResumeLayout(false);
             this.hrpanel.PerformLayout();
             this.panel6.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -232,5 +232,7 @@ namespace bases_uno.Views
         {
             Modificar();
         }
+
+       
     }
 }

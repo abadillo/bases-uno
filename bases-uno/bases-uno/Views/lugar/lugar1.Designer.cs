@@ -51,6 +51,7 @@ namespace bases_uno.Views
             this.iconButton14 = new FontAwesome.Sharp.IconButton();
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.iconButton17 = new FontAwesome.Sharp.IconButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxName = new System.Windows.Forms.TextBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -96,10 +96,10 @@ namespace bases_uno.Views
             this.dipanel1.Controls.Add(this.tableLayoutPanel2);
             this.dipanel1.Controls.Add(this.label2);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel1.Location = new System.Drawing.Point(15, 104);
+            this.dipanel1.Location = new System.Drawing.Point(15, 108);
             this.dipanel1.Name = "dipanel1";
             this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 18, 0);
-            this.dipanel1.Size = new System.Drawing.Size(834, 638);
+            this.dipanel1.Size = new System.Drawing.Size(834, 634);
             this.dipanel1.TabIndex = 12;
             // 
             // tableLayoutPanel1
@@ -396,6 +396,20 @@ namespace bases_uno.Views
             this.panel11.Size = new System.Drawing.Size(402, 37);
             this.panel11.TabIndex = 5;
             // 
+            // textBoxName
+            // 
+            this.textBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxName.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxName.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxName.Location = new System.Drawing.Point(111, 0);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.ReadOnly = true;
+            this.textBoxName.Size = new System.Drawing.Size(254, 22);
+            this.textBoxName.TabIndex = 16;
+            this.textBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // iconButton17
             // 
             this.iconButton17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
@@ -443,7 +457,7 @@ namespace bases_uno.Views
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(15, 63);
+            this.panel1.Location = new System.Drawing.Point(15, 67);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 41);
             this.panel1.TabIndex = 11;
@@ -455,7 +469,7 @@ namespace bases_uno.Views
             this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.hrpanel.Location = new System.Drawing.Point(15, 15);
             this.hrpanel.Name = "hrpanel";
-            this.hrpanel.Size = new System.Drawing.Size(834, 48);
+            this.hrpanel.Size = new System.Drawing.Size(834, 52);
             this.hrpanel.TabIndex = 10;
             // 
             // panel2
@@ -465,7 +479,7 @@ namespace bases_uno.Views
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(694, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(140, 48);
+            this.panel2.Size = new System.Drawing.Size(140, 52);
             this.panel2.TabIndex = 1;
             // 
             // btnadelante
@@ -481,7 +495,7 @@ namespace bases_uno.Views
             this.btnadelante.Location = new System.Drawing.Point(74, 0);
             this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
             this.btnadelante.Name = "btnadelante";
-            this.btnadelante.Size = new System.Drawing.Size(66, 48);
+            this.btnadelante.Size = new System.Drawing.Size(66, 52);
             this.btnadelante.TabIndex = 5;
             this.btnadelante.UseVisualStyleBackColor = false;
             this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
@@ -499,7 +513,7 @@ namespace bases_uno.Views
             this.btnatras.Location = new System.Drawing.Point(0, 0);
             this.btnatras.Margin = new System.Windows.Forms.Padding(0);
             this.btnatras.Name = "btnatras";
-            this.btnatras.Size = new System.Drawing.Size(66, 48);
+            this.btnatras.Size = new System.Drawing.Size(66, 52);
             this.btnatras.TabIndex = 4;
             this.btnatras.UseVisualStyleBackColor = false;
             this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
@@ -514,20 +528,6 @@ namespace bases_uno.Views
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 51);
             this.label1.TabIndex = 0;
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxName.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxName.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxName.Location = new System.Drawing.Point(111, 0);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.ReadOnly = true;
-            this.textBoxName.Size = new System.Drawing.Size(254, 22);
-            this.textBoxName.TabIndex = 16;
-            this.textBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lugar1
             // 
