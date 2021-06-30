@@ -32,9 +32,9 @@ namespace bases_uno.Views
 			textBoxPublicationDate.Text = comic.PublicationDate.ToString();
 			radioButton1.Checked = comic.Color;
             radioButton2.Checked = comic.Cover;
-            textBoxVolume.Text = (comic.Volume == 0) ? "" : comic.Volume.ToString();
+            textBoxVolume.Text = comic.Volume.ToString();
 			textBoxNumber.Text = comic.Number.ToString();
-			textBoxPublicationPrice.Text = (comic.PublicationPrice == 0) ? comic.PublicationPrice.ToString() : "";
+			textBoxPublicationPrice.Text = comic.PublicationPrice.ToString();
 			textBoxPages.Text = comic.Pages.ToString();
 			textBoxEditor.Text = comic.Editor;
 			textBoxSynopsis.Text = comic.Synopsis;
@@ -233,13 +233,13 @@ namespace bases_uno.Views
             Modificar();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    this.Hide();
 
-            Reporte_comic NuevaReport = new Reporte_comic();
+        //    Reporte_comic NuevaReport = new Reporte_comic();
 
-            NuevaReport.Show();
-        }
+        //    NuevaReport.Show();
+        //}
     }
 }

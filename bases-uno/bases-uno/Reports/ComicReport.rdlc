@@ -6,8 +6,10 @@
         <Source>Embedded</Source>
         <Value>logo1</Value>
         <Sizing>FitProportional</Sizing>
-        <Height>1.00222in</Height>
-        <Width>3.62502in</Width>
+        <Top>0.09905in</Top>
+        <Left>1.15021in</Left>
+        <Height>0.79389in</Height>
+        <Width>1.29936in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -256,7 +258,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
-        <Top>1.01611in</Top>
+        <Top>1.04389in</Top>
         <Height>0.52224in</Height>
         <Width>3.62502in</Width>
         <ZIndex>1</ZIndex>
@@ -267,12 +269,12 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.53835in</Height>
+    <Height>1.56613in</Height>
     <Style>
       <Border>
         <Style>None</Style>
       </Border>
-      <BackgroundColor>DarkBlue</BackgroundColor>
+      <BackgroundColor>#27394a</BackgroundColor>
     </Style>
   </Body>
   <Width>3.62502in</Width>

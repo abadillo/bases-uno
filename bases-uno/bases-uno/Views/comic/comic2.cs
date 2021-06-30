@@ -27,7 +27,7 @@ namespace bases_uno.Views
             InitializeComponent();
 			Comic comic = new Comic(id);
 
-            label1.Text = "Comic: " + comic.Titlel;
+            label1.Text = "Comics " ;
 
             Update();
 		}
@@ -61,5 +61,10 @@ namespace bases_uno.Views
         private void reportViewer1_Load(object sender, EventArgs e)
         {
         }
-    }
+
+		private void label2_Click_1(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

@@ -29,192 +29,189 @@ namespace bases_uno.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.comicBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comicDataSet = new bases_uno.Reports.DataSets.ComicDataSet();
-            this.stpanel7 = new System.Windows.Forms.Panel();
-            this.dipanel1 = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.hrpanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnadelante = new FontAwesome.Sharp.IconButton();
-            this.btnatras = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comicTableAdapter = new bases_uno.Reports.DataSets.ComicDataSetTableAdapters.comicTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.comicBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comicDataSet)).BeginInit();
-            this.stpanel7.SuspendLayout();
-            this.dipanel1.SuspendLayout();
-            this.hrpanel.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // comicBindingSource
-            // 
-            this.comicBindingSource.DataMember = "comic";
-            this.comicBindingSource.DataSource = this.comicDataSet;
-            // 
-            // comicDataSet
-            // 
-            this.comicDataSet.DataSetName = "ComicDataSet";
-            this.comicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stpanel7
-            // 
-            this.stpanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.stpanel7.Controls.Add(this.dipanel1);
-            this.stpanel7.Controls.Add(this.panel1);
-            this.stpanel7.Controls.Add(this.hrpanel);
-            this.stpanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stpanel7.Location = new System.Drawing.Point(0, 0);
-            this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
-            this.stpanel7.Name = "stpanel7";
-            this.stpanel7.Padding = new System.Windows.Forms.Padding(20, 18, 20, 18);
-            this.stpanel7.Size = new System.Drawing.Size(1152, 987);
-            this.stpanel7.TabIndex = 1;
-            // 
-            // dipanel1
-            // 
-            this.dipanel1.AutoScroll = true;
-            this.dipanel1.Controls.Add(this.reportViewer1);
-            this.dipanel1.Controls.Add(this.label2);
-            this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel1.Location = new System.Drawing.Point(20, 132);
-            this.dipanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.dipanel1.Name = "dipanel1";
-            this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 24, 0);
-            this.dipanel1.Size = new System.Drawing.Size(1112, 837);
-            this.dipanel1.TabIndex = 14;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet2";
-            reportDataSource1.Value = this.comicBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "bases_uno.Reports.ComicReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 52);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1112, 524);
-            this.reportViewer1.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1088, 49);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Ficha Comic";
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(20, 82);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1112, 50);
-            this.panel1.TabIndex = 13;
-            // 
-            // hrpanel
-            // 
-            this.hrpanel.Controls.Add(this.panel2);
-            this.hrpanel.Controls.Add(this.label1);
-            this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.hrpanel.Location = new System.Drawing.Point(20, 18);
-            this.hrpanel.Margin = new System.Windows.Forms.Padding(4);
-            this.hrpanel.Name = "hrpanel";
-            this.hrpanel.Size = new System.Drawing.Size(1112, 64);
-            this.hrpanel.TabIndex = 12;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnadelante);
-            this.panel2.Controls.Add(this.btnatras);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(925, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 64);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnadelante
-            // 
-            this.btnadelante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.btnadelante.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnadelante.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnadelante.FlatAppearance.BorderSize = 0;
-            this.btnadelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnadelante.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
-            this.btnadelante.IconColor = System.Drawing.Color.LightGray;
-            this.btnadelante.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnadelante.Location = new System.Drawing.Point(99, 0);
-            this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
-            this.btnadelante.Name = "btnadelante";
-            this.btnadelante.Size = new System.Drawing.Size(88, 64);
-            this.btnadelante.TabIndex = 5;
-            this.btnadelante.UseVisualStyleBackColor = false;
-            this.btnadelante.Visible = false;
-            // 
-            // btnatras
-            // 
-            this.btnatras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.btnatras.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnatras.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnatras.FlatAppearance.BorderSize = 0;
-            this.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnatras.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.btnatras.IconColor = System.Drawing.Color.LightGray;
-            this.btnatras.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnatras.Location = new System.Drawing.Point(0, 0);
-            this.btnatras.Margin = new System.Windows.Forms.Padding(0);
-            this.btnatras.Name = "btnatras";
-            this.btnatras.Size = new System.Drawing.Size(88, 64);
-            this.btnatras.TabIndex = 4;
-            this.btnatras.UseVisualStyleBackColor = false;
-            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 63);
-            this.label1.TabIndex = 0;
-            // 
-            // comicTableAdapter
-            // 
-            this.comicTableAdapter.ClearBeforeFill = true;
-            // 
-            // comic2
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 987);
-            this.Controls.Add(this.stpanel7);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "comic2";
-            this.Text = "8 Bit Subastas";
-            this.Load += new System.EventHandler(this.comic2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.comicBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comicDataSet)).EndInit();
-            this.stpanel7.ResumeLayout(false);
-            this.dipanel1.ResumeLayout(false);
-            this.hrpanel.ResumeLayout(false);
-            this.hrpanel.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.ResumeLayout(false);
+			this.components = new System.ComponentModel.Container();
+			Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+			this.stpanel7 = new System.Windows.Forms.Panel();
+			this.dipanel1 = new System.Windows.Forms.Panel();
+			this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+			this.label2 = new System.Windows.Forms.Label();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.hrpanel = new System.Windows.Forms.Panel();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.btnadelante = new FontAwesome.Sharp.IconButton();
+			this.btnatras = new FontAwesome.Sharp.IconButton();
+			this.label1 = new System.Windows.Forms.Label();
+			this.comicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.comicDataSet = new bases_uno.Reports.DataSets.ComicDataSet();
+			this.comicTableAdapter = new bases_uno.Reports.DataSets.ComicDataSetTableAdapters.comicTableAdapter();
+			this.stpanel7.SuspendLayout();
+			this.dipanel1.SuspendLayout();
+			this.hrpanel.SuspendLayout();
+			this.panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.comicBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.comicDataSet)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// stpanel7
+			// 
+			this.stpanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+			this.stpanel7.Controls.Add(this.dipanel1);
+			this.stpanel7.Controls.Add(this.panel1);
+			this.stpanel7.Controls.Add(this.hrpanel);
+			this.stpanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stpanel7.Location = new System.Drawing.Point(0, 0);
+			this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
+			this.stpanel7.Name = "stpanel7";
+			this.stpanel7.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+			this.stpanel7.Size = new System.Drawing.Size(864, 802);
+			this.stpanel7.TabIndex = 1;
+			// 
+			// dipanel1
+			// 
+			this.dipanel1.AutoScroll = true;
+			this.dipanel1.Controls.Add(this.reportViewer1);
+			this.dipanel1.Controls.Add(this.label2);
+			this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dipanel1.Location = new System.Drawing.Point(15, 108);
+			this.dipanel1.Name = "dipanel1";
+			this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 18, 0);
+			this.dipanel1.Size = new System.Drawing.Size(834, 679);
+			this.dipanel1.TabIndex = 14;
+			// 
+			// reportViewer1
+			// 
+			this.reportViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+			this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+			reportDataSource1.Name = "DataSet2";
+			reportDataSource1.Value = this.comicBindingSource;
+			this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+			this.reportViewer1.LocalReport.ReportEmbeddedResource = "bases_uno.Reports.ComicReport.rdlc";
+			this.reportViewer1.Location = new System.Drawing.Point(0, 40);
+			this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.reportViewer1.Name = "reportViewer1";
+			this.reportViewer1.ServerReport.BearerToken = null;
+			this.reportViewer1.Size = new System.Drawing.Size(816, 639);
+			this.reportViewer1.TabIndex = 23;
+			// 
+			// label2
+			// 
+			this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.LightGray;
+			this.label2.Location = new System.Drawing.Point(0, 0);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(816, 40);
+			this.label2.TabIndex = 22;
+			this.label2.Text = "Reporte";
+			this.label2.Click += new System.EventHandler(this.label2_Click_1);
+			// 
+			// panel1
+			// 
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel1.Location = new System.Drawing.Point(15, 67);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(834, 41);
+			this.panel1.TabIndex = 13;
+			// 
+			// hrpanel
+			// 
+			this.hrpanel.Controls.Add(this.panel2);
+			this.hrpanel.Controls.Add(this.label1);
+			this.hrpanel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.hrpanel.Location = new System.Drawing.Point(15, 15);
+			this.hrpanel.Name = "hrpanel";
+			this.hrpanel.Size = new System.Drawing.Size(834, 52);
+			this.hrpanel.TabIndex = 12;
+			// 
+			// panel2
+			// 
+			this.panel2.Controls.Add(this.btnadelante);
+			this.panel2.Controls.Add(this.btnatras);
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+			this.panel2.Location = new System.Drawing.Point(694, 0);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(140, 52);
+			this.panel2.TabIndex = 1;
+			// 
+			// btnadelante
+			// 
+			this.btnadelante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+			this.btnadelante.Dock = System.Windows.Forms.DockStyle.Right;
+			this.btnadelante.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+			this.btnadelante.FlatAppearance.BorderSize = 0;
+			this.btnadelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnadelante.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
+			this.btnadelante.IconColor = System.Drawing.Color.LightGray;
+			this.btnadelante.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnadelante.Location = new System.Drawing.Point(74, 0);
+			this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
+			this.btnadelante.Name = "btnadelante";
+			this.btnadelante.Size = new System.Drawing.Size(66, 52);
+			this.btnadelante.TabIndex = 5;
+			this.btnadelante.UseVisualStyleBackColor = false;
+			this.btnadelante.Visible = false;
+			// 
+			// btnatras
+			// 
+			this.btnatras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+			this.btnatras.Dock = System.Windows.Forms.DockStyle.Left;
+			this.btnatras.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+			this.btnatras.FlatAppearance.BorderSize = 0;
+			this.btnatras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnatras.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+			this.btnatras.IconColor = System.Drawing.Color.LightGray;
+			this.btnatras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnatras.Location = new System.Drawing.Point(0, 0);
+			this.btnatras.Margin = new System.Windows.Forms.Padding(0);
+			this.btnatras.Name = "btnatras";
+			this.btnatras.Size = new System.Drawing.Size(66, 52);
+			this.btnatras.TabIndex = 4;
+			this.btnatras.UseVisualStyleBackColor = false;
+			this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
+			this.label1.ForeColor = System.Drawing.Color.LightGray;
+			this.label1.Location = new System.Drawing.Point(0, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(0, 51);
+			this.label1.TabIndex = 0;
+			// 
+			// comicBindingSource
+			// 
+			this.comicBindingSource.DataMember = "comic";
+			this.comicBindingSource.DataSource = this.comicDataSet;
+			// 
+			// comicDataSet
+			// 
+			this.comicDataSet.DataSetName = "ComicDataSet";
+			this.comicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// comicTableAdapter
+			// 
+			this.comicTableAdapter.ClearBeforeFill = true;
+			// 
+			// comic2
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(864, 802);
+			this.Controls.Add(this.stpanel7);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Name = "comic2";
+			this.Text = "8 Bit Subastas";
+			this.Load += new System.EventHandler(this.comic2_Load);
+			this.stpanel7.ResumeLayout(false);
+			this.dipanel1.ResumeLayout(false);
+			this.hrpanel.ResumeLayout(false);
+			this.hrpanel.PerformLayout();
+			this.panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.comicBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.comicDataSet)).EndInit();
+			this.ResumeLayout(false);
 
         }
 
