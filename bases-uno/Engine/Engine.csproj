@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ClassModell.cs" />
+    <Compile Include="Classes\Coleccionable.cs" />
     <Compile Include="Classes\Comic.cs" />
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\Interest.cs" />
