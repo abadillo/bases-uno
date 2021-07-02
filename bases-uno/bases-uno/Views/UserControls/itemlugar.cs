@@ -17,17 +17,27 @@ namespace bases_uno.Views.Components
         public index parent;
         public Place lugar;
 
-        public itemlugar( Place lugar, index parent )
+        public itemlugar(Place lugar, index parent)
         {
 
             this.parent = parent;
             this.lugar = lugar;
 
+            string locationName = "-";
+
+
+            Place temP = new Place(lugar.LocationID);
+            locationName = temP.Name;
+          
+
             InitializeComponent();
-                        
+
             label1.Text = lugar.Name;
-            label2.Text = lugar.Type;
-            label3.Text = "Localidad: " + lugar.LocationID;
+
+            label3_1.Text = "Tipo:";
+            label3_2.Text = lugar.Type;
+           
+            label2_2.Text = locationName;
 
             Update();
 
@@ -35,7 +45,6 @@ namespace bases_uno.Views.Components
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-         
             parent.InsertForm(new lugar1(parent, lugar));
         }
 

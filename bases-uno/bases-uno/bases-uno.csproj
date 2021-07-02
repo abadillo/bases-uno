@@ -159,11 +159,11 @@
     <Compile Include="Views\Reporte_comic.Designer.cs">
       <DependentUpon>Reporte_comic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserControls\itemcomic.cs">
+    <Compile Include="Views\UserControls\itemlugar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\UserControls\itemcomic.Designer.cs">
-      <DependentUpon>itemcomic.cs</DependentUpon>
+    <Compile Include="Views\UserControls\itemlugar.Designer.cs">
+      <DependentUpon>itemlugar.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\iteminteres.cs">
       <SubType>UserControl</SubType>
@@ -171,11 +171,11 @@
     <Compile Include="Views\UserControls\iteminteres.Designer.cs">
       <DependentUpon>iteminteres.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserControls\itemlugar.cs">
+    <Compile Include="Views\UserControls\itemcomic.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\UserControls\itemlugar.Designer.cs">
-      <DependentUpon>itemlugar.cs</DependentUpon>
+    <Compile Include="Views\UserControls\itemcomic.Designer.cs">
+      <DependentUpon>itemcomic.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\Submenus\menulugar.cs">
       <SubType>Form</SubType>
@@ -276,14 +276,14 @@
     <EmbeddedResource Include="Views\Reporte_comic.resx">
       <DependentUpon>Reporte_comic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserControls\itemcomic.resx">
-      <DependentUpon>itemcomic.cs</DependentUpon>
+    <EmbeddedResource Include="Views\UserControls\itemlugar.resx">
+      <DependentUpon>itemlugar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\iteminteres.resx">
       <DependentUpon>iteminteres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserControls\itemlugar.resx">
-      <DependentUpon>itemlugar.cs</DependentUpon>
+    <EmbeddedResource Include="Views\UserControls\itemcomic.resx">
+      <DependentUpon>itemcomic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menulugar.resx">
       <DependentUpon>menulugar.cs</DependentUpon>

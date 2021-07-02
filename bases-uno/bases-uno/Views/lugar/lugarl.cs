@@ -37,8 +37,9 @@ namespace bases_uno.Views
                 /// Console.WriteLine(list[i]);
 
                 itemlugar item = new itemlugar(list[i], parent);
+                item.Dock = DockStyle.Top;
 
-                flowLayoutPanel1.Controls.Add(item);
+                dipanel1.Controls.Add(item);
             }
 
             Update();

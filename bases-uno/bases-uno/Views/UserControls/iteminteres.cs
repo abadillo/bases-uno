@@ -13,8 +13,7 @@ namespace bases_uno.Views.Components
 {
     public partial class iteminteres : UserControl
     {
-
-        public int id;
+               
         public index parent;
         public Interest interes;
 
@@ -25,10 +24,10 @@ namespace bases_uno.Views.Components
             this.interes = interes;
 
             InitializeComponent();
-                        
+
             label1.Text = interes.Name;
-            label2.Text = interes.Description;
-           
+            label2_2.Text = interes.Description;
+
             Update();
 
         }
@@ -37,5 +36,6 @@ namespace bases_uno.Views.Components
         {
             parent.InsertForm(new interes1(parent, interes));
         }
+
     }
 }

@@ -37,9 +37,11 @@ namespace bases_uno.Views
                 /// Console.WriteLine(list[i]);
 
                 iteminteres item = new iteminteres(list[i], parent);
+                item.Dock = DockStyle.Top;
 
-                flowLayoutPanel1.Controls.Add(item);
+                dipanel1.Controls.Add(item);
             }
+
 
             Update();
 		}

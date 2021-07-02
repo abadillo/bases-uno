@@ -30,14 +30,12 @@ namespace bases_uno.Views
         private void InitializeComponent()
         {
             this.stpanel7 = new System.Windows.Forms.Panel();
-            this.dipanel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.hrpanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.dipanel1 = new System.Windows.Forms.Panel();
             this.stpanel7.SuspendLayout();
-            this.dipanel1.SuspendLayout();
             this.hrpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,25 +52,6 @@ namespace bases_uno.Views
             this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
             this.stpanel7.Size = new System.Drawing.Size(864, 757);
             this.stpanel7.TabIndex = 1;
-            // 
-            // dipanel1
-            // 
-            this.dipanel1.Controls.Add(this.flowLayoutPanel1);
-            this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel1.Location = new System.Drawing.Point(15, 82);
-            this.dipanel1.Name = "dipanel1";
-            this.dipanel1.Size = new System.Drawing.Size(834, 660);
-            this.dipanel1.TabIndex = 12;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(834, 660);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -111,6 +90,16 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 51);
             this.label1.TabIndex = 0;
             // 
+            // dipanel1
+            // 
+            this.dipanel1.AutoScroll = true;
+            this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dipanel1.Location = new System.Drawing.Point(15, 82);
+            this.dipanel1.Name = "dipanel1";
+            this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.dipanel1.Size = new System.Drawing.Size(834, 660);
+            this.dipanel1.TabIndex = 13;
+            // 
             // lugarl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,7 +110,6 @@ namespace bases_uno.Views
             this.Name = "lugarl";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
-            this.dipanel1.ResumeLayout(false);
             this.hrpanel.ResumeLayout(false);
             this.hrpanel.PerformLayout();
             this.ResumeLayout(false);
@@ -131,11 +119,10 @@ namespace bases_uno.Views
         #endregion
 
         private System.Windows.Forms.Panel stpanel7;
-        private System.Windows.Forms.Panel dipanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel hrpanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel dipanel1;
     }
 }

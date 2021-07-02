@@ -14,7 +14,6 @@ namespace bases_uno.Views.Components
     public partial class itemcomic : UserControl
     {
 
-       
         public index parent;
         public Comic comic;
 
@@ -28,10 +27,12 @@ namespace bases_uno.Views.Components
                         
             label1.Text = comic.Titlel;
            
-            label2.Text = comic.Editor + "     " + comic.PublicationDate.ToString();
-           
-            label3.Text = "Volumen: " + comic.Volume.ToString() + "\n" + "Numero: " + comic.Number.ToString() + "\n" + "Paginas: " + comic.Pages.ToString();
-           
+            label2_1.Text = comic.Editor;
+            label2_2.Text = comic.PublicationDate.ToShortDateString();
+
+            label3_1.Text = "Volumen: " + "\n" + "Numero: " + "\n" + "Paginas: ";
+            label3_2.Text =  comic.Volume.ToString() + "\n" + comic.Number.ToString() + "\n" + comic.Pages.ToString();
+
             Update();
 
         }

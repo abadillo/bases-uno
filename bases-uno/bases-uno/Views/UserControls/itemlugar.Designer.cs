@@ -29,69 +29,89 @@ namespace bases_uno.Views.Components
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnadelante = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2_2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label3_2 = new System.Windows.Forms.Label();
+            this.label3_1 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Location = new System.Drawing.Point(0, 94);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(895, 11);
+            this.panel8.TabIndex = 7;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.LightGray;
+            this.panel7.Controls.Add(this.panel4);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(1, 1, 4, 4);
+            this.panel7.Size = new System.Drawing.Size(895, 94);
+            this.panel7.TabIndex = 8;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.iconButton1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel4.Location = new System.Drawing.Point(1, 1);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(10);
+            this.panel4.Size = new System.Drawing.Size(890, 89);
+            this.panel4.TabIndex = 5;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel1);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(10, 10);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
+            this.panel6.Size = new System.Drawing.Size(486, 69);
+            this.panel6.TabIndex = 8;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.btnadelante);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Controls.Add(this.label2_2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(801, 92);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(471, 26);
+            this.panel1.TabIndex = 31;
             // 
-            // btnadelante
+            // label2_2
             // 
-            this.btnadelante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
-            this.btnadelante.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnadelante.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnadelante.FlatAppearance.BorderSize = 0;
-            this.btnadelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnadelante.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
-            this.btnadelante.IconColor = System.Drawing.Color.LightGray;
-            this.btnadelante.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnadelante.Location = new System.Drawing.Point(725, 10);
-            this.btnadelante.Margin = new System.Windows.Forms.Padding(0);
-            this.btnadelante.Name = "btnadelante";
-            this.btnadelante.Size = new System.Drawing.Size(66, 72);
-            this.btnadelante.TabIndex = 7;
-            this.btnadelante.UseVisualStyleBackColor = false;
-            this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(10, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(464, 72);
-            this.panel2.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(0, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(464, 29);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "some stuff";
+            this.label2_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2_2.ForeColor = System.Drawing.Color.LightGray;
+            this.label2_2.Location = new System.Drawing.Point(0, 0);
+            this.label2_2.Name = "label2_2";
+            this.label2_2.Size = new System.Drawing.Size(471, 26);
+            this.label2_2.TabIndex = 32;
+            this.label2_2.Text = "label2_2";
+            this.label2_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -100,55 +120,92 @@ namespace bases_uno.Views.Components
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 37);
+            this.label1.Size = new System.Drawing.Size(471, 37);
             this.label1.TabIndex = 29;
-            this.label1.Text = "lugar tile";
+            this.label1.Text = "label1 label1 label1";
             // 
-            // panel3
+            // panel5
             // 
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(474, 10);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(251, 72);
-            this.panel3.TabIndex = 1;
+            this.panel5.Controls.Add(this.label3_2);
+            this.panel5.Controls.Add(this.label3_1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(496, 10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(318, 69);
+            this.panel5.TabIndex = 1;
             // 
-            // label3
+            // label3_2
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 72);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "some stuff2";
-            
+            this.label3_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_2.ForeColor = System.Drawing.Color.LightGray;
+            this.label3_2.Location = new System.Drawing.Point(86, 0);
+            this.label3_2.Margin = new System.Windows.Forms.Padding(0);
+            this.label3_2.Name = "label3_2";
+            this.label3_2.Size = new System.Drawing.Size(232, 69);
+            this.label3_2.TabIndex = 31;
+            this.label3_2.Text = "label3_2\r\nlabel3_2\r\nlabel3_2";
+            // 
+            // label3_1
+            // 
+            this.label3_1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label3_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_1.ForeColor = System.Drawing.Color.LightGray;
+            this.label3_1.Location = new System.Drawing.Point(0, 0);
+            this.label3_1.Margin = new System.Windows.Forms.Padding(0);
+            this.label3_1.Name = "label3_1";
+            this.label3_1.Size = new System.Drawing.Size(86, 69);
+            this.label3_1.TabIndex = 30;
+            this.label3_1.Text = "label3_1\r\nlabel3_1\r\nlabel3_1";
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
+            this.iconButton1.IconColor = System.Drawing.Color.LightGray;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.Location = new System.Drawing.Point(814, 10);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(66, 69);
+            this.iconButton1.TabIndex = 7;
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // itemlugar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel8);
             this.Name = "itemlugar";
-            this.Size = new System.Drawing.Size(801, 95);
+            this.Size = new System.Drawing.Size(895, 105);
+            this.panel7.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel4;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label3_1;
+        private System.Windows.Forms.Label label3_2;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2_2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton btnadelante;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
     }
 }
