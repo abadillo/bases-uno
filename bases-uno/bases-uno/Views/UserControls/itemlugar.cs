@@ -14,14 +14,14 @@ namespace bases_uno.Views.Components
     public partial class itemlugar : UserControl
     {
 
-        public int id;
         public index parent;
+        public Place lugar;
 
         public itemlugar( Place lugar, index parent )
         {
 
             this.parent = parent;
-            this.id = lugar.ID;
+            this.lugar = lugar;
 
             InitializeComponent();
                         
@@ -35,8 +35,8 @@ namespace bases_uno.Views.Components
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            lugar1 form = new lugar1(parent, id);
-            parent.InsertForm(form);
+         
+            parent.InsertForm(new lugar1(parent, lugar));
         }
 
     }

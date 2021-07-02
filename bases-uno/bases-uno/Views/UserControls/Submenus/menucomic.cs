@@ -24,14 +24,12 @@ namespace bases_uno.Views.Components.Submenus
 
         private void button2_Click(object sender, EventArgs e)
         {
-            comicl panel = new comicl(parent);
-            parent.InsertForm(panel);
+            parent.InsertForm(new comicl(parent));
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            comicr panel = new comicr(parent);
-            parent.InsertForm(panel);
+            parent.InsertForm(new comicr(parent));
         }
     }
 }

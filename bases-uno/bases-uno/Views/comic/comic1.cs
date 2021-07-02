@@ -20,13 +20,13 @@ namespace bases_uno.Views
         public Comic comic;
        
 
-        public comic1(index parent, int id )
+        public comic1(index parent, Comic comic )
         {
             this.parent = parent;
-            this.id = id;
+            this.comic = comic;
 
             InitializeComponent();
-			Comic comic = new Comic(id);
+			
 			textBoxID.Text = comic.ID.ToString();
 			textBoxTitel.Text = comic.Titlel;
 			textBoxPublicationDate.Text = comic.PublicationDate.ToString();
@@ -42,7 +42,6 @@ namespace bases_uno.Views
             label1.Text = "Comic: " + comic.Titlel;
             Update();
 
-            this.comic = comic;
 		}
 
      
@@ -82,8 +81,7 @@ namespace bases_uno.Views
                     comic.Update();
 
                     MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    comic1 form = new comic1(parent, comic.ID);
-                    parent.InsertForm(form);
+                    parent.InsertForm(new comic1(parent, comic));
                 }
                 catch (Exception ex)
                 {
@@ -132,22 +130,19 @@ namespace bases_uno.Views
             input.ReadOnly = false;
             input.ForeColor = Color.Black;
             input.BackColor = Color.LightGray;
-
         }
 
         public void EnableRadio(RadioButton input, FontAwesome.Sharp.IconButton iconbutton)
         {
             iconbutton.Enabled = false;
             input.Enabled = true;
-
         }
 
 
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            comic2 form = new comic2(parent, id);
-            parent.InsertForm(form);
+            parent.InsertForm(new comic2(parent, comic));
         }
 
         private void btnatras_Click(object sender, EventArgs e)
@@ -211,8 +206,6 @@ namespace bases_uno.Views
         {
             Eliminar();
 
-
-
         }
 
         private void iconButton14_Click(object sender, EventArgs e)
@@ -223,8 +216,7 @@ namespace bases_uno.Views
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            comic1 form = new comic1(parent, comic.ID);
-            parent.InsertForm(form);
+            parent.InsertForm(new comic1(parent, comic));
         }
 
       

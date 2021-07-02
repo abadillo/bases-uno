@@ -19,7 +19,7 @@ namespace bases_uno.Views
         public index parent;
         public Comic comic = new Comic(0);
 
-        public comicr(  index parent )
+        public comicr( index parent )
         {
             this.parent = parent;
             InitializeComponent();
@@ -30,11 +30,8 @@ namespace bases_uno.Views
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            comicl form = new comicl(parent);
-            parent.InsertForm(form);
-
+            parent.InsertForm(new comicl(parent));
         }
-              
 
         private void registrar()
         {
@@ -59,8 +56,8 @@ namespace bases_uno.Views
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK ,MessageBoxIcon.Information);
 
                 // comic1 form = new comic1( new Comic() );
-                comicl form = new comicl(parent);
-                parent.InsertForm(form);
+
+                parent.InsertForm(new comicl(parent));
 
             }
             catch (Exception ex)
@@ -84,8 +81,8 @@ namespace bases_uno.Views
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            comicl form = new comicl(parent);
-            parent.InsertForm(form);
+            
+            parent.InsertForm(new comicl(parent));
         }
 
         private void textBoxPublicationPrice_TextChanged(object sender, EventArgs e)

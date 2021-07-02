@@ -36,7 +36,7 @@ namespace bases_uno.Views
             {
                 /// Console.WriteLine(list[i]);
 
-                Components.itemlugar item = new Components.itemlugar(list[i], parent);
+                itemlugar item = new itemlugar(list[i], parent);
 
                 flowLayoutPanel1.Controls.Add(item);
             }

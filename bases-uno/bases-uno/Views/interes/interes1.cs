@@ -7,20 +7,18 @@ namespace bases_uno.Views
 {
     public partial class interes1 : Form
     {
-
-        public int id;
+        
 
         public index parent;
         public Interest interes;
 
-
-        public interes1(index parent, int id)
+        public interes1(index parent, Interest interes)
         {
             this.parent = parent;
-            this.id = id;
+            this.interes = interes;
 
             InitializeComponent();
-            Interest interes = new Interest(id);
+            
             textBoxID.Text = interes.ID.ToString();
             textBoxName.Text = interes.Name;
             textBoxDescription.Text = interes.Description;
@@ -28,7 +26,7 @@ namespace bases_uno.Views
             label1.Text = "Interes: " + interes.Name;
             Update();
 
-            this.interes = interes;
+           
         }
 
         private void Modificar()
@@ -45,8 +43,8 @@ namespace bases_uno.Views
                     interes.Update();
 
                     MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    interes1 form = new interes1(parent, interes.ID);
-                    parent.InsertForm(form);
+                  
+                    parent.InsertForm(new interes1(parent, interes));
                 }
                 catch (Exception ex)
                 {
@@ -74,8 +72,8 @@ namespace bases_uno.Views
                 {
                     interes.Delete();
                     MessageBox.Show("Eliminacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    interesl form = new interesl(parent);
-                    parent.InsertForm(form);
+                   
+                    parent.InsertForm(new interesl(parent));
                 }
                 catch (Exception ex)
                 {
@@ -112,8 +110,8 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            interes2 form = new interes2(parent, id);
-            parent.InsertForm(form);
+           
+            parent.InsertForm(new interes2(parent, interes));
         }
 
         private void btnatras_Click(object sender, EventArgs e)
@@ -128,11 +126,6 @@ namespace bases_uno.Views
             EnableInput(textBoxName, iconButton17);
         }
 
-
-
-
-
-
         private void iconButton1_Click(object sender, EventArgs e)
         {
             EnableInput(textBoxDescription, iconButton1);
@@ -141,8 +134,6 @@ namespace bases_uno.Views
         private void btneliminar_Click(object sender, EventArgs e)
         {
             Eliminar();
-
-
 
         }
 
@@ -154,8 +145,8 @@ namespace bases_uno.Views
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            interes1 form = new interes1(parent, interes.ID);
-            parent.InsertForm(form);
+          
+            parent.InsertForm(new interes1(parent, interes));
         }
 
 

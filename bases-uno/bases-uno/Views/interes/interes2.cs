@@ -16,18 +16,15 @@ namespace bases_uno.Views
     {
 
         public index parent;
+        public Interest interes;
 
-        public int id;
-
-
-        public interes2( index parent, int id )
+        public interes2( index parent, Interest interes)
         {
             this.parent = parent;
-            this.id = id;
+            this.interes = interes;
             
             InitializeComponent();
-            Interest interes = new Interest(id);
-
+           
             label1.Text = "Interes: " + interes.Name;
 
             Update();
@@ -45,8 +42,7 @@ namespace bases_uno.Views
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            interes1 form = new interes1(parent, id);
-            parent.InsertForm(form);
+            parent.InsertForm(new interes1(parent, interes));
         }
     }
 }

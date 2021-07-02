@@ -15,27 +15,22 @@ namespace bases_uno.Views
     {
 
         public index parent;
+        public Comic comic;
+     
 
-        public int id;
 
-
-        public comic2( index parent, int id )
+        public comic2( index parent, Comic comic )
         {
             this.parent = parent;
-            this.id = id;
+            this.comic = comic;
             
             InitializeComponent();
-			Comic comic = new Comic(id);
 
-            label1.Text = "Comics " ;
+            label1.Text = "Comic: " + comic.Titlel;
 
             Update();
 		}
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void comic2_Load(object sender, EventArgs e)
         {
@@ -47,24 +42,12 @@ namespace bases_uno.Views
             this.reportViewer1.RefreshReport();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            comic1 form = new comic1(parent, id);
-            parent.InsertForm(form);
+            parent.InsertForm(new comic1(parent, comic));
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-        }
 
-		private void label2_Click_1(object sender, EventArgs e)
-		{
-
-		}
 	}
 }

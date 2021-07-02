@@ -31,13 +31,11 @@ namespace bases_uno.Views
         {
             this.stpanel7 = new System.Windows.Forms.Panel();
             this.dipanel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.hrpanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
-            this.dipanel1.SuspendLayout();
             this.hrpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,30 +49,19 @@ namespace bases_uno.Views
             this.stpanel7.Location = new System.Drawing.Point(0, 0);
             this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
             this.stpanel7.Name = "stpanel7";
-            this.stpanel7.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
             this.stpanel7.Size = new System.Drawing.Size(864, 757);
             this.stpanel7.TabIndex = 1;
-            this.stpanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.stpanel7_Paint);
             // 
             // dipanel1
             // 
-            this.dipanel1.Controls.Add(this.flowLayoutPanel1);
+            this.dipanel1.AutoScroll = true;
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dipanel1.Location = new System.Drawing.Point(15, 82);
             this.dipanel1.Name = "dipanel1";
+            this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.dipanel1.Size = new System.Drawing.Size(834, 660);
             this.dipanel1.TabIndex = 12;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(834, 660);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel1
             // 
@@ -83,7 +70,6 @@ namespace bases_uno.Views
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 15);
             this.panel1.TabIndex = 11;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // hrpanel
             // 
@@ -94,7 +80,6 @@ namespace bases_uno.Views
             this.hrpanel.Name = "hrpanel";
             this.hrpanel.Size = new System.Drawing.Size(834, 52);
             this.hrpanel.TabIndex = 10;
-            this.hrpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.hrpanel_Paint);
             // 
             // panel2
             // 
@@ -124,9 +109,7 @@ namespace bases_uno.Views
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "comicl";
             this.Text = "8 Bit Subastas";
-            this.Load += new System.EventHandler(this.comicl_Load);
             this.stpanel7.ResumeLayout(false);
-            this.dipanel1.ResumeLayout(false);
             this.hrpanel.ResumeLayout(false);
             this.hrpanel.PerformLayout();
             this.ResumeLayout(false);
@@ -141,6 +124,5 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel hrpanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

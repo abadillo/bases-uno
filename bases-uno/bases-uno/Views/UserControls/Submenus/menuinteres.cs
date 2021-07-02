@@ -24,14 +24,14 @@ namespace bases_uno.Views.Components.Submenus
 
         private void button2_Click(object sender, EventArgs e)
         {
-            interesl panel = new interesl(parent);
-            parent.InsertForm(panel);
+            
+            parent.InsertForm(new interesl(parent));
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            interesr panel = new interesr(parent);
-            parent.InsertForm(panel);
+          
+            parent.InsertForm(new interesr(parent));
         }
     }
 }

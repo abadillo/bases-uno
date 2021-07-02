@@ -69,7 +69,7 @@ namespace bases_uno.Views
             this.stpanel7.Location = new System.Drawing.Point(0, 0);
             this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
             this.stpanel7.Name = "stpanel7";
-            this.stpanel7.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
             this.stpanel7.Size = new System.Drawing.Size(864, 802);
             this.stpanel7.TabIndex = 1;
             // 

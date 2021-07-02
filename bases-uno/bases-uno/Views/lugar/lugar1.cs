@@ -15,19 +15,17 @@ namespace bases_uno.Views
     public partial class lugar1 : Form
     {
 
-        public int id;
 
         public index parent;
         public Place lugar;
        
-
-        public lugar1(index parent, int id )
+        public lugar1(index parent, Place lugar )
         {
             this.parent = parent;
-            this.id = id;
+            this.lugar = lugar;
 
             InitializeComponent();
-			Place lugar = new Place(id);
+			
             textBoxID.Text = lugar.ID.ToString();
             textBoxName.Text = lugar.Name;
             textBoxLocationID.Text = lugar.LocationID.ToString();
@@ -36,7 +34,6 @@ namespace bases_uno.Views
             label1.Text = "Lugar: " + lugar.Name;
             Update();
 
-            this.lugar = lugar;
 		}
 
       
@@ -56,8 +53,8 @@ namespace bases_uno.Views
                     lugar.Update();
 
                     MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    lugar1 form = new lugar1(parent, lugar.ID);
-                    parent.InsertForm(form);
+                 
+                    parent.InsertForm(new lugar1(parent, lugar));
                 }
                 catch (Exception ex)
                 {
@@ -122,14 +119,14 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            lugar2 form = new lugar2(parent, id);
-            parent.InsertForm(form);
+          
+            parent.InsertForm(new lugar2(parent, lugar));
         }
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            lugarl form = new lugarl(parent);
-            parent.InsertForm(form);
+           
+            parent.InsertForm(new lugarl(parent));
         }
 
         private void iconButton17_Click(object sender, EventArgs e)
@@ -151,8 +148,8 @@ namespace bases_uno.Views
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            lugar1 form = new lugar1(parent, lugar.ID);
-            parent.InsertForm(form);
+          
+            parent.InsertForm(new lugar1(parent, lugar));
         }
 
         private void btnmodificar_Click(object sender, EventArgs e)

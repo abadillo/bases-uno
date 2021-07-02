@@ -24,14 +24,12 @@ namespace bases_uno.Views.Components.Submenus
 
         private void button2_Click(object sender, EventArgs e)
         {
-            lugarl panel = new lugarl(parent);
-            parent.InsertForm(panel);
+            parent.InsertForm(new lugarl(parent));
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            lugarr panel = new lugarr(parent);
-            parent.InsertForm(panel);
+            parent.InsertForm(new lugarr(parent));
         }
     }
 }

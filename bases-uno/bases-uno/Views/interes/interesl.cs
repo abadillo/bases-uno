@@ -23,8 +23,6 @@ namespace bases_uno.Views
         
         public List<Interest> list = Query.Interests();
 
-
-
         public interesl(index parent)
         {
             this.parent = parent;
@@ -38,7 +36,7 @@ namespace bases_uno.Views
             {
                 /// Console.WriteLine(list[i]);
 
-                Components.iteminteres item = new Components.iteminteres(list[i], parent);
+                iteminteres item = new iteminteres(list[i], parent);
 
                 flowLayoutPanel1.Controls.Add(item);
             }

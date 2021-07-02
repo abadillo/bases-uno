@@ -26,9 +26,6 @@ namespace bases_uno.Views
             label1.Text = "Registro Interes";
             Update();
         }
-       
-
-       
 
         private void registrar()
         {
@@ -44,9 +41,8 @@ namespace bases_uno.Views
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK ,MessageBoxIcon.Information);
 
-                // interes1 form = new interes1( new Interes() );
-                interesl form = new interesl(parent);
-                parent.InsertForm(form);
+           
+                parent.InsertForm(new interesl(parent));
 
             }
             catch (Exception ex)
@@ -70,14 +66,14 @@ namespace bases_uno.Views
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            interesl form = new interesl(parent);
-            parent.InsertForm(form);
+           
+            parent.InsertForm(new interesl(parent));
         }
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            interesl form = new interesl(parent);
-            parent.InsertForm(form);
+           
+            parent.InsertForm(new interesl(parent));
         }
     }
 }

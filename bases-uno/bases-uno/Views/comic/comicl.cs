@@ -36,56 +36,18 @@ namespace bases_uno.Views
             {
                 /// Console.WriteLine(list[i]);
 
-                Components.itemcomic item = new Components.itemcomic(list[i], parent);
+                itemcomic item = new itemcomic(list[i], parent);
+                item.Dock = DockStyle.Top;                
 
-                flowLayoutPanel1.Controls.Add(item);
+                dipanel1.Controls.Add(item);
             }
 
             Update();
 		}
 
 
-        private void comicl_Load(object sender, EventArgs e)
-        {
-          
-
-        }
-
-
-
-        private void hrpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnadelante_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnatras_Click(object sender, EventArgs e)
-        {
-            /// comicl form = new comicl(parent);
-            /// parent.InsertForm(form);
-        }
-
      
 
       
-
-        private void stpanel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

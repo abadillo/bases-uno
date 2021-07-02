@@ -14,14 +14,15 @@ namespace bases_uno.Views.Components
     public partial class itemcomic : UserControl
     {
 
-        public int id;
+       
         public index parent;
+        public Comic comic;
 
         public itemcomic( Comic comic, index parent )
         {
 
             this.parent = parent;
-            this.id = comic.ID;
+            this.comic = comic;
 
             InitializeComponent();
                         
@@ -37,13 +38,8 @@ namespace bases_uno.Views.Components
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            comic1 form = new comic1(parent, id);
-            parent.InsertForm(form);
+            parent.InsertForm(new comic1(parent, comic));
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
