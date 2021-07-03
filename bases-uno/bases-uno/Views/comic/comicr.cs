@@ -82,17 +82,21 @@ namespace bases_uno.Views
         public int ValidarInt(TextBox campo, bool NN)
         {
 
-            if (NN)
-                ValidarNull(campo);
+            if (!NN && string.IsNullOrEmpty(campo.Text))
+                return 0;
 
+            if (NN)
+            {
+                ValidarNull(campo);
+            }
 
             int temp;
 
             if (!int.TryParse(campo.Text, out temp))
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
-                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero");
-            }
+                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero valido");
+            } 
 
             campo.BackColor = Color.LightGray;
             return temp;
@@ -102,8 +106,8 @@ namespace bases_uno.Views
         public float ValidarFloat(TextBox campo, bool NN)
         {
 
-            if (NN)
-                ValidarNull(campo);
+            if (!NN && string.IsNullOrEmpty(campo.Text))
+                return 0;
 
 
             float temp;
@@ -111,7 +115,7 @@ namespace bases_uno.Views
             if (!float.TryParse(campo.Text, out temp))
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
-                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero");
+                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero decimal valido");
             }
 
             campo.BackColor = Color.LightGray;
