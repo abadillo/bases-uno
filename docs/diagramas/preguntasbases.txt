@@ -2,14 +2,16 @@ preguntar por:
 
 MER
 
-editor en entidad comic
-descripcion detallada en coleccionable
-documento de identidad en representante
-monto recibido de organizacion
+editor en entidad comic - va solo uno
+descripcion detallada en coleccionable - varchar (500) reemplaza caracteristica
+documento de identidad en representante - mas general
+monto recibido de organizacion - se calcula una vez
 fecha_hora, duracion y cancelado (boolean)
 duracion minima en OBJ_SUB (LISTADO)
-email contacto en membresia
+email contacto en membresia - varios correos
 el club puede tener varios correos dependiendo de la plataforma? no entiendo eso. el telefono en que entidad va?
 
 ML
+
+" ? " en OBJ_SUB
 
