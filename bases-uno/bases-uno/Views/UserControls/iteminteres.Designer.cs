@@ -135,6 +135,7 @@ namespace bases_uno.Views.Components
             this.iconButton1.Size = new System.Drawing.Size(66, 69);
             this.iconButton1.TabIndex = 7;
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iteminteres
             // 

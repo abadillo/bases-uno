@@ -27,7 +27,10 @@ namespace bases_uno.Views.Components
 
 
             Lugar temP = new Lugar(lugar.LugarID);
-            locationName = temP.Nombre;
+             if (temP.Name != null)
+            {
+                locationName = temP.Nombre;
+            }
           
 
             InitializeComponent();

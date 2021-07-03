@@ -28,56 +28,82 @@ namespace bases_uno.Views
         }
        
 
+        private void Registrar()
+        {
+            try
+            {
+
+                //comic.Title = Validar(ref , textBoxTitle.Text, "string", true);
+                //comic.Editor = textBoxEditor.Text;
+                //comic.Synopsis = textBoxSynopsis.Text;
+                comic.Volume = int.Parse(maskedTextBoxVolumen.Text);
+            //comic.Number = int.Parse(textBoxNumber.Text);
+            //comic.Pages = int.Parse(textBoxPages.Text);
+            //comic.PublicationPrice = float.Parse(textBoxPublicationPrice.Text);
+            //comic.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
+            //comic.Cover = radioButton2.Checked;
+            //comic.Color = radioButton1.Checked;
+
+                //    comic.Insert();
+
+                //    MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                //    parent.InsertForm(new comicl(parent));
+
+             }
+
+
+            //catch (ApplicationException aex)
+            //{
+            //    MessageBox.Show(aex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            //}
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+
+        //public int ValidarInt(TextBox campo, bool NN)
+        //{
+
+        //    if (NN && string.IsNullOrEmpty(campo.Text))
+        //    {
+        //        campo.ForeColor = Color.Red;
+        //        throw new ApplicationException("Campo vacio");
+        //    }
+
+        //    int temp;
+
+        //    if (!int.TryParse(campo.Text, out temp))
+        //    {
+        //        campo.Invalidate = Color.Red;
+        //        throw new ApplicationException(campo.Text + " debe ser un numero");
+        //    }
+             
+
+        //    return temp;
+        //}
+       
+
+        private void btnadelante_Click(object sender, EventArgs e)
+        {
+            Registrar();
+        }
+
         private void btnatras_Click(object sender, EventArgs e)
         {
             parent.InsertForm(new comicl(parent));
         }
 
-        private void registrar()
-        {
-            try
-            {
-
-                Console.WriteLine(radioButton1.Checked);
-
-                comic.Titlel = textBoxTitel.Text;
-                comic.Editor = textBoxEditor.Text;
-                comic.Synopsis = textBoxSynopsis.Text;
-                comic.Volume = int.Parse(textBoxVolume.Text);
-                comic.Number = int.Parse(textBoxNumber.Text);
-                comic.Pages = int.Parse(textBoxPages.Text);
-                comic.PublicationPrice = float.Parse(textBoxPublicationPrice.Text);
-                comic.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
-                comic.Cover = radioButton2.Checked;
-                comic.Color = radioButton1.Checked;
-
-                comic.Insert();
-
-                MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK ,MessageBoxIcon.Information);
-
-                // comic1 form = new comic1( new Comic() );
-
-                parent.InsertForm(new comicl(parent));
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-
-        }
-
         private void btncrear_Click(object sender, EventArgs e)
         {
-            registrar();
-
+            Registrar();
         }
-        private void btnadelante_Click(object sender, EventArgs e)
-        {
-            registrar();
-        }
-
+       
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
@@ -85,6 +111,7 @@ namespace bases_uno.Views
             parent.InsertForm(new comicl(parent));
         }
 
+      
         private void textBoxPublicationPrice_TextChanged(object sender, EventArgs e)
         {
             try
@@ -99,5 +126,15 @@ namespace bases_uno.Views
            
         }
 
+        private void textBoxPublicationDate_Click(object sender, EventArgs e)
+        {
+            textBoxPublicationDate.Text = "";
+            textBoxPublicationDate.ForeColor = Color.Black;
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            MessageBox.Show("Campo algo ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

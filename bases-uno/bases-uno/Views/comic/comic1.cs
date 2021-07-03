@@ -28,7 +28,7 @@ namespace bases_uno.Views
             InitializeComponent();
 			
 			textBoxID.Text = comic.ID.ToString();
-			textBoxTitel.Text = comic.Titlel;
+			textBoxTitle.Text = comic.Title;
 			textBoxPublicationDate.Text = comic.PublicationDate.ToString();
 			radioButton1.Checked = comic.Color;
             radioButton2.Checked = comic.Cover;
@@ -39,7 +39,7 @@ namespace bases_uno.Views
 			textBoxEditor.Text = comic.Editor;
 			textBoxSynopsis.Text = comic.Synopsis;
 
-            label1.Text = "Comic: " + comic.Titlel;
+            label1.Text = "Comic: " + comic.Title;
             Update();
 
 		}
@@ -47,7 +47,7 @@ namespace bases_uno.Views
      
         private void Modificar()
         {
-            comic.Titlel = textBoxTitel.Text;
+            comic.Title = textBoxTitle.Text;
             comic.Editor = textBoxEditor.Text;
             comic.Synopsis = textBoxSynopsis.Text;
             if (textBoxVolume.Text == "")
@@ -154,7 +154,7 @@ namespace bases_uno.Views
 
         private void iconButton17_Click(object sender, EventArgs e)
         {
-            EnableInput(textBoxTitel, iconButton17);
+            EnableInput(textBoxTitle, iconButton17);
         }
 
         private void iconButton15_Click(object sender, EventArgs e)

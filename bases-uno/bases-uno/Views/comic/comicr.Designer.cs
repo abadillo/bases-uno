@@ -44,7 +44,7 @@ namespace bases_uno.Views
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBoxTitel = new System.Windows.Forms.TextBox();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBoxEditor = new System.Windows.Forms.TextBox();
@@ -56,7 +56,6 @@ namespace bases_uno.Views
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBoxVolume = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBoxPublicationDate = new System.Windows.Forms.TextBox();
@@ -75,6 +74,7 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.maskedTextBoxVolumen = new System.Windows.Forms.MaskedTextBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -102,7 +102,7 @@ namespace bases_uno.Views
             this.stpanel7.Location = new System.Drawing.Point(0, 0);
             this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
             this.stpanel7.Name = "stpanel7";
-            this.stpanel7.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
             this.stpanel7.Size = new System.Drawing.Size(864, 802);
             this.stpanel7.TabIndex = 1;
             // 
@@ -293,7 +293,7 @@ namespace bases_uno.Views
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.textBoxTitel);
+            this.panel11.Controls.Add(this.textBoxTitle);
             this.panel11.Controls.Add(this.label11);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(3, 3);
@@ -302,17 +302,17 @@ namespace bases_uno.Views
             this.panel11.Size = new System.Drawing.Size(402, 49);
             this.panel11.TabIndex = 5;
             // 
-            // textBoxTitel
+            // textBoxTitle
             // 
-            this.textBoxTitel.BackColor = System.Drawing.Color.LightGray;
-            this.textBoxTitel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTitel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxTitel.ForeColor = System.Drawing.Color.Black;
-            this.textBoxTitel.Location = new System.Drawing.Point(0, 27);
-            this.textBoxTitel.Name = "textBoxTitel";
-            this.textBoxTitel.Size = new System.Drawing.Size(372, 22);
-            this.textBoxTitel.TabIndex = 16;
+            this.textBoxTitle.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxTitle.ForeColor = System.Drawing.Color.Black;
+            this.textBoxTitle.Location = new System.Drawing.Point(0, 27);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.Size = new System.Drawing.Size(372, 22);
+            this.textBoxTitle.TabIndex = 16;
             // 
             // label11
             // 
@@ -436,7 +436,7 @@ namespace bases_uno.Views
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.textBoxVolume);
+            this.panel7.Controls.Add(this.maskedTextBoxVolumen);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(411, 3);
@@ -444,19 +444,6 @@ namespace bases_uno.Views
             this.panel7.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.panel7.Size = new System.Drawing.Size(402, 49);
             this.panel7.TabIndex = 1;
-            // 
-            // textBoxVolume
-            // 
-            this.textBoxVolume.BackColor = System.Drawing.Color.LightGray;
-            this.textBoxVolume.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxVolume.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxVolume.ForeColor = System.Drawing.Color.Black;
-            this.textBoxVolume.Location = new System.Drawing.Point(0, 27);
-            this.textBoxVolume.Name = "textBoxVolume";
-            this.textBoxVolume.Size = new System.Drawing.Size(372, 22);
-            this.textBoxVolume.TabIndex = 16;
-            this.textBoxVolume.Text = "0";
             // 
             // label3
             // 
@@ -487,12 +474,13 @@ namespace bases_uno.Views
             this.textBoxPublicationDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPublicationDate.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxPublicationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxPublicationDate.ForeColor = System.Drawing.Color.Black;
+            this.textBoxPublicationDate.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.textBoxPublicationDate.Location = new System.Drawing.Point(0, 27);
             this.textBoxPublicationDate.Name = "textBoxPublicationDate";
             this.textBoxPublicationDate.Size = new System.Drawing.Size(372, 22);
             this.textBoxPublicationDate.TabIndex = 16;
             this.textBoxPublicationDate.Text = "mm/dd/yyyy";
+            this.textBoxPublicationDate.Click += new System.EventHandler(this.textBoxPublicationDate_Click);
             // 
             // label10
             // 
@@ -678,6 +666,21 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 51);
             this.label1.TabIndex = 0;
             // 
+            // maskedTextBoxVolumen
+            // 
+            this.maskedTextBoxVolumen.AsciiOnly = true;
+            this.maskedTextBoxVolumen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBoxVolumen.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.maskedTextBoxVolumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBoxVolumen.Location = new System.Drawing.Point(0, 27);
+            this.maskedTextBoxVolumen.Mask = "00000";
+            this.maskedTextBoxVolumen.Name = "maskedTextBoxVolumen";
+            this.maskedTextBoxVolumen.PromptChar = '0';
+            this.maskedTextBoxVolumen.Size = new System.Drawing.Size(372, 22);
+            this.maskedTextBoxVolumen.TabIndex = 17;
+            this.maskedTextBoxVolumen.ValidatingType = typeof(int);
+            this.maskedTextBoxVolumen.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
             // comicr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -735,7 +738,7 @@ namespace bases_uno.Views
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBoxTitel;
+        private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox textBoxEditor;
@@ -746,7 +749,6 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBoxVolume;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox textBoxPublicationDate;
@@ -765,5 +767,6 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton btnatras;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxVolumen;
     }
 }

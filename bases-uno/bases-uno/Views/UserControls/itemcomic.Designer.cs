@@ -32,20 +32,20 @@ namespace bases_uno.Views.Components
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label3_1 = new System.Windows.Forms.Label();
-            this.label3_2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2_2 = new System.Windows.Forms.Label();
             this.label2_1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label3_2 = new System.Windows.Forms.Label();
+            this.label3_1 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel8
@@ -81,58 +81,6 @@ namespace bases_uno.Views.Components
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
             this.panel4.Size = new System.Drawing.Size(890, 89);
             this.panel4.TabIndex = 5;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
-            this.iconButton1.IconColor = System.Drawing.Color.LightGray;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.Location = new System.Drawing.Point(814, 10);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(66, 69);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label3_2);
-            this.panel5.Controls.Add(this.label3_1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(496, 10);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(318, 69);
-            this.panel5.TabIndex = 1;
-            // 
-            // label3_1
-            // 
-            this.label3_1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3_1.ForeColor = System.Drawing.Color.LightGray;
-            this.label3_1.Location = new System.Drawing.Point(0, 0);
-            this.label3_1.Margin = new System.Windows.Forms.Padding(0);
-            this.label3_1.Name = "label3_1";
-            this.label3_1.Size = new System.Drawing.Size(101, 69);
-            this.label3_1.TabIndex = 30;
-            this.label3_1.Text = "label3_1\r\nlabel3_1\r\nlabel3_1";
-            // 
-            // label3_2
-            // 
-            this.label3_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3_2.ForeColor = System.Drawing.Color.LightGray;
-            this.label3_2.Location = new System.Drawing.Point(101, 0);
-            this.label3_2.Margin = new System.Windows.Forms.Padding(0);
-            this.label3_2.Name = "label3_2";
-            this.label3_2.Size = new System.Drawing.Size(217, 69);
-            this.label3_2.TabIndex = 31;
-            this.label3_2.Text = "label3_2\r\nlabel3_2\r\nlabel3_2";
             // 
             // panel6
             // 
@@ -189,6 +137,59 @@ namespace bases_uno.Views.Components
             this.label1.TabIndex = 29;
             this.label1.Text = "label1 label1 label1";
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label3_2);
+            this.panel5.Controls.Add(this.label3_1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(496, 10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(318, 69);
+            this.panel5.TabIndex = 1;
+            // 
+            // label3_2
+            // 
+            this.label3_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_2.ForeColor = System.Drawing.Color.LightGray;
+            this.label3_2.Location = new System.Drawing.Point(101, 0);
+            this.label3_2.Margin = new System.Windows.Forms.Padding(0);
+            this.label3_2.Name = "label3_2";
+            this.label3_2.Size = new System.Drawing.Size(217, 69);
+            this.label3_2.TabIndex = 31;
+            this.label3_2.Text = "label3_2\r\nlabel3_2\r\nlabel3_2";
+            // 
+            // label3_1
+            // 
+            this.label3_1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label3_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_1.ForeColor = System.Drawing.Color.LightGray;
+            this.label3_1.Location = new System.Drawing.Point(0, 0);
+            this.label3_1.Margin = new System.Windows.Forms.Padding(0);
+            this.label3_1.Name = "label3_1";
+            this.label3_1.Size = new System.Drawing.Size(101, 69);
+            this.label3_1.TabIndex = 30;
+            this.label3_1.Text = "label3_1\r\nlabel3_1\r\nlabel3_1";
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
+            this.iconButton1.IconColor = System.Drawing.Color.LightGray;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.Location = new System.Drawing.Point(814, 10);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(66, 69);
+            this.iconButton1.TabIndex = 7;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // itemcomic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,9 +201,9 @@ namespace bases_uno.Views.Components
             this.Size = new System.Drawing.Size(895, 105);
             this.panel7.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -25,7 +25,7 @@ namespace bases_uno.Views.Components
 
             InitializeComponent();
                         
-            label1.Text = comic.Titlel;
+            label1.Text = comic.Title;
            
             label2_1.Text = comic.Editor;
             label2_2.Text = comic.PublicationDate.ToShortDateString();
@@ -37,10 +37,11 @@ namespace bases_uno.Views.Components
 
         }
 
-        private void btnadelante_Click(object sender, EventArgs e)
+       
+
+        private void iconButton1_Click(object sender, EventArgs e)
         {
             parent.InsertForm(new comic1(parent, comic));
         }
-
     }
 }

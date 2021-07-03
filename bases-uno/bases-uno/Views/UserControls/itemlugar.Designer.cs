@@ -139,10 +139,10 @@ namespace bases_uno.Views.Components
             this.label3_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3_2.ForeColor = System.Drawing.Color.LightGray;
-            this.label3_2.Location = new System.Drawing.Point(86, 0);
+            this.label3_2.Location = new System.Drawing.Point(64, 0);
             this.label3_2.Margin = new System.Windows.Forms.Padding(0);
             this.label3_2.Name = "label3_2";
-            this.label3_2.Size = new System.Drawing.Size(232, 69);
+            this.label3_2.Size = new System.Drawing.Size(254, 69);
             this.label3_2.TabIndex = 31;
             this.label3_2.Text = "label3_2\r\nlabel3_2\r\nlabel3_2";
             // 
@@ -154,7 +154,7 @@ namespace bases_uno.Views.Components
             this.label3_1.Location = new System.Drawing.Point(0, 0);
             this.label3_1.Margin = new System.Windows.Forms.Padding(0);
             this.label3_1.Name = "label3_1";
-            this.label3_1.Size = new System.Drawing.Size(86, 69);
+            this.label3_1.Size = new System.Drawing.Size(64, 69);
             this.label3_1.TabIndex = 30;
             this.label3_1.Text = "label3_1\r\nlabel3_1\r\nlabel3_1";
             // 
@@ -175,6 +175,7 @@ namespace bases_uno.Views.Components
             this.iconButton1.Size = new System.Drawing.Size(66, 69);
             this.iconButton1.TabIndex = 7;
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // itemlugar
             // 

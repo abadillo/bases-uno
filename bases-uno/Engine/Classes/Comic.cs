@@ -11,7 +11,7 @@ namespace Engine.Classes
     {
         #region Atributes
         public int ID { get; set; }
-        public string Titlel { get; set; }
+        public string Title { get; set; }
         public int Volume { get; set; }
         public int Number { get; set; }
         public DateTime PublicationDate { get; set; }
@@ -28,7 +28,7 @@ namespace Engine.Classes
            string synopsis, int pages, bool cover, string editor, int volumen = 0, float publicationPrice = 0)
         {
             ID = id;
-            Titlel = titel;
+            Title = titel;
             Number = number;
             PublicationDate = publicationDate;
             Color = color;
@@ -44,7 +44,7 @@ namespace Engine.Classes
             int pages, bool cover, string editor, int volumen = 0, float publicationPrice = 0)
         {
             ID = 0;
-            Titlel = titel;
+            Title = titel;
             Number = number;
             PublicationDate = publicationDate;
             Color = color;
@@ -62,7 +62,7 @@ namespace Engine.Classes
             if (!(comic == null))
             {
                 ID = comic.ID;
-                Titlel = comic.Titlel;
+                Title = comic.Title;
                 Number = comic.Number;
                 PublicationDate = comic.PublicationDate;
                 Color = comic.Color;
@@ -126,7 +126,7 @@ namespace Engine.Classes
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("titulo", Titlel);
+                Script.Parameters.AddWithValue("titulo", Title);
                 Script.Parameters.AddWithValue("numero", Number);
                 Script.Parameters.AddWithValue("fecha_publicacion", PublicationDate);
                 Script.Parameters.AddWithValue("color", Color);
@@ -208,7 +208,7 @@ namespace Engine.Classes
                         Script = new NpgsqlCommand(Query, Connection);
 
                         Script.Parameters.AddWithValue("id", ID);
-                        Script.Parameters.AddWithValue("titulo", Titlel);
+                        Script.Parameters.AddWithValue("titulo", Title);
                         Script.Parameters.AddWithValue("numero", Number);
                         Script.Parameters.AddWithValue("fecha_publicacion", PublicationDate);
                         Script.Parameters.AddWithValue("color", Color);
@@ -226,7 +226,7 @@ namespace Engine.Classes
                         Script = new NpgsqlCommand(Query, Connection);
 
                         Script.Parameters.AddWithValue("id", ID);
-                        Script.Parameters.AddWithValue("titulo", Titlel);
+                        Script.Parameters.AddWithValue("titulo", Title);
                         Script.Parameters.AddWithValue("numero", Number);
                         Script.Parameters.AddWithValue("fecha_publicacion", PublicationDate);
                         Script.Parameters.AddWithValue("precio_publicacion", PublicationPrice);
@@ -246,7 +246,7 @@ namespace Engine.Classes
                     Script = new NpgsqlCommand(Query, Connection);
 
                     Script.Parameters.AddWithValue("id", ID);
-                    Script.Parameters.AddWithValue("titulo", Titlel);
+                    Script.Parameters.AddWithValue("titulo", Title);
                     Script.Parameters.AddWithValue("volumen", Volume);
                     Script.Parameters.AddWithValue("numero", Number);
                     Script.Parameters.AddWithValue("fecha_publicacion", PublicationDate);
@@ -265,7 +265,7 @@ namespace Engine.Classes
                     Script = new NpgsqlCommand(Query, Connection);
 
                     Script.Parameters.AddWithValue("id", ID);
-                    Script.Parameters.AddWithValue("titulo", Titlel);
+                    Script.Parameters.AddWithValue("titulo", Title);
                     Script.Parameters.AddWithValue("volumen", Volume);
                     Script.Parameters.AddWithValue("numero", Number);
                     Script.Parameters.AddWithValue("fecha_publicacion", PublicationDate);
