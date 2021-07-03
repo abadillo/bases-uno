@@ -27,7 +27,7 @@ namespace bases_uno.Views.Components
 
 
             Lugar temP = new Lugar(lugar.LugarID);
-             if (temP.Name != null)
+             if (temP.Nombre != null)
             {
                 locationName = temP.Nombre;
             }
@@ -46,10 +46,11 @@ namespace bases_uno.Views.Components
 
         }
 
-        private void btnadelante_Click(object sender, EventArgs e)
+       
+
+        private void iconButton1_Click(object sender, EventArgs e)
         {
             parent.InsertForm(new lugar1(parent, lugar));
         }
-
     }
 }

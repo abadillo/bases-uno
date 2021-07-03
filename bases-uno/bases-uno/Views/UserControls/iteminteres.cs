@@ -32,10 +32,11 @@ namespace bases_uno.Views.Components
 
         }
 
-        private void btnadelante_Click(object sender, EventArgs e)
+      
+
+        private void iconButton1_Click(object sender, EventArgs e)
         {
             parent.InsertForm(new interes1(parent, interes));
         }
-
     }
 }

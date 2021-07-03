@@ -56,6 +56,7 @@ namespace bases_uno.Views
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.textBoxVolumen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBoxPublicationDate = new System.Windows.Forms.TextBox();
@@ -74,7 +75,6 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBoxVolumen = new System.Windows.Forms.MaskedTextBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -310,9 +310,11 @@ namespace bases_uno.Views
             this.textBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxTitle.ForeColor = System.Drawing.Color.Black;
             this.textBoxTitle.Location = new System.Drawing.Point(0, 27);
+            this.textBoxTitle.MaxLength = 50;
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(372, 22);
             this.textBoxTitle.TabIndex = 16;
+            this.textBoxTitle.Tag = "Titulo";
             // 
             // label11
             // 
@@ -345,9 +347,11 @@ namespace bases_uno.Views
             this.textBoxEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxEditor.ForeColor = System.Drawing.Color.Black;
             this.textBoxEditor.Location = new System.Drawing.Point(0, 28);
+            this.textBoxEditor.MaxLength = 50;
             this.textBoxEditor.Name = "textBoxEditor";
             this.textBoxEditor.Size = new System.Drawing.Size(372, 22);
             this.textBoxEditor.TabIndex = 16;
+            this.textBoxEditor.Tag = "Editor";
             // 
             // label5
             // 
@@ -380,9 +384,11 @@ namespace bases_uno.Views
             this.textBoxPages.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxPages.ForeColor = System.Drawing.Color.Black;
             this.textBoxPages.Location = new System.Drawing.Point(0, 27);
+            this.textBoxPages.MaxLength = 16;
             this.textBoxPages.Name = "textBoxPages";
             this.textBoxPages.Size = new System.Drawing.Size(372, 22);
             this.textBoxPages.TabIndex = 16;
+            this.textBoxPages.Tag = "Paginas";
             this.textBoxPages.Text = "0";
             // 
             // label4
@@ -436,7 +442,7 @@ namespace bases_uno.Views
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.maskedTextBoxVolumen);
+            this.panel7.Controls.Add(this.textBoxVolumen);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(411, 3);
@@ -444,6 +450,21 @@ namespace bases_uno.Views
             this.panel7.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.panel7.Size = new System.Drawing.Size(402, 49);
             this.panel7.TabIndex = 1;
+            // 
+            // textBoxVolumen
+            // 
+            this.textBoxVolumen.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxVolumen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxVolumen.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxVolumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxVolumen.ForeColor = System.Drawing.Color.Black;
+            this.textBoxVolumen.Location = new System.Drawing.Point(0, 27);
+            this.textBoxVolumen.MaxLength = 16;
+            this.textBoxVolumen.Name = "textBoxVolumen";
+            this.textBoxVolumen.Size = new System.Drawing.Size(372, 22);
+            this.textBoxVolumen.TabIndex = 17;
+            this.textBoxVolumen.Tag = "Volumen";
+            this.textBoxVolumen.Text = "0";
             // 
             // label3
             // 
@@ -479,6 +500,7 @@ namespace bases_uno.Views
             this.textBoxPublicationDate.Name = "textBoxPublicationDate";
             this.textBoxPublicationDate.Size = new System.Drawing.Size(372, 22);
             this.textBoxPublicationDate.TabIndex = 16;
+            this.textBoxPublicationDate.Tag = "Fecha Publicacion";
             this.textBoxPublicationDate.Text = "mm/dd/yyyy";
             this.textBoxPublicationDate.Click += new System.EventHandler(this.textBoxPublicationDate_Click);
             // 
@@ -513,9 +535,11 @@ namespace bases_uno.Views
             this.textBoxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxNumber.ForeColor = System.Drawing.Color.Black;
             this.textBoxNumber.Location = new System.Drawing.Point(0, 27);
+            this.textBoxNumber.MaxLength = 16;
             this.textBoxNumber.Name = "textBoxNumber";
             this.textBoxNumber.Size = new System.Drawing.Size(372, 22);
             this.textBoxNumber.TabIndex = 16;
+            this.textBoxNumber.Tag = "Numero";
             this.textBoxNumber.Text = "0";
             // 
             // label9
@@ -562,9 +586,11 @@ namespace bases_uno.Views
             this.textBoxPublicationPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxPublicationPrice.ForeColor = System.Drawing.Color.Black;
             this.textBoxPublicationPrice.Location = new System.Drawing.Point(0, 24);
+            this.textBoxPublicationPrice.MaxLength = 16;
             this.textBoxPublicationPrice.Name = "textBoxPublicationPrice";
             this.textBoxPublicationPrice.Size = new System.Drawing.Size(215, 22);
             this.textBoxPublicationPrice.TabIndex = 16;
+            this.textBoxPublicationPrice.Tag = "Precio Publicacion";
             this.textBoxPublicationPrice.Text = "0";
             this.textBoxPublicationPrice.TextChanged += new System.EventHandler(this.textBoxPublicationPrice_TextChanged);
             // 
@@ -666,21 +692,6 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 51);
             this.label1.TabIndex = 0;
             // 
-            // maskedTextBoxVolumen
-            // 
-            this.maskedTextBoxVolumen.AsciiOnly = true;
-            this.maskedTextBoxVolumen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBoxVolumen.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.maskedTextBoxVolumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBoxVolumen.Location = new System.Drawing.Point(0, 27);
-            this.maskedTextBoxVolumen.Mask = "00000";
-            this.maskedTextBoxVolumen.Name = "maskedTextBoxVolumen";
-            this.maskedTextBoxVolumen.PromptChar = '0';
-            this.maskedTextBoxVolumen.Size = new System.Drawing.Size(372, 22);
-            this.maskedTextBoxVolumen.TabIndex = 17;
-            this.maskedTextBoxVolumen.ValidatingType = typeof(int);
-            this.maskedTextBoxVolumen.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
-            // 
             // comicr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -751,7 +762,6 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBoxPublicationDate;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox textBoxNumber;
@@ -767,6 +777,7 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton btnatras;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxVolumen;
+        private System.Windows.Forms.TextBox textBoxVolumen;
+        private System.Windows.Forms.TextBox textBoxPublicationDate;
     }
 }

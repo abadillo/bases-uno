@@ -33,61 +33,108 @@ namespace bases_uno.Views
             try
             {
 
-                //comic.Title = Validar(ref , textBoxTitle.Text, "string", true);
-                //comic.Editor = textBoxEditor.Text;
-                //comic.Synopsis = textBoxSynopsis.Text;
-                comic.Volume = int.Parse(maskedTextBoxVolumen.Text);
-            //comic.Number = int.Parse(textBoxNumber.Text);
-            //comic.Pages = int.Parse(textBoxPages.Text);
-            //comic.PublicationPrice = float.Parse(textBoxPublicationPrice.Text);
-            //comic.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
-            //comic.Cover = radioButton2.Checked;
-            //comic.Color = radioButton1.Checked;
+                comic.Title = ValidarNull(textBoxTitle);
+                comic.Editor = ValidarNull(textBoxEditor);
+                comic.Synopsis = ValidarNull(textBoxSynopsis);
 
-                //    comic.Insert();
+                comic.Volume = ValidarInt(textBoxVolumen, false);
+                Console.WriteLine(comic.Volume.ToString() + "  " + textBoxVolumen.Text);
 
-                //    MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comic.Number = ValidarInt(textBoxNumber, true);
+                comic.Pages = ValidarInt(textBoxPages,true);
+                comic.PublicationPrice = ValidarFloat(textBoxPublicationPrice, false);
+                comic.PublicationDate = ValidarDateTime(textBoxPublicationDate,true);
+                
+                comic.Cover = radioButton2.Checked;
+                comic.Color = radioButton1.Checked;
+
+                comic.Insert();
 
 
-                //    parent.InsertForm(new comicl(parent));
+                MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                parent.InsertForm(new comicl(parent));
 
              }
 
-
-            //catch (ApplicationException aex)
-            //{
-            //    MessageBox.Show(aex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //}
+            catch (ApplicationException aex)
+            {
+                MessageBox.Show(aex.Message, "Error de tipo de dato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show(ex.Message, "Error con base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
-        //public int ValidarInt(TextBox campo, bool NN)
-        //{
+        public string ValidarNull(TextBox campo) {
 
-        //    if (NN && string.IsNullOrEmpty(campo.Text))
-        //    {
-        //        campo.ForeColor = Color.Red;
-        //        throw new ApplicationException("Campo vacio");
-        //    }
+            if (string.IsNullOrEmpty(campo.Text))
+            {
+                campo.BackColor = Color.FromArgb(232, 81, 94);
+                throw new ApplicationException("Campo " + campo.Tag + " vacio");
+            }
 
-        //    int temp;
+            campo.BackColor = Color.LightGray;
+            return campo.Text;
+        }
 
-        //    if (!int.TryParse(campo.Text, out temp))
-        //    {
-        //        campo.Invalidate = Color.Red;
-        //        throw new ApplicationException(campo.Text + " debe ser un numero");
-        //    }
-             
+        public int ValidarInt(TextBox campo, bool NN)
+        {
 
-        //    return temp;
-        //}
-       
+            if (NN)
+                ValidarNull(campo);
+
+
+            int temp;
+
+            if (!int.TryParse(campo.Text, out temp))
+            {
+                campo.BackColor = Color.FromArgb(232, 81, 94);
+                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero");
+            }
+
+            campo.BackColor = Color.LightGray;
+            return temp;
+
+        }
+
+        public float ValidarFloat(TextBox campo, bool NN)
+        {
+
+            if (NN)
+                ValidarNull(campo);
+
+
+            float temp;
+
+            if (!float.TryParse(campo.Text, out temp))
+            {
+                campo.BackColor = Color.FromArgb(232, 81, 94);
+                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero");
+            }
+
+            campo.BackColor = Color.LightGray;
+            return temp;
+        }
+        public DateTime ValidarDateTime(TextBox campo, bool NN)
+        {
+
+            if (NN)
+                ValidarNull(campo);
+
+            DateTime temp;
+
+            if (!DateTime.TryParse(campo.Text, out temp))
+            {
+                campo.BackColor = Color.FromArgb(232, 81, 94);
+                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser una fecha valida con formato MM/DD/YYYY");
+            }
+
+            campo.BackColor = Color.LightGray;
+            return temp;
+        }
+
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
@@ -132,9 +179,6 @@ namespace bases_uno.Views
             textBoxPublicationDate.ForeColor = Color.Black;
         }
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            MessageBox.Show("Campo algo ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+     
     }
 }
