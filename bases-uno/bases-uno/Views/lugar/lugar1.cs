@@ -17,9 +17,9 @@ namespace bases_uno.Views
 
 
         public index parent;
-        public Place lugar;
+        public Lugar lugar;
        
-        public lugar1(index parent, Place lugar )
+        public lugar1(index parent, Lugar lugar )
         {
             this.parent = parent;
             this.lugar = lugar;
@@ -27,11 +27,11 @@ namespace bases_uno.Views
             InitializeComponent();
 			
             textBoxID.Text = lugar.ID.ToString();
-            textBoxName.Text = lugar.Name;
-            textBoxLocationID.Text = lugar.LocationID.ToString();
-            comboBoxType.SelectedItem = lugar.Type;
+            textBoxName.Text = lugar.Nombre;
+            textBoxLocationID.Text = lugar.LugarID.ToString();
+            comboBoxType.SelectedItem = lugar.Tipo;
 
-            label1.Text = "Lugar: " + lugar.Name;
+            label1.Text = "Lugar: " + lugar.Nombre;
             Update();
 
 		}
@@ -40,9 +40,9 @@ namespace bases_uno.Views
 
         private void Modificar()
         {
-            lugar.Name = textBoxName.Text;
-            lugar.LocationID = int.Parse(textBoxLocationID.Text);
-            lugar.Type = comboBoxType.SelectedItem.ToString(); 
+            lugar.Nombre = textBoxName.Text;
+            lugar.LugarID = int.Parse(textBoxLocationID.Text);
+            lugar.Tipo = comboBoxType.SelectedItem.ToString(); 
 
             DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Lugar?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 

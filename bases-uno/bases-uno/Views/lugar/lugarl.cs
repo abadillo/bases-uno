@@ -20,7 +20,7 @@ namespace bases_uno.Views
         public index parent;
 
         public itemlugar[] itemlist;
-        public List<Place> list = Query.Places();
+        public List<Lugar> list = Query.Places();
 
 
         public lugarl(index parent)

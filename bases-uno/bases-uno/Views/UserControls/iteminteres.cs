@@ -15,9 +15,9 @@ namespace bases_uno.Views.Components
     {
                
         public index parent;
-        public Interest interes;
+        public Interes interes;
 
-        public iteminteres( Interest interes, index parent )
+        public iteminteres( Interes interes, index parent )
         {
 
             this.parent = parent;
@@ -25,8 +25,8 @@ namespace bases_uno.Views.Components
 
             InitializeComponent();
 
-            label1.Text = interes.Name;
-            label2_2.Text = interes.Description;
+            label1.Text = interes.Nombre;
+            label2_2.Text = interes.Descripcion;
 
             Update();
 

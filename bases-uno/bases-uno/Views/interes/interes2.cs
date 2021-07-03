@@ -16,16 +16,16 @@ namespace bases_uno.Views
     {
 
         public index parent;
-        public Interest interes;
+        public Interes interes;
 
-        public interes2( index parent, Interest interes)
+        public interes2( index parent, Interes interes)
         {
             this.parent = parent;
             this.interes = interes;
             
             InitializeComponent();
            
-            label1.Text = "Interes: " + interes.Name;
+            label1.Text = "Interes: " + interes.Nombre;
 
             Update();
 		}

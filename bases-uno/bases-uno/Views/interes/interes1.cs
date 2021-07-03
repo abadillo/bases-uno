@@ -10,9 +10,9 @@ namespace bases_uno.Views
         
 
         public index parent;
-        public Interest interes;
+        public Interes interes;
 
-        public interes1(index parent, Interest interes)
+        public interes1(index parent, Interes interes)
         {
             this.parent = parent;
             this.interes = interes;
@@ -20,10 +20,10 @@ namespace bases_uno.Views
             InitializeComponent();
             
             textBoxID.Text = interes.ID.ToString();
-            textBoxName.Text = interes.Name;
-            textBoxDescription.Text = interes.Description;
+            textBoxName.Text = interes.Nombre;
+            textBoxDescription.Text = interes.Descripcion;
 
-            label1.Text = "Interes: " + interes.Name;
+            label1.Text = "Interes: " + interes.Nombre;
             Update();
 
            
@@ -31,8 +31,8 @@ namespace bases_uno.Views
 
         private void Modificar()
         {
-            interes.Name = textBoxName.Text;
-            interes.Description = textBoxDescription.Text;
+            interes.Nombre = textBoxName.Text;
+            interes.Descripcion = textBoxDescription.Text;
 
             DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Interes?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 

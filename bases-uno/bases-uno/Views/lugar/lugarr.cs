@@ -16,7 +16,7 @@ namespace bases_uno.Views
     {
 
         public index parent;
-        public Place lugar = new Place(0);
+        public Lugar lugar = new Lugar(0);
 
         public lugarr(index parent)
         {
@@ -40,9 +40,9 @@ namespace bases_uno.Views
             try
             {
 
-                lugar.Name = textBoxName.Text;
-                lugar.LocationID = int.Parse(textBoxLocationID.Text);
-                lugar.Type = comboBoxType.SelectedItem.ToString();
+                lugar.Nombre = textBoxName.Text;
+                lugar.LugarID = int.Parse(textBoxLocationID.Text);
+                lugar.Tipo = comboBoxType.SelectedItem.ToString();
 
                 lugar.Insert();
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    class Coleccionable:Engine.DBConnection.CRUD<Coleccionable,int>
+    public class Coleccionable:Engine.DBConnection.CRUD<Coleccionable,int>
     {
         #region Atributes
         public int ID { get; set; }

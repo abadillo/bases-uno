@@ -117,11 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ClassModell.cs" />
+    <Compile Include="Classes\Club.cs" />
     <Compile Include="Classes\Coleccionable.cs" />
     <Compile Include="Classes\Comic.cs" />
     <Compile Include="Classes\Constants.cs" />
-    <Compile Include="Classes\Interest.cs" />
-    <Compile Include="Classes\Place.cs" />
+    <Compile Include="Classes\Interes.cs" />
+    <Compile Include="Classes\Lugar.cs" />
     <Compile Include="DBConnection\CRUD.cs" />
     <Compile Include="DBConnection\DBConnection.cs" />
     <Compile Include="DBConnection\Query.cs" />

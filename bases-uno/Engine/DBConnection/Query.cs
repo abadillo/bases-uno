@@ -47,9 +47,9 @@ namespace Engine.DBConnection
             return list;
         }
 
-        public static List<Interest> Interests()
+        public static List<Interes> Interests()
         {
-            List<Interest> list = new List<Interest>();
+            List<Interes> list = new List<Interes>();
             DBConnection connection = new DBConnection();
 
             try
@@ -63,14 +63,14 @@ namespace Engine.DBConnection
 
                 while (connection.Reader.Read())
                 {
-                    Interest interest = new Interest(connection.ReadInt(0), connection.ReadString(1), connection.ReadString(2));
+                    Interes interest = new Interes(connection.ReadInt(0), connection.ReadString(1), connection.ReadString(2));
 
                     list.Add(interest);
                 }
             }
             catch
             {
-                list = new List<Interest>();
+                list = new List<Interes>();
             }
             finally
             {
@@ -80,9 +80,9 @@ namespace Engine.DBConnection
             return list;
         }
 
-        public static List<Place> Places()
+        public static List<Lugar> Places()
         {
-            List<Place> list = new List<Place>();
+            List<Lugar> list = new List<Lugar>();
             DBConnection connection = new DBConnection();
 
             try
@@ -96,7 +96,7 @@ namespace Engine.DBConnection
 
                 while (connection.Reader.Read())
                 {
-                    Place place = new Place(connection.ReadInt(0), connection.ReadString(1), connection.ReadString(2), 
+                    Lugar place = new Lugar(connection.ReadInt(0), connection.ReadString(1), connection.ReadString(2), 
                         connection.ReadInt(3));
 
                     list.Add(place);
@@ -104,7 +104,7 @@ namespace Engine.DBConnection
             }
             catch
             {
-                list = new List<Place>();
+                list = new List<Lugar>();
             }
             finally
             {

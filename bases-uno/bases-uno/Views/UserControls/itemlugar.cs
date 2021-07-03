@@ -15,9 +15,9 @@ namespace bases_uno.Views.Components
     {
 
         public index parent;
-        public Place lugar;
+        public Lugar lugar;
 
-        public itemlugar(Place lugar, index parent)
+        public itemlugar(Lugar lugar, index parent)
         {
 
             this.parent = parent;
@@ -26,16 +26,16 @@ namespace bases_uno.Views.Components
             string locationName = "-";
 
 
-            Place temP = new Place(lugar.LocationID);
-            locationName = temP.Name;
+            Lugar temP = new Lugar(lugar.LugarID);
+            locationName = temP.Nombre;
           
 
             InitializeComponent();
 
-            label1.Text = lugar.Name;
+            label1.Text = lugar.Nombre;
 
             label3_1.Text = "Tipo:";
-            label3_2.Text = lugar.Type;
+            label3_2.Text = lugar.Tipo;
            
             label2_2.Text = locationName;
 

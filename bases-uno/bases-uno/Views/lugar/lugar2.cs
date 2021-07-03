@@ -16,17 +16,17 @@ namespace bases_uno.Views
     {
 
         public index parent;
-        public Place lugar;
+        public Lugar lugar;
 
 
-        public lugar2( index parent, Place lugar )
+        public lugar2( index parent, Lugar lugar )
         {
             this.parent = parent;
             this.lugar = lugar;
             
             InitializeComponent();
 			
-            label1.Text = "Lugar: " + lugar.Name;
+            label1.Text = "Lugar: " + lugar.Nombre;
 
             Update();
 		}

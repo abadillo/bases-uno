@@ -17,7 +17,7 @@ namespace bases_uno.Views
         public double cambioeuro = 0.84;
 
         public index parent;
-        public Interest interes = new Interest(0);
+        public Interes interes = new Interes(0);
 
         public interesr(  index parent )
         {
@@ -34,8 +34,8 @@ namespace bases_uno.Views
 
                 //Console.WriteLine(radioButton1.Checked);
 
-                interes.Name = textBoxName.Text;
-                interes.Description = textBoxDescription.Text;
+                interes.Nombre = textBoxName.Text;
+                interes.Descripcion = textBoxDescription.Text;
 
                 interes.Insert();
 
