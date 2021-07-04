@@ -14,7 +14,7 @@ namespace bases_uno.Views.UserControls.Submenus
     {
 
         public index parent;
-        public Button activebutton;
+        public Button activeButton;
 
         public menucomic(index parent)
         {
@@ -22,11 +22,11 @@ namespace bases_uno.Views.UserControls.Submenus
 
             InitializeComponent();
 
-            activebutton = button1;
-            ButtonEnable(button1, new comicl(parent));
+            activeButton = buttonListado;
+            ButtonEnable(buttonListado, new comicl(parent));
         }
 
-        public void ButtonEnable(Button pressedbutton, Form form)
+        public void ButtonEnable(Button pressedButton, Form form)
         {
             // not selected
             // Color.FromArgb(73, 103,135);
@@ -34,22 +34,22 @@ namespace bases_uno.Views.UserControls.Submenus
             // selected
             // Color.FromArgb(59,84,110);
            
-            activebutton.FlatAppearance.BorderSize = 0;
-            pressedbutton.FlatAppearance.BorderSize = 1;
+            activeButton.FlatAppearance.BorderSize = 0;
+            pressedButton.FlatAppearance.BorderSize = 1;
 
             parent.InsertForm(form);
-            activebutton = pressedbutton;
+            activeButton = pressedButton;
         }
               
      
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonListado_Click(object sender, EventArgs e)
         {
-            ButtonEnable(button1, new comicl(parent));
+            ButtonEnable(buttonListado, new comicl(parent));
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonRegistro_Click(object sender, EventArgs e)
         {
-            ButtonEnable(button2, new comicr(parent));
+            ButtonEnable(buttonRegistro, new comicr(parent));
         }
 
 

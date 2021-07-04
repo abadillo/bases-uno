@@ -148,7 +148,7 @@ namespace bases_uno.Views
             this.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btncancelar.FlatAppearance.BorderSize = 0;
             this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancelar.ForeColor = System.Drawing.Color.LightGray;
             this.btncancelar.Location = new System.Drawing.Point(275, 3);
             this.btncancelar.Name = "btncancelar";
@@ -165,7 +165,7 @@ namespace bases_uno.Views
             this.btncrear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btncrear.FlatAppearance.BorderSize = 0;
             this.btncrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncrear.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncrear.ForeColor = System.Drawing.Color.LightGray;
             this.btncrear.Location = new System.Drawing.Point(3, 3);
             this.btncrear.Name = "btncrear";
@@ -178,7 +178,7 @@ namespace bases_uno.Views
             // label14
             // 
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.LightGray;
             this.label14.Location = new System.Drawing.Point(0, 579);
             this.label14.Name = "label14";
@@ -200,7 +200,7 @@ namespace bases_uno.Views
             this.textBoxSynopsis.BackColor = System.Drawing.Color.LightGray;
             this.textBoxSynopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSynopsis.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBoxSynopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxSynopsis.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxSynopsis.ForeColor = System.Drawing.Color.Black;
             this.textBoxSynopsis.Location = new System.Drawing.Point(0, 379);
             this.textBoxSynopsis.MaxLength = 1000;
@@ -212,7 +212,7 @@ namespace bases_uno.Views
             // label7
             // 
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.LightGray;
             this.label7.Location = new System.Drawing.Point(0, 339);
             this.label7.Name = "label7";
@@ -269,7 +269,7 @@ namespace bases_uno.Views
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.Color.LightGray;
             this.radioButton2.Location = new System.Drawing.Point(358, 10);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
@@ -283,7 +283,7 @@ namespace bases_uno.Views
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(0, 10);
             this.label8.Name = "label8";
@@ -307,7 +307,7 @@ namespace bases_uno.Views
             this.textBoxTitle.BackColor = System.Drawing.Color.LightGray;
             this.textBoxTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxTitle.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxTitle.ForeColor = System.Drawing.Color.Black;
             this.textBoxTitle.Location = new System.Drawing.Point(0, 27);
             this.textBoxTitle.MaxLength = 50;
@@ -320,7 +320,7 @@ namespace bases_uno.Views
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label11.Font = new System.Drawing.Font("Arial", 14F);
             this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
@@ -344,7 +344,7 @@ namespace bases_uno.Views
             this.textBoxEditor.BackColor = System.Drawing.Color.LightGray;
             this.textBoxEditor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEditor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxEditor.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxEditor.ForeColor = System.Drawing.Color.Black;
             this.textBoxEditor.Location = new System.Drawing.Point(0, 28);
             this.textBoxEditor.MaxLength = 50;
@@ -357,7 +357,7 @@ namespace bases_uno.Views
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label5.Font = new System.Drawing.Font("Arial", 14F);
             this.label5.ForeColor = System.Drawing.Color.LightGray;
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
@@ -381,7 +381,7 @@ namespace bases_uno.Views
             this.textBoxPages.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPages.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPages.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxPages.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxPages.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxPages.ForeColor = System.Drawing.Color.Black;
             this.textBoxPages.Location = new System.Drawing.Point(0, 27);
             this.textBoxPages.MaxLength = 16;
@@ -395,7 +395,7 @@ namespace bases_uno.Views
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label4.Font = new System.Drawing.Font("Arial", 14F);
             this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
@@ -418,7 +418,7 @@ namespace bases_uno.Views
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.Color.LightGray;
             this.radioButton1.Location = new System.Drawing.Point(358, 10);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
@@ -432,7 +432,7 @@ namespace bases_uno.Views
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label12.Font = new System.Drawing.Font("Arial", 14F);
             this.label12.ForeColor = System.Drawing.Color.LightGray;
             this.label12.Location = new System.Drawing.Point(0, 10);
             this.label12.Name = "label12";
@@ -456,7 +456,7 @@ namespace bases_uno.Views
             this.textBoxVolumen.BackColor = System.Drawing.Color.LightGray;
             this.textBoxVolumen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxVolumen.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxVolumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxVolumen.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxVolumen.ForeColor = System.Drawing.Color.Black;
             this.textBoxVolumen.Location = new System.Drawing.Point(0, 27);
             this.textBoxVolumen.MaxLength = 16;
@@ -470,7 +470,7 @@ namespace bases_uno.Views
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.Font = new System.Drawing.Font("Arial", 14F);
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
@@ -494,7 +494,7 @@ namespace bases_uno.Views
             this.textBoxPublicationDate.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPublicationDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPublicationDate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxPublicationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxPublicationDate.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxPublicationDate.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.textBoxPublicationDate.Location = new System.Drawing.Point(0, 27);
             this.textBoxPublicationDate.Name = "textBoxPublicationDate";
@@ -508,7 +508,7 @@ namespace bases_uno.Views
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label10.Font = new System.Drawing.Font("Arial", 14F);
             this.label10.ForeColor = System.Drawing.Color.LightGray;
             this.label10.Location = new System.Drawing.Point(0, 0);
             this.label10.Name = "label10";
@@ -532,7 +532,7 @@ namespace bases_uno.Views
             this.textBoxNumber.BackColor = System.Drawing.Color.LightGray;
             this.textBoxNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNumber.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxNumber.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxNumber.ForeColor = System.Drawing.Color.Black;
             this.textBoxNumber.Location = new System.Drawing.Point(0, 27);
             this.textBoxNumber.MaxLength = 16;
@@ -546,7 +546,7 @@ namespace bases_uno.Views
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label9.Font = new System.Drawing.Font("Arial", 14F);
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
@@ -570,7 +570,7 @@ namespace bases_uno.Views
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.Font = new System.Drawing.Font("Arial", 14F);
             this.label6.ForeColor = System.Drawing.Color.LightGray;
             this.label6.Location = new System.Drawing.Point(337, 24);
             this.label6.Name = "label6";
@@ -583,7 +583,7 @@ namespace bases_uno.Views
             this.textBoxPublicationPrice.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPublicationPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPublicationPrice.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBoxPublicationPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxPublicationPrice.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxPublicationPrice.ForeColor = System.Drawing.Color.Black;
             this.textBoxPublicationPrice.Location = new System.Drawing.Point(0, 24);
             this.textBoxPublicationPrice.MaxLength = 16;
@@ -598,7 +598,7 @@ namespace bases_uno.Views
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label13.Font = new System.Drawing.Font("Arial", 14F);
             this.label13.ForeColor = System.Drawing.Color.LightGray;
             this.label13.Location = new System.Drawing.Point(0, 0);
             this.label13.Name = "label13";
@@ -609,7 +609,7 @@ namespace bases_uno.Views
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
@@ -685,7 +685,7 @@ namespace bases_uno.Views
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
+            this.label1.Font = new System.Drawing.Font("Arial", 32F);
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";

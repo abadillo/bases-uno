@@ -30,10 +30,10 @@ namespace bases_uno.Views.UserControls.Submenus
         private void InitializeComponent()
         {
             this.dipanel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonRegistro = new System.Windows.Forms.Button();
+            this.buttonListado = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.dipanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -41,8 +41,8 @@ namespace bases_uno.Views.UserControls.Submenus
             // dipanel
             // 
             this.dipanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(69)))), ((int)(((byte)(89)))));
-            this.dipanel.Controls.Add(this.button2);
-            this.dipanel.Controls.Add(this.button1);
+            this.dipanel.Controls.Add(this.buttonRegistro);
+            this.dipanel.Controls.Add(this.buttonListado);
             this.dipanel.Controls.Add(this.panel1);
             this.dipanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dipanel.Location = new System.Drawing.Point(0, 0);
@@ -51,61 +51,61 @@ namespace bases_uno.Views.UserControls.Submenus
             this.dipanel.Size = new System.Drawing.Size(218, 464);
             this.dipanel.TabIndex = 2;
             // 
-            // button2
+            // buttonRegistro
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(1, 104);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(216, 50);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Registro";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.buttonRegistro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRegistro.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.buttonRegistro.FlatAppearance.BorderSize = 0;
+            this.buttonRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegistro.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistro.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonRegistro.Location = new System.Drawing.Point(1, 104);
+            this.buttonRegistro.Name = "buttonRegistro";
+            this.buttonRegistro.Size = new System.Drawing.Size(216, 50);
+            this.buttonRegistro.TabIndex = 6;
+            this.buttonRegistro.Text = "Registro";
+            this.buttonRegistro.UseVisualStyleBackColor = false;
+            this.buttonRegistro.Click += new System.EventHandler(this.buttonRegistro_Click);
             // 
-            // button1
+            // buttonListado
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(1, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 50);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Listado";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonListado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.buttonListado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonListado.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.buttonListado.FlatAppearance.BorderSize = 0;
+            this.buttonListado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonListado.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonListado.Location = new System.Drawing.Point(1, 54);
+            this.buttonListado.Name = "buttonListado";
+            this.buttonListado.Size = new System.Drawing.Size(216, 50);
+            this.buttonListado.TabIndex = 5;
+            this.buttonListado.Text = "Listado";
+            this.buttonListado.UseVisualStyleBackColor = false;
+            this.buttonListado.Click += new System.EventHandler(this.buttonListado_Click);
             //
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labelTitulo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(216, 53);
             this.panel1.TabIndex = 5;
             // 
-            // label1
+            // labelTitulo
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 53);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Intereses";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.labelTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
+            this.labelTitulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(216, 53);
+            this.labelTitulo.TabIndex = 3;
+            this.labelTitulo.Text = "Intereses";
+            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // menuinteres
             // 
@@ -127,8 +127,8 @@ namespace bases_uno.Views.UserControls.Submenus
 
         private System.Windows.Forms.Panel dipanel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.Button buttonRegistro;
+        private System.Windows.Forms.Button buttonListado;
     }
 }

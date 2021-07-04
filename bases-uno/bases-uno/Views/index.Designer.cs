@@ -376,7 +376,7 @@ namespace bases_uno.Views
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.stpanel1);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Font = new System.Drawing.Font("Arial", 8.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "index";

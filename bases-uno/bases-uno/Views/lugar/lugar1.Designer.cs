@@ -127,7 +127,7 @@ namespace bases_uno.Views
             this.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btncancelar.FlatAppearance.BorderSize = 0;
             this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancelar.ForeColor = System.Drawing.Color.Black;
             this.btncancelar.Location = new System.Drawing.Point(275, 3);
             this.btncancelar.Name = "btncancelar";
@@ -144,7 +144,7 @@ namespace bases_uno.Views
             this.btnmodificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnmodificar.FlatAppearance.BorderSize = 0;
             this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificar.ForeColor = System.Drawing.Color.LightGray;
             this.btnmodificar.Location = new System.Drawing.Point(3, 3);
             this.btnmodificar.Name = "btnmodificar";
@@ -161,7 +161,7 @@ namespace bases_uno.Views
             this.btneliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btneliminar.FlatAppearance.BorderSize = 0;
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.LightGray;
             this.btneliminar.Location = new System.Drawing.Point(547, 3);
             this.btneliminar.Name = "btneliminar";
@@ -174,7 +174,7 @@ namespace bases_uno.Views
             // label14
             // 
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.LightGray;
             this.label14.Location = new System.Drawing.Point(0, 150);
             this.label14.Name = "label14";
@@ -223,7 +223,7 @@ namespace bases_uno.Views
             // 
             this.textBoxLocationID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxLocationID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLocationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxLocationID.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxLocationID.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxLocationID.Location = new System.Drawing.Point(181, 0);
             this.textBoxLocationID.Name = "textBoxLocationID";
@@ -239,7 +239,7 @@ namespace bases_uno.Views
             this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.iconButton1.Font = new System.Drawing.Font("Arial", 6F);
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -257,7 +257,7 @@ namespace bases_uno.Views
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
@@ -281,7 +281,7 @@ namespace bases_uno.Views
             this.comboBoxType.BackColor = System.Drawing.Color.LightGray;
             this.comboBoxType.Dock = System.Windows.Forms.DockStyle.Right;
             this.comboBoxType.Enabled = false;
-            this.comboBoxType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxType.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxType.FormattingEnabled = true;
             this.comboBoxType.Items.AddRange(new object[] {
             "Pais",
@@ -300,7 +300,7 @@ namespace bases_uno.Views
             this.iconButton15.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton15.FlatAppearance.BorderSize = 0;
             this.iconButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton15.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.iconButton15.Font = new System.Drawing.Font("Arial", 6F);
             this.iconButton15.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton15.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -318,7 +318,7 @@ namespace bases_uno.Views
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
@@ -342,7 +342,7 @@ namespace bases_uno.Views
             this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxID.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxID.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxID.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxID.Location = new System.Drawing.Point(164, 0);
             this.textBoxID.Name = "textBoxID";
@@ -359,7 +359,7 @@ namespace bases_uno.Views
             this.iconButton14.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton14.FlatAppearance.BorderSize = 0;
             this.iconButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton14.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.iconButton14.Font = new System.Drawing.Font("Arial", 6F);
             this.iconButton14.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -377,7 +377,7 @@ namespace bases_uno.Views
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
@@ -401,7 +401,7 @@ namespace bases_uno.Views
             this.textBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxName.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxName.Font = new System.Drawing.Font("Arial", 14F);
             this.textBoxName.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxName.Location = new System.Drawing.Point(111, 0);
             this.textBoxName.Name = "textBoxName";
@@ -417,7 +417,7 @@ namespace bases_uno.Views
             this.iconButton17.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton17.FlatAppearance.BorderSize = 0;
             this.iconButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton17.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.iconButton17.Font = new System.Drawing.Font("Arial", 6F);
             this.iconButton17.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton17.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton17.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -435,7 +435,7 @@ namespace bases_uno.Views
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
@@ -446,7 +446,7 @@ namespace bases_uno.Views
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
@@ -522,7 +522,7 @@ namespace bases_uno.Views
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F);
+            this.label1.Font = new System.Drawing.Font("Arial", 32F);
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";

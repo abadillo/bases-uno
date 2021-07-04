@@ -104,7 +104,7 @@ namespace bases_uno.Views.Components
             // label2_2
             // 
             this.label2_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2_2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2_2.ForeColor = System.Drawing.Color.LightGray;
             this.label2_2.Location = new System.Drawing.Point(0, 0);
             this.label2_2.Name = "label2_2";
@@ -116,7 +116,7 @@ namespace bases_uno.Views.Components
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
@@ -137,7 +137,7 @@ namespace bases_uno.Views.Components
             // label3_2
             // 
             this.label3_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_2.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3_2.ForeColor = System.Drawing.Color.LightGray;
             this.label3_2.Location = new System.Drawing.Point(64, 0);
             this.label3_2.Margin = new System.Windows.Forms.Padding(0);
@@ -149,7 +149,7 @@ namespace bases_uno.Views.Components
             // label3_1
             // 
             this.label3_1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_1.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3_1.ForeColor = System.Drawing.Color.LightGray;
             this.label3_1.Location = new System.Drawing.Point(0, 0);
             this.label3_1.Margin = new System.Windows.Forms.Padding(0);
