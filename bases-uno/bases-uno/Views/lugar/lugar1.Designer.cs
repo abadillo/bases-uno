@@ -228,7 +228,7 @@ namespace bases_uno.Views
             this.textBoxLocationID.Location = new System.Drawing.Point(181, 0);
             this.textBoxLocationID.Name = "textBoxLocationID";
             this.textBoxLocationID.ReadOnly = true;
-            this.textBoxLocationID.Size = new System.Drawing.Size(184, 22);
+            this.textBoxLocationID.Size = new System.Drawing.Size(184, 23);
             this.textBoxLocationID.TabIndex = 16;
             this.textBoxLocationID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -261,7 +261,7 @@ namespace bases_uno.Views
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 24);
+            this.label3.Size = new System.Drawing.Size(88, 23);
             this.label3.TabIndex = 14;
             this.label3.Text = "localidad";
             // 
@@ -290,7 +290,7 @@ namespace bases_uno.Views
             "Direccion"});
             this.comboBoxType.Location = new System.Drawing.Point(111, 0);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(254, 24);
+            this.comboBoxType.Size = new System.Drawing.Size(254, 23);
             this.comboBoxType.TabIndex = 16;
             // 
             // iconButton15
@@ -322,7 +322,7 @@ namespace bases_uno.Views
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 24);
+            this.label9.Size = new System.Drawing.Size(43, 23);
             this.label9.TabIndex = 14;
             this.label9.Text = "tipo";
             // 
@@ -347,7 +347,7 @@ namespace bases_uno.Views
             this.textBoxID.Location = new System.Drawing.Point(164, 0);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(201, 22);
+            this.textBoxID.Size = new System.Drawing.Size(201, 23);
             this.textBoxID.TabIndex = 16;
             this.textBoxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -381,7 +381,7 @@ namespace bases_uno.Views
             this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 24);
+            this.label8.Size = new System.Drawing.Size(26, 23);
             this.label8.TabIndex = 14;
             this.label8.Text = "id";
             // 
@@ -406,7 +406,7 @@ namespace bases_uno.Views
             this.textBoxName.Location = new System.Drawing.Point(111, 0);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ReadOnly = true;
-            this.textBoxName.Size = new System.Drawing.Size(254, 22);
+            this.textBoxName.Size = new System.Drawing.Size(254, 23);
             this.textBoxName.TabIndex = 16;
             this.textBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -439,7 +439,7 @@ namespace bases_uno.Views
             this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 24);
+            this.label11.Size = new System.Drawing.Size(76, 23);
             this.label11.TabIndex = 14;
             this.label11.Text = "nombre";
             // 
@@ -526,7 +526,7 @@ namespace bases_uno.Views
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 51);
+            this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
             // lugar1
