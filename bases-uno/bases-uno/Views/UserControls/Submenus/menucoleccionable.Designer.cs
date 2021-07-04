@@ -1,7 +1,7 @@
 ﻿
 namespace bases_uno.Views.UserControls.Submenus
 {
-    partial class menulugar
+    partial class menucoleccionable
     {
         /// <summary>
         /// Required designer variable.
@@ -63,7 +63,7 @@ namespace bases_uno.Views.UserControls.Submenus
             this.button2.Location = new System.Drawing.Point(1, 104);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(216, 50);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Registro";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -80,7 +80,7 @@ namespace bases_uno.Views.UserControls.Submenus
             this.button1.Location = new System.Drawing.Point(1, 54);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(216, 50);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Listado";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -92,7 +92,7 @@ namespace bases_uno.Views.UserControls.Submenus
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(216, 53);
-            this.panel1.TabIndex = 6;
+            this.panel1.TabIndex = 4;
             // 
             // label1
             // 
@@ -104,10 +104,10 @@ namespace bases_uno.Views.UserControls.Submenus
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(216, 53);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Lugares";
+            this.label1.Text = "Coleccionables";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // menulugar
+            // menucoleccionable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,7 +115,7 @@ namespace bases_uno.Views.UserControls.Submenus
             this.ClientSize = new System.Drawing.Size(218, 464);
             this.Controls.Add(this.dipanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "menulugar";
+            this.Name = "menucoleccionable";
             this.Text = "menucomic";
             this.dipanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -126,9 +126,9 @@ namespace bases_uno.Views.UserControls.Submenus
         #endregion
 
         private System.Windows.Forms.Panel dipanel;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

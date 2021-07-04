@@ -129,6 +129,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Views\coleccionable\coleccionable1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\coleccionable\coleccionable1.Designer.cs">
+      <DependentUpon>coleccionable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\coleccionable\coleccionablel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\coleccionable\coleccionablel.Designer.cs">
+      <DependentUpon>coleccionablel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\coleccionable\coleccionabler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\coleccionable\coleccionabler.Designer.cs">
+      <DependentUpon>coleccionabler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\comic\comicl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +177,12 @@
     <Compile Include="Views\Reporte_comic.Designer.cs">
       <DependentUpon>Reporte_comic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\itemcoleccionable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\itemcoleccionable.Designer.cs">
+      <DependentUpon>itemcoleccionable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\itemlugar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -176,6 +200,12 @@
     </Compile>
     <Compile Include="Views\UserControls\itemcomic.Designer.cs">
       <DependentUpon>itemcomic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menucoleccionable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menucoleccionable.Designer.cs">
+      <DependentUpon>menucoleccionable.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\Submenus\menulugar.cs">
       <SubType>Form</SubType>
@@ -261,6 +291,15 @@
     <EmbeddedResource Include="Reports\ComicReport.rdlc" />
     <EmbeddedResource Include="Reports\ReportInteres.rdlc" />
     <EmbeddedResource Include="Reports\ReportLugar.rdlc" />
+    <EmbeddedResource Include="Views\coleccionable\coleccionable1.resx">
+      <DependentUpon>coleccionable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\coleccionable\coleccionablel.resx">
+      <DependentUpon>coleccionablel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\coleccionable\coleccionabler.resx">
+      <DependentUpon>coleccionabler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\comic\comicl.resx">
       <DependentUpon>comicl.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +315,9 @@
     <EmbeddedResource Include="Views\Reporte_comic.resx">
       <DependentUpon>Reporte_comic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\itemcoleccionable.resx">
+      <DependentUpon>itemcoleccionable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemlugar.resx">
       <DependentUpon>itemlugar.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemcomic.resx">
       <DependentUpon>itemcomic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Submenus\menucoleccionable.resx">
+      <DependentUpon>menucoleccionable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menulugar.resx">
       <DependentUpon>menulugar.cs</DependentUpon>

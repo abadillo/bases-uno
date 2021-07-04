@@ -37,8 +37,6 @@ namespace bases_uno.Views.Components
 
         }
 
-       
-
         private void iconButton1_Click(object sender, EventArgs e)
         {
             parent.InsertForm(new comic1(parent, comic));

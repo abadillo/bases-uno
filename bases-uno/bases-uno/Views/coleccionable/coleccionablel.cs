@@ -20,7 +20,8 @@ namespace bases_uno.Views
         public index parent;
 
         public itemcoleccionable[] itemlist;
-        public List<Coleccionable> list = Query.Coleccionables();
+        // public List<Coleccionable> list = Query.Coleccionable();
+        public List<Coleccionable> list;
 
 
         public coleccionablel(index parent)

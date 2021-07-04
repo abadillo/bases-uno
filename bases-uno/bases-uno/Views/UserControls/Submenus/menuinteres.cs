@@ -8,30 +8,48 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace bases_uno.Views.Components.Submenus
+namespace bases_uno.Views.UserControls.Submenus
 {
     public partial class menuinteres : Form
     {
 
         public index parent;
+        public Button activebutton;
 
         public menuinteres(index parent)
         {
             this.parent = parent;
-            
+
             InitializeComponent();
+
+            activebutton = button1;
+            ButtonEnable(button1, new comicl(parent));
+        }
+
+        public void ButtonEnable(Button pressedbutton, Form form)
+        {
+            // not selected
+            // Color.FromArgb(73, 103,135);
+
+            // selected
+            // Color.FromArgb(59,84,110);
+
+            activebutton.FlatAppearance.BorderSize = 0;
+            pressedbutton.FlatAppearance.BorderSize = 1;
+
+            parent.InsertForm(form);
+            activebutton = pressedbutton;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ButtonEnable(button1, new comicl(parent));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            parent.InsertForm(new interesl(parent));
+            ButtonEnable(button2, new comicr(parent));
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-          
-            parent.InsertForm(new interesr(parent));
-        }
     }
 }

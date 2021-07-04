@@ -33,20 +33,20 @@ namespace bases_uno.Views
             try
             {
 
-                coleccionable.Title = ValidarNull(textBoxTitle);
-                coleccionable.Editor = ValidarNull(textBoxEditor);
-                coleccionable.Synopsis = ValidarNull(textBoxSynopsis);
+                coleccionable.Nombre = ValidarNull(textBoxTitle);
+                //coleccionable.Editor = ValidarNull(textBoxEditor);
+                //coleccionable.Synopsis = ValidarNull(textBoxSynopsis);
 
-                coleccionable.Volume = ValidarInt(textBoxVolumen, false);
-                Console.WriteLine(coleccionable.Volume.ToString() + "  " + textBoxVolumen.Text);
+                //coleccionable.Volume = ValidarInt(textBoxVolumen, false);
+                //Console.WriteLine(coleccionable.Volume.ToString() + "  " + textBoxVolumen.Text);
 
-                coleccionable.Number = ValidarInt(textBoxNumber, true);
-                coleccionable.Pages = ValidarInt(textBoxPages,true);
-                coleccionable.PublicationPrice = ValidarFloat(textBoxPublicationPrice, false);
-                coleccionable.PublicationDate = ValidarDateTime(textBoxPublicationDate,true);
+                //coleccionable.Number = ValidarInt(textBoxNumber, true);
+                //coleccionable.Pages = ValidarInt(textBoxPages,true);
+                //coleccionable.PublicationPrice = ValidarFloat(textBoxPublicationPrice, false);
+                //coleccionable.PublicationDate = ValidarDateTime(textBoxPublicationDate,true);
                 
-                coleccionable.Cover = radioButton2.Checked;
-                coleccionable.Color = radioButton1.Checked;
+                //coleccionable.Cover = radioButton2.Checked;
+                //coleccionable.Color = radioButton1.Checked;
 
                 coleccionable.Insert();
 

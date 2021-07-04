@@ -28,49 +28,49 @@ namespace bases_uno.Views
             InitializeComponent();
 			
 			textBoxID.Text = coleccionable.ID.ToString();
-			textBoxTitle.Text = coleccionable.Title;
-			textBoxPublicationDate.Text = coleccionable.PublicationDate.ToString();
-			radioButton1.Checked = coleccionable.Color;
-            radioButton2.Checked = coleccionable.Cover;
-            textBoxVolume.Text = coleccionable.Volume.ToString();
-			textBoxNumber.Text = coleccionable.Number.ToString();
-			textBoxPublicationPrice.Text = coleccionable.PublicationPrice.ToString();
-			textBoxPages.Text = coleccionable.Pages.ToString();
-			textBoxEditor.Text = coleccionable.Editor;
-			textBoxSynopsis.Text = coleccionable.Synopsis;
+			//textBoxTitle.Text = coleccionable.Title;
+			//textBoxPublicationDate.Text = coleccionable.PublicationDate.ToString();
+			//radioButton1.Checked = coleccionable.Color;
+   //         radioButton2.Checked = coleccionable.Cover;
+   //         textBoxVolume.Text = coleccionable.Volume.ToString();
+			//textBoxNumber.Text = coleccionable.Number.ToString();
+			//textBoxPublicationPrice.Text = coleccionable.PublicationPrice.ToString();
+			//textBoxPages.Text = coleccionable.Pages.ToString();
+			//textBoxEditor.Text = coleccionable.Editor;
+			//textBoxSynopsis.Text = coleccionable.Synopsis;
 
-            label1.Text = "Coleccionable: " + coleccionable.Title;
+   //         label1.Text = "Coleccionable: " + coleccionable.Title;
             Update();
 
 		}
 
-     
+
         private void Modificar()
         {
-            coleccionable.Title = textBoxTitle.Text;
-            coleccionable.Editor = textBoxEditor.Text;
-            coleccionable.Synopsis = textBoxSynopsis.Text;
-            if (textBoxVolume.Text == "")
-            {
-                coleccionable.Volume = 0;
-            }
-            else
-            {
-                coleccionable.Volume = int.Parse(textBoxVolume.Text);
-            }
-            coleccionable.Number = int.Parse(textBoxNumber.Text);
-            coleccionable.Pages = int.Parse(textBoxPages.Text);
-            if (textBoxPublicationPrice.Text == "")
-            {
-                coleccionable.PublicationPrice = 0;
-            }
-            else
-            {
-                coleccionable.PublicationPrice = int.Parse(textBoxPublicationPrice.Text);
-            }
-            coleccionable.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
-            coleccionable.Cover = radioButton2.Checked;
-            coleccionable.Color = radioButton1.Checked;
+            coleccionable.Nombre = textBoxTitle.Text;
+            //coleccionable.Editor = textBoxEditor.Text;
+            //coleccionable.Synopsis = textBoxSynopsis.Text;
+            //if (textBoxVolume.Text == "")
+            //{
+            //    coleccionable.Volume = 0;
+            //}
+            //else
+            //{
+            //    coleccionable.Volume = int.Parse(textBoxVolume.Text);
+            //}
+            //coleccionable.Number = int.Parse(textBoxNumber.Text);
+            //coleccionable.Pages = int.Parse(textBoxPages.Text);
+            //if (textBoxPublicationPrice.Text == "")
+            //{
+            //    coleccionable.PublicationPrice = 0;
+            //}
+            //else
+            //{
+            //    coleccionable.PublicationPrice = int.Parse(textBoxPublicationPrice.Text);
+            //}
+            //coleccionable.PublicationDate = DateTime.Parse(textBoxPublicationDate.Text);
+            //coleccionable.Cover = radioButton2.Checked;
+            //coleccionable.Color = radioButton1.Checked;
 
             DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Coleccionable?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -140,10 +140,7 @@ namespace bases_uno.Views
 
 
 
-        private void btnadelante_Click(object sender, EventArgs e)
-        {
-            parent.InsertForm(new coleccionable2(parent, coleccionable));
-        }
+       
 
         private void btnatras_Click(object sender, EventArgs e)
         {

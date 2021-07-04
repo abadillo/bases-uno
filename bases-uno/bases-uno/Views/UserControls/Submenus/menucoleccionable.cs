@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace bases_uno.Views.UserControls.Submenus
 {
-    public partial class menucomic : Form
+    public partial class menucoleccionable : Form
     {
 
         public index parent;
         public Button activebutton;
 
-        public menucomic(index parent)
+        public menucoleccionable(index parent)
         {
             this.parent = parent;
 
             InitializeComponent();
 
             activebutton = button1;
-            ButtonEnable(button1, new comicl(parent));
+            ButtonEnable(button1, new coleccionablel(parent));
         }
 
         public void ButtonEnable(Button pressedbutton, Form form)
@@ -33,23 +33,21 @@ namespace bases_uno.Views.UserControls.Submenus
 
             // selected
             // Color.FromArgb(59,84,110);
-           
+
             activebutton.FlatAppearance.BorderSize = 0;
             pressedbutton.FlatAppearance.BorderSize = 1;
 
             parent.InsertForm(form);
             activebutton = pressedbutton;
         }
-              
-     
+
         private void button1_Click(object sender, EventArgs e)
         {
-            ButtonEnable(button1, new comicl(parent));
+            ButtonEnable(button1, new coleccionablel(parent));
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            ButtonEnable(button2, new comicr(parent));
+            ButtonEnable(button2, new coleccionabler(parent));
         }
 
 

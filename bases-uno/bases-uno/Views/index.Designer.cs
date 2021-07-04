@@ -158,7 +158,7 @@ namespace bases_uno.Views
             // 
             // iconButton7
             // 
-            this.iconButton7.BackColor = System.Drawing.Color.Gray;
+            this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
             this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton7.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton7.FlatAppearance.BorderSize = 0;
@@ -172,6 +172,7 @@ namespace bases_uno.Views
             this.iconButton7.Size = new System.Drawing.Size(66, 66);
             this.iconButton7.TabIndex = 17;
             this.iconButton7.UseVisualStyleBackColor = false;
+            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
             // 
             // panel2
             // 
@@ -184,7 +185,7 @@ namespace bases_uno.Views
             // 
             // iconButton6
             // 
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
             this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton6.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton6.FlatAppearance.BorderSize = 0;
