@@ -164,7 +164,7 @@ namespace bases_uno.Views
             this.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btncancelar.FlatAppearance.BorderSize = 0;
             this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncancelar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancelar.ForeColor = System.Drawing.Color.Black;
             this.btncancelar.Location = new System.Drawing.Point(275, 3);
             this.btncancelar.Name = "btncancelar";
@@ -181,7 +181,7 @@ namespace bases_uno.Views
             this.btnmodificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnmodificar.FlatAppearance.BorderSize = 0;
             this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmodificar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodificar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificar.ForeColor = System.Drawing.Color.LightGray;
             this.btnmodificar.Location = new System.Drawing.Point(3, 3);
             this.btnmodificar.Name = "btnmodificar";
@@ -198,7 +198,7 @@ namespace bases_uno.Views
             this.btneliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btneliminar.FlatAppearance.BorderSize = 0;
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneliminar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.LightGray;
             this.btneliminar.Location = new System.Drawing.Point(547, 3);
             this.btneliminar.Name = "btneliminar";
@@ -211,7 +211,7 @@ namespace bases_uno.Views
             // label14
             // 
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.LightGray;
             this.label14.Location = new System.Drawing.Point(0, 511);
             this.label14.Name = "label14";
@@ -233,7 +233,7 @@ namespace bases_uno.Views
             this.textBoxSynopsis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxSynopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSynopsis.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBoxSynopsis.Font = new System.Drawing.Font("Arial", 14F);
+            this.textBoxSynopsis.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxSynopsis.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxSynopsis.Location = new System.Drawing.Point(0, 311);
             this.textBoxSynopsis.MaxLength = 1000;
@@ -262,7 +262,7 @@ namespace bases_uno.Views
             this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton1.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -278,7 +278,7 @@ namespace bases_uno.Views
             // label7
             // 
             this.label7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label7.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.LightGray;
             this.label7.Location = new System.Drawing.Point(0, 20);
             this.label7.Name = "label7";
@@ -329,7 +329,7 @@ namespace bases_uno.Views
             this.radioButton2.AutoSize = true;
             this.radioButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.radioButton2.Enabled = false;
-            this.radioButton2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.Color.LightGray;
             this.radioButton2.Location = new System.Drawing.Point(351, 0);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
@@ -346,7 +346,7 @@ namespace bases_uno.Views
             this.iconButton12.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton12.FlatAppearance.BorderSize = 0;
             this.iconButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton12.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton12.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton12.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton12.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -364,7 +364,7 @@ namespace bases_uno.Views
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.LightGray;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
@@ -388,7 +388,7 @@ namespace bases_uno.Views
             this.textBoxEditor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxEditor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEditor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxEditor.Font = new System.Drawing.Font("Arial", 14F);
+            this.textBoxEditor.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxEditor.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxEditor.Location = new System.Drawing.Point(85, 0);
             this.textBoxEditor.Name = "textBoxEditor";
@@ -404,7 +404,7 @@ namespace bases_uno.Views
             this.iconButton11.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton11.FlatAppearance.BorderSize = 0;
             this.iconButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton11.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton11.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton11.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -422,7 +422,7 @@ namespace bases_uno.Views
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.LightGray;
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
@@ -446,7 +446,7 @@ namespace bases_uno.Views
             this.textBoxPages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxPages.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPages.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxPages.Font = new System.Drawing.Font("Arial", 14F);
+            this.textBoxPages.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxPages.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxPages.Location = new System.Drawing.Point(181, 0);
             this.textBoxPages.Name = "textBoxPages";
@@ -462,7 +462,7 @@ namespace bases_uno.Views
             this.iconButton9.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton9.FlatAppearance.BorderSize = 0;
             this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton9.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton9.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton9.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -480,7 +480,7 @@ namespace bases_uno.Views
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
@@ -504,7 +504,7 @@ namespace bases_uno.Views
             this.textBoxPublicationPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxPublicationPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPublicationPrice.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxPublicationPrice.Font = new System.Drawing.Font("Arial", 14F);
+            this.textBoxPublicationPrice.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxPublicationPrice.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxPublicationPrice.Location = new System.Drawing.Point(181, 0);
             this.textBoxPublicationPrice.Name = "textBoxPublicationPrice";
@@ -520,7 +520,7 @@ namespace bases_uno.Views
             this.iconButton19.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton19.FlatAppearance.BorderSize = 0;
             this.iconButton19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton19.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton19.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton19.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton19.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton19.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -538,7 +538,7 @@ namespace bases_uno.Views
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label13.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.LightGray;
             this.label13.Location = new System.Drawing.Point(0, 0);
             this.label13.Name = "label13";
@@ -562,7 +562,7 @@ namespace bases_uno.Views
             this.radioButton1.AutoSize = true;
             this.radioButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.radioButton1.Enabled = false;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.Color.LightGray;
             this.radioButton1.Location = new System.Drawing.Point(351, 0);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
@@ -579,7 +579,7 @@ namespace bases_uno.Views
             this.iconButton18.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton18.FlatAppearance.BorderSize = 0;
             this.iconButton18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton18.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton18.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton18.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton18.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton18.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -597,7 +597,7 @@ namespace bases_uno.Views
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label12.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.LightGray;
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Name = "label12";
@@ -621,7 +621,7 @@ namespace bases_uno.Views
             this.textBoxTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTitle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxTitle.Font = new System.Drawing.Font("Arial", 14F);
+            this.textBoxTitle.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxTitle.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxTitle.Location = new System.Drawing.Point(65, 0);
             this.textBoxTitle.Name = "textBoxTitle";
@@ -637,7 +637,7 @@ namespace bases_uno.Views
             this.iconButton17.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton17.FlatAppearance.BorderSize = 0;
             this.iconButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton17.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton17.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton17.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton17.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton17.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -655,7 +655,7 @@ namespace bases_uno.Views
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
@@ -679,7 +679,7 @@ namespace bases_uno.Views
             this.textBoxVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxVolume.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxVolume.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxVolume.Font = new System.Drawing.Font("Arial", 14F);
+            this.textBoxVolume.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxVolume.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxVolume.Location = new System.Drawing.Point(181, 0);
             this.textBoxVolume.Name = "textBoxVolume";
@@ -695,7 +695,7 @@ namespace bases_uno.Views
             this.iconButton10.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton10.FlatAppearance.BorderSize = 0;
             this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton10.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton10.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton10.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -713,7 +713,7 @@ namespace bases_uno.Views
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
@@ -737,7 +737,7 @@ namespace bases_uno.Views
             this.textBoxPublicationDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxPublicationDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPublicationDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxPublicationDate.Font = new System.Drawing.Font("Arial", 14F);
+            this.textBoxPublicationDate.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxPublicationDate.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxPublicationDate.Location = new System.Drawing.Point(175, 0);
             this.textBoxPublicationDate.Name = "textBoxPublicationDate";
@@ -753,7 +753,7 @@ namespace bases_uno.Views
             this.iconButton16.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton16.FlatAppearance.BorderSize = 0;
             this.iconButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton16.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton16.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton16.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton16.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -771,7 +771,7 @@ namespace bases_uno.Views
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label10.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label10.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.LightGray;
             this.label10.Location = new System.Drawing.Point(0, 0);
             this.label10.Name = "label10";
@@ -795,7 +795,7 @@ namespace bases_uno.Views
             this.textBoxNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNumber.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxNumber.Font = new System.Drawing.Font("Arial", 14F);
+            this.textBoxNumber.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxNumber.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxNumber.Location = new System.Drawing.Point(181, 0);
             this.textBoxNumber.Name = "textBoxNumber";
@@ -811,7 +811,7 @@ namespace bases_uno.Views
             this.iconButton15.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton15.FlatAppearance.BorderSize = 0;
             this.iconButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton15.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton15.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton15.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton15.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -829,7 +829,7 @@ namespace bases_uno.Views
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
@@ -853,7 +853,7 @@ namespace bases_uno.Views
             this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
             this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxID.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxID.Font = new System.Drawing.Font("Arial", 14F);
+            this.textBoxID.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxID.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxID.Location = new System.Drawing.Point(164, 0);
             this.textBoxID.Name = "textBoxID";
@@ -870,7 +870,7 @@ namespace bases_uno.Views
             this.iconButton14.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.iconButton14.FlatAppearance.BorderSize = 0;
             this.iconButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton14.Font = new System.Drawing.Font("Arial", 6F);
+            this.iconButton14.Font = new System.Drawing.Font("Roboto", 6F);
             this.iconButton14.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
             this.iconButton14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
             this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -888,7 +888,7 @@ namespace bases_uno.Views
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
@@ -899,7 +899,7 @@ namespace bases_uno.Views
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
@@ -975,7 +975,7 @@ namespace bases_uno.Views
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Arial", 32F);
+            this.label1.Font = new System.Drawing.Font("Roboto", 32F);
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";

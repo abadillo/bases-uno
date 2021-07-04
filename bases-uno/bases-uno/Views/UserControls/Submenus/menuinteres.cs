@@ -23,7 +23,7 @@ namespace bases_uno.Views.UserControls.Submenus
             InitializeComponent();
 
             activeButton = buttonListado;
-            ButtonEnable(buttonListado, new comicl(parent));
+            ButtonEnable(buttonListado, new interesl(parent));
         }
 
         public void ButtonEnable(Button pressedButton, Form form)
@@ -43,12 +43,12 @@ namespace bases_uno.Views.UserControls.Submenus
 
         private void buttonListado_Click(object sender, EventArgs e)
         {
-            ButtonEnable(buttonListado, new comicl(parent));
+            ButtonEnable(buttonListado, new interesl(parent));
         }
 
         private void buttonRegistro_Click(object sender, EventArgs e)
         {
-            ButtonEnable(buttonRegistro, new comicr(parent));
+            ButtonEnable(buttonRegistro, new interesl(parent));
         }
 
     }

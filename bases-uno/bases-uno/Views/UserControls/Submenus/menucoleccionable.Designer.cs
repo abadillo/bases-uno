@@ -58,7 +58,7 @@ namespace bases_uno.Views.UserControls.Submenus
             this.buttonRegistro.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonRegistro.FlatAppearance.BorderSize = 0;
             this.buttonRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRegistro.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistro.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegistro.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonRegistro.Location = new System.Drawing.Point(1, 104);
             this.buttonRegistro.Name = "buttonRegistro";
@@ -75,7 +75,7 @@ namespace bases_uno.Views.UserControls.Submenus
             this.buttonListado.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonListado.FlatAppearance.BorderSize = 0;
             this.buttonListado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonListado.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListado.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonListado.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonListado.Location = new System.Drawing.Point(1, 54);
             this.buttonListado.Name = "buttonListado";
@@ -98,7 +98,7 @@ namespace bases_uno.Views.UserControls.Submenus
             // 
             this.labelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
             this.labelTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
+            this.labelTitulo.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelTitulo.ForeColor = System.Drawing.Color.Gainsboro;
             this.labelTitulo.Location = new System.Drawing.Point(0, 0);
             this.labelTitulo.Name = "labelTitulo";
