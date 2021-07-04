@@ -48,7 +48,7 @@ namespace bases_uno.Views.UserControls.Submenus
 
         private void buttonRegistro_Click(object sender, EventArgs e)
         {
-            ButtonEnable(buttonRegistro, new interesl(parent));
+            ButtonEnable(buttonRegistro, new interesr(parent));
         }
 
     }
