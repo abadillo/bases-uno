@@ -41,7 +41,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="coleccionista_documento_identidad" id="06FC499C-8276-55C6-43D8-1DF1C160E1F7">
+<Attribute name="documento_identidad" id="06FC499C-8276-55C6-43D8-1DF1C160E1F7">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 23:00:46 UTC</createdTime>
 <generatorID>13482A34-6719-70CF-B349-F04050169517</generatorID>

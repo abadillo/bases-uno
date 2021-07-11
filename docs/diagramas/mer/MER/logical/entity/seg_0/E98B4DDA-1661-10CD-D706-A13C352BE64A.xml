@@ -79,7 +79,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="dueno_historico_coleccionista_documento_identidad" id="B6D95037-76C7-5EF4-3157-E86665B7664F">
+<Attribute name="documento_identidad" id="B6D95037-76C7-5EF4-3157-E86665B7664F">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-17 22:37:32 UTC</createdTime>
 <generatorID>2D119C6B-5EC6-7333-AB04-5E3AC8BA0EF5</generatorID>
@@ -102,6 +102,7 @@
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
 <referedAttribute>5A3D1F93-D1DF-D7E2-2F47-62C681E6F631</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>

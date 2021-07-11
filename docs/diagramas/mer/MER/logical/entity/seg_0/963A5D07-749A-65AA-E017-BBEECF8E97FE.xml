@@ -71,6 +71,7 @@
 <engineerTo>
 <item key="677F000D-5DA3-40D9-4793-8427533F5BE2" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -114,7 +115,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="coleccionista_documento_identidad" id="3709E9E9-E0DC-124B-1C0F-DF3026E7518E">
+<Attribute name="documento_identidad1" id="3709E9E9-E0DC-124B-1C0F-DF3026E7518E">
 <createdBy>Frank</createdBy>
 <createdTime>2021-06-02 23:42:09 UTC</createdTime>
 <generatorID>A14F521E-6B0D-28B7-B199-5BBDA27DD035</generatorID>
@@ -129,7 +130,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="representante_documento_identidad" id="F6D9BCB1-D32F-145B-E9CD-FEC5431D868B">
+<Attribute name="documento_identidad2" id="F6D9BCB1-D32F-145B-E9CD-FEC5431D868B">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-03 17:01:13 UTC</createdTime>
 <generatorID>9DCF5196-000E-ABCA-BEDD-5D0AA66245A0</generatorID>

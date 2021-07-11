@@ -50,7 +50,7 @@
 <colAssociation fkAssociation="A9BAB97F-1132-A937-E977-FAD7CEF62AC6" referredColumn="4BDF460A-0899-76D0-BEEF-B70BA09A6511"/>
 </associations>
 </Column>
-<Column name="CLUB_id2" id="65C5A6AD-59E3-8E49-D01E-789A1EA60050">
+<Column name="CLUB_id1" id="65C5A6AD-59E3-8E49-D01E-789A1EA60050">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-23 20:08:47 UTC</createdTime>
 <generatorID>247703DD-1CE1-91EA-81A5-553639CC876A</generatorID>
@@ -92,7 +92,7 @@
 <colUsage columnID="D5D1D815-1EB4-942E-198D-9988AF105DC9"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="47C1C5FB-33C5-8D44-819D-98A488B1C4F3" name="ORG_INV_CLUB_FKv2">
+<ind_PK_UK id="47C1C5FB-33C5-8D44-819D-98A488B1C4F3" name="ORG_INV_CLUB_FKv1">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-23 20:08:47 UTC</createdTime>
 <generatorID>84D911DC-2EDA-C3FD-AF5D-6C581FB7AF84</generatorID>

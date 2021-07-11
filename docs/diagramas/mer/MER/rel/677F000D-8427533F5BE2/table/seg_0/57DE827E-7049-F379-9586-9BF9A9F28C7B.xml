@@ -69,7 +69,7 @@
 <colAssociation fkAssociation="FE581BD3-19B9-EF4E-62AA-1E611BFE2756" referredColumn="660A89C3-672E-E13B-464C-21DF26FECB19"/>
 </associations>
 </Column>
-<Column name="DUENO_HISTORICO_COLECCIONISTA_documento_identidad" id="EA20691A-F145-6AE6-9F33-7318E6431F6A">
+<Column name="DUENO_HISTORICO_COLECCIONISTA_id" id="EA20691A-F145-6AE6-9F33-7318E6431F6A">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-23 20:08:47 UTC</createdTime>
 <generatorID>B6D95037-76C7-5EF4-3157-E86665B7664F</generatorID>
@@ -99,7 +99,7 @@
 <colAssociation fkAssociation="1063B09B-D0D1-6B86-3D43-67C607C6BA1F" referredColumn="24BA34AB-C2CC-C1FE-9980-746F5B25F0E4"/>
 </associations>
 </Column>
-<Column name="PARTICIPANTE_subasta_id" id="24A7CCA0-4F1A-EAC6-327D-03AC2A3F8783">
+<Column name="PARTICIPANTE_SUBASTA_id" id="24A7CCA0-4F1A-EAC6-327D-03AC2A3F8783">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-23 20:08:47 UTC</createdTime>
 <generatorID>6DAC7A08-0674-C6D6-4764-DBC379B36A55</generatorID>

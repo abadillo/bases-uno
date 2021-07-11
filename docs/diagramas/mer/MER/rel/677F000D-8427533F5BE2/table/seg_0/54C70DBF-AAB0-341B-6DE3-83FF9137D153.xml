@@ -42,7 +42,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="COLECCIONISTA_documento_identidad" id="1A15F26D-6B56-1352-D6B0-79220DC4B3B0">
+<Column name="COLECCIONISTA_id" id="1A15F26D-6B56-1352-D6B0-79220DC4B3B0">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-23 20:08:47 UTC</createdTime>
 <generatorID>308FBA24-0344-5BA9-5523-F8F90489452A</generatorID>

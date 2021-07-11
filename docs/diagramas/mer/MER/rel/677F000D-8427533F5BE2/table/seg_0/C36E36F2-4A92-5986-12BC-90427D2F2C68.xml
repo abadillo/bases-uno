@@ -58,6 +58,7 @@
 <createdTime>2021-06-23 20:08:47 UTC</createdTime>
 <generatorID>7999C205-3DDE-5198-C3DF-E89009690DAC</generatorID>
 <ownerDesignName>MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
@@ -86,7 +87,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="LUGAR_id2" id="6A533B74-032A-EEF3-7EBA-2D5520C637B2">
+<Column name="LUGAR_id1" id="6A533B74-032A-EEF3-7EBA-2D5520C637B2">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-23 20:08:47 UTC</createdTime>
 <generatorID>D6242DB8-9A9E-68F1-1AB8-21DB4A436BA8</generatorID>
@@ -101,7 +102,7 @@
 <colAssociation fkAssociation="A584157C-9E9E-A866-4AE3-B847A51FE1F0" referredColumn="5F2034F8-A3DD-BBC4-D94E-B0F2C161059F"/>
 </associations>
 </Column>
-<Column name="COLECCIONISTA_documento_identidad" id="6C154AF1-0F50-CC45-3EF5-BE1BA88FDEDE">
+<Column name="COLECCIONISTA_id" id="6C154AF1-0F50-CC45-3EF5-BE1BA88FDEDE">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-23 20:08:47 UTC</createdTime>
 <generatorID>3709E9E9-E0DC-124B-1C0F-DF3026E7518E</generatorID>
@@ -117,7 +118,7 @@
 <colAssociation fkAssociation="17E0B8D6-6CEB-F027-5C3A-C48FCAF170D5" referredColumn="ABFF52F9-A502-931C-3DD4-91EB3944A963"/>
 </associations>
 </Column>
-<Column name="REPRESENTANTE_documento_identidad" id="BA965DCA-2218-E42C-3F1E-5CFCD2906D0A">
+<Column name="REPRESENTANTE_id" id="BA965DCA-2218-E42C-3F1E-5CFCD2906D0A">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-23 20:08:47 UTC</createdTime>
 <generatorID>F6D9BCB1-D32F-145B-E9CD-FEC5431D868B</generatorID>
@@ -195,7 +196,7 @@
 <colUsage columnID="923BAC29-89A2-D3FB-F4BB-918B23AE4550"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="D4F2BDD9-B5FB-D4EF-57E8-6FEE59831E68" name="COLECCIONISTA_LUGAR_FKv2">
+<ind_PK_UK id="D4F2BDD9-B5FB-D4EF-57E8-6FEE59831E68" name="COLECCIONISTA_LUGAR_FKv1">
 <createdBy>inmun</createdBy>
 <createdTime>2021-06-23 20:08:47 UTC</createdTime>
 <generatorID>4B633810-2FFE-319D-8D8D-03C5FA0F7731</generatorID>

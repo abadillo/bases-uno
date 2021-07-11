@@ -52,7 +52,7 @@
 <logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="coleccionista_documento_identidad" id="308FBA24-0344-5BA9-5523-F8F90489452A">
+<Attribute name="documento_identidad" id="308FBA24-0344-5BA9-5523-F8F90489452A">
 <createdBy>antonio2924</createdBy>
 <createdTime>2021-06-05 22:14:26 UTC</createdTime>
 <generatorID>717AFB4D-E497-2669-40B5-49C0F783C43E</generatorID>
