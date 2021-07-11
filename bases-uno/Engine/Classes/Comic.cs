@@ -12,10 +12,10 @@ namespace Engine.Classes
         #region Atributes
         public int ID { get; set; }
         public string Title { get; set; }
-        public int Volume { get; set; }
+        public int Volume { get; set; } //nullable
         public int Number { get; set; }
         public DateTime PublicationDate { get; set; }
-        public float PublicationPrice { get; set; }
+        public float PublicationPrice { get; set; } //nullable
         public bool Color { get; set; }
         public string Synopsis { get; set; }
         public int Pages { get; set; }

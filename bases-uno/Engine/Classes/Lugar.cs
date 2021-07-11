@@ -14,7 +14,7 @@ namespace Engine.Classes
         public int ID { get; set; }
         public string Nombre { get; set; }
         public string Tipo { get; set; }
-        public int LugarID { get; set; }
+        public int LugarID { get; set; } //nullable
         #endregion
 
         #region Constructors

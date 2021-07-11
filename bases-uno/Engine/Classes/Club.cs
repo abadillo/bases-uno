@@ -12,8 +12,8 @@ namespace Engine.Classes
         #region Atributes
         public int ID { get; set; }
         public DateTime FechaFundacion { get; set; }
-        public int Telefono { get; set; }
-        public string PaginaWeb { get; set; }
+        public int Telefono { get; set; } //nullable
+        public string PaginaWeb { get; set; } //nullable
         public string Proposito { get; set; }
         public int ResponsableID { get; set; }
         public int ResponsableClubID { get; set; }
@@ -23,9 +23,8 @@ namespace Engine.Classes
 
         #region Constructors
         // Se crea con toda la informacion de la instancia de clase
-        public Club(int id, DateTime fechaFundacion, int telefono, string paginaWeb,
-            string proposito, int responsableID, int responsableClubId, DateTime responsableFechaIngreso,
-            int lugarID)
+        public Club(int id, DateTime fechaFundacion, string proposito, int responsableID, int responsableClubId, DateTime responsableFechaIngreso,
+            int lugarID, int telefono = 0, string paginaWeb = null)
         {
             ID = id;
             FechaFundacion = fechaFundacion;
@@ -97,18 +96,30 @@ namespace Engine.Classes
         {
             try
             {
-                #region Modelo Caso ID es SERIAL
                 OpenConnection();
 
-                string Query = "INSERT INTO club (fecha_fundacion, telefono, pagina_web, " +
-                    "proposito, membresia_coleccionista_documento_identidad, membresia_club_id, " +
+                string Query = "INSERT INTO club (fecha_fundacion, ";
+                if (!(Telefono == 0))
+                {
+                    Query += "telefono, ";
+                }
+                if (!(PaginaWeb == null))
+                {
+                    Query += "pagina_web, ";
+                }
+                Query +=    "proposito, membresia_coleccionista_documento_identidad, membresia_club_id, " +
                     "membresia_fecha_ingreso, lugar_id) " +
                     "VALUES (@fundacion, @telefono, @web, @proposito, @coleccionistaID, " +
                     "@clubID, @ingreso, @lugar) RETURNING id";
                 Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("telefono", Telefono);
-                Script.Parameters.AddWithValue("web", PaginaWeb);
+                if (!(Telefono == 0))
+                {
+                    Script.Parameters.AddWithValue("telefono", Telefono);
+                }
+                if (!(PaginaWeb == null))
+                {
+                    Script.Parameters.AddWithValue("web", PaginaWeb);
+                }
                 Script.Parameters.AddWithValue("proposito", Proposito);
                 Script.Parameters.AddWithValue("coleccionistaID", ResponsableID);
                 Script.Parameters.AddWithValue("clubId", ResponsableClubID);
@@ -121,7 +132,6 @@ namespace Engine.Classes
                 {
                     ID = ReadInt(0);
                 }
-                #endregion
             }
             finally
             {
@@ -145,8 +155,8 @@ namespace Engine.Classes
 
                 if (Reader.Read())
                 {
-                    club = new Club(ReadInt(0), ReadDate(1), ReadInt(2), ReadString(3), 
-                        ReadString(4), ReadInt(5),ReadInt(6), ReadDate(7), ReadInt(8));
+                    club = new Club(ReadInt(0), ReadDate(1), ReadString(4), ReadInt(5),ReadInt(6), ReadDate(7), 
+                        ReadInt(8), ReadInt(2), ReadString(3));
                 }
             }
             catch
@@ -167,16 +177,32 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE club SET fecha_fundacion = @fundacion, telefono = @telefono, " +
-                    "pagina_web = @web, proposito = @proposito, membresia_coleccionista_documento_identidad = @coleccionistaID, " +
+                string Query = "UPDATE club SET fecha_fundacion = @fundacion, ";
+
+                if (!(Telefono == 0))
+                {
+                    Query += "telefono = @telefono, ";
+                }
+                if (!(PaginaWeb == null))
+                {
+                    Query += "pagina_web = @web, ";
+                }
+
+                Query += "proposito = @proposito, membresia_coleccionista_documento_identidad = @coleccionistaID, " +
                     "membresia_club_id = @clubID, membresia_fecha_ingreso = @ingreso, lugar_id = @lugar " +
                         "WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
                 Script.Parameters.AddWithValue("fundacion", FechaFundacion);
-                Script.Parameters.AddWithValue("telefono", Telefono);
-                Script.Parameters.AddWithValue("web", PaginaWeb);
+                if (!(Telefono == 0))
+                {
+                    Script.Parameters.AddWithValue("telefono", Telefono);
+                }
+                if (!(PaginaWeb == null))
+                {
+                    Script.Parameters.AddWithValue("web", PaginaWeb);
+                }
                 Script.Parameters.AddWithValue("proposito", Proposito);
                 Script.Parameters.AddWithValue("coleccionistaID", ResponsableID);
                 Script.Parameters.AddWithValue("clubID", ResponsableClubID);

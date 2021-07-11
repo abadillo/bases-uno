@@ -9,6 +9,8 @@ namespace Engine.Classes
 {
     public static class Read
     {
+        //Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+
         public static Club Club(int id)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
@@ -26,8 +28,8 @@ namespace Engine.Classes
 
                 if (connection.Reader.Read())
                 {
-                    club = new Club(connection.ReadInt(0), connection.ReadDate(1), connection.ReadInt(2), connection.ReadString(3),
-                        connection.ReadString(4), connection.ReadInt(5), connection.ReadInt(6), connection.ReadDate(7), connection.ReadInt(8));
+                    club = new Club(connection.ReadInt(0), connection.ReadDate(1), connection.ReadString(4), connection.ReadInt(5), 
+                        connection.ReadInt(6), connection.ReadDate(7), connection.ReadInt(8), connection.ReadInt(2), connection.ReadString(3));
                 }
             }
             catch
@@ -74,6 +76,40 @@ namespace Engine.Classes
             return colectable;
         }
 
+        public static Coleccionista Coleccionista(int id)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Coleccionista collector = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM coleccionista WHERE id = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    collector = new Coleccionista(connection.ReadInt(0), connection.ReadString(1), connection.ReadString(2), connection.ReadString(3),
+                        connection.ReadString(4), connection.ReadInt(5), connection.ReadDate(6), connection.ReadInt(7), connection.ReadInt(8), 
+                        connection.ReadInt(9), connection.ReadInt(10));
+                }
+            }
+            catch
+            {
+                collector = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return collector;
+        }
+
         public static Comic Comic(int id)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
@@ -105,6 +141,70 @@ namespace Engine.Classes
             }
 
             return comic;
+        }
+
+        public static Interes Interes(int id)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Interes interest = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM interes WHERE id = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    interest = new Interes(connection.ReadInt(0), connection.ReadString(1), connection.ReadString(2));
+                }
+            }
+            catch
+            {
+                interest = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return interest;
+        }
+
+        public static Lugar Lugar(int id)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Lugar place = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM lugar WHERE id = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    place = new Lugar(connection.ReadInt(0), connection.ReadString(1), connection.ReadString(2), connection.ReadInt(3));
+                }
+            }
+            catch
+            {
+                place = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return place;
         }
     }
 

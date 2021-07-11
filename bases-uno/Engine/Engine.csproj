@@ -119,6 +119,7 @@
     <Compile Include="Classes\ClassModell.cs" />
     <Compile Include="Classes\Club.cs" />
     <Compile Include="Classes\Coleccionable.cs" />
+    <Compile Include="Classes\Coleccionista.cs" />
     <Compile Include="Classes\Comic.cs" />
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\Interes.cs" />
