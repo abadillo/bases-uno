@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Npgsql;
 
 namespace Engine.Classes
 {
-    public class ClassModell : DBConnection.CRUD<ClassModell>
+    class Participante : DBConnection.CRUD<ClassModell>
     {
         #region Atributes
         public int ID { get; set; }
@@ -28,7 +27,7 @@ namespace Engine.Classes
         /// </summary>
         public ClassModell(int id)
         {
-            ClassModell modell = Read.ClassModell(id);
+            ClassModell modell = Read(id);
             if (!(modell == null))
             {
                 ID = modell.ID;
@@ -108,6 +107,37 @@ namespace Engine.Classes
             {
                 Connection.Close();
             }
+        }
+
+        public override ClassModell Read(int id)
+        {
+            ClassModell modell = null;
+
+            try
+            {
+                OpenConnection();
+
+                string Query = "SELECT * FROM modelo WHERE id = @id";
+                Script = new NpgsqlCommand(Query, Connection);
+
+                Script.Parameters.AddWithValue("id", id);
+                Reader = Script.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    modell = new ClassModell(ReadInt(0), ReadString(1));
+                }
+            }
+            catch
+            {
+                modell = null;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+
+            return modell;
         }
 
         public override void Update()

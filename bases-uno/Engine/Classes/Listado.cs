@@ -3,22 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Npgsql;
 
 namespace Engine.Classes
 {
-    public class ClassModell : DBConnection.CRUD<ClassModell>
+    public class Listado : DBConnection.CRUD<Listado>
     {
         #region Atributes
-        public int ID { get; set; }
-        public string OtherData { get; set; }
+        public int ID { get; set; } //PK
+        public int Orden { get; set; } //nullable
+        public float PrecioBase { get; set; }
+        public float PrecioVenta { get; set; } //nullable
+        public int SubastaID { get; set; } //PK
+        public int DuenoHistoricoColeccionistaID { get; set; }
+        public DateTime DuenoHistoricoFechaRegistro { get; set; }
+        public int ParticipanteSubastaID { get; set; } //nullable
+        public int DuenoHistoricoID { get; set; }
+        public int ParticipanteIDInscripcion { get; set; } //nullable
         #endregion
 
         #region Constructors
         /// <summary>
-        /// Usar previo a insercion de un registro en la BD, si la clase tiene una clave serial
+        /// Usar previo a insercion de un registro en la BD
         /// </summary>
-        public ClassModell(string otherData)
+        public Listado(int subastaID, float precioBase, DuenoHistorico duenoHistorico, int orden = 0, float precioVenta = 0, int participanteSubastaID = 0, 
+            int participanteIDInscripcion = 0) //Falta Subasta, Participante
         {
             OtherData = otherData;
         }
@@ -26,20 +34,20 @@ namespace Engine.Classes
         /// <summary>
         /// Crea una instancia de un registro especifico de la BD
         /// </summary>
-        public ClassModell(int id)
+        public Listado(int id)
         {
-            ClassModell modell = Read.ClassModell(id);
-            if (!(modell == null))
+            Listado listado = Read(id);
+            if (!(listado == null))
             {
-                ID = modell.ID;
-                OtherData = modell.OtherData;
+                ID = listado.ID;
+                OtherData = listado.OtherData;
             }
         }
 
         /// <summary>
         /// Constructor General de la Clase, usualmente para la clase READ
         /// </summary>
-        public ClassModell(int id, string otherData)
+        public Listado(int id, string otherData)
         {
             ID = id;
             OtherData = otherData;
@@ -53,7 +61,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM modelo WHERE id = @id";
+                string Query = "DELETE FROM listado WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -72,10 +80,10 @@ namespace Engine.Classes
         {
             try
             {
-                #region Modelo Caso ID no es SERIAL
+                #region listado Caso ID no es SERIAL
                 OpenConnection();
 
-                string Query = "INSERT INTO modelo (id, otherData) " +
+                string Query = "INSERT INTO listado (id, otherData) " +
                     "VALUES (@id, @otherData)";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -87,10 +95,10 @@ namespace Engine.Classes
                 Script.ExecuteNonQuery();
                 #endregion
 
-                #region Modelo Caso ID es SERIAL
+                #region listado Caso ID es SERIAL
                 Connection.Open();
 
-                string Query2 = "INSERT INTO modelo (otherData) " +
+                string Query2 = "INSERT INTO listado (otherData) " +
                     "VALUES (@otherData) RETURNING id";
                 Script = new NpgsqlCommand(Query2, Connection);
 
@@ -116,7 +124,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE modelo SET otherData = @otherData " +
+                string Query = "UPDATE listado SET otherData = @otherData " +
                         "WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    public class DuenoHistorico : DBConnection.CRUD<DuenoHistorico, int>
+    public class DuenoHistorico : DBConnection.CRUD<DuenoHistorico>
     {
         #region Atributes
         public int ID { get; set; }
@@ -58,9 +58,9 @@ namespace Engine.Classes
         }
 
         //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
-        public DuenoHistorico(int id)
+        public DuenoHistorico(Coleccionista coleccionista, DateTime fechaRegistro, int id)
         {
-            DuenoHistorico duenoHistorico = Read(id);
+            DuenoHistorico duenoHistorico = Read.DuenoHistorico(coleccionista, fechaRegistro, id);
             if (!(duenoHistorico == null))
             {
                 ID = duenoHistorico.ID;
@@ -176,49 +176,45 @@ namespace Engine.Classes
             }
         }
 
-        public override DuenoHistorico Read(int id)
-        {
-            DuenoHistorico duenoHistorico = null;
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM dueno_historico WHERE id = @id";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", id);
-                Reader = Script.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    duenoHistorico = new DuenoHistorico(ReadInt(0), ReadDate(1), ReadString(2), ReadInt(3), ReadInt(4), ReadFloat(5), ReadInt(6));
-                }
-            }
-            catch
-            {
-                duenoHistorico = null;
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return duenoHistorico;
-        }
-
         public override void Update()
         {
             try
             {
                 OpenConnection();
 
-                string Query = "UPDATE dueno_historico SET otherData = @otherData " +
-                        "WHERE id = @id";
+                string Query = "UPDATE dueno_historico SET fecha_registro = @fecharegistro, coleccionista_documento_identidad = @coleccionistaid, " +
+                    "precio_dolar = @precio ";
+                if (!(Significado == null))
+                {
+                    Query += "significado = @significado ";
+                }
+                if (!(ColeccionableID == 0))
+                {
+                    Query += "coleccionable_id = @coleccionableid";
+                }
+                else if (!(ComicID == 0))
+                {
+                    Query += "comic_id = @comicid";
+                }
+                Query += "WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script.Parameters.AddWithValue("fecharegistro", FechaRegistro);
+                Script.Parameters.AddWithValue("coleccionistaid", ColeccionistaID);
+                Script.Parameters.AddWithValue("precio", PrecioDolares);
+                if (!(Significado == null))
+                {
+                    Script.Parameters.AddWithValue("significado", Significado);
+                }
+                if (!(ColeccionableID == 0))
+                {
+                    Script.Parameters.AddWithValue("coleccionableid", ColeccionableID);
+                }
+                else if (!(ComicID == 0))
+                {
+                    Script.Parameters.AddWithValue("comicid", ComicID);
+                }
 
                 Script.Prepare();
 

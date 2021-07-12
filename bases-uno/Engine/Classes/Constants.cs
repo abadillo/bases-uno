@@ -9,7 +9,37 @@ namespace Engine.Classes
 {
     public static class Read
     {
-        //Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+        public static ClassModell ClassModell(int id)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            ClassModell modell = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM modelo WHERE id = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    modell = new ClassModell(connection.ReadInt(0), connection.ReadString(1));
+                }
+            }
+            catch
+            {
+                modell = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return modell;
+        }
 
         public static Club Club(int id)
         {
@@ -143,7 +173,7 @@ namespace Engine.Classes
             return comic;
         }
 
-        public static Contacto Contacto(int id)
+        public static Contacto Contacto(int id, Club club)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
             Contacto contact = null;
@@ -152,10 +182,11 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM contacto WHERE id = @id";
+                string Query = "SELECT * FROM contacto WHERE id = @id AND club_id = @clubid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
+                connection.Script.Parameters.AddWithValue("clubid", id);
                 connection.Reader = connection.Script.ExecuteReader();
 
                 if (connection.Reader.Read())
@@ -176,7 +207,7 @@ namespace Engine.Classes
             return contact;
         }
 
-        public static DuenoHistorico DuenoHistorico(int id)
+        public static DuenoHistorico DuenoHistorico(Coleccionista coleccionista, DateTime fechaRegistro, int id)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
             DuenoHistorico duenoHistorico = null;
@@ -185,9 +216,11 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM dueno_historico WHERE id = @id";
+                string Query = "SELECT * FROM dueno_historico WHERE coleccionista_documento_identidad = @coleccionistaid AND fecha_registro = @fecha AND id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
+                connection.Script.Parameters.AddWithValue("coleccionistaid", coleccionista.ID);
+                connection.Script.Parameters.AddWithValue("fecha", fechaRegistro);
                 connection.Script.Parameters.AddWithValue("id", id);
                 connection.Reader = connection.Script.ExecuteReader();
 

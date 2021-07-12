@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Npgsql;
 
 namespace Engine.Classes
 {
-    public class ClassModell : DBConnection.CRUD<ClassModell>
+    public class Subasta : DBConnection.CRUD<ClassModell>
     {
         #region Atributes
         public int ID { get; set; }
@@ -136,5 +136,6 @@ namespace Engine.Classes
 
         #region Other Methods
         #endregion
+    {
     }
 }

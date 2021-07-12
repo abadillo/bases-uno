@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    public class Club : Engine.DBConnection.CRUD<Club, int>
+    public class Club : Engine.DBConnection.CRUD<Club>
     {
         #region Atributes
         public int ID { get; set; }
@@ -26,7 +26,7 @@ namespace Engine.Classes
         /// Usar para hacer un nuevo registro en la BD
         /// </summary>
         public Club(DateTime fechaFundacion, string proposito, int responsableID, int responsableClubId, DateTime responsableFechaIngreso,
-            int lugarID, int telefono = 0, string paginaWeb = null)
+            Lugar lugar, int telefono = 0, string paginaWeb = null) //Falta : Membresia(Responsable)
         {
             FechaFundacion = fechaFundacion;
             Telefono = telefono;
@@ -35,7 +35,7 @@ namespace Engine.Classes
             ResponsableID = responsableID;
             ResponsableClubID = responsableClubId;
             ResponsableFechaIngreso = responsableFechaIngreso;
-            LugarID = lugarID;
+            LugarID = lugar.ID;
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace Engine.Classes
         /// </summary>
         public Club(int id)
         {
-            Club club = Read(id);
+            Club club = Read.Club(id);
             if (!(club == null))
             {
                 ID = club.ID;
@@ -143,38 +143,6 @@ namespace Engine.Classes
             {
                 Connection.Close();
             }
-        }
-
-        public override Club Read(int id)
-        {
-            Club club = null;
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM club WHERE id = @id";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", id);
-                Reader = Script.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    club = new Club(ReadInt(0), ReadDate(1), ReadString(4), ReadInt(5),ReadInt(6), ReadDate(7), 
-                        ReadInt(8), ReadInt(2), ReadString(3));
-                }
-            }
-            catch
-            {
-                club = null;
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return club;
         }
 
         public override void Update()

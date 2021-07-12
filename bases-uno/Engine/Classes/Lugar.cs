@@ -7,7 +7,7 @@ using Npgsql;
 
 namespace Engine.Classes
 {
-    public class Lugar : DBConnection.CRUD<Lugar, int>
+    public class Lugar : DBConnection.CRUD<Lugar>
     {
 
         #region Atributes
@@ -18,33 +18,47 @@ namespace Engine.Classes
         #endregion
 
         #region Constructors
-        // Se crea con toda la informacion de la instancia de clase
-        public Lugar(int id, string name, string type, int locationID = 0)
-        {
-            ID = id;
-            Nombre = name;
-            Tipo = type;
-            LugarID = locationID;
-        }
-
-        //Usualmente se usa cuando se va a hacer un insert de una clase cuya clave es un SERIAL
-        public Lugar(string name, string type, int locationID = 0)
+        /// <summary>
+        /// Constructor para antes de hacer un Insert
+        /// </summary>
+        /// <param name="locationID"></param>
+        public Lugar(string name, string type, Lugar lugar = null)
         {
             Nombre = name;
             Tipo = type;
-            LugarID = locationID;
+            if (lugar == null)
+            {
+                LugarID = 0;
+            }
+            else
+            {
+                LugarID = lugar.ID;
+            }
         }
 
-        //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
+        /// <summary>
+        /// Instancia una fila especifica de la tabla
+        /// </summary>
         public Lugar(int id)
         {
-            Lugar place = Read(id);
+            Lugar place = Read.Lugar(id);
             if (!(place == null))
             {
                 ID = place.ID;
                 Tipo = place.Tipo;
                 LugarID = place.LugarID;
             }
+        }
+
+        /// <summary>
+        /// Constructor de la clase READ, NO USAR
+        /// </summary>
+        public Lugar(int id, string name, string type, int locationID = 0)
+        {
+            ID = id;
+            Nombre = name;
+            Tipo = type;
+            LugarID = locationID;
         }
         #endregion
 
@@ -113,37 +127,6 @@ namespace Engine.Classes
             {
                 Connection.Close();
             }
-        }
-
-        public override Lugar Read(int id)
-        {
-            Lugar place = null;
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM lugar WHERE id = @id";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", id);
-                Reader = Script.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    place = new Lugar(ReadInt(0), ReadString(1), ReadString(2), ReadInt(3));
-                }
-            }
-            catch
-            {
-                place = null;
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return place;
         }
 
         public override void Update()

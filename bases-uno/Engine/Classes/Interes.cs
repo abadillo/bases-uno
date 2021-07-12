@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    public class Interes : DBConnection.CRUD<Interes, int>
+    public class Interes : DBConnection.CRUD<Interes>
     {
         #region Atributes
         public int ID { get; set; }
@@ -16,31 +16,37 @@ namespace Engine.Classes
         #endregion
 
         #region Constructors
-        // Se crea con toda la informacion de la instancia de clase
-        public Interes(int id, string name, string description = "")
-        {
-            ID = id;
-            Nombre = name;
-            Descripcion = description;
-        }
-
-        //Usualmente se usa cuando se va a hacer un insert de una clase cuya clave es un SERIAL
-        public Interes(string name, string description = "")
+        /// <summary>
+        /// Constructor para antes de hacer un Insert en la BD
+        /// </summary>
+        public Interes(string name, string description = null)
         {
             Nombre = name;
             Descripcion = description;
         }
 
-        //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
+        /// <summary>
+        /// Constructor que instancia una fila especifica de la Tabla
+        /// </summary>
         public Interes(int id)
         {
-            Interes interest = Read(id);
+            Interes interest = Read.Interes(id);
             if (!(interest == null))
             {
                 ID = interest.ID;
                 Nombre = interest.Nombre;
                 Descripcion = interest.Descripcion;
             }
+        }
+
+        /// <summary>
+        /// Constructor de la Clase READ, NO USAR
+        /// </summary>
+        public Interes(int id, string name, string description = null)
+        {
+            ID = id;
+            Nombre = name;
+            Descripcion = description;
         }
         #endregion
 
@@ -72,8 +78,18 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO interes (nombre, descripcion) " +
-                    "VALUES (@nombre, @descripcion) RETURNING id";
+                string Query = "INSERT INTO interes (nombre";
+                if (!(Descripcion == null))
+                {
+                    Query += ", descripcion";
+                }
+                Query += ") VALUES (@nombre";
+                if (!(Descripcion == null))
+                {
+                    Query += ", @descripcion";
+                }
+                Query += ") RETURNING id";
+
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("nombre", Nombre);
@@ -92,50 +108,27 @@ namespace Engine.Classes
             }
         }
 
-        public override Interes Read(int id)
-        {
-            Interes interest = null;
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM interes WHERE id = @id";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", id);
-                Reader = Script.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    interest = new Interes(ReadInt(0), ReadString(1), ReadString(2));
-                }
-            }
-            catch
-            {
-                interest = null;
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return interest;
-        }
-
         public override void Update()
         {
             try
             {
                 OpenConnection();
 
-                string Query = "UPDATE interes SET nombre = @nombre, descripcion = @descripcion " +
-                        "WHERE id = @id";
+                string Query = "UPDATE interes SET nombre = @nombre";
+                if (!(Descripcion == null))
+                {
+                    Query += ", descripcion = @descripcion";
+                }
+                Query += " WHERE id = @id";
+
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
                 Script.Parameters.AddWithValue("nombre", Nombre);
-                Script.Parameters.AddWithValue("descripcion", Descripcion);
+                if (!(Descripcion == null))
+                {
+                    Script.Parameters.AddWithValue("descripcion", Descripcion);
+                }
 
                 Script.Prepare();
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    public class Coleccionable:Engine.DBConnection.CRUD<Coleccionable,int>
+    public class Coleccionable:Engine.DBConnection.CRUD<Coleccionable>
     {
         #region Atributes
         public int ID { get; set; }
@@ -30,7 +30,7 @@ namespace Engine.Classes
         /// </summary>
         public Coleccionable(int id)
         {
-            Coleccionable colectable = Read(id);
+            Coleccionable colectable = Read.Coleccionable(id);
             if (!(colectable == null))
             {
                 ID = colectable.ID;
@@ -96,37 +96,6 @@ namespace Engine.Classes
             {
                 Connection.Close();
             }
-        }
-
-        public override Coleccionable Read(int id)
-        {
-            Coleccionable colectable = null;
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM coleccionable WHERE id = @id";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", id);
-                Reader = Script.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    colectable = new Coleccionable(ReadInt(0), ReadString(1), ReadString(2));
-                }
-            }
-            catch
-            {
-                colectable = null;
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return colectable;
         }
 
         public override void Update()

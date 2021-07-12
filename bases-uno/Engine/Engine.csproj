@@ -125,7 +125,10 @@
     <Compile Include="Classes\Contacto.cs" />
     <Compile Include="Classes\DuenoHistorico.cs" />
     <Compile Include="Classes\Interes.cs" />
+    <Compile Include="Classes\Listado.cs" />
     <Compile Include="Classes\Lugar.cs" />
+    <Compile Include="Classes\Participante.cs" />
+    <Compile Include="Classes\Subasta.cs" />
     <Compile Include="DBConnection\CRUD.cs" />
     <Compile Include="DBConnection\DBConnection.cs" />
     <Compile Include="DBConnection\Query.cs" />

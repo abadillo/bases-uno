@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    public class Coleccionista : Engine.DBConnection.CRUD<Coleccionista, int>
+    public class Coleccionista : Engine.DBConnection.CRUD<Coleccionista>
     {
         #region Atributes
         public int ID { get; set; }
@@ -28,7 +28,7 @@ namespace Engine.Classes
         /// Constructor de la Clase
         /// </summary>
         public Coleccionista(int id, string primerNombre, string primerApellido, int telefono, DateTime fechaNacimiento, int lugarNacimiento,
-            int lugarResidencia, string segundoNombre = null, string segundoApellido = null, int representanteID = 0, bool representanteColeccionista = true)
+            int lugarResidencia, string segundoNombre = null, string segundoApellido = null, int representanteID = 0)
         {
             ID = id;
             PrimerNombre = primerNombre;
@@ -38,15 +38,16 @@ namespace Engine.Classes
             Telefono = telefono;
             FechaNacimiento = fechaNacimiento;
             LugarNacimiento = lugarNacimiento;
-            if (representanteColeccionista)
-            {
-                ColeccionistaRepresentanteID = representanteID;
-                RepresentanteID = 0;
-            }
-            else
+            Coleccionista representanteColeccionista = Read.Coleccionista(representanteID);
+            if (representanteColeccionista.ID == 0)
             {
                 ColeccionistaRepresentanteID = 0;
                 RepresentanteID = representanteID;
+            }
+            else
+            {
+                ColeccionistaRepresentanteID = representanteID;
+                RepresentanteID = 0;
             }
         }
 
@@ -55,7 +56,7 @@ namespace Engine.Classes
         /// </summary>
         public Coleccionista(int id)
         {
-            Coleccionista collector = Read(id);
+            Coleccionista collector = Read.Coleccionista(id);
             if (!(collector == null))
             {
                 ID = collector.ID;
@@ -190,38 +191,6 @@ namespace Engine.Classes
             {
                 Connection.Close();
             }
-        }
-
-        public override Coleccionista Read(int id)
-        {
-            Coleccionista collector = null;
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM coleccionista WHERE documento_identidad = @id";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", id);
-                Reader = Script.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    collector = new Coleccionista(ReadInt(0), ReadString(1), ReadString(2), ReadString(3), ReadString(4), ReadInt(5), ReadDate(6), 
-                        ReadInt(7), ReadInt(8), ReadInt(9), ReadInt(10));
-                }
-            }
-            catch
-            {
-                collector = null;
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return collector;
         }
 
         public override void Update()

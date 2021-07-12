@@ -7,40 +7,32 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    public class Contacto : DBConnection.CRUD<Contacto, int>
+    public class Contacto : DBConnection.CRUD<Contacto>
     {
         #region Atributes
-        public int ID { get; set; }
+        public int ID { get; set; } //pk
         public string Email { get; set; } //nullable
         public int Telefono { get; set; } //nullable
         public string Plataforma { get; set; }
-        public int ClubID { get; set; }
+        public int ClubID { get; set; } //pk
         #endregion
 
         #region Constructors
-        // Se crea con toda la informacion de la instancia de clase
-        public Contacto(int id, string plataforma, int clubID, string email = null, int telefono = 0)
-        {
-            ID = id;
-            Email = email;
-            Telefono = telefono;
-            Plataforma = plataforma;
-            ClubID = clubID;
-        }
-
-        //Usualmente se usa cuando se va a hacer un insert de una clase cuya clave es un SERIAL
-        public Contacto(string plataforma, int clubID, string email = null, int telefono = 0)
+        /// <summary>
+        /// Se usa previo a hacer un Insert en la BD
+        /// </summary>
+        public Contacto(string plataforma, Club club, string email = null, int telefono = 0)
         {
             Email = email;
             Telefono = telefono;
             Plataforma = plataforma;
-            ClubID = clubID;
+            ClubID = club.ID;
         }
 
         //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
-        public Contacto(int id)
+        public Contacto(int id, Club club)
         {
-            Contacto contact = Read(id);
+            Contacto contact = Read.Contacto(id, club);
             if (!(contact == null))
             {
                 ID = contact.ID;
@@ -49,6 +41,18 @@ namespace Engine.Classes
                 Plataforma = contact.Plataforma;
                 ClubID = contact.ClubID;
             }
+        }
+
+        /// <summary>
+        /// Constructor usado por la clase READ, NO USAR
+        /// </summary>
+        public Contacto(int id, string plataforma, int clubID, string email = null, int telefono = 0)
+        {
+            ID = id;
+            Email = email;
+            Telefono = telefono;
+            Plataforma = plataforma;
+            ClubID = clubID;
         }
         #endregion
 
@@ -124,37 +128,6 @@ namespace Engine.Classes
             {
                 Connection.Close();
             }
-        }
-
-        public override Contacto Read(int id)
-        {
-            Contacto contact = null;
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM contacto WHERE id = @id";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", id);
-                Reader = Script.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    contact = new Contacto(ReadInt(0), ReadString(3), ReadInt(4), ReadString(1), ReadInt(2));
-                }
-            }
-            catch
-            {
-                contact = null;
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return contact;
         }
 
         public override void Update()
