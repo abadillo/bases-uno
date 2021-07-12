@@ -117,11 +117,51 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO dueno_historico (otherData) " +
-                    "VALUES (@otherData) RETURNING id";
+                string Query = "INSERT INTO dueno_historico (fecha_registro, coleccionista_documento_identidad, precio_dolar";
+                if (!(Significado == null))
+                {
+                    Query += ", significado";
+                }
+                if (!(ColeccionableID == 0))
+                {
+                    Query += ", coleccionable_id";
+                }
+                else if (!(ComicID == 0))
+                {
+                    Query += ", comic_id";
+                }
+                Query += ") VALUES (@fecharegistro, @coleccionistaid, @precio, ";
+                if (!(Significado == null))
+                {
+                    Query += ", @significado";
+                }
+                if (!(ColeccionableID == 0))
+                {
+                    Query += ", @coleccionableid";
+                }
+                else if (!(ComicID == 0))
+                {
+                    Query += ", @comicid";
+                }
+                Query += ") RETURNING id";
+
                 Script = new NpgsqlCommand(Query, Connection);
 
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script.Parameters.AddWithValue("fecharegistro", FechaRegistro);
+                Script.Parameters.AddWithValue("coleccionistaid", ColeccionistaID);
+                Script.Parameters.AddWithValue("precio", PrecioDolares);
+                if (!(Significado == null))
+                {
+                    Script.Parameters.AddWithValue("significado", Significado);
+                }
+                if (!(ColeccionableID == 0))
+                {
+                    Script.Parameters.AddWithValue("coleccionableid", ColeccionableID);
+                }
+                else if (!(ComicID == 0))
+                {
+                    Script.Parameters.AddWithValue("comicid", ComicID);
+                }
 
                 Reader = Script.ExecuteReader();
 
@@ -152,7 +192,7 @@ namespace Engine.Classes
 
                 if (Reader.Read())
                 {
-                    duenoHistorico = new DuenoHistorico(ReadInt(0), ReadString(1));
+                    duenoHistorico = new DuenoHistorico(ReadInt(0), ReadDate(1), ReadString(2), ReadInt(3), ReadInt(4), ReadFloat(5), ReadInt(6));
                 }
             }
             catch

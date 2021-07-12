@@ -176,6 +176,39 @@ namespace Engine.Classes
             return contact;
         }
 
+        public static DuenoHistorico DuenoHistorico(int id)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            DuenoHistorico duenoHistorico = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM dueno_historico WHERE id = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    duenoHistorico = new DuenoHistorico(connection.ReadInt(0), connection.ReadDate(1), connection.ReadString(2),
+                        connection.ReadInt(3), connection.ReadInt(4), connection.ReadFloat(5), connection.ReadInt(6));
+                }
+            }
+            catch
+            {
+                duenoHistorico = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return duenoHistorico;
+        }
+
         public static Interes Interes(int id)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
