@@ -122,12 +122,14 @@
     <Compile Include="Classes\Coleccionista.cs" />
     <Compile Include="Classes\Comic.cs" />
     <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\Contacto.cs" />
+    <Compile Include="Classes\DuenoHistorico.cs" />
     <Compile Include="Classes\Interes.cs" />
     <Compile Include="Classes\Lugar.cs" />
     <Compile Include="DBConnection\CRUD.cs" />
     <Compile Include="DBConnection\DBConnection.cs" />
     <Compile Include="DBConnection\Query.cs" />
-    <Compile Include="ManyToMany.cs" />
+    <Compile Include="MuchosAMuchos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>

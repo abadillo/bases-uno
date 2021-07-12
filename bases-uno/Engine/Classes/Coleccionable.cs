@@ -16,22 +16,18 @@ namespace Engine.Classes
         #endregion
 
         #region Constructors
-        // Se crea con toda la informacion de la instancia de clase
-        public Coleccionable(int id, string nombre, string descripcion = null)
-        {
-            ID = id;
-            Nombre = nombre;
-            Descripcion = descripcion;
-        }
-
-        //Usualmente se usa cuando se va a hacer un insert de una clase cuya clave es un SERIAL
+        /// <summary>
+        /// Usar previo a insercion de un registro en la BD
+        /// </summary>
         public Coleccionable(string nombre, string descripcion = null)
         {
             Nombre = nombre;
             Descripcion = descripcion;
         }
 
-        //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
+        /// <summary>
+        /// Crea una instancia de un registro especifico de la BD
+        /// </summary>
         public Coleccionable(int id)
         {
             Coleccionable colectable = Read(id);
@@ -41,6 +37,16 @@ namespace Engine.Classes
                 Nombre = colectable.Nombre;
                 Descripcion = colectable.Descripcion;
             }
+        }
+
+        /// <summary>
+        /// Constructor para la clase READ, NO USAR
+        /// </summary>
+        public Coleccionable(int id, string nombre, string descripcion = null)
+        {
+            ID = id;
+            Nombre = nombre;
+            Descripcion = descripcion;
         }
         #endregion
 

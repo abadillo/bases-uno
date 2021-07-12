@@ -22,11 +22,12 @@ namespace Engine.Classes
         #endregion
 
         #region Constructors
-        // Se crea con toda la informacion de la instancia de clase
-        public Club(int id, DateTime fechaFundacion, string proposito, int responsableID, int responsableClubId, DateTime responsableFechaIngreso,
+        /// <summary>
+        /// Usar para hacer un nuevo registro en la BD
+        /// </summary>
+        public Club(DateTime fechaFundacion, string proposito, int responsableID, int responsableClubId, DateTime responsableFechaIngreso,
             int lugarID, int telefono = 0, string paginaWeb = null)
         {
-            ID = id;
             FechaFundacion = fechaFundacion;
             Telefono = telefono;
             PaginaWeb = paginaWeb;
@@ -37,21 +38,9 @@ namespace Engine.Classes
             LugarID = lugarID;
         }
 
-        //Usualmente se usa cuando se va a hacer un insert de una clase cuya clave es un SERIAL
-        public Club(DateTime fechaFundacion, int telefono, string paginaWeb, string proposito, int responsableID, 
-            int responsableClubId, DateTime responsableFechaIngreso, int lugarID)
-        {
-            FechaFundacion = fechaFundacion;
-            Telefono = telefono;
-            PaginaWeb = paginaWeb;
-            Proposito = proposito;
-            ResponsableID = responsableID;
-            ResponsableClubID = responsableClubId;
-            ResponsableFechaIngreso = responsableFechaIngreso;
-            LugarID = lugarID;
-        }
-
-        //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
+        /// <summary>
+        /// Crea una instancia de un registro especifico de la BD
+        /// </summary>
         public Club(int id)
         {
             Club club = Read(id);
@@ -67,6 +56,23 @@ namespace Engine.Classes
                 ResponsableFechaIngreso = club.ResponsableFechaIngreso;
                 LugarID = club.LugarID;
             }
+        }
+
+        /// <summary>
+        /// Constructor de la clase READ, NO USAR
+        /// </summary>
+        public Club(int id, DateTime fechaFundacion, string proposito, int responsableID, int responsableClubId, DateTime responsableFechaIngreso,
+            int lugarID, int telefono = 0, string paginaWeb = null)
+        {
+            ID = id;
+            FechaFundacion = fechaFundacion;
+            Telefono = telefono;
+            PaginaWeb = paginaWeb;
+            Proposito = proposito;
+            ResponsableID = responsableID;
+            ResponsableClubID = responsableClubId;
+            ResponsableFechaIngreso = responsableFechaIngreso;
+            LugarID = lugarID;
         }
         #endregion
 

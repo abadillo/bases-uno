@@ -143,6 +143,39 @@ namespace Engine.Classes
             return comic;
         }
 
+        public static Contacto Contacto(int id)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Contacto contact = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM contacto WHERE id = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    contact = new Contacto(connection.ReadInt(0), connection.ReadString(3), connection.ReadInt(4),
+                        connection.ReadString(1), connection.ReadInt(2));
+                }
+            }
+            catch
+            {
+                contact = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return contact;
+        }
+
         public static Interes Interes(int id)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();

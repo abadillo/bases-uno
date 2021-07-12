@@ -15,20 +15,17 @@ namespace Engine.Classes
         #endregion
 
         #region Constructors
-        // Se crea con toda la informacion de la instancia de clase
-        public ClassModell(int id,string otherData)
-        {
-            ID = id;
-            OtherData = otherData;
-        }
-
-        //Usualmente se usa cuando se va a hacer un insert de una clase cuya clave es un SERIAL
+        /// <summary>
+        /// Usar previo a insercion de un registro en la BD, si la clase tiene una clave serial
+        /// </summary>
         public ClassModell(string otherData)
         {
             OtherData = otherData;
         }
 
-        //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
+        /// <summary>
+        /// Crea una instancia de un registro especifico de la BD
+        /// </summary>
         public ClassModell(int id)
         {
             ClassModell modell = Read(id);
@@ -37,6 +34,15 @@ namespace Engine.Classes
                 ID = modell.ID;
                 OtherData = modell.OtherData;
             }
+        }
+
+        /// <summary>
+        /// Constructor General de la Clase, usualmente para la clase READ
+        /// </summary>
+        public ClassModell(int id, string otherData)
+        {
+            ID = id;
+            OtherData = otherData;
         }
         #endregion
 

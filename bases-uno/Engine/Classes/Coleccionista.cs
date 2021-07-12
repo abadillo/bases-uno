@@ -24,7 +24,9 @@ namespace Engine.Classes
         #endregion
 
         #region Constructors
-        // Se crea con toda la informacion de la instancia de clase
+        /// <summary>
+        /// Constructor de la Clase
+        /// </summary>
         public Coleccionista(int id, string primerNombre, string primerApellido, int telefono, DateTime fechaNacimiento, int lugarNacimiento,
             int lugarResidencia, string segundoNombre = null, string segundoApellido = null, int representanteID = 0, bool representanteColeccionista = true)
         {
@@ -48,22 +50,9 @@ namespace Engine.Classes
             }
         }
 
-        public Coleccionista(int id, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, int telefono, 
-            DateTime fechaNacimiento, int lugarNacimiento, int representanteID, int representanteColeccionista, int lugarResidencia)
-        {
-            ID = id;
-            PrimerNombre = primerNombre;
-            SegundoApellido = segundoApellido;
-            PrimerApellido = primerApellido;
-            SegundoApellido = segundoApellido;
-            Telefono = telefono;
-            FechaNacimiento = fechaNacimiento;
-            LugarNacimiento = lugarNacimiento;
-            RepresentanteID = representanteID;
-            ColeccionistaRepresentanteID = representanteColeccionista;
-        }
-
-        //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
+        /// <summary>
+        /// Crea una instancia de un registro especifico de la BD
+        /// </summary>
         public Coleccionista(int id)
         {
             Coleccionista collector = Read(id);
@@ -82,6 +71,24 @@ namespace Engine.Classes
                 RepresentanteID = collector.RepresentanteID;
             }
         }
+
+        /// <summary>
+        /// Constructor de la clase READ, NO USAR
+        /// </summary>
+        public Coleccionista(int id, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, int telefono,
+            DateTime fechaNacimiento, int lugarNacimiento, int representanteID, int representanteColeccionista, int lugarResidencia)
+        {
+            ID = id;
+            PrimerNombre = primerNombre;
+            SegundoApellido = segundoApellido;
+            PrimerApellido = primerApellido;
+            SegundoApellido = segundoApellido;
+            Telefono = telefono;
+            FechaNacimiento = fechaNacimiento;
+            LugarNacimiento = lugarNacimiento;
+            RepresentanteID = representanteID;
+            ColeccionistaRepresentanteID = representanteColeccionista;
+        }
         #endregion
 
         #region CRUDs
@@ -91,7 +98,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM coleccionista WHERE id = @id";
+                string Query = "DELETE FROM coleccionista WHERE documento_identidad = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -193,7 +200,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT * FROM coleccionista WHERE id = @id";
+                string Query = "SELECT * FROM coleccionista WHERE documento_identidad = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", id);
@@ -245,7 +252,7 @@ namespace Engine.Classes
                         Query += "representante_documento_identidad = @representanteid, ";
                     }
                 }
-                Query += "lugar_id = @residencia WHERE id = @id";
+                Query += "lugar_id = @residencia WHERE documento_identidad = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
