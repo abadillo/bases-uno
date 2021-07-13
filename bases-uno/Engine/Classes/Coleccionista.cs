@@ -16,7 +16,7 @@ namespace Engine.Classes
         public string PrimerApellido { get; set; }
         public string SegundoApellido { get; set; } //nullable
         public int Telefono { get; set; }
-        public DateTime FechaNacimiento { get; set; }
+        public Nullable<DateTime> FechaNacimiento { get; set; }
         public int LugarNacimiento { get; set; }
         public int LugarResidencia { get; set; }
         public int ColeccionistaRepresentanteID { get; set; }
@@ -27,8 +27,8 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor de la Clase
         /// </summary>
-        public Coleccionista(int id, string primerNombre, string primerApellido, int telefono, DateTime fechaNacimiento, int lugarNacimiento,
-            int lugarResidencia, string segundoNombre = null, string segundoApellido = null, int representanteID = 0)
+        public Coleccionista(int id, string primerNombre, string primerApellido, int telefono, DateTime fechaNacimiento, Lugar lugarNacimiento,
+            Lugar lugarResidencia, string segundoNombre = null, string segundoApellido = null, int representanteID = 0)
         {
             ID = id;
             PrimerNombre = primerNombre;
@@ -37,7 +37,8 @@ namespace Engine.Classes
             SegundoApellido = segundoApellido;
             Telefono = telefono;
             FechaNacimiento = fechaNacimiento;
-            LugarNacimiento = lugarNacimiento;
+            LugarNacimiento = lugarNacimiento.ID;
+            LugarResidencia = lugarResidencia.ID;
             Coleccionista representanteColeccionista = Read.Coleccionista(representanteID);
             if (representanteColeccionista.ID == 0)
             {
@@ -77,7 +78,7 @@ namespace Engine.Classes
         /// Constructor de la clase READ, NO USAR
         /// </summary>
         public Coleccionista(int id, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, int telefono,
-            DateTime fechaNacimiento, int lugarNacimiento, int representanteID, int representanteColeccionista, int lugarResidencia)
+            Nullable<DateTime> fechaNacimiento, int lugarNacimiento, int representanteID, int representanteColeccionista, int lugarResidencia)
         {
             ID = id;
             PrimerNombre = primerNombre;

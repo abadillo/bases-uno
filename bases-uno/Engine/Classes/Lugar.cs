@@ -21,11 +21,18 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor para antes de hacer un Insert
         /// </summary>
-        /// <param name="locationID"></param>
-        public Lugar(string name, string type, Lugar lugar = null)
+        /// <param name="tipo">Usar <code>
+        /// public static class TipoLocal 
+        /// <para>{</para>
+        /// <para>public const string Address = "Direccion";</para>
+        /// ,<para>public const string City = "Ciudad";</para>
+        /// ,<para>public const string State = "Estado";</para>
+        /// ,<para>public const string Country = "Pais";</para>
+        /// }</code>, por el check</param>
+        public Lugar(string nombre, string tipo, Lugar lugar = null)
         {
-            Nombre = name;
-            Tipo = type;
+            Nombre = nombre;
+            Tipo = tipo;
             if (lugar == null)
             {
                 LugarID = 0;
@@ -53,12 +60,12 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Lugar(int id, string name, string type, int locationID = 0)
+        public Lugar(int id, string nombre, string tipo, int lugarID = 0)
         {
             ID = id;
-            Nombre = name;
-            Tipo = type;
-            LugarID = locationID;
+            Nombre = nombre;
+            Tipo = tipo;
+            LugarID = lugarID;
         }
         #endregion
 

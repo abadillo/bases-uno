@@ -109,37 +109,6 @@ namespace Engine.Classes
             }
         }
 
-        public override ClassModell Read(int id)
-        {
-            ClassModell modell = null;
-
-            try
-            {
-                OpenConnection();
-
-                string Query = "SELECT * FROM modelo WHERE id = @id";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", id);
-                Reader = Script.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    modell = new ClassModell(ReadInt(0), ReadString(1));
-                }
-            }
-            catch
-            {
-                modell = null;
-            }
-            finally
-            {
-                CloseConnection();
-            }
-
-            return modell;
-        }
-
         public override void Update()
         {
             try

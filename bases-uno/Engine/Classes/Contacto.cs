@@ -63,10 +63,11 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM contacto WHERE id = @id";
+                string Query = "DELETE FROM contacto WHERE id = @id AND club_id = @clubid";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
+                Script.Parameters.AddWithValue("clubid", ClubID);
 
                 Script.Prepare();
 
@@ -136,7 +137,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE contacto SET plataforma = @plataforma, club_id = @clubid";
+                string Query = "UPDATE contacto SET plataforma = @plataforma";
                 if (!(Email == null))
                 {
                     Query += ", usuario_email = @email";
@@ -145,7 +146,7 @@ namespace Engine.Classes
                 {
                     Query += ", telefono = @telefono";
                 }
-                Query += " WHERE id = @id";
+                Query += " WHERE id = @id AND club_id = @clubid";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 if (!(Email == null))
@@ -158,6 +159,7 @@ namespace Engine.Classes
                 }
                 Script.Parameters.AddWithValue("plataforma", Plataforma);
                 Script.Parameters.AddWithValue("clubid", ClubID);
+                Script.Parameters.AddWithValue("id", ID);
 
                 Script.Prepare();
 

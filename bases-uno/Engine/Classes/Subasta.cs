@@ -136,6 +136,5 @@ namespace Engine.Classes
 
         #region Other Methods
         #endregion
-    {
     }
 }

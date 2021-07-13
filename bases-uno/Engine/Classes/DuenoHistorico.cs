@@ -10,14 +10,14 @@ namespace Engine.Classes
     public class DuenoHistorico : DBConnection.CRUD<DuenoHistorico>
     {
         #region Atributes
-        public int ID { get; set; }
-        public DateTime FechaRegistro { get; set; }
+        public int ID { get; set; } //pk
+        public Nullable<DateTime> FechaRegistro { get; set; } //pk
         public String Significado { get; set; } //nullable
-        public int ColeccionistaID { get; set; }
+        public int ColeccionistaID { get; set; } //pk
         //O ColeccionableID o ComicID son null
         public int ColeccionableID { get; set; }
         public int ComicID { get; set; }
-        public float PrecioDolares { get; set; }
+        public float PrecioDolares { get; set; } //nullable
         #endregion
 
         #region Constructors
@@ -29,7 +29,7 @@ namespace Engine.Classes
         /// <param name="coleccionable"></param>
         /// <param name="precioDolar"></param>
         /// <param name="significado"></param>
-        public DuenoHistorico(DateTime fechaRegistro, Coleccionista coleccionista, Coleccionable coleccionable, float precioDolar, string significado = null)
+        public DuenoHistorico(DateTime fechaRegistro, Coleccionista coleccionista, Coleccionable coleccionable, float precioDolar = 0, string significado = null)
         {
             FechaRegistro = fechaRegistro;
             Significado = significado;
@@ -47,7 +47,7 @@ namespace Engine.Classes
         /// <param name="comic"></param>
         /// <param name="precioDolar"></param>
         /// <param name="significado"></param>
-        public DuenoHistorico(DateTime fechaRegistro, Coleccionista coleccionista, Comic comic, float precioDolar, string significado = null)
+        public DuenoHistorico(DateTime fechaRegistro, Coleccionista coleccionista, Comic comic, float precioDolar = 0, string significado = null)
         {
             FechaRegistro = fechaRegistro;
             Significado = significado;
@@ -76,7 +76,7 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor para la clase READ, NO USAR
         /// </summary>
-        public DuenoHistorico(int id, DateTime fechaRegistro, String significado, int coleccionistaID, int coleccionableID, float precioDolar,
+        public DuenoHistorico(int id, Nullable<DateTime> fechaRegistro, String significado, int coleccionistaID, int coleccionableID, float precioDolar,
             int comicID)
         {
             ID = id;
@@ -96,10 +96,12 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM dueno_historico WHERE id = @id";
+                string Query = "DELETE FROM dueno_historico WHERE coleccionista_documento_identidad = @coleccionistaid AND fecha_registro = @fecha AND id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
+                Script.Parameters.AddWithValue("coleccionistaid", ColeccionistaID);
+                Script.Parameters.AddWithValue("fecha", FechaRegistro);
 
                 Script.Prepare();
 
@@ -182,11 +184,22 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE dueno_historico SET fecha_registro = @fecharegistro, coleccionista_documento_identidad = @coleccionistaid, " +
-                    "precio_dolar = @precio ";
+                string Query = "UPDATE dueno_historico SET ";
+                if (!(PrecioDolares == 0))
+                {
+                    Query += "precio_dolar = @precio";
+                    if ((!(Significado == null)) || (!(ColeccionableID == 0)))
+                    {
+                        Query += ", ";
+                    }
+                }
                 if (!(Significado == null))
                 {
-                    Query += "significado = @significado ";
+                    Query += "significado = @significado";
+                    if (!(ColeccionableID == 0))
+                    {
+                        Query += ", ";
+                    }
                 }
                 if (!(ColeccionableID == 0))
                 {
@@ -194,9 +207,9 @@ namespace Engine.Classes
                 }
                 else if (!(ComicID == 0))
                 {
-                    Query += "comic_id = @comicid";
+                    Query += ", comic_id = @comicid";
                 }
-                Query += "WHERE id = @id";
+                Query += " WHERE coleccionista_documento_identidad = @coleccionistaid AND fecha_registro = @fecha AND id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);

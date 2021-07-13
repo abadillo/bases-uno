@@ -14,7 +14,7 @@ namespace Engine.Classes
         public string Title { get; set; }
         public int Volume { get; set; } //nullable
         public int Number { get; set; }
-        public DateTime PublicationDate { get; set; }
+        public Nullable<DateTime> PublicationDate { get; set; }
         public float PublicationPrice { get; set; } //nullable
         public bool Color { get; set; }
         public string Synopsis { get; set; }
@@ -24,7 +24,7 @@ namespace Engine.Classes
         #endregion
 
         #region Constructors
-        public Comic(int id, string titel, int number, DateTime publicationDate, bool color,
+        public Comic(int id, string titel, int number, Nullable<DateTime> publicationDate, bool color,
            string synopsis, int pages, bool cover, string editor, int volumen = 0, float publicationPrice = 0)
         {
             ID = id;

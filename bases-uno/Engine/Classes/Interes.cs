@@ -10,9 +10,9 @@ namespace Engine.Classes
     public class Interes : DBConnection.CRUD<Interes>
     {
         #region Atributes
-        public int ID { get; set; }
+        public int ID { get; set; } //pk
         public string Nombre { get; set; }
-        public string Descripcion { get; set; }
+        public string Descripcion { get; set; } //nullable
         #endregion
 
         #region Constructors

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace Engine.Classes
         public float PrecioVenta { get; set; } //nullable
         public int SubastaID { get; set; } //PK
         public int DuenoHistoricoColeccionistaID { get; set; }
-        public DateTime DuenoHistoricoFechaRegistro { get; set; }
+        public Nullable<DateTime> DuenoHistoricoFechaRegistro { get; set; }
         public int ParticipanteSubastaID { get; set; } //nullable
         public int DuenoHistoricoID { get; set; }
         public int ParticipanteIDInscripcion { get; set; } //nullable
@@ -26,31 +27,56 @@ namespace Engine.Classes
         /// Usar previo a insercion de un registro en la BD
         /// </summary>
         public Listado(int subastaID, float precioBase, DuenoHistorico duenoHistorico, int orden = 0, float precioVenta = 0, int participanteSubastaID = 0, 
-            int participanteIDInscripcion = 0) //Falta Subasta, Participante
+            int participanteIDInscripcion = 0) //Falta: Subasta, Participante
         {
-            OtherData = otherData;
+            Orden = orden;
+            PrecioBase = precioBase;
+            PrecioVenta = precioVenta;
+            SubastaID = subastaID;
+            DuenoHistoricoColeccionistaID = duenoHistorico.ColeccionistaID;
+            DuenoHistoricoFechaRegistro = duenoHistorico.FechaRegistro;
+            DuenoHistoricoID = duenoHistorico.ID;
+            ParticipanteSubastaID = participanteSubastaID;
+            ParticipanteIDInscripcion = participanteIDInscripcion;
         }
 
         /// <summary>
         /// Crea una instancia de un registro especifico de la BD
         /// </summary>
-        public Listado(int id)
+        public Listado(int id, Subasta subasta)
         {
-            Listado listado = Read(id);
+            Listado listado = Read.Listado(id, subasta);
             if (!(listado == null))
             {
                 ID = listado.ID;
-                OtherData = listado.OtherData;
+                Orden = listado.Orden;
+                PrecioBase = listado.PrecioBase;
+                PrecioVenta = listado.PrecioVenta;
+                SubastaID = listado.SubastaID;
+                DuenoHistoricoColeccionistaID = listado.DuenoHistoricoColeccionistaID;
+                DuenoHistoricoFechaRegistro = listado.DuenoHistoricoFechaRegistro;
+                ParticipanteSubastaID = listado.ParticipanteSubastaID;
+                DuenoHistoricoID = listado.DuenoHistoricoID;
+                ParticipanteIDInscripcion = listado.ParticipanteIDInscripcion;
             }
         }
 
         /// <summary>
-        /// Constructor General de la Clase, usualmente para la clase READ
+        /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Listado(int id, string otherData)
+        public Listado(int id, int orden, float precioBase, float precioVenta, int subastaID, int duenoHistoricoColeccionistaID,
+            Nullable<DateTime> duenoHistoricoFechaRegistro, int participanteSubastaID, int duenoHistoricoID, int participanteIDInscripcion)
         {
             ID = id;
-            OtherData = otherData;
+            Orden = orden;
+            PrecioBase = precioBase;
+            PrecioVenta = precioVenta;
+            SubastaID = subastaID;
+            DuenoHistoricoColeccionistaID = duenoHistoricoColeccionistaID;
+            DuenoHistoricoFechaRegistro = duenoHistoricoFechaRegistro;
+            ParticipanteSubastaID = participanteSubastaID;
+            DuenoHistoricoID = duenoHistoricoID;
+            ParticipanteIDInscripcion = participanteIDInscripcion;
         }
         #endregion
 
@@ -61,10 +87,11 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM listado WHERE id = @id";
+                string Query = "DELETE FROM listado WHERE id = @id AND subasta_id = @subastaid";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
+                Script.Parameters.AddWithValue("subastaid", SubastaID);
 
                 Script.Prepare();
 
@@ -80,29 +107,57 @@ namespace Engine.Classes
         {
             try
             {
-                #region listado Caso ID no es SERIAL
-                OpenConnection();
-
-                string Query = "INSERT INTO listado (id, otherData) " +
-                    "VALUES (@id, @otherData)";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
-
-                Script.Prepare();
-
-                Script.ExecuteNonQuery();
-                #endregion
-
-                #region listado Caso ID es SERIAL
                 Connection.Open();
 
-                string Query2 = "INSERT INTO listado (otherData) " +
-                    "VALUES (@otherData) RETURNING id";
-                Script = new NpgsqlCommand(Query2, Connection);
+                string Query = "INSERT INTO listado (precio_base_dolar, subasta_id, dueno_historico_coleccionista_documento_identidad, " +
+                    "dueno_historico_fecha_registro, dueno_historico_id";
+                if (!(Orden == 0))
+                {
+                    Query += ", orden";
+                }
+                if (!(PrecioVenta == 0))
+                {
+                    Query += ", precio_vendido_dolar";
+                }
+                if (!(ParticipanteIDInscripcion == 0 || ParticipanteSubastaID == 0))
+                {
+                    Query += ", participante_subasta_id, participante_id_inscripcion";
+                }
+                Query += ") VALUES (@preciobase, @subastaid, @duenoid, @duenofecha, @duenocoleccionistaid";
+                if (!(Orden == 0))
+                {
+                    Query += ", @orden";
+                }
+                if (!(PrecioVenta == 0))
+                {
+                    Query += ", @preciovendido";
+                }
+                if (!(ParticipanteIDInscripcion == 0 || ParticipanteSubastaID == 0))
+                {
+                    Query += ", @participantesubastaid, @participanteidinscripcion";
+                }
+                Query += ") RETURNING id";
 
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script = new NpgsqlCommand(Query, Connection);
+
+                Script.Parameters.AddWithValue("preciobase", PrecioBase);
+                Script.Parameters.AddWithValue("subastaid", SubastaID);
+                Script.Parameters.AddWithValue("duenoid", DuenoHistoricoID);
+                Script.Parameters.AddWithValue("duenofecha", DuenoHistoricoFechaRegistro);
+                Script.Parameters.AddWithValue("duenocoleccionistaid", DuenoHistoricoColeccionistaID);
+                if (!(Orden == 0))
+                {
+                    Script.Parameters.AddWithValue("orden", Orden);
+                }
+                if (!(PrecioVenta == 0))
+                {
+                    Script.Parameters.AddWithValue("preciovendido", PrecioVenta);
+                }
+                if (!(ParticipanteIDInscripcion == 0 || ParticipanteSubastaID == 0))
+                {
+                    Script.Parameters.AddWithValue("participantesubastaid", ParticipanteSubastaID);
+                    Script.Parameters.AddWithValue("participanteidinscripcion", ParticipanteIDInscripcion);
+                }
 
                 Reader = Script.ExecuteReader();
 
@@ -110,7 +165,6 @@ namespace Engine.Classes
                 {
                     ID = ReadInt(0);
                 }
-                #endregion
             }
             finally
             {
@@ -124,12 +178,43 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE listado SET otherData = @otherData " +
-                        "WHERE id = @id";
+                string Query = "UPDATE listado SET precio_base_dolar = @preciobase, dueno_historico_coleccionista_documento_identidad = @duenocoleccionistaid, " +
+                    "dueno_historico_fecha_registro = @duenofecha, dueno_historico_id = @duenoid";
+                if (!(Orden == 0))
+                {
+                    Query += ", orden = @orden";
+                }
+                if (!(PrecioVenta == 0))
+                {
+                    Query += ", precio_vendido_dolar = @preciovendido";
+                }
+                if (!(ParticipanteIDInscripcion == 0 || ParticipanteSubastaID == 0))
+                {
+                    Query += ", participante_subasta_id = @participantesubastaid, participante_id_inscripcion = @participanteidinscripcion";
+                }
+                Query += " WHERE id = @id AND subasta_id = @subastaid";
+
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script.Parameters.AddWithValue("preciobase", PrecioBase);
+                Script.Parameters.AddWithValue("subastaid", SubastaID);
+                Script.Parameters.AddWithValue("duenoid", DuenoHistoricoID);
+                Script.Parameters.AddWithValue("duenofecha", DuenoHistoricoFechaRegistro);
+                Script.Parameters.AddWithValue("duenoid", DuenoHistoricoColeccionistaID);
+                if (!(Orden == 0))
+                {
+                    Script.Parameters.AddWithValue("orden", Orden);
+                }
+                if (!(PrecioVenta == 0))
+                {
+                    Script.Parameters.AddWithValue("preciovendido", PrecioVenta);
+                }
+                if (!(ParticipanteIDInscripcion == 0 || ParticipanteSubastaID == 0))
+                {
+                    Script.Parameters.AddWithValue("participantesubastaid", ParticipanteSubastaID);
+                    Script.Parameters.AddWithValue("participanteidinscripcion", ParticipanteIDInscripcion);
+                }
 
                 Script.Prepare();
 

@@ -126,7 +126,10 @@
     <Compile Include="Classes\DuenoHistorico.cs" />
     <Compile Include="Classes\Interes.cs" />
     <Compile Include="Classes\Listado.cs" />
+    <Compile Include="Classes\Local.cs" />
     <Compile Include="Classes\Lugar.cs" />
+    <Compile Include="Classes\Membresia.cs" />
+    <Compile Include="Classes\OrganizacionCaridad.cs" />
     <Compile Include="Classes\Participante.cs" />
     <Compile Include="Classes\Subasta.cs" />
     <Compile Include="DBConnection\CRUD.cs" />

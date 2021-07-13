@@ -105,7 +105,7 @@ namespace Engine.DBConnection
         /// </summary>
         /// <param name="posicion">Poscicion en la tabla, inicio en 0</param>
         /// <returns>Dato de tipo <c>DateTime</c></returns>
-        public DateTime ReadDate(int posicion)
+        public Nullable<DateTime> ReadDate(int posicion)
         {
             try
             {
@@ -113,7 +113,7 @@ namespace Engine.DBConnection
             }
             catch (Exception)
             {
-                return new DateTime();
+                return null;
             }
         }
 

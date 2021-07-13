@@ -274,6 +274,75 @@ namespace Engine.Classes
             return interest;
         }
 
+        public static Listado Listado(int id, Subasta subasta)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Listado listado = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM listado WHERE id = @id AND subasta_id = @subastaid";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Script.Parameters.AddWithValue("subastaid", subasta.ID);
+
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    listado = new Listado(connection.ReadInt(0), connection.ReadInt(1), connection.ReadFloat(2), connection.ReadFloat(3),
+                        connection.ReadInt(4), connection.ReadInt(5), connection.ReadDate(6), connection.ReadInt(7), connection.ReadInt(8),
+                        connection.ReadInt(9));
+                }
+            }
+            catch
+            {
+                listado = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return listado;
+        }
+
+        public static Local Local(int id)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Local local = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM modelo WHERE id = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    local = new Local(connection.ReadInt(0), connection.ReadString(1), connection.ReadBool(2), connection.ReadInt(3),
+                        connection.ReadInt(4), connection.ReadString(5));
+                }
+            }
+            catch
+            {
+                local = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return local;
+        }
+
         public static Lugar Lugar(int id)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
@@ -305,9 +374,46 @@ namespace Engine.Classes
 
             return place;
         }
+
+        public static Membresia Membresia(Coleccionista coleccionista, Club club, DateTime fechaIngreso)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Membresia membresia = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM modelo WHERE fecha_ingreso = @fechaingreso AND club_id = @clubid AND " +
+                    "coleccionista_documento_identidad = @coleccionistaid";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("fechaingreso", fechaIngreso);
+                connection.Script.Parameters.AddWithValue("clubid", club.ID);
+                connection.Script.Parameters.AddWithValue("coleccionistaid", coleccionista.ID);
+
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    membresia = new Membresia(connection.ReadDate(0), connection.ReadDate(1), connection.ReadInt(2), 
+                        connection.ReadInt(3), connection.ReadString(4));
+                }
+            }
+            catch
+            {
+                membresia = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return membresia;
+        }
     }
 
-    public static class TypePlace
+    public static class TipoLugar
     {
         public const string Address = "Direccion";
         public const string City = "Ciudad";
@@ -315,17 +421,23 @@ namespace Engine.Classes
         public const string Country = "Pais";
     }
 
+    public static class TipoLocal
+    {
+        public const string Alquilado = "Alquilado";
+        public const string DeUnMiembro = "De un Miembro";
+    }
+
     public static class Conversion
     {
         #region Conversion de Monedas
-        private const double Euro = 1.12;
+        private const float Euro = 1.12f;
 
-        public static double ConvertirDolares(double dolares)
+        public static float ConvertirDolares(float dolares)
         {
             return dolares / Euro;
         }
 
-        public static double ConvertirEuros(double euros)
+        public static float ConvertirEuros(float euros)
         {
             return Euro * euros;
         }

@@ -11,13 +11,13 @@ namespace Engine.Classes
     {
         #region Atributes
         public int ID { get; set; }
-        public DateTime FechaFundacion { get; set; }
+        public Nullable<DateTime> FechaFundacion { get; set; }
         public int Telefono { get; set; } //nullable
         public string PaginaWeb { get; set; } //nullable
         public string Proposito { get; set; }
         public int ResponsableID { get; set; }
         public int ResponsableClubID { get; set; }
-        public DateTime ResponsableFechaIngreso { get; set; }
+        public Nullable<DateTime> ResponsableFechaIngreso { get; set; }
         public int LugarID { get; set; }
         #endregion
 
@@ -25,16 +25,15 @@ namespace Engine.Classes
         /// <summary>
         /// Usar para hacer un nuevo registro en la BD
         /// </summary>
-        public Club(DateTime fechaFundacion, string proposito, int responsableID, int responsableClubId, DateTime responsableFechaIngreso,
-            Lugar lugar, int telefono = 0, string paginaWeb = null) //Falta : Membresia(Responsable)
+        public Club(DateTime fechaFundacion, string proposito, Membresia responsable,Lugar lugar, int telefono = 0, string paginaWeb = null) 
         {
             FechaFundacion = fechaFundacion;
             Telefono = telefono;
             PaginaWeb = paginaWeb;
             Proposito = proposito;
-            ResponsableID = responsableID;
-            ResponsableClubID = responsableClubId;
-            ResponsableFechaIngreso = responsableFechaIngreso;
+            ResponsableID = responsable.ColeccionistaID;
+            ResponsableClubID = responsable.ClubID;
+            ResponsableFechaIngreso = responsable.FechaIngreso;
             LugarID = lugar.ID;
         }
 
@@ -61,8 +60,8 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Club(int id, DateTime fechaFundacion, string proposito, int responsableID, int responsableClubId, DateTime responsableFechaIngreso,
-            int lugarID, int telefono = 0, string paginaWeb = null)
+        public Club(int id, Nullable<DateTime> fechaFundacion, string proposito, int responsableID, int responsableClubId, 
+            Nullable<DateTime> responsableFechaIngreso,int lugarID, int telefono = 0, string paginaWeb = null)
         {
             ID = id;
             FechaFundacion = fechaFundacion;
