@@ -26,20 +26,6 @@ namespace Engine.Classes
         }
 
         /// <summary>
-        /// Constructor que instancia una fila especifica de la Tabla
-        /// </summary>
-        public Interes(int id)
-        {
-            Interes interest = Read.Interes(id);
-            if (!(interest == null))
-            {
-                ID = interest.ID;
-                Nombre = interest.Nombre;
-                Descripcion = interest.Descripcion;
-            }
-        }
-
-        /// <summary>
         /// Constructor de la Clase READ, NO USAR
         /// </summary>
         public Interes(int id, string name, string description = null)

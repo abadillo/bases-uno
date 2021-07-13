@@ -411,6 +411,141 @@ namespace Engine.Classes
 
             return membresia;
         }
+
+        public static OrganizacionCaridad OrganizacionCaridad(int id)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            OrganizacionCaridad organizacionCaridad= null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM modelo WHERE id = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    organizacionCaridad = new OrganizacionCaridad(connection.ReadInt(0), connection.ReadString(1), 
+                        connection.ReadString(2));
+                }
+            }
+            catch
+            {
+                organizacionCaridad = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return organizacionCaridad;
+        }
+
+        public static Participante Participante(int idInscripcion, Subasta subasta)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Participante participante = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM modelo WHERE id_inscripcion = @idinscripcion AND subasta_id = @subastaid";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("idinscripcion", idInscripcion);
+                connection.Script.Parameters.AddWithValue("subastaid", subasta.ID);
+
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    participante = new Participante(connection.ReadInt(0), connection.ReadInt(1), connection.ReadInt(2), 
+                        connection.ReadInt(3), connection.ReadDate(4), connection.ReadBool(5));
+                }
+            }
+            catch
+            {
+                participante = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return participante;
+        }
+
+        public static Representante Representante(int id)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Representante representante = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM modelo WHERE documento_identidad = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    representante = new Representante(connection.ReadInt(0), connection.ReadString(1), 
+                        connection.ReadString(2), connection.ReadDate(3));
+                }
+            }
+            catch
+            {
+                representante = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return representante;
+        }
+
+        public static Subasta Subasta(int id)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Subasta subasta = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM subasta WHERE id = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", id);
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    subasta = new Subasta(connection.ReadInt(0), connection.ReadDate(1), connection.ReadDate(2), 
+                        connection.ReadDate(3), connection.ReadString(4), connection.ReadBool(5), connection.ReadBool(6),
+                        connection.ReadInt(7));
+                }
+            }
+            catch
+            {
+                subasta = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return subasta;
+        }
     }
 
     public static class TipoLugar
@@ -425,6 +560,12 @@ namespace Engine.Classes
     {
         public const string Alquilado = "Alquilado";
         public const string DeUnMiembro = "De un Miembro";
+    }
+
+    public static class TipoSubasta
+    {
+        public const string Presencial = "Presencial";
+        public const string Virtual = "Virtual";
     }
 
     public static class Conversion

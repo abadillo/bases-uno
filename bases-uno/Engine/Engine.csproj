@@ -131,6 +131,7 @@
     <Compile Include="Classes\Membresia.cs" />
     <Compile Include="Classes\OrganizacionCaridad.cs" />
     <Compile Include="Classes\Participante.cs" />
+    <Compile Include="Classes\Representante.cs" />
     <Compile Include="Classes\Subasta.cs" />
     <Compile Include="DBConnection\CRUD.cs" />
     <Compile Include="DBConnection\DBConnection.cs" />

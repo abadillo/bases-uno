@@ -57,22 +57,6 @@ namespace Engine.Classes
             PrecioDolares = precioDolar;
         }
 
-        //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
-        public DuenoHistorico(Coleccionista coleccionista, DateTime fechaRegistro, int id)
-        {
-            DuenoHistorico duenoHistorico = Read.DuenoHistorico(coleccionista, fechaRegistro, id);
-            if (!(duenoHistorico == null))
-            {
-                ID = duenoHistorico.ID;
-                FechaRegistro = duenoHistorico.FechaRegistro;
-                Significado = duenoHistorico.Significado;
-                ColeccionistaID = duenoHistorico.ColeccionistaID;
-                ColeccionableID = duenoHistorico.ColeccionableID;
-                ComicID = duenoHistorico.ComicID;
-                PrecioDolares = duenoHistorico.PrecioDolares;
-            }
-        }
-
         /// <summary>
         /// Constructor para la clase READ, NO USAR
         /// </summary>

@@ -7,32 +7,25 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    public class OrganizacionCaridad : DBConnection.CRUD<OrganizacionCaridad>
+    public class Representante : DBConnection.CRUD<Representante>
     {
         #region Atributes
-        public int ID { get; set; } //pk
+        public int ID { get; set; }
         public string Nombre { get; set; }
-        public string Mision { get; set; }
+        public string Apellido { get; set; }
+        public Nullable<DateTime> FechaNacimiento { get; set; }
         #endregion
 
         #region Constructors
         /// <summary>
-        /// Usar previo a insercion de un registro en la BD
+        /// Unico Constructor de la clase
         /// </summary>
-        public OrganizacionCaridad(string nombre, string mision)
-        {
-            Nombre = nombre;
-            Mision = mision;
-        }
-
-        /// <summary>
-        /// Constructor General de la Clase, usualmente para la clase READ
-        /// </summary>
-        public OrganizacionCaridad(int id, string nombre, string mision)
+        public Representante(int id, string nombre, string apellido, Nullable<DateTime> fechaNacimiento)
         {
             ID = id;
             Nombre = nombre;
-            Mision = mision;
+            Apellido = apellido;
+            FechaNacimiento = fechaNacimiento;
         }
         #endregion
 
@@ -43,7 +36,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM organizacion_caridad WHERE id = @id";
+                string Query = "DELETE FROM representante WHERE documento_identidad = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -62,21 +55,20 @@ namespace Engine.Classes
         {
             try
             {
-                Connection.Open();
+                OpenConnection();
 
-                string Query2 = "INSERT INTO organizacion_caridad (nombre, mision) " +
-                    "VALUES (@nombre, @mision) RETURNING id";
-                Script = new NpgsqlCommand(Query2, Connection);
+                string Query = "INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) " +
+                    "VALUES (@id, @nombre, @apellido, @fecha)";
+                Script = new NpgsqlCommand(Query, Connection);
 
+                Script.Parameters.AddWithValue("id", ID);
                 Script.Parameters.AddWithValue("nombre", Nombre);
-                Script.Parameters.AddWithValue("mision", Mision);
+                Script.Parameters.AddWithValue("apellido", Apellido);
+                Script.Parameters.AddWithValue("fecha", FechaNacimiento);
 
-                Reader = Script.ExecuteReader();
+                Script.Prepare();
 
-                if (Reader.Read())
-                {
-                    ID = ReadInt(0);
-                }
+                Script.ExecuteNonQuery();
             }
             finally
             {
@@ -90,14 +82,15 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE organizacion_caridad " +
-                    "SET nombre = @nombre, mision = @mision " +
-                    "WHERE id = @id";
+                string Query = "UPDATE representante SET nombre = @nombre, apellido = @apellido, " +
+                    "fecha_nacimiento = @fecha " +
+                    "WHERE documento_identidad = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
                 Script.Parameters.AddWithValue("nombre", Nombre);
-                Script.Parameters.AddWithValue("mision", Mision);
+                Script.Parameters.AddWithValue("apellido", Apellido);
+                Script.Parameters.AddWithValue("fecha", FechaNacimiento);
 
                 Script.Prepare();
 

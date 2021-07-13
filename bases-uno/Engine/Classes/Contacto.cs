@@ -29,20 +29,6 @@ namespace Engine.Classes
             ClubID = club.ID;
         }
 
-        //Se usa cuando se quiere una instancia especifica de una clase en la base de datos
-        public Contacto(int id, Club club)
-        {
-            Contacto contact = Read.Contacto(id, club);
-            if (!(contact == null))
-            {
-                ID = contact.ID;
-                Email = contact.Email;
-                Telefono = contact.Telefono;
-                Plataforma = contact.Plataforma;
-                ClubID = contact.ClubID;
-            }
-        }
-
         /// <summary>
         /// Constructor usado por la clase READ, NO USAR
         /// </summary>

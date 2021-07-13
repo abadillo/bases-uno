@@ -44,20 +44,6 @@ namespace Engine.Classes
         }
 
         /// <summary>
-        /// Instancia una fila especifica de la tabla
-        /// </summary>
-        public Lugar(int id)
-        {
-            Lugar place = Read.Lugar(id);
-            if (!(place == null))
-            {
-                ID = place.ID;
-                Tipo = place.Tipo;
-                LugarID = place.LugarID;
-            }
-        }
-
-        /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
         public Lugar(int id, string nombre, string tipo, int lugarID = 0)

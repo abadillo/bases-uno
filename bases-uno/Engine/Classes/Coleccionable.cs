@@ -26,20 +26,6 @@ namespace Engine.Classes
         }
 
         /// <summary>
-        /// Crea una instancia de un registro especifico de la BD
-        /// </summary>
-        public Coleccionable(int id)
-        {
-            Coleccionable colectable = Read.Coleccionable(id);
-            if (!(colectable == null))
-            {
-                ID = colectable.ID;
-                Nombre = colectable.Nombre;
-                Descripcion = colectable.Descripcion;
-            }
-        }
-
-        /// <summary>
         /// Constructor para la clase READ, NO USAR
         /// </summary>
         public Coleccionable(int id, string nombre, string descripcion = null)

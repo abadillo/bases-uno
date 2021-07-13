@@ -25,10 +25,11 @@ namespace Engine.Classes
 
         #region Constructors
         /// <summary>
-        /// Constructor de la Clase
+        /// Constructor de la Clase caso tiene o no representante que es Coleccionista
         /// </summary>
         public Coleccionista(int id, string primerNombre, string primerApellido, int telefono, DateTime fechaNacimiento, Lugar lugarNacimiento,
-            Lugar lugarResidencia, string segundoNombre = null, string segundoApellido = null, int representanteID = 0)
+            Lugar lugarResidencia, string segundoNombre = null, string segundoApellido = null, Coleccionista representante = null)
+
         {
             ID = id;
             PrimerNombre = primerNombre;
@@ -39,39 +40,31 @@ namespace Engine.Classes
             FechaNacimiento = fechaNacimiento;
             LugarNacimiento = lugarNacimiento.ID;
             LugarResidencia = lugarResidencia.ID;
-            Coleccionista representanteColeccionista = Read.Coleccionista(representanteID);
-            if (representanteColeccionista.ID == 0)
+            if (representante == null)
             {
-                ColeccionistaRepresentanteID = 0;
-                RepresentanteID = representanteID;
-            }
-            else
-            {
-                ColeccionistaRepresentanteID = representanteID;
+                ColeccionistaRepresentanteID = representante.ID;
                 RepresentanteID = 0;
             }
         }
 
         /// <summary>
-        /// Crea una instancia de un registro especifico de la BD
+        /// Constructor de la Clase caso tiene representante que NO es Coleccionista
         /// </summary>
-        public Coleccionista(int id)
+        public Coleccionista(int id, string primerNombre, string primerApellido, int telefono, DateTime fechaNacimiento, Lugar lugarNacimiento,
+            Lugar lugarResidencia, Representante representante, string segundoNombre = null, string segundoApellido = null)
+
         {
-            Coleccionista collector = Read.Coleccionista(id);
-            if (!(collector == null))
-            {
-                ID = collector.ID;
-                PrimerNombre = collector.PrimerNombre;
-                SegundoNombre = collector.SegundoNombre;
-                PrimerApellido = collector.PrimerApellido;
-                SegundoApellido = collector.SegundoApellido;
-                Telefono = collector.Telefono;
-                FechaNacimiento = collector.FechaNacimiento;
-                LugarNacimiento = collector.LugarNacimiento;
-                LugarResidencia = collector.LugarResidencia;
-                ColeccionistaRepresentanteID = collector.ColeccionistaRepresentanteID;
-                RepresentanteID = collector.RepresentanteID;
-            }
+            ID = id;
+            PrimerNombre = primerNombre;
+            SegundoApellido = segundoApellido;
+            PrimerApellido = primerApellido;
+            SegundoApellido = segundoApellido;
+            Telefono = telefono;
+            FechaNacimiento = fechaNacimiento;
+            LugarNacimiento = lugarNacimiento.ID;
+            LugarResidencia = lugarResidencia.ID;
+            ColeccionistaRepresentanteID = 0;
+            RepresentanteID = representante.ID;
         }
 
         /// <summary>

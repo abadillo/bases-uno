@@ -45,23 +45,6 @@ namespace Engine.Classes
         }
 
         /// <summary>
-        /// Crea una instancia de un registro especifico de la BD
-        /// </summary>
-        public Local(int id)
-        {
-            Local local = Read.Local(id);
-            if (!(local == null))
-            {
-                ID = local.ID;
-                Nombre = local.Nombre;
-                Alquilado = local.Alquilado;
-                LugarID = local.LugarID;
-                ColeccionistaID = local.ColeccionistaID;
-                Tipo = local.Tipo;
-            }
-        }
-
-        /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
         public Local(int id, string nombre, bool alquilado, int lugarID, int coleccionistaID, string tipo)

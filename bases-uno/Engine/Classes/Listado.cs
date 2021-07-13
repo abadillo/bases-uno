@@ -26,46 +26,27 @@ namespace Engine.Classes
         /// <summary>
         /// Usar previo a insercion de un registro en la BD
         /// </summary>
-        public Listado(int subastaID, float precioBase, DuenoHistorico duenoHistorico, int orden = 0, float precioVenta = 0, int participanteSubastaID = 0, 
-            int participanteIDInscripcion = 0) //Falta: Subasta, Participante
+        public Listado(Subasta subasta, float precioBase, DuenoHistorico duenoHistorico, int orden = 0, 
+            float precioVenta = 0, Participante participante)
         {
             Orden = orden;
             PrecioBase = precioBase;
             PrecioVenta = precioVenta;
-            SubastaID = subastaID;
+            SubastaID = subasta.ID;
             DuenoHistoricoColeccionistaID = duenoHistorico.ColeccionistaID;
             DuenoHistoricoFechaRegistro = duenoHistorico.FechaRegistro;
             DuenoHistoricoID = duenoHistorico.ID;
-            ParticipanteSubastaID = participanteSubastaID;
-            ParticipanteIDInscripcion = participanteIDInscripcion;
-        }
-
-        /// <summary>
-        /// Crea una instancia de un registro especifico de la BD
-        /// </summary>
-        public Listado(int id, Subasta subasta)
-        {
-            Listado listado = Read.Listado(id, subasta);
-            if (!(listado == null))
-            {
-                ID = listado.ID;
-                Orden = listado.Orden;
-                PrecioBase = listado.PrecioBase;
-                PrecioVenta = listado.PrecioVenta;
-                SubastaID = listado.SubastaID;
-                DuenoHistoricoColeccionistaID = listado.DuenoHistoricoColeccionistaID;
-                DuenoHistoricoFechaRegistro = listado.DuenoHistoricoFechaRegistro;
-                ParticipanteSubastaID = listado.ParticipanteSubastaID;
-                DuenoHistoricoID = listado.DuenoHistoricoID;
-                ParticipanteIDInscripcion = listado.ParticipanteIDInscripcion;
-            }
+            ParticipanteSubastaID = participante.SubastaID;
+            ParticipanteIDInscripcion = participante.IDInscripcion;
         }
 
         /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Listado(int id, int orden, float precioBase, float precioVenta, int subastaID, int duenoHistoricoColeccionistaID,
-            Nullable<DateTime> duenoHistoricoFechaRegistro, int participanteSubastaID, int duenoHistoricoID, int participanteIDInscripcion)
+        public Listado(int id, int orden, float precioBase, float precioVenta, int subastaID, 
+            int duenoHistoricoColeccionistaID,
+            Nullable<DateTime> duenoHistoricoFechaRegistro, int participanteSubastaID, int duenoHistoricoID, 
+            int participanteIDInscripcion)
         {
             ID = id;
             Orden = orden;

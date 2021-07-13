@@ -7,42 +7,56 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    public class Subasta : DBConnection.CRUD<ClassModell>
+    public class Subasta : DBConnection.CRUD<Subasta>
     {
         #region Atributes
-        public int ID { get; set; }
-        public string OtherData { get; set; }
+        public int ID { get; set; } //pk
+        public Nullable<DateTime> Fecha { get; set; }
+        public Nullable<DateTime> HoraInicio { get; set; }
+        public Nullable<DateTime> HoraCierre { get; set; }
+        public string Tipo { get; set; }
+        public bool Caridad { get; set; }
+        public bool Cancelado { get; set; }
+        public int LocalID { get; set; }
         #endregion
 
         #region Constructors
         /// <summary>
         /// Usar previo a insercion de un registro en la BD, si la clase tiene una clave serial
-        /// </summary>
-        public ClassModell(string otherData)
+        /// </summary>Usar por el Check:
+        /// <param name="tipo">
+        /// public static class TipoSubasta 
+        /// <para>{</para>
+        /// <para>public const string Presencial = "Presencial";</para>
+        /// <para>public const string Virtual = "Virtual";</para>
+        /// <para>}</para>
+        /// </param>
+        public Subasta(DateTime fecha, DateTime horaInicio, DateTime horaCierre, string tipo, 
+            bool caridad, bool cancelado, Local local)
         {
-            OtherData = otherData;
-        }
-
-        /// <summary>
-        /// Crea una instancia de un registro especifico de la BD
-        /// </summary>
-        public ClassModell(int id)
-        {
-            ClassModell modell = Read.ClassModell(id);
-            if (!(modell == null))
-            {
-                ID = modell.ID;
-                OtherData = modell.OtherData;
-            }
+            Fecha = fecha;
+            HoraInicio = horaInicio;
+            HoraCierre = horaCierre;
+            Tipo = tipo;
+            Caridad = caridad;
+            Cancelado = cancelado;
+            LocalID = local.ID;
         }
 
         /// <summary>
         /// Constructor General de la Clase, usualmente para la clase READ
         /// </summary>
-        public ClassModell(int id, string otherData)
+        public Subasta(int id, Nullable<DateTime> fecha, Nullable<DateTime> horaInicio, Nullable<DateTime> horaCierre, 
+            string tipo, bool caridad, bool cancelado, int localID)
         {
             ID = id;
-            OtherData = otherData;
+            Fecha = fecha;
+            HoraInicio = horaInicio;
+            HoraCierre = horaCierre;
+            Tipo = tipo;
+            Caridad = caridad;
+            Cancelado = cancelado;
+            LocalID = localID;
         }
         #endregion
 
@@ -53,7 +67,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM modelo WHERE id = @id";
+                string Query = "DELETE FROM subasta WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -72,29 +86,20 @@ namespace Engine.Classes
         {
             try
             {
-                #region Modelo Caso ID no es SERIAL
-                OpenConnection();
-
-                string Query = "INSERT INTO modelo (id, otherData) " +
-                    "VALUES (@id, @otherData)";
-                Script = new NpgsqlCommand(Query, Connection);
-
-                Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
-
-                Script.Prepare();
-
-                Script.ExecuteNonQuery();
-                #endregion
-
-                #region Modelo Caso ID es SERIAL
                 Connection.Open();
 
-                string Query2 = "INSERT INTO modelo (otherData) " +
-                    "VALUES (@otherData) RETURNING id";
-                Script = new NpgsqlCommand(Query2, Connection);
+                string Query = "INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, " +
+                    "cancelado, local_id) " +
+                    "VALUES () RETURNING id";
+                Script = new NpgsqlCommand(Query, Connection);
 
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script.Parameters.AddWithValue("fecha", Fecha);
+                Script.Parameters.AddWithValue("horainicio", HoraInicio);
+                Script.Parameters.AddWithValue("horacierre", HoraCierre);
+                Script.Parameters.AddWithValue("tipo", Tipo);
+                Script.Parameters.AddWithValue("caridad", Caridad);
+                Script.Parameters.AddWithValue("cancelado", Cancelado);
+                Script.Parameters.AddWithValue("localid", LocalID);
 
                 Reader = Script.ExecuteReader();
 
@@ -102,7 +107,6 @@ namespace Engine.Classes
                 {
                     ID = ReadInt(0);
                 }
-                #endregion
             }
             finally
             {
@@ -116,12 +120,20 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE modelo SET otherData = @otherData " +
-                        "WHERE id = @id";
+                string Query = "UPDATE subasta SET fecha = @fecha, hora_inicio = @horainicio, " +
+                    "hora_cierre = , @horacierre, tipo = @tipo, caridad = , @caridad, cancelado = @cancelado, " +
+                    "local_id = @localid" +
+                    "WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script.Parameters.AddWithValue("fecha", Fecha);
+                Script.Parameters.AddWithValue("horainicio", HoraInicio);
+                Script.Parameters.AddWithValue("horacierre", HoraCierre);
+                Script.Parameters.AddWithValue("tipo", Tipo);
+                Script.Parameters.AddWithValue("caridad", Caridad);
+                Script.Parameters.AddWithValue("cancelado", Cancelado);
+                Script.Parameters.AddWithValue("localid", LocalID);
 
                 Script.Prepare();
 

@@ -16,7 +16,7 @@ namespace Engine.Classes
 
         #region Constructors
         /// <summary>
-        /// Usar previo a insercion de un registro en la BD, si la clase tiene una clave serial
+        /// Usar previo a insercion de un registro en la BD
         /// </summary>
         public ClassModell(string otherData)
         {
@@ -24,20 +24,7 @@ namespace Engine.Classes
         }
 
         /// <summary>
-        /// Crea una instancia de un registro especifico de la BD
-        /// </summary>
-        public ClassModell(int id)
-        {
-            ClassModell modell = Read.ClassModell(id);
-            if (!(modell == null))
-            {
-                ID = modell.ID;
-                OtherData = modell.OtherData;
-            }
-        }
-
-        /// <summary>
-        /// Constructor General de la Clase, usualmente para la clase READ
+        /// Constructor de la clase READ, NO USAR
         /// </summary>
         public ClassModell(int id, string otherData)
         {

@@ -55,25 +55,6 @@ namespace Engine.Classes
             Volume = volumen;
             PublicationPrice = publicationPrice;
         }
-
-        public Comic(int id)
-        {
-            Comic comic = Read.Comic(id);
-            if (!(comic == null))
-            {
-                ID = comic.ID;
-                Title = comic.Title;
-                Number = comic.Number;
-                PublicationDate = comic.PublicationDate;
-                Color = comic.Color;
-                Synopsis = comic.Synopsis;
-                Pages = comic.Pages;
-                Cover = comic.Cover;
-                Editor = comic.Editor;
-                Volume = comic.Volume;
-                PublicationPrice = comic.PublicationPrice;
-            }
-        }
         #endregion
 
         #region CRUDs

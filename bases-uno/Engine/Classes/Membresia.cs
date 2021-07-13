@@ -21,7 +21,8 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor general de la clase
         /// </summary>
-        public Membresia(Coleccionista coleccionista, Club club, DateTime fechaIngreso, string email = null, Nullable<DateTime> fechaRetiro = null)
+        public Membresia(Coleccionista coleccionista, Club club, DateTime fechaIngreso, string email = null, 
+            Nullable<DateTime> fechaRetiro = null)
         {
             FechaIngreso = fechaIngreso;
             FechaRetiro = fechaRetiro;
@@ -31,25 +32,10 @@ namespace Engine.Classes
         }
 
         /// <summary>
-        /// Crea una instancia de un registro especifico de la BD
-        /// </summary>
-        public Membresia(Coleccionista coleccionista, Club club, DateTime fechaIngreso)
-        {
-            Membresia membresia = Read.Membresia(coleccionista, club, fechaIngreso);
-            if (!(membresia == null))
-            {
-                FechaIngreso = membresia.FechaIngreso;
-                FechaRetiro = membresia.FechaRetiro;
-                ClubID = membresia.ClubID;
-                ColeccionistaID = membresia.ColeccionistaID;
-                Email = membresia.Email;
-            }
-        }
-
-        /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Membresia(Nullable<DateTime> fechaIngreso, Nullable<DateTime> fechaRetiro, int clubID, int coleccionistaID, string email)
+        public Membresia(Nullable<DateTime> fechaIngreso, Nullable<DateTime> fechaRetiro, int clubID, 
+            int coleccionistaID, string email)
         {
             FechaIngreso = fechaIngreso;
             FechaRetiro = fechaRetiro;

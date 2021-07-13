@@ -38,26 +38,6 @@ namespace Engine.Classes
         }
 
         /// <summary>
-        /// Crea una instancia de un registro especifico de la BD
-        /// </summary>
-        public Club(int id)
-        {
-            Club club = Read.Club(id);
-            if (!(club == null))
-            {
-                ID = club.ID;
-                FechaFundacion = club.FechaFundacion;
-                Telefono = club.Telefono;
-                PaginaWeb = club.PaginaWeb;
-                Proposito = club.Proposito;
-                ResponsableID = club.ResponsableID;
-                ResponsableClubID = club.ResponsableClubID;
-                ResponsableFechaIngreso = club.ResponsableFechaIngreso;
-                LugarID = club.LugarID;
-            }
-        }
-
-        /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
         public Club(int id, Nullable<DateTime> fechaFundacion, string proposito, int responsableID, int responsableClubId, 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,42 +7,42 @@ using System.Threading.Tasks;
 
 namespace Engine.Classes
 {
-    class Participante : DBConnection.CRUD<ClassModell>
+    public class Participante : DBConnection.CRUD<Participante>
     {
         #region Atributes
-        public int ID { get; set; }
-        public string OtherData { get; set; }
+        public int IDInscripcion { get; set; } //pk
+        public int SubastaID { get; set; } //pk
+        public int MembresiaColeccionistaID { get; set; }
+        public int MembresiaClubID { get; set; }
+        public Nullable<DateTime> MembresiaFechaRegistro { get; set; }
+        public bool Autorizado { get; set; }
         #endregion
 
         #region Constructors
         /// <summary>
-        /// Usar previo a insercion de un registro en la BD, si la clase tiene una clave serial
+        /// Usar previo a insercion de un registro en la BD
         /// </summary>
-        public ClassModell(string otherData)
+        public Participante(int idInscripcion, Subasta subasta, Membresia membresia, bool autorizado)
         {
-            OtherData = otherData;
+            IDInscripcion = idInscripcion;
+            SubastaID = subasta.ID;
+            MembresiaColeccionistaID = membresia.ColeccionistaID;
+            MembresiaClubID = membresia.ClubID;
+            MembresiaFechaRegistro = membresia.FechaIngreso;
         }
 
         /// <summary>
-        /// Crea una instancia de un registro especifico de la BD
+        /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public ClassModell(int id)
+        public Participante(int idInscripcion, int subastaID, int membresiaColeccionistaID, int membresiaClubID, 
+            Nullable<DateTime> membresiaFechaRegistro, bool autorizado)
         {
-            ClassModell modell = Read(id);
-            if (!(modell == null))
-            {
-                ID = modell.ID;
-                OtherData = modell.OtherData;
-            }
-        }
-
-        /// <summary>
-        /// Constructor General de la Clase, usualmente para la clase READ
-        /// </summary>
-        public ClassModell(int id, string otherData)
-        {
-            ID = id;
-            OtherData = otherData;
+            IDInscripcion = idInscripcion;
+            SubastaID = subastaID;
+            MembresiaColeccionistaID = membresiaColeccionistaID;
+            MembresiaClubID = membresiaClubID;
+            MembresiaFechaRegistro = membresiaFechaRegistro;
+            Autorizado = autorizado;
         }
         #endregion
 
@@ -52,10 +53,11 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM modelo WHERE id = @id";
+                string Query = "DELETE FROM participante WHERE id_inscripcion = @idinscripcion AND subasta_id = @subastaid";
                 Script = new NpgsqlCommand(Query, Connection);
 
-                Script.Parameters.AddWithValue("id", ID);
+                Script.Parameters.AddWithValue("idinscripcion", IDInscripcion);
+                Script.Parameters.AddWithValue("subastaid", SubastaID);
 
                 Script.Prepare();
 
@@ -71,37 +73,24 @@ namespace Engine.Classes
         {
             try
             {
-                #region Modelo Caso ID no es SERIAL
                 OpenConnection();
 
-                string Query = "INSERT INTO modelo (id, otherData) " +
-                    "VALUES (@id, @otherData)";
+                string Query = "INSERT INTO participante (id_inscripcion, subasta_id, " +
+                    "membresia_coleccionista_documento_identidad, membresia_club_id, membresia_fecha_ingreso, " +
+                    "autorizado) " +
+                    "VALUES (@idinscripcion, @subastaid, @membresiaid, @membresiaclub, @membresiafecha, @autorizado)";
                 Script = new NpgsqlCommand(Query, Connection);
 
-                Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script.Parameters.AddWithValue("idinscripcion", IDInscripcion);
+                Script.Parameters.AddWithValue("subastaid", SubastaID);
+                Script.Parameters.AddWithValue("membresiaid", MembresiaColeccionistaID);
+                Script.Parameters.AddWithValue("membresiaclub", MembresiaClubID);
+                Script.Parameters.AddWithValue("membresiafecha", MembresiaFechaRegistro);
+                Script.Parameters.AddWithValue("autorizado", Autorizado);
 
                 Script.Prepare();
 
                 Script.ExecuteNonQuery();
-                #endregion
-
-                #region Modelo Caso ID es SERIAL
-                Connection.Open();
-
-                string Query2 = "INSERT INTO modelo (otherData) " +
-                    "VALUES (@otherData) RETURNING id";
-                Script = new NpgsqlCommand(Query2, Connection);
-
-                Script.Parameters.AddWithValue("otherData", OtherData);
-
-                Reader = Script.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    ID = ReadInt(0);
-                }
-                #endregion
             }
             finally
             {
@@ -115,12 +104,19 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE modelo SET otherData = @otherData " +
-                        "WHERE id = @id";
+                string Query = "UPDATE participante " +
+                    "SET membresia_coleccionista_documento_identidad = @membresiaid, " +
+                    "membresia_club_id = @membresiaclub, membresia_fecha_ingreso = @membresiafecha, " +
+                    "autorizado = @autorizado" +
+                        "WHERE id_inscripcion = @idinscripcion AND subasta_id = @subastaid";
                 Script = new NpgsqlCommand(Query, Connection);
 
-                Script.Parameters.AddWithValue("id", ID);
-                Script.Parameters.AddWithValue("otherData", OtherData);
+                Script.Parameters.AddWithValue("idinscripcion", IDInscripcion);
+                Script.Parameters.AddWithValue("subastaid", SubastaID);
+                Script.Parameters.AddWithValue("membresiaid", MembresiaColeccionistaID);
+                Script.Parameters.AddWithValue("membresiaclub", MembresiaClubID);
+                Script.Parameters.AddWithValue("membresiafecha", MembresiaFechaRegistro);
+                Script.Parameters.AddWithValue("autorizado", Autorizado);
 
                 Script.Prepare();
 
