@@ -1,4 +1,5 @@
 ﻿using Engine.Classes;
+using Engine;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,6 @@ namespace bases_uno.Views
 {
     public partial class comicr : Form
     {
-
-      
-
         public index parent;
         //public Comic comic = Read.Comic(0);
 
@@ -34,11 +32,11 @@ namespace bases_uno.Views
             {
           
                 Comic comic = new Comic(
-                    ValidarNull(textBoxTitle), ValidarInt(textBoxNumber, true),
-                    ValidarDateTime(textBoxPublicationDate, true), radioButtonColor.Checked,
-                    ValidarNull(textBoxSynopsis), ValidarInt(textBoxPages, true), radioButtonCover.Checked,
-                    ValidarNull(textBoxEditor), ValidarInt(textBoxVolumen, false),
-                    ValidarFloat(textBoxPublicationPrice, false)
+                    Validacion.ValidarNull(textBoxTitle), Validacion.ValidarInt(textBoxNumber, true),
+                    Validacion.ValidarDateTime(textBoxPublicationDate, true), radioButtonColor.Checked,
+                    Validacion.ValidarNull(textBoxSynopsis), Validacion.ValidarInt(textBoxPages, true), radioButtonCover.Checked,
+                    Validacion.ValidarNull(textBoxEditor), Validacion.ValidarInt(textBoxVolumen, false),
+                    Validacion.ValidarFloat(textBoxPublicationPrice, false)
                 );
 
                 comic.Insert();
@@ -60,83 +58,6 @@ namespace bases_uno.Views
 
         }
 
-        public string ValidarNull(TextBox campo) {
-
-            if (string.IsNullOrEmpty(campo.Text))
-            {
-                campo.BackColor = Color.FromArgb(232, 81, 94);
-                throw new ApplicationException("Campo " + campo.Tag + " vacio");
-            }
-
-            campo.BackColor = Color.LightGray;
-            return campo.Text;
-        }
-        public int ValidarInt(TextBox campo, bool NN)
-        {
-
-            if (!NN && string.IsNullOrEmpty(campo.Text))
-                return 0;
-
-            if (NN)
-            {
-                ValidarNull(campo);   
-            }
-
-            int tmp;
-
-            if (!int.TryParse(campo.Text, out tmp))
-            {
-                campo.BackColor = Color.FromArgb(232, 81, 94);
-                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero valido");
-            } 
-
-            campo.BackColor = Color.LightGray;
-            return tmp;
-
-        }
-        public float ValidarFloat(TextBox campo, bool NN)
-        {
-
-            if (!NN && string.IsNullOrEmpty(campo.Text))
-                return 0;
-
-            if (NN)
-            {
-                ValidarNull(campo);
-            }
-
-            float tmp;
-
-            if (!float.TryParse(campo.Text, out tmp))
-            {
-                campo.BackColor = Color.FromArgb(232, 81, 94);
-                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero decimal valido");
-            }
-
-            campo.BackColor = Color.LightGray;
-            return tmp;
-        }
-        public DateTime ValidarDateTime(TextBox campo, bool NN)
-        {
-
-            if (NN)
-                ValidarNull(campo);
-
-            DateTime tmp;
-
-            if (!DateTime.TryParse(campo.Text, out tmp))
-            {
-                campo.BackColor = Color.FromArgb(232, 81, 94);
-                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser una fecha valida con formato MM/DD/YYYY");
-            }
-
-            campo.BackColor = Color.LightGray;
-            return tmp;
-        }
-
-
-
-
         private void btnadelante_Click(object sender, EventArgs e)
         {
             Registrar();
@@ -152,14 +73,12 @@ namespace bases_uno.Views
             Registrar();
         }
        
-
         private void btncancelar_Click(object sender, EventArgs e)
         {
             
             parent.InsertForm(new comicl(parent));
         }
-
-      
+    
         private void textBoxPublicationPrice_TextChanged(object sender, EventArgs e)
         {
             try
