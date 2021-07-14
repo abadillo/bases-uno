@@ -2,13 +2,13 @@ preguntar por:
 
 MER
 
-editor en entidad comic
-descripcion detallada en coleccionable
-documento de identidad en representante
-monto recibido de organizacion
-fecha_hora, duracion y cancelado (boolean)
-duracion minima en OBJ_SUB (LISTADO)
-email contacto en membresia
+# editor en entidad comic
+# descripcion detallada en coleccionable
+# documento de identidad en representante
+# monto recibido de organizacion
+# fecha_hora, duracion y cancelado (boolean)
+# duracion minima en OBJ_SUB (LISTADO)
+# email contacto en membresia
 el club puede tener varios correos dependiendo de la plataforma? no entiendo eso. el telefono en que entidad va?
 
 ML
