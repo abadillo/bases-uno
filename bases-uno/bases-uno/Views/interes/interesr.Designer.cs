@@ -185,7 +185,7 @@ namespace bases_uno.Views
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(816, 40);
             this.label7.TabIndex = 31;
-            this.label7.Text = "Sinopsis";
+            this.label7.Text = "Descripcion";
             // 
             // spacerpanel2
             // 
@@ -227,9 +227,9 @@ namespace bases_uno.Views
             this.textBoxName.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxName.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxName.ForeColor = System.Drawing.Color.Black;
-            this.textBoxName.Location = new System.Drawing.Point(0, 26);
+            this.textBoxName.Location = new System.Drawing.Point(0, 25);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(372, 22);
+            this.textBoxName.Size = new System.Drawing.Size(372, 23);
             this.textBoxName.TabIndex = 16;
             // 
             // label11
@@ -240,9 +240,9 @@ namespace bases_uno.Views
             this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 24);
+            this.label11.Size = new System.Drawing.Size(75, 23);
             this.label11.TabIndex = 14;
-            this.label11.Text = "titulo";
+            this.label11.Text = "nombre";
             // 
             // label2
             // 
@@ -327,7 +327,7 @@ namespace bases_uno.Views
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 51);
+            this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
             // interesr

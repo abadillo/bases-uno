@@ -138,6 +138,7 @@ namespace Engine.Classes
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
+                Script.Parameters.AddWithValue("nombre", Nombre);
                 Script.Parameters.AddWithValue("tipo", Tipo);
                 if (!(LugarID == 0))
                 {

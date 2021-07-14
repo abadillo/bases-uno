@@ -39,7 +39,6 @@ namespace bases_uno.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBoxLocationID = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -61,6 +60,7 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxLugar = new System.Windows.Forms.ComboBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -210,7 +210,7 @@ namespace bases_uno.Views
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBoxLocationID);
+            this.panel4.Controls.Add(this.comboBoxLugar);
             this.panel4.Controls.Add(this.iconButton1);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -218,19 +218,6 @@ namespace bases_uno.Views
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(402, 38);
             this.panel4.TabIndex = 6;
-            // 
-            // textBoxLocationID
-            // 
-            this.textBoxLocationID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBoxLocationID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLocationID.Font = new System.Drawing.Font("Roboto", 14F);
-            this.textBoxLocationID.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxLocationID.Location = new System.Drawing.Point(181, 0);
-            this.textBoxLocationID.Name = "textBoxLocationID";
-            this.textBoxLocationID.ReadOnly = true;
-            this.textBoxLocationID.Size = new System.Drawing.Size(184, 23);
-            this.textBoxLocationID.TabIndex = 16;
-            this.textBoxLocationID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton1
             // 
@@ -283,11 +270,6 @@ namespace bases_uno.Views
             this.comboBoxType.Enabled = false;
             this.comboBoxType.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Items.AddRange(new object[] {
-            "Pais",
-            "Estado",
-            "Ciudad",
-            "Direccion"});
             this.comboBoxType.Location = new System.Drawing.Point(111, 0);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(254, 23);
@@ -529,6 +511,18 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
+            // comboBoxLugar
+            // 
+            this.comboBoxLugar.BackColor = System.Drawing.Color.LightGray;
+            this.comboBoxLugar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.comboBoxLugar.Enabled = false;
+            this.comboBoxLugar.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLugar.FormattingEnabled = true;
+            this.comboBoxLugar.Location = new System.Drawing.Point(111, 0);
+            this.comboBoxLugar.Name = "comboBoxLugar";
+            this.comboBoxLugar.Size = new System.Drawing.Size(254, 23);
+            this.comboBoxLugar.TabIndex = 17;
+            // 
             // lugar1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -586,10 +580,10 @@ namespace bases_uno.Views
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBoxLocationID;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.ComboBox comboBoxLugar;
     }
 }

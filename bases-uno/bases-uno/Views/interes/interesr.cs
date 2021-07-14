@@ -8,17 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Engine;
 
 namespace bases_uno.Views
 {
     public partial class interesr : Form
     {
 
-        public double cambioeuro = 0.84;
-
         public index parent;
-        public Interes interes = Read.Interes(0);
-
+      
         public interesr(  index parent )
         {
             this.parent = parent;
@@ -27,53 +25,55 @@ namespace bases_uno.Views
             Update();
         }
 
-        private void registrar()
+        #region Funciones
+        private void Registrar()
         {
             try
             {
 
-                //Console.WriteLine(radioButton1.Checked);
-
-                interes.Nombre = textBoxName.Text;
-                interes.Descripcion = textBoxDescription.Text;
+                Interes interes = new Interes(
+                    Validacion.ValidarNull(textBoxName),
+                    Validacion.ValidarNull(textBoxDescription)
+                );
 
                 interes.Insert();
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK ,MessageBoxIcon.Information);
-
-           
                 parent.InsertForm(new interesl(parent));
 
             }
+            catch (ApplicationException aex)
+            {
+                MessageBox.Show(aex.Message, "Error de tipo de dato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show(ex.Message, "Error con base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-        }
 
+        }
+        #endregion
+
+        #region click botones y modificadores de campo
         private void btncrear_Click(object sender, EventArgs e)
         {
-            registrar();
-
+            Registrar();
         }
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            registrar();
+            Registrar();
         }
-
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-           
             parent.InsertForm(new interesl(parent));
         }
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-           
             parent.InsertForm(new interesl(parent));
         }
+        #endregion
     }
 }

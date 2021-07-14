@@ -43,7 +43,7 @@ namespace bases_uno.Views
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonCover = new System.Windows.Forms.RadioButton();
             this.iconButton12 = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -59,7 +59,7 @@ namespace bases_uno.Views
             this.iconButton19 = new FontAwesome.Sharp.IconButton();
             this.label13 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonColor = new System.Windows.Forms.RadioButton();
             this.iconButton18 = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -67,7 +67,7 @@ namespace bases_uno.Views
             this.iconButton17 = new FontAwesome.Sharp.IconButton();
             this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBoxVolume = new System.Windows.Forms.TextBox();
+            this.textBoxVolumen = new System.Windows.Forms.TextBox();
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -243,6 +243,7 @@ namespace bases_uno.Views
             this.textBoxSynopsis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxSynopsis.Size = new System.Drawing.Size(816, 177);
             this.textBoxSynopsis.TabIndex = 32;
+            this.textBoxSynopsis.Tag = "sinopsis";
             // 
             // spacerpanel2
             // 
@@ -315,7 +316,7 @@ namespace bases_uno.Views
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.radioButton2);
+            this.panel6.Controls.Add(this.radioButtonCover);
             this.panel6.Controls.Add(this.iconButton12);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -324,20 +325,20 @@ namespace bases_uno.Views
             this.panel6.Size = new System.Drawing.Size(402, 39);
             this.panel6.TabIndex = 10;
             // 
-            // radioButton2
+            // radioButtonCover
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton2.Enabled = false;
-            this.radioButton2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButton2.Location = new System.Drawing.Point(351, 0);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 39);
-            this.radioButton2.TabIndex = 16;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonCover.AutoSize = true;
+            this.radioButtonCover.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radioButtonCover.Enabled = false;
+            this.radioButtonCover.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCover.ForeColor = System.Drawing.Color.LightGray;
+            this.radioButtonCover.Location = new System.Drawing.Point(351, 0);
+            this.radioButtonCover.Margin = new System.Windows.Forms.Padding(0);
+            this.radioButtonCover.Name = "radioButtonCover";
+            this.radioButtonCover.Size = new System.Drawing.Size(14, 39);
+            this.radioButtonCover.TabIndex = 16;
+            this.radioButtonCover.TabStop = true;
+            this.radioButtonCover.UseVisualStyleBackColor = true;
             // 
             // iconButton12
             // 
@@ -395,6 +396,7 @@ namespace bases_uno.Views
             this.textBoxEditor.ReadOnly = true;
             this.textBoxEditor.Size = new System.Drawing.Size(280, 23);
             this.textBoxEditor.TabIndex = 16;
+            this.textBoxEditor.Tag = "editor";
             this.textBoxEditor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton11
@@ -453,6 +455,7 @@ namespace bases_uno.Views
             this.textBoxPages.ReadOnly = true;
             this.textBoxPages.Size = new System.Drawing.Size(184, 23);
             this.textBoxPages.TabIndex = 16;
+            this.textBoxPages.Tag = "paginas";
             this.textBoxPages.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton9
@@ -511,6 +514,7 @@ namespace bases_uno.Views
             this.textBoxPublicationPrice.ReadOnly = true;
             this.textBoxPublicationPrice.Size = new System.Drawing.Size(184, 23);
             this.textBoxPublicationPrice.TabIndex = 16;
+            this.textBoxPublicationPrice.Tag = "precio publicacion";
             this.textBoxPublicationPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton19
@@ -548,7 +552,7 @@ namespace bases_uno.Views
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.radioButton1);
+            this.panel12.Controls.Add(this.radioButtonColor);
             this.panel12.Controls.Add(this.iconButton18);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -557,20 +561,20 @@ namespace bases_uno.Views
             this.panel12.Size = new System.Drawing.Size(402, 36);
             this.panel12.TabIndex = 6;
             // 
-            // radioButton1
+            // radioButtonColor
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton1.Enabled = false;
-            this.radioButton1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButton1.Location = new System.Drawing.Point(351, 0);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 36);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonColor.AutoSize = true;
+            this.radioButtonColor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radioButtonColor.Enabled = false;
+            this.radioButtonColor.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonColor.ForeColor = System.Drawing.Color.LightGray;
+            this.radioButtonColor.Location = new System.Drawing.Point(351, 0);
+            this.radioButtonColor.Margin = new System.Windows.Forms.Padding(0);
+            this.radioButtonColor.Name = "radioButtonColor";
+            this.radioButtonColor.Size = new System.Drawing.Size(14, 36);
+            this.radioButtonColor.TabIndex = 16;
+            this.radioButtonColor.TabStop = true;
+            this.radioButtonColor.UseVisualStyleBackColor = true;
             // 
             // iconButton18
             // 
@@ -628,6 +632,7 @@ namespace bases_uno.Views
             this.textBoxTitle.ReadOnly = true;
             this.textBoxTitle.Size = new System.Drawing.Size(300, 23);
             this.textBoxTitle.TabIndex = 16;
+            this.textBoxTitle.Tag = "titulo";
             this.textBoxTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton17
@@ -665,7 +670,7 @@ namespace bases_uno.Views
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.textBoxVolume);
+            this.panel7.Controls.Add(this.textBoxVolumen);
             this.panel7.Controls.Add(this.iconButton10);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -674,19 +679,20 @@ namespace bases_uno.Views
             this.panel7.Size = new System.Drawing.Size(402, 36);
             this.panel7.TabIndex = 1;
             // 
-            // textBoxVolume
+            // textBoxVolumen
             // 
-            this.textBoxVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBoxVolume.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxVolume.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxVolume.Font = new System.Drawing.Font("Roboto", 14F);
-            this.textBoxVolume.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxVolume.Location = new System.Drawing.Point(181, 0);
-            this.textBoxVolume.Name = "textBoxVolume";
-            this.textBoxVolume.ReadOnly = true;
-            this.textBoxVolume.Size = new System.Drawing.Size(184, 23);
-            this.textBoxVolume.TabIndex = 16;
-            this.textBoxVolume.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxVolumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxVolumen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxVolumen.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxVolumen.Font = new System.Drawing.Font("Roboto", 14F);
+            this.textBoxVolumen.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxVolumen.Location = new System.Drawing.Point(181, 0);
+            this.textBoxVolumen.Name = "textBoxVolumen";
+            this.textBoxVolumen.ReadOnly = true;
+            this.textBoxVolumen.Size = new System.Drawing.Size(184, 23);
+            this.textBoxVolumen.TabIndex = 16;
+            this.textBoxVolumen.Tag = "volumen";
+            this.textBoxVolumen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton10
             // 
@@ -744,6 +750,7 @@ namespace bases_uno.Views
             this.textBoxPublicationDate.ReadOnly = true;
             this.textBoxPublicationDate.Size = new System.Drawing.Size(202, 23);
             this.textBoxPublicationDate.TabIndex = 16;
+            this.textBoxPublicationDate.Tag = "fecha publicacion";
             this.textBoxPublicationDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton16
@@ -802,6 +809,7 @@ namespace bases_uno.Views
             this.textBoxNumber.ReadOnly = true;
             this.textBoxNumber.Size = new System.Drawing.Size(184, 23);
             this.textBoxNumber.TabIndex = 16;
+            this.textBoxNumber.Tag = "numero";
             this.textBoxNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton15
@@ -860,6 +868,7 @@ namespace bases_uno.Views
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(201, 23);
             this.textBoxID.TabIndex = 16;
+            this.textBoxID.Tag = "id";
             this.textBoxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton14
@@ -1068,7 +1077,7 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton iconButton17;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBoxVolume;
+        private System.Windows.Forms.TextBox textBoxVolumen;
         private FontAwesome.Sharp.IconButton iconButton10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel10;
@@ -1085,7 +1094,7 @@ namespace bases_uno.Views
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonColor;
+        private System.Windows.Forms.RadioButton radioButtonCover;
     }
 }

@@ -18,8 +18,23 @@ namespace Engine
                 throw new ApplicationException("Campo " + campo.Tag + " vacio");
             }
 
-            campo.BackColor = Color.LightGray;
+            if (campo.ReadOnly == false)
+            {
+                campo.BackColor = Color.LightGray;
+            }
             return campo.Text;
+        }
+
+        public static string ValidarCombo(ComboBox combo)
+        {
+            if (combo.SelectedItem == null)
+            {
+                combo.BackColor = Color.FromArgb(232, 81, 94);
+                throw new ApplicationException("Combo " + combo.Tag + " vacio");
+            }
+
+            combo.BackColor = Color.LightGray;
+            return combo.SelectedItem.ToString();
         }
 
         public static int ValidarInt(TextBox campo, bool NN)
@@ -40,7 +55,10 @@ namespace Engine
                 throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero valido");
             }
 
-            campo.BackColor = Color.LightGray;
+            if (campo.ReadOnly == false)
+            {
+                campo.BackColor = Color.LightGray;
+            }
             return tmp;
 
         }
@@ -63,7 +81,10 @@ namespace Engine
                 throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero decimal valido");
             }
 
-            campo.BackColor = Color.LightGray;
+            if (campo.ReadOnly == false)
+            {
+                campo.BackColor = Color.LightGray;
+            }
             return tmp;
         }
 
@@ -80,7 +101,10 @@ namespace Engine
                 throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser una fecha valida con formato MM/DD/YYYY");
             }
 
-            campo.BackColor = Color.LightGray;
+            if (campo.ReadOnly == false)
+            {
+                campo.BackColor = Color.LightGray;
+            }
             return tmp;
         }
     }

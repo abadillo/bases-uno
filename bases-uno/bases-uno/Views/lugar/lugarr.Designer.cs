@@ -44,7 +44,7 @@ namespace bases_uno.Views
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBoxLocationID = new System.Windows.Forms.TextBox();
+            this.comboBoxLugar = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -197,16 +197,11 @@ namespace bases_uno.Views
             this.comboBoxType.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxType.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Items.AddRange(new object[] {
-            "Pais",
-            "Estado",
-            "Ciudad",
-            "Direccion"});
-            this.comboBoxType.Location = new System.Drawing.Point(0, 24);
+            this.comboBoxType.Location = new System.Drawing.Point(0, 25);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(372, 24);
+            this.comboBoxType.Size = new System.Drawing.Size(372, 23);
             this.comboBoxType.TabIndex = 36;
+            this.comboBoxType.Tag = "tipo";
             // 
             // label3
             // 
@@ -216,7 +211,7 @@ namespace bases_uno.Views
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 24);
+            this.label3.Size = new System.Drawing.Size(43, 23);
             this.label3.TabIndex = 14;
             this.label3.Text = "tipo";
             // 
@@ -238,10 +233,11 @@ namespace bases_uno.Views
             this.textBoxName.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxName.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxName.ForeColor = System.Drawing.Color.Black;
-            this.textBoxName.Location = new System.Drawing.Point(0, 26);
+            this.textBoxName.Location = new System.Drawing.Point(0, 25);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(372, 22);
+            this.textBoxName.Size = new System.Drawing.Size(372, 23);
             this.textBoxName.TabIndex = 16;
+            this.textBoxName.Tag = "titulo";
             // 
             // label11
             // 
@@ -251,13 +247,13 @@ namespace bases_uno.Views
             this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 24);
+            this.label11.Size = new System.Drawing.Size(53, 23);
             this.label11.TabIndex = 14;
             this.label11.Text = "titulo";
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.textBoxLocationID);
+            this.panel9.Controls.Add(this.comboBoxLugar);
             this.panel9.Controls.Add(this.label9);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(411, 3);
@@ -266,18 +262,18 @@ namespace bases_uno.Views
             this.panel9.Size = new System.Drawing.Size(402, 48);
             this.panel9.TabIndex = 3;
             // 
-            // textBoxLocationID
+            // comboBoxLugar
             // 
-            this.textBoxLocationID.BackColor = System.Drawing.Color.LightGray;
-            this.textBoxLocationID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLocationID.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxLocationID.Font = new System.Drawing.Font("Roboto", 14F);
-            this.textBoxLocationID.ForeColor = System.Drawing.Color.Black;
-            this.textBoxLocationID.Location = new System.Drawing.Point(0, 26);
-            this.textBoxLocationID.Name = "textBoxLocationID";
-            this.textBoxLocationID.Size = new System.Drawing.Size(372, 22);
-            this.textBoxLocationID.TabIndex = 16;
-            this.textBoxLocationID.Text = "0";
+            this.comboBoxLugar.BackColor = System.Drawing.Color.LightGray;
+            this.comboBoxLugar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.comboBoxLugar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxLugar.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLugar.FormattingEnabled = true;
+            this.comboBoxLugar.Location = new System.Drawing.Point(0, 25);
+            this.comboBoxLugar.Name = "comboBoxLugar";
+            this.comboBoxLugar.Size = new System.Drawing.Size(372, 23);
+            this.comboBoxLugar.TabIndex = 37;
+            this.comboBoxLugar.Tag = "localidad";
             // 
             // label9
             // 
@@ -287,7 +283,7 @@ namespace bases_uno.Views
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 24);
+            this.label9.Size = new System.Drawing.Size(88, 23);
             this.label9.TabIndex = 14;
             this.label9.Text = "localidad";
             // 
@@ -374,7 +370,7 @@ namespace bases_uno.Views
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 51);
+            this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
             // lugarr
@@ -418,7 +414,6 @@ namespace bases_uno.Views
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBoxLocationID;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel hrpanel;
@@ -429,5 +424,6 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBoxLugar;
     }
 }

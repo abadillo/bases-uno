@@ -201,6 +201,7 @@ namespace bases_uno.Views
             this.textBoxDescription.ReadOnly = true;
             this.textBoxDescription.Size = new System.Drawing.Size(816, 91);
             this.textBoxDescription.TabIndex = 32;
+            this.textBoxDescription.Tag = "descripcion";
             // 
             // spacerpanel2
             // 
@@ -279,10 +280,12 @@ namespace bases_uno.Views
             this.textBoxID.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxID.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxID.Location = new System.Drawing.Point(164, 0);
+            this.textBoxID.MaxLength = 50;
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
             this.textBoxID.Size = new System.Drawing.Size(201, 23);
             this.textBoxID.TabIndex = 16;
+            this.textBoxID.Tag = "id";
             this.textBoxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton14
@@ -342,6 +345,7 @@ namespace bases_uno.Views
             this.textBoxName.ReadOnly = true;
             this.textBoxName.Size = new System.Drawing.Size(277, 23);
             this.textBoxName.TabIndex = 16;
+            this.textBoxName.Tag = "nombre";
             this.textBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iconButton17

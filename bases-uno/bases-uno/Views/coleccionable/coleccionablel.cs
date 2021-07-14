@@ -33,15 +33,15 @@ namespace bases_uno.Views
             label1.Text = "Listado: Coleccionables";
 
 
-            for (int i = 0; i < list.Count; i++)
-            {
-                /// Console.WriteLine(list[i]);
+            //for (int i = 0; i < list.Count; i++)
+            //{
+            //    /// Console.WriteLine(list[i]);
 
-                itemcoleccionable item = new itemcoleccionable(list[i], parent);
-                item.Dock = DockStyle.Top;                
+            //    itemcoleccionable item = new itemcoleccionable(list[i], parent);
+            //    item.Dock = DockStyle.Top;                
 
-                dipanel1.Controls.Add(item);
-            }
+            //    dipanel1.Controls.Add(item);
+            //}
 
             Update();
 		}

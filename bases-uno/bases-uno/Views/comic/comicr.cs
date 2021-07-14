@@ -24,8 +24,8 @@ namespace bases_uno.Views
             label1.Text = "Registro Comic";
             Update();
         }
-       
 
+        #region Funciones
         private void Registrar()
         {
             try
@@ -57,12 +57,13 @@ namespace bases_uno.Views
             }
 
         }
+        #endregion
 
+        #region click botones y modificadores de campo
         private void btnadelante_Click(object sender, EventArgs e)
         {
             Registrar();
         }
-
         private void btnatras_Click(object sender, EventArgs e)
         {
             parent.InsertForm(new comicl(parent));
@@ -75,7 +76,6 @@ namespace bases_uno.Views
        
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            
             parent.InsertForm(new comicl(parent));
         }
     
@@ -98,7 +98,7 @@ namespace bases_uno.Views
             textBoxPublicationDate.Text = "";
             textBoxPublicationDate.ForeColor = Color.Black;
         }
+        #endregion
 
-     
     }
 }
