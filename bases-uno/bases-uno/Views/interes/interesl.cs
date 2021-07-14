@@ -21,7 +21,7 @@ namespace bases_uno.Views
 
         public iteminteres[] itemlist;
         
-        public List<Interes> list = Query.Interests();
+        public List<Interes> list = Read.Intereses();
 
         public interesl(index parent)
         {

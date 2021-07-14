@@ -7,6 +7,7 @@ using Npgsql;
 
 namespace Engine.Classes
 {
+    /*
     public class ClassModell : DBConnection.CRUD<ClassModell>
     {
         #region Atributes
@@ -124,4 +125,5 @@ namespace Engine.Classes
         #region Other Methods
         #endregion
     }
+    */
 }
