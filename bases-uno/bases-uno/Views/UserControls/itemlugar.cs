@@ -26,7 +26,7 @@ namespace bases_uno.Views.Components
             string locationName = "-";
 
 
-            Lugar temP = new Lugar(lugar.LugarID);
+            Lugar temP = Read.Lugar(lugar.LugarID);
              if (temP.Nombre != null)
             {
                 locationName = temP.Nombre;

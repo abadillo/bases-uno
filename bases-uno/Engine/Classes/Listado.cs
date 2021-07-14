@@ -27,7 +27,7 @@ namespace Engine.Classes
         /// Usar previo a insercion de un registro en la BD
         /// </summary>
         public Listado(Subasta subasta, float precioBase, DuenoHistorico duenoHistorico, int orden = 0, 
-            float precioVenta = 0, Participante participante)
+            float precioVenta = 0, Participante participante = null)
         {
             Orden = orden;
             PrecioBase = precioBase;
@@ -36,8 +36,16 @@ namespace Engine.Classes
             DuenoHistoricoColeccionistaID = duenoHistorico.ColeccionistaID;
             DuenoHistoricoFechaRegistro = duenoHistorico.FechaRegistro;
             DuenoHistoricoID = duenoHistorico.ID;
-            ParticipanteSubastaID = participante.SubastaID;
-            ParticipanteIDInscripcion = participante.IDInscripcion;
+            if (participante == null)
+            {
+                ParticipanteSubastaID = 0;
+                ParticipanteIDInscripcion = 0;
+            }
+            else
+            {
+                ParticipanteSubastaID = participante.SubastaID;
+                ParticipanteIDInscripcion = participante.IDInscripcion;
+            }
         }
 
         /// <summary>

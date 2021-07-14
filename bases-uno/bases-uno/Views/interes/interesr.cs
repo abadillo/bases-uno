@@ -17,7 +17,7 @@ namespace bases_uno.Views
         public double cambioeuro = 0.84;
 
         public index parent;
-        public Interes interes = new Interes(0);
+        public Interes interes = Read.Interes(0);
 
         public interesr(  index parent )
         {

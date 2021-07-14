@@ -16,7 +16,7 @@ namespace bases_uno.Views
     {
 
         public index parent;
-        public Lugar lugar = new Lugar(0);
+        public Lugar lugar = Read.Lugar(0);
 
         public lugarr(index parent)
         {

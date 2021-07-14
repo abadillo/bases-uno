@@ -17,7 +17,7 @@ namespace bases_uno.Views
         public double cambioeuro = 0.84;
 
         public index parent;
-        public Comic comic = new Comic(0);
+        public Comic comic = Read.Comic(0);
 
         public comicr( index parent )
         {

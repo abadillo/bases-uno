@@ -17,7 +17,7 @@ namespace bases_uno.Views
         public double cambioeuro = 0.84;
 
         public index parent;
-        public Coleccionable coleccionable = new Coleccionable(0);
+        public Coleccionable coleccionable = Read.Coleccionable(0);
 
         public coleccionabler( index parent )
         {
