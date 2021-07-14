@@ -14,10 +14,10 @@ namespace bases_uno.Views
     public partial class comicr : Form
     {
 
-        public double cambioeuro = 0.84;
+      
 
         public index parent;
-        public Comic comic = Read.Comic(0);
+        //public Comic comic = Read.Comic(0);
 
         public comicr( index parent )
         {
@@ -32,21 +32,14 @@ namespace bases_uno.Views
         {
             try
             {
-
-                comic.Title = ValidarNull(textBoxTitle);
-                comic.Editor = ValidarNull(textBoxEditor);
-                comic.Synopsis = ValidarNull(textBoxSynopsis);
-
-                comic.Volume = ValidarInt(textBoxVolumen, false);
-                Console.WriteLine(comic.Volume.ToString() + "  " + textBoxVolumen.Text);
-
-                comic.Number = ValidarInt(textBoxNumber, true);
-                comic.Pages = ValidarInt(textBoxPages,true);
-                comic.PublicationPrice = ValidarFloat(textBoxPublicationPrice, false);
-                comic.PublicationDate = ValidarDateTime(textBoxPublicationDate,true);
-                
-                comic.Cover = radioButton2.Checked;
-                comic.Color = radioButton1.Checked;
+          
+                Comic comic = new Comic(
+                    ValidarNull(textBoxTitle), ValidarInt(textBoxNumber, true),
+                    ValidarDateTime(textBoxPublicationDate, true), radioButtonColor.Checked,
+                    ValidarNull(textBoxSynopsis), ValidarInt(textBoxPages, true), radioButtonCover.Checked,
+                    ValidarNull(textBoxEditor), ValidarInt(textBoxVolumen, false),
+                    ValidarFloat(textBoxPublicationPrice, false)
+                );
 
                 comic.Insert();
 
@@ -78,7 +71,6 @@ namespace bases_uno.Views
             campo.BackColor = Color.LightGray;
             return campo.Text;
         }
-
         public int ValidarInt(TextBox campo, bool NN)
         {
 
@@ -87,39 +79,42 @@ namespace bases_uno.Views
 
             if (NN)
             {
-                ValidarNull(campo);
+                ValidarNull(campo);   
             }
 
-            int temp;
+            int tmp;
 
-            if (!int.TryParse(campo.Text, out temp))
+            if (!int.TryParse(campo.Text, out tmp))
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
                 throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero valido");
             } 
 
             campo.BackColor = Color.LightGray;
-            return temp;
+            return tmp;
 
         }
-
         public float ValidarFloat(TextBox campo, bool NN)
         {
 
             if (!NN && string.IsNullOrEmpty(campo.Text))
                 return 0;
 
+            if (NN)
+            {
+                ValidarNull(campo);
+            }
 
-            float temp;
+            float tmp;
 
-            if (!float.TryParse(campo.Text, out temp))
+            if (!float.TryParse(campo.Text, out tmp))
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
                 throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero decimal valido");
             }
 
             campo.BackColor = Color.LightGray;
-            return temp;
+            return tmp;
         }
         public DateTime ValidarDateTime(TextBox campo, bool NN)
         {
@@ -127,17 +122,19 @@ namespace bases_uno.Views
             if (NN)
                 ValidarNull(campo);
 
-            DateTime temp;
+            DateTime tmp;
 
-            if (!DateTime.TryParse(campo.Text, out temp))
+            if (!DateTime.TryParse(campo.Text, out tmp))
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
                 throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser una fecha valida con formato MM/DD/YYYY");
             }
 
             campo.BackColor = Color.LightGray;
-            return temp;
+            return tmp;
         }
+
+
 
 
         private void btnadelante_Click(object sender, EventArgs e)
@@ -167,7 +164,7 @@ namespace bases_uno.Views
         {
             try
             {
-                label6.Text = (cambioeuro * float.Parse(textBoxPublicationPrice.Text)) + " €";
+                label6.Text = Conversion.ConvertirEuros(float.Parse(textBoxPublicationPrice.Text)) + " €";
             }
             catch (Exception)
             {

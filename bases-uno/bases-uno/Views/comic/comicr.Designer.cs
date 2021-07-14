@@ -41,7 +41,7 @@ namespace bases_uno.Views
             this.spacerpanel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonCover = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@ namespace bases_uno.Views
             this.textBoxPages = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonColor = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.textBoxVolumen = new System.Windows.Forms.TextBox();
@@ -256,7 +256,7 @@ namespace bases_uno.Views
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Controls.Add(this.radioButtonCover);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(411, 113);
@@ -265,19 +265,19 @@ namespace bases_uno.Views
             this.panel2.Size = new System.Drawing.Size(402, 49);
             this.panel2.TabIndex = 11;
             // 
-            // radioButton2
+            // radioButtonCover
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButton2.Location = new System.Drawing.Point(358, 10);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 29);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonCover.AutoSize = true;
+            this.radioButtonCover.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radioButtonCover.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCover.ForeColor = System.Drawing.Color.LightGray;
+            this.radioButtonCover.Location = new System.Drawing.Point(358, 10);
+            this.radioButtonCover.Margin = new System.Windows.Forms.Padding(0);
+            this.radioButtonCover.Name = "radioButtonCover";
+            this.radioButtonCover.Size = new System.Drawing.Size(14, 29);
+            this.radioButtonCover.TabIndex = 15;
+            this.radioButtonCover.TabStop = true;
+            this.radioButtonCover.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -287,7 +287,7 @@ namespace bases_uno.Views
             this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(0, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 24);
+            this.label8.Size = new System.Drawing.Size(80, 23);
             this.label8.TabIndex = 14;
             this.label8.Text = "cubierta";
             // 
@@ -309,10 +309,10 @@ namespace bases_uno.Views
             this.textBoxTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxTitle.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxTitle.ForeColor = System.Drawing.Color.Black;
-            this.textBoxTitle.Location = new System.Drawing.Point(0, 27);
+            this.textBoxTitle.Location = new System.Drawing.Point(0, 26);
             this.textBoxTitle.MaxLength = 50;
             this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(372, 22);
+            this.textBoxTitle.Size = new System.Drawing.Size(372, 23);
             this.textBoxTitle.TabIndex = 16;
             this.textBoxTitle.Tag = "Titulo";
             // 
@@ -324,7 +324,7 @@ namespace bases_uno.Views
             this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 24);
+            this.label11.Size = new System.Drawing.Size(53, 23);
             this.label11.TabIndex = 14;
             this.label11.Text = "titulo";
             // 
@@ -346,10 +346,10 @@ namespace bases_uno.Views
             this.textBoxEditor.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxEditor.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxEditor.ForeColor = System.Drawing.Color.Black;
-            this.textBoxEditor.Location = new System.Drawing.Point(0, 28);
+            this.textBoxEditor.Location = new System.Drawing.Point(0, 27);
             this.textBoxEditor.MaxLength = 50;
             this.textBoxEditor.Name = "textBoxEditor";
-            this.textBoxEditor.Size = new System.Drawing.Size(372, 22);
+            this.textBoxEditor.Size = new System.Drawing.Size(372, 23);
             this.textBoxEditor.TabIndex = 16;
             this.textBoxEditor.Tag = "Editor";
             // 
@@ -361,7 +361,7 @@ namespace bases_uno.Views
             this.label5.ForeColor = System.Drawing.Color.LightGray;
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 24);
+            this.label5.Size = new System.Drawing.Size(59, 23);
             this.label5.TabIndex = 14;
             this.label5.Text = "editor";
             // 
@@ -383,10 +383,10 @@ namespace bases_uno.Views
             this.textBoxPages.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxPages.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxPages.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPages.Location = new System.Drawing.Point(0, 27);
+            this.textBoxPages.Location = new System.Drawing.Point(0, 26);
             this.textBoxPages.MaxLength = 16;
             this.textBoxPages.Name = "textBoxPages";
-            this.textBoxPages.Size = new System.Drawing.Size(372, 22);
+            this.textBoxPages.Size = new System.Drawing.Size(372, 23);
             this.textBoxPages.TabIndex = 16;
             this.textBoxPages.Tag = "Paginas";
             this.textBoxPages.Text = "0";
@@ -399,13 +399,13 @@ namespace bases_uno.Views
             this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 24);
+            this.label4.Size = new System.Drawing.Size(77, 23);
             this.label4.TabIndex = 14;
             this.label4.Text = "paginas";
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.radioButton1);
+            this.panel12.Controls.Add(this.radioButtonColor);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(3, 113);
@@ -414,19 +414,19 @@ namespace bases_uno.Views
             this.panel12.Size = new System.Drawing.Size(402, 49);
             this.panel12.TabIndex = 6;
             // 
-            // radioButton1
+            // radioButtonColor
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButton1.Location = new System.Drawing.Point(358, 10);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 29);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonColor.AutoSize = true;
+            this.radioButtonColor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radioButtonColor.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonColor.ForeColor = System.Drawing.Color.LightGray;
+            this.radioButtonColor.Location = new System.Drawing.Point(358, 10);
+            this.radioButtonColor.Margin = new System.Windows.Forms.Padding(0);
+            this.radioButtonColor.Name = "radioButtonColor";
+            this.radioButtonColor.Size = new System.Drawing.Size(14, 29);
+            this.radioButtonColor.TabIndex = 15;
+            this.radioButtonColor.TabStop = true;
+            this.radioButtonColor.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -436,7 +436,7 @@ namespace bases_uno.Views
             this.label12.ForeColor = System.Drawing.Color.LightGray;
             this.label12.Location = new System.Drawing.Point(0, 10);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 24);
+            this.label12.Size = new System.Drawing.Size(53, 23);
             this.label12.TabIndex = 14;
             this.label12.Text = "color";
             // 
@@ -458,10 +458,10 @@ namespace bases_uno.Views
             this.textBoxVolumen.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxVolumen.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxVolumen.ForeColor = System.Drawing.Color.Black;
-            this.textBoxVolumen.Location = new System.Drawing.Point(0, 27);
+            this.textBoxVolumen.Location = new System.Drawing.Point(0, 26);
             this.textBoxVolumen.MaxLength = 16;
             this.textBoxVolumen.Name = "textBoxVolumen";
-            this.textBoxVolumen.Size = new System.Drawing.Size(372, 22);
+            this.textBoxVolumen.Size = new System.Drawing.Size(372, 23);
             this.textBoxVolumen.TabIndex = 17;
             this.textBoxVolumen.Tag = "Volumen";
             this.textBoxVolumen.Text = "0";
@@ -474,7 +474,7 @@ namespace bases_uno.Views
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 24);
+            this.label3.Size = new System.Drawing.Size(82, 23);
             this.label3.TabIndex = 14;
             this.label3.Text = "volumen";
             // 
@@ -496,9 +496,9 @@ namespace bases_uno.Views
             this.textBoxPublicationDate.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxPublicationDate.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxPublicationDate.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBoxPublicationDate.Location = new System.Drawing.Point(0, 27);
+            this.textBoxPublicationDate.Location = new System.Drawing.Point(0, 26);
             this.textBoxPublicationDate.Name = "textBoxPublicationDate";
-            this.textBoxPublicationDate.Size = new System.Drawing.Size(372, 22);
+            this.textBoxPublicationDate.Size = new System.Drawing.Size(372, 23);
             this.textBoxPublicationDate.TabIndex = 16;
             this.textBoxPublicationDate.Tag = "Fecha Publicacion";
             this.textBoxPublicationDate.Text = "mm/dd/yyyy";
@@ -512,7 +512,7 @@ namespace bases_uno.Views
             this.label10.ForeColor = System.Drawing.Color.LightGray;
             this.label10.Location = new System.Drawing.Point(0, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(158, 24);
+            this.label10.Size = new System.Drawing.Size(160, 23);
             this.label10.TabIndex = 14;
             this.label10.Text = "fecha publicacion";
             // 
@@ -534,10 +534,10 @@ namespace bases_uno.Views
             this.textBoxNumber.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxNumber.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxNumber.ForeColor = System.Drawing.Color.Black;
-            this.textBoxNumber.Location = new System.Drawing.Point(0, 27);
+            this.textBoxNumber.Location = new System.Drawing.Point(0, 26);
             this.textBoxNumber.MaxLength = 16;
             this.textBoxNumber.Name = "textBoxNumber";
-            this.textBoxNumber.Size = new System.Drawing.Size(372, 22);
+            this.textBoxNumber.Size = new System.Drawing.Size(372, 23);
             this.textBoxNumber.TabIndex = 16;
             this.textBoxNumber.Tag = "Numero";
             this.textBoxNumber.Text = "0";
@@ -550,7 +550,7 @@ namespace bases_uno.Views
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 24);
+            this.label9.Size = new System.Drawing.Size(74, 23);
             this.label9.TabIndex = 14;
             this.label9.Text = "numero";
             // 
@@ -572,9 +572,9 @@ namespace bases_uno.Views
             this.label6.Dock = System.Windows.Forms.DockStyle.Right;
             this.label6.Font = new System.Drawing.Font("Roboto", 14F);
             this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Location = new System.Drawing.Point(337, 24);
+            this.label6.Location = new System.Drawing.Point(335, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 24);
+            this.label6.Size = new System.Drawing.Size(37, 23);
             this.label6.TabIndex = 17;
             this.label6.Text = "0 €";
             // 
@@ -585,10 +585,10 @@ namespace bases_uno.Views
             this.textBoxPublicationPrice.Dock = System.Windows.Forms.DockStyle.Left;
             this.textBoxPublicationPrice.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxPublicationPrice.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPublicationPrice.Location = new System.Drawing.Point(0, 24);
+            this.textBoxPublicationPrice.Location = new System.Drawing.Point(0, 23);
             this.textBoxPublicationPrice.MaxLength = 16;
             this.textBoxPublicationPrice.Name = "textBoxPublicationPrice";
-            this.textBoxPublicationPrice.Size = new System.Drawing.Size(215, 22);
+            this.textBoxPublicationPrice.Size = new System.Drawing.Size(215, 23);
             this.textBoxPublicationPrice.TabIndex = 16;
             this.textBoxPublicationPrice.Tag = "Precio Publicacion";
             this.textBoxPublicationPrice.Text = "0";
@@ -602,7 +602,7 @@ namespace bases_uno.Views
             this.label13.ForeColor = System.Drawing.Color.LightGray;
             this.label13.Location = new System.Drawing.Point(0, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(165, 24);
+            this.label13.Size = new System.Drawing.Size(166, 23);
             this.label13.TabIndex = 14;
             this.label13.Text = "precio publicacion";
             // 
@@ -689,7 +689,7 @@ namespace bases_uno.Views
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 51);
+            this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
             // comicr
@@ -746,7 +746,7 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel spacerpanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonCover;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox textBoxTitle;
@@ -776,7 +776,7 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton btnadelante;
         private FontAwesome.Sharp.IconButton btnatras;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonColor;
         private System.Windows.Forms.TextBox textBoxVolumen;
         private System.Windows.Forms.TextBox textBoxPublicationDate;
     }

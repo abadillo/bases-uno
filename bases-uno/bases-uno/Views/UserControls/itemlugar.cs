@@ -27,7 +27,7 @@ namespace bases_uno.Views.Components
 
 
             Lugar temP = Read.Lugar(lugar.LugarID);
-             if (temP.Nombre != null)
+             if (temP != null)
             {
                 locationName = temP.Nombre;
             }
