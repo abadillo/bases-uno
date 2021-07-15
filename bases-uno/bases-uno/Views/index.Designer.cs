@@ -37,6 +37,8 @@ namespace bases_uno.Views
             this.stpanel3 = new System.Windows.Forms.Panel();
             this.menupanel = new System.Windows.Forms.Panel();
             this.stpanel4 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
@@ -58,8 +60,6 @@ namespace bases_uno.Views
             this.stpanel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.stpanel1.SuspendLayout();
             this.stpanel3.SuspendLayout();
             this.stpanel4.SuspendLayout();
@@ -130,6 +130,34 @@ namespace bases_uno.Views
             this.stpanel4.Size = new System.Drawing.Size(83, 582);
             this.stpanel4.TabIndex = 0;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(1, 611);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(64, 2);
+            this.panel4.TabIndex = 23;
+            // 
+            // iconButton10
+            // 
+            this.iconButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.iconButton10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton10.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton10.FlatAppearance.BorderSize = 0;
+            this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.iconButton10.IconColor = System.Drawing.Color.LightGray;
+            this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton10.Location = new System.Drawing.Point(1, 545);
+            this.iconButton10.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton10.Name = "iconButton10";
+            this.iconButton10.Size = new System.Drawing.Size(64, 66);
+            this.iconButton10.TabIndex = 22;
+            this.iconButton10.UseVisualStyleBackColor = false;
+            this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
+            // 
             // iconButton5
             // 
             this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
@@ -140,6 +168,7 @@ namespace bases_uno.Views
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
             this.iconButton5.IconColor = System.Drawing.Color.LightGray;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton5.Location = new System.Drawing.Point(1, 612);
             this.iconButton5.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton5.Name = "iconButton5";
@@ -166,6 +195,7 @@ namespace bases_uno.Views
             this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.UserTie;
             this.iconButton9.IconColor = System.Drawing.Color.LightGray;
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton9.Location = new System.Drawing.Point(1, 477);
             this.iconButton9.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton9.Name = "iconButton9";
@@ -193,6 +223,7 @@ namespace bases_uno.Views
             this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.HandHoldingHeart;
             this.iconButton8.IconColor = System.Drawing.Color.LightGray;
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton8.Location = new System.Drawing.Point(1, 409);
             this.iconButton8.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton8.Name = "iconButton8";
@@ -220,6 +251,7 @@ namespace bases_uno.Views
             this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Dolly;
             this.iconButton7.IconColor = System.Drawing.Color.LightGray;
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton7.Location = new System.Drawing.Point(1, 341);
             this.iconButton7.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton7.Name = "iconButton7";
@@ -247,6 +279,7 @@ namespace bases_uno.Views
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
             this.iconButton6.IconColor = System.Drawing.Color.LightGray;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton6.Location = new System.Drawing.Point(1, 273);
             this.iconButton6.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton6.Name = "iconButton6";
@@ -283,6 +316,7 @@ namespace bases_uno.Views
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.GlobeAmericas;
             this.iconButton4.IconColor = System.Drawing.Color.LightGray;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton4.Location = new System.Drawing.Point(1, 205);
             this.iconButton4.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton4.Name = "iconButton4";
@@ -310,6 +344,7 @@ namespace bases_uno.Views
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Hiking;
             this.iconButton3.IconColor = System.Drawing.Color.LightGray;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton3.Location = new System.Drawing.Point(1, 137);
             this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton3.Name = "iconButton3";
@@ -337,6 +372,7 @@ namespace bases_uno.Views
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.iconButton2.IconColor = System.Drawing.Color.LightGray;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton2.Location = new System.Drawing.Point(1, 69);
             this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton2.Name = "iconButton2";
@@ -364,6 +400,7 @@ namespace bases_uno.Views
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Gavel;
             this.iconButton1.IconColor = System.Drawing.Color.LightGray;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.iconButton1.Location = new System.Drawing.Point(1, 1);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton1.Name = "iconButton1";
@@ -404,32 +441,6 @@ namespace bases_uno.Views
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(880, 761);
             this.mainpanel.TabIndex = 5;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(1, 611);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(64, 2);
-            this.panel4.TabIndex = 23;
-            // 
-            // iconButton10
-            // 
-            this.iconButton10.BackColor = System.Drawing.Color.Gray;
-            this.iconButton10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton10.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton10.FlatAppearance.BorderSize = 0;
-            this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.IdCard;
-            this.iconButton10.IconColor = System.Drawing.Color.LightGray;
-            this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton10.Location = new System.Drawing.Point(1, 545);
-            this.iconButton10.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton10.Name = "iconButton10";
-            this.iconButton10.Size = new System.Drawing.Size(64, 66);
-            this.iconButton10.TabIndex = 22;
-            this.iconButton10.UseVisualStyleBackColor = false;
             // 
             // index
             // 

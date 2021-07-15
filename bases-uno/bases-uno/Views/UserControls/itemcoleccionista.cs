@@ -25,8 +25,8 @@ namespace bases_uno.Views.Components
 
             InitializeComponent();
 
-            label1.Text = coleccionista.Nombre;
-            label2_2.Text = coleccionista.Apellido;
+            label1.Text = coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
+            label2_2.Text = coleccionista.ID.ToString();
 
             Update();
 

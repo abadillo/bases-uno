@@ -28,25 +28,25 @@ namespace Engine
 
         public static string ValidarCombo(ComboBox combo)
         {
-            if (combo.SelectedItem == null)
+
+            string[] tokens = combo.SelectedItem.ToString().Split(' ');
+            int valor = int.Parse(tokens[0]);
+
+            if (combo.SelectedItem == null || valor == 0)
             {
                 combo.BackColor = Color.FromArgb(232, 81, 94);
                 throw new ApplicationException("Combo " + combo.Tag + " vacio");
             }
-
+                                    
             combo.BackColor = Color.LightGray;
             return combo.SelectedItem.ToString();
         }
 
         public static int ValidarInt(TextBox campo, bool NN)
         {
+
             if (!NN && string.IsNullOrEmpty(campo.Text))
                 return 0;
-
-            if (NN)
-            {
-                ValidarNull(campo);
-            }
 
             int tmp;
 
@@ -57,10 +57,21 @@ namespace Engine
                 throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero valido");
             }
 
+            //Console.WriteLine(tmp);
+
+            if (NN && tmp == 0)
+            {
+                campo.BackColor = Color.FromArgb(232, 81, 94);
+                campo.Focus();
+                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero valido");
+            }
+
             if (campo.ReadOnly == false)
             {
                 campo.BackColor = Color.LightGray;
             }
+
+            
             return tmp;
 
         }

@@ -176,6 +176,24 @@
     <Compile Include="Views\coleccionable\coleccionabler.Designer.cs">
       <DependentUpon>coleccionabler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\coleccionista\coleccionista1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\coleccionista\coleccionista1.Designer.cs">
+      <DependentUpon>coleccionista1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\coleccionista\coleccionistal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\coleccionista\coleccionistal.Designer.cs">
+      <DependentUpon>coleccionistal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\coleccionista\coleccionistar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\coleccionista\coleccionistar.Designer.cs">
+      <DependentUpon>coleccionistar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\comic\comicl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +266,12 @@
     <Compile Include="Views\UserControls\itemclub.Designer.cs">
       <DependentUpon>itemclub.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\itemcoleccionista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\itemcoleccionista.Designer.cs">
+      <DependentUpon>itemcoleccionista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\itemlugar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -295,6 +319,12 @@
     </Compile>
     <Compile Include="Views\UserControls\Submenus\menucoleccionable.Designer.cs">
       <DependentUpon>menucoleccionable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menucoleccionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menucoleccionista.Designer.cs">
+      <DependentUpon>menucoleccionista.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\Submenus\menulugar.cs">
       <SubType>Form</SubType>
@@ -413,6 +443,15 @@
     <EmbeddedResource Include="Views\coleccionable\coleccionabler.resx">
       <DependentUpon>coleccionabler.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\coleccionista\coleccionista1.resx">
+      <DependentUpon>coleccionista1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\coleccionista\coleccionistal.resx">
+      <DependentUpon>coleccionistal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\coleccionista\coleccionistar.resx">
+      <DependentUpon>coleccionistar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\comic\comicl.resx">
       <DependentUpon>comicl.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,6 +488,9 @@
     <EmbeddedResource Include="Views\UserControls\itemclub.resx">
       <DependentUpon>itemclub.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\itemcoleccionista.resx">
+      <DependentUpon>itemcoleccionista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemlugar.resx">
       <DependentUpon>itemlugar.cs</DependentUpon>
     </EmbeddedResource>
@@ -472,6 +514,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menucoleccionable.resx">
       <DependentUpon>menucoleccionable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Submenus\menucoleccionista.resx">
+      <DependentUpon>menucoleccionista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menulugar.resx">
       <DependentUpon>menulugar.cs</DependentUpon>

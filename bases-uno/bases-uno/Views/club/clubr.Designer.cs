@@ -289,6 +289,7 @@ namespace bases_uno.Views
             this.textBoxTelefono.Size = new System.Drawing.Size(372, 23);
             this.textBoxTelefono.TabIndex = 16;
             this.textBoxTelefono.Tag = "telefono";
+            this.textBoxTelefono.Text = "0";
             // 
             // label9
             // 

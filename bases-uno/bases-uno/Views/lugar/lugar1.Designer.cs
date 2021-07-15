@@ -39,6 +39,7 @@ namespace bases_uno.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBoxLugar = new System.Windows.Forms.ComboBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -60,7 +61,6 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxLugar = new System.Windows.Forms.ComboBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -218,6 +218,18 @@ namespace bases_uno.Views
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(402, 38);
             this.panel4.TabIndex = 6;
+            // 
+            // comboBoxLugar
+            // 
+            this.comboBoxLugar.BackColor = System.Drawing.Color.LightGray;
+            this.comboBoxLugar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.comboBoxLugar.Enabled = false;
+            this.comboBoxLugar.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLugar.FormattingEnabled = true;
+            this.comboBoxLugar.Location = new System.Drawing.Point(111, 0);
+            this.comboBoxLugar.Name = "comboBoxLugar";
+            this.comboBoxLugar.Size = new System.Drawing.Size(254, 23);
+            this.comboBoxLugar.TabIndex = 17;
             // 
             // iconButton1
             // 
@@ -510,18 +522,6 @@ namespace bases_uno.Views
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
-            // 
-            // comboBoxLugar
-            // 
-            this.comboBoxLugar.BackColor = System.Drawing.Color.LightGray;
-            this.comboBoxLugar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.comboBoxLugar.Enabled = false;
-            this.comboBoxLugar.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxLugar.FormattingEnabled = true;
-            this.comboBoxLugar.Location = new System.Drawing.Point(111, 0);
-            this.comboBoxLugar.Name = "comboBoxLugar";
-            this.comboBoxLugar.Size = new System.Drawing.Size(254, 23);
-            this.comboBoxLugar.TabIndex = 17;
             // 
             // lugar1
             // 

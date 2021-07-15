@@ -42,8 +42,11 @@ namespace Engine.Classes
             LugarResidencia = lugarResidencia.ID;
             if (representante == null)
             {
-                ColeccionistaRepresentanteID = representante.ID;
                 RepresentanteID = 0;
+            }
+            else
+            {
+                ColeccionistaRepresentanteID = representante.ID;
             }
         }
 
@@ -114,7 +117,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "INSERT INTO coleccionista (id, primer_nombre, ";
+                string Query = "INSERT INTO coleccionista (documento_identidad, primer_nombre, ";
                 if (!(SegundoNombre == null))
                 {
                     Query += "segundo_nombre, ";
@@ -124,7 +127,7 @@ namespace Engine.Classes
                 {
                     Query += "segundo_apellido";
                 }
-                Query += "telefono, fecha_nacimiento, lugar_id2";
+                Query += " telefono, fecha_nacimiento, LUGAR_id_nacionalidad";
                 if (!(ColeccionistaRepresentanteID == 0))
                 {
                     Query += "coleccionista_documento_identidad, ";
@@ -136,7 +139,7 @@ namespace Engine.Classes
                         Query += "representante_documento_identidad, ";
                     }
                 }
-                Query += "lugar_id) VALUES (@id, @primernombre, ";
+                Query += " LUGAR_id_direccion) VALUES (@id, @primernombre, ";
                 if (!(SegundoNombre == null))
                 {
                     Query += "@segundonombre";
@@ -203,19 +206,19 @@ namespace Engine.Classes
                 {
                     Query += "segundo_apellido = @segundoapellido, ";
                 }
-                Query += "telefono = @telefono, fecha_nacimiento = @fechanacimiento, lugar_id2 = @lugarnacimiento, ";
+                Query += "telefono = @telefono, fecha_nacimiento = @fechanacimiento, LUGAR_id_nacionalidad = @lugarnacimiento, ";
                 if (!(ColeccionistaRepresentanteID == 0))
                 {
-                    Query += "coleccionista_documento_identidad = @coleccionistaid, ";
+                    Query += " coleccionista_documento_identidad = @coleccionistaid, ";
                 }
                 else
                 {
                     if (!(RepresentanteID == 0))
                     {
-                        Query += "representante_documento_identidad = @representanteid, ";
+                        Query += " representante_documento_identidad = @representanteid, ";
                     }
                 }
-                Query += "lugar_id = @residencia WHERE documento_identidad = @id";
+                Query += " LUGAR_id_direccion = @residencia WHERE documento_identidad = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);

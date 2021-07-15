@@ -19,6 +19,10 @@ namespace bases_uno.Views
         public index parent;
         public Coleccionista coleccionista;
 
+        public List<Lugar> listLug = Read.Lugares();
+        public List<Representante> listRep = Read.Representantes();
+        public List<Coleccionista> listCol = Read.Coleccionistas();
+
         public coleccionista1(index parent, Coleccionista coleccionista)
         {
             this.parent = parent;
@@ -27,11 +31,62 @@ namespace bases_uno.Views
             InitializeComponent();
 
             textBoxDocIdentidad.Text = coleccionista.ID.ToString();
-            textBoxName.Text = coleccionista.Nombre;
-            textBoxApellido.Text = coleccionista.Apellido;
+            textBoxPrimerNombre.Text = coleccionista.PrimerNombre;
+            textBoxSegundoNombre.Text = coleccionista.SegundoNombre;
+            textBoxPrimerApellido.Text = coleccionista.PrimerApellido;
+            textBoxSegundoApellido.Text = coleccionista.SegundoApellido;
             textBoxFechaNacimiento.Text = coleccionista.FechaNacimiento.Value.ToShortDateString();
+            textBoxTelefono.Text = coleccionista.Telefono.ToString();
 
-            label1.Text = "Coleccionista: " + coleccionista.Nombre;
+            // combos lugares
+            for (int i = 0; i < listLug.Count; i++)
+            {
+                Lugar tmp = listLug[i];
+                string item = tmp.ID + " " + tmp.Nombre;
+
+                // para combo de lugar de direccion
+                comboBoxLugarResidencia.Items.Add(item);
+
+                if (tmp.ID == coleccionista.LugarResidencia)
+                    comboBoxLugarResidencia.SelectedItem = item;
+
+                // para combo de lugar de nacionalidad
+                comboBoxLugarNacimiento.Items.Add(item);
+
+                if (tmp.ID == coleccionista.LugarNacimiento)
+                    comboBoxLugarNacimiento.SelectedItem = item;
+            }
+
+            // combo representantes
+            for (int i = 0; i < listRep.Count; i++)
+            {
+                Representante tmp = listRep[i];
+                string item = tmp.ID + " " + tmp.Nombre + " " + tmp.Apellido;
+
+                comboBoxRepresentanteR.Items.Add(item);
+
+                if (tmp.ID == coleccionista.RepresentanteID)
+                    comboBoxRepresentanteR.SelectedItem = item;
+            }
+            if (coleccionista.RepresentanteID == 0)
+                comboBoxRepresentanteR.SelectedIndex = 0;
+
+            // combo coleccionistas
+            for (int i = 0; i < listCol.Count; i++)
+            {
+                Coleccionista tmp = listCol[i];
+                string item = tmp.ID + " " + tmp.PrimerNombre + " " + tmp.SegundoApellido;
+
+                comboBoxRepresentanteC.Items.Add(item);
+
+                if (tmp.ID == coleccionista.RepresentanteID)
+                    comboBoxRepresentanteC.SelectedItem = item;
+            }
+            if (coleccionista.ColeccionistaRepresentanteID == 0)
+                comboBoxRepresentanteC.SelectedIndex = 0;
+
+
+            label1.Text = "Coleccionista: " + coleccionista.PrimerNombre + " " + coleccionista.SegundoNombre;
             Update();
            
         }
@@ -43,10 +98,15 @@ namespace bases_uno.Views
            
             try
             {
-                coleccionista.Nombre = Validacion.ValidarNull(textBoxName);
-                coleccionista.Apellido = Validacion.ValidarNull(textBoxApellido);
-                //coleccionista.ID = Validacion.ValidarInt(textBoxDocIdentidad, true);
+
+                coleccionista.PrimerNombre = Validacion.ValidarNull(textBoxPrimerNombre);
+                coleccionista.SegundoNombre = Validacion.ValidarNull(textBoxSegundoNombre);
+                coleccionista.PrimerApellido = Validacion.ValidarNull(textBoxPrimerApellido);
+                coleccionista.SegundoApellido = Validacion.ValidarNull(textBoxSegundoApellido);
                 coleccionista.FechaNacimiento = Validacion.ValidarDateTime(textBoxFechaNacimiento, true);
+                coleccionista.Telefono = Validacion.ValidarInt(textBoxTelefono, true);
+
+
 
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Coleccionista?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -129,7 +189,7 @@ namespace bases_uno.Views
 
         private void iconButton17_Click(object sender, EventArgs e)
         {
-            Acciones.EnableInput(textBoxName, iconButton17);
+            Acciones.EnableInput(textBoxPrimerNombre, iconButton17);
         }
        
         private void iconButton16_Click(object sender, EventArgs e)
@@ -139,7 +199,7 @@ namespace bases_uno.Views
 
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
-            Acciones.EnableInput(textBoxApellido, iconButton1);
+            Acciones.EnableInput(textBoxPrimerApellido, iconButton1);
         }
 
         private void iconButton15_Click(object sender, EventArgs e)

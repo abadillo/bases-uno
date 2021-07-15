@@ -119,5 +119,10 @@ namespace bases_uno.Views
         {
 			ButtonEnable(iconButton9, new menurepresentante(this));
 		}
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+			ButtonEnable(iconButton10, new menucoleccionista(this));
+		}
     }
 }
