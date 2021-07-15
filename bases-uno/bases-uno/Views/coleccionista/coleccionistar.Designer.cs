@@ -54,6 +54,7 @@ namespace bases_uno.Views
             this.comboBoxRepresentanteC = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.spacerpanel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -85,7 +86,6 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -427,6 +427,18 @@ namespace bases_uno.Views
             this.panel13.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.panel13.Size = new System.Drawing.Size(816, 40);
             this.panel13.TabIndex = 48;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label12.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.LightGray;
+            this.label12.Location = new System.Drawing.Point(427, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(359, 40);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "(escoja uno de los dos)";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label8
             // 
@@ -817,18 +829,6 @@ namespace bases_uno.Views
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
-            // 
-            // label12
-            // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label12.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.LightGray;
-            this.label12.Location = new System.Drawing.Point(427, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(359, 40);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "(escoja uno de los dos)";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // coleccionistar
             // 
