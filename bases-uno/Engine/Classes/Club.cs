@@ -11,6 +11,7 @@ namespace Engine.Classes
     {
         #region Atributes
         public int ID { get; set; }
+        public string Nombre { get; set; }
         public Nullable<DateTime> FechaFundacion { get; set; }
         public int Telefono { get; set; } //nullable
         public string PaginaWeb { get; set; } //nullable
@@ -22,9 +23,10 @@ namespace Engine.Classes
         /// <summary>
         /// Usar para hacer un nuevo registro en la BD
         /// </summary>
-        public Club(DateTime fechaFundacion, string proposito,Lugar lugar, int telefono = 0, string paginaWeb = null) 
+        public Club(string nombre,  DateTime fechaFundacion, string proposito,Lugar lugar, int telefono = 0, string paginaWeb = null) 
         {
             FechaFundacion = fechaFundacion;
+            Nombre = nombre;
             Telefono = telefono;
             PaginaWeb = paginaWeb;
             Proposito = proposito;
@@ -34,9 +36,10 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Club(int id, Nullable<DateTime> fechaFundacion, string proposito, int lugarID, int telefono = 0, string paginaWeb = null)
+        public Club(int id, string nombre, Nullable<DateTime> fechaFundacion, string proposito, int lugarID, int telefono = 0, string paginaWeb = null)
         {
             ID = id;
+            Nombre = nombre;
             FechaFundacion = fechaFundacion;
             Telefono = telefono;
             PaginaWeb = paginaWeb;
@@ -73,7 +76,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "INSERT INTO club (fecha_fundacion, proposito, lugar_id";
+                string Query = "INSERT INTO club (fecha_fundacion, proposito, lugar_id, nombre";
                 if (!(Telefono == 0))
                 {
                     Query += ", telefono";
@@ -97,6 +100,7 @@ namespace Engine.Classes
                 Script.Parameters.AddWithValue("fundacion", FechaFundacion);
                 Script.Parameters.AddWithValue("proposito", Proposito);
                 Script.Parameters.AddWithValue("lugar", LugarID);
+                Script.Parameters.AddWithValue("nombre", Nombre);
                 if (!(Telefono == 0))
                 {
                     Script.Parameters.AddWithValue("telefono", Telefono);
@@ -125,7 +129,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE club SET fecha_fundacion = @fundacion, ";
+                string Query = "UPDATE club SET fecha_fundacion = @fundacion, nombre = @nombre, ";
 
                 if (!(Telefono == 0))
                 {
@@ -142,13 +146,22 @@ namespace Engine.Classes
 
                 Script.Parameters.AddWithValue("id", ID);
                 Script.Parameters.AddWithValue("fundacion", FechaFundacion);
+                Script.Parameters.AddWithValue("nombre", Nombre);
                 if (!(Telefono == 0))
                 {
                     Script.Parameters.AddWithValue("telefono", Telefono);
                 }
+                else
+                {
+                    Script.Parameters.AddWithValue("telefono", DBNull.Value);
+                }
                 if (!(PaginaWeb == null))
                 {
                     Script.Parameters.AddWithValue("web", PaginaWeb);
+                }
+                else
+                {
+                    Script.Parameters.AddWithValue("web", DBNull.Value);
                 }
                 Script.Parameters.AddWithValue("proposito", Proposito);
                 Script.Parameters.AddWithValue("lugar", LugarID);
