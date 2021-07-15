@@ -27,9 +27,6 @@ CREATE TABLE CLUB(
      telefono NUMERIC(15) NOT NULL,
      pagina_web VARCHAR (50),
      proposito VARCHAR (50),
-     MEMBRESIA_COLECCIONISTA_documento_identidad NUMERIC(10) NOT NULL,
-     MEMBRESIA_CLUB_id INTEGER NOT NULL,
-     MEMBRESIA_fecha_ingreso DATE NOT NULL,
      LUGAR_id INTEGER NOT NULL,
 
      CONSTRAINT CLUB_PK PRIMARY KEY (id),

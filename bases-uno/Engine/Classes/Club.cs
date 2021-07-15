@@ -15,9 +15,6 @@ namespace Engine.Classes
         public int Telefono { get; set; } //nullable
         public string PaginaWeb { get; set; } //nullable
         public string Proposito { get; set; }
-        public int ResponsableID { get; set; }
-        public int ResponsableClubID { get; set; }
-        public Nullable<DateTime> ResponsableFechaIngreso { get; set; }
         public int LugarID { get; set; }
         #endregion
 
@@ -25,32 +22,25 @@ namespace Engine.Classes
         /// <summary>
         /// Usar para hacer un nuevo registro en la BD
         /// </summary>
-        public Club(DateTime fechaFundacion, string proposito, Membresia responsable,Lugar lugar, int telefono = 0, string paginaWeb = null) 
+        public Club(DateTime fechaFundacion, string proposito,Lugar lugar, int telefono = 0, string paginaWeb = null) 
         {
             FechaFundacion = fechaFundacion;
             Telefono = telefono;
             PaginaWeb = paginaWeb;
             Proposito = proposito;
-            ResponsableID = responsable.ColeccionistaID;
-            ResponsableClubID = responsable.ClubID;
-            ResponsableFechaIngreso = responsable.FechaIngreso;
             LugarID = lugar.ID;
         }
 
         /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Club(int id, Nullable<DateTime> fechaFundacion, string proposito, int responsableID, int responsableClubId, 
-            Nullable<DateTime> responsableFechaIngreso,int lugarID, int telefono = 0, string paginaWeb = null)
+        public Club(int id, Nullable<DateTime> fechaFundacion, string proposito, int lugarID, int telefono = 0, string paginaWeb = null)
         {
             ID = id;
             FechaFundacion = fechaFundacion;
             Telefono = telefono;
             PaginaWeb = paginaWeb;
             Proposito = proposito;
-            ResponsableID = responsableID;
-            ResponsableClubID = responsableClubId;
-            ResponsableFechaIngreso = responsableFechaIngreso;
             LugarID = lugarID;
         }
         #endregion
@@ -83,20 +73,30 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "INSERT INTO club (fecha_fundacion, ";
+                string Query = "INSERT INTO club (fecha_fundacion, proposito, lugar_id";
                 if (!(Telefono == 0))
                 {
-                    Query += "telefono, ";
+                    Query += ", telefono";
                 }
                 if (!(PaginaWeb == null))
                 {
-                    Query += "pagina_web, ";
+                    Query += ", pagina_web";
                 }
-                Query +=    "proposito, membresia_coleccionista_documento_identidad, membresia_club_id, " +
-                    "membresia_fecha_ingreso, lugar_id) " +
-                    "VALUES (@fundacion, @telefono, @web, @proposito, @coleccionistaID, " +
-                    "@clubID, @ingreso, @lugar) RETURNING id";
+                Query += ") VALUES (@fundacion, @proposito, @lugar";
+                if (!(Telefono == 0))
+                {
+                    Query += ", @telefono"; 
+                }
+                if (!(PaginaWeb == null))
+                {
+                    Query += ", @web";
+                }
+                Query += ") RETURNING id";
                 Script = new NpgsqlCommand(Query, Connection);
+
+                Script.Parameters.AddWithValue("fundacion", FechaFundacion);
+                Script.Parameters.AddWithValue("proposito", Proposito);
+                Script.Parameters.AddWithValue("lugar", LugarID);
                 if (!(Telefono == 0))
                 {
                     Script.Parameters.AddWithValue("telefono", Telefono);
@@ -105,11 +105,6 @@ namespace Engine.Classes
                 {
                     Script.Parameters.AddWithValue("web", PaginaWeb);
                 }
-                Script.Parameters.AddWithValue("proposito", Proposito);
-                Script.Parameters.AddWithValue("coleccionistaID", ResponsableID);
-                Script.Parameters.AddWithValue("clubId", ResponsableClubID);
-                Script.Parameters.AddWithValue("ingreso", ResponsableFechaIngreso);
-                Script.Parameters.AddWithValue("lugar", LugarID);
 
                 Reader = Script.ExecuteReader();
 
@@ -141,8 +136,7 @@ namespace Engine.Classes
                     Query += "pagina_web = @web, ";
                 }
 
-                Query += "proposito = @proposito, membresia_coleccionista_documento_identidad = @coleccionistaID, " +
-                    "membresia_club_id = @clubID, membresia_fecha_ingreso = @ingreso, lugar_id = @lugar " +
+                Query += "proposito = @proposito, lugar_id = @lugar " +
                         "WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -157,9 +151,6 @@ namespace Engine.Classes
                     Script.Parameters.AddWithValue("web", PaginaWeb);
                 }
                 Script.Parameters.AddWithValue("proposito", Proposito);
-                Script.Parameters.AddWithValue("coleccionistaID", ResponsableID);
-                Script.Parameters.AddWithValue("clubID", ResponsableClubID);
-                Script.Parameters.AddWithValue("ingreso", ResponsableFechaIngreso);
                 Script.Parameters.AddWithValue("lugar", LugarID);
 
                 Script.Prepare();

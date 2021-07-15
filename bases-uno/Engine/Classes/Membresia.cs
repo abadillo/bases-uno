@@ -13,6 +13,7 @@ namespace Engine.Classes
         public Nullable<DateTime> FechaIngreso { get; set; } //pk
         public Nullable<DateTime> FechaRetiro { get; set; } //nullable
         public int ClubID { get; set; } //pk
+        public int ClubIDLider { get; set; } //nullable
         public int ColeccionistaID { get; set; } //pk
         public string Email { get; set; } //nullable
         #endregion
@@ -22,26 +23,35 @@ namespace Engine.Classes
         /// Constructor general de la clase
         /// </summary>
         public Membresia(Coleccionista coleccionista, Club club, DateTime fechaIngreso, string email = null, 
-            Nullable<DateTime> fechaRetiro = null)
+            Nullable<DateTime> fechaRetiro = null, Club clubLider = null)
         {
             FechaIngreso = fechaIngreso;
             FechaRetiro = fechaRetiro;
             ClubID = club.ID;
             ColeccionistaID = coleccionista.ID;
             Email = email;
+            if (clubLider == null)
+            {
+                ClubIDLider = 0;
+            }
+            else
+            {
+                ClubIDLider = clubLider.ID;
+            }
         }
 
         /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Membresia(Nullable<DateTime> fechaIngreso, Nullable<DateTime> fechaRetiro, int clubID, 
-            int coleccionistaID, string email)
+        public Membresia(Nullable<DateTime> fechaIngreso, Nullable<DateTime> fechaRetiro, int clubID,
+            int coleccionistaID, string email, int clubLider)
         {
             FechaIngreso = fechaIngreso;
             FechaRetiro = fechaRetiro;
             ClubID = clubID;
             ColeccionistaID = coleccionistaID;
             Email = email;
+            ClubIDLider = clubLider;
         }
         #endregion
 
@@ -85,6 +95,10 @@ namespace Engine.Classes
                 {
                     Query += ", email_contacto";
                 }
+                if (!(ClubIDLider == 0))
+                {
+                    Query += ", club_id_lider";
+                }
                 Query += ") VALUES (@fechaingreso, @clubid, @coleccionistaid";
                 if (!(FechaRetiro == null))
                 {
@@ -93,6 +107,10 @@ namespace Engine.Classes
                 if (!(Email == null))
                 {
                     Query += ", @email";
+                }
+                if (!(ClubIDLider == 0))
+                {
+                    Query += ", @clublider";
                 }
                 Query += ")";
                 Script = new NpgsqlCommand(Query, Connection);
@@ -108,6 +126,10 @@ namespace Engine.Classes
                 if (!(Email == null))
                 {
                     Script.Parameters.AddWithValue("email", Email);
+                }
+                if (!(ClubIDLider == 0))
+                {
+                    Script.Parameters.AddWithValue("clublider", ClubIDLider);
                 }
 
                 Script.Prepare();
@@ -130,7 +152,7 @@ namespace Engine.Classes
                 if (!(FechaRetiro == null))
                 {
                     Query += "fecha_retiro = @fecharetiro";
-                    if (Email == null)
+                    if ((Email == null) || (ClubIDLider == 0))
                     {
                         Query += " ";
                     }
@@ -142,6 +164,18 @@ namespace Engine.Classes
                 if (!(Email == null))
                 {
                     Query += "email_contacto = @email ";
+                    if (ClubIDLider == 0)
+                    {
+                        Query += " ";
+                    }
+                    else
+                    {
+                        Query += ", ";
+                    }
+                }
+                if (!(ClubIDLider == 0))
+                {
+                    Query += "club_id_lider = @clublider ";
                 }
                 Query += "WHERE fecha_ingreso = @fechaingreso AND club_id = @clubid AND " +
                         "coleccionista_documento_identidad = @coleccionistaid";
@@ -158,6 +192,10 @@ namespace Engine.Classes
                 if (!(Email == null))
                 {
                     Script.Parameters.AddWithValue("email", Email);
+                }
+                if (!(ClubIDLider == 0))
+                {
+                    Script.Parameters.AddWithValue("clublider", ClubIDLider);
                 }
 
                 Script.Prepare();

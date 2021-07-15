@@ -61,9 +61,8 @@ namespace Engine.Classes
 
                 if (connection.Reader.Read())
                 {
-                    club = new Club(connection.ReadInt(0), connection.ReadDate(1), connection.ReadString(4),
-                        connection.ReadInt(5), connection.ReadInt(6), connection.ReadDate(7), connection.ReadInt(8),
-                        connection.ReadInt(2), connection.ReadString(3));
+                    club = new Club(connection.ReadInt(0), connection.ReadDate(1), connection.ReadString(4), 
+                        connection.ReadInt(5), connection.ReadInt(2), connection.ReadString(3));
                 }
             }
             catch
@@ -403,7 +402,7 @@ namespace Engine.Classes
                 if (connection.Reader.Read())
                 {
                     membresia = new Membresia(connection.ReadDate(0), connection.ReadDate(1), connection.ReadInt(2),
-                        connection.ReadInt(3), connection.ReadString(4));
+                        connection.ReadInt(4), connection.ReadString(5),connection.ReadInt(3));
                 }
             }
             catch
@@ -609,8 +608,7 @@ namespace Engine.Classes
                 while (connection.Reader.Read())
                 {
                     Club club = new Club(connection.ReadInt(0), connection.ReadDate(1), connection.ReadString(4),
-                        connection.ReadInt(5), connection.ReadInt(6), connection.ReadDate(7), connection.ReadInt(8),
-                        connection.ReadInt(2), connection.ReadString(3));
+                        connection.ReadInt(5), connection.ReadInt(2), connection.ReadString(3));
 
                     list.Add(club);
                 }
@@ -965,7 +963,7 @@ namespace Engine.Classes
                 while (connection.Reader.Read())
                 {
                     Membresia modell = new Membresia(connection.ReadDate(0), connection.ReadDate(1), connection.ReadInt(2),
-                        connection.ReadInt(3), connection.ReadString(4));
+                        connection.ReadInt(4), connection.ReadString(5), connection.ReadInt(3));
 
                     list.Add(modell);
                 }
