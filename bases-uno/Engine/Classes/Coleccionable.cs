@@ -91,7 +91,7 @@ namespace Engine.Classes
                 OpenConnection();
 
                 string Query = "UPDATE coleccionable SET nombre = @nombre, descripcion_detallada = @descripcion" +
-                        "WHERE id = @id";
+                        " WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);

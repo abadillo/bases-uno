@@ -377,7 +377,7 @@ namespace bases_uno.Views
             this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 23);
+            this.label11.Size = new System.Drawing.Size(103, 23);
             this.label11.TabIndex = 14;
             this.label11.Text = "paginaweb";
             // 
