@@ -26,9 +26,9 @@ CREATE TABLE CLUB(
      fecha_fundacion DATE NOT NULL,
      telefono NUMERIC(15) NOT NULL,
      pagina_web VARCHAR (50),
-     proposito VARCHAR (50),
+     proposito VARCHAR (100),
      LUGAR_id INTEGER NOT NULL,
-     nombre VARCHAR (50),
+     nombre VARCHAR (50) NOT NULL,
 
      CONSTRAINT CLUB_PK PRIMARY KEY (id),
      CONSTRAINT CLUB_LUGAR_FK FOREIGN KEY( LUGAR_id ) REFERENCES LUGAR( id )
