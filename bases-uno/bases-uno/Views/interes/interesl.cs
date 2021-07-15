@@ -18,9 +18,7 @@ namespace bases_uno.Views
     {
 
         public index parent;
-
-        public iteminteres[] itemlist;
-        
+                
         public List<Interes> list = Read.Intereses();
 
         public interesl(index parent)

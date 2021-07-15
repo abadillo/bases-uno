@@ -19,11 +19,8 @@ namespace bases_uno.Views
 
         public index parent;
 
-        public itemcoleccionable[] itemlist;
-        // public List<Coleccionable> list = Query.Coleccionable();
-        public List<Coleccionable> list;
-
-
+        public List<Coleccionable> list = Read.Coleccionables();
+        
         public coleccionablel(index parent)
         {
             this.parent = parent;
@@ -32,16 +29,15 @@ namespace bases_uno.Views
 			
             label1.Text = "Listado: Coleccionables";
 
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
 
-            //for (int i = 0; i < list.Count; i++)
-            //{
-            //    /// Console.WriteLine(list[i]);
+                itemcoleccionable item = new itemcoleccionable(list[i], parent);
+                item.Dock = DockStyle.Top;
 
-            //    itemcoleccionable item = new itemcoleccionable(list[i], parent);
-            //    item.Dock = DockStyle.Top;                
-
-            //    dipanel1.Controls.Add(item);
-            //}
+                dipanel1.Controls.Add(item);
+            }
 
             Update();
 		}

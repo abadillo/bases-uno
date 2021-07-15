@@ -15,9 +15,9 @@ namespace bases_uno.Views.Components
     {
                
         public index parent;
-        public Organizacion organizacion;
+        public OrganizacionCaridad organizacion;
 
-        public itemorganizacion( Organizacion organizacion, index parent )
+        public itemorganizacion( OrganizacionCaridad organizacion, index parent )
         {
 
             this.parent = parent;

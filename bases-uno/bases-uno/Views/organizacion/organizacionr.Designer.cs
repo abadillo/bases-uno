@@ -175,6 +175,7 @@ namespace bases_uno.Views
             this.textBoxMision.Name = "textBoxMision";
             this.textBoxMision.Size = new System.Drawing.Size(816, 86);
             this.textBoxMision.TabIndex = 32;
+            this.textBoxMision.Tag = "mision";
             // 
             // label7
             // 
@@ -231,6 +232,7 @@ namespace bases_uno.Views
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(372, 23);
             this.textBoxName.TabIndex = 16;
+            this.textBoxName.Tag = "nombre";
             // 
             // label11
             // 
@@ -338,6 +340,7 @@ namespace bases_uno.Views
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "organizacionr";
+            this.Tag = "nombre";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);

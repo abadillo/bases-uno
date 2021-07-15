@@ -176,17 +176,29 @@
     <Compile Include="Views\comic\comic1.Designer.cs">
       <DependentUpon>comic1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\organizacion\organizacion1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\organizacion\organizacion1.Designer.cs">
+      <DependentUpon>organizacion1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\organizacion\organizacionl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\organizacion\organizacionl.Designer.cs">
+      <DependentUpon>organizacionl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\organizacion\organizacionr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\organizacion\organizacionr.Designer.cs">
+      <DependentUpon>organizacionr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reporte_comic.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Reporte_comic.Designer.cs">
       <DependentUpon>Reporte_comic.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserControls\itemcoleccionable.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\UserControls\itemcoleccionable.Designer.cs">
-      <DependentUpon>itemcoleccionable.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\itemlugar.cs">
       <SubType>UserControl</SubType>
@@ -205,6 +217,18 @@
     </Compile>
     <Compile Include="Views\UserControls\itemcomic.Designer.cs">
       <DependentUpon>itemcomic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\itemcoleccionable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\itemcoleccionable.Designer.cs">
+      <DependentUpon>itemcoleccionable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\itemorganizacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\itemorganizacion.Designer.cs">
+      <DependentUpon>itemorganizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\Submenus\menucoleccionable.cs">
       <SubType>Form</SubType>
@@ -293,6 +317,12 @@
     <Compile Include="Views\lugar\lugarr.Designer.cs">
       <DependentUpon>lugarr.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\Submenus\menuorganizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menuorganizacion.Designer.cs">
+      <DependentUpon>menuorganizacion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Reports\ComicReport.rdlc" />
     <EmbeddedResource Include="Reports\ReportInteres.rdlc" />
     <EmbeddedResource Include="Reports\ReportLugar.rdlc" />
@@ -317,11 +347,17 @@
     <EmbeddedResource Include="Views\comic\comic1.resx">
       <DependentUpon>comic1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\organizacion\organizacion1.resx">
+      <DependentUpon>organizacion1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\organizacion\organizacionl.resx">
+      <DependentUpon>organizacionl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\organizacion\organizacionr.resx">
+      <DependentUpon>organizacionr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Reporte_comic.resx">
       <DependentUpon>Reporte_comic.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserControls\itemcoleccionable.resx">
-      <DependentUpon>itemcoleccionable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemlugar.resx">
       <DependentUpon>itemlugar.cs</DependentUpon>
@@ -331,6 +367,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemcomic.resx">
       <DependentUpon>itemcomic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\itemcoleccionable.resx">
+      <DependentUpon>itemcoleccionable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\itemorganizacion.resx">
+      <DependentUpon>itemorganizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menucoleccionable.resx">
       <DependentUpon>menucoleccionable.cs</DependentUpon>
@@ -378,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\lugar\lugarr.resx">
       <DependentUpon>lugarr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Submenus\menuorganizacion.resx">
+      <DependentUpon>menuorganizacion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="assets\logo.png" />
     <None Include="packages.config" />

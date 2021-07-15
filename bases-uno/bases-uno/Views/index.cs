@@ -104,5 +104,10 @@ namespace bases_uno.Views
         {
 			ButtonEnable(iconButton7, new menucoleccionable(this));
 		}
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+			ButtonEnable(iconButton8, new menuorganizacion(this));
+		}
     }
 }

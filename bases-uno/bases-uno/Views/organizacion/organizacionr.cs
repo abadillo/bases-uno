@@ -31,7 +31,7 @@ namespace bases_uno.Views
             try
             {
 
-                Organizacion organizacion = new Organizacion(
+                OrganizacionCaridad organizacion = new OrganizacionCaridad(
                     Validacion.ValidarNull(textBoxName),
                     Validacion.ValidarNull(textBoxMision)
                 );
@@ -75,5 +75,7 @@ namespace bases_uno.Views
             parent.InsertForm(new organizacionl(parent));
         }
         #endregion
+
+      
     }
 }
