@@ -590,7 +590,7 @@ namespace Engine.Classes
         }
         */
 
-        public static List<Club> Clubs()
+        public static List<Club> Clubes()
         {
             List<Club> list = new List<Club>();
 

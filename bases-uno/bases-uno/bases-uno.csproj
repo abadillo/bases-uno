@@ -134,6 +134,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Views\club\club1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\club\club1.Designer.cs">
+      <DependentUpon>club1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\club\club2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\club\club2.Designer.cs">
+      <DependentUpon>club2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\club\clubl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\club\clubl.Designer.cs">
+      <DependentUpon>clubl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\club\clubr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\club\clubr.Designer.cs">
+      <DependentUpon>clubr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\coleccionable\coleccionable1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +224,12 @@
     <Compile Include="Views\Reporte_comic.Designer.cs">
       <DependentUpon>Reporte_comic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\itemclub.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\itemclub.Designer.cs">
+      <DependentUpon>itemclub.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\itemlugar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -229,6 +259,12 @@
     </Compile>
     <Compile Include="Views\UserControls\itemorganizacion.Designer.cs">
       <DependentUpon>itemorganizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menuclub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menuclub.Designer.cs">
+      <DependentUpon>menuclub.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\Submenus\menucoleccionable.cs">
       <SubType>Form</SubType>
@@ -326,6 +362,18 @@
     <EmbeddedResource Include="Reports\ComicReport.rdlc" />
     <EmbeddedResource Include="Reports\ReportInteres.rdlc" />
     <EmbeddedResource Include="Reports\ReportLugar.rdlc" />
+    <EmbeddedResource Include="Views\club\club1.resx">
+      <DependentUpon>club1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\club\club2.resx">
+      <DependentUpon>club2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\club\clubl.resx">
+      <DependentUpon>clubl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\club\clubr.resx">
+      <DependentUpon>clubr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\coleccionable\coleccionable1.resx">
       <DependentUpon>coleccionable1.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +407,9 @@
     <EmbeddedResource Include="Views\Reporte_comic.resx">
       <DependentUpon>Reporte_comic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\itemclub.resx">
+      <DependentUpon>itemclub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemlugar.resx">
       <DependentUpon>itemlugar.cs</DependentUpon>
     </EmbeddedResource>
@@ -373,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemorganizacion.resx">
       <DependentUpon>itemorganizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Submenus\menuclub.resx">
+      <DependentUpon>menuclub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menucoleccionable.resx">
       <DependentUpon>menucoleccionable.cs</DependentUpon>

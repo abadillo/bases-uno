@@ -16,12 +16,22 @@ namespace bases_uno.Views
     {
 
         public index parent;
-      
+        public List<Lugar> list = Read.Lugares();
+
         public clubr(  index parent )
         {
             this.parent = parent;
             InitializeComponent();
             label1.Text = "Registro Club";
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                Lugar tmp = list[i];
+                string item = tmp.ID + " " + tmp.Nombre;
+
+                comboBoxLugar.Items.Add(item);
+            }
+
             Update();
         }
 
@@ -30,10 +40,15 @@ namespace bases_uno.Views
         {
             try
             {
+                string[] tokens = Validacion.ValidarCombo(comboBoxLugar).Split(' ');
+                int LugarID = int.Parse(tokens[0]);
 
                 Club club = new Club(
-                    Validacion.ValidarNull(textBoxName),
-                    Validacion.ValidarNull(textBoxProposito)
+                    Validacion.ValidarDateTime(textBoxFechaFundacion, true),
+                    textBoxProposito.Text,
+                    Read.Lugar(LugarID),
+                    Validacion.ValidarInt(textBoxTelefono, true),
+                    textBoxPaginaWeb.Text
                 );
 
                 club.Insert();
@@ -74,6 +89,12 @@ namespace bases_uno.Views
         {
             parent.InsertForm(new clubl(parent));
         }
+        private void textBoxFechaFundacion_Click(object sender, EventArgs e)
+        {
+            Acciones.EraseInput(textBoxFechaFundacion);
+        }
         #endregion
+
+        
     }
 }

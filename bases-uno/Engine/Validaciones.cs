@@ -15,6 +15,7 @@ namespace Engine
             if (string.IsNullOrEmpty(campo.Text))
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
+                campo.Focus();
                 throw new ApplicationException("Campo " + campo.Tag + " vacio");
             }
 
@@ -52,6 +53,7 @@ namespace Engine
             if (!int.TryParse(campo.Text, out tmp))
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
+                campo.Focus();
                 throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero valido");
             }
 
@@ -78,6 +80,7 @@ namespace Engine
             if (!float.TryParse(campo.Text, out tmp))
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
+                campo.Focus();
                 throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero decimal valido");
             }
 
@@ -98,6 +101,7 @@ namespace Engine
             if (!DateTime.TryParse(campo.Text, out tmp))
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
+                campo.Focus();
                 throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser una fecha valida con formato MM/DD/YYYY");
             }
 

@@ -95,9 +95,9 @@ namespace bases_uno.Views
 
         private void textBoxPublicationDate_Click(object sender, EventArgs e)
         {
-            textBoxPublicationDate.Text = "";
-            textBoxPublicationDate.ForeColor = Color.Black;
+            Acciones.EraseInput(textBoxPublicationDate);
         }
+        
         #endregion
 
     }

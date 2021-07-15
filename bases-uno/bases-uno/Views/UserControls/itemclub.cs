@@ -26,7 +26,7 @@ namespace bases_uno.Views.Components
             InitializeComponent();
 
             label1.Text = club.PaginaWeb;
-            label2_2.Text = club.proposito;
+            label2_2.Text = club.Proposito;
 
             Update();
 

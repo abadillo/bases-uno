@@ -35,6 +35,11 @@ namespace Engine
             combo.Enabled = true;
         }
 
+        public static void EraseInput(TextBox input)
+        {
+            input.Text = "";
+            input.ForeColor = Color.Black;
+        }
 
     }
 }

@@ -43,7 +43,7 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.clubTableAdapter = new bases_uno.Reports.DataSets.DataSetTableAdapters.clubTableAdapter();
+            //this.clubTableAdapter = new bases_uno.Reports.DataSets.DataSetTableAdapters.clubTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.stpanel7.SuspendLayout();
@@ -189,7 +189,7 @@ namespace bases_uno.Views
             // 
             // clubTableAdapter
             // 
-            this.clubTableAdapter.ClearBeforeFill = true;
+            //this.clubTableAdapter.ClearBeforeFill = true;
             // 
             // club2
             // 
@@ -226,6 +226,6 @@ namespace bases_uno.Views
         private System.Windows.Forms.Label label2;
         private Reports.DataSets.DataSet dataSet;
         private System.Windows.Forms.BindingSource clubBindingSource;
-        private Reports.DataSets.DataSetTableAdapters.clubTableAdapter clubTableAdapter;
+       // private Reports.DataSets.DataSetTableAdapters.clubTableAdapter clubTableAdapter;
     }
 }

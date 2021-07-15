@@ -109,5 +109,10 @@ namespace bases_uno.Views
         {
 			ButtonEnable(iconButton8, new menuorganizacion(this));
 		}
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+			ButtonEnable(iconButton2, new menuclub(this));
+		}
     }
 }
