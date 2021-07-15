@@ -19,9 +19,7 @@ namespace bases_uno.Views
 
         public index parent;
 
-        public itemorganizacion[] itemlist;
-        
-        public List<Organizacion> list = Read.Organizaciones();
+        public List<OrganizacionCaridad> list = Read.OrganizacionesCaridad();
 
         public organizacionl(index parent)
         {
@@ -34,7 +32,7 @@ namespace bases_uno.Views
 
             for (int i = 0; i < list.Count; i++)
             {
-                /// Console.WriteLine(list[i]);
+                Console.WriteLine(list[i]);
 
                 itemorganizacion item = new itemorganizacion(list[i], parent);
                 item.Dock = DockStyle.Top;

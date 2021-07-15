@@ -17,9 +17,9 @@ namespace bases_uno.Views
     {
         
         public index parent;
-        public Organizacion organizacion;
+        public OrganizacionCaridad organizacion;
 
-        public organizacion1(index parent, Organizacion organizacion)
+        public organizacion1(index parent, OrganizacionCaridad organizacion)
         {
             this.parent = parent;
             this.organizacion = organizacion;
@@ -101,10 +101,7 @@ namespace bases_uno.Views
 
         #region click botones normales
 
-        private void btnadelante_Click(object sender, EventArgs e)
-        {
-            parent.InsertForm(new organizacion2(parent, organizacion));
-        }
+       
         private void btnatras_Click(object sender, EventArgs e)
         { 
             parent.InsertForm(new organizacionl(parent));

@@ -19,9 +19,7 @@ namespace bases_uno.Views
 
         public index parent;
 
-        public itemcomic[] itemlist;
         public List<Comic> list = Read.Comics();
-
 
         public comicl(index parent)
         {

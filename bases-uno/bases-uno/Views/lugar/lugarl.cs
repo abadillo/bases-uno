@@ -19,7 +19,6 @@ namespace bases_uno.Views
 
         public index parent;
 
-        public itemlugar[] itemlist;
         public List<Lugar> list = Read.Lugares();
 
 

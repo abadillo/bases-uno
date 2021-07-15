@@ -175,6 +175,7 @@ namespace bases_uno.Views
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(816, 86);
             this.textBoxDescription.TabIndex = 32;
+            this.textBoxDescription.Tag = "descripcion";
             // 
             // label7
             // 
@@ -231,6 +232,7 @@ namespace bases_uno.Views
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(372, 23);
             this.textBoxName.TabIndex = 16;
+            this.textBoxName.Tag = "nombre";
             // 
             // label11
             // 

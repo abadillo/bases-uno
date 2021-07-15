@@ -13,7 +13,7 @@ namespace bases_uno.Views.Components
 {
     public partial class itemcoleccionable : UserControl
     {
-
+               
         public index parent;
         public Coleccionable coleccionable;
 
@@ -24,20 +24,15 @@ namespace bases_uno.Views.Components
             this.coleccionable = coleccionable;
 
             InitializeComponent();
-                        
-            //label1.Text = coleccionable.Title;
-           
-            //label2_1.Text = coleccionable.Editor;
-            //label2_2.Text = coleccionable.PublicationDate.ToShortDateString();
 
-            //label3_1.Text = "Volumen: " + "\n" + "Numero: " + "\n" + "Paginas: ";
-            //label3_2.Text =  coleccionable.Volume.ToString() + "\n" + coleccionable.Number.ToString() + "\n" + coleccionable.Pages.ToString();
+            label1.Text = coleccionable.Nombre;
+            label2_2.Text = coleccionable.Descripcion;
 
             Update();
 
         }
 
-       
+      
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
