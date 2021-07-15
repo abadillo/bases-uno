@@ -25,14 +25,14 @@ namespace bases_uno.Views
             this.representante = representante;
 
             InitializeComponent();
-            
-            textBoxID.Text = representante.ID.ToString();
+
+            textBoxDocIdentidad.Text = representante.ID.ToString();
             textBoxName.Text = representante.Nombre;
             textBoxApellido.Text = representante.Apellido;
+            textBoxFechaNacimiento.Text = representante.FechaNacimiento.Value.ToShortDateString();
 
             label1.Text = "Representante: " + representante.Nombre;
             Update();
-
            
         }
 
@@ -45,7 +45,9 @@ namespace bases_uno.Views
             {
                 representante.Nombre = Validacion.ValidarNull(textBoxName);
                 representante.Apellido = Validacion.ValidarNull(textBoxApellido);
-                
+                //representante.ID = Validacion.ValidarInt(textBoxDocIdentidad, true);
+                representante.FechaNacimiento = Validacion.ValidarDateTime(textBoxFechaNacimiento, true);
+
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Representante?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (dialogResult == DialogResult.Yes)
@@ -103,7 +105,7 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new representante2(parent, representante));
+            //parent.InsertForm(new representante2(parent, representante));
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 
@@ -129,17 +131,21 @@ namespace bases_uno.Views
         {
             Acciones.EnableInput(textBoxName, iconButton17);
         }
-        private void iconButton1_Click(object sender, EventArgs e)
+       
+        private void iconButton16_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableInput(textBoxFechaNacimiento, iconButton16);
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
         {
             Acciones.EnableInput(textBoxApellido, iconButton1);
         }
-        private void iconButton14_Click(object sender, EventArgs e)
+
+        private void iconButton15_Click(object sender, EventArgs e)
         {
-            // id no se modifica
+            //Acciones.EnableInput(textBoxDocIdentidad, iconButton15);
         }
         #endregion
-
-
-
     }
 }

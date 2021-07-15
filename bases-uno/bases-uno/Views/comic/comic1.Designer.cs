@@ -392,6 +392,7 @@ namespace bases_uno.Views
             this.textBoxEditor.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxEditor.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxEditor.Location = new System.Drawing.Point(85, 0);
+            this.textBoxEditor.MaxLength = 50;
             this.textBoxEditor.Name = "textBoxEditor";
             this.textBoxEditor.ReadOnly = true;
             this.textBoxEditor.Size = new System.Drawing.Size(280, 23);
@@ -451,6 +452,7 @@ namespace bases_uno.Views
             this.textBoxPages.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxPages.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxPages.Location = new System.Drawing.Point(181, 0);
+            this.textBoxPages.MaxLength = 16;
             this.textBoxPages.Name = "textBoxPages";
             this.textBoxPages.ReadOnly = true;
             this.textBoxPages.Size = new System.Drawing.Size(184, 23);
@@ -628,6 +630,7 @@ namespace bases_uno.Views
             this.textBoxTitle.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxTitle.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxTitle.Location = new System.Drawing.Point(65, 0);
+            this.textBoxTitle.MaxLength = 50;
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.ReadOnly = true;
             this.textBoxTitle.Size = new System.Drawing.Size(300, 23);
@@ -687,6 +690,7 @@ namespace bases_uno.Views
             this.textBoxVolumen.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxVolumen.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxVolumen.Location = new System.Drawing.Point(181, 0);
+            this.textBoxVolumen.MaxLength = 16;
             this.textBoxVolumen.Name = "textBoxVolumen";
             this.textBoxVolumen.ReadOnly = true;
             this.textBoxVolumen.Size = new System.Drawing.Size(184, 23);
@@ -805,6 +809,7 @@ namespace bases_uno.Views
             this.textBoxNumber.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxNumber.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxNumber.Location = new System.Drawing.Point(181, 0);
+            this.textBoxNumber.MaxLength = 16;
             this.textBoxNumber.Name = "textBoxNumber";
             this.textBoxNumber.ReadOnly = true;
             this.textBoxNumber.Size = new System.Drawing.Size(184, 23);

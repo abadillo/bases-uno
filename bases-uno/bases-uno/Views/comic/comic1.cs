@@ -28,8 +28,8 @@ namespace bases_uno.Views
 			
 			textBoxID.Text = comic.ID.ToString();
 			textBoxTitle.Text = comic.Title;
-			textBoxPublicationDate.Text = comic.PublicationDate.ToString();
-			radioButtonColor.Checked = comic.Color;
+            textBoxPublicationDate.Text = comic.PublicationDate.Value.ToShortDateString();
+            radioButtonColor.Checked = comic.Color;
             radioButtonCover.Checked = comic.Cover;
             textBoxVolumen.Text = comic.Volume.ToString();
 			textBoxNumber.Text = comic.Number.ToString();

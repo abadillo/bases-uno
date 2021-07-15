@@ -31,7 +31,6 @@ namespace bases_uno.Views
 			
             label1.Text = "Listado: Clubes";
 
-
             for (int i = 0; i < list.Count; i++)
             {
                 /// Console.WriteLine(list[i]);

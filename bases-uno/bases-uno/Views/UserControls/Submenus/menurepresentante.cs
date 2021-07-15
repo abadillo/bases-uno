@@ -28,12 +28,6 @@ namespace bases_uno.Views.UserControls.Submenus
 
         public void ButtonEnable(Button pressedButton, Form form)
         {
-            // not selected
-            // Color.FromArgb(73, 103,135);
-
-            // selected
-            // Color.FromArgb(59,84,110);
-
             activeButton.FlatAppearance.BorderSize = 0;
             pressedButton.FlatAppearance.BorderSize = 1;
 

@@ -224,6 +224,24 @@
     <Compile Include="Views\Reporte_comic.Designer.cs">
       <DependentUpon>Reporte_comic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\representante\representante1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\representante\representante1.Designer.cs">
+      <DependentUpon>representante1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\representante\representantel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\representante\representantel.Designer.cs">
+      <DependentUpon>representantel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\representante\representanter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\representante\representanter.Designer.cs">
+      <DependentUpon>representanter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\itemclub.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -259,6 +277,12 @@
     </Compile>
     <Compile Include="Views\UserControls\itemorganizacion.Designer.cs">
       <DependentUpon>itemorganizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\itemrepresentante.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\itemrepresentante.Designer.cs">
+      <DependentUpon>itemrepresentante.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\Submenus\menuclub.cs">
       <SubType>Form</SubType>
@@ -359,6 +383,12 @@
     <Compile Include="Views\UserControls\Submenus\menuorganizacion.Designer.cs">
       <DependentUpon>menuorganizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\Submenus\menurepresentante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menurepresentante.Designer.cs">
+      <DependentUpon>menurepresentante.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Reports\ComicReport.rdlc" />
     <EmbeddedResource Include="Reports\ReportInteres.rdlc" />
     <EmbeddedResource Include="Reports\ReportLugar.rdlc" />
@@ -407,6 +437,15 @@
     <EmbeddedResource Include="Views\Reporte_comic.resx">
       <DependentUpon>Reporte_comic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\representante\representante1.resx">
+      <DependentUpon>representante1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\representante\representantel.resx">
+      <DependentUpon>representantel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\representante\representanter.resx">
+      <DependentUpon>representanter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemclub.resx">
       <DependentUpon>itemclub.cs</DependentUpon>
     </EmbeddedResource>
@@ -424,6 +463,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemorganizacion.resx">
       <DependentUpon>itemorganizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\itemrepresentante.resx">
+      <DependentUpon>itemrepresentante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menuclub.resx">
       <DependentUpon>menuclub.cs</DependentUpon>
@@ -477,6 +519,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menuorganizacion.resx">
       <DependentUpon>menuorganizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Submenus\menurepresentante.resx">
+      <DependentUpon>menurepresentante.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="assets\logo.png" />
     <None Include="packages.config" />

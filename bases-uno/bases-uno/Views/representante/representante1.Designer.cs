@@ -37,15 +37,7 @@ namespace bases_uno.Views
             this.btneliminar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBoxApellido = new System.Windows.Forms.TextBox();
-            this.spacerpanel2 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.iconButton14 = new FontAwesome.Sharp.IconButton();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.iconButton17 = new FontAwesome.Sharp.IconButton();
@@ -57,15 +49,28 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.textBoxDocIdentidad = new System.Windows.Forms.TextBox();
+            this.iconButton15 = new FontAwesome.Sharp.IconButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBoxApellido = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.textBoxFechaNacimiento = new System.Windows.Forms.TextBox();
+            this.iconButton16 = new FontAwesome.Sharp.IconButton();
+            this.label10 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.spacerpanel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel11.SuspendLayout();
             this.hrpanel.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // stpanel7
@@ -88,8 +93,6 @@ namespace bases_uno.Views
             this.dipanel1.Controls.Add(this.tableLayoutPanel1);
             this.dipanel1.Controls.Add(this.label14);
             this.dipanel1.Controls.Add(this.panel3);
-            this.dipanel1.Controls.Add(this.textBoxApellido);
-            this.dipanel1.Controls.Add(this.spacerpanel2);
             this.dipanel1.Controls.Add(this.tableLayoutPanel2);
             this.dipanel1.Controls.Add(this.label2);
             this.dipanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -109,7 +112,7 @@ namespace bases_uno.Views
             this.tableLayoutPanel1.Controls.Add(this.btnmodificar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btneliminar, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 295);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 192);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -173,7 +176,7 @@ namespace bases_uno.Views
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
             this.label14.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.LightGray;
-            this.label14.Location = new System.Drawing.Point(0, 255);
+            this.label14.Location = new System.Drawing.Point(0, 152);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(816, 40);
             this.label14.TabIndex = 34;
@@ -182,145 +185,29 @@ namespace bases_uno.Views
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 232);
+            this.panel3.Location = new System.Drawing.Point(0, 129);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(816, 23);
             this.panel3.TabIndex = 33;
-            // 
-            // textBoxApellido
-            // 
-            this.textBoxApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxApellido.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBoxApellido.Font = new System.Drawing.Font("Roboto", 14F);
-            this.textBoxApellido.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxApellido.Location = new System.Drawing.Point(0, 141);
-            this.textBoxApellido.MaxLength = 100;
-            this.textBoxApellido.Multiline = true;
-            this.textBoxApellido.Name = "textBoxApellido";
-            this.textBoxApellido.ReadOnly = true;
-            this.textBoxApellido.Size = new System.Drawing.Size(816, 91);
-            this.textBoxApellido.TabIndex = 32;
-            this.textBoxApellido.Tag = "apellido";
-            // 
-            // spacerpanel2
-            // 
-            this.spacerpanel2.Controls.Add(this.iconButton1);
-            this.spacerpanel2.Controls.Add(this.label7);
-            this.spacerpanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.spacerpanel2.Location = new System.Drawing.Point(0, 83);
-            this.spacerpanel2.Name = "spacerpanel2";
-            this.spacerpanel2.Padding = new System.Windows.Forms.Padding(0, 20, 4, 0);
-            this.spacerpanel2.Size = new System.Drawing.Size(816, 58);
-            this.spacerpanel2.TabIndex = 30;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.Location = new System.Drawing.Point(775, 20);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(37, 38);
-            this.iconButton1.TabIndex = 32;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label7.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.LightGray;
-            this.label7.Location = new System.Drawing.Point(0, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(228, 38);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Apellido";
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.panel8, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel11, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel11, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panel9, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel10, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 40);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 43);
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 89);
             this.tableLayoutPanel2.TabIndex = 29;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.textBoxID);
-            this.panel8.Controls.Add(this.iconButton14);
-            this.panel8.Controls.Add(this.label8);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(402, 37);
-            this.panel8.TabIndex = 2;
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxID.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxID.Font = new System.Drawing.Font("Roboto", 14F);
-            this.textBoxID.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxID.Location = new System.Drawing.Point(164, 0);
-            this.textBoxID.MaxLength = 50;
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(201, 23);
-            this.textBoxID.TabIndex = 16;
-            this.textBoxID.Tag = "id";
-            this.textBoxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // iconButton14
-            // 
-            this.iconButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton14.Enabled = false;
-            this.iconButton14.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton14.FlatAppearance.BorderSize = 0;
-            this.iconButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton14.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton14.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton14.IconSize = 35;
-            this.iconButton14.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton14.Location = new System.Drawing.Point(365, 0);
-            this.iconButton14.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton14.Name = "iconButton14";
-            this.iconButton14.Size = new System.Drawing.Size(37, 37);
-            this.iconButton14.TabIndex = 15;
-            this.iconButton14.UseVisualStyleBackColor = false;
-            this.iconButton14.Click += new System.EventHandler(this.iconButton14_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.LightGray;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 23);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "id";
             // 
             // panel11
             // 
@@ -328,9 +215,9 @@ namespace bases_uno.Views
             this.panel11.Controls.Add(this.iconButton17);
             this.panel11.Controls.Add(this.label11);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(411, 3);
+            this.panel11.Location = new System.Drawing.Point(411, 47);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(402, 37);
+            this.panel11.Size = new System.Drawing.Size(402, 39);
             this.panel11.TabIndex = 5;
             // 
             // textBoxName
@@ -341,6 +228,7 @@ namespace bases_uno.Views
             this.textBoxName.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxName.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxName.Location = new System.Drawing.Point(88, 0);
+            this.textBoxName.MaxLength = 50;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ReadOnly = true;
             this.textBoxName.Size = new System.Drawing.Size(277, 23);
@@ -364,7 +252,7 @@ namespace bases_uno.Views
             this.iconButton17.Location = new System.Drawing.Point(365, 0);
             this.iconButton17.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton17.Name = "iconButton17";
-            this.iconButton17.Size = new System.Drawing.Size(37, 37);
+            this.iconButton17.Size = new System.Drawing.Size(37, 39);
             this.iconButton17.TabIndex = 15;
             this.iconButton17.UseVisualStyleBackColor = false;
             this.iconButton17.Click += new System.EventHandler(this.iconButton17_Click);
@@ -436,6 +324,7 @@ namespace bases_uno.Views
             this.btnadelante.Size = new System.Drawing.Size(66, 52);
             this.btnadelante.TabIndex = 5;
             this.btnadelante.UseVisualStyleBackColor = false;
+            this.btnadelante.Visible = false;
             this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
             // 
             // btnatras
@@ -467,6 +356,186 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.textBoxDocIdentidad);
+            this.panel9.Controls.Add(this.iconButton15);
+            this.panel9.Controls.Add(this.label9);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(402, 38);
+            this.panel9.TabIndex = 6;
+            // 
+            // textBoxDocIdentidad
+            // 
+            this.textBoxDocIdentidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxDocIdentidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDocIdentidad.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxDocIdentidad.Font = new System.Drawing.Font("Roboto", 14F);
+            this.textBoxDocIdentidad.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxDocIdentidad.Location = new System.Drawing.Point(181, 0);
+            this.textBoxDocIdentidad.MaxLength = 16;
+            this.textBoxDocIdentidad.Name = "textBoxDocIdentidad";
+            this.textBoxDocIdentidad.ReadOnly = true;
+            this.textBoxDocIdentidad.Size = new System.Drawing.Size(184, 23);
+            this.textBoxDocIdentidad.TabIndex = 16;
+            this.textBoxDocIdentidad.Tag = "documento identidad";
+            this.textBoxDocIdentidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // iconButton15
+            // 
+            this.iconButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.iconButton15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton15.Enabled = false;
+            this.iconButton15.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton15.FlatAppearance.BorderSize = 0;
+            this.iconButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton15.Font = new System.Drawing.Font("Roboto", 6F);
+            this.iconButton15.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
+            this.iconButton15.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton15.IconSize = 35;
+            this.iconButton15.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton15.Location = new System.Drawing.Point(365, 0);
+            this.iconButton15.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton15.Name = "iconButton15";
+            this.iconButton15.Size = new System.Drawing.Size(37, 38);
+            this.iconButton15.TabIndex = 15;
+            this.iconButton15.UseVisualStyleBackColor = false;
+            this.iconButton15.Click += new System.EventHandler(this.iconButton15_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.LightGray;
+            this.label9.Location = new System.Drawing.Point(0, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(127, 23);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "doc identidad";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.textBoxApellido);
+            this.panel4.Controls.Add(this.iconButton1);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 47);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(402, 39);
+            this.panel4.TabIndex = 7;
+            // 
+            // textBoxApellido
+            // 
+            this.textBoxApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxApellido.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxApellido.Font = new System.Drawing.Font("Roboto", 14F);
+            this.textBoxApellido.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxApellido.Location = new System.Drawing.Point(78, 0);
+            this.textBoxApellido.MaxLength = 50;
+            this.textBoxApellido.Name = "textBoxApellido";
+            this.textBoxApellido.ReadOnly = true;
+            this.textBoxApellido.Size = new System.Drawing.Size(287, 23);
+            this.textBoxApellido.TabIndex = 16;
+            this.textBoxApellido.Tag = "apellido";
+            this.textBoxApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Roboto", 6F);
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 35;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.Location = new System.Drawing.Point(365, 0);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(37, 39);
+            this.iconButton1.TabIndex = 15;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LightGray;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 23);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "apellido";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.textBoxFechaNacimiento);
+            this.panel10.Controls.Add(this.iconButton16);
+            this.panel10.Controls.Add(this.label10);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(411, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(402, 38);
+            this.panel10.TabIndex = 8;
+            // 
+            // textBoxFechaNacimiento
+            // 
+            this.textBoxFechaNacimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxFechaNacimiento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxFechaNacimiento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxFechaNacimiento.Font = new System.Drawing.Font("Roboto", 14F);
+            this.textBoxFechaNacimiento.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxFechaNacimiento.Location = new System.Drawing.Point(158, 0);
+            this.textBoxFechaNacimiento.Name = "textBoxFechaNacimiento";
+            this.textBoxFechaNacimiento.ReadOnly = true;
+            this.textBoxFechaNacimiento.Size = new System.Drawing.Size(207, 23);
+            this.textBoxFechaNacimiento.TabIndex = 16;
+            this.textBoxFechaNacimiento.Tag = "fecha publicacion";
+            this.textBoxFechaNacimiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // iconButton16
+            // 
+            this.iconButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.iconButton16.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton16.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton16.FlatAppearance.BorderSize = 0;
+            this.iconButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton16.Font = new System.Drawing.Font("Roboto", 6F);
+            this.iconButton16.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
+            this.iconButton16.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton16.IconSize = 35;
+            this.iconButton16.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton16.Location = new System.Drawing.Point(365, 0);
+            this.iconButton16.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton16.Name = "iconButton16";
+            this.iconButton16.Size = new System.Drawing.Size(37, 38);
+            this.iconButton16.TabIndex = 15;
+            this.iconButton16.UseVisualStyleBackColor = false;
+            this.iconButton16.Click += new System.EventHandler(this.iconButton16_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.LightGray;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(158, 23);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "fecha nacimiento";
+            // 
             // representante1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,17 +547,19 @@ namespace bases_uno.Views
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);
-            this.dipanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.spacerpanel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.hrpanel.ResumeLayout(false);
             this.hrpanel.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -509,19 +580,23 @@ namespace bases_uno.Views
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBoxApellido;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel spacerpanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox textBoxName;
         private FontAwesome.Sharp.IconButton iconButton17;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBoxID;
-        private FontAwesome.Sharp.IconButton iconButton14;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox textBoxDocIdentidad;
+        private FontAwesome.Sharp.IconButton iconButton15;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textBoxApellido;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox textBoxFechaNacimiento;
+        private FontAwesome.Sharp.IconButton iconButton16;
+        private System.Windows.Forms.Label label10;
     }
 }

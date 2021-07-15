@@ -32,8 +32,10 @@ namespace bases_uno.Views
             {
 
                 Representante representante = new Representante(
+                    Validacion.ValidarInt(textBoxDocIdentidad,true),
                     Validacion.ValidarNull(textBoxName),
-                    Validacion.ValidarNull(textBoxApellido)
+                    Validacion.ValidarNull(textBoxApellido),
+                    Validacion.ValidarDateTime(textBoxFechaNacimiento,true)
                 );
 
                 representante.Insert();
@@ -75,5 +77,10 @@ namespace bases_uno.Views
             parent.InsertForm(new representantel(parent));
         }
         #endregion
+
+        private void textBoxFechaNacimiento_Click(object sender, EventArgs e)
+        {
+            Acciones.EraseInput(textBoxFechaNacimiento);
+        }
     }
 }
