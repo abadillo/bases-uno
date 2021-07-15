@@ -565,7 +565,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM modelo";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -601,9 +601,9 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM club";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
-                connection.Reader = Script.ExecuteReader();
+                connection.Reader = connection.Script.ExecuteReader();
 
                 while (connection.Reader.Read())
                 {
@@ -636,7 +636,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM coleccionable";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -671,7 +671,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM coleccionista";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -709,9 +709,9 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM comic";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
-                connection.Reader = Script.ExecuteReader();
+                connection.Reader = connection.Script.ExecuteReader();
 
                 while (connection.Reader.Read())
                 {
@@ -746,7 +746,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM contacto";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -781,7 +781,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM dueno_historico";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -816,9 +816,9 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM interes";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
-                connection.Reader = Script.ExecuteReader();
+                connection.Reader = connection.Script.ExecuteReader();
 
                 while (connection.Reader.Read())
                 {
@@ -851,7 +851,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM listado";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -887,7 +887,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM local";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -921,9 +921,9 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM lugar";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
-                connection.Reader = Script.ExecuteReader();
+                connection.Reader = connection.Script.ExecuteReader();
 
                 while (connection.Reader.Read())
                 {
@@ -956,7 +956,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM membresia";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -991,7 +991,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM organizacion_caridad";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -1026,7 +1026,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM participante";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -1061,7 +1061,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM representante";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -1096,7 +1096,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
                 string Query = "SELECT * FROM subasta";
-                NpgsqlCommand Script = new NpgsqlCommand(Query, connection.Connection);
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
