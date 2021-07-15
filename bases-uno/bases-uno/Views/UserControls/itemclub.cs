@@ -25,7 +25,7 @@ namespace bases_uno.Views.Components
 
             InitializeComponent();
                         
-            // label1.Text = club.Nombre;
+            label1.Text = club.Nombre;
            
             label2_1.Text = club.Proposito;
             label2_2.Text = club.FechaFundacion.Value.ToShortDateString();

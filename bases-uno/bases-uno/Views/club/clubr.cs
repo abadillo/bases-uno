@@ -44,11 +44,13 @@ namespace bases_uno.Views
                 int LugarID = int.Parse(tokens[0]);
 
                 Club club = new Club(
+                    Validacion.ValidarNull(textBoxNombre),
                     Validacion.ValidarDateTime(textBoxFechaFundacion, true),
                     textBoxProposito.Text,
                     Read.Lugar(LugarID),
                     Validacion.ValidarInt(textBoxTelefono, true),
                     textBoxPaginaWeb.Text
+                  
                 );
 
                 club.Insert();
@@ -71,18 +73,10 @@ namespace bases_uno.Views
         #endregion
 
         #region click botones y modificadores de campo
-        private void btncrear_Click(object sender, EventArgs e)
-        {
-            Registrar();
-        }
+      
         private void btnadelante_Click(object sender, EventArgs e)
         {
             Registrar();
-        }
-
-        private void btncancelar_Click(object sender, EventArgs e)
-        {
-            parent.InsertForm(new clubl(parent));
         }
 
         private void btnatras_Click(object sender, EventArgs e)
@@ -93,8 +87,16 @@ namespace bases_uno.Views
         {
             Acciones.EraseInput(textBoxFechaFundacion);
         }
-        #endregion
 
-        
+        private void btncrear_Click_1(object sender, EventArgs e)
+        {
+            Registrar();
+        }
+
+        private void btncancelar_Click_1(object sender, EventArgs e)
+        {
+            parent.InsertForm(new clubl(parent));
+        }
+        #endregion
     }
 }

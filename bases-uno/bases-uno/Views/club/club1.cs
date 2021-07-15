@@ -18,6 +18,7 @@ namespace bases_uno.Views
         
         public index parent;
         public Club club;
+        public List<Lugar> list = Read.Lugares();
 
         public club1(index parent, Club club)
         {
@@ -25,12 +26,28 @@ namespace bases_uno.Views
             this.club = club;
 
             InitializeComponent();
-            
-            textBoxID.Text = club.ID.ToString();
-            textBoxName.Text = club.PaginaWeb;
-            textBoxProposito.Text = club.Proposito;
 
-            label1.Text = "Club: " + club.PaginaWeb;
+            label1.Text = "Club: " + club.Nombre;
+
+            textBoxID.Text = club.ID.ToString();
+            textBoxNombre.Text = club.Nombre;
+            textBoxPaginaWeb.Text = club.PaginaWeb;
+            textBoxProposito.Text = club.Proposito;
+            textBoxFechaFundacion.Text = club.FechaFundacion.Value.ToShortDateString();
+            textBoxTelefono.Text = club.Telefono.ToString();
+                       
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                Lugar tmp = list[i];
+                string item = tmp.ID + " " + tmp.Nombre;
+
+                comboBoxLugar.Items.Add(item);
+
+                if (tmp.ID == club.LugarID)
+                    comboBoxLugar.SelectedItem = item;
+            }
+
             Update();
 
            
@@ -43,9 +60,16 @@ namespace bases_uno.Views
            
             try
             {
-                club.PaginaWeb = Validacion.ValidarNull(textBoxName);
-                club.Proposito = Validacion.ValidarNull(textBoxProposito);
-                
+                string[] tokens = Validacion.ValidarCombo(comboBoxLugar).Split(' ');
+                int LugarID = int.Parse(tokens[0]);
+
+                club.Nombre = Validacion.ValidarNull(textBoxNombre);
+                club.FechaFundacion = Validacion.ValidarDateTime(textBoxFechaFundacion, true);
+                club.Proposito = textBoxProposito.Text;
+                club.PaginaWeb = textBoxPaginaWeb.Text;
+                club.LugarID = Read.Lugar(LugarID).ID;
+                club.Telefono = Validacion.ValidarInt(textBoxTelefono, true);
+
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Club?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (dialogResult == DialogResult.Yes)
@@ -127,7 +151,7 @@ namespace bases_uno.Views
 
         private void iconButton17_Click(object sender, EventArgs e)
         {
-            Acciones.EnableInput(textBoxName, iconButton17);
+            Acciones.EnableInput(textBoxNombre, iconButton17);
         }
         private void iconButton1_Click(object sender, EventArgs e)
         {
@@ -137,9 +161,28 @@ namespace bases_uno.Views
         {
             // id no se modifica
         }
+
+        private void iconButton16_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableInput(textBoxFechaFundacion, iconButton16);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableInput(textBoxPaginaWeb, iconButton2);
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableCombo(comboBoxLugar, iconButton3);
+        }
+
+        private void iconButton15_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableInput(textBoxTelefono, iconButton15);
+        }
+
         #endregion
-
-
 
     }
 }

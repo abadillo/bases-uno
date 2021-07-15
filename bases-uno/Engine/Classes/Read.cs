@@ -607,7 +607,7 @@ namespace Engine.Classes
 
                 while (connection.Reader.Read())
                 {
-                    Club club = new Club(connection.ReadInt(0), connection.ReadString(7), connection.ReadDate(1), connection.ReadString(4),
+                    Club club = new Club(connection.ReadInt(0), connection.ReadString(6), connection.ReadDate(1), connection.ReadString(4),
                         connection.ReadInt(5), connection.ReadInt(2), connection.ReadString(3));
 
                     list.Add(club);

@@ -85,7 +85,7 @@ namespace Engine.Classes
                 {
                     Query += ", pagina_web";
                 }
-                Query += ") VALUES (@fundacion, @proposito, @lugar";
+                Query += ") VALUES (@fundacion, @proposito, @lugar, @nombre";
                 if (!(Telefono == 0))
                 {
                     Query += ", @telefono"; 

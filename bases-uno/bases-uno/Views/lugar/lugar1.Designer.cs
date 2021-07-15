@@ -398,6 +398,7 @@ namespace bases_uno.Views
             this.textBoxName.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxName.ForeColor = System.Drawing.Color.LightGray;
             this.textBoxName.Location = new System.Drawing.Point(111, 0);
+            this.textBoxName.MaxLength = 50;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ReadOnly = true;
             this.textBoxName.Size = new System.Drawing.Size(254, 23);

@@ -41,5 +41,30 @@ namespace Engine
             input.ForeColor = Color.Black;
         }
 
+        public static void LlenaCombo (ComboBox combo, List<Object> list , int idObj, string item, bool NN)
+        {
+
+            if (!NN) 
+                combo.Items.Add("0 Ninguno"); 
+            
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                Object tmp = list[i];
+                
+                combo.Items.Add(item);
+
+                if (tmp.ID == idObj)
+                    combo.SelectedItem = item;
+            }
+
+            if (!NN && idObj == 0)
+                combo.SelectedIndex = 0;
+
+
+
+
+        }
+
     }
 }
