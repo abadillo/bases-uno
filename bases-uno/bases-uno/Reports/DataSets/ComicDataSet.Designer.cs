@@ -301,6 +301,12 @@ namespace bases_uno.Reports.DataSets {
             
             private global::System.Data.DataColumn columneditor;
             
+            private global::System.Data.DataColumn columnvolumen1;
+            
+            private global::System.Data.DataColumn columnnumero1;
+            
+            private global::System.Data.DataColumn columnpaginas1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public comicDataTable() {
@@ -424,6 +430,30 @@ namespace bases_uno.Reports.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn volumen1Column {
+                get {
+                    return this.columnvolumen1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn numero1Column {
+                get {
+                    return this.columnnumero1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn paginas1Column {
+                get {
+                    return this.columnpaginas1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,7 +489,7 @@ namespace bases_uno.Reports.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public comicRow AddcomicRow(string titulo, int volumen, int numero, System.DateTime fecha_publicacion, float precio_publicacion, bool color, string sinopsis, int paginas, bool cubierta, string editor) {
+            public comicRow AddcomicRow(string titulo, int volumen, int numero, System.DateTime fecha_publicacion, float precio_publicacion, bool color, string sinopsis, int paginas, bool cubierta, string editor, decimal volumen1, decimal numero1, decimal paginas1) {
                 comicRow rowcomicRow = ((comicRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -472,7 +502,10 @@ namespace bases_uno.Reports.DataSets {
                         sinopsis,
                         paginas,
                         cubierta,
-                        editor};
+                        editor,
+                        volumen1,
+                        numero1,
+                        paginas1};
                 rowcomicRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcomicRow);
                 return rowcomicRow;
@@ -513,6 +546,9 @@ namespace bases_uno.Reports.DataSets {
                 this.columnpaginas = base.Columns["paginas"];
                 this.columncubierta = base.Columns["cubierta"];
                 this.columneditor = base.Columns["editor"];
+                this.columnvolumen1 = base.Columns["volumen1"];
+                this.columnnumero1 = base.Columns["numero1"];
+                this.columnpaginas1 = base.Columns["paginas1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,6 +576,12 @@ namespace bases_uno.Reports.DataSets {
                 base.Columns.Add(this.columncubierta);
                 this.columneditor = new global::System.Data.DataColumn("editor", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columneditor);
+                this.columnvolumen1 = new global::System.Data.DataColumn("volumen1", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvolumen1);
+                this.columnnumero1 = new global::System.Data.DataColumn("numero1", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnumero1);
+                this.columnpaginas1 = new global::System.Data.DataColumn("paginas1", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpaginas1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -558,6 +600,11 @@ namespace bases_uno.Reports.DataSets {
                 this.columncubierta.AllowDBNull = false;
                 this.columneditor.AllowDBNull = false;
                 this.columneditor.MaxLength = 50;
+                this.columnvolumen1.Caption = "volumen";
+                this.columnnumero1.AllowDBNull = false;
+                this.columnnumero1.Caption = "numero";
+                this.columnpaginas1.AllowDBNull = false;
+                this.columnpaginas1.Caption = "paginas";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -831,6 +878,44 @@ namespace bases_uno.Reports.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal volumen1 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablecomic.volumen1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'volumen1\' in table \'comic\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecomic.volumen1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal numero1 {
+                get {
+                    return ((decimal)(this[this.tablecomic.numero1Column]));
+                }
+                set {
+                    this[this.tablecomic.numero1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal paginas1 {
+                get {
+                    return ((decimal)(this[this.tablecomic.paginas1Column]));
+                }
+                set {
+                    this[this.tablecomic.paginas1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsvolumenNull() {
                 return this.IsNull(this.tablecomic.volumenColumn);
             }
@@ -851,6 +936,18 @@ namespace bases_uno.Reports.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setprecio_publicacionNull() {
                 this[this.tablecomic.precio_publicacionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isvolumen1Null() {
+                return this.IsNull(this.tablecomic.volumen1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setvolumen1Null() {
+                this[this.tablecomic.volumen1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -1015,15 +1112,15 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             tableMapping.DataSetTable = "comic";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("titulo", "titulo");
-            tableMapping.ColumnMappings.Add("volumen", "volumen");
-            tableMapping.ColumnMappings.Add("numero", "numero");
             tableMapping.ColumnMappings.Add("fecha_publicacion", "fecha_publicacion");
             tableMapping.ColumnMappings.Add("precio_publicacion", "precio_publicacion");
             tableMapping.ColumnMappings.Add("color", "color");
             tableMapping.ColumnMappings.Add("sinopsis", "sinopsis");
-            tableMapping.ColumnMappings.Add("paginas", "paginas");
             tableMapping.ColumnMappings.Add("cubierta", "cubierta");
             tableMapping.ColumnMappings.Add("editor", "editor");
+            tableMapping.ColumnMappings.Add("volumen", "volumen1");
+            tableMapping.ColumnMappings.Add("numero", "numero1");
+            tableMapping.ColumnMappings.Add("paginas", "paginas1");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::Npgsql.NpgsqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1056,16 +1153,16 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@Original_volumen";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "volumen";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@Original_numero";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "numero";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -1113,8 +1210,8 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@Original_paginas";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "paginas";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -1148,15 +1245,15 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@volumen";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "volumen";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@numero";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "numero";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -1190,8 +1287,8 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@paginas";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "paginas";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -1222,15 +1319,15 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@volumen";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "volumen";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@numero";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "numero";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -1264,8 +1361,8 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@paginas";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "paginas";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -1310,16 +1407,16 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@Original_volumen";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "volumen";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@Original_numero";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "numero";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -1367,8 +1464,8 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Npgsql.NpgsqlParameter();
             param.ParameterName = "@Original_paginas";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Integer;
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.NpgsqlDbType = global::NpgsqlTypes.NpgsqlDbType.Numeric;
             param.IsNullable = true;
             param.SourceColumn = "paginas";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -1408,7 +1505,8 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::Npgsql.NpgsqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT comic.*\r\nFROM     comic";
+            this._commandCollection[1].CommandText = "SELECT color, cubierta, editor, fecha_publicacion, id, numero, paginas, precio_pu" +
+                "blicacion, sinopsis, titulo, volumen FROM comic";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1493,7 +1591,7 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int @Original_id, string @Original_titulo, global::System.Nullable<int> @Original_volumen, int @Original_numero, System.DateTime @Original_fecha_publicacion, global::System.Nullable<float> @Original_precio_publicacion, bool @Original_color, string @Original_sinopsis, int @Original_paginas, bool @Original_cubierta, string @Original_editor) {
+        public virtual int Delete(int @Original_id, string @Original_titulo, global::System.Nullable<decimal> @Original_volumen, decimal @Original_numero, System.DateTime @Original_fecha_publicacion, global::System.Nullable<float> @Original_precio_publicacion, bool @Original_color, string @Original_sinopsis, decimal @Original_paginas, bool @Original_cubierta, string @Original_editor) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(@Original_id));
             if ((@Original_titulo == null)) {
                 throw new global::System.ArgumentNullException("@Original_titulo");
@@ -1503,13 +1601,13 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             }
             if ((@Original_volumen.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(@Original_volumen.Value));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(@Original_volumen.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(@Original_numero));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(@Original_numero));
             this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(@Original_fecha_publicacion));
             if ((@Original_precio_publicacion.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
@@ -1526,7 +1624,7 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(@Original_sinopsis));
             }
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(@Original_paginas));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(@Original_paginas));
             this.Adapter.DeleteCommand.Parameters[11].Value = ((bool)(@Original_cubierta));
             if ((@Original_editor == null)) {
                 throw new global::System.ArgumentNullException("@Original_editor");
@@ -1554,7 +1652,7 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string @titulo, global::System.Nullable<int> @volumen, int @numero, System.DateTime @fecha_publicacion, global::System.Nullable<float> @precio_publicacion, bool @color, string @sinopsis, int @paginas, bool @cubierta, string @editor) {
+        public virtual int Insert(string @titulo, global::System.Nullable<decimal> @volumen, decimal @numero, System.DateTime @fecha_publicacion, global::System.Nullable<float> @precio_publicacion, bool @color, string @sinopsis, decimal @paginas, bool @cubierta, string @editor) {
             if ((@titulo == null)) {
                 throw new global::System.ArgumentNullException("@titulo");
             }
@@ -1562,12 +1660,12 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(@titulo));
             }
             if ((@volumen.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(@volumen.Value));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(@volumen.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(@numero));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(@numero));
             this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(@fecha_publicacion));
             if ((@precio_publicacion.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((float)(@precio_publicacion.Value));
@@ -1582,7 +1680,7 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(@sinopsis));
             }
-            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(@paginas));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(@paginas));
             this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(@cubierta));
             if ((@editor == null)) {
                 throw new global::System.ArgumentNullException("@editor");
@@ -1612,24 +1710,24 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     string @titulo, 
-                    global::System.Nullable<int> @volumen, 
-                    int @numero, 
+                    global::System.Nullable<decimal> @volumen, 
+                    decimal @numero, 
                     System.DateTime @fecha_publicacion, 
                     global::System.Nullable<float> @precio_publicacion, 
                     bool @color, 
                     string @sinopsis, 
-                    int @paginas, 
+                    decimal @paginas, 
                     bool @cubierta, 
                     string @editor, 
                     int @Original_id, 
                     string @Original_titulo, 
-                    global::System.Nullable<int> @Original_volumen, 
-                    int @Original_numero, 
+                    global::System.Nullable<decimal> @Original_volumen, 
+                    decimal @Original_numero, 
                     System.DateTime @Original_fecha_publicacion, 
                     global::System.Nullable<float> @Original_precio_publicacion, 
                     bool @Original_color, 
                     string @Original_sinopsis, 
-                    int @Original_paginas, 
+                    decimal @Original_paginas, 
                     bool @Original_cubierta, 
                     string @Original_editor) {
             if ((@titulo == null)) {
@@ -1639,12 +1737,12 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(@titulo));
             }
             if ((@volumen.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(@volumen.Value));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(@volumen.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(@numero));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(@numero));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(@fecha_publicacion));
             if ((@precio_publicacion.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((float)(@precio_publicacion.Value));
@@ -1659,7 +1757,7 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(@sinopsis));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(@paginas));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(@paginas));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(@cubierta));
             if ((@editor == null)) {
                 throw new global::System.ArgumentNullException("@editor");
@@ -1676,13 +1774,13 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             }
             if ((@Original_volumen.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(@Original_volumen.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(@Original_volumen.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(@Original_numero));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(@Original_numero));
             this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(@Original_fecha_publicacion));
             if ((@Original_precio_publicacion.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
@@ -1699,7 +1797,7 @@ namespace bases_uno.Reports.DataSets.ComicDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(@Original_sinopsis));
             }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(@Original_paginas));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(@Original_paginas));
             this.Adapter.UpdateCommand.Parameters[21].Value = ((bool)(@Original_cubierta));
             if ((@Original_editor == null)) {
                 throw new global::System.ArgumentNullException("@Original_editor");
