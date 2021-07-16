@@ -118,7 +118,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM coleccionista WHERE id = @id";
+                string Query = "SELECT * FROM coleccionista WHERE documento_identidad = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
