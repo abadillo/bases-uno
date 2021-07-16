@@ -69,8 +69,6 @@ namespace bases_uno.Views
                 if (tmp.ID == coleccionista.RepresentanteID)
                     comboBoxRepresentanteR.SelectedItem = item;
             }
-            if (coleccionista.RepresentanteID == 0)
-                comboBoxRepresentanteR.SelectedIndex = 0;
 
             // combo coleccionistas
             for (int i = 0; i < listCol.Count; i++)
@@ -83,8 +81,6 @@ namespace bases_uno.Views
                 if (tmp.ID == coleccionista.RepresentanteID)
                     comboBoxRepresentanteC.SelectedItem = item;
             }
-            if (coleccionista.ColeccionistaRepresentanteID == 0)
-                comboBoxRepresentanteC.SelectedIndex = 0;
 
 
             int edad = Validacion.Edad(Validacion.ValidarDateTime(textBoxFechaNacimiento, true));
