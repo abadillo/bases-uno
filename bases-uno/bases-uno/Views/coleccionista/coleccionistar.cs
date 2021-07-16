@@ -116,8 +116,8 @@ namespace bases_uno.Views
                         Read.Lugar(LugarNID),
                         Read.Lugar(LugarRID),
                         Read.Representante(RepresentanteRID),
-                        Validacion.ValidarNull(textBoxSegundoNombre),
-                        Validacion.ValidarNull(textBoxSegundoApellido)
+                        textBoxSegundoNombre.Text,
+                        textBoxSegundoApellido.Text
                     );
                 }
                 else
@@ -131,8 +131,8 @@ namespace bases_uno.Views
                         Validacion.ValidarDateTime(textBoxFechaNacimiento, true),
                         Read.Lugar(LugarNID),
                         Read.Lugar(LugarRID),
-                        Validacion.ValidarNull(textBoxSegundoNombre),
-                        Validacion.ValidarNull(textBoxSegundoApellido),
+                        textBoxSegundoNombre.Text,
+                        textBoxSegundoApellido.Text,
                         Read.Coleccionista(RepresentanteCID)
                      );
                 }

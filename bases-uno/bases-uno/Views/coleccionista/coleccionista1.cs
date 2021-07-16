@@ -39,6 +39,9 @@ namespace bases_uno.Views
             textBoxFechaNacimiento.Text = coleccionista.FechaNacimiento.Value.ToShortDateString();
             textBoxTelefono.Text = coleccionista.Telefono.ToString();
 
+            //Console.WriteLine(coleccionista.LugarNacimiento.ToString());
+            //Console.WriteLine(coleccionista.LugarResidencia.ToString());
+
             // combos lugares
             for (int i = 0; i < listLug.Count; i++)
             {
@@ -58,7 +61,10 @@ namespace bases_uno.Views
                     comboBoxLugarNacimiento.SelectedItem = item;
             }
 
+
             // combo representantes
+            comboBoxRepresentanteR.Items.Add("0 Ninguno");
+
             for (int i = 0; i < listRep.Count; i++)
             {
                 Representante tmp = listRep[i];
@@ -69,8 +75,13 @@ namespace bases_uno.Views
                 if (tmp.ID == coleccionista.RepresentanteID)
                     comboBoxRepresentanteR.SelectedItem = item;
             }
+            if (coleccionista.RepresentanteID == 0)
+                comboBoxRepresentanteR.SelectedIndex = 0;
+
 
             // combo coleccionistas
+            comboBoxRepresentanteC.Items.Add("0 Ninguno");
+
             for (int i = 0; i < listCol.Count; i++)
             {
                 Coleccionista tmp = listCol[i];
@@ -78,9 +89,11 @@ namespace bases_uno.Views
 
                 comboBoxRepresentanteC.Items.Add(item);
 
-                if (tmp.ID == coleccionista.RepresentanteID)
+                if (tmp.ID == coleccionista.ColeccionistaRepresentanteID)
                     comboBoxRepresentanteC.SelectedItem = item;
             }
+            if (coleccionista.ColeccionistaRepresentanteID == 0)
+                comboBoxRepresentanteC.SelectedIndex = 0;
 
 
             int edad = Validacion.Edad(Validacion.ValidarDateTime(textBoxFechaNacimiento, true));
@@ -110,10 +123,10 @@ namespace bases_uno.Views
                 tokens = Validacion.ValidarCombo(comboBoxLugarResidencia).Split(' ');
                 int LugarRID = int.Parse(tokens[0]);
 
-                tokens = comboBoxRepresentanteR.SelectedItem.ToString().Split(' ');
+                tokens = Validacion.ValidarCombo(comboBoxRepresentanteR).Split(' ');
                 int RepresentanteRID = int.Parse(tokens[0]);
 
-                tokens = comboBoxRepresentanteC.SelectedItem.ToString().Split(' ');
+                tokens = Validacion.ValidarCombo(comboBoxRepresentanteC).Split(' ');
                 int RepresentanteCID = int.Parse(tokens[0]);
 
                 if (edad < 18 && RepresentanteCID == 0 && RepresentanteRID == 0)
@@ -127,9 +140,9 @@ namespace bases_uno.Views
                 
 
                 coleccionista.PrimerNombre = Validacion.ValidarNull(textBoxPrimerNombre);
-                coleccionista.SegundoNombre = Validacion.ValidarNull(textBoxSegundoNombre);
+                coleccionista.SegundoNombre = textBoxSegundoNombre.Text;
                 coleccionista.PrimerApellido = Validacion.ValidarNull(textBoxPrimerApellido);
-                coleccionista.SegundoApellido = Validacion.ValidarNull(textBoxSegundoApellido);
+                coleccionista.SegundoApellido =textBoxSegundoApellido.Text;
                 coleccionista.FechaNacimiento = Validacion.ValidarDateTime(textBoxFechaNacimiento, true);
                 coleccionista.Telefono = Validacion.ValidarInt(textBoxTelefono, true);
                 coleccionista.LugarNacimiento = Read.Lugar(LugarNID).ID;
@@ -139,7 +152,7 @@ namespace bases_uno.Views
                 if (RepresentanteRID != 0)
                     coleccionista.RepresentanteID = Read.Representante(RepresentanteRID).ID;
 
-                else
+                else if (RepresentanteCID != 0)
                     coleccionista.ColeccionistaRepresentanteID = Read.Coleccionista(RepresentanteCID).ID;
                     
                
@@ -243,14 +256,14 @@ namespace bases_uno.Views
        
         private void iconButton5_Click(object sender, EventArgs e)
         {
-            Acciones.EnableCombo(comboBoxRepresentanteC, iconButton9);
-            Acciones.EnableCombo(comboBoxRepresentanteR, iconButton9);
+            Acciones.EnableCombo(comboBoxRepresentanteC, iconButton5);
+            Acciones.EnableCombo(comboBoxRepresentanteR, iconButton5);
         }
 
         private void iconButton9_Click(object sender, EventArgs e)
         {
-            Acciones.EnableCombo(comboBoxLugarNacimiento, iconButton5);
-            Acciones.EnableCombo(comboBoxLugarResidencia, iconButton5);
+            Acciones.EnableCombo(comboBoxLugarNacimiento, iconButton9);
+            Acciones.EnableCombo(comboBoxLugarResidencia, iconButton9);
         }
 
         private void iconButton4_Click(object sender, EventArgs e)

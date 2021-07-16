@@ -61,7 +61,7 @@ namespace Engine.Classes
 
                 if (connection.Reader.Read())
                 {
-                    club = new Club(connection.ReadInt(0), connection.ReadString(7), connection.ReadDate(1), connection.ReadString(4), 
+                    club = new Club(connection.ReadInt(0), connection.ReadString(6), connection.ReadDate(1), connection.ReadString(4), 
                         connection.ReadInt(5), connection.ReadInt(2), connection.ReadString(3));
                 }
             }

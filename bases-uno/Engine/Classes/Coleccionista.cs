@@ -84,8 +84,10 @@ namespace Engine.Classes
             Telefono = telefono;
             FechaNacimiento = fechaNacimiento;
             LugarNacimiento = lugarNacimiento;
+            LugarResidencia = lugarResidencia;
             RepresentanteID = representanteID;
             ColeccionistaRepresentanteID = representanteColeccionista;
+            
         }
         #endregion
 

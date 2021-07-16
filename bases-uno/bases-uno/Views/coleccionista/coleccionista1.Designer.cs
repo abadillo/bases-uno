@@ -274,6 +274,7 @@ namespace bases_uno.Views
             // 
             this.comboBoxLugarNacimiento.BackColor = System.Drawing.Color.LightGray;
             this.comboBoxLugarNacimiento.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.comboBoxLugarNacimiento.Enabled = false;
             this.comboBoxLugarNacimiento.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxLugarNacimiento.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLugarNacimiento.FormattingEnabled = true;
@@ -310,6 +311,7 @@ namespace bases_uno.Views
             // 
             this.comboBoxLugarResidencia.BackColor = System.Drawing.Color.LightGray;
             this.comboBoxLugarResidencia.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.comboBoxLugarResidencia.Enabled = false;
             this.comboBoxLugarResidencia.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxLugarResidencia.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLugarResidencia.FormattingEnabled = true;
@@ -422,6 +424,7 @@ namespace bases_uno.Views
             // 
             this.comboBoxRepresentanteR.BackColor = System.Drawing.Color.LightGray;
             this.comboBoxRepresentanteR.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.comboBoxRepresentanteR.Enabled = false;
             this.comboBoxRepresentanteR.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxRepresentanteR.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRepresentanteR.FormattingEnabled = true;
@@ -458,6 +461,7 @@ namespace bases_uno.Views
             // 
             this.comboBoxRepresentanteC.BackColor = System.Drawing.Color.LightGray;
             this.comboBoxRepresentanteC.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.comboBoxRepresentanteC.Enabled = false;
             this.comboBoxRepresentanteC.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxRepresentanteC.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRepresentanteC.FormattingEnabled = true;
