@@ -207,33 +207,57 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE coleccionista SET primer_nombre = @primernombre, ";
+                string Query = "UPDATE coleccionista SET primer_nombre = @primernombre, " +
+                    "primer_apellido = @primerapellido, telefono = @telefono, fecha_nacimiento = @fechanacimiento, " +
+                    "LUGAR_id_nacionalidad = @lugarnacimiento, LUGAR_id_direccion = @direccion";
                 if (!(SegundoNombre == null))
                 {
-                    Query += "segundo_nombre = @segundonombre, ";
+                    Query += ", segundo_nombre = @segundonombre";
                 }
-                Query += "primer_apellido = @primerapellido, ";
                 if (!(SegundoApellido == null))
                 {
-                    Query += "segundo_apellido = @segundoapellido, ";
+                    Query += ", segundo_apellido = @segundoapellido";
                 }
-                Query += "telefono = @telefono, fecha_nacimiento = @fechanacimiento, LUGAR_id_nacionalidad = @lugarnacimiento, ";
                 if (!(ColeccionistaRepresentanteID == 0))
                 {
-                    Query += " coleccionista_documento_identidad = @coleccionistaid, ";
+                    Query += ", coleccionista_documento_identidad = @coleccionistaid";
                 }
                 else
                 {
                     if (!(RepresentanteID == 0))
                     {
-                        Query += " representante_documento_identidad = @representanteid, ";
+                        Query += ", representante_documento_identidad = @representanteid";
                     }
                 }
-                Query += " LUGAR_id_direccion = @residencia WHERE documento_identidad = @id";
+                Query += " WHERE documento_identidad = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
                 Script.Parameters.AddWithValue("primernombre", PrimerNombre);
+                Script.Parameters.AddWithValue("primerapellido", PrimerApellido);
+                Script.Parameters.AddWithValue("telefono", Telefono);
+                Script.Parameters.AddWithValue("fechanacimiento", FechaNacimiento);
+                Script.Parameters.AddWithValue("lugarnacimiento", LugarNacimiento);
+                Script.Parameters.AddWithValue("direccion", LugarResidencia);
+                if (!(SegundoNombre == null))
+                {
+                    Script.Parameters.AddWithValue("segundonombre", SegundoNombre);
+                }
+                if (!(SegundoApellido == null))
+                {
+                    Script.Parameters.AddWithValue("segundoapellido", SegundoApellido);
+                }
+                if (!(ColeccionistaRepresentanteID == 0))
+                {
+                    Script.Parameters.AddWithValue("coleccionistarepresentante", ColeccionistaRepresentanteID);
+                }
+                else
+                {
+                    if (!(RepresentanteID == 0))
+                    {
+                        Script.Parameters.AddWithValue("representante", RepresentanteID);
+                    }
+                }
 
                 Script.Prepare();
 
