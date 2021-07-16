@@ -122,5 +122,17 @@ namespace Engine
             }
             return tmp;
         }
+
+        public static int Edad (DateTime birthdate)
+        {
+            var today = DateTime.Today;
+          
+            int edad = today.Year - birthdate.Year;
+
+            if (birthdate.Date > today.AddYears(-edad)) edad--;
+
+            return edad;
+            
+        }
     }
 }

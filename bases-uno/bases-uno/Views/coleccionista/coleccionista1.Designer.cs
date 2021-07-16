@@ -188,6 +188,7 @@ namespace bases_uno.Views
             this.btncancelar.TabIndex = 2;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = false;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click_1);
             // 
             // btnmodificar
             // 
@@ -204,6 +205,7 @@ namespace bases_uno.Views
             this.btnmodificar.TabIndex = 1;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = false;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click_1);
             // 
             // btneliminar
             // 
@@ -220,6 +222,7 @@ namespace bases_uno.Views
             this.btneliminar.TabIndex = 0;
             this.btneliminar.Text = "ELIMINAR";
             this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click_1);
             // 
             // label14
             // 
@@ -357,6 +360,7 @@ namespace bases_uno.Views
             this.iconButton9.Size = new System.Drawing.Size(37, 40);
             this.iconButton9.TabIndex = 39;
             this.iconButton9.UseVisualStyleBackColor = false;
+            this.iconButton9.Click += new System.EventHandler(this.iconButton9_Click);
             // 
             // label19
             // 
@@ -517,6 +521,7 @@ namespace bases_uno.Views
             this.iconButton5.Size = new System.Drawing.Size(37, 40);
             this.iconButton5.TabIndex = 39;
             this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // label18
             // 
@@ -727,6 +732,7 @@ namespace bases_uno.Views
             this.iconButton2.Size = new System.Drawing.Size(37, 41);
             this.iconButton2.TabIndex = 15;
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // label4
             // 
@@ -736,9 +742,9 @@ namespace bases_uno.Views
             this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 23);
+            this.label4.Size = new System.Drawing.Size(156, 23);
             this.label4.TabIndex = 14;
-            this.label4.Text = "primer apellido";
+            this.label4.Text = "segundo nombre";
             // 
             // panel6
             // 
@@ -786,6 +792,7 @@ namespace bases_uno.Views
             this.iconButton3.Size = new System.Drawing.Size(37, 41);
             this.iconButton3.TabIndex = 15;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // label5
             // 
@@ -845,6 +852,7 @@ namespace bases_uno.Views
             this.iconButton4.Size = new System.Drawing.Size(37, 41);
             this.iconButton4.TabIndex = 15;
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // label6
             // 
@@ -905,6 +913,7 @@ namespace bases_uno.Views
             this.iconButton15.Size = new System.Drawing.Size(37, 41);
             this.iconButton15.TabIndex = 15;
             this.iconButton15.UseVisualStyleBackColor = false;
+            this.iconButton15.Click += new System.EventHandler(this.iconButton15_Click_1);
             // 
             // label9
             // 
@@ -914,9 +923,9 @@ namespace bases_uno.Views
             this.label9.ForeColor = System.Drawing.Color.LightGray;
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 23);
+            this.label9.Size = new System.Drawing.Size(133, 23);
             this.label9.TabIndex = 14;
-            this.label9.Text = "doc identidad";
+            this.label9.Text = "doc. identidad";
             // 
             // panel10
             // 

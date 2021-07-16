@@ -12,7 +12,7 @@ namespace Engine.Classes
         #region Atributes
         public int ID { get; set; } //pk
         public string Nombre { get; set; }
-        public bool Alquilado { get; set; }
+       
         public int LugarID { get; set; }
         public int ColeccionistaID { get; set; } //nullable
         public string Tipo { get; set; }
@@ -28,10 +28,10 @@ namespace Engine.Classes
         /// <para>  public const string Alquilado = "Alquilado";</para>
         /// <para>  public const string DeUnMiembro = "De un Miembro";</para>
         /// }</code>, por el check</param>
-        public Local(string nombre, bool alquilado, Lugar ubicacion, string tipo, Coleccionista dueno = null)
+        public Local(string nombre, Lugar ubicacion, string tipo, Coleccionista dueno = null)
         {
             Nombre = nombre;
-            Alquilado = alquilado;
+           
             LugarID = ubicacion.ID;
             Tipo = tipo;
             if (dueno == null)
@@ -47,11 +47,11 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Local(int id, string nombre, bool alquilado, int lugarID, int coleccionistaID, string tipo)
+        public Local(int id, string nombre, int lugarID, int coleccionistaID, string tipo)
         {
             ID = id;
             Nombre = nombre;
-            Alquilado = alquilado;
+
             LugarID = lugarID;
             ColeccionistaID = coleccionistaID;
             Tipo = tipo;
@@ -86,12 +86,12 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO local (nombre, alquilado, lugar_id, tipo";
+                string Query = "INSERT INTO local (nombre, lugar_id, tipo";
                 if (!(ColeccionistaID == 0))
                 {
                     Query += ", coleccionista_documento_identidad";
                 }
-                Query += ") VALUES (@nombre, @alquilado, @lugar, @tipo";
+                Query += ") VALUES (@nombre, @lugar, @tipo";
                 if (!(ColeccionistaID == 0))
                 {
                     Query += ", @coleccionistaid";
@@ -101,7 +101,6 @@ namespace Engine.Classes
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("nombre", Nombre);
-                Script.Parameters.AddWithValue("alquilado", Alquilado);
                 Script.Parameters.AddWithValue("lugar", LugarID);
                 Script.Parameters.AddWithValue("tipo", Tipo);
                 if (!(ColeccionistaID == 0))
@@ -128,7 +127,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE local SET nombre = @nombre, alquilado = @alquilado, lugar_id = @lugar, tipo = @tipo";
+                string Query = "UPDATE local SET nombre = @nombre, lugar_id = @lugar, tipo = @tipo";
                 if (!(ColeccionistaID == 0))
                 {
                     Query += ", coleccionista_documento_identidad = @coleccionistaid";
@@ -139,7 +138,6 @@ namespace Engine.Classes
 
                 Script.Parameters.AddWithValue("id", ID); 
                 Script.Parameters.AddWithValue("nombre", Nombre);
-                Script.Parameters.AddWithValue("alquilado", Alquilado);
                 Script.Parameters.AddWithValue("lugar", LugarID);
                 Script.Parameters.AddWithValue("tipo", Tipo);
                 if (!(ColeccionistaID == 0))

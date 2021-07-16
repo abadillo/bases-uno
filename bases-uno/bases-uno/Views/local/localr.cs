@@ -18,7 +18,8 @@ namespace bases_uno.Views
     {
 
         public index parent;
-        public List<Local> list = Read.Locales();
+        public List<Lugar> listLug = Read.Lugares();
+        public List<Coleccionista> listCol = Read.Coleccionistas();
 
         public localr(index parent)
         {
@@ -27,23 +28,34 @@ namespace bases_uno.Views
             label1.Text = "Registro Local";
 
             comboBoxType.Items.AddRange(new object[] {
-                "Pais",
-                "Estado",
-                "Ciudad",
-                "Direccion"
+                "Alquilado",
+                "De un Miembro"
             });
 
-            comboBoxLocal.Items.Add("0 Ninguno");
 
-            for (int i = 0; i < list.Count; i++)
+            // para la direccion
+            comboBoxDireccion.Items.Add("0 Ninguno");
+
+            for (int i = 0; i < listLug.Count; i++)
             {
-                Local tmp = list[i];
+                Lugar tmp = listLug[i];
                 string item = tmp.ID + " " + tmp.Nombre;
 
-                comboBoxLocal.Items.Add(item);
+                comboBoxDireccion.Items.Add(item);
             }
+            comboBoxDireccion.SelectedIndex = 0;
 
-            comboBoxLocal.SelectedIndex = 0;
+            // para el dueño si lo requiere
+            comboBoxDireccion.Items.Add("0 Ninguno");
+                    
+            for (int i = 0; i < listCol.Count; i++)
+            {
+                Coleccionista tmp = listCol[i];
+                string item = tmp.ID + " " + tmp.PrimerNombre + " " + tmp.PrimerApellido;
+
+                comboBoxColeccionista.Items.Add(item);
+            }
+            comboBoxDireccion.SelectedIndex = 0;
 
             Update();
         }
@@ -54,13 +66,24 @@ namespace bases_uno.Views
             try
             {
 
-                string[] tokens = comboBoxLocal.SelectedItem.ToString().Split(' ');
-                int LocalID = int.Parse(tokens[0]);
+                string[] tokens = Validacion.ValidarCombo(comboBoxDireccion).Split(' ');
+                int LugarID = int.Parse(tokens[0]);
+
+                tokens = comboBoxColeccionista.SelectedItem.ToString().Split(' ');
+                int DuenoID = int.Parse(tokens[0]);
+
+
+                string tipo = Validacion.ValidarCombo(comboBoxType);
+
+                if ( tipo == "De un Miembro" && DuenoID == 0)
+                    throw new Exception("Debe seleccionar un dueño del local");
+
 
                 Local local = new Local(
-                    Validacion.ValidarNull(textBoxName),
+                    Validacion.ValidarNull(textBoxNombre),
+                    Read.Lugar(LugarID),
                     Validacion.ValidarCombo(comboBoxType),
-                    Read.Local(LocalID)
+                    Read.Coleccionista(DuenoID)
                 ); 
              
                 local.Insert();
@@ -91,15 +114,18 @@ namespace bases_uno.Views
             parent.InsertForm(new locall(parent));
         }
 
-        private void btncrear_Click(object sender, EventArgs e)
+        private void btncancelar_Click_1(object sender, EventArgs e)
+        {
+            parent.InsertForm(new locall(parent));
+
+        }
+
+        private void btncrear_Click_1(object sender, EventArgs e)
         {
             Registrar();
         }
 
-        private void btncancelar_Click(object sender, EventArgs e)
-        {
-            parent.InsertForm(new locall(parent));
-        }
         #endregion
+
     }
 }

@@ -19,6 +19,7 @@ namespace bases_uno.Views
         public index parent;
         public Coleccionista coleccionista;
 
+
         public List<Lugar> listLug = Read.Lugares();
         public List<Representante> listRep = Read.Representantes();
         public List<Coleccionista> listCol = Read.Coleccionistas();
@@ -86,6 +87,12 @@ namespace bases_uno.Views
                 comboBoxRepresentanteC.SelectedIndex = 0;
 
 
+            int edad = Validacion.Edad(Validacion.ValidarDateTime(textBoxFechaNacimiento, true));
+
+            if (edad < 18)
+                panelOpcional.Visible = true;
+
+
             label1.Text = "Coleccionista: " + coleccionista.PrimerNombre + " " + coleccionista.SegundoNombre;
             Update();
            
@@ -99,15 +106,50 @@ namespace bases_uno.Views
             try
             {
 
+                int edad = Validacion.Edad(Validacion.ValidarDateTime(textBoxFechaNacimiento, true));
+
+                if (edad < 18)
+                    panelOpcional.Visible = true;
+
+                string[] tokens = Validacion.ValidarCombo(comboBoxLugarNacimiento).Split(' ');
+                int LugarNID = int.Parse(tokens[0]);
+
+                tokens = Validacion.ValidarCombo(comboBoxLugarResidencia).Split(' ');
+                int LugarRID = int.Parse(tokens[0]);
+
+                tokens = comboBoxRepresentanteR.SelectedItem.ToString().Split(' ');
+                int RepresentanteRID = int.Parse(tokens[0]);
+
+                tokens = comboBoxRepresentanteC.SelectedItem.ToString().Split(' ');
+                int RepresentanteCID = int.Parse(tokens[0]);
+
+                if (edad < 18 && RepresentanteCID == 0 && RepresentanteRID == 0)
+                {
+                    throw new Exception("Debe selecionar un representante por ser menor de edad");
+                }
+
+                if (RepresentanteCID != 0 && RepresentanteRID != 0)
+                {
+                    throw new Exception("Debe selecionar solo representante");
+                }
+
                 coleccionista.PrimerNombre = Validacion.ValidarNull(textBoxPrimerNombre);
                 coleccionista.SegundoNombre = Validacion.ValidarNull(textBoxSegundoNombre);
                 coleccionista.PrimerApellido = Validacion.ValidarNull(textBoxPrimerApellido);
                 coleccionista.SegundoApellido = Validacion.ValidarNull(textBoxSegundoApellido);
                 coleccionista.FechaNacimiento = Validacion.ValidarDateTime(textBoxFechaNacimiento, true);
                 coleccionista.Telefono = Validacion.ValidarInt(textBoxTelefono, true);
+                coleccionista.LugarNacimiento = Read.Lugar(LugarNID).ID;
+                coleccionista.LugarResidencia = Read.Lugar(LugarRID).ID;
 
 
+                if (RepresentanteRID != 0)
+                    coleccionista.RepresentanteID = Read.Representante(RepresentanteRID).ID;
 
+                else
+                    coleccionista.ColeccionistaRepresentanteID = Read.Coleccionista(RepresentanteCID).ID;
+                    
+               
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Coleccionista?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (dialogResult == DialogResult.Yes)
@@ -171,17 +213,20 @@ namespace bases_uno.Views
         { 
             parent.InsertForm(new coleccionistal(parent));
         }
-        private void btneliminar_Click(object sender, EventArgs e)
+        
+        private void btnmodificar_Click_1(object sender, EventArgs e)
         {
-            Eliminar();
+            Modificar();
         }
-        private void btncancelar_Click(object sender, EventArgs e)
+
+        private void btncancelar_Click_1(object sender, EventArgs e)
         {
             parent.InsertForm(new coleccionista1(parent, coleccionista));
         }
-        private void btnmodificar_Click(object sender, EventArgs e)
+
+        private void btneliminar_Click_1(object sender, EventArgs e)
         {
-            Modificar();
+            Eliminar();
         }
         #endregion
 
@@ -202,10 +247,41 @@ namespace bases_uno.Views
             Acciones.EnableInput(textBoxPrimerApellido, iconButton1);
         }
 
-        private void iconButton15_Click(object sender, EventArgs e)
+       
+        private void iconButton5_Click(object sender, EventArgs e)
         {
-            //Acciones.EnableInput(textBoxDocIdentidad, iconButton15);
+            Acciones.EnableCombo(comboBoxRepresentanteC, iconButton9);
+            Acciones.EnableCombo(comboBoxRepresentanteR, iconButton9);
         }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableCombo(comboBoxLugarNacimiento, iconButton5);
+            Acciones.EnableCombo(comboBoxLugarResidencia, iconButton5);
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableInput(textBoxTelefono, iconButton4);
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableInput(textBoxSegundoApellido, iconButton3);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableInput(textBoxSegundoNombre, iconButton2);
+        }
+
+        private void iconButton15_Click_1(object sender, EventArgs e)
+        {
+            // doc de indentidad no se modifica
+        }
+
         #endregion
+
+       
     }
 }

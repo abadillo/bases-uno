@@ -218,6 +218,30 @@
     <Compile Include="Views\comic\comic1.Designer.cs">
       <DependentUpon>comic1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\local\local1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\local\local1.Designer.cs">
+      <DependentUpon>local1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\local\local2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\local\local2.Designer.cs">
+      <DependentUpon>local2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\local\locall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\local\locall.Designer.cs">
+      <DependentUpon>locall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\local\localr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\local\localr.Designer.cs">
+      <DependentUpon>localr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\organizacion\organizacion1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +296,12 @@
     <Compile Include="Views\UserControls\itemcoleccionista.Designer.cs">
       <DependentUpon>itemcoleccionista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\itemlocal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\itemlocal.Designer.cs">
+      <DependentUpon>itemlocal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\itemlugar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -325,6 +355,12 @@
     </Compile>
     <Compile Include="Views\UserControls\Submenus\menucoleccionista.Designer.cs">
       <DependentUpon>menucoleccionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menulocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menulocal.Designer.cs">
+      <DependentUpon>menulocal.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\Submenus\menulugar.cs">
       <SubType>Form</SubType>
@@ -464,6 +500,18 @@
     <EmbeddedResource Include="Views\comic\comic1.resx">
       <DependentUpon>comic1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\local\local1.resx">
+      <DependentUpon>local1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\local\local2.resx">
+      <DependentUpon>local2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\local\locall.resx">
+      <DependentUpon>locall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\local\localr.resx">
+      <DependentUpon>localr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\organizacion\organizacion1.resx">
       <DependentUpon>organizacion1.cs</DependentUpon>
     </EmbeddedResource>
@@ -491,6 +539,9 @@
     <EmbeddedResource Include="Views\UserControls\itemcoleccionista.resx">
       <DependentUpon>itemcoleccionista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\itemlocal.resx">
+      <DependentUpon>itemlocal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemlugar.resx">
       <DependentUpon>itemlugar.cs</DependentUpon>
     </EmbeddedResource>
@@ -517,6 +568,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menucoleccionista.resx">
       <DependentUpon>menucoleccionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Submenus\menulocal.resx">
+      <DependentUpon>menulocal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menulugar.resx">
       <DependentUpon>menulugar.cs</DependentUpon>

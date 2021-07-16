@@ -332,7 +332,7 @@ namespace Engine.Classes
                 if (connection.Reader.Read())
                 {
                     local = new Local(connection.ReadInt(0), connection.ReadString(1), connection.ReadBool(2), connection.ReadInt(3),
-                        connection.ReadInt(4), connection.ReadString(5));
+                        connection.ReadInt(4));
                 }
             }
             catch
@@ -894,7 +894,7 @@ namespace Engine.Classes
                 while (connection.Reader.Read())
                 {
                     Local modell = new Local(connection.ReadInt(0), connection.ReadString(1), connection.ReadBool(2),
-                        connection.ReadInt(3), connection.ReadInt(4), connection.ReadString(5));
+                        connection.ReadInt(3), connection.ReadInt(4));
 
                     list.Add(modell);
                 }

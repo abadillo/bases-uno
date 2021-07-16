@@ -14,6 +14,7 @@ namespace bases_uno.Views
 {
     public partial class coleccionistar : Form
     {
+        
 
         public index parent;
         public List<Lugar> listLug = Read.Lugares();
@@ -79,18 +80,9 @@ namespace bases_uno.Views
             try
             {
                 Coleccionista coleccionista;
-                
-                var today = DateTime.Today;
-                var birthdate = Validacion.ValidarDateTime(textBoxFechaNacimiento, true);
 
-                int edad = today.Year - birthdate.Year;
+                int edad = Validacion.Edad(Validacion.ValidarDateTime(textBoxFechaNacimiento, true));
 
-                if (birthdate.Date > today.AddYears(-edad)) edad--;
-
-                if (edad < 18)
-                {
-                    panelOpcional.Visible = true;
-                }
 
                 string[] tokens = Validacion.ValidarCombo(comboBoxLugarNacimiento).Split(' ');
                 int LugarNID = int.Parse(tokens[0]);
@@ -104,7 +96,7 @@ namespace bases_uno.Views
                 tokens = comboBoxRepresentanteC.SelectedItem.ToString().Split(' ');
                 int RepresentanteCID = int.Parse(tokens[0]);
 
-                Console.WriteLine(RepresentanteRID + " " + RepresentanteCID);
+                //Console.WriteLine(RepresentanteRID + " " + RepresentanteCID);
                 
                 if (edad < 18 && RepresentanteCID == 0 && RepresentanteRID == 0)
                 {
@@ -150,7 +142,7 @@ namespace bases_uno.Views
                 }
 
 
-                Console.WriteLine("algo");
+                // Console.WriteLine("algo");
                 coleccionista.Insert();
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK ,MessageBoxIcon.Information);
