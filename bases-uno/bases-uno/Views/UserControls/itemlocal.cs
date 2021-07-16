@@ -26,10 +26,24 @@ namespace bases_uno.Views.Components
             InitializeComponent();
 
             label1.Text = local.Nombre;
+            label2_2.Text = Read.Lugar(local.LugarID).Nombre;
 
             label3_1.Text = "Tipo:";
             label3_2.Text = local.Tipo;
-           
+
+
+            string nombreDueno = "-";
+
+            Coleccionista dueno = Read.Coleccionista(local.ColeccionistaID);
+            Console.WriteLine(local.ColeccionistaID);
+            if (dueno != null)
+            {
+                nombreDueno = dueno.PrimerNombre + " " + dueno.PrimerApellido;
+            }
+
+            label3_1.Text = "Tipo: " + "\n" + "Dueño: ";
+            label3_2.Text = local.Tipo + "\n" + nombreDueno ;
+
 
             Update();
 

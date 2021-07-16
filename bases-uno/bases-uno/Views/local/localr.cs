@@ -79,7 +79,8 @@ namespace bases_uno.Views
                 {
                     panelOpcional.Visible = true;
                     throw new Exception("Debe seleccionar un dueño del local");
-                }                 
+                }
+                Console.WriteLine(DuenoID);
 
                 Local local = new Local(
                     Validacion.ValidarNull(textBoxNombre),
