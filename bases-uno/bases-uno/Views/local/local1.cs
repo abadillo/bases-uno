@@ -57,6 +57,7 @@ namespace bases_uno.Views
                     comboBoxDireccion.SelectedItem = item;
             }
 
+
             // para el dueño si tiene
             comboBoxColeccionista.Items.Add("0 Ninguno");
 
@@ -65,13 +66,13 @@ namespace bases_uno.Views
                 Coleccionista tmp = listCol[i];
                 string item = tmp.ID + " " + tmp.PrimerNombre + " " + tmp.PrimerApellido;
 
-                comboBoxDireccion.Items.Add(item);
+                comboBoxColeccionista.Items.Add(item);
 
                 if (tmp.ID == local.ColeccionistaID)
-                    comboBoxDireccion.SelectedItem = item;
+                    comboBoxColeccionista.SelectedItem = item;
             }
             if (local.ColeccionistaID == 0)
-                comboBoxDireccion.SelectedIndex = 0;
+                comboBoxColeccionista.SelectedIndex = 0;
 
             Update();
 
@@ -87,7 +88,7 @@ namespace bases_uno.Views
                 string[] tokens = Validacion.ValidarCombo(comboBoxDireccion).Split(' ');
                 int IDLocation = int.Parse(tokens[0]);
 
-                tokens = comboBoxColeccionista.SelectedItem.ToString().Split(' ');
+                tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' ');
                 int DuenoID = int.Parse(tokens[0]);
 
                 string tipo = Validacion.ValidarCombo(comboBoxType);
@@ -101,8 +102,11 @@ namespace bases_uno.Views
                 local.Nombre = Validacion.ValidarNull(textBoxName);
                 local.Tipo = Validacion.ValidarCombo(comboBoxType);
                 local.LugarID = Read.Lugar(IDLocation).ID;
-                local.ColeccionistaID = Read.Coleccionista(DuenoID).ID;
 
+
+                if (DuenoID != 0) {
+                    local.ColeccionistaID = Read.Coleccionista(DuenoID).ID;
+                }
 
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este local?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 

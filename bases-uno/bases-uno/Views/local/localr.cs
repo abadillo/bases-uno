@@ -44,10 +44,9 @@ namespace bases_uno.Views
                 comboBoxDireccion.Items.Add(item);
             }
 
-
-            comboBoxColeccionista.Items.Add("0 Ninguno");
             // para el dueño si lo requiere
-
+            comboBoxColeccionista.Items.Add("0 Ninguno");
+            
             for (int i = 0; i < listCol.Count; i++)
             {
                 Coleccionista tmp = listCol[i];

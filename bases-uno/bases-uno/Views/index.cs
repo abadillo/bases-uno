@@ -95,8 +95,8 @@ namespace bases_uno.Views
 
         private void iconButton8_Click(object sender, EventArgs e)
         {
-			// ButtonEnable(iconButton8, new menuorganizacion(this));
-			ButtonEnable(iconButton8, new menulocal(this));
+			ButtonEnable(iconButton8, new menuorganizacion(this));
+			
 		}
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -110,5 +110,15 @@ namespace bases_uno.Views
         {
 			ButtonEnable(iconButton10, new menucoleccionista(this));
 		}
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+			ButtonEnable(iconButton8, new menulocal(this));
+		}
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
