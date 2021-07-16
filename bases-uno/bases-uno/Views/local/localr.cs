@@ -45,8 +45,9 @@ namespace bases_uno.Views
             }
             comboBoxDireccion.SelectedIndex = 0;
 
+
             // para el dueño si lo requiere
-            comboBoxDireccion.Items.Add("0 Ninguno");
+            comboBoxColeccionista.Items.Add("0 Ninguno");
                     
             for (int i = 0; i < listCol.Count; i++)
             {
@@ -76,8 +77,10 @@ namespace bases_uno.Views
                 string tipo = Validacion.ValidarCombo(comboBoxType);
 
                 if ( tipo == "De un Miembro" && DuenoID == 0)
+                {
+                    panelOpcional.Visible = true;
                     throw new Exception("Debe seleccionar un dueño del local");
-
+                }                 
 
                 Local local = new Local(
                     Validacion.ValidarNull(textBoxNombre),
@@ -114,18 +117,16 @@ namespace bases_uno.Views
             parent.InsertForm(new locall(parent));
         }
 
-        private void btncancelar_Click_1(object sender, EventArgs e)
+        private void btncancelar_Click(object sender, EventArgs e)
         {
             parent.InsertForm(new locall(parent));
-
         }
 
-        private void btncrear_Click_1(object sender, EventArgs e)
+        private void btncrear_Click(object sender, EventArgs e)
         {
             Registrar();
         }
 
         #endregion
-
     }
 }

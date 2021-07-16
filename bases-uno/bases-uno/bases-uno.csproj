@@ -224,12 +224,6 @@
     <Compile Include="Views\local\local1.Designer.cs">
       <DependentUpon>local1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\local\local2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\local\local2.Designer.cs">
-      <DependentUpon>local2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\local\locall.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,12 +362,6 @@
     <Compile Include="Views\UserControls\Submenus\menulugar.Designer.cs">
       <DependentUpon>menulugar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserControls\Submenus\menuinteres.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\UserControls\Submenus\menuinteres.Designer.cs">
-      <DependentUpon>menuinteres.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\UserControls\Submenus\menucomic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -449,12 +437,6 @@
     <Compile Include="Views\UserControls\Submenus\menuorganizacion.Designer.cs">
       <DependentUpon>menuorganizacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserControls\Submenus\menurepresentante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\UserControls\Submenus\menurepresentante.Designer.cs">
-      <DependentUpon>menurepresentante.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Reports\ComicReport.rdlc" />
     <EmbeddedResource Include="Reports\ReportInteres.rdlc" />
     <EmbeddedResource Include="Reports\ReportLugar.rdlc" />
@@ -502,9 +484,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\local\local1.resx">
       <DependentUpon>local1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\local\local2.resx">
-      <DependentUpon>local2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\local\locall.resx">
       <DependentUpon>locall.cs</DependentUpon>
@@ -575,9 +554,6 @@
     <EmbeddedResource Include="Views\UserControls\Submenus\menulugar.resx">
       <DependentUpon>menulugar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserControls\Submenus\menuinteres.resx">
-      <DependentUpon>menuinteres.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menucomic.resx">
       <DependentUpon>menucomic.cs</DependentUpon>
     </EmbeddedResource>
@@ -618,9 +594,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menuorganizacion.resx">
       <DependentUpon>menuorganizacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserControls\Submenus\menurepresentante.resx">
-      <DependentUpon>menurepresentante.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="assets\logo.png" />
     <None Include="packages.config" />

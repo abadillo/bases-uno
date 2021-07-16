@@ -31,10 +31,6 @@ namespace bases_uno.Views
         {
             this.stpanel7 = new System.Windows.Forms.Panel();
             this.dipanel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btncancelar = new System.Windows.Forms.Button();
-            this.btncrear = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
             this.panelOpcional = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -59,9 +55,13 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btncancelar = new System.Windows.Forms.Button();
+            this.btncrear = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.panelOpcional.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -72,6 +72,7 @@ namespace bases_uno.Views
             this.panel9.SuspendLayout();
             this.hrpanel.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // stpanel7
@@ -93,6 +94,7 @@ namespace bases_uno.Views
             this.dipanel1.AutoScroll = true;
             this.dipanel1.Controls.Add(this.tableLayoutPanel1);
             this.dipanel1.Controls.Add(this.label14);
+            this.dipanel1.Controls.Add(this.panel2);
             this.dipanel1.Controls.Add(this.panelOpcional);
             this.dipanel1.Controls.Add(this.spacerpanel2);
             this.dipanel1.Controls.Add(this.tableLayoutPanel2);
@@ -103,68 +105,6 @@ namespace bases_uno.Views
             this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 18, 0);
             this.dipanel1.Size = new System.Drawing.Size(834, 679);
             this.dipanel1.TabIndex = 14;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.btncancelar, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btncrear, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 288);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(816, 40);
-            this.tableLayoutPanel1.TabIndex = 57;
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.btncancelar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btncancelar.FlatAppearance.BorderSize = 0;
-            this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncancelar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelar.ForeColor = System.Drawing.Color.LightGray;
-            this.btncancelar.Location = new System.Drawing.Point(275, 3);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(266, 34);
-            this.btncancelar.TabIndex = 1;
-            this.btncancelar.Text = "CANCELAR";
-            this.btncancelar.UseVisualStyleBackColor = false;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click_1);
-            // 
-            // btncrear
-            // 
-            this.btncrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
-            this.btncrear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btncrear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btncrear.FlatAppearance.BorderSize = 0;
-            this.btncrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncrear.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncrear.ForeColor = System.Drawing.Color.LightGray;
-            this.btncrear.Location = new System.Drawing.Point(3, 3);
-            this.btncrear.Name = "btncrear";
-            this.btncrear.Size = new System.Drawing.Size(266, 34);
-            this.btncrear.TabIndex = 0;
-            this.btncrear.Text = "Añadir";
-            this.btncrear.UseVisualStyleBackColor = false;
-            this.btncrear.Click += new System.EventHandler(this.btncrear_Click_1);
-            // 
-            // label14
-            // 
-            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.LightGray;
-            this.label14.Location = new System.Drawing.Point(0, 248);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(816, 40);
-            this.label14.TabIndex = 56;
-            this.label14.Text = "Opciones";
             // 
             // panelOpcional
             // 
@@ -314,6 +254,7 @@ namespace bases_uno.Views
             this.textBoxNombre.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxNombre.ForeColor = System.Drawing.Color.Black;
             this.textBoxNombre.Location = new System.Drawing.Point(0, 23);
+            this.textBoxNombre.MaxLength = 50;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(372, 23);
             this.textBoxNombre.TabIndex = 16;
@@ -453,6 +394,76 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 248);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(816, 23);
+            this.panel2.TabIndex = 58;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.btncancelar, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btncrear, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 311);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(816, 40);
+            this.tableLayoutPanel1.TabIndex = 60;
+            // 
+            // btncancelar
+            // 
+            this.btncancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.btncancelar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btncancelar.FlatAppearance.BorderSize = 0;
+            this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancelar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelar.ForeColor = System.Drawing.Color.LightGray;
+            this.btncancelar.Location = new System.Drawing.Point(275, 3);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(266, 34);
+            this.btncancelar.TabIndex = 1;
+            this.btncancelar.Text = "CANCELAR";
+            this.btncancelar.UseVisualStyleBackColor = false;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            // 
+            // btncrear
+            // 
+            this.btncrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.btncrear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btncrear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btncrear.FlatAppearance.BorderSize = 0;
+            this.btncrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncrear.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncrear.ForeColor = System.Drawing.Color.LightGray;
+            this.btncrear.Location = new System.Drawing.Point(3, 3);
+            this.btncrear.Name = "btncrear";
+            this.btncrear.Size = new System.Drawing.Size(266, 34);
+            this.btncrear.TabIndex = 0;
+            this.btncrear.Text = "Añadir";
+            this.btncrear.UseVisualStyleBackColor = false;
+            this.btncrear.Click += new System.EventHandler(this.btncrear_Click);
+            // 
+            // label14
+            // 
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.LightGray;
+            this.label14.Location = new System.Drawing.Point(0, 271);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(816, 40);
+            this.label14.TabIndex = 59;
+            this.label14.Text = "Opciones";
+            // 
             // localr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,7 +475,6 @@ namespace bases_uno.Views
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.panelOpcional.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -479,6 +489,7 @@ namespace bases_uno.Views
             this.hrpanel.ResumeLayout(false);
             this.hrpanel.PerformLayout();
             this.panel6.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -505,15 +516,16 @@ namespace bases_uno.Views
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxDireccion;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btncancelar;
-        private System.Windows.Forms.Button btncrear;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panelOpcional;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox comboBoxColeccionista;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btncancelar;
+        private System.Windows.Forms.Button btncrear;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel2;
     }
 }

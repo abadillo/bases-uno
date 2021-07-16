@@ -108,9 +108,6 @@ namespace bases_uno.Views
 
                 int edad = Validacion.Edad(Validacion.ValidarDateTime(textBoxFechaNacimiento, true));
 
-                if (edad < 18)
-                    panelOpcional.Visible = true;
-
                 string[] tokens = Validacion.ValidarCombo(comboBoxLugarNacimiento).Split(' ');
                 int LugarNID = int.Parse(tokens[0]);
 
@@ -125,13 +122,13 @@ namespace bases_uno.Views
 
                 if (edad < 18 && RepresentanteCID == 0 && RepresentanteRID == 0)
                 {
+                    panelOpcional.Visible = true;
                     throw new Exception("Debe selecionar un representante por ser menor de edad");
                 }
 
                 if (RepresentanteCID != 0 && RepresentanteRID != 0)
-                {
                     throw new Exception("Debe selecionar solo representante");
-                }
+                
 
                 coleccionista.PrimerNombre = Validacion.ValidarNull(textBoxPrimerNombre);
                 coleccionista.SegundoNombre = Validacion.ValidarNull(textBoxSegundoNombre);

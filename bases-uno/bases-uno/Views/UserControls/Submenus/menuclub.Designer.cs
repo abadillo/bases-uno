@@ -30,10 +30,13 @@ namespace bases_uno.Views.UserControls.Submenus
         private void InitializeComponent()
         {
             this.dipanel = new System.Windows.Forms.Panel();
-            this.buttonRegistro = new System.Windows.Forms.Button();
-            this.buttonListado = new System.Windows.Forms.Button();
+            this.buttonRegistroInteres = new System.Windows.Forms.Button();
+            this.buttonListadoInteres = new System.Windows.Forms.Button();
+            this.labelTituloInteres = new System.Windows.Forms.Label();
+            this.buttonRegistroClub = new System.Windows.Forms.Button();
+            this.buttonListadoClub = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelTitulo = new System.Windows.Forms.Label();
+            this.labelTituloClub = new System.Windows.Forms.Label();
             this.dipanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -41,8 +44,11 @@ namespace bases_uno.Views.UserControls.Submenus
             // dipanel
             // 
             this.dipanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(69)))), ((int)(((byte)(89)))));
-            this.dipanel.Controls.Add(this.buttonRegistro);
-            this.dipanel.Controls.Add(this.buttonListado);
+            this.dipanel.Controls.Add(this.buttonRegistroInteres);
+            this.dipanel.Controls.Add(this.buttonListadoInteres);
+            this.dipanel.Controls.Add(this.labelTituloInteres);
+            this.dipanel.Controls.Add(this.buttonRegistroClub);
+            this.dipanel.Controls.Add(this.buttonListadoClub);
             this.dipanel.Controls.Add(this.panel1);
             this.dipanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dipanel.Location = new System.Drawing.Point(0, 0);
@@ -51,61 +57,108 @@ namespace bases_uno.Views.UserControls.Submenus
             this.dipanel.Size = new System.Drawing.Size(218, 464);
             this.dipanel.TabIndex = 2;
             // 
-            // buttonRegistro
+            // buttonRegistroInteres
             // 
-            this.buttonRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
-            this.buttonRegistro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonRegistro.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.buttonRegistro.FlatAppearance.BorderSize = 0;
-            this.buttonRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRegistro.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegistro.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonRegistro.Location = new System.Drawing.Point(1, 104);
-            this.buttonRegistro.Name = "buttonRegistro";
-            this.buttonRegistro.Size = new System.Drawing.Size(216, 50);
-            this.buttonRegistro.TabIndex = 6;
-            this.buttonRegistro.Text = "Registro";
-            this.buttonRegistro.UseVisualStyleBackColor = false;
-            this.buttonRegistro.Click += new System.EventHandler(this.buttonRegistro_Click);
+            this.buttonRegistroInteres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.buttonRegistroInteres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRegistroInteres.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.buttonRegistroInteres.FlatAppearance.BorderSize = 0;
+            this.buttonRegistroInteres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegistroInteres.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistroInteres.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonRegistroInteres.Location = new System.Drawing.Point(1, 257);
+            this.buttonRegistroInteres.Name = "buttonRegistroInteres";
+            this.buttonRegistroInteres.Size = new System.Drawing.Size(216, 50);
+            this.buttonRegistroInteres.TabIndex = 9;
+            this.buttonRegistroInteres.Text = "Registro";
+            this.buttonRegistroInteres.UseVisualStyleBackColor = false;
+            this.buttonRegistroInteres.Click += new System.EventHandler(this.buttonRegistroInteres_Click);
             // 
-            // buttonListado
+            // buttonListadoInteres
             // 
-            this.buttonListado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
-            this.buttonListado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonListado.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.buttonListado.FlatAppearance.BorderSize = 0;
-            this.buttonListado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonListado.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonListado.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonListado.Location = new System.Drawing.Point(1, 54);
-            this.buttonListado.Name = "buttonListado";
-            this.buttonListado.Size = new System.Drawing.Size(216, 50);
-            this.buttonListado.TabIndex = 5;
-            this.buttonListado.Text = "Listado";
-            this.buttonListado.UseVisualStyleBackColor = false;
-            this.buttonListado.Click += new System.EventHandler(this.buttonListado_Click);
-            //
+            this.buttonListadoInteres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.buttonListadoInteres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonListadoInteres.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.buttonListadoInteres.FlatAppearance.BorderSize = 0;
+            this.buttonListadoInteres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonListadoInteres.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListadoInteres.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonListadoInteres.Location = new System.Drawing.Point(1, 207);
+            this.buttonListadoInteres.Name = "buttonListadoInteres";
+            this.buttonListadoInteres.Size = new System.Drawing.Size(216, 50);
+            this.buttonListadoInteres.TabIndex = 8;
+            this.buttonListadoInteres.Text = "Listado";
+            this.buttonListadoInteres.UseVisualStyleBackColor = false;
+            this.buttonListadoInteres.Click += new System.EventHandler(this.buttonListadoInteres_Click);
+            // 
+            // labelTituloInteres
+            // 
+            this.labelTituloInteres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.labelTituloInteres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelTituloInteres.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
+            this.labelTituloInteres.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelTituloInteres.Location = new System.Drawing.Point(1, 154);
+            this.labelTituloInteres.Name = "labelTituloInteres";
+            this.labelTituloInteres.Size = new System.Drawing.Size(216, 53);
+            this.labelTituloInteres.TabIndex = 7;
+            this.labelTituloInteres.Text = "Intereses";
+            this.labelTituloInteres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonRegistroClub
+            // 
+            this.buttonRegistroClub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.buttonRegistroClub.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRegistroClub.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.buttonRegistroClub.FlatAppearance.BorderSize = 0;
+            this.buttonRegistroClub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegistroClub.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistroClub.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonRegistroClub.Location = new System.Drawing.Point(1, 104);
+            this.buttonRegistroClub.Name = "buttonRegistroClub";
+            this.buttonRegistroClub.Size = new System.Drawing.Size(216, 50);
+            this.buttonRegistroClub.TabIndex = 6;
+            this.buttonRegistroClub.Text = "Registro";
+            this.buttonRegistroClub.UseVisualStyleBackColor = false;
+            this.buttonRegistroClub.Click += new System.EventHandler(this.buttonRegistro_Click);
+            // 
+            // buttonListadoClub
+            // 
+            this.buttonListadoClub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.buttonListadoClub.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonListadoClub.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.buttonListadoClub.FlatAppearance.BorderSize = 0;
+            this.buttonListadoClub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonListadoClub.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListadoClub.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonListadoClub.Location = new System.Drawing.Point(1, 54);
+            this.buttonListadoClub.Name = "buttonListadoClub";
+            this.buttonListadoClub.Size = new System.Drawing.Size(216, 50);
+            this.buttonListadoClub.TabIndex = 5;
+            this.buttonListadoClub.Text = "Listado";
+            this.buttonListadoClub.UseVisualStyleBackColor = false;
+            this.buttonListadoClub.Click += new System.EventHandler(this.buttonListado_Click);
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.labelTitulo);
+            this.panel1.Controls.Add(this.labelTituloClub);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(216, 53);
             this.panel1.TabIndex = 5;
             // 
-            // labelTitulo
+            // labelTituloClub
             // 
-            this.labelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
-            this.labelTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTitulo.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
-            this.labelTitulo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelTitulo.Location = new System.Drawing.Point(0, 0);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(216, 53);
-            this.labelTitulo.TabIndex = 3;
-            this.labelTitulo.Text = "Clubes";
-            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTituloClub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.labelTituloClub.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelTituloClub.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
+            this.labelTituloClub.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelTituloClub.Location = new System.Drawing.Point(0, 0);
+            this.labelTituloClub.Name = "labelTituloClub";
+            this.labelTituloClub.Size = new System.Drawing.Size(216, 53);
+            this.labelTituloClub.TabIndex = 3;
+            this.labelTituloClub.Text = "Clubes";
+            this.labelTituloClub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // menuclub
             // 
@@ -127,8 +180,11 @@ namespace bases_uno.Views.UserControls.Submenus
 
         private System.Windows.Forms.Panel dipanel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelTitulo;
-        private System.Windows.Forms.Button buttonRegistro;
-        private System.Windows.Forms.Button buttonListado;
+        private System.Windows.Forms.Label labelTituloClub;
+        private System.Windows.Forms.Button buttonRegistroClub;
+        private System.Windows.Forms.Button buttonListadoClub;
+        private System.Windows.Forms.Button buttonRegistroInteres;
+        private System.Windows.Forms.Button buttonListadoInteres;
+        private System.Windows.Forms.Label labelTituloInteres;
     }
 }

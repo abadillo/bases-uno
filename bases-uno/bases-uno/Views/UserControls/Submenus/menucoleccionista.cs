@@ -22,8 +22,8 @@ namespace bases_uno.Views.UserControls.Submenus
 
             InitializeComponent();
 
-            activeButton = buttonListado;
-            ButtonEnable(buttonListado, new coleccionistal(parent));
+            activeButton = buttonListadoColeccionista;
+            ButtonEnable(buttonListadoColeccionista, new coleccionistal(parent));
         }
 
         public void ButtonEnable(Button pressedButton, Form form)
@@ -37,13 +37,22 @@ namespace bases_uno.Views.UserControls.Submenus
 
         private void buttonListado_Click(object sender, EventArgs e)
         {
-            ButtonEnable(buttonListado, new coleccionistal(parent));
+            ButtonEnable(buttonListadoColeccionista, new coleccionistal(parent));
         }
 
         private void buttonRegistro_Click(object sender, EventArgs e)
         {
-            ButtonEnable(buttonRegistro, new coleccionistar(parent));
+            ButtonEnable(buttonRegistroColeccionista, new coleccionistar(parent));
         }
 
+        private void buttonListadoRepresentante_Click(object sender, EventArgs e)
+        {
+            ButtonEnable(buttonListadoRepresentante, new representantel(parent));
+        }
+
+        private void buttonRegistroRepresentante_Click(object sender, EventArgs e)
+        {
+            ButtonEnable(buttonRegistroRepresentante, new representanter(parent));
+        }
     }
 }

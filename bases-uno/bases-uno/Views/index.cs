@@ -26,8 +26,8 @@ namespace bases_uno.Views
 			// home startup window and menu
 
 
-			activebutton = iconButton3;
-			ButtonEnable(iconButton3, new menuinteres(this));
+			activebutton = iconButton6;
+			ButtonEnable(iconButton6, new menucomic(this));
 		}
 
 		public void InsertForm(object form)
@@ -78,27 +78,15 @@ namespace bases_uno.Views
 		
 			ButtonEnable(iconButton6, new menucomic(this));
 
-			//comicl form = new comicl(this);
-			//InsertForm(form);
 		}
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
 			ButtonEnable(iconButton4, new menulugar(this));
 
-			//lugarl form = new lugarl(this);
-			//InsertForm(form);
 		}
 
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-	
-			ButtonEnable(iconButton3, new menuinteres(this));
-
-			//interesl form = new interesl(this);
-			//InsertForm(form);
-
-		}
+       
 
         private void iconButton7_Click(object sender, EventArgs e)
         {
@@ -115,10 +103,7 @@ namespace bases_uno.Views
 			ButtonEnable(iconButton2, new menuclub(this));
 		}
 
-        private void iconButton9_Click(object sender, EventArgs e)
-        {
-			ButtonEnable(iconButton9, new menurepresentante(this));
-		}
+      
 
         private void iconButton10_Click(object sender, EventArgs e)
         {

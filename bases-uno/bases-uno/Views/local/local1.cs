@@ -20,7 +20,9 @@ namespace bases_uno.Views
 
         public index parent;
         public Local local;
-        public List<Local> list = Read.Locales();
+
+        public List<Lugar> listLug = Read.Lugares();
+        public List<Coleccionista> listCol = Read.Coleccionistas();
 
         public local1(index parent, Local local )
         {
@@ -34,31 +36,42 @@ namespace bases_uno.Views
             textBoxID.Text = local.ID.ToString();
             textBoxName.Text = local.Nombre;
 
+
             comboBoxType.Items.AddRange(new object[] {
-                "Pais",
-                "Estado",
-                "Ciudad",
-                "Direccion"
+                "Alquilado",
+                "De un Miembro"
             });
 
             comboBoxType.SelectedItem = local.Tipo;
 
 
-            comboBoxLocal.Items.Add("0 Ninguno");
-           
-
-            for (int i = 0; i < list.Count; i++)
+            // para la direccion
+            for (int i = 0; i < listLug.Count; i++)
             {
-                Local tmp = list[i];
+                Lugar tmp = listLug[i];
                 string item = tmp.ID + " " + tmp.Nombre;
 
-                comboBoxLocal.Items.Add(item);
+                comboBoxDireccion.Items.Add(item);
                 
-                if (tmp.ID == local.LocalID)
-                    comboBoxLocal.SelectedItem = item;
+                if (tmp.ID == local.LugarID)
+                    comboBoxDireccion.SelectedItem = item;
             }
-            if (local.LocalID == 0)
-                comboBoxLocal.SelectedIndex = 0;
+
+            // para el dueño si tiene
+            comboBoxColeccionista.Items.Add("0 Ninguno");
+
+            for (int i = 0; i < listCol.Count; i++)
+            {
+                Coleccionista tmp = listCol[i];
+                string item = tmp.ID + " " + tmp.PrimerNombre + " " + tmp.PrimerApellido;
+
+                comboBoxDireccion.Items.Add(item);
+
+                if (tmp.ID == local.ColeccionistaID)
+                    comboBoxDireccion.SelectedItem = item;
+            }
+            if (local.ColeccionistaID == 0)
+                comboBoxDireccion.SelectedIndex = 0;
 
             Update();
 
@@ -71,13 +84,26 @@ namespace bases_uno.Views
         { 
             try
             {
-                string[] tokens = comboBoxLocal.SelectedItem.ToString().Split(' ');
+                string[] tokens = Validacion.ValidarCombo(comboBoxDireccion).Split(' ');
                 int IDLocation = int.Parse(tokens[0]);
+
+                tokens = comboBoxColeccionista.SelectedItem.ToString().Split(' ');
+                int DuenoID = int.Parse(tokens[0]);
+
+                string tipo = Validacion.ValidarCombo(comboBoxType);
+
+                if (tipo == "De un Miembro" && DuenoID == 0)
+                {
+                    panelOpcional.Visible = true;
+                    throw new Exception("Debe seleccionar un dueño del local");
+                }
 
                 local.Nombre = Validacion.ValidarNull(textBoxName);
                 local.Tipo = Validacion.ValidarCombo(comboBoxType);
-                local.LocalID = IDLocation;
-                
+                local.LugarID = Read.Lugar(IDLocation).ID;
+                local.ColeccionistaID = Read.Coleccionista(DuenoID).ID;
+
+
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este local?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (dialogResult == DialogResult.Yes)
@@ -134,26 +160,29 @@ namespace bases_uno.Views
         #region click botones normales
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new local2(parent, local));
+            //parent.InsertForm(new local2(parent, local));
         }
 
         private void btnatras_Click(object sender, EventArgs e)
         {
             parent.InsertForm(new locall(parent));
         }
+
         private void btnmodificar_Click(object sender, EventArgs e)
         {
             Modificar();
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            parent.InsertForm(new local1(parent, local));
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
             Eliminar();
         }
-        private void btncancelar_Click(object sender, EventArgs e)
-        {
-            parent.InsertForm(new local1(parent, local));
-        }
+       
         #endregion
 
         #region click botones FontAwesome
@@ -172,8 +201,15 @@ namespace bases_uno.Views
         }
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            Acciones.EnableCombo(comboBoxLocal, iconButton1);
+            Acciones.EnableCombo(comboBoxDireccion, iconButton1);
         }
+        private void iconButton5_Click_1(object sender, EventArgs e)
+        {
+            Acciones.EnableCombo(comboBoxColeccionista, iconButton5);
+        }
+
         #endregion
+
+
     }
 }

@@ -23,16 +23,6 @@ namespace bases_uno.Views.Components
             this.parent = parent;
             this.local = local;
 
-            string locationName = "-";
-
-
-            Local temP = Read.Local(local.LocalID);
-             if (temP != null)
-            {
-                locationName = temP.Nombre;
-            }
-          
-
             InitializeComponent();
 
             label1.Text = local.Nombre;
@@ -40,7 +30,6 @@ namespace bases_uno.Views.Components
             label3_1.Text = "Tipo:";
             label3_2.Text = local.Tipo;
            
-            label2_2.Text = locationName;
 
             Update();
 
