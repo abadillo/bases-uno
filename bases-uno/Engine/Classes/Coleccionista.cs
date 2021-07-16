@@ -127,7 +127,7 @@ namespace Engine.Classes
                 {
                     Query += "segundo_apellido";
                 }
-                Query += " telefono, fecha_nacimiento, LUGAR_id_nacionalidad";
+                Query += " telefono, fecha_nacimiento, LUGAR_id_nacionalidad, ";
                 if (!(ColeccionistaRepresentanteID == 0))
                 {
                     Query += "coleccionista_documento_identidad, ";

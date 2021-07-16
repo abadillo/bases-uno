@@ -29,17 +29,40 @@ namespace Engine
         public static string ValidarCombo(ComboBox combo)
         {
 
-            string[] tokens = combo.SelectedItem.ToString().Split(' ');
-            int valor = int.Parse(tokens[0]);
+            //bool flag = false;
 
-            if (combo.SelectedItem == null || valor == 0)
+            try
+            {
+                return combo.SelectedItem.ToString();
+
+                //flag = true;
+                //Console.WriteLine("algo: _" + str);           
+
+            }
+            catch (Exception)
             {
                 combo.BackColor = Color.FromArgb(232, 81, 94);
                 throw new ApplicationException("Combo " + combo.Tag + " vacio");
             }
+                
+            //if (!(flag))
+            //{
+            //    combo.BackColor = Color.FromArgb(232, 81, 94);
+            //    throw new ApplicationException("Combo " + combo.Tag + " vacio");
+            //}
+            
+            //string[] tokens = combo.SelectedItem.ToString().Split(' ');
+            //int valor = int.Parse(tokens[0]);
+           
+            
+
+            //if (combo.SelectedItem == null || valor == 0)
+            //{
+                
+            //}
                                     
-            combo.BackColor = Color.LightGray;
-            return combo.SelectedItem.ToString();
+            //combo.BackColor = Color.LightGray;
+            //return combo.SelectedItem.ToString();
         }
 
         public static int ValidarInt(TextBox campo, bool NN)

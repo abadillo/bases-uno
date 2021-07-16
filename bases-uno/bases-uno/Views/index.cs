@@ -95,7 +95,8 @@ namespace bases_uno.Views
 
         private void iconButton8_Click(object sender, EventArgs e)
         {
-			ButtonEnable(iconButton8, new menuorganizacion(this));
+			// ButtonEnable(iconButton8, new menuorganizacion(this));
+			ButtonEnable(iconButton8, new menulocal(this));
 		}
 
         private void iconButton2_Click(object sender, EventArgs e)

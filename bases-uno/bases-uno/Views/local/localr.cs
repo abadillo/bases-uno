@@ -34,7 +34,7 @@ namespace bases_uno.Views
 
 
             // para la direccion
-            comboBoxDireccion.Items.Add("0 Ninguno");
+            
 
             for (int i = 0; i < listLug.Count; i++)
             {
@@ -43,12 +43,11 @@ namespace bases_uno.Views
 
                 comboBoxDireccion.Items.Add(item);
             }
-            comboBoxDireccion.SelectedIndex = 0;
 
 
-            // para el dueño si lo requiere
             comboBoxColeccionista.Items.Add("0 Ninguno");
-                    
+            // para el dueño si lo requiere
+
             for (int i = 0; i < listCol.Count; i++)
             {
                 Coleccionista tmp = listCol[i];
@@ -56,7 +55,8 @@ namespace bases_uno.Views
 
                 comboBoxColeccionista.Items.Add(item);
             }
-            comboBoxDireccion.SelectedIndex = 0;
+            comboBoxColeccionista.SelectedIndex = 0;
+
 
             Update();
         }
@@ -70,11 +70,11 @@ namespace bases_uno.Views
                 string[] tokens = Validacion.ValidarCombo(comboBoxDireccion).Split(' ');
                 int LugarID = int.Parse(tokens[0]);
 
-                tokens = comboBoxColeccionista.SelectedItem.ToString().Split(' ');
+                tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' '); 
                 int DuenoID = int.Parse(tokens[0]);
 
-
                 string tipo = Validacion.ValidarCombo(comboBoxType);
+
 
                 if ( tipo == "De un Miembro" && DuenoID == 0)
                 {
@@ -85,7 +85,7 @@ namespace bases_uno.Views
                 Local local = new Local(
                     Validacion.ValidarNull(textBoxNombre),
                     Read.Lugar(LugarID),
-                    Validacion.ValidarCombo(comboBoxType),
+                    tipo,
                     Read.Coleccionista(DuenoID)
                 ); 
              

@@ -28,8 +28,7 @@ namespace bases_uno.Views
             label1.Text = "Registro Coleccionista";
 
             // combos lugares
-            comboBoxLugarNacimiento.Items.Add("0 Ninguno");
-            comboBoxLugarResidencia.Items.Add("0 Ninguno");
+            
 
             for (int i = 0; i < listLug.Count; i++)
             {
@@ -43,9 +42,7 @@ namespace bases_uno.Views
                 comboBoxLugarNacimiento.Items.Add(item);
 
             }
-            comboBoxLugarNacimiento.SelectedIndex = 0;
-            comboBoxLugarResidencia.SelectedIndex = 0;
-
+            
             // combo representantes
             comboBoxRepresentanteR.Items.Add("0 Ninguno");
 
@@ -89,10 +86,10 @@ namespace bases_uno.Views
                 tokens = Validacion.ValidarCombo(comboBoxLugarResidencia).Split(' ');
                 int LugarRID = int.Parse(tokens[0]);
 
-                tokens = comboBoxRepresentanteR.SelectedItem.ToString().Split(' ');
+                tokens = Validacion.ValidarCombo(comboBoxRepresentanteR).Split(' ');
                 int RepresentanteRID = int.Parse(tokens[0]);
 
-                tokens = comboBoxRepresentanteC.SelectedItem.ToString().Split(' ');
+                tokens = Validacion.ValidarCombo(comboBoxRepresentanteC).Split(' ');
                 int RepresentanteCID = int.Parse(tokens[0]);
 
                 //Console.WriteLine(RepresentanteRID + " " + RepresentanteCID);
@@ -101,7 +98,7 @@ namespace bases_uno.Views
                 {
                     panelOpcional.Visible = true;
                     throw new Exception("Debe selecionar un representante por ser menor de edad");
-                }
+                } 
 
                 if (RepresentanteCID != 0 && RepresentanteRID != 0)
                     throw new Exception("Debe selecionar solo representante");
