@@ -117,57 +117,66 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "INSERT INTO coleccionista (documento_identidad, primer_nombre, ";
+                string Query = "INSERT INTO coleccionista (documento_identidad, primer_nombre, " +
+                    "primer_apellido, telefono, fecha_nacimiento, LUGAR_id_nacionalidad, LUGAR_id_direccion";
                 if (!(SegundoNombre == null))
                 {
-                    Query += "segundo_nombre, ";
+                    Query += ", segundo_nombre";
                 }
-                Query += "primer_apellido, ";
-                if (!(SegundoNombre == null))
+                if (!(SegundoApellido == null))
                 {
-                    Query += "segundo_apellido";
+                    Query += ", segundo_apellido";
                 }
-                Query += " telefono, fecha_nacimiento, LUGAR_id_nacionalidad, ";
                 if (!(ColeccionistaRepresentanteID == 0))
                 {
-                    Query += "coleccionista_documento_identidad, ";
+                    Query += ", coleccionista_documento_identidad";
                 }
                 else
                 {
                     if (!(RepresentanteID == 0))
                     {
-                        Query += "representante_documento_identidad, ";
+                        Query += ", representante_documento_identidad";
                     }
                 }
-                Query += " LUGAR_id_direccion) VALUES (@id, @primernombre, ";
+                Query += ") VALUES (@id, @primernombre, @primerapellido, " +
+                    "@telefono, @fechanacimiento, @lugarnacimiento,  @direccion";
                 if (!(SegundoNombre == null))
                 {
-                    Query += "@segundonombre";
+                    Query += ", @segundonombre";
                 }
-                Query += "@telefono, @fechanacimiento, @lugarnacimiento, ";
+                if (!(SegundoApellido == null))
+                {
+                    Query += ", @segundoapellido";
+                }
                 if (!(ColeccionistaRepresentanteID == 0))
                 {
-                    Query += "@coleccionistarepresentante, ";
+                    Query += ", @coleccionistarepresentante";
                 }
                 else
                 {
                     if (!(RepresentanteID == 0))
                     {
-                        Query += "@representante, ";
+                        Query += ", @representante";
                     }
                 }
-                Query += "@residencia)";
+                Query += ")";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
                 Script.Parameters.AddWithValue("primernombre", PrimerNombre);
+                Script.Parameters.AddWithValue("primerapellido", PrimerApellido);
+                Script.Parameters.AddWithValue("telefono", Telefono);
+                Script.Parameters.AddWithValue("fechanacimiento", FechaNacimiento);
+                Script.Parameters.AddWithValue("lugarnacimiento", LugarNacimiento);
+                Script.Parameters.AddWithValue("direccion", LugarResidencia);
                 if (!(SegundoNombre == null))
                 {
                     Script.Parameters.AddWithValue("segundonombre", SegundoNombre);
                 }
-                Script.Parameters.AddWithValue("telefono", Telefono);
-                Script.Parameters.AddWithValue("fechanacimiento", FechaNacimiento);
-                Script.Parameters.AddWithValue("lugarnacimiento", LugarNacimiento);
+                if (!(SegundoApellido == null))
+                {
+                    Script.Parameters.AddWithValue("segundoapellido", SegundoApellido);
+                }
                 if (!(ColeccionistaRepresentanteID == 0))
                 {
                     Script.Parameters.AddWithValue("coleccionistarepresentante", ColeccionistaRepresentanteID);

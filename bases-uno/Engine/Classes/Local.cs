@@ -12,7 +12,6 @@ namespace Engine.Classes
         #region Atributes
         public int ID { get; set; } //pk
         public string Nombre { get; set; }
-       
         public int LugarID { get; set; }
         public int ColeccionistaID { get; set; } //nullable
         public string Tipo { get; set; }
