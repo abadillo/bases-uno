@@ -208,10 +208,12 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT interes_id FROM clu_int WHRERE club_id = @id";
+                string Query = "SELECT interes_id FROM clu_int WHERE club_id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
+
+                //Console.WriteLine(Script.CommandText);
 
                 Reader = Script.ExecuteReader();
 
@@ -229,6 +231,7 @@ namespace Engine.Classes
                 CloseConnection();
             }
 
+            
             List<Interes> intereses = new List<Interes>();
             foreach (int id in ids)
             {

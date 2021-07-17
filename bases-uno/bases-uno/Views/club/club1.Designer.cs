@@ -42,6 +42,22 @@ namespace bases_uno.Views
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBoxLugar = new System.Windows.Forms.ComboBox();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBoxPaginaWeb = new System.Windows.Forms.TextBox();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.iconButton15 = new FontAwesome.Sharp.IconButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.textBoxFechaFundacion = new System.Windows.Forms.TextBox();
+            this.iconButton16 = new FontAwesome.Sharp.IconButton();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.iconButton14 = new FontAwesome.Sharp.IconButton();
@@ -57,35 +73,19 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.textBoxFechaFundacion = new System.Windows.Forms.TextBox();
-            this.iconButton16 = new FontAwesome.Sharp.IconButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.textBoxTelefono = new System.Windows.Forms.TextBox();
-            this.iconButton15 = new FontAwesome.Sharp.IconButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBoxPaginaWeb = new System.Windows.Forms.TextBox();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBoxLugar = new System.Windows.Forms.ComboBox();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.label4 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.spacerpanel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel11.SuspendLayout();
             this.hrpanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // stpanel7
@@ -286,6 +286,243 @@ namespace bases_uno.Views
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 136);
             this.tableLayoutPanel2.TabIndex = 29;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.comboBoxLugar);
+            this.panel5.Controls.Add(this.iconButton3);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(411, 93);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(402, 40);
+            this.panel5.TabIndex = 9;
+            // 
+            // comboBoxLugar
+            // 
+            this.comboBoxLugar.BackColor = System.Drawing.Color.LightGray;
+            this.comboBoxLugar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.comboBoxLugar.Enabled = false;
+            this.comboBoxLugar.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLugar.FormattingEnabled = true;
+            this.comboBoxLugar.Location = new System.Drawing.Point(111, 0);
+            this.comboBoxLugar.Name = "comboBoxLugar";
+            this.comboBoxLugar.Size = new System.Drawing.Size(254, 23);
+            this.comboBoxLugar.TabIndex = 17;
+            this.comboBoxLugar.Tag = "direccion";
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Roboto", 6F);
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
+            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 35;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton3.Location = new System.Drawing.Point(365, 0);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(37, 40);
+            this.iconButton3.TabIndex = 15;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.LightGray;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 23);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "direccion";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.textBoxPaginaWeb);
+            this.panel4.Controls.Add(this.iconButton2);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(411, 48);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(402, 39);
+            this.panel4.TabIndex = 8;
+            // 
+            // textBoxPaginaWeb
+            // 
+            this.textBoxPaginaWeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxPaginaWeb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPaginaWeb.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxPaginaWeb.Font = new System.Drawing.Font("Roboto", 14F);
+            this.textBoxPaginaWeb.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxPaginaWeb.Location = new System.Drawing.Point(111, 0);
+            this.textBoxPaginaWeb.MaxLength = 50;
+            this.textBoxPaginaWeb.Name = "textBoxPaginaWeb";
+            this.textBoxPaginaWeb.ReadOnly = true;
+            this.textBoxPaginaWeb.Size = new System.Drawing.Size(254, 23);
+            this.textBoxPaginaWeb.TabIndex = 16;
+            this.textBoxPaginaWeb.Tag = "paginaweb";
+            this.textBoxPaginaWeb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Roboto", 6F);
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 35;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton2.Location = new System.Drawing.Point(365, 0);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(37, 39);
+            this.iconButton2.TabIndex = 15;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.LightGray;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 23);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "paginaweb";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.textBoxTelefono);
+            this.panel9.Controls.Add(this.iconButton15);
+            this.panel9.Controls.Add(this.label9);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(3, 93);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(402, 40);
+            this.panel9.TabIndex = 7;
+            // 
+            // textBoxTelefono
+            // 
+            this.textBoxTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTelefono.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBoxTelefono.Font = new System.Drawing.Font("Roboto", 14F);
+            this.textBoxTelefono.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxTelefono.Location = new System.Drawing.Point(150, 0);
+            this.textBoxTelefono.MaxLength = 16;
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.ReadOnly = true;
+            this.textBoxTelefono.Size = new System.Drawing.Size(215, 23);
+            this.textBoxTelefono.TabIndex = 16;
+            this.textBoxTelefono.Tag = "telefono";
+            this.textBoxTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // iconButton15
+            // 
+            this.iconButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.iconButton15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton15.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton15.FlatAppearance.BorderSize = 0;
+            this.iconButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton15.Font = new System.Drawing.Font("Roboto", 6F);
+            this.iconButton15.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
+            this.iconButton15.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton15.IconSize = 35;
+            this.iconButton15.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton15.Location = new System.Drawing.Point(365, 0);
+            this.iconButton15.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton15.Name = "iconButton15";
+            this.iconButton15.Size = new System.Drawing.Size(37, 40);
+            this.iconButton15.TabIndex = 15;
+            this.iconButton15.UseVisualStyleBackColor = false;
+            this.iconButton15.Click += new System.EventHandler(this.iconButton15_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.LightGray;
+            this.label9.Location = new System.Drawing.Point(0, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 23);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "telefono";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.textBoxFechaFundacion);
+            this.panel10.Controls.Add(this.iconButton16);
+            this.panel10.Controls.Add(this.label10);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(3, 48);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(402, 39);
+            this.panel10.TabIndex = 6;
+            // 
+            // textBoxFechaFundacion
+            // 
+            this.textBoxFechaFundacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.textBoxFechaFundacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxFechaFundacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxFechaFundacion.Font = new System.Drawing.Font("Roboto", 14F);
+            this.textBoxFechaFundacion.ForeColor = System.Drawing.Color.LightGray;
+            this.textBoxFechaFundacion.Location = new System.Drawing.Point(150, 0);
+            this.textBoxFechaFundacion.MaxLength = 50;
+            this.textBoxFechaFundacion.Name = "textBoxFechaFundacion";
+            this.textBoxFechaFundacion.ReadOnly = true;
+            this.textBoxFechaFundacion.Size = new System.Drawing.Size(215, 23);
+            this.textBoxFechaFundacion.TabIndex = 16;
+            this.textBoxFechaFundacion.Tag = "fecha fundacion";
+            this.textBoxFechaFundacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // iconButton16
+            // 
+            this.iconButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
+            this.iconButton16.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton16.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.iconButton16.FlatAppearance.BorderSize = 0;
+            this.iconButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton16.Font = new System.Drawing.Font("Roboto", 6F);
+            this.iconButton16.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
+            this.iconButton16.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
+            this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton16.IconSize = 35;
+            this.iconButton16.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton16.Location = new System.Drawing.Point(365, 0);
+            this.iconButton16.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton16.Name = "iconButton16";
+            this.iconButton16.Size = new System.Drawing.Size(37, 39);
+            this.iconButton16.TabIndex = 15;
+            this.iconButton16.UseVisualStyleBackColor = false;
+            this.iconButton16.Click += new System.EventHandler(this.iconButton16_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.LightGray;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 23);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "fecha fundacion";
             // 
             // panel8
             // 
@@ -494,243 +731,6 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.textBoxFechaFundacion);
-            this.panel10.Controls.Add(this.iconButton16);
-            this.panel10.Controls.Add(this.label10);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 48);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(402, 39);
-            this.panel10.TabIndex = 6;
-            // 
-            // textBoxFechaFundacion
-            // 
-            this.textBoxFechaFundacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBoxFechaFundacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFechaFundacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxFechaFundacion.Font = new System.Drawing.Font("Roboto", 14F);
-            this.textBoxFechaFundacion.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxFechaFundacion.Location = new System.Drawing.Point(150, 0);
-            this.textBoxFechaFundacion.MaxLength = 50;
-            this.textBoxFechaFundacion.Name = "textBoxFechaFundacion";
-            this.textBoxFechaFundacion.ReadOnly = true;
-            this.textBoxFechaFundacion.Size = new System.Drawing.Size(215, 23);
-            this.textBoxFechaFundacion.TabIndex = 16;
-            this.textBoxFechaFundacion.Tag = "fecha fundacion";
-            this.textBoxFechaFundacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // iconButton16
-            // 
-            this.iconButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton16.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton16.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton16.FlatAppearance.BorderSize = 0;
-            this.iconButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton16.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton16.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton16.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton16.IconSize = 35;
-            this.iconButton16.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton16.Location = new System.Drawing.Point(365, 0);
-            this.iconButton16.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton16.Name = "iconButton16";
-            this.iconButton16.Size = new System.Drawing.Size(37, 39);
-            this.iconButton16.TabIndex = 15;
-            this.iconButton16.UseVisualStyleBackColor = false;
-            this.iconButton16.Click += new System.EventHandler(this.iconButton16_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.LightGray;
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 23);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "fecha fundacion";
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.textBoxTelefono);
-            this.panel9.Controls.Add(this.iconButton15);
-            this.panel9.Controls.Add(this.label9);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(3, 93);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(402, 40);
-            this.panel9.TabIndex = 7;
-            // 
-            // textBoxTelefono
-            // 
-            this.textBoxTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTelefono.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxTelefono.Font = new System.Drawing.Font("Roboto", 14F);
-            this.textBoxTelefono.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxTelefono.Location = new System.Drawing.Point(150, 0);
-            this.textBoxTelefono.MaxLength = 16;
-            this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.ReadOnly = true;
-            this.textBoxTelefono.Size = new System.Drawing.Size(215, 23);
-            this.textBoxTelefono.TabIndex = 16;
-            this.textBoxTelefono.Tag = "telefono";
-            this.textBoxTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // iconButton15
-            // 
-            this.iconButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton15.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton15.FlatAppearance.BorderSize = 0;
-            this.iconButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton15.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton15.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton15.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton15.IconSize = 35;
-            this.iconButton15.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton15.Location = new System.Drawing.Point(365, 0);
-            this.iconButton15.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton15.Name = "iconButton15";
-            this.iconButton15.Size = new System.Drawing.Size(37, 40);
-            this.iconButton15.TabIndex = 15;
-            this.iconButton15.UseVisualStyleBackColor = false;
-            this.iconButton15.Click += new System.EventHandler(this.iconButton15_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.LightGray;
-            this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 23);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "telefono";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.textBoxPaginaWeb);
-            this.panel4.Controls.Add(this.iconButton2);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(411, 48);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(402, 39);
-            this.panel4.TabIndex = 8;
-            // 
-            // textBoxPaginaWeb
-            // 
-            this.textBoxPaginaWeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.textBoxPaginaWeb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPaginaWeb.Dock = System.Windows.Forms.DockStyle.Right;
-            this.textBoxPaginaWeb.Font = new System.Drawing.Font("Roboto", 14F);
-            this.textBoxPaginaWeb.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxPaginaWeb.Location = new System.Drawing.Point(111, 0);
-            this.textBoxPaginaWeb.MaxLength = 50;
-            this.textBoxPaginaWeb.Name = "textBoxPaginaWeb";
-            this.textBoxPaginaWeb.ReadOnly = true;
-            this.textBoxPaginaWeb.Size = new System.Drawing.Size(254, 23);
-            this.textBoxPaginaWeb.TabIndex = 16;
-            this.textBoxPaginaWeb.Tag = "paginaweb";
-            this.textBoxPaginaWeb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 35;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton2.Location = new System.Drawing.Point(365, 0);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(37, 39);
-            this.iconButton2.TabIndex = 15;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 23);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "paginaweb";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.comboBoxLugar);
-            this.panel5.Controls.Add(this.iconButton3);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(411, 93);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(402, 40);
-            this.panel5.TabIndex = 9;
-            // 
-            // comboBoxLugar
-            // 
-            this.comboBoxLugar.BackColor = System.Drawing.Color.LightGray;
-            this.comboBoxLugar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.comboBoxLugar.Enabled = false;
-            this.comboBoxLugar.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxLugar.FormattingEnabled = true;
-            this.comboBoxLugar.Location = new System.Drawing.Point(111, 0);
-            this.comboBoxLugar.Name = "comboBoxLugar";
-            this.comboBoxLugar.Size = new System.Drawing.Size(254, 23);
-            this.comboBoxLugar.TabIndex = 17;
-            this.comboBoxLugar.Tag = "direccion";
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 35;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton3.Location = new System.Drawing.Point(365, 0);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(37, 40);
-            this.iconButton3.TabIndex = 15;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.LightGray;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 23);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "direccion";
-            // 
             // club1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -746,6 +746,14 @@ namespace bases_uno.Views
             this.tableLayoutPanel1.ResumeLayout(false);
             this.spacerpanel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -753,14 +761,6 @@ namespace bases_uno.Views
             this.hrpanel.ResumeLayout(false);
             this.hrpanel.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

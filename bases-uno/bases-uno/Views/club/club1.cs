@@ -127,7 +127,7 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new club2(parent, club));
+            parent.InsertForm(new club1_1(parent, club));
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 

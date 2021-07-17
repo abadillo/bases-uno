@@ -134,6 +134,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Views\club\club1_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\club\club1_2.Designer.cs">
+      <DependentUpon>club1_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\club\club1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\club\club1_1.Designer.cs">
+      <DependentUpon>club1_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\club\club1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +302,18 @@
     <Compile Include="Views\UserControls\itemcoleccionista.Designer.cs">
       <DependentUpon>itemcoleccionista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\miniitemcontacto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemcontacto.Designer.cs">
+      <DependentUpon>miniitemcontacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\miniiteminteres.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\miniiteminteres.Designer.cs">
+      <DependentUpon>miniiteminteres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\itemlocal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -440,6 +464,12 @@
     <EmbeddedResource Include="Reports\ComicReport.rdlc" />
     <EmbeddedResource Include="Reports\ReportInteres.rdlc" />
     <EmbeddedResource Include="Reports\ReportLugar.rdlc" />
+    <EmbeddedResource Include="Views\club\club1_2.resx">
+      <DependentUpon>club1_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\club\club1_1.resx">
+      <DependentUpon>club1_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\club\club1.resx">
       <DependentUpon>club1.cs</DependentUpon>
     </EmbeddedResource>
@@ -517,6 +547,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemcoleccionista.resx">
       <DependentUpon>itemcoleccionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\miniitemcontacto.resx">
+      <DependentUpon>miniitemcontacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\miniiteminteres.resx">
+      <DependentUpon>miniiteminteres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemlocal.resx">
       <DependentUpon>itemlocal.cs</DependentUpon>

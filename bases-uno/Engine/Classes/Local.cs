@@ -107,6 +107,8 @@ namespace Engine.Classes
                     Script.Parameters.AddWithValue("coleccionistaid", ColeccionistaID);
                 }
 
+
+            
                 Reader = Script.ExecuteReader();
 
                 if (Reader.Read())

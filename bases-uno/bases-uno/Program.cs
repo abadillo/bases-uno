@@ -17,8 +17,8 @@ namespace bases_uno
         [STAThread]
         static void Main()
         {
-            Club club = new Club("El Cetro", new DateTime(2018, 5, 28), "Centro de ayuda", Read.Lugar(14), 9531226);
-            club.Insert();
+            //Club club = new Club("El Cetro", new DateTime(2018, 5, 28), "Centro de ayuda", Read.Lugar(14), 9531226);
+            //club.Insert();
             SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

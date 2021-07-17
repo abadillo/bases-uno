@@ -26,8 +26,8 @@ namespace bases_uno.Views
 			// home startup window and menu
 
 
-			activebutton = iconButton6;
-			ButtonEnable(iconButton6, new menucomic(this));
+			activebutton = iconButton2;
+			ButtonEnable(iconButton2, new menuclub(this));
 		}
 
 		public void InsertForm(object form)

@@ -157,5 +157,19 @@ namespace Engine
             return edad;
             
         }
+
+
+
+        // porque no puedes ser como python :CCCCCCC
+        public static bool EstaEnLista (Object obj, List<Object> listObj)
+        {
+            for (int i = 0; i < listObj.Count; i++)
+            {
+                if (obj == listObj[i])
+                    return true;
+            }
+
+            return false;
+        }
     }
 }
