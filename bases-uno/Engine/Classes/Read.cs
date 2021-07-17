@@ -806,6 +806,43 @@ namespace Engine.Classes
             return list;
         }
 
+        public static List<DuenoHistorico> DuenosActuales()
+        {
+            List<DuenoHistorico> historicos = DuenosHistoricos();
+            List<DuenoHistorico> duenos = new List<DuenoHistorico>();
+
+            foreach (DuenoHistorico historico in historicos)
+            {
+                if (duenos.Count() == 0)
+                {
+                    duenos.Add(historico);
+                }
+                else
+                {
+                    bool flag = false;
+
+                    foreach (DuenoHistorico dueno in duenos)
+                    {
+                        if (dueno.ColeccionableID == historico.ColeccionableID && dueno.ComicID == historico.ComicID
+                            && dueno.FechaRegistro < historico.FechaRegistro)
+                        {
+                            duenos.Remove(dueno);
+                            duenos.Add(historico);
+                            flag = true;
+                            break;
+                        }
+                    }
+
+                    if (!flag)
+                    {
+                        duenos.Add(historico);
+                    }
+                }
+            }
+
+            return duenos;
+        }
+
         public static List<Interes> Intereses()
         {
             List<Interes> list = new List<Interes>();
