@@ -552,7 +552,7 @@ namespace Engine.Classes
             Cancelado = true;
             foreach (OrganizacionCaridad organizacion in OrganizacionesCaridad())
             {
-                organizacion.Delete();
+                EliminarOrganizacionCaridad(organizacion);
             }
             List<Participante> participantes = Read.Participantes();
             foreach (Participante participante in participantes)
