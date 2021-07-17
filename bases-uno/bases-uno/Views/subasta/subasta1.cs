@@ -36,10 +36,15 @@ namespace bases_uno.Views
 
             #region fill combos and textfields
 
+
+            string horaInicioStr = subasta.HoraInicio.Value.Hours.ToString() + ":" + subasta.HoraInicio.Value.Minutes.ToString();
+            string horaCierreStr = subasta.HoraCierre.Value.Hours.ToString() + ":" + subasta.HoraCierre.Value.Minutes.ToString();
+
+
             textBoxID.Text = subasta.ID.ToString();
             textBoxFecha.Text = subasta.Fecha.Value.ToShortDateString();
-            textBoxHoraInicio.Text = subasta.HoraInicio.Value.ToShortTimeString();
-            textBoxHoraCierre.Text = subasta.HoraCierre.Value.ToShortTimeString();
+            textBoxHoraInicio.Text = horaInicioStr;
+            textBoxHoraCierre.Text = horaCierreStr;
             radioButtonCaridad.Checked = subasta.Caridad;
             radioButtonCancelado.Checked = subasta.Cancelado;
 
@@ -115,9 +120,15 @@ namespace bases_uno.Views
                     throw new Exception("Debe seleccionar el local para realizar el evento");
                 }
 
-                subasta.Fecha = Validacion.ValidarDateTime(textBoxFecha, true);
-                subasta.HoraInicio = Validacion.ValidarTime(textBoxHoraInicio, true);
-                subasta.HoraCierre = Validacion.ValidarTime(textBoxHoraCierre, true);
+                DateTime fecha = Validacion.ValidarDateTime(textBoxFecha, true);
+                TimeSpan horaInicio = Validacion.ValidarTime(textBoxHoraInicio, true);
+                TimeSpan horaCierre = Validacion.ValidarTime(textBoxHoraCierre, true);
+
+                Validacion.ValidadFechayHora(fecha, horaInicio, horaCierre);
+
+                subasta.Fecha = fecha;
+                subasta.HoraInicio = horaInicio;
+                subasta.HoraCierre = horaCierre;
                 subasta.Tipo = Validacion.ValidarCombo(comboBoxType);
                 subasta.Cancelado = radioButtonCancelado.Checked;
                 subasta.Caridad = radioButtonCaridad.Checked;

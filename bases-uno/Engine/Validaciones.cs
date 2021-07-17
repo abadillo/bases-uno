@@ -146,14 +146,14 @@ namespace Engine
             return tmp;
         }
 
-        public static DateTime ValidarTime(TextBox campo, bool NN)
+        public static TimeSpan ValidarTime(TextBox campo, bool NN)
         {
             if (NN)
                 ValidarNull(campo);
 
-            DateTime tmp;
+            TimeSpan tmp;
 
-            if (!DateTime.TryParse(campo.Text, out tmp))
+            if (!TimeSpan.TryParse(campo.Text, out tmp))
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
                 campo.Focus();
@@ -167,10 +167,9 @@ namespace Engine
             return tmp;
         }
 
-
         public static int Edad (DateTime birthdate)
         {
-            var today = DateTime.Today;
+            DateTime today = DateTime.Today;
           
             int edad = today.Year - birthdate.Year;
 
@@ -178,6 +177,21 @@ namespace Engine
 
             return edad;
             
+        }
+
+
+        public static void ValidadFechayHora(DateTime fecha, TimeSpan horaInicio, TimeSpan horaCierre)
+        {
+            DateTime now = DateTime.Now;
+            DateTime fechaInicio = fecha.Date.Add(horaInicio);
+            DateTime fechaCierre = fecha.Date.Add(horaCierre);
+
+            if (fechaInicio < now)
+                throw new ApplicationException("La combinacion de fecha con hora de inicio es de una fecha pasada");
+          
+            if (fechaCierre <= fechaInicio)
+                throw new ApplicationException("La hora de cierre no puede ser antes de la hora de inicio");
+
         }
 
 

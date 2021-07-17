@@ -62,12 +62,18 @@ namespace bases_uno.Views
                     throw new Exception("Debe seleccionar el local para realizar el evento");
                 }
 
+                DateTime fecha = Validacion.ValidarDateTime(textBoxFecha, true);
+                TimeSpan horaInicio = Validacion.ValidarTime(textBoxHoraInicio, true);
+                TimeSpan horaCierre = Validacion.ValidarTime(textBoxHoraCierre, true);
+
+                Validacion.ValidadFechayHora(fecha, horaInicio, horaCierre);
+
                 //Console.WriteLine(Read.Local(localID).Nombre);
 
                 Subasta subasta = new Subasta(
-                    Validacion.ValidarDateTime(textBoxFecha,true),
-                    Validacion.ValidarTime(textBoxHoraInicio,true),
-                    Validacion.ValidarTime(textBoxHoraCierre,true),
+                    fecha,
+                    horaInicio,
+                    horaCierre,
                     tipo,
                     radioButtonCaridad.Checked,
                     false,

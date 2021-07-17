@@ -36,8 +36,9 @@ namespace bases_uno.Views.UserControls.Submenus
             this.buttonRegistroOrganizacion = new System.Windows.Forms.Button();
             this.buttonListadoOrganizacion = new System.Windows.Forms.Button();
             this.labelTituloOrganizacion = new System.Windows.Forms.Label();
+            this.buttonListadoAdminSubasta = new System.Windows.Forms.Button();
             this.buttonRegistroSubasta = new System.Windows.Forms.Button();
-            this.buttonListadoSubasta = new System.Windows.Forms.Button();
+            this.buttonListadoPlanSubasta = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelTituloSubasta = new System.Windows.Forms.Label();
             this.dipanel.SuspendLayout();
@@ -53,8 +54,9 @@ namespace bases_uno.Views.UserControls.Submenus
             this.dipanel.Controls.Add(this.buttonRegistroOrganizacion);
             this.dipanel.Controls.Add(this.buttonListadoOrganizacion);
             this.dipanel.Controls.Add(this.labelTituloOrganizacion);
+            this.dipanel.Controls.Add(this.buttonListadoAdminSubasta);
             this.dipanel.Controls.Add(this.buttonRegistroSubasta);
-            this.dipanel.Controls.Add(this.buttonListadoSubasta);
+            this.dipanel.Controls.Add(this.buttonListadoPlanSubasta);
             this.dipanel.Controls.Add(this.panel1);
             this.dipanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dipanel.Location = new System.Drawing.Point(0, 0);
@@ -70,15 +72,15 @@ namespace bases_uno.Views.UserControls.Submenus
             this.buttonRegistroLocal.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonRegistroLocal.FlatAppearance.BorderSize = 0;
             this.buttonRegistroLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRegistroLocal.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistroLocal.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegistroLocal.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonRegistroLocal.Location = new System.Drawing.Point(1, 410);
+            this.buttonRegistroLocal.Location = new System.Drawing.Point(1, 460);
             this.buttonRegistroLocal.Name = "buttonRegistroLocal";
             this.buttonRegistroLocal.Size = new System.Drawing.Size(216, 50);
-            this.buttonRegistroLocal.TabIndex = 12;
+            this.buttonRegistroLocal.TabIndex = 19;
             this.buttonRegistroLocal.Text = "Registro";
             this.buttonRegistroLocal.UseVisualStyleBackColor = false;
-            this.buttonRegistroLocal.Click += new System.EventHandler(this.buttonRegistroLocal_Click);
+            this.buttonRegistroLocal.Click += new System.EventHandler(this.buttonRegistroLocal_Click_1);
             // 
             // buttonListadoLocal
             // 
@@ -87,15 +89,15 @@ namespace bases_uno.Views.UserControls.Submenus
             this.buttonListadoLocal.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonListadoLocal.FlatAppearance.BorderSize = 0;
             this.buttonListadoLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonListadoLocal.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListadoLocal.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonListadoLocal.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonListadoLocal.Location = new System.Drawing.Point(1, 360);
+            this.buttonListadoLocal.Location = new System.Drawing.Point(1, 410);
             this.buttonListadoLocal.Name = "buttonListadoLocal";
             this.buttonListadoLocal.Size = new System.Drawing.Size(216, 50);
-            this.buttonListadoLocal.TabIndex = 11;
+            this.buttonListadoLocal.TabIndex = 18;
             this.buttonListadoLocal.Text = "Listado";
             this.buttonListadoLocal.UseVisualStyleBackColor = false;
-            this.buttonListadoLocal.Click += new System.EventHandler(this.buttonListadoLocal_Click);
+            this.buttonListadoLocal.Click += new System.EventHandler(this.buttonListadoLocal_Click_1);
             // 
             // labelTituloLocales
             // 
@@ -103,10 +105,10 @@ namespace bases_uno.Views.UserControls.Submenus
             this.labelTituloLocales.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelTituloLocales.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelTituloLocales.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelTituloLocales.Location = new System.Drawing.Point(1, 307);
+            this.labelTituloLocales.Location = new System.Drawing.Point(1, 357);
             this.labelTituloLocales.Name = "labelTituloLocales";
             this.labelTituloLocales.Size = new System.Drawing.Size(216, 53);
-            this.labelTituloLocales.TabIndex = 10;
+            this.labelTituloLocales.TabIndex = 17;
             this.labelTituloLocales.Text = "Locales";
             this.labelTituloLocales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -117,15 +119,15 @@ namespace bases_uno.Views.UserControls.Submenus
             this.buttonRegistroOrganizacion.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonRegistroOrganizacion.FlatAppearance.BorderSize = 0;
             this.buttonRegistroOrganizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRegistroOrganizacion.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistroOrganizacion.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegistroOrganizacion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonRegistroOrganizacion.Location = new System.Drawing.Point(1, 257);
+            this.buttonRegistroOrganizacion.Location = new System.Drawing.Point(1, 307);
             this.buttonRegistroOrganizacion.Name = "buttonRegistroOrganizacion";
             this.buttonRegistroOrganizacion.Size = new System.Drawing.Size(216, 50);
-            this.buttonRegistroOrganizacion.TabIndex = 9;
+            this.buttonRegistroOrganizacion.TabIndex = 16;
             this.buttonRegistroOrganizacion.Text = "Registro";
             this.buttonRegistroOrganizacion.UseVisualStyleBackColor = false;
-            this.buttonRegistroOrganizacion.Click += new System.EventHandler(this.buttonRegistroOrganizacion_Click);
+            this.buttonRegistroOrganizacion.Click += new System.EventHandler(this.buttonRegistroOrganizacion_Click_1);
             // 
             // buttonListadoOrganizacion
             // 
@@ -134,15 +136,15 @@ namespace bases_uno.Views.UserControls.Submenus
             this.buttonListadoOrganizacion.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonListadoOrganizacion.FlatAppearance.BorderSize = 0;
             this.buttonListadoOrganizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonListadoOrganizacion.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListadoOrganizacion.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonListadoOrganizacion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonListadoOrganizacion.Location = new System.Drawing.Point(1, 207);
+            this.buttonListadoOrganizacion.Location = new System.Drawing.Point(1, 257);
             this.buttonListadoOrganizacion.Name = "buttonListadoOrganizacion";
             this.buttonListadoOrganizacion.Size = new System.Drawing.Size(216, 50);
-            this.buttonListadoOrganizacion.TabIndex = 8;
+            this.buttonListadoOrganizacion.TabIndex = 15;
             this.buttonListadoOrganizacion.Text = "Listado";
             this.buttonListadoOrganizacion.UseVisualStyleBackColor = false;
-            this.buttonListadoOrganizacion.Click += new System.EventHandler(this.buttonListadoOrganizacion_Click);
+            this.buttonListadoOrganizacion.Click += new System.EventHandler(this.buttonListadoOrganizacion_Click_1);
             // 
             // labelTituloOrganizacion
             // 
@@ -150,12 +152,28 @@ namespace bases_uno.Views.UserControls.Submenus
             this.labelTituloOrganizacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelTituloOrganizacion.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelTituloOrganizacion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelTituloOrganizacion.Location = new System.Drawing.Point(1, 154);
+            this.labelTituloOrganizacion.Location = new System.Drawing.Point(1, 204);
             this.labelTituloOrganizacion.Name = "labelTituloOrganizacion";
             this.labelTituloOrganizacion.Size = new System.Drawing.Size(216, 53);
-            this.labelTituloOrganizacion.TabIndex = 7;
+            this.labelTituloOrganizacion.TabIndex = 14;
             this.labelTituloOrganizacion.Text = "Organizaciones";
             this.labelTituloOrganizacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonListadoAdminSubasta
+            // 
+            this.buttonListadoAdminSubasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.buttonListadoAdminSubasta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonListadoAdminSubasta.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.buttonListadoAdminSubasta.FlatAppearance.BorderSize = 0;
+            this.buttonListadoAdminSubasta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonListadoAdminSubasta.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListadoAdminSubasta.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonListadoAdminSubasta.Location = new System.Drawing.Point(1, 154);
+            this.buttonListadoAdminSubasta.Name = "buttonListadoAdminSubasta";
+            this.buttonListadoAdminSubasta.Size = new System.Drawing.Size(216, 50);
+            this.buttonListadoAdminSubasta.TabIndex = 13;
+            this.buttonListadoAdminSubasta.Text = "Listado (Adminitracion)";
+            this.buttonListadoAdminSubasta.UseVisualStyleBackColor = false;
             // 
             // buttonRegistroSubasta
             // 
@@ -164,7 +182,7 @@ namespace bases_uno.Views.UserControls.Submenus
             this.buttonRegistroSubasta.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.buttonRegistroSubasta.FlatAppearance.BorderSize = 0;
             this.buttonRegistroSubasta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRegistroSubasta.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistroSubasta.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegistroSubasta.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonRegistroSubasta.Location = new System.Drawing.Point(1, 104);
             this.buttonRegistroSubasta.Name = "buttonRegistroSubasta";
@@ -172,24 +190,24 @@ namespace bases_uno.Views.UserControls.Submenus
             this.buttonRegistroSubasta.TabIndex = 6;
             this.buttonRegistroSubasta.Text = "Registro";
             this.buttonRegistroSubasta.UseVisualStyleBackColor = false;
-            this.buttonRegistroSubasta.Click += new System.EventHandler(this.buttonRegistro_Click);
+            this.buttonRegistroSubasta.Click += new System.EventHandler(this.buttonRegistroSubasta_Click);
             // 
-            // buttonListadoSubasta
+            // buttonListadoPlanSubasta
             // 
-            this.buttonListadoSubasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
-            this.buttonListadoSubasta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonListadoSubasta.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.buttonListadoSubasta.FlatAppearance.BorderSize = 0;
-            this.buttonListadoSubasta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonListadoSubasta.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonListadoSubasta.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonListadoSubasta.Location = new System.Drawing.Point(1, 54);
-            this.buttonListadoSubasta.Name = "buttonListadoSubasta";
-            this.buttonListadoSubasta.Size = new System.Drawing.Size(216, 50);
-            this.buttonListadoSubasta.TabIndex = 5;
-            this.buttonListadoSubasta.Text = "Listado";
-            this.buttonListadoSubasta.UseVisualStyleBackColor = false;
-            this.buttonListadoSubasta.Click += new System.EventHandler(this.buttonListado_Click);
+            this.buttonListadoPlanSubasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.buttonListadoPlanSubasta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonListadoPlanSubasta.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.buttonListadoPlanSubasta.FlatAppearance.BorderSize = 0;
+            this.buttonListadoPlanSubasta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonListadoPlanSubasta.Font = new System.Drawing.Font("Roboto", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListadoPlanSubasta.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonListadoPlanSubasta.Location = new System.Drawing.Point(1, 54);
+            this.buttonListadoPlanSubasta.Name = "buttonListadoPlanSubasta";
+            this.buttonListadoPlanSubasta.Size = new System.Drawing.Size(216, 50);
+            this.buttonListadoPlanSubasta.TabIndex = 5;
+            this.buttonListadoPlanSubasta.Text = "Listado (Planificacion)";
+            this.buttonListadoPlanSubasta.UseVisualStyleBackColor = false;
+            this.buttonListadoPlanSubasta.Click += new System.EventHandler(this.buttonListadoPlanSubasta_Click);
             // 
             // panel1
             // 
@@ -235,12 +253,13 @@ namespace bases_uno.Views.UserControls.Submenus
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelTituloSubasta;
         private System.Windows.Forms.Button buttonRegistroSubasta;
-        private System.Windows.Forms.Button buttonListadoSubasta;
-        private System.Windows.Forms.Button buttonRegistroOrganizacion;
-        private System.Windows.Forms.Button buttonListadoOrganizacion;
-        private System.Windows.Forms.Label labelTituloOrganizacion;
+        private System.Windows.Forms.Button buttonListadoPlanSubasta;
+        private System.Windows.Forms.Button buttonListadoAdminSubasta;
         private System.Windows.Forms.Button buttonRegistroLocal;
         private System.Windows.Forms.Button buttonListadoLocal;
         private System.Windows.Forms.Label labelTituloLocales;
+        private System.Windows.Forms.Button buttonRegistroOrganizacion;
+        private System.Windows.Forms.Button buttonListadoOrganizacion;
+        private System.Windows.Forms.Label labelTituloOrganizacion;
     }
 }

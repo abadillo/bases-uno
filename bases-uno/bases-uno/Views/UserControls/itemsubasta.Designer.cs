@@ -108,9 +108,9 @@ namespace bases_uno.Views.Components
             this.label2_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2_2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2_2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2_2.Location = new System.Drawing.Point(163, 0);
+            this.label2_2.Location = new System.Drawing.Point(122, 0);
             this.label2_2.Name = "label2_2";
-            this.label2_2.Size = new System.Drawing.Size(246, 26);
+            this.label2_2.Size = new System.Drawing.Size(287, 26);
             this.label2_2.TabIndex = 32;
             this.label2_2.Text = "label2_2";
             this.label2_2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -122,7 +122,7 @@ namespace bases_uno.Views.Components
             this.label2_1.ForeColor = System.Drawing.Color.LightGray;
             this.label2_1.Location = new System.Drawing.Point(0, 0);
             this.label2_1.Name = "label2_1";
-            this.label2_1.Size = new System.Drawing.Size(163, 26);
+            this.label2_1.Size = new System.Drawing.Size(122, 26);
             this.label2_1.TabIndex = 31;
             this.label2_1.Text = "label2_1";
             // 

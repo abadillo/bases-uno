@@ -29,7 +29,10 @@ namespace bases_uno.Views.Components
           
             label2_1.Text = subasta.Fecha.Value.ToShortDateString();
 
-            label2_2.Text = subasta.HoraInicio.ToString() + " - " + subasta.HoraCierre.ToString();
+            string horaInicioStr = subasta.HoraInicio.Value.Hours.ToString() + ":" + subasta.HoraInicio.Value.Minutes.ToString();
+            string horaCierreStr = subasta.HoraCierre.Value.Hours.ToString() + ":" + subasta.HoraCierre.Value.Minutes.ToString();
+
+            label2_2.Text = horaInicioStr + " - " + horaCierreStr;
 
             string caridad = "No";
 
