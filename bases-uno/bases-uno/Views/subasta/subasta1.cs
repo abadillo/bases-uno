@@ -18,7 +18,7 @@ namespace bases_uno.Views
         
         public index parent;
         public Subasta subasta;
-        public List<Lugar> list = Read.Lugares();
+        public List<Local> listLoc = Read.Locales();
 
         public subasta1(index parent, Subasta subasta)
         {
@@ -27,24 +27,21 @@ namespace bases_uno.Views
 
             InitializeComponent();
 
-            label1.Text = "Subasta: " + subasta.Nombre;
+            label1.Text = "Subasta: " + subasta.ID;
 
             textBoxID.Text = subasta.ID.ToString();
-            textBoxNombre.Text = subasta.Nombre;
-            textBoxPaginaWeb.Text = subasta.PaginaWeb;
-            textBoxProposito.Text = subasta.Proposito;
-            textBoxFechaFundacion.Text = subasta.FechaFundacion.Value.ToShortDateString();
-            textBoxTelefono.Text = subasta.Telefono.ToString();
+            //textBoxFecha.Text = subasta.textBoxFecha.Value.ToShortDateString();
+            
                        
 
-            for (int i = 0; i < list.Count; i++)
+            for (int i = 0; i < listLoc.Count; i++)
             {
-                Lugar tmp = list[i];
+                Local tmp = listLoc[i];
                 string item = tmp.ID + " " + tmp.Nombre;
 
                 comboBoxLugar.Items.Add(item);
 
-                if (tmp.ID == subasta.LugarID)
+                if (tmp.ID == subasta.LocalID)
                     comboBoxLugar.SelectedItem = item;
             }
 
@@ -63,12 +60,12 @@ namespace bases_uno.Views
                 string[] tokens = Validacion.ValidarCombo(comboBoxLugar).Split(' ');
                 int LugarID = int.Parse(tokens[0]);
 
-                subasta.Nombre = Validacion.ValidarNull(textBoxNombre);
-                subasta.FechaFundacion = Validacion.ValidarDateTime(textBoxFechaFundacion, true);
-                subasta.Proposito = textBoxProposito.Text;
-                subasta.PaginaWeb = textBoxPaginaWeb.Text;
-                subasta.LugarID = Read.Lugar(LugarID).ID;
-                subasta.Telefono = Validacion.ValidarInt(textBoxTelefono, true);
+                //subasta.Nombre = Validacion.ValidarNull(textBoxNombre);
+                //subasta.FechaFundacion = Validacion.ValidarDateTime(textBoxFechaFundacion, true);
+                //subasta.Proposito = textBoxProposito.Text;
+                //subasta.PaginaWeb = textBoxPaginaWeb.Text;
+                //subasta.LugarID = Read.Lugar(LugarID).ID;
+                //subasta.Telefono = Validacion.ValidarInt(textBoxTelefono, true);
 
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Subasta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 

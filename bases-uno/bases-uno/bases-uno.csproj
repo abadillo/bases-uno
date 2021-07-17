@@ -290,6 +290,42 @@
     <Compile Include="Views\representante\representanter.Designer.cs">
       <DependentUpon>representanter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\subasta\subasta1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\subasta1.Designer.cs">
+      <DependentUpon>subasta1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\subasta1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\subasta1_1.Designer.cs">
+      <DependentUpon>subasta1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\subasta1_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\subasta1_2.Designer.cs">
+      <DependentUpon>subasta1_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\subasta2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\subasta2.Designer.cs">
+      <DependentUpon>subasta2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\subastal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\subastal.Designer.cs">
+      <DependentUpon>subastal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\subastar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\subastar.Designer.cs">
+      <DependentUpon>subastar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\itemclub.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -301,6 +337,18 @@
     </Compile>
     <Compile Include="Views\UserControls\itemcoleccionista.Designer.cs">
       <DependentUpon>itemcoleccionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\itemsubasta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\itemsubasta.Designer.cs">
+      <DependentUpon>itemsubasta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemclub.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemclub.Designer.cs">
+      <DependentUpon>miniitemclub.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\miniitemcontacto.cs">
       <SubType>UserControl</SubType>
@@ -355,6 +403,12 @@
     </Compile>
     <Compile Include="Views\UserControls\itemrepresentante.Designer.cs">
       <DependentUpon>itemrepresentante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemorganizacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemorganizacion.Designer.cs">
+      <DependentUpon>miniitemorganizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\Submenus\menuclub.cs">
       <SubType>Form</SubType>
@@ -461,6 +515,12 @@
     <Compile Include="Views\UserControls\Submenus\menuorganizacion.Designer.cs">
       <DependentUpon>menuorganizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\Submenus\menusubasta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\Submenus\menusubasta.Designer.cs">
+      <DependentUpon>menusubasta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Reports\ComicReport.rdlc" />
     <EmbeddedResource Include="Reports\ReportInteres.rdlc" />
     <EmbeddedResource Include="Reports\ReportLugar.rdlc" />
@@ -542,11 +602,35 @@
     <EmbeddedResource Include="Views\representante\representanter.resx">
       <DependentUpon>representanter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\subasta1.resx">
+      <DependentUpon>subasta1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\subasta1_1.resx">
+      <DependentUpon>subasta1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\subasta1_2.resx">
+      <DependentUpon>subasta1_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\subasta2.resx">
+      <DependentUpon>subasta2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\subastal.resx">
+      <DependentUpon>subastal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\subastar.resx">
+      <DependentUpon>subastar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemclub.resx">
       <DependentUpon>itemclub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemcoleccionista.resx">
       <DependentUpon>itemcoleccionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\itemsubasta.resx">
+      <DependentUpon>itemsubasta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\miniitemclub.resx">
+      <DependentUpon>miniitemclub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\miniitemcontacto.resx">
       <DependentUpon>miniitemcontacto.cs</DependentUpon>
@@ -574,6 +658,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemrepresentante.resx">
       <DependentUpon>itemrepresentante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\miniitemorganizacion.resx">
+      <DependentUpon>miniitemorganizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menuclub.resx">
       <DependentUpon>menuclub.cs</DependentUpon>
@@ -630,6 +717,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\Submenus\menuorganizacion.resx">
       <DependentUpon>menuorganizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\Submenus\menusubasta.resx">
+      <DependentUpon>menusubasta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="assets\logo.png" />
     <None Include="packages.config" />

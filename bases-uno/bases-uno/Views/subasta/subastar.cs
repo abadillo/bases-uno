@@ -16,7 +16,7 @@ namespace bases_uno.Views
     {
 
         public index parent;
-        public List<Lugar> list = Read.Lugares();
+        public List<Local> list = Read.Locales();
 
         public subastar(  index parent )
         {
@@ -24,12 +24,17 @@ namespace bases_uno.Views
             InitializeComponent();
             label1.Text = "Registro Subasta";
 
+            comboBoxType.Items.AddRange(new object[] {
+                "Presencial",
+                "Virtual"
+            });
+
             for (int i = 0; i < list.Count; i++)
             {
-                Lugar tmp = list[i];
+                Local tmp = list[i];
                 string item = tmp.ID + " " + tmp.Nombre;
 
-                comboBoxLugar.Items.Add(item);
+                comboBoxLocal.Items.Add(item);
             }
 
             Update();
@@ -40,17 +45,28 @@ namespace bases_uno.Views
         {
             try
             {
-                string[] tokens = Validacion.ValidarCombo(comboBoxLugar).Split(' ');
-                int LugarID = int.Parse(tokens[0]);
+
+                string[] tokens = Validacion.ValidarCombo(comboBoxLocal).Split(' ');
+                int localID = int.Parse(tokens[0]);
+
+                string tipo = Validacion.ValidarCombo(comboBoxType);
+
+
+                if (tipo == "Presencial" && localID == 0)
+                {
+                    panelOpcional.Visible = true;
+                    throw new Exception("Debe seleccionar el local para realizar el evento");
+                }
+
 
                 Subasta subasta = new Subasta(
-                    Validacion.ValidarNull(textBoxNombre),
-                    Validacion.ValidarDateTime(textBoxFechaFundacion, true),
-                    textBoxProposito.Text,
-                    Read.Lugar(LugarID),
-                    Validacion.ValidarInt(textBoxTelefono, true),
-                    textBoxPaginaWeb.Text
-                  
+                    Validacion.ValidarDateTime(textBoxFecha,true),
+                    Validacion.ValidarTime(textBoxHoraInicio,true),
+                    Validacion.ValidarTime(textBoxHoraInicio,true),
+                    tipo,
+                    radioButtonCaridad.Checked,
+                    false,
+                    Read.Local(localID)               
                 );
 
                 subasta.Insert();
@@ -83,20 +99,34 @@ namespace bases_uno.Views
         {
             parent.InsertForm(new subastal(parent));
         }
-        private void textBoxFechaFundacion_Click(object sender, EventArgs e)
-        {
-            Acciones.EraseInput(textBoxFechaFundacion);
-        }
 
-        private void btncrear_Click_1(object sender, EventArgs e)
+        private void btncrear_Click(object sender, EventArgs e)
         {
             Registrar();
         }
 
-        private void btncancelar_Click_1(object sender, EventArgs e)
+        private void btncancelar_Click(object sender, EventArgs e)
         {
             parent.InsertForm(new subastal(parent));
         }
+
+        private void textBoxFecha_Click(object sender, EventArgs e)
+        {
+            Acciones.EraseInput(textBoxFecha);
+        }
+
+        private void textBoxHoraCierre_Click(object sender, EventArgs e)
+        {
+            Acciones.EraseInput(textBoxHoraCierre);
+        }
+
+
+        private void textBoxHoraInicio_Click(object sender, EventArgs e)
+        {
+            Acciones.EraseInput(textBoxHoraInicio);
+        }
+
         #endregion
+
     }
 }

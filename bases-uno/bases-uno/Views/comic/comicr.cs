@@ -32,10 +32,15 @@ namespace bases_uno.Views
             {
           
                 Comic comic = new Comic(
-                    Validacion.ValidarNull(textBoxTitle), Validacion.ValidarInt(textBoxNumber, true),
-                    Validacion.ValidarDateTime(textBoxPublicationDate, true), radioButtonColor.Checked,
-                    Validacion.ValidarNull(textBoxSynopsis), Validacion.ValidarInt(textBoxPages, true), radioButtonCover.Checked,
-                    Validacion.ValidarNull(textBoxEditor), Validacion.ValidarInt(textBoxVolumen, false),
+                    Validacion.ValidarNull(textBoxTitle), 
+                    Validacion.ValidarInt(textBoxNumber, true),
+                    Validacion.ValidarDateTime(textBoxPublicationDate, true),
+                    radioButtonColor.Checked,
+                    Validacion.ValidarNull(textBoxSynopsis), 
+                    Validacion.ValidarInt(textBoxPages, true), 
+                    radioButtonCover.Checked,
+                    Validacion.ValidarNull(textBoxEditor), 
+                    Validacion.ValidarInt(textBoxVolumen, false),
                     Validacion.ValidarFloat(textBoxPublicationPrice, false)
                 );
 

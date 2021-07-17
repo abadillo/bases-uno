@@ -15,10 +15,10 @@ namespace bases_uno.Views.Components
     {
                
         public index parent;
-        public Organizacion organizacion;
+        public OrganizacionCaridad organizacion;
         public Subasta subasta;
 
-        public miniitemorganizacion( Organizacion organizacion, Subasta subasta ,index parent )
+        public miniitemorganizacion(OrganizacionCaridad organizacion, Subasta subasta ,index parent )
         {
 
             this.parent = parent;
@@ -28,7 +28,7 @@ namespace bases_uno.Views.Components
             InitializeComponent();
 
             label1.Text = organizacion.Nombre;
-            label2_2.Text = organizacion.Descripcion;
+            label2_2.Text = organizacion.Mision;
 
             Update();
 
@@ -37,7 +37,8 @@ namespace bases_uno.Views.Components
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            subasta.EliminarOrganizacion(organizacion);
+       
+            subasta.EliminarOrganizacionCaridad(organizacion);
             parent.InsertForm(new subasta1_1(parent, subasta));
         }
 

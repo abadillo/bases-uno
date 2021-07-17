@@ -115,7 +115,7 @@ namespace bases_uno.Views
             this.tableLayoutPanel1.Controls.Add(this.btncancelar, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btncrear, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 311);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 328);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -162,7 +162,7 @@ namespace bases_uno.Views
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
             this.label14.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.LightGray;
-            this.label14.Location = new System.Drawing.Point(0, 271);
+            this.label14.Location = new System.Drawing.Point(0, 288);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(816, 40);
             this.label14.TabIndex = 59;
@@ -171,7 +171,7 @@ namespace bases_uno.Views
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 248);
+            this.panel2.Location = new System.Drawing.Point(0, 265);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(816, 23);
             this.panel2.TabIndex = 58;
@@ -181,7 +181,7 @@ namespace bases_uno.Views
             this.panelOpcional.Controls.Add(this.tableLayoutPanel3);
             this.panelOpcional.Controls.Add(this.panel13);
             this.panelOpcional.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelOpcional.Location = new System.Drawing.Point(0, 168);
+            this.panelOpcional.Location = new System.Drawing.Point(0, 185);
             this.panelOpcional.Name = "panelOpcional";
             this.panelOpcional.Size = new System.Drawing.Size(816, 80);
             this.panelOpcional.TabIndex = 55;
@@ -248,7 +248,7 @@ namespace bases_uno.Views
             // spacerpanel2
             // 
             this.spacerpanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.spacerpanel2.Location = new System.Drawing.Point(0, 145);
+            this.spacerpanel2.Location = new System.Drawing.Point(0, 162);
             this.spacerpanel2.Name = "spacerpanel2";
             this.spacerpanel2.Size = new System.Drawing.Size(816, 23);
             this.spacerpanel2.TabIndex = 30;
@@ -267,7 +267,7 @@ namespace bases_uno.Views
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 105);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 122);
             this.tableLayoutPanel2.TabIndex = 29;
             // 
             // panel1
@@ -275,10 +275,10 @@ namespace bases_uno.Views
             this.panel1.Controls.Add(this.comboBoxType);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 55);
+            this.panel1.Location = new System.Drawing.Point(3, 64);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.panel1.Size = new System.Drawing.Size(402, 47);
+            this.panel1.Size = new System.Drawing.Size(402, 55);
             this.panel1.TabIndex = 6;
             // 
             // comboBoxType
@@ -287,7 +287,7 @@ namespace bases_uno.Views
             this.comboBoxType.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.comboBoxType.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxType.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxType.Location = new System.Drawing.Point(0, 24);
+            this.comboBoxType.Location = new System.Drawing.Point(0, 32);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(372, 23);
             this.comboBoxType.TabIndex = 36;
@@ -313,7 +313,7 @@ namespace bases_uno.Views
             this.panel11.Location = new System.Drawing.Point(3, 3);
             this.panel11.Name = "panel11";
             this.panel11.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.panel11.Size = new System.Drawing.Size(402, 46);
+            this.panel11.Size = new System.Drawing.Size(402, 55);
             this.panel11.TabIndex = 5;
             // 
             // textBoxNombre
@@ -323,7 +323,7 @@ namespace bases_uno.Views
             this.textBoxNombre.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxNombre.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxNombre.ForeColor = System.Drawing.Color.Black;
-            this.textBoxNombre.Location = new System.Drawing.Point(0, 23);
+            this.textBoxNombre.Location = new System.Drawing.Point(0, 32);
             this.textBoxNombre.MaxLength = 50;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(372, 23);
@@ -350,7 +350,7 @@ namespace bases_uno.Views
             this.panel9.Location = new System.Drawing.Point(411, 3);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.panel9.Size = new System.Drawing.Size(402, 46);
+            this.panel9.Size = new System.Drawing.Size(402, 55);
             this.panel9.TabIndex = 3;
             // 
             // comboBoxDireccion
@@ -360,7 +360,7 @@ namespace bases_uno.Views
             this.comboBoxDireccion.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxDireccion.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDireccion.FormattingEnabled = true;
-            this.comboBoxDireccion.Location = new System.Drawing.Point(0, 23);
+            this.comboBoxDireccion.Location = new System.Drawing.Point(0, 32);
             this.comboBoxDireccion.Name = "comboBoxDireccion";
             this.comboBoxDireccion.Size = new System.Drawing.Size(372, 23);
             this.comboBoxDireccion.TabIndex = 37;

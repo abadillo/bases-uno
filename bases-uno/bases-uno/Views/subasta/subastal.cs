@@ -21,7 +21,7 @@ namespace bases_uno.Views
 
         public itemsubasta[] itemlist;
         
-        public List<Subasta> list = Read.Subastaes();
+        public List<Subasta> list = Read.Subastas();
 
         public subastal(index parent)
         {

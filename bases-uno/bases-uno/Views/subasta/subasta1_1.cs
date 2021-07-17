@@ -21,8 +21,8 @@ namespace bases_uno.Views
         public index parent;
         public Subasta subasta;
             
-        public List<Organizacion> altListInt;                    // para los organizaciones ya del subasta
-        public List<Organizacion> listInt = Read.Organizaciones();   // para el combo de organizacion
+        public List<OrganizacionCaridad> altListInt;                    // para los organizaciones ya del subasta
+        public List<OrganizacionCaridad> listInt = Read.OrganizacionesCaridad();   // para el combo de organizacion
 
         public subasta1_1(index parent, Subasta subasta)
         {
@@ -31,12 +31,12 @@ namespace bases_uno.Views
 
             InitializeComponent();
 
-            label1.Text = "Subasta: " + subasta.Nombre;
+            label1.Text = "Subasta: " + subasta.ID;
 
 
             // para los organizaciones ya del subasta
 
-            altListInt = subasta.Organizaciones();
+            altListInt = subasta.OrganizacionesCaridad();
             
        
             for (int i = 0; i < altListInt.Count; i++)
@@ -53,7 +53,7 @@ namespace bases_uno.Views
 
             for (int i = 0; i < listInt.Count; i++)
             {
-                Organizacion tmp = listInt[i];
+                OrganizacionCaridad tmp = listInt[i];
                 string item = tmp.ID + " " + tmp.Nombre;
 
                 comboBoxOrganizacion.Items.Add(item);
@@ -75,7 +75,7 @@ namespace bases_uno.Views
                 int OrganizacionID = int.Parse(tokens[0]);
 
 
-                Organizacion organizacion = Read.Organizacion(OrganizacionID);
+                OrganizacionCaridad organizacion = Read.OrganizacionCaridad(OrganizacionID);
 
                 for (int i = 0; i < altListInt.Count; i++)
                 { 
@@ -84,7 +84,9 @@ namespace bases_uno.Views
                     
                 }
 
-                subasta.AgregarOrganizacion(organizacion);
+                int porcentaje = 100; 
+
+                subasta.AgregarOrganizacionCaridad(organizacion, porcentaje);
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 parent.InsertForm(new subasta1_1(parent,subasta));

@@ -25,7 +25,7 @@ namespace bases_uno.Views
             
             InitializeComponent();
            
-            label1.Text = "Subasta: " + subasta.PaginaWeb;
+            label1.Text = "Subasta: " + subasta.ID;
 
             Update();
 		}

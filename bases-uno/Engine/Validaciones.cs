@@ -146,6 +146,28 @@ namespace Engine
             return tmp;
         }
 
+        public static DateTime ValidarTime(TextBox campo, bool NN)
+        {
+            if (NN)
+                ValidarNull(campo);
+
+            DateTime tmp;
+
+            if (!DateTime.TryParse(campo.Text, out tmp))
+            {
+                campo.BackColor = Color.FromArgb(232, 81, 94);
+                campo.Focus();
+                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser una hora valida con formato HH:MM");
+            }
+
+            if (campo.ReadOnly == false)
+            {
+                campo.BackColor = Color.LightGray;
+            }
+            return tmp;
+        }
+
+
         public static int Edad (DateTime birthdate)
         {
             var today = DateTime.Today;

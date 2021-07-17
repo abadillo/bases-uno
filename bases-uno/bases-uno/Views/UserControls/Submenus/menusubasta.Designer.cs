@@ -30,6 +30,9 @@ namespace bases_uno.Views.UserControls.Submenus
         private void InitializeComponent()
         {
             this.dipanel = new System.Windows.Forms.Panel();
+            this.buttonRegistroLocal = new System.Windows.Forms.Button();
+            this.buttonListadoLocal = new System.Windows.Forms.Button();
+            this.labelTituloLocales = new System.Windows.Forms.Label();
             this.buttonRegistroOrganizacion = new System.Windows.Forms.Button();
             this.buttonListadoOrganizacion = new System.Windows.Forms.Button();
             this.labelTituloOrganizacion = new System.Windows.Forms.Label();
@@ -44,6 +47,9 @@ namespace bases_uno.Views.UserControls.Submenus
             // dipanel
             // 
             this.dipanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(69)))), ((int)(((byte)(89)))));
+            this.dipanel.Controls.Add(this.buttonRegistroLocal);
+            this.dipanel.Controls.Add(this.buttonListadoLocal);
+            this.dipanel.Controls.Add(this.labelTituloLocales);
             this.dipanel.Controls.Add(this.buttonRegistroOrganizacion);
             this.dipanel.Controls.Add(this.buttonListadoOrganizacion);
             this.dipanel.Controls.Add(this.labelTituloOrganizacion);
@@ -54,8 +60,55 @@ namespace bases_uno.Views.UserControls.Submenus
             this.dipanel.Location = new System.Drawing.Point(0, 0);
             this.dipanel.Name = "dipanel";
             this.dipanel.Padding = new System.Windows.Forms.Padding(1);
-            this.dipanel.Size = new System.Drawing.Size(218, 464);
+            this.dipanel.Size = new System.Drawing.Size(218, 697);
             this.dipanel.TabIndex = 2;
+            // 
+            // buttonRegistroLocal
+            // 
+            this.buttonRegistroLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.buttonRegistroLocal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRegistroLocal.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.buttonRegistroLocal.FlatAppearance.BorderSize = 0;
+            this.buttonRegistroLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegistroLocal.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistroLocal.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonRegistroLocal.Location = new System.Drawing.Point(1, 410);
+            this.buttonRegistroLocal.Name = "buttonRegistroLocal";
+            this.buttonRegistroLocal.Size = new System.Drawing.Size(216, 50);
+            this.buttonRegistroLocal.TabIndex = 12;
+            this.buttonRegistroLocal.Text = "Registro";
+            this.buttonRegistroLocal.UseVisualStyleBackColor = false;
+            this.buttonRegistroLocal.Click += new System.EventHandler(this.buttonRegistroLocal_Click);
+            // 
+            // buttonListadoLocal
+            // 
+            this.buttonListadoLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(84)))), ((int)(((byte)(110)))));
+            this.buttonListadoLocal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonListadoLocal.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.buttonListadoLocal.FlatAppearance.BorderSize = 0;
+            this.buttonListadoLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonListadoLocal.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListadoLocal.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonListadoLocal.Location = new System.Drawing.Point(1, 360);
+            this.buttonListadoLocal.Name = "buttonListadoLocal";
+            this.buttonListadoLocal.Size = new System.Drawing.Size(216, 50);
+            this.buttonListadoLocal.TabIndex = 11;
+            this.buttonListadoLocal.Text = "Listado";
+            this.buttonListadoLocal.UseVisualStyleBackColor = false;
+            this.buttonListadoLocal.Click += new System.EventHandler(this.buttonListadoLocal_Click);
+            // 
+            // labelTituloLocales
+            // 
+            this.labelTituloLocales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
+            this.labelTituloLocales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelTituloLocales.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold);
+            this.labelTituloLocales.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelTituloLocales.Location = new System.Drawing.Point(1, 307);
+            this.labelTituloLocales.Name = "labelTituloLocales";
+            this.labelTituloLocales.Size = new System.Drawing.Size(216, 53);
+            this.labelTituloLocales.TabIndex = 10;
+            this.labelTituloLocales.Text = "Locales";
+            this.labelTituloLocales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonRegistroOrganizacion
             // 
@@ -157,7 +210,7 @@ namespace bases_uno.Views.UserControls.Submenus
             this.labelTituloSubasta.Name = "labelTituloSubasta";
             this.labelTituloSubasta.Size = new System.Drawing.Size(216, 53);
             this.labelTituloSubasta.TabIndex = 3;
-            this.labelTituloSubasta.Text = "Subastaes";
+            this.labelTituloSubasta.Text = "Subastas";
             this.labelTituloSubasta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // menusubasta
@@ -165,7 +218,7 @@ namespace bases_uno.Views.UserControls.Submenus
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(218, 464);
+            this.ClientSize = new System.Drawing.Size(218, 697);
             this.Controls.Add(this.dipanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "menusubasta";
@@ -186,5 +239,8 @@ namespace bases_uno.Views.UserControls.Submenus
         private System.Windows.Forms.Button buttonRegistroOrganizacion;
         private System.Windows.Forms.Button buttonListadoOrganizacion;
         private System.Windows.Forms.Label labelTituloOrganizacion;
+        private System.Windows.Forms.Button buttonRegistroLocal;
+        private System.Windows.Forms.Button buttonListadoLocal;
+        private System.Windows.Forms.Label labelTituloLocales;
     }
 }

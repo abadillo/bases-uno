@@ -25,13 +25,24 @@ namespace bases_uno.Views.Components
 
             InitializeComponent();
                         
-            label1.Text = subasta.Nombre;
-           
-            label2_1.Text = subasta.Proposito;
-            label2_2.Text = subasta.FechaFundacion.Value.ToShortDateString();
+            label1.Text = subasta.ID.ToString();
+          
+            label2_1.Text = subasta.Fecha.Value.ToShortDateString();
 
-            label3_1.Text = "Pagina Web: " + "\n" + "Telefono: ";
-            label3_2.Text =  subasta.PaginaWeb + "\n" + subasta.Telefono.ToString();
+            label2_2.Text = subasta.HoraInicio.ToString() + " - " + subasta.HoraCierre.ToString();
+
+            string caridad = "No";
+
+            if (subasta.Caridad)
+                caridad = "Si";
+
+            string cancelada = "No";
+
+            if (subasta.Cancelado) 
+                cancelada = "Si";
+           
+            label3_1.Text = "Tipo: " + "\n" + "Caridad: " + "\n" + "Cancelada: ";
+            label3_2.Text =  subasta.Tipo + "\n" + caridad + "\n" + cancelada;
 
             Update();
 

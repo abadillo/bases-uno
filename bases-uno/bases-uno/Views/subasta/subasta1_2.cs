@@ -22,27 +22,29 @@ namespace bases_uno.Views
         public Subasta subasta;
 
         
-        public List<Club> listCon = Read.Clubs();
+        public List<Club> listClu = Read.Clubes();
 
         public subasta1_2(index parent, Subasta subasta)
         {
             this.parent = parent;
             this.subasta = subasta;
 
+           
+
             InitializeComponent();
 
-            label1.Text = "Subasta: " + subasta.Nombre;
+            label1.Text = "Subasta: " + subasta.ID;
 
             
-            for (int i = 0; i < listCon.Count; i++)
+            for (int i = 0; i < listClu.Count; i++)
             {
                 /// Console.WriteLine(list[i]);
                 ///
 
-                if (listCon[i].SubastaID == subasta.ID)
+                if (listClu[i].ID == subasta.ID)
                 {
 
-                    miniitemclub item = new miniitemclub(listCon[i], subasta, parent);
+                    miniitemclub item = new miniitemclub(listClu[i], subasta, parent);
                     item.Dock = DockStyle.Top;
 
                     dipanel2.Controls.Add(item);
@@ -82,15 +84,15 @@ namespace bases_uno.Views
             try
             {
                 
-                Club club = new Club(
-                    Validacion.ValidarNull(textBoxPlataforma),
-                    subasta,
-                    textBoxUsuarioEmail.Text,
-                    Validacion.ValidarInt(textBoxTelefono,false) 
-                );
+                //Club club = new Club(
+                //    Validacion.ValidarNull(textBoxPlataforma),
+                //    subasta,
+                //    textBoxUsuarioEmail.Text,
+                //    Validacion.ValidarInt(textBoxTelefono,false) 
+                //);
 
 
-                club.Insert();
+                //club.Insert();
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 parent.InsertForm(new subasta1_2(parent, subasta));

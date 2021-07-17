@@ -60,5 +60,15 @@ namespace bases_uno.Views.UserControls.Submenus
         {
             ButtonEnable(buttonRegistroOrganizacion, new organizacionr(parent));
         }
+
+        private void buttonListadoLocal_Click(object sender, EventArgs e)
+        {
+            ButtonEnable(buttonRegistroLocal, new locall(parent));
+        }
+
+        private void buttonRegistroLocal_Click(object sender, EventArgs e)
+        {
+            ButtonEnable(buttonRegistroLocal, new localr(parent));
+        }
     }
 }

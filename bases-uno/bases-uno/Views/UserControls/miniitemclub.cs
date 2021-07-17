@@ -28,9 +28,9 @@ namespace bases_uno.Views.Components
             InitializeComponent();
 
             //Console.WriteLine(club.Telefono);
-            label1.Text = club.Plataforma;
+            label1.Text = club.Nombre;
             label2.Text = club.Telefono.ToString();
-            label3.Text = club.Email;
+            label3.Text = Read.Lugar(club.LugarID).Nombre;
 
             Update();
 
