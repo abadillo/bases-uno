@@ -97,7 +97,7 @@ namespace Engine.Classes
 
                 string Query = "INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, " +
                     "cancelado, local_id) " +
-                    "VALUES (@fecha, @horainicio, @horacierre, @tipo, @caridad, @cancelado) RETURNING id";
+                    "VALUES (@fecha, @horainicio, @horacierre, @tipo, @caridad, @cancelado, @localid) RETURNING id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("fecha", Fecha);
