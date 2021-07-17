@@ -178,6 +178,86 @@ namespace Engine.Classes
         #endregion
 
         #region Other Methods
+        public void AgregarInteres(Interes interes)
+        {
+            try
+            {
+                OpenConnection();
+
+                string Query = "INSERT INTO clu_int (club_id, interes_id) " +
+                    "VALUES (@club, @interes)";
+                Script = new NpgsqlCommand(Query, Connection);
+
+                Script.Parameters.AddWithValue("club", ID);
+                Script.Parameters.AddWithValue("interes", interes.ID);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+        public List<Interes> Intereses()
+        {
+            List<int> ids = new List<int>();
+            try
+            {
+                OpenConnection();
+
+                string Query = "SELECT interes_id FROM clu_int WHRERE club_id = @id";
+                Script = new NpgsqlCommand(Query, Connection);
+
+                Script.Parameters.AddWithValue("id", ID);
+
+                Reader = Script.ExecuteReader();
+
+                while (Reader.Read())
+                {
+                    ids.Add(ReadInt(0));
+                }
+            }
+            catch
+            {
+                ids = new List<int>();
+            }
+            finally
+            {
+                CloseConnection();
+            }
+
+            List<Interes> intereses = new List<Interes>();
+            foreach (int id in ids)
+            {
+                intereses.Add(Read.Interes(id));
+            }
+            return intereses;
+        }
+
+        public void EliminarInteres(Interes interes)
+        {
+            try
+            {
+                OpenConnection();
+
+                string Query = "DELETE FROM clu_int WHERE club_id = @club AND interes_id = @interes";
+                Script = new NpgsqlCommand(Query, Connection);
+
+                Script.Parameters.AddWithValue("club", ID);
+                Script.Parameters.AddWithValue("interes", interes.ID);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
         #endregion
     }
 }
