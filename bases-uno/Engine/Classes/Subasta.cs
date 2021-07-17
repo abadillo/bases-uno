@@ -17,7 +17,7 @@ namespace Engine.Classes
         public string Tipo { get; set; }
         public bool Caridad { get; set; }
         public bool Cancelado { get; set; }
-        public int LocalID { get; set; }
+        public int LocalID { get; set; } //nullable
         #endregion
 
         #region Constructors
@@ -32,7 +32,7 @@ namespace Engine.Classes
         /// <para>}</para>
         /// </param>
         public Subasta(DateTime fecha, DateTime horaInicio, DateTime horaCierre, string tipo, 
-            bool caridad, bool cancelado, Local local)
+            bool caridad, bool cancelado, Local local = null)
         {
             Fecha = fecha;
             HoraInicio = horaInicio;
@@ -40,7 +40,14 @@ namespace Engine.Classes
             Tipo = tipo;
             Caridad = caridad;
             Cancelado = cancelado;
-            LocalID = local.ID;
+            if (local == null)
+            {
+                LocalID = 0;
+            }
+            else
+            {
+                LocalID = local.ID;
+            }
         }
 
         /// <summary>
@@ -90,7 +97,7 @@ namespace Engine.Classes
 
                 string Query = "INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, " +
                     "cancelado, local_id) " +
-                    "VALUES () RETURNING id";
+                    "VALUES (@fecha, @horainicio, @horacierre, @tipo, @caridad, @cancelado) RETURNING id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("fecha", Fecha);
@@ -99,7 +106,14 @@ namespace Engine.Classes
                 Script.Parameters.AddWithValue("tipo", Tipo);
                 Script.Parameters.AddWithValue("caridad", Caridad);
                 Script.Parameters.AddWithValue("cancelado", Cancelado);
-                Script.Parameters.AddWithValue("localid", LocalID);
+                if (LocalID == 0)
+                {
+                    Script.Parameters.AddWithValue("localid", DBNull.Value);
+                }
+                else
+                {
+                    Script.Parameters.AddWithValue("localid", LocalID);
+                }
 
                 Reader = Script.ExecuteReader();
 
@@ -133,7 +147,14 @@ namespace Engine.Classes
                 Script.Parameters.AddWithValue("tipo", Tipo);
                 Script.Parameters.AddWithValue("caridad", Caridad);
                 Script.Parameters.AddWithValue("cancelado", Cancelado);
-                Script.Parameters.AddWithValue("localid", LocalID);
+                if (LocalID == 0)
+                {
+                    Script.Parameters.AddWithValue("localid", DBNull.Value);
+                }
+                else
+                {
+                    Script.Parameters.AddWithValue("localid", LocalID);
+                }
 
                 Script.Prepare();
 

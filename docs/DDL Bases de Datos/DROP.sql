@@ -1,38 +1,38 @@
-DROP TABLE public.clu_int;
+DROP TABLE clu_int;
 
-DROP TABLE public.contacto;
+DROP TABLE contacto;
 
-DROP TABLE public.interes;
+DROP TABLE interes;
 
-DROP TABLE public.listado;
+DROP TABLE listado;
 
-DROP TABLE public.org_inv;
+DROP TABLE org_inv;
 
-DROP TABLE public.org_sub;
+DROP TABLE org_sub;
 
-DROP TABLE public.organizacion_caridad;
+DROP TABLE organizacion_caridad;
 
-DROP TABLE public.participante;
+DROP TABLE participante;
 
-DROP TABLE public.subasta;
+DROP TABLE subasta;
 
-DROP TABLE public.dueno_historico;
+DROP TABLE dueno_historico;
 
-DROP TABLE public.coleccionable;
+DROP TABLE coleccionable;
 
-DROP TABLE public.comic;
+DROP TABLE comic;
 
-DROP TABLE public.membresia;
+DROP TABLE membresia;
 
-DROP TABLE public."local";
+DROP TABLE "local";
 
-DROP TABLE public.club;
+DROP TABLE club;
 
-DROP TABLE public.coleccionista;
+DROP TABLE coleccionista;
 
-DROP TABLE public.representante;
+DROP TABLE representante;
 
-DROP TABLE public.lugar;
+DROP TABLE lugar;
 
 
 

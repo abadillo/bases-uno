@@ -1,0 +1,224 @@
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Venezuela', 'Pais', NULL);
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('USA', 'Pais', NULL);
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Francia', 'Pais', NULL);
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Japon', 'Pais', NULL);
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Distrito Capital', 'Estado', '1');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Miranda', 'Estado', '1');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Florida', 'Estado', '2');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('New York', 'Estado', '2');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Ile-de-France', 'Estado', '3');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Occitanie', 'Estado', '3');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Tokio', 'Estado', '4');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Kyoto', 'Estado', '4');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Caracas', 'Ciudad', '5');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Los Teques', 'Ciudad', '6');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Miami', 'Ciudad', '7');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('New York', 'Ciudad', '8');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Paris', 'Ciudad', '9');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Toulouse', 'Ciudad', '10');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Tokio', 'Ciudad', '11');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Kyoto', 'Ciudad', '12');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Calle Paris, Edif. La Joya', 'Direccion', '13');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Ave. Libertador, C.C. Sambil', 'Direccion', '13');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Calle Boyaca, El Rosal', 'Direccion', '13');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Calle El Estanque, La Florida', 'Direccion', '13');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('4ta. Transversal, Altamira', 'Direccion', '13');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Ave. Principal de Los Ruices', 'Direccion', '13');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Av. La Hoyada, C.C. La Hoyada', 'Direccion', '14');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Calle Junin', 'Direccion', '14');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Calle Guaicaipuro', 'Direccion', '14');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('17 SW 7th St', 'Direccion', '15');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('16 NW 15th ST', 'Direccion', '15');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('95 Madison Ave', 'Direccion', '16');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('15 Concord Ave', 'Direccion', '16');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Quai de Grands Augustins 15', 'Direccion', '17');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Rue Daguerre 5', 'Direccion', '17');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('8 Rue de Metz', 'Direccion', '18');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('14 Rue Gaston Salvayre', 'Direccion', '18');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('1 Chome-8-13 Nihonbashihoridomecho', 'Direccion', '19');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('5 Chuo-dori Ave', 'Direccion', '19');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('5 Kujo-dori St', 'Direccion', '20');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('12 Nishikujo Inmachi', 'Direccion', '20');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Ave. Venezuela, El Rosal', 'Direccion', '13');
+INSERT INTO lugar (nombre, tipo, lugar_id) VALUES ('Rusia', 'Pais', NULL);
+
+INSERT INTO interes (nombre, descripcion) VALUES ('Consola Nintendo 64', 'Controles, juegos, accessorios y ediciones limitadas de la consola Nintendo 64');
+INSERT INTO interes (nombre, descripcion) VALUES ('Tetris', 'Juego Clasico desde 1984');
+INSERT INTO interes (nombre, descripcion) VALUES ('Juego PS1 y PS2', 'Lo mejor en juegos de la 5ta y 6ta generacion de consolas de Sony');
+INSERT INTO interes (nombre, descripcion) VALUES ('Star Wars', 'Que la Fuerza nos acompane');
+INSERT INTO interes (nombre, descripcion) VALUES ('PC Gaming', 'A por la PC Master Race');
+INSERT INTO interes (nombre, descripcion) VALUES ('Xbox', 'Microsoft de verdad tiene una consola, no solo es Windows en otro hardware');
+INSERT INTO interes (nombre, descripcion) VALUES ('Arcade', 'Por los viejos tiempos y los nuevos');
+INSERT INTO interes (nombre, descripcion) VALUES ('MMORPG', 'Por la Horda, la Alianza, Eorzea y muchos mas');
+INSERT INTO interes (nombre, descripcion) VALUES ('Role-Play', 'NO es lo que piensan');
+
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('5/28/2018', '9510162', 'www.zendikar.com.ve', 'Mayor centro de coleccionistas de Caracas', '21', 'Zendikar')
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('11/20/2014', '9865412', 'www.asmodeus.com', 'Enfocados en las mejores subastas de Comics y Videojuegos', '22', 'Asmodeus')
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('2/4/2016', '123457820', NULL, 'Miamis Gaming Hub', '30', 'The GameHub')
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('7/8/2015', '852456321', 'www.theempire.com', 'The domain of the Geeks', '32', 'The Empire')
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('8/21/2009', '8529674', 'www.cathedrale.co.fr', 'La Religion Nerd', '34', 'Le Cathedrale')
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('8/15/2019', '7895410', 'www.limsalominsa.com', 'Le Vrai ComicCon', '36', 'Limsa Lominsa')
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('4/16/2017', '95145320', 'www.hingashi.com', 'We love RPG', '38', 'Hingashi')
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('9/10/2014', '84512639', 'www.kuganecc.co.jp', 'Comic and Videogame Haven', '40', 'Kugane')
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('2/3/2005', '7894512', 'www.lacueva.com.ve', 'Donde se consuige el amor al comic', '42', 'La Cueva')
+
+INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('8529674', 'Jose', 'Perez', '8/7/1984');
+INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('7418596', 'Maria', 'Ramirez', '9/7/1998');
+INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('9513265', 'Pablo', 'de San Martin', '4/7/1990');
+INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('2435768', 'Sara', 'Valladolid', '9/9/1999');
+INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('23456789', 'Marcello', 'Viera', '8/10/1885');
+INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('12456789', 'Andreas', 'Sarmiento', '9/9/1888');
+INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('123456', 'Sarah', 'Connor', '7/7/1987');
+INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('456123', 'Michael', 'Cane', '3/3/1985');
+INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('456789', 'Yuri', 'Gagarin', '6/6/1985');
+
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('25385914', 'Jose', 'Luis', 'Gil', 'Zamora', '4265558822', '6/30/1996', '1', NULL, NULL, '23'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('5222910', 'Maria', 'Salome', 'Zamora', NULL, '9531228', '5/28/1976', '1', NULL, NULL, '23'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('28314614', 'Gabriel', 'Jose', 'Gil', NULL, '4265874123', '11/9/2001', '1', NULL, NULL, '23'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('14000000', 'Alisaie', 'Yshtola', 'Levelieur', NULL, '9568741', '12/12/1990', '3', NULL, NULL, '35'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('3000000', 'Isaac', NULL, 'Asimov', NULL, '7996543258', '9/9/1988', '2', NULL, NULL, '31'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('1234567', 'Hideo', NULL, 'Kojima', NULL, '1234567845', '16/8/1974', '4', NULL, NULL, '41'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('2345678', 'Shigeru', NULL, 'Miyamoto', NULL, '74152965', '8/13/1978', '4', NULL, NULL, '39'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('14725836', 'John', 'Phillip', 'Carmack', NULL, '789654123', '8/9/1987', '2', NULL, NULL, '33'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('25836914', 'Gabe', 'Daniel', 'Newell', NULL, '852147896', '11/10/1978', '2', NULL, NULL, '28'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('1998456', 'Alexey', 'Leonidovij', 'Pajitnov', NULL, '838635954', '9/15/1991', '43', NULL, NULL, '29'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('12345698', 'Shinji', NULL, 'Mikami', NULL, '8745213654', '12/5/1992', '4', NULL, NULL, '24'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('14000001', 'Alphinaud', NULL, 'Levelieur', NULL, '12345678', '2/2/2005', '3', '14000000', NULL, '35'); 
+INSERT INTO  coleccionista (documento_identidad, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, telefono, fecha_nacimiento, lugar_id_nacionalidad, coleccionista_documento_identidad, representante_documento_identidad, lugar_id_direccion) VALUES ('12987456', 'John', NULL, 'Connor', NULL, '1239854', '3/3/2005', '2', NULL, '123456', '25'); 
+
+INSERT INTO contacto (uauario_email, telefono, plataforma, club_id) VALUES (NULL, NULL, 'Twitter', '1');
+INSERT INTO contacto (uauario_email, telefono, plataforma, club_id) VALUES (NULL, NULL, 'Facebook', '2');
+INSERT INTO contacto (uauario_email, telefono, plataforma, club_id) VALUES (NULL, NULL, 'Instagram', '3');
+INSERT INTO contacto (uauario_email, telefono, plataforma, club_id) VALUES (NULL, '45678921', 'Telefono', '4');
+INSERT INTO contacto (uauario_email, telefono, plataforma, club_id) VALUES ('contact@lecathedrale.fr', NULL, 'Email', '5');
+INSERT INTO contacto (uauario_email, telefono, plataforma, club_id) VALUES (NULL, NULL, 'Facebook', '6');
+INSERT INTO contacto (uauario_email, telefono, plataforma, club_id) VALUES (NULL, NULL, 'Facebook', '7');
+INSERT INTO contacto (uauario_email, telefono, plataforma, club_id) VALUES (NULL, NULL, 'Instagram', '8');
+INSERT INTO contacto (uauario_email, telefono, plataforma, club_id) VALUES (NULL, NULL, 'Twitter', '9');
+
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Major Motoko Kusanagi', 'Figura de la protagonista de Ghost in the Shell');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Mario Bros.', 'Figura live-size de los personajes de Mario Bros');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Final Fantasy VII OST', 'Disco de vinilo de la banda sonora de Final Fantasy');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Arcade de Pac-Man', 'Maquina de Arcade Original de Pacman');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Doom', 'Videojuego Clasico sellado en su caja');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Tifa Lockhart', 'Figura del personaje de Final Fantasy VII');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Cloud Strife', 'Figura del personaje de Final Fantasy VII');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Aerith Gainsborough', 'Figura del personaje de Final Fantasy VII');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Sephirot', 'Figura del personaje de Final Fantasy VII');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Jaina Proudmore', 'Figura del personaje de World of Warcraft');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Garrosh', 'Figura del personaje de World of Warcraft');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Lich King', 'Figura del personaje de World of Warcraft');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Terra Bradfort', 'Figura del personaje de Final Fantasy VI');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Loke', 'Figura del personaje de Final Fantasy VI');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Tomb Raider', 'Juego de 1996 para el Sega Genesys');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Lara Croft', 'Figura del personaje de Tomb Raider');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Sonic the Hedgehog', 'Primer juego del famoso erizo azul');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Sega Genesys', 'Legendaria Consola de Sega sellada en su caja');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Nes', 'Nintendo Entertainment System sellado en su caja');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('SNES', 'Super Nintendo Entertainment System sellado en su caja');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Nintendo GameCube', 'Nintendo GameCube sellado en su caja');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Nintendo 64', 'Nintendo 64 sellado en su caja');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Pokemon Red and Greem', 'Primeros juegos de Pokemon en japones sellados en su caja');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Son Goku Firmada', 'Figura del protagonista de Dragon Ball firmada por el Autor');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Los Cuatros Fantasticos firmada', 'Figura de los Cuatro Fantasticos, firmada por Jack Kirby y Stan Lee');
+
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '25385914', '1', NULL, '20');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '5222910', '2', NULL, '120');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '28314614', '3', NULL, '58');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14000000', '4', NULL, '550');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '3000000', '5', NULL, '26');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '1234567', '6', NULL, '900');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '2345678', '7', NULL, '874');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14725836', '8', NULL, '865');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '25836914', '9', NULL, '4123');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '1998456', '10', NULL, '9874');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '12345698', '11', NULL, '352');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14000001', '12', NULL, '325');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '12987456', '13', NULL, '126');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '25385914', '14', NULL, '754');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '5222910', '15', NULL, '865');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '28314614', '16', NULL, '3257');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14000000', '17', NULL, '2147');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '3000000', '18', NULL, '9853');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '1234567', '19', NULL, '125');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '2345678', '20', NULL, '3256');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14725836', '21', NULL, '5412');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '25836914', '22', NULL, '875');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '1998456', '23', NULL, '8563');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '12345698', '24', NULL, '215');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14000001', '25', NULL, '9514');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '12987456', NULL, '1', '120');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '25385914', NULL, '2', '6320');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '5222910', NULL, '3', '8741');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '28314614', NULL, '4', '412');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14000000', NULL, '5', '632');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '3000000', NULL, '6', '745');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '1234567', NULL, '7', '932');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '2345678', NULL, '8', '145');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14725836', NULL, '9', '632');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '25836914', NULL, '10', '214');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '1998456', NULL, '11', '8520');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '12345698', NULL, '12', '906');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14000001', NULL, '13', '800');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '12987456', NULL, '14', '741');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '25385914', NULL, '15', '950');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '5222910', NULL, '16', '8740');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '28314614', NULL, '17', '8000');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14000000', NULL, '18', '685');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '3000000', NULL, '19', '3210');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '1234567', NULL, '20', '1230');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '2345678', NULL, '21', '8521');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14725836', NULL, '22', '6321');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '25836914', NULL, '23', '2584');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '1998456', NULL, '24', '950');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '12345698', NULL, '25', '650');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '14000001', NULL, '26', '840');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '12987456', NULL, '27', '782');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '25385914', NULL, '28', '365');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '5222910', NULL, '29', '9320');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '28314614', NULL, '30', '9500');
+
+INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('La Cupula', '21', NULL, 'Alquilado');
+INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('La Esquina', '22', NULL, 'Alquilado');
+INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('El Estadio', '24', NULL, 'Alquilado');
+INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('The Gathering', '30', NULL, 'Alquilado');
+INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('The Park', '32', NULL, 'Alquilado');
+INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('Fomage', '36', NULL, 'Alquilado');
+INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('Bien Sur', '37', '25385914', 'De un Miembro');
+INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('Palace', '42', '14000000', 'De un Miembro');
+INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('Cote', '27', '2345678', 'De un Miembro');
+
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '1', '1', '25385914', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '2', '2', '5222910', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '3', '3', '28314614', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '4', '4', '14000000', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '5', '5', '3000000', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '6', '6', '1234567', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '7', '7', '2345678', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '8', '8', '14725836', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '9', '9', '25836914', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '1', NULL, '1998456', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '1', NULL, '12345698', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '4', NULL, '14000001', NULL);
+INSERT INTO membresia (fecha_ingreso, fecha_retiro, club_id, club_id_ider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '3', NULL, '12987456', NULL);
+
+INSERT INTO organizacion_caridad (nombre, mision) VALUES ('Cruz Roja', 'Salud');
+INSERT INTO organizacion_caridad (nombre, mision) VALUES ('Casa de Ronald MacDonald', 'Por el bienestar de los chicos');
+INSERT INTO organizacion_caridad (nombre, mision) VALUES ('Lynn Sage Cancer Research Foundation', 'Prevencion del Cancer');
+INSERT INTO organizacion_caridad (nombre, mision) VALUES ('Medicos Sin Fronteras', 'Ayuda a paises tercermundistas');
+INSERT INTO organizacion_caridad (nombre, mision) VALUES ('UNICEF', 'Ayuda a los chicos');
+INSERT INTO organizacion_caridad (nombre, mision) VALUES ('Rockeffeler Foundation', 'Ayuda a los mas necesitados');
+INSERT INTO organizacion_caridad (nombre, mision) VALUES ('Ford Foundation', 'Fundacion de la familia Ford');
+INSERT INTO organizacion_caridad (nombre, mision) VALUES ('Wellcome Trust', 'Investigacion Biomedica');
+INSERT INTO organizacion_caridad (nombre, mision) VALUES ('Bill and Melinda Gates Foundation', 'Educacion');
+
+INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2011', '14:00', '18:00', 'Presencial', FALSE, TRUE, '1');
+INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2012', '14:00', '18:00', 'Presencial', FALSE, TRUE, '2');
+INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2013', '14:00', '18:00', 'Presencial', FALSE, TRUE, '3');
+INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2014', '14:00', '18:00', 'Presencial', FALSE, TRUE, '4');
+INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2015', '14:00', '18:00', 'Presencial', FALSE, TRUE, '5');
+INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2016', '14:00', '18:00', 'Presencial', FALSE, TRUE, '6');
+INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2017', '14:00', '18:00', 'Presencial', FALSE, TRUE, '7');
+INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2018', '14:00', '18:00', 'Presencial', FALSE, TRUE, '8');
+INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2019', '14:00', '18:00', 'Virtual', TRUE, TRUE, NULL);
+
