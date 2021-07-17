@@ -12,8 +12,8 @@ namespace Engine.Classes
         #region Atributes
         public int ID { get; set; } //pk
         public Nullable<DateTime> Fecha { get; set; }
-        public Nullable<DateTime> HoraInicio { get; set; }
-        public Nullable<DateTime> HoraCierre { get; set; }
+        public Nullable<TimeSpan> HoraInicio { get; set; }
+        public Nullable<TimeSpan> HoraCierre { get; set; }
         public string Tipo { get; set; }
         public bool Caridad { get; set; }
         public bool Cancelado { get; set; }
@@ -31,7 +31,7 @@ namespace Engine.Classes
         /// <para>public const string Virtual = "Virtual";</para>
         /// <para>}</para>
         /// </param>
-        public Subasta(DateTime fecha, DateTime horaInicio, DateTime horaCierre, string tipo, 
+        public Subasta(DateTime fecha, TimeSpan horaInicio, TimeSpan horaCierre, string tipo, 
             bool caridad, bool cancelado, Local local = null)
         {
 
@@ -67,7 +67,7 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor General de la Clase, usualmente para la clase READ
         /// </summary>
-        public Subasta(int id, Nullable<DateTime> fecha, Nullable<DateTime> horaInicio, Nullable<DateTime> horaCierre, 
+        public Subasta(int id, Nullable<DateTime> fecha, Nullable<TimeSpan> horaInicio, Nullable<TimeSpan> horaCierre, 
             string tipo, bool caridad, bool cancelado, int localID)
         {
             ID = id;

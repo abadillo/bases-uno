@@ -535,8 +535,8 @@ namespace Engine.Classes
 
                 if (connection.Reader.Read())
                 {
-                    subasta = new Subasta(connection.ReadInt(0), connection.ReadDate(1), connection.ReadDate(2),
-                        connection.ReadDate(3), connection.ReadString(4), connection.ReadBool(5), connection.ReadBool(6),
+                    subasta = new Subasta(connection.ReadInt(0), connection.ReadDate(1), connection.ReadTime(2),
+                        connection.ReadTime(3), connection.ReadString(4), connection.ReadBool(5), connection.ReadBool(6),
                         connection.ReadInt(7));
                 }
             }
@@ -1139,8 +1139,8 @@ namespace Engine.Classes
 
                 while (connection.Reader.Read())
                 {
-                    Subasta modell = new Subasta(connection.ReadInt(0), connection.ReadDate(1), connection.ReadDate(2),
-                        connection.ReadDate(3), connection.ReadString(4), connection.ReadBool(5), connection.ReadBool(6),
+                    Subasta modell = new Subasta(connection.ReadInt(0), connection.ReadDate(1), connection.ReadTime(2),
+                        connection.ReadTime(3), connection.ReadString(4), connection.ReadBool(5), connection.ReadBool(6),
                         connection.ReadInt(7));
 
                     list.Add(modell);
