@@ -29,7 +29,7 @@ namespace bases_uno.Views
 
             InitializeComponent();
 			
-            label1.Text = "Listado: Subastaes";
+            label1.Text = "Listado: Subastas";
 
             for (int i = 0; i < list.Count; i++)
             {
