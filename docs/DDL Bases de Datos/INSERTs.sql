@@ -118,7 +118,7 @@ INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Nes', 'Ninten
 INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('SNES', 'Super Nintendo Entertainment System sellado en su caja');
 INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Nintendo GameCube', 'Nintendo GameCube sellado en su caja');
 INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Nintendo 64', 'Nintendo 64 sellado en su caja');
-INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Pokemon Red and Greem', 'Primeros juegos de Pokemon en japones sellados en su caja');
+INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Pokemon Red and Green', 'Primeros juegos de Pokemon en japones sellados en su caja');
 INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Son Goku Firmada', 'Figura del protagonista de Dragon Ball firmada por el Autor');
 INSERT INTO coleccionable (nombre, descripcion_detallada) VALUES ('Figura de Los Cuatros Fantasticos firmada', 'Figura de los Cuatro Fantasticos, firmada por Jack Kirby y Stan Lee');
 
@@ -177,6 +177,13 @@ INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_document
 INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '25385914', NULL, '28', '365');
 INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '5222910', NULL, '29', '9320');
 INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('3/3/2010', NULL, '28314614', NULL, '30', '9500');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('1/1/2019', NULL, '1998456', '1', NULL, '60');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('1/1/2019', NULL, '28314614', '14', NULL, '950');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('1/1/2019', NULL, '12987456', NULL, '2', '8500');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('1/1/2019', NULL, '1998456', '23', NULL, '9000');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('1/1/2019', NULL, '25385914', '6', NULL, '1200');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('1/1/2019', NULL, '1998456', '19', NULL, '300');
+INSERT INTO dueno_historico (fecha_registro, significado, coleccionista_documento_identidad, coleccionable_id, comic_id, precio_dolar) VALUES ('1/1/2019', NULL, '12987456', NULL, '7', '1000');
 
 INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('La Cupula', '21', NULL, 'Alquilado');
 INSERT INTO "local" (nombre, lugar_id, coleccionista_documento_identidad, tipo) VALUES ('La Esquina', '22', NULL, 'Alquilado');
@@ -222,3 +229,23 @@ INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, 
 INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2018', '14:00', '18:00', 'Presencial', FALSE, TRUE, '8');
 INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id) VALUES ('1/1/2019', '14:00', '18:00', 'Virtual', TRUE, TRUE, NULL);
 
+INSERT INTO org_inv (subasta_id, club_id_org, club_id_inv) VALUES ('9', '1', NULL);
+INSERT INTO org_inv (subasta_id, club_id_org, club_id_inv) VALUES ('9', NULL, '3');
+
+INSERT INTO org_sub (porcentaje, monto_recibido, organizacion_caridad_id, subasta_is) VALUES ('10', '2101', '9', '9');
+
+INSERT INTO participante (id_inscripcion, subasta_id, membresia_coleccionista_documento_identidad, membresia_club_id, membresia_fecha_ingreso, autorizado) VALUES ('1', '9', '25385914', '1', '3/3/2010', TRUE);
+INSERT INTO participante (id_inscripcion, subasta_id, membresia_coleccionista_documento_identidad, membresia_club_id, membresia_fecha_ingreso, autorizado) VALUES ('2', '9', '1998456', '1', '3/3/2010', TRUE);
+INSERT INTO participante (id_inscripcion, subasta_id, membresia_coleccionista_documento_identidad, membresia_club_id, membresia_fecha_ingreso, autorizado) VALUES ('3', '9', '12345698', '1', '3/3/2010', TRUE);
+INSERT INTO participante (id_inscripcion, subasta_id, membresia_coleccionista_documento_identidad, membresia_club_id, membresia_fecha_ingreso, autorizado) VALUES ('4', '9', '28314614', '3', '3/3/2010', TRUE);
+INSERT INTO participante (id_inscripcion, subasta_id, membresia_coleccionista_documento_identidad, membresia_club_id, membresia_fecha_ingreso, autorizado) VALUES ('5', '9', '12987456', '3', '3/3/2010', TRUE);
+
+INSERT INTO listado (orden, precio_base_dolar, precio_vendido_dolar, subasta_id, dueno_historico_id, dueno_historico_coleccionista_documento_identidad, dueno_historico_fecha_registro, participante_subasta_id, participante_id_inscripcion) VALUES (1, '1', '30', '60', '9', '1', '25385914', '3/3/2010', '2', '9');
+INSERT INTO listado (orden, precio_base_dolar, precio_vendido_dolar, subasta_id, dueno_historico_id, dueno_historico_coleccionista_documento_identidad, dueno_historico_fecha_registro, participante_subasta_id, participante_id_inscripcion) VALUES (2, '2', '800', '950', '9', '14', '25385914', '3/3/2010', '4', '9');
+INSERT INTO listado (orden, precio_base_dolar, precio_vendido_dolar, subasta_id, dueno_historico_id, dueno_historico_coleccionista_documento_identidad, dueno_historico_fecha_registro, participante_subasta_id, participante_id_inscripcion) VALUES (3, '3', '6500', '8500', '9', '27', '25385914', '3/3/2010', '5', '9');
+INSERT INTO listado (orden, precio_base_dolar, precio_vendido_dolar, subasta_id, dueno_historico_id, dueno_historico_coleccionista_documento_identidad, dueno_historico_fecha_registro, participante_subasta_id, participante_id_inscripcion) VALUES (4, '4', '10000', NULL, '9', '10', '1998456', '3/3/2010', NULL, NULL);
+INSERT INTO listado (orden, precio_base_dolar, precio_vendido_dolar, subasta_id, dueno_historico_id, dueno_historico_coleccionista_documento_identidad, dueno_historico_fecha_registro, participante_subasta_id, participante_id_inscripcion) VALUES (5, '5', '8600', '9000', '9', '23', '1998456', '3/3/2010', '4', '9');
+INSERT INTO listado (orden, precio_base_dolar, precio_vendido_dolar, subasta_id, dueno_historico_id, dueno_historico_coleccionista_documento_identidad, dueno_historico_fecha_registro, participante_subasta_id, participante_id_inscripcion) VALUES (6, '6', '8600', NULL, '9', '36', '1998456', '3/3/2010', NULL, NULL);
+INSERT INTO listado (orden, precio_base_dolar, precio_vendido_dolar, subasta_id, dueno_historico_id, dueno_historico_coleccionista_documento_identidad, dueno_historico_fecha_registro, participante_subasta_id, participante_id_inscripcion) VALUES (7, '7', '950', '1200', '9', '6', '1234567', '3/3/2010', '1', '9');
+INSERT INTO listado (orden, precio_base_dolar, precio_vendido_dolar, subasta_id, dueno_historico_id, dueno_historico_coleccionista_documento_identidad, dueno_historico_fecha_registro, participante_subasta_id, participante_id_inscripcion) VALUES (8, '8', '150', '300', '9', '19', '1234567', '3/3/2010', '2', '9');
+INSERT INTO listado (orden, precio_base_dolar, precio_vendido_dolar, subasta_id, dueno_historico_id, dueno_historico_coleccionista_documento_identidad, dueno_historico_fecha_registro, participante_subasta_id, participante_id_inscripcion) VALUES (9, '9', '950', '1000', '9', '32', '1234567', '3/3/2010', '5', '9');
