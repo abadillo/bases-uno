@@ -157,7 +157,7 @@ namespace Engine
             {
                 campo.BackColor = Color.FromArgb(232, 81, 94);
                 campo.Focus();
-                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser una hora valida con formato HH:MM");
+                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser una hora valida con formato HH:MM de 24 horas");
             }
 
             if (campo.ReadOnly == false)

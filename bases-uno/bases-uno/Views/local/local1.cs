@@ -44,6 +44,10 @@ namespace bases_uno.Views
 
             comboBoxType.SelectedItem = local.Tipo;
 
+            if (local.Tipo == "De un Miembro")
+                panelOpcional.Visible = true;
+             
+
 
             // para la direccion
             for (int i = 0; i < listLug.Count; i++)
@@ -104,9 +108,9 @@ namespace bases_uno.Views
                 local.LugarID = Read.Lugar(IDLocation).ID;
 
 
-                if (DuenoID != 0) {
+                if (DuenoID != 0) 
                     local.ColeccionistaID = Read.Coleccionista(DuenoID).ID;
-                }
+                
 
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este local?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 

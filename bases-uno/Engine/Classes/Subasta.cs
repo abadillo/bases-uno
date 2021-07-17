@@ -34,6 +34,9 @@ namespace Engine.Classes
         public Subasta(DateTime fecha, DateTime horaInicio, DateTime horaCierre, string tipo, 
             bool caridad, bool cancelado, Local local = null)
         {
+
+           
+
             Fecha = fecha;
             HoraInicio = horaInicio;
             HoraCierre = horaCierre;
@@ -48,6 +51,17 @@ namespace Engine.Classes
             {
                 LocalID = local.ID;
             }
+
+            //try
+            //{
+            //    Console.WriteLine(local.Nombre);
+            //}
+            //catch (Exception)
+            //{
+
+            //    //throw;
+            //}
+
         }
 
         /// <summary>
@@ -114,6 +128,8 @@ namespace Engine.Classes
                 {
                     Script.Parameters.AddWithValue("localid", LocalID);
                 }
+
+                Console.WriteLine(LocalID + " " + Query);
 
                 Reader = Script.ExecuteReader();
 

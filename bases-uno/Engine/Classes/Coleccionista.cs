@@ -61,7 +61,7 @@ namespace Engine.Classes
             PrimerNombre = primerNombre;
             SegundoApellido = segundoApellido;
             PrimerApellido = primerApellido;
-            SegundoApellido = segundoApellido;
+            SegundoNombre = segundoNombre;
             Telefono = telefono;
             FechaNacimiento = fechaNacimiento;
             LugarNacimiento = lugarNacimiento.ID;
@@ -80,7 +80,7 @@ namespace Engine.Classes
             PrimerNombre = primerNombre;
             SegundoApellido = segundoApellido;
             PrimerApellido = primerApellido;
-            SegundoApellido = segundoApellido;
+            SegundoNombre = segundoNombre;
             Telefono = telefono;
             FechaNacimiento = fechaNacimiento;
             LugarNacimiento = lugarNacimiento;

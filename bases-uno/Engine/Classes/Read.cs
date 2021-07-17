@@ -323,7 +323,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM modelo WHERE id = @id";
+                string Query = "SELECT * FROM local WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -389,7 +389,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM modelo WHERE fecha_ingreso = @fechaingreso AND club_id = @clubid AND " +
+                string Query = "SELECT * FROM membresia WHERE fecha_ingreso = @fechaingreso AND club_id = @clubid AND " +
                     "coleccionista_documento_identidad = @coleccionistaid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
@@ -426,7 +426,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM modelo WHERE id = @id";
+                string Query = "SELECT * FROM organizacion_caridad WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -459,7 +459,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM modelo WHERE id_inscripcion = @idinscripcion AND subasta_id = @subastaid";
+                string Query = "SELECT * FROM participante WHERE id_inscripcion = @idinscripcion AND subasta_id = @subastaid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("idinscripcion", idInscripcion);
@@ -494,7 +494,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM modelo WHERE documento_identidad = @id";
+                string Query = "SELECT * FROM representante WHERE documento_identidad = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);

@@ -230,7 +230,7 @@ namespace bases_uno.Views
             this.comboBoxLocal.Name = "comboBoxLocal";
             this.comboBoxLocal.Size = new System.Drawing.Size(780, 23);
             this.comboBoxLocal.TabIndex = 37;
-            this.comboBoxLocal.Tag = "dueño";
+            this.comboBoxLocal.Tag = "local";
             // 
             // panel13
             // 

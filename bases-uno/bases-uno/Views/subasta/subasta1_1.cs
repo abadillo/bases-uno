@@ -24,6 +24,12 @@ namespace bases_uno.Views
         public List<OrganizacionCaridad> altListInt;                    // para los organizaciones ya del subasta
         public List<OrganizacionCaridad> listInt = Read.OrganizacionesCaridad();   // para el combo de organizacion
 
+        public bool flagCancelado = false;      // true if cancelado, false if no cancelado
+        public bool flagPresencial = false;      // true if presencial, false if virtual
+        public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
+
+
+
         public subasta1_1(index parent, Subasta subasta)
         {
             this.parent = parent;
@@ -58,6 +64,40 @@ namespace bases_uno.Views
 
                 comboBoxOrganizacion.Items.Add(item);
             }
+
+
+            #region set flags
+
+            if (subasta.Cancelado)
+                flagCancelado = true;
+
+            if (subasta.Tipo == "Presencial")
+                flagPresencial = true;
+
+            if (subasta.Caridad)
+                flagBenefica = true;
+
+            #endregion
+
+
+            #region use flags
+
+
+            if (flagPresencial == false || flagBenefica == false)
+            {
+                panelAlerta.Visible = true;
+                label7.Text = "Esta subasta es de tipo presencial no benefica o es de tipo virtual, por lo tanto no deberia ver ninguna organizacion asociada \n Si observa alguna arriba, algo salio mal";
+            }
+
+            if (flagCancelado)
+            {
+                panelAlerta.Visible = true;
+                label7.Text = "Esta subasta fue cancelada, no puede agregar organizaciones \n Si observa alguna arriba, algo salio mal";
+
+            }
+
+
+            #endregion
 
 
             Update();

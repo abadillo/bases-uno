@@ -29,6 +29,8 @@ namespace bases_uno.Views
                 "Virtual"
             });
 
+            comboBoxLocal.Items.Add("0 Ninguno");
+
             for (int i = 0; i < list.Count; i++)
             {
                 Local tmp = list[i];
@@ -36,6 +38,8 @@ namespace bases_uno.Views
 
                 comboBoxLocal.Items.Add(item);
             }
+
+            comboBoxLocal.SelectedIndex = 0;
 
             Update();
         }
@@ -58,11 +62,12 @@ namespace bases_uno.Views
                     throw new Exception("Debe seleccionar el local para realizar el evento");
                 }
 
+                //Console.WriteLine(Read.Local(localID).Nombre);
 
                 Subasta subasta = new Subasta(
                     Validacion.ValidarDateTime(textBoxFecha,true),
                     Validacion.ValidarTime(textBoxHoraInicio,true),
-                    Validacion.ValidarTime(textBoxHoraInicio,true),
+                    Validacion.ValidarTime(textBoxHoraCierre,true),
                     tipo,
                     radioButtonCaridad.Checked,
                     false,

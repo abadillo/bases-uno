@@ -51,6 +51,9 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelAlerta = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.panelAgregar.SuspendLayout();
@@ -60,6 +63,7 @@ namespace bases_uno.Views
             this.panel16.SuspendLayout();
             this.hrpanel.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelAlerta.SuspendLayout();
             this.SuspendLayout();
             // 
             // stpanel7
@@ -79,6 +83,7 @@ namespace bases_uno.Views
             // dipanel1
             // 
             this.dipanel1.AutoScroll = true;
+            this.dipanel1.Controls.Add(this.panelAlerta);
             this.dipanel1.Controls.Add(this.panel7);
             this.dipanel1.Controls.Add(this.panelAgregar);
             this.dipanel1.Controls.Add(this.dipanel2);
@@ -220,10 +225,9 @@ namespace bases_uno.Views
             // dipanel2
             // 
             this.dipanel2.AutoScroll = true;
-            this.dipanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dipanel2.Location = new System.Drawing.Point(0, 40);
             this.dipanel2.Name = "dipanel2";
-            this.dipanel2.Size = new System.Drawing.Size(816, 594);
+            this.dipanel2.Size = new System.Drawing.Size(816, 248);
             this.dipanel2.TabIndex = 60;
             // 
             // panel16
@@ -343,6 +347,38 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
+            // panelAlerta
+            // 
+            this.panelAlerta.Controls.Add(this.label11);
+            this.panelAlerta.Controls.Add(this.label7);
+            this.panelAlerta.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelAlerta.Location = new System.Drawing.Point(0, 395);
+            this.panelAlerta.Name = "panelAlerta";
+            this.panelAlerta.Size = new System.Drawing.Size(816, 105);
+            this.panelAlerta.TabIndex = 73;
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label7.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.LightGray;
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(816, 38);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "Alerta";
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.LightGray;
+            this.label11.Location = new System.Drawing.Point(0, 38);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(816, 67);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "mensaje";
+            // 
             // subasta1_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,6 +399,7 @@ namespace bases_uno.Views
             this.hrpanel.ResumeLayout(false);
             this.hrpanel.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panelAlerta.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -391,5 +428,8 @@ namespace bases_uno.Views
         private System.Windows.Forms.Button btnanadir;
         private System.Windows.Forms.Panel dipanel2;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panelAlerta;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label11;
     }
 }

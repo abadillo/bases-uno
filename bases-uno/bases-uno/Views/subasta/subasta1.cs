@@ -20,6 +20,11 @@ namespace bases_uno.Views
         public Subasta subasta;
         public List<Local> listLoc = Read.Locales();
 
+
+        public bool flagCancelado = false;      // true if cancelado, false if no cancelado
+        public bool flagPresencial = false;      // true if presencial, false if virtual
+        public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
+
         public subasta1(index parent, Subasta subasta)
         {
             this.parent = parent;
@@ -29,21 +34,63 @@ namespace bases_uno.Views
 
             label1.Text = "Subasta: " + subasta.ID;
 
+            #region fill combos and textfields
+
             textBoxID.Text = subasta.ID.ToString();
-            //textBoxFecha.Text = subasta.textBoxFecha.Value.ToShortDateString();
-            
-                       
+            textBoxFecha.Text = subasta.Fecha.Value.ToShortDateString();
+            textBoxHoraInicio.Text = subasta.HoraInicio.Value.ToShortTimeString();
+            textBoxHoraCierre.Text = subasta.HoraCierre.Value.ToShortTimeString();
+            radioButtonCaridad.Checked = subasta.Caridad;
+            radioButtonCancelado.Checked = subasta.Cancelado;
+
+            comboBoxType.Items.AddRange(new object[] {
+                "Presencial",
+                "Virtual"
+            });
+
+            comboBoxType.SelectedItem = subasta.Tipo;
+
+
+            comboBoxLocal.Items.Add("0 Ninguno");
 
             for (int i = 0; i < listLoc.Count; i++)
             {
                 Local tmp = listLoc[i];
                 string item = tmp.ID + " " + tmp.Nombre;
 
-                comboBoxLugar.Items.Add(item);
+                comboBoxLocal.Items.Add(item);
 
                 if (tmp.ID == subasta.LocalID)
-                    comboBoxLugar.SelectedItem = item;
+                    comboBoxLocal.SelectedItem = item;
             }
+
+            if (subasta.LocalID == 0)
+                comboBoxLocal.SelectedIndex = 0;
+
+            #endregion
+
+
+            #region set flags
+
+            if (subasta.Cancelado)
+                flagCancelado = true;
+
+            if (subasta.Tipo == "Presencial")
+                flagPresencial = true;
+
+            if (subasta.Caridad)
+                flagBenefica = true;
+
+            #endregion
+
+
+            #region use flags
+
+            if (flagPresencial)
+                panelOpcional.Visible = true;
+
+            #endregion
+
 
             Update();
 
@@ -57,15 +104,27 @@ namespace bases_uno.Views
            
             try
             {
-                string[] tokens = Validacion.ValidarCombo(comboBoxLugar).Split(' ');
-                int LugarID = int.Parse(tokens[0]);
+                string[] tokens = Validacion.ValidarCombo(comboBoxLocal).Split(' ');
+                int LocalID = int.Parse(tokens[0]);
 
-                //subasta.Nombre = Validacion.ValidarNull(textBoxNombre);
-                //subasta.FechaFundacion = Validacion.ValidarDateTime(textBoxFechaFundacion, true);
-                //subasta.Proposito = textBoxProposito.Text;
-                //subasta.PaginaWeb = textBoxPaginaWeb.Text;
-                //subasta.LugarID = Read.Lugar(LugarID).ID;
-                //subasta.Telefono = Validacion.ValidarInt(textBoxTelefono, true);
+                string tipo = Validacion.ValidarCombo(comboBoxType);
+
+                if (tipo == "Presencial" && LocalID == 0)
+                {
+                    panelOpcional.Visible = true;
+                    throw new Exception("Debe seleccionar el local para realizar el evento");
+                }
+
+                subasta.Fecha = Validacion.ValidarDateTime(textBoxFecha, true);
+                subasta.HoraInicio = Validacion.ValidarTime(textBoxHoraInicio, true);
+                subasta.HoraCierre = Validacion.ValidarTime(textBoxHoraCierre, true);
+                subasta.Tipo = Validacion.ValidarCombo(comboBoxType);
+                subasta.Cancelado = radioButtonCancelado.Checked;
+                subasta.Caridad = radioButtonCaridad.Checked;
+
+                if (LocalID != 0)
+                    subasta.LocalID = Read.Local(LocalID).ID;
+                
 
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Subasta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -96,7 +155,7 @@ namespace bases_uno.Views
         private void Eliminar()
         {
 
-            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea eliminar este Subasta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea eliminar esta Subasta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dialogResult == DialogResult.Yes)
          
@@ -118,6 +177,33 @@ namespace bases_uno.Views
 
 
         }
+
+        private void CancelarEvento()
+        {
+
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea cancelar esta Subasta? \n\n (Se eliminaran todas las organizaciones, pujas, invitaciones y de mas registros asociados a esta subasta)", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dialogResult == DialogResult.Yes)
+
+                try
+                {
+                    subasta.Cancelar();
+                    MessageBox.Show("Eliminacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    parent.InsertForm(new subastal(parent));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+
+
+        }
+
         #endregion
 
         #region click botones normales
@@ -130,30 +216,34 @@ namespace bases_uno.Views
         { 
             parent.InsertForm(new subastal(parent));
         }
-        private void btneliminar_Click(object sender, EventArgs e)
-        {
-            Eliminar();
-        }
-        private void btncancelar_Click(object sender, EventArgs e)
-        {
-            parent.InsertForm(new subasta1(parent, subasta));
-        }
-        private void btnmodificar_Click(object sender, EventArgs e)
+
+
+        private void btnmodificar_Click_1(object sender, EventArgs e)
         {
             Modificar();
         }
+
+        private void btncancelar_Click_1(object sender, EventArgs e)
+        {
+            parent.InsertForm(new subasta1(parent, subasta));
+        }
+
+        private void btneliminar_Click_1(object sender, EventArgs e)
+        {
+            Eliminar();
+        }
+
+        private void buttonCancelarEvento_Click(object sender, EventArgs e)
+        {
+            CancelarEvento();
+        }
         #endregion
+
 
         #region click botones FontAwesome
 
-        private void iconButton17_Click(object sender, EventArgs e)
-        {
-            Acciones.EnableInput(textBoxNombre, iconButton17);
-        }
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            Acciones.EnableInput(textBoxProposito, iconButton1);
-        }
+
+
         private void iconButton14_Click(object sender, EventArgs e)
         {
             // id no se modifica
@@ -161,25 +251,44 @@ namespace bases_uno.Views
 
         private void iconButton16_Click(object sender, EventArgs e)
         {
-            Acciones.EnableInput(textBoxFechaFundacion, iconButton16);
+            Acciones.EnableInput(textBoxFecha, iconButton16);
+        }
+
+       
+
+       
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableInput(textBoxHoraInicio, iconButton4);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableInput(textBoxHoraCierre, iconButton1);
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            Acciones.EnableInput(textBoxPaginaWeb, iconButton2);
+            Acciones.EnableCombo(comboBoxType, iconButton2);
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableCombo(comboBoxLocal, iconButton5);
+        }
+
+        private void iconButton18_Click(object sender, EventArgs e)
+        {
+            Acciones.EnableRadio(radioButtonCaridad, iconButton18);
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            Acciones.EnableCombo(comboBoxLugar, iconButton3);
-        }
-
-        private void iconButton15_Click(object sender, EventArgs e)
-        {
-            Acciones.EnableInput(textBoxTelefono, iconButton15);
+            // este no se puede alterar por aqui ya que lleva a eliminacion de muchas cosa
         }
 
         #endregion
 
+       
     }
 }
