@@ -295,7 +295,6 @@ namespace bases_uno.Views
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.panel6.Size = new System.Drawing.Size(810, 31);
             this.panel6.TabIndex = 10;
             // 
@@ -309,7 +308,7 @@ namespace bases_uno.Views
             this.comboBoxLocal.FormattingEnabled = true;
             this.comboBoxLocal.Location = new System.Drawing.Point(0, 8);
             this.comboBoxLocal.Name = "comboBoxLocal";
-            this.comboBoxLocal.Size = new System.Drawing.Size(780, 23);
+            this.comboBoxLocal.Size = new System.Drawing.Size(810, 23);
             this.comboBoxLocal.TabIndex = 37;
             this.comboBoxLocal.Tag = "local";
             // 

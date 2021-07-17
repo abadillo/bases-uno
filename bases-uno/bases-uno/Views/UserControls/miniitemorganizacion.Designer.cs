@@ -33,9 +33,10 @@ namespace bases_uno.Views.Components
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label2_2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -76,7 +77,8 @@ namespace bases_uno.Views.Components
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.label2_2);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(10, 0);
@@ -84,18 +86,6 @@ namespace bases_uno.Views.Components
             this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.panel6.Size = new System.Drawing.Size(824, 47);
             this.panel6.TabIndex = 8;
-            // 
-            // label2_2
-            // 
-            this.label2_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2_2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2_2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2_2.Location = new System.Drawing.Point(336, 0);
-            this.label2_2.Name = "label2_2";
-            this.label2_2.Size = new System.Drawing.Size(473, 47);
-            this.label2_2.TabIndex = 33;
-            this.label2_2.Text = "label2_2";
-            this.label2_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -130,6 +120,30 @@ namespace bases_uno.Views.Components
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LightGray;
+            this.label3.Location = new System.Drawing.Point(716, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 47);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "label3";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LightGray;
+            this.label2.Location = new System.Drawing.Point(336, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(380, 47);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // miniitemorganizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,6 +168,7 @@ namespace bases_uno.Views.Components
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2_2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

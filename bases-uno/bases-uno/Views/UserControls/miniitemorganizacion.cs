@@ -28,7 +28,8 @@ namespace bases_uno.Views.Components
             InitializeComponent();
 
             label1.Text = organizacion.Nombre;
-            label2_2.Text = organizacion.Mision;
+            label2.Text = organizacion.Mision;
+            label3.Text = subasta.Porcentaje(organizacion).ToString() + "%";
 
             Update();
 

@@ -235,7 +235,6 @@ namespace bases_uno.Views
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.panel5.Size = new System.Drawing.Size(810, 31);
             this.panel5.TabIndex = 10;
             // 
@@ -248,7 +247,7 @@ namespace bases_uno.Views
             this.comboBoxColeccionista.FormattingEnabled = true;
             this.comboBoxColeccionista.Location = new System.Drawing.Point(0, 8);
             this.comboBoxColeccionista.Name = "comboBoxColeccionista";
-            this.comboBoxColeccionista.Size = new System.Drawing.Size(780, 23);
+            this.comboBoxColeccionista.Size = new System.Drawing.Size(810, 23);
             this.comboBoxColeccionista.TabIndex = 37;
             this.comboBoxColeccionista.Tag = "dueño";
             // 

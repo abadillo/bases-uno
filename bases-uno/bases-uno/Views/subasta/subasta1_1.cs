@@ -82,18 +82,14 @@ namespace bases_uno.Views
 
             #region use flags
 
-
-            if (flagPresencial == false || flagBenefica == false)
+            if (flagBenefica == false || flagPresencial== false)
             {
-                panelAlerta.Visible = true;
-                label7.Text = "Esta subasta es de tipo presencial no benefica o es de tipo virtual, por lo tanto no deberia ver ninguna organizacion asociada \n Si observa alguna arriba, algo salio mal";
+                DisableFunciones("Esta subasta no es de tipo benefica, por lo tanto no deberia ver ninguna organizacion asociada \nSi observa alguna arriba, algo salio mal");
             }
-
+           
             if (flagCancelado)
             {
-                panelAlerta.Visible = true;
-                label7.Text = "Esta subasta fue cancelada, no puede agregar organizaciones \n Si observa alguna arriba, algo salio mal";
-
+                DisableFunciones("Esta subasta fue cancelada, no puede agregar organizaciones \nSi observa alguna arriba, algo salio mal");
             }
 
 
@@ -107,6 +103,14 @@ namespace bases_uno.Views
 
         #region Funciones
 
+        private void DisableFunciones(string mensaje)
+        {
+            label11.Text = mensaje;
+            iconButton5.Visible = false;
+            btnanadir.Enabled = false;
+            panelAlerta.Visible = true;
+        }
+
         private void Registrar()
         {
             try
@@ -114,8 +118,9 @@ namespace bases_uno.Views
                 string[] tokens = Validacion.ValidarCombo(comboBoxOrganizacion).Split(' ');
                 int OrganizacionID = int.Parse(tokens[0]);
 
-
                 OrganizacionCaridad organizacion = Read.OrganizacionCaridad(OrganizacionID);
+
+                int porcentaje = int.Parse(Validacion.ValidarCombo(comboBoxPorcentaje));
 
                 for (int i = 0; i < altListInt.Count; i++)
                 { 
@@ -123,8 +128,6 @@ namespace bases_uno.Views
                         throw new Exception("Ya este organizacion esta en la lista");
                     
                 }
-
-                int porcentaje = 100; 
 
                 subasta.AgregarOrganizacionCaridad(organizacion, porcentaje);
 
@@ -144,9 +147,33 @@ namespace bases_uno.Views
 
         }
 
+        private void LlenarPorcentajes()
+        {
+
+            var porcentajeRestante = 100;
+
+
+            for (int i = 0; i < altListInt.Count; i++)
+            {
+                OrganizacionCaridad tmp = altListInt[i];
+                porcentajeRestante = porcentajeRestante - subasta.Porcentaje(tmp);
+            }
+
+            for (int n = 1; n <= porcentajeRestante; n++)
+            {
+                string item = n.ToString();
+                comboBoxPorcentaje.Items.Add(item);
+
+                if (n == porcentajeRestante)
+                    comboBoxPorcentaje.SelectedItem = item ;
+
+            }
+
+
+
+            //Update();
+        }
        
-
-
         #endregion
 
         #region click botones normales
@@ -167,8 +194,8 @@ namespace bases_uno.Views
         private void iconButton5_Click(object sender, EventArgs e)
         {
             panelAgregar.Visible = true;
+            LlenarPorcentajes();
         }
-
 
         private void btncancelar_Click_1(object sender, EventArgs e)
         {

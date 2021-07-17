@@ -151,8 +151,8 @@ namespace Engine.Classes
                 OpenConnection();
 
                 string Query = "UPDATE subasta SET fecha = @fecha, hora_inicio = @horainicio, " +
-                    "hora_cierre = , @horacierre, tipo = @tipo, caridad = , @caridad, cancelado = @cancelado, " +
-                    "local_id = @localid" +
+                    "hora_cierre = @horacierre, tipo = @tipo, caridad = @caridad, cancelado = @cancelado, " +
+                    "local_id = @localid " +
                     "WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -186,7 +186,7 @@ namespace Engine.Classes
         #region Other Methods
 
         #region Organizacion Caridad
-        public void AgregarOrganizacionCaridad(OrganizacionCaridad organizacionCaridad, float porcentaje)
+        public void AgregarOrganizacionCaridad(OrganizacionCaridad organizacionCaridad, int porcentaje)
         {
             if (Caridad)
             {
@@ -332,10 +332,12 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT organizacion_caridad_id FROM org_sub WHRERE subasta_id = @id";
+                string Query = "SELECT organizacion_caridad_id FROM org_sub where subasta_id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
+
+                Console.WriteLine(Query);
 
                 Reader = Script.ExecuteReader();
 
@@ -361,9 +363,9 @@ namespace Engine.Classes
             return organizaciones;
         }
 
-        public float Porcentaje(OrganizacionCaridad organizacionCaridad)
+        public int Porcentaje(OrganizacionCaridad organizacionCaridad)
         {
-            float porcentaje = 0;
+            int porcentaje = 0;
 
             try
             {
@@ -450,7 +452,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT club_id_org FROM org_inv WHRERE subasta_id = @id";
+                string Query = "SELECT club_id_org FROM org_inv where subasta_id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -480,7 +482,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT club_id_inv FROM org_inv WHRERE subasta_id = @id";
+                string Query = "SELECT club_id_inv FROM org_inv where subasta_id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
