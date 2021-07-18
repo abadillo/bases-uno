@@ -47,10 +47,10 @@ namespace Engine.Classes
         /// <param name="comic"></param>
         /// <param name="precioDolar"></param>
         /// <param name="significado"></param>
-        public DuenoHistorico(DateTime fechaRegistro, Coleccionista coleccionista, Comic comic, float precioDolar = 0, string significado = null)
+        public DuenoHistorico(DateTime fechaRegistro, Coleccionista coleccionista, Comic comic, float precioDolar = 0)
         {
             FechaRegistro = fechaRegistro;
-            Significado = significado;
+            Significado = null;
             ColeccionistaID = coleccionista.ID;
             ColeccionableID = 0;
             ComicID = comic.ID;

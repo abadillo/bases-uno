@@ -246,6 +246,22 @@ namespace Engine.Classes
             return duenoHistorico;
         }
 
+        public static List<DuenoHistorico> ColeccionActual(Coleccionista coleccionista)
+        {
+            List<DuenoHistorico> duenosActuales = DuenosActuales();
+            List<DuenoHistorico> coleccion = new List<DuenoHistorico>();
+
+            foreach (DuenoHistorico dueno in duenosActuales)
+            {
+                if (dueno.ColeccionistaID == coleccionista.ID)
+                {
+                    coleccion.Add(dueno);
+                }
+            }
+
+            return coleccion;
+        }
+
         public static Interes Interes(int id)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
