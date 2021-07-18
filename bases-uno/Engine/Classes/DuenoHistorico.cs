@@ -116,7 +116,7 @@ namespace Engine.Classes
                 {
                     Query += ", comic_id";
                 }
-                Query += ") VALUES (@fecharegistro, @coleccionistaid, @precio, ";
+                Query += ") VALUES (@fecharegistro, @coleccionistaid, @precio";
                 if (!(Significado == null))
                 {
                     Query += ", @significado";
