@@ -21,7 +21,8 @@ namespace bases_uno.Views
         public index parent;
         public Subasta subasta;
             
-        public List<Club> altListCluInv;                    // para los clubes invitados a la subasta
+        public List<Club> altListCluOrg;                    // para los clubes organizadores a la subasta
+        public List<Club> altListCluInv;                    // para los clubes invitados
         public List<Club> listClu = Read.Clubes();      // para el combo de club
         
 
@@ -43,13 +44,17 @@ namespace bases_uno.Views
 
             // para los clubes invitados a la subasta
 
+            altListCluOrg = subasta.Organizadores();
+
+            // para los clubes inivitados a la subasta
+
             altListCluInv = subasta.ClubesInvitados();
-           
-       
-            for (int i = 0; i < altListCluInv.Count; i++)
+
+
+            for (int i = 0; i < altListCluOrg.Count; i++)
             {
                 //Console.WriteLine(altListClu[i].ID);
-                miniitemclub item = new miniitemclub(altListCluInv[i], subasta, parent);
+                miniitemclub item = new miniitemclub(altListCluOrg[i], subasta, parent);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
@@ -83,12 +88,11 @@ namespace bases_uno.Views
 
             #region use flags
 
-            if (flagBenefica == false || flagPresencial== false)
+            if (flagBenefica == false || flagPresencial == false)
             {
-                //DisableFunciones("Esta subasta no es de tipo benefica, por lo tanto no deberia ver ninguna club asociada \nSi observa alguna arriba, algo salio mal");
-                Console.WriteLine("algo");
+                DisableFunciones("Esta subasta no es de tipo benefica, por lo tanto no deberia ver ningun club organizador \nSi observa alguna arriba, algo salio mal");
             }
-           
+
             if (flagCancelado)
             {
                 DisableFunciones("Esta subasta fue cancelada, no puede agregar clubes \nSi observa alguna arriba, algo salio mal");
@@ -122,14 +126,20 @@ namespace bases_uno.Views
 
                 Club club = Read.Club(clubID);
 
-                for (int i = 0; i < altListCluInv.Count; i++)
+                for (int i = 0; i < altListCluOrg.Count; i++)
                 { 
-                    if (club.ID == altListCluInv[i].ID)          
-                        throw new Exception("Ya este club esta en la lista");
-                    
+                    if (club.ID == altListCluOrg[i].ID)          
+                        throw new Exception("Ya este club es un organizador");
                 }
 
-                subasta.AgregarClubInvitado(club);
+                for (int i = 0; i < altListCluInv.Count; i++)
+                {
+                    if (club.ID == altListCluInv[i].ID)
+                        throw new Exception("Ya este club es un invitado");
+
+                }
+
+                subasta.AgregarOrganizador(club);
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 parent.InsertForm(new subasta1_2(parent,subasta));
