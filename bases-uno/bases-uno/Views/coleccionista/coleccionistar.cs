@@ -94,7 +94,7 @@ namespace bases_uno.Views
 
                 //Console.WriteLine(RepresentanteRID + " " + RepresentanteCID);
                 
-                if (edad < 18 && RepresentanteCID == 0 && RepresentanteRID == 0)
+                if (edad < 15 && RepresentanteCID == 0 && RepresentanteRID == 0)
                 {
                     panelOpcional.Visible = true;
                     throw new Exception("Debe selecionar un representante por ser menor de edad");

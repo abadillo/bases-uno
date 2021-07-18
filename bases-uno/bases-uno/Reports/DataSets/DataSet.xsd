@@ -75,7 +75,17 @@ FROM     interes</CommandText>
               <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
               <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="DBConnectionString (Settings)" DbObjectName="subasta_jag.&quot;public&quot;.interes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id
+FROM            interes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="comicTableAdapter" GeneratorDataComponentClassName="comicTableAdapter" Name="comic" UserDataComponentName="comicTableAdapter">
             <MainSource>
@@ -179,7 +189,7 @@ FROM     comic</CommandText>
   <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="lugar" msprop:Generator_TableClassName="lugarDataTable" msprop:Generator_TableVarName="tablelugar" msprop:Generator_RowChangedName="lugarRowChanged" msprop:Generator_TablePropName="lugar" msprop:Generator_RowDeletingName="lugarRowDeleting" msprop:Generator_RowChangingName="lugarRowChanging" msprop:Generator_RowEvHandlerName="lugarRowChangeEventHandler" msprop:Generator_RowDeletedName="lugarRowDeleted" msprop:Generator_RowClassName="lugarRow" msprop:Generator_UserTableName="lugar" msprop:Generator_RowEvArgName="lugarRowChangeEvent">
+        <xs:element name="lugar" msprop:Generator_TableClassName="lugarDataTable" msprop:Generator_TableVarName="tablelugar" msprop:Generator_TablePropName="lugar" msprop:Generator_RowDeletingName="lugarRowDeleting" msprop:Generator_RowChangingName="lugarRowChanging" msprop:Generator_RowEvHandlerName="lugarRowChangeEventHandler" msprop:Generator_RowDeletedName="lugarRowDeleted" msprop:Generator_UserTableName="lugar" msprop:Generator_RowChangedName="lugarRowChanged" msprop:Generator_RowEvArgName="lugarRowChangeEvent" msprop:Generator_RowClassName="lugarRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -201,7 +211,7 @@ FROM     comic</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="interes" msprop:Generator_TableClassName="interesDataTable" msprop:Generator_TableVarName="tableinteres" msprop:Generator_RowChangedName="interesRowChanged" msprop:Generator_TablePropName="interes" msprop:Generator_RowDeletingName="interesRowDeleting" msprop:Generator_RowChangingName="interesRowChanging" msprop:Generator_RowEvHandlerName="interesRowChangeEventHandler" msprop:Generator_RowDeletedName="interesRowDeleted" msprop:Generator_RowClassName="interesRow" msprop:Generator_UserTableName="interes" msprop:Generator_RowEvArgName="interesRowChangeEvent">
+        <xs:element name="interes" msprop:Generator_TableClassName="interesDataTable" msprop:Generator_TableVarName="tableinteres" msprop:Generator_TablePropName="interes" msprop:Generator_RowDeletingName="interesRowDeleting" msprop:Generator_RowChangingName="interesRowChanging" msprop:Generator_RowEvHandlerName="interesRowChangeEventHandler" msprop:Generator_RowDeletedName="interesRowDeleted" msprop:Generator_UserTableName="interes" msprop:Generator_RowChangedName="interesRowChanged" msprop:Generator_RowEvArgName="interesRowChangeEvent" msprop:Generator_RowClassName="interesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -222,7 +232,7 @@ FROM     comic</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="comic" msprop:Generator_TableClassName="comicDataTable" msprop:Generator_TableVarName="tablecomic" msprop:Generator_RowChangedName="comicRowChanged" msprop:Generator_TablePropName="comic" msprop:Generator_RowDeletingName="comicRowDeleting" msprop:Generator_RowChangingName="comicRowChanging" msprop:Generator_RowEvHandlerName="comicRowChangeEventHandler" msprop:Generator_RowDeletedName="comicRowDeleted" msprop:Generator_RowClassName="comicRow" msprop:Generator_UserTableName="comic" msprop:Generator_RowEvArgName="comicRowChangeEvent">
+        <xs:element name="comic" msprop:Generator_TableClassName="comicDataTable" msprop:Generator_TableVarName="tablecomic" msprop:Generator_TablePropName="comic" msprop:Generator_RowDeletingName="comicRowDeleting" msprop:Generator_RowChangingName="comicRowChanging" msprop:Generator_RowEvHandlerName="comicRowChangeEventHandler" msprop:Generator_RowDeletedName="comicRowDeleted" msprop:Generator_UserTableName="comic" msprop:Generator_RowChangedName="comicRowChanged" msprop:Generator_RowEvArgName="comicRowChangeEvent" msprop:Generator_RowClassName="comicRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />

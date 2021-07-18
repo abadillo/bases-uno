@@ -10,9 +10,12 @@
     }
 }
 
-namespace bases_uno.Reports.DataSets.DataSetTableAdapters {
-    
-    
+namespace bases_uno.Reports.DataSets.DataSetTableAdapters
+{
+    partial class interesTableAdapter
+    {
+    }
+
     public partial class lugarTableAdapter {
     }
 }

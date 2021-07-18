@@ -19,6 +19,8 @@ namespace bases_uno.Views
         public index parent;
         public Coleccionista coleccionista;
 
+        public bool confirmarEdad = false;
+
 
         public List<Lugar> listLug = Read.Lugares();
         public List<Representante> listRep = Read.Representantes();
@@ -129,14 +131,15 @@ namespace bases_uno.Views
                 tokens = Validacion.ValidarCombo(comboBoxRepresentanteC).Split(' ');
                 int RepresentanteCID = int.Parse(tokens[0]);
 
-                if (edad < 18 && RepresentanteCID == 0 && RepresentanteRID == 0)
+                if (edad < 15 && confirmarEdad == false)
                 {
                     panelOpcional.Visible = true;
-                    throw new Exception("Debe selecionar un representante por ser menor de edad");
+                    confirmarEdad = true;
+                    throw new Exception("Debe selecionar un representante por ser menor de edad\n\nDe no seleccionar ninguno, no podra partipar en ninguna subasta hasta cumplir el requerimiento de edad (18 años)");
                 }
 
                 if (RepresentanteCID != 0 && RepresentanteRID != 0)
-                    throw new Exception("Debe selecionar solo representante");
+                    throw new Exception("Debe selecionar solo un representante");
                 
 
                 coleccionista.PrimerNombre = Validacion.ValidarNull(textBoxPrimerNombre);

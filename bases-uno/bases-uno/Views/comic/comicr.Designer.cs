@@ -41,6 +41,7 @@ namespace bases_uno.Views
             this.spacerpanel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBoxCubierta = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
@@ -52,6 +53,7 @@ namespace bases_uno.Views
             this.textBoxPages = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.checkBoxColor = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.textBoxVolumen = new System.Windows.Forms.TextBox();
@@ -73,8 +75,6 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxColor = new System.Windows.Forms.CheckBox();
-            this.checkBoxCubierta = new System.Windows.Forms.CheckBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -265,6 +265,22 @@ namespace bases_uno.Views
             this.panel2.Size = new System.Drawing.Size(402, 49);
             this.panel2.TabIndex = 11;
             // 
+            // checkBoxCubierta
+            // 
+            this.checkBoxCubierta.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCubierta.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBoxCubierta.FlatAppearance.BorderSize = 5;
+            this.checkBoxCubierta.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCubierta.Location = new System.Drawing.Point(322, 10);
+            this.checkBoxCubierta.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxCubierta.Name = "checkBoxCubierta";
+            this.checkBoxCubierta.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.checkBoxCubierta.Size = new System.Drawing.Size(50, 29);
+            this.checkBoxCubierta.TabIndex = 17;
+            this.checkBoxCubierta.Tag = "cubierta";
+            this.checkBoxCubierta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCubierta.UseVisualStyleBackColor = true;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -399,6 +415,22 @@ namespace bases_uno.Views
             this.panel12.Padding = new System.Windows.Forms.Padding(0, 10, 30, 10);
             this.panel12.Size = new System.Drawing.Size(402, 49);
             this.panel12.TabIndex = 6;
+            // 
+            // checkBoxColor
+            // 
+            this.checkBoxColor.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxColor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBoxColor.FlatAppearance.BorderSize = 5;
+            this.checkBoxColor.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxColor.Location = new System.Drawing.Point(322, 10);
+            this.checkBoxColor.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxColor.Name = "checkBoxColor";
+            this.checkBoxColor.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.checkBoxColor.Size = new System.Drawing.Size(50, 29);
+            this.checkBoxColor.TabIndex = 17;
+            this.checkBoxColor.Tag = "color";
+            this.checkBoxColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxColor.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -663,38 +695,6 @@ namespace bases_uno.Views
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
-            // 
-            // checkBoxColor
-            // 
-            this.checkBoxColor.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxColor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.checkBoxColor.FlatAppearance.BorderSize = 5;
-            this.checkBoxColor.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxColor.Location = new System.Drawing.Point(322, 10);
-            this.checkBoxColor.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBoxColor.Name = "checkBoxColor";
-            this.checkBoxColor.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.checkBoxColor.Size = new System.Drawing.Size(50, 29);
-            this.checkBoxColor.TabIndex = 17;
-            this.checkBoxColor.Tag = "color";
-            this.checkBoxColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxColor.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxCubierta
-            // 
-            this.checkBoxCubierta.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxCubierta.Dock = System.Windows.Forms.DockStyle.Right;
-            this.checkBoxCubierta.FlatAppearance.BorderSize = 5;
-            this.checkBoxCubierta.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCubierta.Location = new System.Drawing.Point(322, 10);
-            this.checkBoxCubierta.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBoxCubierta.Name = "checkBoxCubierta";
-            this.checkBoxCubierta.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.checkBoxCubierta.Size = new System.Drawing.Size(50, 29);
-            this.checkBoxCubierta.TabIndex = 17;
-            this.checkBoxCubierta.Tag = "cubierta";
-            this.checkBoxCubierta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxCubierta.UseVisualStyleBackColor = true;
             // 
             // comicr
             // 

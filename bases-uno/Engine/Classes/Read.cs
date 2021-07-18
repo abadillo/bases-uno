@@ -1019,16 +1019,62 @@ namespace Engine.Classes
 
         public static List<Membresia> Membresias(Club club)
         {
-            List<Membresia> membresias = Membresias();
-            List<Membresia> aux = new List<Membresia>();
-            foreach (Membresia membresia in membresias)
+            //List<Membresia> membresias = Membresias();
+            //List<Membresia> aux = new List<Membresia>();
+            //foreach (Membresia membresia in membresias)
+            //{
+            //    if (membresia.ClubID == club.ID)
+            //    {
+            //        aux.Add(membresia);
+            //    }
+            //}
+            //return aux;
+
+
+            List<Membresia> list = new List<Membresia>();
+
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+
+            try
             {
-                if (membresia.ClubID == club.ID)
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM membresia WHERE CLUB_id = @id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("id", club.ID);
+
+                //Console.WriteLine(Script.CommandText);
+
+                connection.Reader = connection.Script.ExecuteReader();
+
+                while (connection.Reader.Read())
                 {
-                    aux.Add(membresia);
+                    Membresia modell = new Membresia(connection.ReadDate(0), connection.ReadDate(1), connection.ReadInt(2),
+                        connection.ReadInt(4), connection.ReadString(5), connection.ReadInt(3));
+
+                    list.Add(modell);
                 }
             }
-            return aux;
+            catch
+            {
+                list = new List<Membresia>();
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return list;
+
+            
+         
+            /////////
+            ///
+
+           
+
+                
         }
 
         public static List<OrganizacionCaridad> OrganizacionesCaridad()

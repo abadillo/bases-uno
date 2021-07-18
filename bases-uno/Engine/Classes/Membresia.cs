@@ -151,7 +151,7 @@ namespace Engine.Classes
                 string Query = "UPDATE membresia SET ";
                 if (!(FechaRetiro == null))
                 {
-                    Query += "fecha_retiro = @fecharetiro";
+                    Query += "fecha_retiro = @fecharetiro ";
                     if ((Email == null) || (ClubIDLider == 0))
                     {
                         Query += " ";

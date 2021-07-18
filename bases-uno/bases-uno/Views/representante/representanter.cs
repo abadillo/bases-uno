@@ -30,12 +30,18 @@ namespace bases_uno.Views
         {
             try
             {
+                int edad = Validacion.Edad(Validacion.ValidarDateTime(textBoxFechaNacimiento, true));
+
+                if (edad < 18)
+                    throw new Exception("Debe ser mayor de edad");
+                
+
 
                 Representante representante = new Representante(
                     Validacion.ValidarInt(textBoxDocIdentidad,true),
                     Validacion.ValidarNull(textBoxName),
                     Validacion.ValidarNull(textBoxApellido),
-                    Validacion.ValidarDateTime(textBoxFechaNacimiento,true)
+                    Validacion.ValidarDateTime(textBoxFechaNacimiento, true)
                 );
 
                 representante.Insert();
