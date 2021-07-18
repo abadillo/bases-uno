@@ -116,11 +116,11 @@ namespace bases_uno.Views
             this.tableLayoutPanel3.Controls.Add(this.dipanel3, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 35);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 45);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(816, 283);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(816, 273);
             this.tableLayoutPanel3.TabIndex = 78;
             // 
             // dipanel3
@@ -130,7 +130,7 @@ namespace bases_uno.Views
             this.dipanel3.Location = new System.Drawing.Point(411, 3);
             this.dipanel3.Name = "dipanel3";
             this.dipanel3.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.dipanel3.Size = new System.Drawing.Size(402, 277);
+            this.dipanel3.Size = new System.Drawing.Size(402, 267);
             this.dipanel3.TabIndex = 77;
             // 
             // panel
@@ -141,7 +141,7 @@ namespace bases_uno.Views
             this.panel.Location = new System.Drawing.Point(3, 3);
             this.panel.Name = "panel";
             this.panel.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.panel.Size = new System.Drawing.Size(402, 277);
+            this.panel.Size = new System.Drawing.Size(402, 267);
             this.panel.TabIndex = 76;
             // 
             // dipanel2
@@ -152,7 +152,7 @@ namespace bases_uno.Views
             this.dipanel2.Location = new System.Drawing.Point(0, 0);
             this.dipanel2.Name = "dipanel2";
             this.dipanel2.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.dipanel2.Size = new System.Drawing.Size(400, 277);
+            this.dipanel2.Size = new System.Drawing.Size(400, 267);
             this.dipanel2.TabIndex = 77;
             // 
             // panelAlerta
@@ -358,7 +358,7 @@ namespace bases_uno.Views
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Location = new System.Drawing.Point(0, 0);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(816, 35);
+            this.panel16.Size = new System.Drawing.Size(816, 45);
             this.panel16.TabIndex = 56;
             // 
             // tableLayoutPanel4
@@ -377,7 +377,7 @@ namespace bases_uno.Views
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(816, 35);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(816, 45);
             this.tableLayoutPanel4.TabIndex = 76;
             // 
             // iconButton5
@@ -396,7 +396,7 @@ namespace bases_uno.Views
             this.iconButton5.Location = new System.Drawing.Point(774, 0);
             this.iconButton5.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(42, 35);
+            this.iconButton5.Size = new System.Drawing.Size(42, 45);
             this.iconButton5.TabIndex = 40;
             this.iconButton5.UseVisualStyleBackColor = false;
             this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click_1);
@@ -417,7 +417,7 @@ namespace bases_uno.Views
             this.iconButton1.Location = new System.Drawing.Point(367, 0);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(40, 35);
+            this.iconButton1.Size = new System.Drawing.Size(40, 45);
             this.iconButton1.TabIndex = 41;
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
@@ -429,7 +429,7 @@ namespace bases_uno.Views
             this.label18.ForeColor = System.Drawing.Color.LightGray;
             this.label18.Location = new System.Drawing.Point(3, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(361, 35);
+            this.label18.Size = new System.Drawing.Size(361, 45);
             this.label18.TabIndex = 38;
             this.label18.Text = "Clubes Invitados";
             // 
@@ -440,7 +440,7 @@ namespace bases_uno.Views
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(410, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(361, 35);
+            this.label2.Size = new System.Drawing.Size(361, 45);
             this.label2.TabIndex = 44;
             this.label2.Text = "Clubes Organizadores";
             // 

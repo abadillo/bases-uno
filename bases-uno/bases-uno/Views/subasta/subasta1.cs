@@ -120,21 +120,44 @@ namespace bases_uno.Views
                     throw new Exception("Debe seleccionar el local para realizar el evento");
                 }
 
+
                 DateTime fecha = Validacion.ValidarDateTime(textBoxFecha, true);
                 TimeSpan horaInicio = Validacion.ValidarTime(textBoxHoraInicio, true);
                 TimeSpan horaCierre = Validacion.ValidarTime(textBoxHoraCierre, true);
 
                 Validacion.ValidadFechayHora(fecha, horaInicio, horaCierre);
 
+
+                #region validaciones de segundo nivel (no se si ese es el nombre pero bueno) (( aun falta ))
+
+                bool caridad = checkBoxCaridad.Checked;
+
+                if (caridad)
+                {
+
+                }
+
+                if (tipo == "Virtual" && LocalID != 0)
+                {
+                    LocalID = 0;
+                    caridad = false;
+                }
+               
+
+
+                #endregion
+
+
                 subasta.Fecha = fecha;
                 subasta.HoraInicio = horaInicio;
                 subasta.HoraCierre = horaCierre;
-                subasta.Tipo = Validacion.ValidarCombo(comboBoxType);
+                subasta.Tipo = tipo;
                 //subasta.Cancelado = checkBoxCancelado.Checked;
-                subasta.Caridad = checkBoxCaridad.Checked;
+                subasta.Caridad = caridad;
+                
 
-                if (LocalID != 0)
-                    subasta.LocalID = Read.Local(LocalID).ID;
+
+                subasta.LocalID = LocalID;
                 
 
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Subasta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -148,7 +171,7 @@ namespace bases_uno.Views
                 }
                 else if (dialogResult == DialogResult.No)
                 {
-                    // do something else
+                    parent.InsertForm(new subasta1(parent, subasta));
                 }
 
             }
@@ -290,7 +313,7 @@ namespace bases_uno.Views
 
         private void iconButton18_Click(object sender, EventArgs e)
         {
-            Acciones.EnableRadio(checkBoxCaridad, iconButton18);
+            Acciones.EnableCheck(checkBoxCaridad, iconButton18);
         }
 
         private void iconButton3_Click(object sender, EventArgs e)

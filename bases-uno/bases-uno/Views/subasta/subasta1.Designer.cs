@@ -50,7 +50,6 @@ namespace bases_uno.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.radioButtonCancelado = new System.Windows.Forms.RadioButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -58,7 +57,6 @@ namespace bases_uno.Views
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.radioButtonCaridad = new System.Windows.Forms.RadioButton();
             this.iconButton18 = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -84,6 +82,8 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxCaridad = new System.Windows.Forms.CheckBox();
+            this.checkBoxCancelado = new System.Windows.Forms.CheckBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -387,7 +387,7 @@ namespace bases_uno.Views
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.radioButtonCancelado);
+            this.panel11.Controls.Add(this.checkBoxCancelado);
             this.panel11.Controls.Add(this.iconButton3);
             this.panel11.Controls.Add(this.label3);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -395,21 +395,6 @@ namespace bases_uno.Views
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(402, 46);
             this.panel11.TabIndex = 14;
-            // 
-            // radioButtonCancelado
-            // 
-            this.radioButtonCancelado.AutoSize = true;
-            this.radioButtonCancelado.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButtonCancelado.Enabled = false;
-            this.radioButtonCancelado.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCancelado.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButtonCancelado.Location = new System.Drawing.Point(351, 0);
-            this.radioButtonCancelado.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButtonCancelado.Name = "radioButtonCancelado";
-            this.radioButtonCancelado.Size = new System.Drawing.Size(14, 46);
-            this.radioButtonCancelado.TabIndex = 16;
-            this.radioButtonCancelado.TabStop = true;
-            this.radioButtonCancelado.UseVisualStyleBackColor = true;
             // 
             // iconButton3
             // 
@@ -502,7 +487,7 @@ namespace bases_uno.Views
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.radioButtonCaridad);
+            this.panel12.Controls.Add(this.checkBoxCaridad);
             this.panel12.Controls.Add(this.iconButton18);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -510,21 +495,6 @@ namespace bases_uno.Views
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(402, 45);
             this.panel12.TabIndex = 12;
-            // 
-            // radioButtonCaridad
-            // 
-            this.radioButtonCaridad.AutoSize = true;
-            this.radioButtonCaridad.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButtonCaridad.Enabled = false;
-            this.radioButtonCaridad.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCaridad.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButtonCaridad.Location = new System.Drawing.Point(351, 0);
-            this.radioButtonCaridad.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButtonCaridad.Name = "radioButtonCaridad";
-            this.radioButtonCaridad.Size = new System.Drawing.Size(14, 45);
-            this.radioButtonCaridad.TabIndex = 16;
-            this.radioButtonCaridad.TabStop = true;
-            this.radioButtonCaridad.UseVisualStyleBackColor = true;
             // 
             // iconButton18
             // 
@@ -886,6 +856,40 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
+            // checkBoxCaridad
+            // 
+            this.checkBoxCaridad.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCaridad.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBoxCaridad.Enabled = false;
+            this.checkBoxCaridad.FlatAppearance.BorderSize = 5;
+            this.checkBoxCaridad.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCaridad.Location = new System.Drawing.Point(315, 0);
+            this.checkBoxCaridad.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxCaridad.Name = "checkBoxCaridad";
+            this.checkBoxCaridad.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.checkBoxCaridad.Size = new System.Drawing.Size(50, 45);
+            this.checkBoxCaridad.TabIndex = 18;
+            this.checkBoxCaridad.Tag = "caridad";
+            this.checkBoxCaridad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCaridad.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCancelado
+            // 
+            this.checkBoxCancelado.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCancelado.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBoxCancelado.Enabled = false;
+            this.checkBoxCancelado.FlatAppearance.BorderSize = 5;
+            this.checkBoxCancelado.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCancelado.Location = new System.Drawing.Point(315, 0);
+            this.checkBoxCancelado.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxCancelado.Name = "checkBoxCancelado";
+            this.checkBoxCancelado.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.checkBoxCancelado.Size = new System.Drawing.Size(50, 46);
+            this.checkBoxCancelado.TabIndex = 18;
+            this.checkBoxCancelado.Tag = "cancelado";
+            this.checkBoxCancelado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCancelado.UseVisualStyleBackColor = true;
+            // 
             // subasta1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -962,7 +966,6 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.RadioButton radioButtonCaridad;
         private FontAwesome.Sharp.IconButton iconButton18;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel4;
@@ -976,11 +979,12 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel panel5;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.RadioButton radioButtonCancelado;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button buttonCancelarEvento;
         private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.CheckBox checkBoxCaridad;
+        private System.Windows.Forms.CheckBox checkBoxCancelado;
     }
 }

@@ -41,7 +41,6 @@ namespace bases_uno.Views
             this.spacerpanel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButtonCover = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
@@ -53,7 +52,6 @@ namespace bases_uno.Views
             this.textBoxPages = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.radioButtonColor = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.textBoxVolumen = new System.Windows.Forms.TextBox();
@@ -75,6 +73,8 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxColor = new System.Windows.Forms.CheckBox();
+            this.checkBoxCubierta = new System.Windows.Forms.CheckBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -256,7 +256,7 @@ namespace bases_uno.Views
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.radioButtonCover);
+            this.panel2.Controls.Add(this.checkBoxCubierta);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(411, 113);
@@ -264,20 +264,6 @@ namespace bases_uno.Views
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 30, 10);
             this.panel2.Size = new System.Drawing.Size(402, 49);
             this.panel2.TabIndex = 11;
-            // 
-            // radioButtonCover
-            // 
-            this.radioButtonCover.AutoSize = true;
-            this.radioButtonCover.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButtonCover.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCover.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButtonCover.Location = new System.Drawing.Point(358, 10);
-            this.radioButtonCover.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButtonCover.Name = "radioButtonCover";
-            this.radioButtonCover.Size = new System.Drawing.Size(14, 29);
-            this.radioButtonCover.TabIndex = 15;
-            this.radioButtonCover.TabStop = true;
-            this.radioButtonCover.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -405,7 +391,7 @@ namespace bases_uno.Views
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.radioButtonColor);
+            this.panel12.Controls.Add(this.checkBoxColor);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(3, 113);
@@ -413,20 +399,6 @@ namespace bases_uno.Views
             this.panel12.Padding = new System.Windows.Forms.Padding(0, 10, 30, 10);
             this.panel12.Size = new System.Drawing.Size(402, 49);
             this.panel12.TabIndex = 6;
-            // 
-            // radioButtonColor
-            // 
-            this.radioButtonColor.AutoSize = true;
-            this.radioButtonColor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButtonColor.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonColor.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButtonColor.Location = new System.Drawing.Point(358, 10);
-            this.radioButtonColor.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButtonColor.Name = "radioButtonColor";
-            this.radioButtonColor.Size = new System.Drawing.Size(14, 29);
-            this.radioButtonColor.TabIndex = 15;
-            this.radioButtonColor.TabStop = true;
-            this.radioButtonColor.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -692,6 +664,38 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
+            // checkBoxColor
+            // 
+            this.checkBoxColor.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxColor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBoxColor.FlatAppearance.BorderSize = 5;
+            this.checkBoxColor.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxColor.Location = new System.Drawing.Point(322, 10);
+            this.checkBoxColor.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxColor.Name = "checkBoxColor";
+            this.checkBoxColor.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.checkBoxColor.Size = new System.Drawing.Size(50, 29);
+            this.checkBoxColor.TabIndex = 17;
+            this.checkBoxColor.Tag = "color";
+            this.checkBoxColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxColor.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCubierta
+            // 
+            this.checkBoxCubierta.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCubierta.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBoxCubierta.FlatAppearance.BorderSize = 5;
+            this.checkBoxCubierta.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCubierta.Location = new System.Drawing.Point(322, 10);
+            this.checkBoxCubierta.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxCubierta.Name = "checkBoxCubierta";
+            this.checkBoxCubierta.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.checkBoxCubierta.Size = new System.Drawing.Size(50, 29);
+            this.checkBoxCubierta.TabIndex = 17;
+            this.checkBoxCubierta.Tag = "cubierta";
+            this.checkBoxCubierta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCubierta.UseVisualStyleBackColor = true;
+            // 
             // comicr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -746,7 +750,6 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel spacerpanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButtonCover;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox textBoxTitle;
@@ -776,8 +779,9 @@ namespace bases_uno.Views
         private FontAwesome.Sharp.IconButton btnadelante;
         private FontAwesome.Sharp.IconButton btnatras;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButtonColor;
         private System.Windows.Forms.TextBox textBoxVolumen;
         private System.Windows.Forms.TextBox textBoxPublicationDate;
+        private System.Windows.Forms.CheckBox checkBoxCubierta;
+        private System.Windows.Forms.CheckBox checkBoxColor;
     }
 }

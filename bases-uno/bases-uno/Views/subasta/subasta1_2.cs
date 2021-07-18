@@ -41,7 +41,6 @@ namespace bases_uno.Views
 
             label1.Text = "Subasta: " + subasta.ID;
 
-           
 
             // para los clubes invitados a la subasta
 

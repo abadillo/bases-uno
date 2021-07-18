@@ -29,8 +29,8 @@ namespace bases_uno.Views
 			textBoxID.Text = comic.ID.ToString();
 			textBoxTitle.Text = comic.Title;
             textBoxPublicationDate.Text = comic.PublicationDate.Value.ToShortDateString();
-            radioButtonColor.Checked = comic.Color;
-            radioButtonCover.Checked = comic.Cover;
+            checkBoxColor.Checked = comic.Color;
+            checkBoxCubierta.Checked = comic.Cover;
             textBoxVolumen.Text = comic.Volume.ToString();
 			textBoxNumber.Text = comic.Number.ToString();
 			textBoxPublicationPrice.Text = comic.PublicationPrice.ToString();
@@ -59,8 +59,8 @@ namespace bases_uno.Views
                 comic.PublicationPrice = Validacion.ValidarFloat(textBoxPublicationPrice, false);
 
                 comic.PublicationDate = Validacion.ValidarDateTime(textBoxPublicationDate, true);
-                comic.Cover = radioButtonCover.Checked;
-                comic.Color = radioButtonColor.Checked;
+                comic.Cover = checkBoxCubierta.Checked;
+                comic.Color = checkBoxColor.Checked;
 
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Comic?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -167,7 +167,7 @@ namespace bases_uno.Views
 
         private void iconButton18_Click(object sender, EventArgs e)
         {
-            Acciones.EnableRadio(radioButtonColor, iconButton18);
+            Acciones.EnableCheck(checkBoxColor, iconButton18);
         }
 
         private void iconButton9_Click(object sender, EventArgs e)
@@ -177,7 +177,7 @@ namespace bases_uno.Views
 
         private void iconButton12_Click(object sender, EventArgs e)
         {
-            Acciones.EnableRadio(radioButtonCover, iconButton12);
+            Acciones.EnableCheck(checkBoxCubierta, iconButton12);
         }
 
         private void iconButton11_Click(object sender, EventArgs e)

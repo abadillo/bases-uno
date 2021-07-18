@@ -57,7 +57,6 @@ namespace bases_uno.Views
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.radioButtonCaridad = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -66,6 +65,7 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxCaridad = new System.Windows.Forms.CheckBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -433,7 +433,7 @@ namespace bases_uno.Views
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.radioButtonCaridad);
+            this.panel12.Controls.Add(this.checkBoxCaridad);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(411, 117);
@@ -441,20 +441,6 @@ namespace bases_uno.Views
             this.panel12.Padding = new System.Windows.Forms.Padding(0, 10, 30, 10);
             this.panel12.Size = new System.Drawing.Size(402, 53);
             this.panel12.TabIndex = 15;
-            // 
-            // radioButtonCaridad
-            // 
-            this.radioButtonCaridad.AutoSize = true;
-            this.radioButtonCaridad.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButtonCaridad.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCaridad.ForeColor = System.Drawing.Color.LightGray;
-            this.radioButtonCaridad.Location = new System.Drawing.Point(358, 10);
-            this.radioButtonCaridad.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButtonCaridad.Name = "radioButtonCaridad";
-            this.radioButtonCaridad.Size = new System.Drawing.Size(14, 33);
-            this.radioButtonCaridad.TabIndex = 15;
-            this.radioButtonCaridad.TabStop = true;
-            this.radioButtonCaridad.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -554,6 +540,22 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
+            // checkBoxCaridad
+            // 
+            this.checkBoxCaridad.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCaridad.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBoxCaridad.FlatAppearance.BorderSize = 5;
+            this.checkBoxCaridad.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCaridad.Location = new System.Drawing.Point(322, 10);
+            this.checkBoxCaridad.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxCaridad.Name = "checkBoxCaridad";
+            this.checkBoxCaridad.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.checkBoxCaridad.Size = new System.Drawing.Size(50, 33);
+            this.checkBoxCaridad.TabIndex = 18;
+            this.checkBoxCaridad.Tag = "caridad";
+            this.checkBoxCaridad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCaridad.UseVisualStyleBackColor = true;
+            // 
             // subastar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -608,7 +610,6 @@ namespace bases_uno.Views
         private System.Windows.Forms.TextBox textBoxHoraCierre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.RadioButton radioButtonCaridad;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btncancelar;
@@ -627,5 +628,6 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox checkBoxCaridad;
     }
 }

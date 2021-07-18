@@ -38,7 +38,7 @@ namespace bases_uno.Views
                     checkBoxColor.Checked,
                     Validacion.ValidarNull(textBoxSynopsis), 
                     Validacion.ValidarInt(textBoxPages, true), 
-                    checkBoxCover.Checked,
+                    checkBoxCubierta.Checked,
                     Validacion.ValidarNull(textBoxEditor), 
                     Validacion.ValidarInt(textBoxVolumen, false),
                     Validacion.ValidarFloat(textBoxPublicationPrice, false)
