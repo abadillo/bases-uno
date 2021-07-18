@@ -374,6 +374,12 @@
     <Compile Include="Views\UserControls\itemsubasta.Designer.cs">
       <DependentUpon>itemsubasta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\miniitemlistado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemlistado.Designer.cs">
+      <DependentUpon>miniitemlistado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\miniitemdueno.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -691,6 +697,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemsubasta.resx">
       <DependentUpon>itemsubasta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\miniitemlistado.resx">
+      <DependentUpon>miniitemlistado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\miniitemdueno.resx">
       <DependentUpon>miniitemdueno.cs</DependentUpon>

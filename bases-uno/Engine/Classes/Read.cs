@@ -1046,7 +1046,7 @@ namespace Engine.Classes
             return list;
         }
 
-        public static List<Listado> Listados(Subasta subasta)
+        public static List<Listado> Listados(int subasta_id)
         {
             List<Listado> list = new List<Listado>();
 
@@ -1060,7 +1060,7 @@ namespace Engine.Classes
                 string Query = "SELECT * FROM listado Where subasta_id = @subasta_id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
-                connection.Script.Parameters.AddWithValue("subasta_id", subasta.ID);
+                connection.Script.Parameters.AddWithValue("subasta_id", subasta_id);
 
                 connection.Reader = connection.Script.ExecuteReader();
 

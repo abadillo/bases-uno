@@ -28,7 +28,8 @@ namespace bases_uno.Views
         public bool flagPresencial = false;      // true if presencial, false if virtual
         public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
 
-        public List<Listado> listado;
+        public List<Listado> listado = null;
+
 
         public int orden = 0;
 
@@ -43,8 +44,20 @@ namespace bases_uno.Views
             label1.Text = "Subasta: " + subasta.ID;
 
 
-            listado = Subasta.Listados();
-            
+            listado = subasta.Listados();
+
+
+            for (int i = 0; i < listado.Count; i++)
+            {
+                miniitemlistado item = new miniitemlistado(listado[i], parent);
+                item.Dock = DockStyle.Top;
+
+                dipanel2.Controls.Add(item);
+
+
+            }
+
+
 
 
             #region set flags
@@ -74,6 +87,7 @@ namespace bases_uno.Views
 
 
             #endregion
+
 
 
 
@@ -113,6 +127,7 @@ namespace bases_uno.Views
 
                 }
             }
+           
 
 
             Update();
@@ -130,6 +145,115 @@ namespace bases_uno.Views
             panelAlerta.Visible = true;
         }
 
+        private void LlenarObjetos()
+        {
+            try
+            {
+                string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
+                int DuenoID = int.Parse(tokens[0]);
+
+                Coleccionista coleccionista = Read.Coleccionista(DuenoID);
+
+
+                //List<DuenoHistorico> listDueHis = Read.DuenosHistoricos(coleccionista);
+
+                List<DuenoHistorico> listDueHis = null;
+
+
+                for (int i = 0; i < listDueHis.Count; i++)
+                {
+
+                    DuenoHistorico duenoHistorico = listDueHis[i];
+
+                    if (duenoHistorico.ComicID != 0)
+                    {
+                        Comic comic = Read.Comic(duenoHistorico.ComicID);
+
+                        string item = "Comic " + comic.ID + " " + comic.Title;
+                        comboBoxObjeto.Items.Add(item);
+                    }
+                    else
+                    {
+                        Coleccionable coleccionable = Read.Coleccionable(duenoHistorico.ColeccionableID);
+
+                        string item = "Coleccionable " + coleccionable.ID + " " + coleccionable.Nombre;
+                        comboBoxObjeto.Items.Add(item);
+
+                    }
+
+                }
+
+            }
+            catch (Exception)
+            {
+        
+                ////
+            }
+            
+        }
+
+        private void LlenarPrecio()
+        {
+
+            string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
+
+            string tipo = tokens[0];
+
+            int ColeccionistaID = int.Parse(tokens[0]);
+            Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
+
+            DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
+            float precio = duenoHistorico.PrecioDolares;
+
+            textBoxPrecio.Text = precio.ToString();
+
+            if (precio > 0 || flagBenefica)
+            {
+                textBoxPrecio.Enabled = false;
+            }
+          
+
+                
+        }
+
+        private DuenoHistorico BuscarHistorico( Coleccionista coleccionista, string tipo, int idObj )
+        {
+
+            //List<DuenoHistorico> listDueHis = Read.DuenosHistoricos(coleccionista);
+            List<DuenoHistorico> listDueHis = null;
+
+
+            for (int i = 0; i < listDueHis.Count; i++)
+            {
+                DuenoHistorico dH = listDueHis[i];
+
+                if (tipo == "Comic")
+                {
+                    int comicID = idObj;
+                    Comic comic = Read.Comic(comicID);
+
+                    if (dH.ComicID == comic.ID)
+                    {
+                        return dH;
+                    }
+                }
+                else
+                {
+                    int coleccionableID =  idObj;
+                    Coleccionable coleccionable = Read.Coleccionable(coleccionableID);
+
+                    if (dH.ColeccionableID == coleccionable.ID)
+                    {
+                        return dH;
+                    }
+                }
+
+                
+
+            }
+
+            return null;
+        }
 
         private void Registrar()
         {
@@ -142,71 +266,43 @@ namespace bases_uno.Views
                 int ColeccionistaID = int.Parse(tokens[0]);
                 Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
 
-                //List<DuenoHistorico> listDueHis = Read.DuenosHistoricos(coleccionista);
-                List<DuenoHistorico> listDueHis = null;
 
-                DuenoHistorico duenoHistorico = null;
+                DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
+
+                //for (int i = 0; i < this.listado.Count; i++)
+                //   if (listado[i].DuenoHistoricoID == duenoHistorico.ID)
+                //       throw new Exception("Ya este objeto esta en la lista");
+
+
+                //validar esto
+                float precio = Validacion.ValidarFloat(textBoxPrecio,true);
 
                 
-
-                for (int i = 0; i < listDueHis.Count; i++)
+                if (precio <= 0)
                 {
-                    DuenoHistorico dH = listDueHis[i];
-
-                    if (tipo == "Comic")
-                    {
-                        int comicID = int.Parse(tokens[1]);
-                        Comic comic = Read.Comic(comicID);
-
-                        if (dH.ComicID == comic.ID)
-                        {
-                            duenoHistorico = dH;
-                        }
-                    }
-                    else
-                    {
-                        int coleccionableID = int.Parse(tokens[1]);
-                        Coleccionable coleccionable = Read.Coleccionable(coleccionableID);
-
-                        if (dH.ColeccionableID == coleccionable.ID)
-                        {
-                            duenoHistorico = dH;
-                        }
-                    }
-
-
-
+                    throw new Exception("Aqui no se subastan objetos de gratis");
                 }
 
-                for (int i = 0; i < listado.Count; i++)
+                if (flagBenefica && precio < duenoHistorico.PrecioDolares) 
                 {
+                    throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
 
-                    if (listado.DuenoHistorico == duenoHistorico)
-                    {
-
-
-                    }
-                
                 }
 
 
                 Listado listado = new Listado(
                     subasta,
-                    Validacion.ValidarInt(textBoxPrecio,true),
-                    duenoHistorico.ID,
-                    duenoHistorico.FechaRegistro,
-                    DateTime.Now,
-                    coleccionista,
-                    comic,
-                    0,
-                    significado
-
+                    precio,
+                    duenoHistorico,
+                    subasta.SiguienteNroListado(),
+                    Validacion.ValidarInt(textBoxDuracion,true)
+              
                 ) ;
 
-                duenoHistorico.Insert();
+                listado.Insert();
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                parent.InsertForm(new comic1_1(parent, comic));
+                parent.InsertForm(new subastaplan1_4(parent, subasta));
 
             }
             catch (ApplicationException aex)
@@ -222,48 +318,7 @@ namespace bases_uno.Views
         }
 
 
-        private void LlenarObjetos()
-        {
-
-            string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
-            int DuenoID = int.Parse(tokens[0]);
-
-            Coleccionista coleccionista = Read.Coleccionista(DuenoID);
-
-
-            //List<DuenoHistorico> listDueHis = Read.DuenosHistoricos(coleccionista);
-
-            List<DuenoHistorico> listDueHis = null;
-
-
-            for (int i = 0; i < listDueHis.Count; i++)
-            {
-
-                DuenoHistorico duenoHistorico = listDueHis[i];
-
-                if (duenoHistorico.ComicID != 0)
-                {
-                    Comic comic = Read.Comic(duenoHistorico.ComicID);
-
-                    string item = "Comic " + comic.ID + " " + comic.Title;
-                    comboBoxObjeto.Items.Add(item);
-                }
-                else
-                {
-                    Coleccionable coleccionable = Read.Coleccionable(duenoHistorico.ColeccionableID);
-
-                    string item = "Coleccionable " + coleccionable.ID + " " + coleccionable.Nombre;
-                    comboBoxObjeto.Items.Add(item);
-
-                } 
-
-            }
-
-
-            //Update();
-        }
-
-
+     
 
         #endregion
 
@@ -300,6 +355,11 @@ namespace bases_uno.Views
         #endregion
 
         private void comboBoxColeccionista_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LlenarPrecio();
+        }
+
+        private void comboBoxColeccionista_SelectedValueChanged_1(object sender, EventArgs e)
         {
             LlenarObjetos();
         }

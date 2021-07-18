@@ -667,15 +667,8 @@ namespace Engine.Classes
 
         public List<Listado> Listados()
         {
-            List<Listado> listados = new List<Listado>();
-            List<Listado> aux = Read.Listados();
-            foreach (Listado listado in aux)
-            {
-                if (listado.SubastaID == ID)
-                {
-                    listados.Add(listado);
-                }
-            }
+            List<Listado> listados = Read.Listados(ID);
+            
             return listados;
         }
 

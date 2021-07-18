@@ -100,8 +100,7 @@ namespace bases_uno.Views
                     DateTime.Now,
                     coleccionista,
                     comic,
-                    0,
-                    significado                  
+                    0                
                     
                 );
 
