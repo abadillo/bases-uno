@@ -53,7 +53,7 @@ namespace bases_uno.Views
 
             for (int i = 0; i < altListCluOrg.Count; i++)
             {
-                Console.WriteLine(altListCluOrg[i].ID);
+                // Console.WriteLine(altListCluOrg[i].ID);
                 miniitemclub item = new miniitemclub(altListCluOrg[i], subasta, parent, true);
                 item.Dock = DockStyle.Top;
 
@@ -63,7 +63,7 @@ namespace bases_uno.Views
 
             for (int i = 0; i < altListCluInv.Count; i++)
             {
-                Console.WriteLine(altListCluInv[i].ID);
+                // Console.WriteLine(altListCluInv[i].ID);
                 miniitemclub item = new miniitemclub(altListCluInv[i], subasta, parent, false);
                 item.Dock = DockStyle.Top;
 
