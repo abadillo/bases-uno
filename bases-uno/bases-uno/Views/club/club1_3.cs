@@ -21,7 +21,9 @@ namespace bases_uno.Views
         public index parent;
         public Club club;
 
-        public List<Membresia> listMem;                                  // para la lista de membresias                                
+        public List<Membresia> listMem;                                  // para la lista de membresias
+        public List<Membresia> listMemAct;                                  // para la lista de membresias
+
         public List<Coleccionista> listCol = Read.Coleccionistas();      // para el combo de coleccionistas
 
 
@@ -36,18 +38,27 @@ namespace bases_uno.Views
             label1.Text = "Club: " + club.Nombre;
 
 
-
             listMem = Read.Membresias(club);
-
 
 
             for (int i = 0; i < listMem.Count; i++)
             {
+                if (listMem[i].FechaRetiro.HasValue)
+                    listMemAct.Add(listMem[i]);
+                
+            }
 
-                miniitemmembresia item = new miniitemmembresia(listMem[i], parent);
+
+            for (int i = 0; i < listMemAct.Count; i++)
+            {
+                Console.WriteLine(listMemAct[i].FechaRetiro);
+
+                miniitemmembresia item = new miniitemmembresia(listMemAct[i], parent);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
+                
+                
 
             }
 
@@ -84,8 +95,8 @@ namespace bases_uno.Views
 
                 Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
 
-                for (int i = 0; i < listMem.Count; i++)
-                    if (coleccionista.ID == listMem[i].ColeccionistaID)
+                for (int i = 0; i < listMemAct.Count; i++)
+                    if (coleccionista.ID == listMemAct[i].ColeccionistaID)
                         throw new Exception("Ya este coleccionista esta en la lista");
 
 
