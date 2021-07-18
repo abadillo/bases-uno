@@ -52,15 +52,25 @@ INSERT INTO interes (nombre, descripcion) VALUES ('Arcade', 'Por los viejos tiem
 INSERT INTO interes (nombre, descripcion) VALUES ('MMORPG', 'Por la Horda, la Alianza, Eorzea y muchos mas');
 INSERT INTO interes (nombre, descripcion) VALUES ('Role-Play', 'NO es lo que piensan');
 
-INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('5/28/2018', '9510162', 'www.zendikar.com.ve', 'Mayor centro de coleccionistas de Caracas', '21', 'Zendikar')
-INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('11/20/2014', '9865412', 'www.asmodeus.com', 'Enfocados en las mejores subastas de Comics y Videojuegos', '22', 'Asmodeus')
-INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('2/4/2016', '123457820', NULL, 'Miamis Gaming Hub', '30', 'The GameHub')
-INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('7/8/2015', '852456321', 'www.theempire.com', 'The domain of the Geeks', '32', 'The Empire')
-INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('8/21/2009', '8529674', 'www.cathedrale.co.fr', 'La Religion Nerd', '34', 'Le Cathedrale')
-INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('8/15/2019', '7895410', 'www.limsalominsa.com', 'Le Vrai ComicCon', '36', 'Limsa Lominsa')
-INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('4/16/2017', '95145320', 'www.hingashi.com', 'We love RPG', '38', 'Hingashi')
-INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('9/10/2014', '84512639', 'www.kuganecc.co.jp', 'Comic and Videogame Haven', '40', 'Kugane')
-INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('2/3/2005', '7894512', 'www.lacueva.com.ve', 'Donde se consuige el amor al comic', '42', 'La Cueva')
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('5/28/2018', '9510162', 'www.zendikar.com.ve', 'Mayor centro de coleccionistas de Caracas', '21', 'Zendikar');
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('11/20/2014', '9865412', 'www.asmodeus.com', 'Enfocados en las mejores subastas de Comics y Videojuegos', '22', 'Asmodeus');
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('2/4/2016', '123457820', NULL, 'Miamis Gaming Hub', '30', 'The GameHub');
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('7/8/2015', '852456321', 'www.theempire.com', 'The domain of the Geeks', '32', 'The Empire');
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('8/21/2009', '8529674', 'www.cathedrale.co.fr', 'La Religion Nerd', '34', 'Le Cathedrale');
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('8/15/2019', '7895410', 'www.limsalominsa.com', 'Le Vrai ComicCon', '36', 'Limsa Lominsa');
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('4/16/2017', '95145320', 'www.hingashi.com', 'We love RPG', '38', 'Hingashi');
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('9/10/2014', '84512639', 'www.kuganecc.co.jp', 'Comic and Videogame Haven', '40', 'Kugane');
+INSERT INTO club (fecha_fundacion, telefono, pagina_web, proposito, lugar_id, nombre) VALUES ('2/3/2005', '7894512', 'www.lacueva.com.ve', 'Donde se consuige el amor al comic', '42', 'La Cueva');
+
+INSER INTO clu_int (interes_id,club_id) VALUES (8,8);
+INSER INTO clu_int (interes_id,club_id) VALUES (3,7);
+INSER INTO clu_int (interes_id,club_id) VALUES (7,5);
+INSER INTO clu_int (interes_id,club_id) VALUES (2,2);
+INSER INTO clu_int (interes_id,club_id) VALUES (1,3);
+INSER INTO clu_int (interes_id,club_id) VALUES (4,6);
+INSER INTO clu_int (interes_id,club_id) VALUES (5,4);
+INSER INTO clu_int (interes_id,club_id) VALUES (6,1);
+INSER INTO clu_int (interes_id,club_id) VALUES (4,9);
 
 INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('8529674', 'Jose', 'Perez', '8/7/1984');
 INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) VALUES ('7418596', 'Maria', 'Ramirez', '9/7/1998');
