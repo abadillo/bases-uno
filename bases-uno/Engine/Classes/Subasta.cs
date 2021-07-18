@@ -636,25 +636,10 @@ namespace Engine.Classes
         public void AgregarParticipantes()
         {
             List<Membresia> invitados = new List<Membresia>();
-            List<Membresia> membresias = Read.Membresias();
             List<Club> clubesInvitados = ClubesInvitados();
-            List<Club> organizadores = Organizadores();
-            foreach (Membresia membresia in membresias)
+            foreach (Club club in clubesInvitados)
             {
-                foreach (Club organizador in organizadores)
-                {
-                    if (membresia.ClubID == organizador.ID)
-                    {
-                        invitados.Add(membresia);
-                    }
-                }
-                foreach (Club clubInvitado in clubesInvitados)
-                {
-                    if (membresia.ClubID == clubInvitado.ID)
-                    {
-                        invitados.Add(membresia);
-                    }
-                }
+                invitados.AddRange(Read.Membresias(club));
             }
 
             int id = 1;

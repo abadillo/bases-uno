@@ -1017,6 +1017,20 @@ namespace Engine.Classes
             return list;
         }
 
+        public static List<Membresia> Membresias(Club club)
+        {
+            List<Membresia> membresias = Membresias();
+            List<Membresia> aux = new List<Membresia>();
+            foreach (Membresia membresia in membresias)
+            {
+                if (membresia.ClubID == club.ID)
+                {
+                    aux.Add(membresia);
+                }
+            }
+            return aux;
+        }
+
         public static List<OrganizacionCaridad> OrganizacionesCaridad()
         {
             List<OrganizacionCaridad> list = new List<OrganizacionCaridad>();

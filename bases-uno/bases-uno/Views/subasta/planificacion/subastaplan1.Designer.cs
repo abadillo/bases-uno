@@ -50,6 +50,7 @@ namespace bases_uno.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.checkBoxCancelado = new System.Windows.Forms.CheckBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -57,6 +58,7 @@ namespace bases_uno.Views
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.checkBoxCaridad = new System.Windows.Forms.CheckBox();
             this.iconButton18 = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -82,8 +84,6 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxCaridad = new System.Windows.Forms.CheckBox();
-            this.checkBoxCancelado = new System.Windows.Forms.CheckBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -396,6 +396,23 @@ namespace bases_uno.Views
             this.panel11.Size = new System.Drawing.Size(402, 46);
             this.panel11.TabIndex = 14;
             // 
+            // checkBoxCancelado
+            // 
+            this.checkBoxCancelado.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCancelado.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBoxCancelado.Enabled = false;
+            this.checkBoxCancelado.FlatAppearance.BorderSize = 5;
+            this.checkBoxCancelado.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCancelado.Location = new System.Drawing.Point(315, 0);
+            this.checkBoxCancelado.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxCancelado.Name = "checkBoxCancelado";
+            this.checkBoxCancelado.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.checkBoxCancelado.Size = new System.Drawing.Size(50, 46);
+            this.checkBoxCancelado.TabIndex = 18;
+            this.checkBoxCancelado.Tag = "cancelado";
+            this.checkBoxCancelado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCancelado.UseVisualStyleBackColor = true;
+            // 
             // iconButton3
             // 
             this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
@@ -495,6 +512,23 @@ namespace bases_uno.Views
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(402, 45);
             this.panel12.TabIndex = 12;
+            // 
+            // checkBoxCaridad
+            // 
+            this.checkBoxCaridad.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCaridad.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBoxCaridad.Enabled = false;
+            this.checkBoxCaridad.FlatAppearance.BorderSize = 5;
+            this.checkBoxCaridad.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCaridad.Location = new System.Drawing.Point(315, 0);
+            this.checkBoxCaridad.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxCaridad.Name = "checkBoxCaridad";
+            this.checkBoxCaridad.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.checkBoxCaridad.Size = new System.Drawing.Size(50, 45);
+            this.checkBoxCaridad.TabIndex = 18;
+            this.checkBoxCaridad.Tag = "caridad";
+            this.checkBoxCaridad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCaridad.UseVisualStyleBackColor = true;
             // 
             // iconButton18
             // 
@@ -855,40 +889,6 @@ namespace bases_uno.Views
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
-            // 
-            // checkBoxCaridad
-            // 
-            this.checkBoxCaridad.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxCaridad.Dock = System.Windows.Forms.DockStyle.Right;
-            this.checkBoxCaridad.Enabled = false;
-            this.checkBoxCaridad.FlatAppearance.BorderSize = 5;
-            this.checkBoxCaridad.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCaridad.Location = new System.Drawing.Point(315, 0);
-            this.checkBoxCaridad.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBoxCaridad.Name = "checkBoxCaridad";
-            this.checkBoxCaridad.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.checkBoxCaridad.Size = new System.Drawing.Size(50, 45);
-            this.checkBoxCaridad.TabIndex = 18;
-            this.checkBoxCaridad.Tag = "caridad";
-            this.checkBoxCaridad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxCaridad.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxCancelado
-            // 
-            this.checkBoxCancelado.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxCancelado.Dock = System.Windows.Forms.DockStyle.Right;
-            this.checkBoxCancelado.Enabled = false;
-            this.checkBoxCancelado.FlatAppearance.BorderSize = 5;
-            this.checkBoxCancelado.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCancelado.Location = new System.Drawing.Point(315, 0);
-            this.checkBoxCancelado.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBoxCancelado.Name = "checkBoxCancelado";
-            this.checkBoxCancelado.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.checkBoxCancelado.Size = new System.Drawing.Size(50, 46);
-            this.checkBoxCancelado.TabIndex = 18;
-            this.checkBoxCancelado.Tag = "cancelado";
-            this.checkBoxCancelado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxCancelado.UseVisualStyleBackColor = true;
             // 
             // subastaplan1
             // 
