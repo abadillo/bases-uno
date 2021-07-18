@@ -417,6 +417,45 @@ namespace Engine.Classes
             return membresia;
         }
 
+
+        public static Membresia Membresia(Coleccionista coleccionista, Club club)
+        {
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+            Membresia membresia = null;
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM membresia WHERE fecha_retiro = null AND club_id = @clubid AND " +
+                    "coleccionista_documento_identidad = @coleccionistaid";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("clubid", club.ID);
+                connection.Script.Parameters.AddWithValue("coleccionistaid", coleccionista.ID);
+
+                connection.Reader = connection.Script.ExecuteReader();
+
+                if (connection.Reader.Read())
+                {
+                    membresia = new Membresia(connection.ReadDate(0), connection.ReadDate(1), connection.ReadInt(2),
+                        connection.ReadInt(4), connection.ReadString(5), connection.ReadInt(3));
+                }
+            }
+            catch
+            {
+                membresia = null;
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return membresia;
+        }
+
+
+
         public static OrganizacionCaridad OrganizacionCaridad(int id)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();

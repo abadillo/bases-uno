@@ -20,9 +20,13 @@ namespace bases_uno.Views
         
         public index parent;
         public Subasta subasta;
-            
-        public List<Membresia> altListPar;                              // para los membresias ya de la subasta
-        public List<Membresia> ListPar = Read.Membresias();             // para el combo de membresia
+
+        //public List<Membresia> listMem = new List<Membresia>;              // para los membresias ya de la subasta
+        
+        public List<Participante> listPar;
+        //public List<Club> ListCluOrg;                    // para los clubes organizadores a la subasta
+        public List<Club> ListCluInv;                    // para los clubes invitados
+        //public List<Membresia> ListPar = Read.Membresias();             // para el combo de membresia
 
         public bool flagCancelado = false;      // true if cancelado, false if no cancelado
         public bool flagPresencial = false;      // true if presencial, false if virtual
@@ -39,10 +43,6 @@ namespace bases_uno.Views
 
             label1.Text = "Subasta: " + subasta.ID;
 
-            subasta.AgregarParticipantes();
-            //Participante part = Read.Participantes()
-
-            //part.
 
 
             #region set flags
@@ -58,14 +58,13 @@ namespace bases_uno.Views
 
             #endregion
 
-
             #region use flags
 
-            if (flagBenefica == false || flagPresencial== false)
+            if (flagBenefica == false || flagPresencial == false)
             {
                 //DisableFunciones("Esta subasta no es de tipo benefica, por lo tanto no deberia ver ninguna organizacion asociada \nSi observa alguna arriba, algo salio mal");
             }
-           
+
             if (flagCancelado)
             {
                 DisableFunciones("Esta subasta fue cancelada, no puede agregar partipantes \nSi observa alguna arriba, algo salio mal");
@@ -75,7 +74,36 @@ namespace bases_uno.Views
             #endregion
 
 
-            LlenarComboMembresias();
+            
+            ListCluInv = subasta.ClubesInvitados();
+            listPar = subasta.Participantes();
+
+
+
+            foreach (Participante partipante in listPar)
+            {
+                Membresia membresia = partipante.Membresia();
+
+                miniitemmembresia item = new miniitemmembresia(membresia, parent, true);
+                item.Dock = DockStyle.Top;
+
+                dipanel2.Controls.Add(item);
+            }
+
+
+            // llena el combo de clubes
+            foreach (Club club in ListCluInv)
+            {
+
+                string item = club.ID + " " + club.Nombre;
+                comboBoxClub.Items.Add(item);
+            }
+            
+
+
+            
+            
+
 
             Update();
 
@@ -92,28 +120,38 @@ namespace bases_uno.Views
             panelAlerta.Visible = true;
         }
 
+
         private void Registrar()
         {
             try
             {
-                //string[] tokens = Validacion.ValidarCombo(comboBoxOrganizacion).Split(' ');
-                //int OrganizacionID = int.Parse(tokens[0]);
+                string[] tokens = Validacion.ValidarCombo(comboBoxClub).Split(' ');
+                int clubID = int.Parse(tokens[0]);
 
-                ////Membresia organizacion = Read.Membresia(OrganizacionID);
+                Club club = Read.Club(clubID);
 
-                //int porcentaje = int.Parse(Validacion.ValidarCombo(comboBoxPorcentaje));
+                tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' ');
+                int ColeccionistaID = int.Parse(tokens[0]);
 
-                //for (int i = 0; i < altListPar.Count; i++)
-                //{ 
-                //    if (organizacion.ID == altListPar[i].ID)          
-                //        throw new Exception("Ya este organizacion esta en la lista");
-                    
-                //}
+                Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
 
-                //subasta.AgregarMembresia(organizacion, porcentaje);
 
-                //MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //parent.InsertForm(new subastaplan1_1(parent,subasta));
+                Membresia membresia = Read.Membresia(coleccionista, club);
+
+                Console.WriteLine(membresia.ClubID);
+
+                if (flagBenefica)
+                {
+                    subasta.AgregarParticipante(membresia, true);
+                }
+                else
+                {
+                    subasta.AgregarParticipante(membresia, false);
+                }
+               
+
+                MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                parent.InsertForm(new subastaplan1_3(parent,subasta));
 
             }
             catch (ApplicationException aex)
@@ -128,41 +166,38 @@ namespace bases_uno.Views
 
         }
 
-        private void LlenarPorcentajes()
+        private void LlenarColeccionistas()
         {
 
-            var porcentajeRestante = 100;
+            string[] tokens = Validacion.ValidarCombo(comboBoxClub).Split(' ');
+            int clubID = int.Parse(tokens[0]);
+
+            Club club = Read.Club(clubID);
+
+            List<Membresia> membresias = Read.Membresias(club);
 
 
-            for (int i = 0; i < altListPar.Count; i++)
+            foreach (Membresia membresia in membresias)
             {
-                Membresia tmp = altListPar[i];
-                //porcentajeRestante = porcentajeRestante - subasta.Porcentaje(tmp);
+                Coleccionista coleccionista = Read.Coleccionista(membresia.ColeccionistaID);
+
+                bool activa = membresia.FechaRetiro == null;
+                bool permisoEdad = coleccionista.RepresentanteID != 0 || Validacion.Edad(coleccionista.FechaNacimiento.Value) >= 18;
+
+                if (activa && permisoEdad) 
+                { 
+                    string item = coleccionista.ID + " " + coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
+                    comboBoxColeccionista.Items.Add(item);
+                }
             }
 
-            for (int n = 1; n <= porcentajeRestante; n++)
-            {
-                string item = n.ToString();
-                comboBoxPorcentaje.Items.Add(item);
-
-                if (n == porcentajeRestante)
-                    comboBoxPorcentaje.SelectedItem = item ;
-
-            }
-
-
+           
 
             //Update();
         }
 
 
-        private void LlenarComboMembresias()
-        {
-
-
-
-
-        }
+      
         #endregion
 
         #region click botones normales
@@ -183,7 +218,7 @@ namespace bases_uno.Views
         private void iconButton5_Click(object sender, EventArgs e)
         {
             panelAgregar.Visible = true;
-            LlenarPorcentajes();
+           
         }
 
         private void btncancelar_Click_1(object sender, EventArgs e)
@@ -197,5 +232,10 @@ namespace bases_uno.Views
         }
         #endregion
 
+
+        private void comboBoxClub_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LlenarColeccionistas();
+        }
     }
 }

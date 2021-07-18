@@ -48,11 +48,11 @@ namespace bases_uno.Views
             }
 
 
-            foreach (Membresia membresia1 in listMemAct)
+            foreach (Membresia membresia in listMemAct)
             {
-                Console.WriteLine(membresia1.FechaRetiro);
+                //Console.WriteLine(membresia.FechaRetiro);
 
-                miniitemmembresia item = new miniitemmembresia(membresia1, parent);
+                miniitemmembresia item = new miniitemmembresia(membresia, parent, false);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
@@ -60,6 +60,7 @@ namespace bases_uno.Views
 
 
 
+            // llena combo de coleccionistas 
 
             for (int i = 0; i < listCol.Count; i++)
             {

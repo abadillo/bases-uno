@@ -18,7 +18,7 @@ namespace bases_uno.Views.Components
         public Membresia membresia;
         public Club club;
        
-        public miniitemmembresia( Membresia membresia, index parent )
+        public miniitemmembresia( Membresia membresia, index parent, bool paraInvitados )
         {
 
             this.parent = parent;
@@ -29,16 +29,27 @@ namespace bases_uno.Views.Components
 
             InitializeComponent();
 
-            string responsable = "no";
-
-            if (membresia.ClubIDLider != 0)
-                responsable = "si";
+            
 
             //Console.WriteLine(contacto.Telefono);
             label1.Text = coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
             label2.Text = coleccionista.ID.ToString();
-            label3.Text = "Responsable? ";
-            label3_1.Text = responsable;
+
+            if (paraInvitados)
+            {
+                label3.Text =club.Nombre;
+                label3_1.Visible = false;
+            }
+            else
+            {
+                string responsable = "no";
+
+                if (membresia.ClubIDLider != 0)
+                    responsable = "si";
+
+                label3.Text = "Responsable? ";
+                label3_1.Text = responsable;
+            }
 
             Update();
 
