@@ -473,12 +473,19 @@ namespace Engine.Classes
                 CloseConnection();
             }
 
-            List<Club> clubes = new List<Club>();
-            foreach (int id in ids)
+            if (ids.Count() == 0)
             {
-                clubes.Add(Read.Club(id));
+                return new List<Club>();
             }
-            return clubes;
+            else
+            {
+                List<Club> clubes = new List<Club>();
+                foreach (int id in ids)
+                {
+                    clubes.Add(Read.Club(id));
+                }
+                return clubes;
+            }
         } 
 
         public List<Club> ClubesInvitados()
@@ -509,12 +516,19 @@ namespace Engine.Classes
                 CloseConnection();
             }
 
-            List<Club> clubes = new List<Club>();
-            foreach (int id in ids)
+            if (ids.Count() == 0)
             {
-                clubes.Add(Read.Club(id));
+                return new List<Club>();
             }
-            return clubes;
+            else
+            {
+                List<Club> clubes = new List<Club>();
+                foreach (int id in ids)
+                {
+                    clubes.Add(Read.Club(id));
+                }
+                return clubes;
+            }
         }
 
         public void EliminarClubes()
