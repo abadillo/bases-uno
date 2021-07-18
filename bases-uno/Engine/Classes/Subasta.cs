@@ -679,6 +679,20 @@ namespace Engine.Classes
             return listados;
         }
 
+        public int SiguienteNroListado()
+        {
+            int cont = 1;
+            List<Listado> listados = Read.Listados();
+            foreach (Listado listado in listados) 
+            {
+                if (listado.SubastaID == ID)
+                {
+                    cont += 1;
+                }
+            }
+            return cont;
+        }
+
         public void AgregarParticipantes()
         {
             List<Membresia> invitados = new List<Membresia>();
