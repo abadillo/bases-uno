@@ -75,7 +75,7 @@ namespace bases_uno.Views
                     horaInicio,
                     horaCierre,
                     tipo,
-                    radioButtonCaridad.Checked,
+                    checkBoxCaridad.Checked,
                     false,
                     Read.Local(localID)               
                 );

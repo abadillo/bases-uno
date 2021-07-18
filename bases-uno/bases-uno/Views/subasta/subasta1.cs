@@ -45,8 +45,8 @@ namespace bases_uno.Views
             textBoxFecha.Text = subasta.Fecha.Value.ToShortDateString();
             textBoxHoraInicio.Text = horaInicioStr;
             textBoxHoraCierre.Text = horaCierreStr;
-            radioButtonCaridad.Checked = subasta.Caridad;
-            radioButtonCancelado.Checked = subasta.Cancelado;
+            checkBoxCaridad.Checked = subasta.Caridad;
+            checkBoxCancelado.Checked = subasta.Cancelado;
 
             comboBoxType.Items.AddRange(new object[] {
                 "Presencial",
@@ -130,8 +130,8 @@ namespace bases_uno.Views
                 subasta.HoraInicio = horaInicio;
                 subasta.HoraCierre = horaCierre;
                 subasta.Tipo = Validacion.ValidarCombo(comboBoxType);
-                //subasta.Cancelado = radioButtonCancelado.Checked;
-                subasta.Caridad = radioButtonCaridad.Checked;
+                //subasta.Cancelado = checkBoxCancelado.Checked;
+                subasta.Caridad = checkBoxCaridad.Checked;
 
                 if (LocalID != 0)
                     subasta.LocalID = Read.Local(LocalID).ID;
@@ -290,7 +290,7 @@ namespace bases_uno.Views
 
         private void iconButton18_Click(object sender, EventArgs e)
         {
-            Acciones.EnableRadio(radioButtonCaridad, iconButton18);
+            Acciones.EnableRadio(checkBoxCaridad, iconButton18);
         }
 
         private void iconButton3_Click(object sender, EventArgs e)

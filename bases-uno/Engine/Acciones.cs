@@ -22,7 +22,7 @@ namespace Engine
             input.BackColor = Color.LightGray;
         }
 
-        public static void EnableRadio(RadioButton radio, FontAwesome.Sharp.IconButton iconbutton)
+        public static void EnableRadio(checkBox radio, FontAwesome.Sharp.IconButton iconbutton)
         {
             iconbutton.Enabled = false;
             radio.Enabled = true;
