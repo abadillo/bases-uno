@@ -246,21 +246,7 @@ namespace Engine.Classes
             return duenoHistorico;
         }
 
-        public static List<DuenoHistorico> ColeccionActual(Coleccionista coleccionista)
-        {
-            List<DuenoHistorico> duenosActuales = DuenosActuales();
-            List<DuenoHistorico> coleccion = new List<DuenoHistorico>();
-
-            foreach (DuenoHistorico dueno in duenosActuales)
-            {
-                if (dueno.ColeccionistaID == coleccionista.ID)
-                {
-                    coleccion.Add(dueno);
-                }
-            }
-
-            return coleccion;
-        }
+        
 
         public static Interes Interes(int id)
         {
@@ -861,6 +847,91 @@ namespace Engine.Classes
             return list;
         }
 
+        public static List<DuenoHistorico> ColeccionActual(Coleccionista coleccionista)
+        {
+            List<DuenoHistorico> list = new List<DuenoHistorico>();
+
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM " +
+                        "(SELECT *, MAX(fecha_registro) FROM dueno_historico " +
+                        "GROUP BY comic_id) " +
+                    "WHERE coleccionista_documento_identidad = @coleccionistaid";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Reader = connection.Script.ExecuteReader();
+
+                while (connection.Reader.Read())
+                {
+                    DuenoHistorico modell = new DuenoHistorico(connection.ReadInt(0), connection.ReadDate(1),
+                        connection.ReadString(2), connection.ReadInt(3), connection.ReadInt(4),
+                        connection.ReadFloat(5), connection.ReadInt(6));
+
+                    list.Add(modell);
+                }
+            }
+            catch
+            {
+                list = new List<DuenoHistorico>();
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM " +
+                        "(SELECT *, MAX(fecha_registro) FROM dueno_historico " +
+                        "GROUP BY coleccionable_id) " +
+                    "WHERE coleccionista_documento_identidad = @coleccionistaid";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Reader = connection.Script.ExecuteReader();
+
+                while (connection.Reader.Read())
+                {
+                    DuenoHistorico modell = new DuenoHistorico(connection.ReadInt(0), connection.ReadDate(1),
+                        connection.ReadString(2), connection.ReadInt(3), connection.ReadInt(4),
+                        connection.ReadFloat(5), connection.ReadInt(6));
+
+                    list.Add(modell);
+                }
+            }
+            catch
+            {
+                list = new List<DuenoHistorico>();
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return list;
+        }
+
+        /*
+        public static List<DuenoHistorico> ColeccionActual(Coleccionista coleccionista)
+        {
+            List<DuenoHistorico> duenosActuales = DuenosActuales();
+            List<DuenoHistorico> coleccion = new List<DuenoHistorico>();
+
+            foreach (DuenoHistorico dueno in duenosActuales)
+            {
+                if (dueno.ColeccionistaID == coleccionista.ID)
+                {
+                    coleccion.Add(dueno);
+                }
+            }
+
+            return coleccion;
+        }*/
 
         public static List<DuenoHistorico> DuenosHistoricos(Comic comic)
         {
