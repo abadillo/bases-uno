@@ -155,9 +155,8 @@ namespace bases_uno.Views
                 Coleccionista coleccionista = Read.Coleccionista(DuenoID);
 
 
-                //List<DuenoHistorico> listDueHis = Read.DuenosHistoricos(coleccionista);
+                List<DuenoHistorico> listDueHis = Read.ColeccionActual(coleccionista);
 
-                List<DuenoHistorico> listDueHis = null;
 
 
                 for (int i = 0; i < listDueHis.Count; i++)
