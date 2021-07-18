@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace bases_uno.Views.Components
 {
-    public partial class miniitemclub : UserControl
+    public partial class miniitemclubALT : UserControl
     {
-
+               
         public index parent;
         public Club club;
         public Subasta subasta;
 
-        public miniitemclub(Club club, Subasta subasta ,index parent )
+        public miniitemclubALT( Club club, Subasta subasta ,index parent )
         {
 
             this.parent = parent;
@@ -39,8 +39,9 @@ namespace bases_uno.Views.Components
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-       
-            //subasta.EliminarOrganizacionCaridad(organizacion);
+            // subasta.EliminarClubes(organizacion);
+            // club.Delete();
+            // remover este de la lista y refrescar al que lo llamo
             parent.InsertForm(new subasta1_2(parent, subasta));
         }
 

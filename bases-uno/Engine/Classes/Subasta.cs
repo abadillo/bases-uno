@@ -589,6 +589,7 @@ namespace Engine.Classes
                 }
             }
             EliminarClubes();
+            Update();
         }
         #endregion
     }

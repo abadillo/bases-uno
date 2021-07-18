@@ -31,6 +31,7 @@ namespace bases_uno.Views
         {
             this.stpanel7 = new System.Windows.Forms.Panel();
             this.dipanel1 = new System.Windows.Forms.Panel();
+            this.dipanel2 = new System.Windows.Forms.Panel();
             this.panelAlerta = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,6 +42,11 @@ namespace bases_uno.Views
             this.btnanadir = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxPorcentaje = new System.Windows.Forms.ComboBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.comboBoxOrganizacion = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -53,24 +59,18 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.dipanel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBoxPorcentaje = new System.Windows.Forms.ComboBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.panelAlerta.SuspendLayout();
             this.panelAgregar.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
             this.hrpanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // stpanel7
@@ -101,6 +101,15 @@ namespace bases_uno.Views
             this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 18, 0);
             this.dipanel1.Size = new System.Drawing.Size(834, 634);
             this.dipanel1.TabIndex = 12;
+            // 
+            // dipanel2
+            // 
+            this.dipanel2.AutoScroll = true;
+            this.dipanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dipanel2.Location = new System.Drawing.Point(0, 40);
+            this.dipanel2.Name = "dipanel2";
+            this.dipanel2.Size = new System.Drawing.Size(816, 355);
+            this.dipanel2.TabIndex = 74;
             // 
             // panelAlerta
             // 
@@ -229,6 +238,63 @@ namespace bases_uno.Views
             this.tableLayoutPanel2.Size = new System.Drawing.Size(816, 53);
             this.tableLayoutPanel2.TabIndex = 72;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.comboBoxPorcentaje);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(615, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(198, 47);
+            this.panel3.TabIndex = 70;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 1);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(198, 23);
+            this.panel5.TabIndex = 73;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Roboto", 14F);
+            this.label3.ForeColor = System.Drawing.Color.LightGray;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 23);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "porcentaje";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label4.Font = new System.Drawing.Font("Roboto", 14F);
+            this.label4.ForeColor = System.Drawing.Color.LightGray;
+            this.label4.Location = new System.Drawing.Point(174, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 23);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "%";
+            // 
+            // comboBoxPorcentaje
+            // 
+            this.comboBoxPorcentaje.BackColor = System.Drawing.Color.LightGray;
+            this.comboBoxPorcentaje.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.comboBoxPorcentaje.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxPorcentaje.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPorcentaje.FormattingEnabled = true;
+            this.comboBoxPorcentaje.Location = new System.Drawing.Point(0, 24);
+            this.comboBoxPorcentaje.Name = "comboBoxPorcentaje";
+            this.comboBoxPorcentaje.Size = new System.Drawing.Size(198, 23);
+            this.comboBoxPorcentaje.TabIndex = 37;
+            this.comboBoxPorcentaje.Tag = "porcentaje";
+            // 
             // panel15
             // 
             this.panel15.Controls.Add(this.comboBoxOrganizacion);
@@ -302,9 +368,9 @@ namespace bases_uno.Views
             this.label18.ForeColor = System.Drawing.Color.LightGray;
             this.label18.Location = new System.Drawing.Point(0, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(192, 40);
+            this.label18.Size = new System.Drawing.Size(312, 40);
             this.label18.TabIndex = 37;
-            this.label18.Text = "Organizaciones";
+            this.label18.Text = "Organizaciones de Caridad";
             // 
             // panel1
             // 
@@ -381,72 +447,6 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
-            // dipanel2
-            // 
-            this.dipanel2.AutoScroll = true;
-            this.dipanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dipanel2.Location = new System.Drawing.Point(0, 40);
-            this.dipanel2.Name = "dipanel2";
-            this.dipanel2.Size = new System.Drawing.Size(816, 355);
-            this.dipanel2.TabIndex = 74;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.comboBoxPorcentaje);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(615, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(198, 47);
-            this.panel3.TabIndex = 70;
-            // 
-            // comboBoxPorcentaje
-            // 
-            this.comboBoxPorcentaje.BackColor = System.Drawing.Color.LightGray;
-            this.comboBoxPorcentaje.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.comboBoxPorcentaje.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBoxPorcentaje.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxPorcentaje.FormattingEnabled = true;
-            this.comboBoxPorcentaje.Location = new System.Drawing.Point(0, 24);
-            this.comboBoxPorcentaje.Name = "comboBoxPorcentaje";
-            this.comboBoxPorcentaje.Size = new System.Drawing.Size(198, 23);
-            this.comboBoxPorcentaje.TabIndex = 37;
-            this.comboBoxPorcentaje.Tag = "porcentaje";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 1);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(198, 23);
-            this.panel5.TabIndex = 73;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.Font = new System.Drawing.Font("Roboto", 14F);
-            this.label4.ForeColor = System.Drawing.Color.LightGray;
-            this.label4.Location = new System.Drawing.Point(174, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 23);
-            this.label4.TabIndex = 39;
-            this.label4.Text = "%";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Roboto", 14F);
-            this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 23);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "porcentaje";
-            // 
             // subasta1_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,15 +462,15 @@ namespace bases_uno.Views
             this.panelAgregar.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.hrpanel.ResumeLayout(false);
             this.hrpanel.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -296,17 +296,23 @@
     <Compile Include="Views\subasta\subasta1.Designer.cs">
       <DependentUpon>subasta1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\subasta\subasta1_1.cs">
+    <Compile Include="Views\subasta\subasta1_3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\subasta\subasta1_1.Designer.cs">
-      <DependentUpon>subasta1_1.cs</DependentUpon>
+    <Compile Include="Views\subasta\subasta1_3.Designer.cs">
+      <DependentUpon>subasta1_3.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\subasta\subasta1_2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\subasta\subasta1_2.Designer.cs">
       <DependentUpon>subasta1_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\subasta1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\subasta1_1.Designer.cs">
+      <DependentUpon>subasta1_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\subasta\subasta2.cs">
       <SubType>Form</SubType>
@@ -344,11 +350,11 @@
     <Compile Include="Views\UserControls\itemsubasta.Designer.cs">
       <DependentUpon>itemsubasta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserControls\miniitemclub.cs">
+    <Compile Include="Views\UserControls\miniitemclubALT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\UserControls\miniitemclub.Designer.cs">
-      <DependentUpon>miniitemclub.cs</DependentUpon>
+    <Compile Include="Views\UserControls\miniitemclubALT.Designer.cs">
+      <DependentUpon>miniitemclubALT.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\miniitemcontacto.cs">
       <SubType>UserControl</SubType>
@@ -403,6 +409,12 @@
     </Compile>
     <Compile Include="Views\UserControls\itemrepresentante.Designer.cs">
       <DependentUpon>itemrepresentante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemclub.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemclub.Designer.cs">
+      <DependentUpon>miniitemclub.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\miniitemorganizacion.cs">
       <SubType>UserControl</SubType>
@@ -605,11 +617,14 @@
     <EmbeddedResource Include="Views\subasta\subasta1.resx">
       <DependentUpon>subasta1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\subasta\subasta1_1.resx">
-      <DependentUpon>subasta1_1.cs</DependentUpon>
+    <EmbeddedResource Include="Views\subasta\subasta1_3.resx">
+      <DependentUpon>subasta1_3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\subasta\subasta1_2.resx">
       <DependentUpon>subasta1_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\subasta1_1.resx">
+      <DependentUpon>subasta1_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\subasta\subasta2.resx">
       <DependentUpon>subasta2.cs</DependentUpon>
@@ -629,8 +644,8 @@
     <EmbeddedResource Include="Views\UserControls\itemsubasta.resx">
       <DependentUpon>itemsubasta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserControls\miniitemclub.resx">
-      <DependentUpon>miniitemclub.cs</DependentUpon>
+    <EmbeddedResource Include="Views\UserControls\miniitemclubALT.resx">
+      <DependentUpon>miniitemclubALT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\miniitemcontacto.resx">
       <DependentUpon>miniitemcontacto.cs</DependentUpon>
@@ -658,6 +673,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemrepresentante.resx">
       <DependentUpon>itemrepresentante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\miniitemclub.resx">
+      <DependentUpon>miniitemclub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\miniitemorganizacion.resx">
       <DependentUpon>miniitemorganizacion.cs</DependentUpon>

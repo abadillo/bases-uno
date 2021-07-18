@@ -130,7 +130,7 @@ namespace bases_uno.Views
                 subasta.HoraInicio = horaInicio;
                 subasta.HoraCierre = horaCierre;
                 subasta.Tipo = Validacion.ValidarCombo(comboBoxType);
-                subasta.Cancelado = radioButtonCancelado.Checked;
+                //subasta.Cancelado = radioButtonCancelado.Checked;
                 subasta.Caridad = radioButtonCaridad.Checked;
 
                 if (LocalID != 0)
@@ -148,7 +148,7 @@ namespace bases_uno.Views
                 }
                 else if (dialogResult == DialogResult.No)
                 {
-                    //do something else
+                    // do something else
                 }
 
             }
@@ -192,16 +192,16 @@ namespace bases_uno.Views
         private void CancelarEvento()
         {
 
-            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea cancelar esta Subasta? \n\n (Se eliminaran todas las organizaciones, pujas, invitaciones y de mas registros asociados a esta subasta)", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea cancelar esta Subasta? \n\nSe eliminaran todas las organizaciones, pujas, invitaciones y de mas registros asociados a esta subasta", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dialogResult == DialogResult.Yes)
 
                 try
                 {
                     subasta.Cancelar();
-                    MessageBox.Show("Eliminacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Subasta CANCELADA exitosamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    parent.InsertForm(new subastal(parent));
+                    parent.InsertForm(new subasta1(parent,subasta));
                 }
                 catch (Exception ex)
                 {

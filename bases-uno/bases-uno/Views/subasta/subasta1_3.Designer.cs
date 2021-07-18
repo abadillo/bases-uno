@@ -1,7 +1,7 @@
 ﻿
 namespace bases_uno.Views
 {
-    partial class subasta1_2
+    partial class subasta1_3
     {
         /// <summary>
         /// Required designer variable.

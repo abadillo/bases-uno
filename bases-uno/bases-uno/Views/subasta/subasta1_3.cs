@@ -15,7 +15,7 @@ using bases_uno.Views.Components;
 
 namespace bases_uno.Views
 {
-    public partial class subasta1_2 : Form
+    public partial class subasta1_3 : Form
     {
         
         public index parent;
@@ -31,7 +31,7 @@ namespace bases_uno.Views
 
 
 
-        public subasta1_2(index parent, Subasta subasta)
+        public subasta1_3(index parent, Subasta subasta)
         {
             this.parent = parent;
             this.subasta = subasta;
@@ -43,7 +43,7 @@ namespace bases_uno.Views
 
             // para los clubes invitados a la subasta
 
-            altListCluInv = subasta.ClubesInvitados();
+            //altListCluInv = subasta.Organizadores();
            
        
             for (int i = 0; i < altListCluInv.Count; i++)
