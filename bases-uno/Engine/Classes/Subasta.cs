@@ -581,6 +581,15 @@ namespace Engine.Classes
             }
         }
 
+        public void EliminarOrganizadores()
+        {
+            List<Club> organizadores = Organizadores();
+            foreach (Club organizador in organizadores)
+            {
+                EliminarOrganizador(organizador);
+            }
+        }
+
         public void EliminarInvitado(Club club)
         {
             try
@@ -601,6 +610,15 @@ namespace Engine.Classes
             finally
             {
                 CloseConnection();
+            }
+        }
+
+        public void EliminarInvitados()
+        {
+            List<Club> invitados = ClubesInvitados();
+            foreach (Club invitado in invitados)
+            {
+                EliminarInvitado(invitado);
             }
         }
         #endregion
