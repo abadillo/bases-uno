@@ -20,7 +20,9 @@ namespace bases_uno.Views
         
         public index parent;
         public Subasta subasta;
-            
+
+
+        public List<Club> altListCluOrg;                    // para los clubes organizadores a la subasta
         public List<Club> altListCluInv;                    // para los clubes invitados a la subasta
         public List<Club> listClu = Read.Clubes();      // para el combo de club
         
@@ -41,11 +43,15 @@ namespace bases_uno.Views
             label1.Text = "Subasta: " + subasta.ID;
 
 
+            // para los clubes inivitados a la subasta
+
+            altListCluInv = subasta.ClubesInvitados();
+
             // para los clubes invitados a la subasta
 
-            //altListCluInv = subasta.Organizadores();
-           
-       
+            altListCluOrg = subasta.Organizadores();
+
+
             for (int i = 0; i < altListCluInv.Count; i++)
             {
                 //Console.WriteLine(altListClu[i].ID);
@@ -122,17 +128,25 @@ namespace bases_uno.Views
 
                 Club club = Read.Club(clubID);
 
+
+                for (int i = 0; i < altListCluOrg.Count; i++)
+                {
+                    if (club.ID == altListCluOrg[i].ID)
+                        throw new Exception("Ya este club es un organizador");
+                }
+
+
                 for (int i = 0; i < altListCluInv.Count; i++)
-                { 
-                    if (club.ID == altListCluInv[i].ID)          
-                        throw new Exception("Ya este club esta en la lista");
-                    
+                {
+                    if (club.ID == altListCluInv[i].ID)
+                        throw new Exception("Ya este club es un invitado");
+
                 }
 
                 subasta.AgregarClubInvitado(club);
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                parent.InsertForm(new subasta1_2(parent,subasta));
+                parent.InsertForm(new subasta1_3(parent,subasta));
 
             }
             catch (ApplicationException aex)
@@ -155,11 +169,11 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new subasta1_3(parent, subasta));
+            parent.InsertForm(new subasta1_4(parent, subasta));
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 
-            parent.InsertForm(new subasta1_1(parent, subasta));
+            parent.InsertForm(new subasta1_2(parent, subasta));
         }
 
         #endregion
@@ -174,7 +188,7 @@ namespace bases_uno.Views
 
         private void btncancelar_Click_1(object sender, EventArgs e)
         {
-            parent.InsertForm(new subasta1_2(parent, subasta));
+            parent.InsertForm(new subasta1_3(parent, subasta));
         }
 
         private void btnanadir_Click(object sender, EventArgs e)

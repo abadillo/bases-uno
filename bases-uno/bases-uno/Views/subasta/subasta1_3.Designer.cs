@@ -304,7 +304,7 @@ namespace bases_uno.Views
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(306, 40);
             this.label18.TabIndex = 37;
-            this.label18.Text = "Clubes Organizadores";
+            this.label18.Text = "Clubes Invitados";
             // 
             // panel1
             // 
@@ -381,14 +381,14 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
-            // subasta1_2
+            // subasta1_3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 757);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "subasta1_2";
+            this.Name = "subasta1_3";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);
