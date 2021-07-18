@@ -861,6 +861,84 @@ namespace Engine.Classes
             return list;
         }
 
+
+        public static List<DuenoHistorico> DuenosHistoricos(Comic comic)
+        {
+            List<DuenoHistorico> list = new List<DuenoHistorico>();
+
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM dueno_historico WHERE comic_id = @comic_id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("comic_id", comic.ID);
+  
+                connection.Reader = connection.Script.ExecuteReader();
+
+                while (connection.Reader.Read())
+                {
+                    DuenoHistorico modell = new DuenoHistorico(connection.ReadInt(0), connection.ReadDate(1),
+                        connection.ReadString(2), connection.ReadInt(3), connection.ReadInt(4),
+                        connection.ReadFloat(5), connection.ReadInt(6));
+
+                    list.Add(modell);
+                }
+            }
+            catch
+            {
+                list = new List<DuenoHistorico>();
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return list;
+        }
+
+        public static List<DuenoHistorico> DuenosHistoricos(Coleccionable coleccionable)
+        {
+            List<DuenoHistorico> list = new List<DuenoHistorico>();
+
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+
+            try
+            {
+                connection.OpenConnection();
+
+                string Query = "SELECT * FROM dueno_historico WHERE COLECCIONABLE_id = @COLECCIONABLE_id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("COLECCIONABLE_id", coleccionable.ID);
+
+                connection.Reader = connection.Script.ExecuteReader();
+
+                while (connection.Reader.Read())
+                {
+                    DuenoHistorico modell = new DuenoHistorico(connection.ReadInt(0), connection.ReadDate(1),
+                        connection.ReadString(2), connection.ReadInt(3), connection.ReadInt(4),
+                        connection.ReadFloat(5), connection.ReadInt(6));
+
+                    list.Add(modell);
+                }
+            }
+            catch
+            {
+                list = new List<DuenoHistorico>();
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return list;
+        }
+
+
         public static List<DuenoHistorico> DuenosActuales()
         {
             List<DuenoHistorico> historicos = DuenosHistoricos();

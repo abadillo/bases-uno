@@ -135,5 +135,9 @@ namespace bases_uno.Views
         }
         #endregion
 
+        private void btnadelante_Click(object sender, EventArgs e)
+        {
+            parent.InsertForm(new coleccionable1_1(parent, coleccionable));
+        }
     }
 }

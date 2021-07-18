@@ -200,7 +200,6 @@ namespace bases_uno.Views
             this.textBoxDescripcion.Multiline = true;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.ReadOnly = true;
-            this.textBoxDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxDescripcion.Size = new System.Drawing.Size(816, 89);
             this.textBoxDescripcion.TabIndex = 32;
             this.textBoxDescripcion.Tag = "descripcion";
@@ -442,7 +441,7 @@ namespace bases_uno.Views
             this.btnadelante.Size = new System.Drawing.Size(66, 52);
             this.btnadelante.TabIndex = 5;
             this.btnadelante.UseVisualStyleBackColor = false;
-            this.btnadelante.Visible = false;
+            this.btnadelante.Click += new System.EventHandler(this.btnadelante_Click);
             // 
             // btnatras
             // 

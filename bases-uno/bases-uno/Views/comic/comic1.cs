@@ -117,7 +117,7 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new comic2(parent, comic));
+            parent.InsertForm(new comic1_1(parent, comic));
         }
 
         private void btnatras_Click(object sender, EventArgs e)
