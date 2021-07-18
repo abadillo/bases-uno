@@ -22,7 +22,7 @@ namespace bases_uno.Views
         public Club club;
 
         public List<Membresia> listMem;                                  // para la lista de membresias
-        public List<Membresia> listMemAct;                                  // para la lista de membresias
+        public List<Membresia> listMemAct = new List<Membresia>();                                  // para la lista de membresias
 
         public List<Coleccionista> listCol = Read.Coleccionistas();      // para el combo de coleccionistas
 
@@ -41,25 +41,21 @@ namespace bases_uno.Views
             listMem = Read.Membresias(club);
 
 
-            for (int i = 0; i < listMem.Count; i++)
+            foreach (Membresia membresia in listMem)
             {
-                if (listMem[i].FechaRetiro.HasValue)
-                    listMemAct.Add(listMem[i]);
-                
+                if (membresia.FechaRetiro == null)
+                    listMemAct.Add(membresia);
             }
 
 
-            for (int i = 0; i < listMemAct.Count; i++)
+            foreach (Membresia membresia1 in listMemAct)
             {
-                Console.WriteLine(listMemAct[i].FechaRetiro);
+                Console.WriteLine(membresia1.FechaRetiro);
 
-                miniitemmembresia item = new miniitemmembresia(listMemAct[i], parent);
+                miniitemmembresia item = new miniitemmembresia(membresia1, parent);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
-                
-                
-
             }
 
 
