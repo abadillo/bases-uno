@@ -40,7 +40,7 @@ namespace bases_uno.Views.Components
         {
        
             subasta.EliminarOrganizacionCaridad(organizacion);
-            parent.InsertForm(new subasta1_1(parent, subasta));
+            parent.InsertForm(new subastaplan1_1(parent, subasta));
         }
 
        

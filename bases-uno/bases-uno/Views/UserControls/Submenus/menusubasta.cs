@@ -23,7 +23,7 @@ namespace bases_uno.Views.UserControls.Submenus
             InitializeComponent();
 
             activeButton = buttonListadoPlanSubasta;
-            ButtonEnable(buttonListadoPlanSubasta, new subastal(parent));
+            ButtonEnable(buttonListadoPlanSubasta, new subastaplanl(parent));
         }
 
         public void ButtonEnable(Button pressedButton, Form form)
@@ -45,12 +45,12 @@ namespace bases_uno.Views.UserControls.Submenus
 
         private void buttonRegistroSubasta_Click(object sender, EventArgs e)
         {
-            ButtonEnable(buttonRegistroSubasta, new subastar(parent));
+            ButtonEnable(buttonRegistroSubasta, new subastaplanr(parent));
         }
 
         private void buttonListadoPlanSubasta_Click(object sender, EventArgs e)
         {
-            ButtonEnable(buttonListadoPlanSubasta, new subastal(parent));
+            ButtonEnable(buttonListadoPlanSubasta, new subastaplanl(parent));
         }
 
         private void buttonListadoOrganizacion_Click_1(object sender, EventArgs e)

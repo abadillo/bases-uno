@@ -15,15 +15,14 @@ using bases_uno.Views.Components;
 
 namespace bases_uno.Views
 {
-    public partial class subasta1_3 : Form
+    public partial class subastaplan1_2 : Form
     {
         
         public index parent;
         public Subasta subasta;
-
-
+            
         public List<Club> altListCluOrg;                    // para los clubes organizadores a la subasta
-        public List<Club> altListCluInv;                    // para los clubes invitados a la subasta
+        public List<Club> altListCluInv;                    // para los clubes invitados
         public List<Club> listClu = Read.Clubes();      // para el combo de club
         
 
@@ -33,7 +32,7 @@ namespace bases_uno.Views
 
 
 
-        public subasta1_3(index parent, Subasta subasta)
+        public subastaplan1_2(index parent, Subasta subasta)
         {
             this.parent = parent;
             this.subasta = subasta;
@@ -43,19 +42,29 @@ namespace bases_uno.Views
             label1.Text = "Subasta: " + subasta.ID;
 
 
-            // para los clubes inivitados a la subasta
-
-            altListCluInv = subasta.ClubesInvitados();
-
             // para los clubes invitados a la subasta
 
             altListCluOrg = subasta.Organizadores();
 
+            // para los clubes inivitados a la subasta
+
+            altListCluInv = subasta.ClubesInvitados();
+
+
+            for (int i = 0; i < altListCluOrg.Count; i++)
+            {
+                // Console.WriteLine(altListCluOrg[i].ID);
+                miniitemclub item = new miniitemclub(altListCluOrg[i], subasta, parent, true);
+                item.Dock = DockStyle.Top;
+
+                dipanel3.Controls.Add(item);
+            }
+
 
             for (int i = 0; i < altListCluInv.Count; i++)
             {
-                //Console.WriteLine(altListClu[i].ID);
-                miniitemclub item = new miniitemclub(altListCluInv[i], subasta, parent,true);
+                // Console.WriteLine(altListCluInv[i].ID);
+                miniitemclub item = new miniitemclub(altListCluInv[i], subasta, parent, false);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
@@ -72,7 +81,15 @@ namespace bases_uno.Views
                 comboBoxClub.Items.Add(item);
             }
 
+            comboBoxType.Items.AddRange(new object[] {
+                "Organizador",
+                "Invitado"
+            });
 
+           
+            
+            
+            
             #region set flags
 
             if (subasta.Cancelado)
@@ -89,12 +106,11 @@ namespace bases_uno.Views
 
             #region use flags
 
-            if (flagBenefica == false || flagPresencial== false)
+            if (flagBenefica == false || flagPresencial == false)
             {
-                //DisableFunciones("Esta subasta no es de tipo benefica, por lo tanto no deberia ver ninguna club asociada \nSi observa alguna arriba, algo salio mal");
-                Console.WriteLine("algo");
+                DisableFunciones("Esta subasta no es de tipo benefica, por lo tanto no deberia ver ningun club organizador \nSi observa alguna arriba, algo salio mal");
             }
-           
+
             if (flagCancelado)
             {
                 DisableFunciones("Esta subasta fue cancelada, no puede agregar clubes \nSi observa alguna arriba, algo salio mal");
@@ -115,7 +131,7 @@ namespace bases_uno.Views
         {
             label11.Text = mensaje;
             iconButton5.Visible = false;
-            btnanadir.Enabled = false;
+            comboBoxType.Items.Remove("Organizador");
             panelAlerta.Visible = true;
         }
 
@@ -130,11 +146,10 @@ namespace bases_uno.Views
 
 
                 for (int i = 0; i < altListCluOrg.Count; i++)
-                {
-                    if (club.ID == altListCluOrg[i].ID)
+                { 
+                    if (club.ID == altListCluOrg[i].ID)          
                         throw new Exception("Ya este club es un organizador");
                 }
-
 
                 for (int i = 0; i < altListCluInv.Count; i++)
                 {
@@ -143,10 +158,17 @@ namespace bases_uno.Views
 
                 }
 
-                subasta.AgregarClubInvitado(club);
+                string tipo = Validacion.ValidarCombo(comboBoxType);
+
+                if (tipo == "Organizador") 
+                    subasta.AgregarOrganizador(club);
+
+                else 
+                    subasta.AgregarClubInvitado(club);
+
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                parent.InsertForm(new subasta1_3(parent,subasta));
+                parent.InsertForm(new subastaplan1_2(parent,subasta));
 
             }
             catch (ApplicationException aex)
@@ -169,33 +191,40 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new subasta1_3(parent, subasta));
+            parent.InsertForm(new subastaplan1_3(parent, subasta));
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 
-            parent.InsertForm(new subasta1_2(parent, subasta));
+            parent.InsertForm(new subastaplan1_1(parent, subasta));
         }
 
         #endregion
 
         #region click botones FontAwesome
 
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            panelAgregar.Visible = true;
-            
-        }
-
         private void btncancelar_Click_1(object sender, EventArgs e)
         {
-            parent.InsertForm(new subasta1_3(parent, subasta));
+            parent.InsertForm(new subastaplan1_2(parent, subasta));
         }
 
         private void btnanadir_Click(object sender, EventArgs e)
         {
             Registrar();
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            panelAgregar.Visible = true;
+            comboBoxType.SelectedItem = "Invitado";
+        }
+
+        private void iconButton5_Click_1(object sender, EventArgs e)
+        {
+            panelAgregar.Visible = true;
+            comboBoxType.SelectedItem = "Organizador";
+        }
         #endregion
+
 
     }
 }

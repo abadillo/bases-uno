@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace bases_uno.Views
 {
-    public partial class subasta1 : Form
+    public partial class subastaplan1 : Form
     {
         
         public index parent;
@@ -25,7 +25,7 @@ namespace bases_uno.Views
         public bool flagPresencial = false;      // true if presencial, false if virtual
         public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
 
-        public subasta1(index parent, Subasta subasta)
+        public subastaplan1(index parent, Subasta subasta)
         {
             this.parent = parent;
             this.subasta = subasta;
@@ -167,11 +167,11 @@ namespace bases_uno.Views
                     subasta.Update();
 
                     MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    parent.InsertForm(new subasta1(parent, subasta));
+                    parent.InsertForm(new subastaplan1(parent, subasta));
                 }
                 else if (dialogResult == DialogResult.No)
                 {
-                    parent.InsertForm(new subasta1(parent, subasta));
+                    parent.InsertForm(new subastaplan1(parent, subasta));
                 }
 
             }
@@ -198,7 +198,7 @@ namespace bases_uno.Views
                     subasta.Delete();
                     MessageBox.Show("Eliminacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                    
-                    parent.InsertForm(new subastal(parent));
+                    parent.InsertForm(new subastaplanl(parent));
                 }
                 catch (Exception ex)
                 {
@@ -224,7 +224,7 @@ namespace bases_uno.Views
                     subasta.Cancelar();
                     MessageBox.Show("Subasta CANCELADA exitosamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    parent.InsertForm(new subasta1(parent,subasta));
+                    parent.InsertForm(new subastaplan1(parent,subasta));
                 }
                 catch (Exception ex)
                 {
@@ -244,11 +244,11 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new subasta1_1(parent, subasta));
+            parent.InsertForm(new subastaplan1_1(parent, subasta));
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 
-            parent.InsertForm(new subastal(parent));
+            parent.InsertForm(new subastaplanl(parent));
         }
 
 
@@ -259,7 +259,7 @@ namespace bases_uno.Views
 
         private void btncancelar_Click_1(object sender, EventArgs e)
         {
-            parent.InsertForm(new subasta1(parent, subasta));
+            parent.InsertForm(new subastaplan1(parent, subasta));
         }
 
         private void btneliminar_Click_1(object sender, EventArgs e)

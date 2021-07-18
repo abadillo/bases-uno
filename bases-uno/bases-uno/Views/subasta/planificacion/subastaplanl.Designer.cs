@@ -1,7 +1,7 @@
 ﻿
 namespace bases_uno.Views
 {
-    partial class subastal
+    partial class subastaplanl
     {
         /// <summary>
         /// Required designer variable.
@@ -100,14 +100,14 @@ namespace bases_uno.Views
             this.dipanel1.Size = new System.Drawing.Size(834, 660);
             this.dipanel1.TabIndex = 13;
             // 
-            // subastal
+            // subastaplanl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 757);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "subastal";
+            this.Name = "subastaplanl";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.hrpanel.ResumeLayout(false);

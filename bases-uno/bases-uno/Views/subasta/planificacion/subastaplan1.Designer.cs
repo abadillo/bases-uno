@@ -1,7 +1,7 @@
 ﻿
 namespace bases_uno.Views
 {
-    partial class subasta1
+    partial class subastaplan1
     {
         /// <summary>
         /// Required designer variable.
@@ -890,14 +890,14 @@ namespace bases_uno.Views
             this.checkBoxCancelado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxCancelado.UseVisualStyleBackColor = true;
             // 
-            // subasta1
+            // subastaplan1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 757);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "subasta1";
+            this.Name = "subastaplan1";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);

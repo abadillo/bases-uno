@@ -12,13 +12,13 @@ using Engine;
 
 namespace bases_uno.Views
 {
-    public partial class subastar : Form
+    public partial class subastaplanr : Form
     {
 
         public index parent;
         public List<Local> list = Read.Locales();
 
-        public subastar(  index parent )
+        public subastaplanr(  index parent )
         {
             this.parent = parent;
             InitializeComponent();
@@ -83,7 +83,7 @@ namespace bases_uno.Views
                 subasta.Insert();
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK ,MessageBoxIcon.Information);
-                parent.InsertForm(new subastal(parent));
+                parent.InsertForm(new subastaplanl(parent));
 
             }
             catch (ApplicationException aex)
@@ -108,7 +108,7 @@ namespace bases_uno.Views
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new subastal(parent));
+            parent.InsertForm(new subastaplanl(parent));
         }
 
         private void btncrear_Click(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace bases_uno.Views
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new subastal(parent));
+            parent.InsertForm(new subastaplanl(parent));
         }
 
         private void textBoxFecha_Click(object sender, EventArgs e)

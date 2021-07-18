@@ -1,7 +1,7 @@
 ﻿
 namespace bases_uno.Views
 {
-    partial class subastar
+    partial class subastaplanr
     {
         /// <summary>
         /// Required designer variable.
@@ -556,14 +556,14 @@ namespace bases_uno.Views
             this.checkBoxCaridad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxCaridad.UseVisualStyleBackColor = true;
             // 
-            // subastar
+            // subastaplanr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 802);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "subastar";
+            this.Name = "subastaplanr";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);

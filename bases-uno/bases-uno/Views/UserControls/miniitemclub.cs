@@ -46,7 +46,7 @@ namespace bases_uno.Views.Components
             else
                 subasta.EliminarInvitado(club);
 
-            parent.InsertForm(new subasta1_2(parent, subasta));
+            parent.InsertForm(new subastaplan1_2(parent, subasta));
         }
 
        

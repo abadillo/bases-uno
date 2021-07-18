@@ -42,7 +42,7 @@ namespace bases_uno.Views.Components
             // subasta.EliminarClubes(organizacion);
             // club.Delete();
             // remover este de la lista y refrescar al que lo llamo
-            parent.InsertForm(new subasta1_2(parent, subasta));
+            parent.InsertForm(new subastaplan1_2(parent, subasta));
         }
 
        
