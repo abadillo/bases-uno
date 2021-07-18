@@ -18,6 +18,7 @@ namespace Engine.Classes
         public bool Caridad { get; set; }
         public bool Cancelado { get; set; }
         public int LocalID { get; set; } //nullable
+        public bool Cerrado { get; set; }
         #endregion
 
         #region Constructors
@@ -32,7 +33,7 @@ namespace Engine.Classes
         /// <para>}</para>
         /// </param>
         public Subasta(DateTime fecha, TimeSpan horaInicio, TimeSpan horaCierre, string tipo, 
-            bool caridad, bool cancelado, Local local = null)
+            bool caridad, bool cancelado, Local local = null, bool cerrado = false)
         {
 
            
@@ -51,6 +52,7 @@ namespace Engine.Classes
             {
                 LocalID = local.ID;
             }
+            Cerrado = cerrado;
 
             //try
             //{
@@ -68,7 +70,7 @@ namespace Engine.Classes
         /// Constructor General de la Clase, usualmente para la clase READ
         /// </summary>
         public Subasta(int id, Nullable<DateTime> fecha, Nullable<TimeSpan> horaInicio, Nullable<TimeSpan> horaCierre, 
-            string tipo, bool caridad, bool cancelado, int localID)
+            string tipo, bool caridad, bool cancelado, int localID, bool cerrado)
         {
             ID = id;
             Fecha = fecha;
@@ -78,6 +80,7 @@ namespace Engine.Classes
             Caridad = caridad;
             Cancelado = cancelado;
             LocalID = localID;
+            Cerrado = cerrado;
         }
         #endregion
 
@@ -110,8 +113,9 @@ namespace Engine.Classes
                 Connection.Open();
 
                 string Query = "INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, " +
-                    "cancelado, local_id) " +
-                    "VALUES (@fecha, @horainicio, @horacierre, @tipo, @caridad, @cancelado, @localid) RETURNING id";
+                    "cancelado, local_id, cerrado) " +
+                    "VALUES (@fecha, @horainicio, @horacierre, @tipo, @caridad, @cancelado, @localid, @cerrado) " +
+                    "RETURNING id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("fecha", Fecha);
@@ -128,6 +132,7 @@ namespace Engine.Classes
                 {
                     Script.Parameters.AddWithValue("localid", LocalID);
                 }
+                Script.Parameters.AddWithValue("cerrado", Cerrado);
 
                 Console.WriteLine(LocalID + " " + Query);
 
@@ -152,7 +157,7 @@ namespace Engine.Classes
 
                 string Query = "UPDATE subasta SET fecha = @fecha, hora_inicio = @horainicio, " +
                     "hora_cierre = @horacierre, tipo = @tipo, caridad = @caridad, cancelado = @cancelado, " +
-                    "local_id = @localid " +
+                    "local_id = @localid, cerraco = @cerrado " +
                     "WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -171,6 +176,7 @@ namespace Engine.Classes
                 {
                     Script.Parameters.AddWithValue("localid", LocalID);
                 }
+                Script.Parameters.AddWithValue("cerrado", Cerrado);
 
                 Script.Prepare();
 
