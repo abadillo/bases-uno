@@ -218,8 +218,8 @@ namespace bases_uno.Views
         private DuenoHistorico BuscarHistorico( Coleccionista coleccionista, string tipo, int idObj )
         {
 
-            //List<DuenoHistorico> listDueHis = Read.DuenosHistoricos(coleccionista);
-            List<DuenoHistorico> listDueHis = null;
+            List<DuenoHistorico> listDueHis = Read.ColeccionActual(coleccionista);
+            
 
 
             for (int i = 0; i < listDueHis.Count; i++)
