@@ -236,6 +236,16 @@ namespace Engine.Classes
             }
         }
 
+        public void EliminarOrganizacionesCaridad()
+        {
+            List<OrganizacionCaridad> organizacionesCaridad = OrganizacionesCaridad();
+            foreach (OrganizacionCaridad organizacion in organizacionesCaridad)
+            {
+                EliminarOrganizacionCaridad(organizacion);
+            }
+        }
+
+
         public void ActualizarMontoCaridad(OrganizacionCaridad organizacionCaridad)
         {
             float monto = 0;

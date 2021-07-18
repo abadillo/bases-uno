@@ -12,13 +12,13 @@ using Engine;
 
 namespace bases_uno.Views
 {
-    public partial class subastaplanr : Form
+    public partial class subastar : Form
     {
 
         public index parent;
         public List<Local> list = Read.Locales();
 
-        public subastaplanr(  index parent )
+        public subastar(  index parent )
         {
             this.parent = parent;
             InitializeComponent();

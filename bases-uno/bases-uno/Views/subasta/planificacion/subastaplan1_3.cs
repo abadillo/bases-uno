@@ -20,14 +20,11 @@ namespace bases_uno.Views
         
         public index parent;
         public Subasta subasta;
+            
+        public List<Membresia> altListPar;                              // para los membresias ya de la subasta
+        public List<Membresia> ListPar = Read.Membresias();             // para el combo de membresia
 
-
-        public List<Club> altListCluOrg;                    // para los clubes organizadores a la subasta
-        public List<Club> altListCluInv;                    // para los clubes invitados a la subasta
-        public List<Club> listClu = Read.Clubes();      // para el combo de club
-        
-
-        public bool flagCancelado = false;              // true if cancelado, false if no cancelado
+        public bool flagCancelado = false;      // true if cancelado, false if no cancelado
         public bool flagPresencial = false;      // true if presencial, false if virtual
         public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
 
@@ -42,35 +39,10 @@ namespace bases_uno.Views
 
             label1.Text = "Subasta: " + subasta.ID;
 
+            subasta.AgregarParticipantes();
+            //Participante part = Read.Participantes()
 
-            // para los clubes inivitados a la subasta
-
-            altListCluInv = subasta.ClubesInvitados();
-
-            // para los clubes invitados a la subasta
-
-            altListCluOrg = subasta.Organizadores();
-
-
-            for (int i = 0; i < altListCluInv.Count; i++)
-            {
-                //Console.WriteLine(altListClu[i].ID);
-                miniitemclub item = new miniitemclub(altListCluInv[i], subasta, parent,true);
-                item.Dock = DockStyle.Top;
-
-                dipanel2.Controls.Add(item);
-            }
-
-
-            // para el combo de club
-
-            for (int i = 0; i < listClu.Count; i++)
-            {
-                Club tmp = listClu[i];
-                string item = tmp.ID + " " + tmp.Nombre;
-
-                comboBoxClub.Items.Add(item);
-            }
+            //part.
 
 
             #region set flags
@@ -91,18 +63,19 @@ namespace bases_uno.Views
 
             if (flagBenefica == false || flagPresencial== false)
             {
-                //DisableFunciones("Esta subasta no es de tipo benefica, por lo tanto no deberia ver ninguna club asociada \nSi observa alguna arriba, algo salio mal");
-                Console.WriteLine("algo");
+                //DisableFunciones("Esta subasta no es de tipo benefica, por lo tanto no deberia ver ninguna organizacion asociada \nSi observa alguna arriba, algo salio mal");
             }
            
             if (flagCancelado)
             {
-                DisableFunciones("Esta subasta fue cancelada, no puede agregar clubes \nSi observa alguna arriba, algo salio mal");
+                DisableFunciones("Esta subasta fue cancelada, no puede agregar partipantes \nSi observa alguna arriba, algo salio mal");
             }
 
 
             #endregion
 
+
+            LlenarComboMembresias();
 
             Update();
 
@@ -123,30 +96,24 @@ namespace bases_uno.Views
         {
             try
             {
-                string[] tokens = Validacion.ValidarCombo(comboBoxClub).Split(' ');
-                int clubID = int.Parse(tokens[0]);
+                //string[] tokens = Validacion.ValidarCombo(comboBoxOrganizacion).Split(' ');
+                //int OrganizacionID = int.Parse(tokens[0]);
 
-                Club club = Read.Club(clubID);
+                ////Membresia organizacion = Read.Membresia(OrganizacionID);
 
+                //int porcentaje = int.Parse(Validacion.ValidarCombo(comboBoxPorcentaje));
 
-                for (int i = 0; i < altListCluOrg.Count; i++)
-                {
-                    if (club.ID == altListCluOrg[i].ID)
-                        throw new Exception("Ya este club es un organizador");
-                }
+                //for (int i = 0; i < altListPar.Count; i++)
+                //{ 
+                //    if (organizacion.ID == altListPar[i].ID)          
+                //        throw new Exception("Ya este organizacion esta en la lista");
+                    
+                //}
 
+                //subasta.AgregarMembresia(organizacion, porcentaje);
 
-                for (int i = 0; i < altListCluInv.Count; i++)
-                {
-                    if (club.ID == altListCluInv[i].ID)
-                        throw new Exception("Ya este club es un invitado");
-
-                }
-
-                subasta.AgregarClubInvitado(club);
-
-                MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                parent.InsertForm(new subastaplan1_3(parent,subasta));
+                //MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //parent.InsertForm(new subastaplan1_1(parent,subasta));
 
             }
             catch (ApplicationException aex)
@@ -161,8 +128,41 @@ namespace bases_uno.Views
 
         }
 
-       
-       
+        private void LlenarPorcentajes()
+        {
+
+            var porcentajeRestante = 100;
+
+
+            for (int i = 0; i < altListPar.Count; i++)
+            {
+                Membresia tmp = altListPar[i];
+                //porcentajeRestante = porcentajeRestante - subasta.Porcentaje(tmp);
+            }
+
+            for (int n = 1; n <= porcentajeRestante; n++)
+            {
+                string item = n.ToString();
+                comboBoxPorcentaje.Items.Add(item);
+
+                if (n == porcentajeRestante)
+                    comboBoxPorcentaje.SelectedItem = item ;
+
+            }
+
+
+
+            //Update();
+        }
+
+
+        private void LlenarComboMembresias()
+        {
+
+
+
+
+        }
         #endregion
 
         #region click botones normales
@@ -183,7 +183,7 @@ namespace bases_uno.Views
         private void iconButton5_Click(object sender, EventArgs e)
         {
             panelAgregar.Visible = true;
-            
+            LlenarPorcentajes();
         }
 
         private void btncancelar_Click_1(object sender, EventArgs e)

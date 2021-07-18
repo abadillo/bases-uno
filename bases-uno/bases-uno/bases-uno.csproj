@@ -326,11 +326,11 @@
     <Compile Include="Views\subasta\planificacion\subastaplanl.Designer.cs">
       <DependentUpon>subastaplanl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\subasta\planificacion\subastaplanr.cs">
+    <Compile Include="Views\subasta\subastar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\subasta\planificacion\subastaplanr.Designer.cs">
-      <DependentUpon>subastaplanr.cs</DependentUpon>
+    <Compile Include="Views\subasta\subastar.Designer.cs">
+      <DependentUpon>subastar.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\itemclub.cs">
       <SubType>UserControl</SubType>
@@ -349,12 +349,6 @@
     </Compile>
     <Compile Include="Views\UserControls\itemsubasta.Designer.cs">
       <DependentUpon>itemsubasta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserControls\miniitemclubALT.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\UserControls\miniitemclubALT.Designer.cs">
-      <DependentUpon>miniitemclubALT.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\miniitemcontacto.cs">
       <SubType>UserControl</SubType>
@@ -415,6 +409,12 @@
     </Compile>
     <Compile Include="Views\UserControls\miniitemclub.Designer.cs">
       <DependentUpon>miniitemclub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemparticipante.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemparticipante.Designer.cs">
+      <DependentUpon>miniitemparticipante.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\miniitemorganizacion.cs">
       <SubType>UserControl</SubType>
@@ -632,8 +632,8 @@
     <EmbeddedResource Include="Views\subasta\planificacion\subastaplanl.resx">
       <DependentUpon>subastaplanl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\subasta\planificacion\subastaplanr.resx">
-      <DependentUpon>subastaplanr.cs</DependentUpon>
+    <EmbeddedResource Include="Views\subasta\subastar.resx">
+      <DependentUpon>subastar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemclub.resx">
       <DependentUpon>itemclub.cs</DependentUpon>
@@ -643,9 +643,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemsubasta.resx">
       <DependentUpon>itemsubasta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserControls\miniitemclubALT.resx">
-      <DependentUpon>miniitemclubALT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\miniitemcontacto.resx">
       <DependentUpon>miniitemcontacto.cs</DependentUpon>
@@ -676,6 +673,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\miniitemclub.resx">
       <DependentUpon>miniitemclub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\miniitemparticipante.resx">
+      <DependentUpon>miniitemparticipante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\miniitemorganizacion.resx">
       <DependentUpon>miniitemorganizacion.cs</DependentUpon>

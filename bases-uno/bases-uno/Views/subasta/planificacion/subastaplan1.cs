@@ -104,88 +104,7 @@ namespace bases_uno.Views
 
         #region Funciones
 
-        private void Modificar()
-        {
-           
-            try
-            {
-                string[] tokens = Validacion.ValidarCombo(comboBoxLocal).Split(' ');
-                int LocalID = int.Parse(tokens[0]);
-
-                string tipo = Validacion.ValidarCombo(comboBoxType);
-
-                if (tipo == "Presencial" && LocalID == 0)
-                {
-                    panelOpcional.Visible = true;
-                    throw new Exception("Debe seleccionar el local para realizar el evento");
-                }
-
-
-                DateTime fecha = Validacion.ValidarDateTime(textBoxFecha, true);
-                TimeSpan horaInicio = Validacion.ValidarTime(textBoxHoraInicio, true);
-                TimeSpan horaCierre = Validacion.ValidarTime(textBoxHoraCierre, true);
-
-                Validacion.ValidadFechayHora(fecha, horaInicio, horaCierre);
-
-
-                #region validaciones de segundo nivel (no se si ese es el nombre pero bueno) (( aun falta ))
-
-                bool caridad = checkBoxCaridad.Checked;
-
-                if (caridad)
-                {
-
-                }
-
-                if (tipo == "Virtual" && LocalID != 0)
-                {
-                    LocalID = 0;
-                    caridad = false;
-                }
-               
-
-
-                #endregion
-
-
-                subasta.Fecha = fecha;
-                subasta.HoraInicio = horaInicio;
-                subasta.HoraCierre = horaCierre;
-                subasta.Tipo = tipo;
-                //subasta.Cancelado = checkBoxCancelado.Checked;
-                subasta.Caridad = caridad;
-                
-
-
-                subasta.LocalID = LocalID;
-                
-
-                DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Subasta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (dialogResult == DialogResult.Yes)
-                {
-                    subasta.Update();
-
-                    MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    parent.InsertForm(new subastaplan1(parent, subasta));
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    parent.InsertForm(new subastaplan1(parent, subasta));
-                }
-
-            }
-            catch (ApplicationException aex)
-            {
-                MessageBox.Show(aex.Message, "Error de tipo de dato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error con base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
+       
         private void Eliminar()
         {
 
@@ -234,6 +153,98 @@ namespace bases_uno.Views
             {
                 //do something else
             }
+
+
+        }
+
+        private void Modificar()
+        {
+
+            try
+            {
+                string[] tokens = Validacion.ValidarCombo(comboBoxLocal).Split(' ');
+                int LocalID = int.Parse(tokens[0]);
+
+                string tipo = Validacion.ValidarCombo(comboBoxType);
+
+                if (tipo == "Presencial" && LocalID == 0)
+                {
+                    panelOpcional.Visible = true;
+                    throw new Exception("Debe seleccionar el local para realizar el evento");
+                }
+
+
+                DateTime fecha = Validacion.ValidarDateTime(textBoxFecha, true);
+                TimeSpan horaInicio = Validacion.ValidarTime(textBoxHoraInicio, true);
+                TimeSpan horaCierre = Validacion.ValidarTime(textBoxHoraCierre, true);
+
+                Validacion.ValidadFechayHora(fecha, horaInicio, horaCierre);
+
+                subasta.Fecha = fecha;
+                subasta.HoraInicio = horaInicio;
+                subasta.HoraCierre = horaCierre;
+                subasta.Tipo = tipo;
+                //subasta.Cancelado = checkBoxCancelado.Checked;
+                subasta.Caridad = checkBoxCaridad.Checked;
+
+                subasta.LocalID = LocalID;
+
+                // importante este metodo 
+                ValidarTodasLasRelaciones();
+
+
+                DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Subasta? \n\nPuede haber eliminacion en la asociacion con organizaciones de caridad y de clubes organizadores ", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    subasta.Update();
+
+                    MessageBox.Show("Modificacion Exitosa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    parent.InsertForm(new subastaplan1(parent, subasta));
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    parent.InsertForm(new subastaplan1(parent, subasta));
+                }
+
+            }
+            catch (ApplicationException aex)
+            {
+                MessageBox.Show(aex.Message, "Error de tipo de dato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error con base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
+        //#region validaciones de segundo nivel (no se si ese es el nombre pero bueno) (( aun faltan ))
+        private void ValidarTodasLasRelaciones()
+        {
+
+            if (subasta.Tipo == "Virtual")
+            {
+                subasta.Caridad = false;
+                subasta.LocalID = 0;
+            }
+
+            // este puede ser redundante
+            //if (subasta.Caridad)
+            //{
+            //    subasta.Tipo = "Presencial";
+            //}
+
+            if (!(subasta.Caridad))
+            {
+                subasta.EliminarOrganizadores();
+                subasta.EliminarOrganizacionesCaridad();
+            }
+
+           
+
+          
 
 
         }

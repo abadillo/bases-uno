@@ -45,7 +45,7 @@ namespace bases_uno.Views.UserControls.Submenus
 
         private void buttonRegistroSubasta_Click(object sender, EventArgs e)
         {
-            ButtonEnable(buttonRegistroSubasta, new subastaplanr(parent));
+            ButtonEnable(buttonRegistroSubasta, new subastar(parent));
         }
 
         private void buttonListadoPlanSubasta_Click(object sender, EventArgs e)

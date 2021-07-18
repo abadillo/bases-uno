@@ -117,7 +117,7 @@ namespace bases_uno.Views.Components
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.iconButton1.IconColor = System.Drawing.Color.LightGray;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 45;

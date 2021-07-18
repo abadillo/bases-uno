@@ -129,8 +129,13 @@ namespace bases_uno.Views
 
         private void DisableFunciones(string mensaje)
         {
-            label11.Text = mensaje;
+            if (flagCancelado)
+                iconButton1.Visible = false;
+
+
             iconButton5.Visible = false;
+
+            label11.Text = mensaje;
             comboBoxType.Items.Remove("Organizador");
             panelAlerta.Visible = true;
         }

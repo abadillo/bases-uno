@@ -11,26 +11,25 @@ using System.Windows.Forms;
 
 namespace bases_uno.Views.Components
 {
-    public partial class miniitemclubALT : UserControl
+    public partial class miniitemparticipante : UserControl
     {
                
         public index parent;
-        public Club club;
+        public Membresia membresia;
         public Subasta subasta;
 
-        public miniitemclubALT( Club club, Subasta subasta ,index parent )
+        public miniitemparticipante(Membresia membresia, Subasta subasta ,index parent )
         {
 
             this.parent = parent;
-            this.club = club;
+            this.membresia = membresia;
             this.subasta = subasta;
 
             InitializeComponent();
 
-            //Console.WriteLine(club.Telefono);
-            label1.Text = club.Nombre;
-            label2.Text = club.Telefono.ToString();
-            label3.Text = Read.Lugar(club.LugarID).Nombre;
+            //label1.Text = membresia.Nombre;
+            //label2.Text = membresia.Mision;
+            //label3.Text = subasta.Porcentaje(membresia).ToString() + "%";
 
             Update();
 
@@ -39,10 +38,9 @@ namespace bases_uno.Views.Components
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            // subasta.EliminarClubes(organizacion);
-            // club.Delete();
-            // remover este de la lista y refrescar al que lo llamo
-            parent.InsertForm(new subastaplan1_2(parent, subasta));
+       
+            //subasta.EliminarOrganizacionCaridad(membresia);
+            parent.InsertForm(new subastaplan1_3(parent, subasta));
         }
 
        

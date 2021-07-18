@@ -1,7 +1,7 @@
 ﻿
 namespace bases_uno.Views
 {
-    partial class subastaplanr
+    partial class subastar
     {
         /// <summary>
         /// Required designer variable.
@@ -57,6 +57,7 @@ namespace bases_uno.Views
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.checkBoxCaridad = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -65,7 +66,6 @@ namespace bases_uno.Views
             this.btnadelante = new FontAwesome.Sharp.IconButton();
             this.btnatras = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxCaridad = new System.Windows.Forms.CheckBox();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -442,6 +442,22 @@ namespace bases_uno.Views
             this.panel12.Size = new System.Drawing.Size(402, 53);
             this.panel12.TabIndex = 15;
             // 
+            // checkBoxCaridad
+            // 
+            this.checkBoxCaridad.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCaridad.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBoxCaridad.FlatAppearance.BorderSize = 5;
+            this.checkBoxCaridad.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCaridad.Location = new System.Drawing.Point(322, 10);
+            this.checkBoxCaridad.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBoxCaridad.Name = "checkBoxCaridad";
+            this.checkBoxCaridad.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.checkBoxCaridad.Size = new System.Drawing.Size(50, 33);
+            this.checkBoxCaridad.TabIndex = 18;
+            this.checkBoxCaridad.Tag = "caridad";
+            this.checkBoxCaridad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCaridad.UseVisualStyleBackColor = true;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -540,30 +556,14 @@ namespace bases_uno.Views
             this.label1.Size = new System.Drawing.Size(0, 52);
             this.label1.TabIndex = 0;
             // 
-            // checkBoxCaridad
-            // 
-            this.checkBoxCaridad.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxCaridad.Dock = System.Windows.Forms.DockStyle.Right;
-            this.checkBoxCaridad.FlatAppearance.BorderSize = 5;
-            this.checkBoxCaridad.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCaridad.Location = new System.Drawing.Point(322, 10);
-            this.checkBoxCaridad.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBoxCaridad.Name = "checkBoxCaridad";
-            this.checkBoxCaridad.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.checkBoxCaridad.Size = new System.Drawing.Size(50, 33);
-            this.checkBoxCaridad.TabIndex = 18;
-            this.checkBoxCaridad.Tag = "caridad";
-            this.checkBoxCaridad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxCaridad.UseVisualStyleBackColor = true;
-            // 
-            // subastaplanr
+            // subastar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 802);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "subastaplanr";
+            this.Name = "subastar";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);
