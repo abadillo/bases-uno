@@ -1030,6 +1030,47 @@ namespace Engine.Classes
             return list;
         }
 
+        public static List<Listado> Listados(Subasta subasta)
+        {
+            List<Listado> list = new List<Listado>();
+
+            Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
+
+            try
+            {
+                connection.OpenConnection();
+
+
+                string Query = "SELECT * FROM listado Where subasta_id = @subasta_id";
+                connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("subasta_id", subasta.ID);
+
+                connection.Reader = connection.Script.ExecuteReader();
+
+                while (connection.Reader.Read())
+                {
+                    Listado modell = new Listado(connection.ReadInt(0), connection.ReadInt(1), connection.ReadFloat(2),
+                        connection.ReadFloat(3), connection.ReadInt(4), connection.ReadInt(5), connection.ReadDate(6),
+                        connection.ReadInt(7), connection.ReadInt(8), connection.ReadInt(9), connection.ReadInt(10));
+
+                    list.Add(modell);
+                }
+            }
+            catch
+            {
+                list = new List<Listado>();
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
+
+            return list; 
+
+               
+        }
+
         public static List<Local> Locales()
         {
             List<Local> list = new List<Local>();
