@@ -458,6 +458,35 @@ namespace Engine.Classes
             }
         }
 
+        public void AgregarParticipante(Membresia membresia, bool autorizado)
+        {
+            Participante participante = new Participante(
+                NextParticipanteID(),
+                this,
+                membresia,
+                autorizado);
+            participante.Insert();
+        }
+
+        public List<Participante> Participantes()
+        {
+            List<Participante> participantes = Read.Participantes();
+            List<Participante> aux = new List<Participante>();
+            foreach (Participante participante in participantes)
+            {
+                if (participante.SubastaID == ID)
+                {
+                    aux.Add(participante);
+                }
+            }
+            return aux;
+        }
+
+        private int NextParticipanteID()
+        {
+            return Participantes().Count + 1;
+        }
+
         public List<Club> Organizadores()
         {
             List<int> ids = new List<int>();
