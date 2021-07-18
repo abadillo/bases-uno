@@ -590,20 +590,21 @@ namespace Engine.Classes
             List<Membresia> invitados = new List<Membresia>();
             List<Membresia> membresias = Read.Membresias();
             List<Club> clubesInvitados = ClubesInvitados();
+            List<Club> organizadores = Organizadores();
             foreach (Membresia membresia in membresias)
             {
-                if (membresia.ClubID == Organizador().ID)
+                foreach (Club organizador in organizadores)
                 {
-                    invitados.Add(membresia);
-                }
-                else
-                {
-                    foreach (Club clubInvitado in clubesInvitados)
+                    if (membresia.ClubID == organizador.ID)
                     {
-                        if (membresia.ClubID == clubInvitado.ID)
-                        {
-                            invitados.Add(membresia);
-                        }
+                        invitados.Add(membresia);
+                    }
+                }
+                foreach (Club clubInvitado in clubesInvitados)
+                {
+                    if (membresia.ClubID == clubInvitado.ID)
+                    {
+                        invitados.Add(membresia);
                     }
                 }
             }
