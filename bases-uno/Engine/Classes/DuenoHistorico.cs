@@ -224,7 +224,16 @@ namespace Engine.Classes
         }
         #endregion
 
-        #region Other Methods
+        #region Other Methods\
+        public Comic Comic()
+        {
+            return Read.Comic(ComicID);
+        }
+
+        public Coleccionable Coleccionable()
+        {
+            return Read.Coleccionable(ColeccionableID);
+        }
         #endregion
     }
 }

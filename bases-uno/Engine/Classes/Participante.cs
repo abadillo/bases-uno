@@ -130,6 +130,18 @@ namespace Engine.Classes
         #endregion
 
         #region Other Methods
+        public Membresia Membresia()
+        {
+            return Read.Membresia(
+                Read.Coleccionista(MembresiaColeccionistaID),
+                Read.Club(MembresiaClubID),
+                MembresiaFechaRegistro);
+        }
+
+        public Coleccionista Coleccionista()
+        {
+            return Read.Coleccionista(MembresiaColeccionistaID);
+        }
         #endregion
     }
 }

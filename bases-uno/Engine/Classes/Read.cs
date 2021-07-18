@@ -210,7 +210,7 @@ namespace Engine.Classes
             return contact;
         }
 
-        public static DuenoHistorico DuenoHistorico(Coleccionista coleccionista, DateTime fechaRegistro, int id)
+        public static DuenoHistorico DuenoHistorico(Coleccionista coleccionista, Nullable<DateTime> fechaRegistro, int id)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
             DuenoHistorico duenoHistorico = null;
@@ -380,7 +380,7 @@ namespace Engine.Classes
             return place;
         }
 
-        public static Membresia Membresia(Coleccionista coleccionista, Club club, DateTime fechaIngreso)
+        public static Membresia Membresia(Coleccionista coleccionista, Club club, Nullable<DateTime> fechaIngreso)
         {
             Engine.DBConnection.DBConnection connection = new Engine.DBConnection.DBConnection();
             Membresia membresia = null;

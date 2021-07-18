@@ -251,17 +251,13 @@ namespace Engine.Classes
             }
         }
 
-
         public void ActualizarMontoCaridad(OrganizacionCaridad organizacionCaridad)
         {
             float monto = 0;
-            List<Listado> lista = Read.Listados();
-            foreach (Listado listado in lista)
+            List<Listado> listados = Listados();
+            foreach (Listado listado in listados)
             {
-                if (listado.SubastaID == ID)
-                {
-                    monto += listado.PrecioVenta;
-                }
+                monto += listado.PrecioVenta;
             }
             monto = monto * Porcentaje(organizacionCaridad) / 100;
 
@@ -289,7 +285,8 @@ namespace Engine.Classes
 
         public void ActualizarMontoCaridad()
         {
-            foreach (OrganizacionCaridad organizacion in OrganizacionesCaridad())
+            List<OrganizacionCaridad> organizaciones = OrganizacionesCaridad();
+            foreach (OrganizacionCaridad organizacion in organizaciones)
             {
                 ActualizarMontoCaridad(organizacion);
             }
@@ -639,6 +636,20 @@ namespace Engine.Classes
         }
         #endregion
 
+        public List<Listado> Listados()
+        {
+            List<Listado> listados = new List<Listado>();
+            List<Listado> aux = Read.Listados();
+            foreach (Listado listado in aux)
+            {
+                if (listado.SubastaID == ID)
+                {
+                    listados.Add(listado);
+                }
+            }
+            return listados;
+        }
+
         public void AgregarParticipantes()
         {
             List<Membresia> invitados = new List<Membresia>();
@@ -660,6 +671,7 @@ namespace Engine.Classes
         public void Cancelar()
         {
             Cancelado = true;
+            Cerrado = true;
             foreach (OrganizacionCaridad organizacion in OrganizacionesCaridad())
             {
                 EliminarOrganizacionCaridad(organizacion);
@@ -682,6 +694,17 @@ namespace Engine.Classes
             }
             EliminarClubes();
             Update();
+        }
+
+        public void Cerrar()
+        {
+            Cerrado = true;
+            List<Listado> listados = Listados();
+            foreach (Listado listado in listados)
+            {
+                listado.Cerrar();
+            }
+            ActualizarMontoCaridad();
         }
         #endregion
     }

@@ -232,6 +232,49 @@ namespace Engine.Classes
         #endregion
 
         #region Other Methods
+        public DuenoHistorico DuenoHistorico()
+        {
+            return Read.DuenoHistorico(
+                Read.Coleccionista(DuenoHistoricoColeccionistaID),
+                DuenoHistoricoFechaRegistro,
+                DuenoHistoricoID);
+        }
+
+        public Subasta Subasta()
+        {
+            return Read.Subasta(SubastaID);
+        }
+
+        public Participante Participante()
+        {
+            return Read.Participante(ParticipanteIDInscripcion, Subasta());
+        }
+
+        public void Cerrar()
+        {
+            if (!(PrecioVenta == 0))
+            {
+                DuenoHistorico historico = DuenoHistorico();
+                DuenoHistorico nuevoDueno;
+                if (historico.ComicID == 0)
+                {
+                    nuevoDueno = new DuenoHistorico(
+                    (DateTime)Subasta().Fecha,
+                    Participante().Coleccionista(),
+                    historico.Coleccionable(),
+                    PrecioVenta);
+                }
+                else
+                {
+                    nuevoDueno = new DuenoHistorico(
+                    (DateTime)Subasta().Fecha,
+                    Participante().Coleccionista(),
+                    historico.Comic(),
+                    PrecioVenta);
+                }
+                nuevoDueno.Insert();
+            }
+        }
         #endregion
     }
 }
