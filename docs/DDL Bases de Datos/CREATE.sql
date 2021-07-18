@@ -193,6 +193,7 @@ CREATE TABLE SUBASTA(
      caridad BOOLEAN NOT NULL,
      cancelado BOOLEAN NOT NULL,
      LOCAL_id INTEGER,
+     cerrado BOOLEAN NOT NULL,
 
      CONSTRAINT SUBASTA_PK PRIMARY KEY  (id),
      CONSTRAINT SUBASTA_CH CHECK ( tipo IN ('Presencial', 'Virtual') ),

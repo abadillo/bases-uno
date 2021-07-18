@@ -537,7 +537,7 @@ namespace Engine.Classes
                 {
                     subasta = new Subasta(connection.ReadInt(0), connection.ReadDate(1), connection.ReadTime(2),
                         connection.ReadTime(3), connection.ReadString(4), connection.ReadBool(5), connection.ReadBool(6),
-                        connection.ReadInt(7));
+                        connection.ReadInt(7), connection.ReadBool(8));
                 }
             }
             catch
@@ -1201,7 +1201,7 @@ namespace Engine.Classes
                 {
                     Subasta modell = new Subasta(connection.ReadInt(0), connection.ReadDate(1), connection.ReadTime(2),
                         connection.ReadTime(3), connection.ReadString(4), connection.ReadBool(5), connection.ReadBool(6),
-                        connection.ReadInt(7));
+                        connection.ReadInt(7), connection.ReadBool(8));
 
                     list.Add(modell);
                 }
