@@ -20,6 +20,7 @@ namespace Engine.Classes
         public int ParticipanteSubastaID { get; set; } //nullable
         public int DuenoHistoricoID { get; set; }
         public int ParticipanteIDInscripcion { get; set; } //nullable
+        public int DuracionMinutos { get; set; } //nullable
         #endregion
 
         #region Constructors
@@ -27,7 +28,7 @@ namespace Engine.Classes
         /// Usar previo a insercion de un registro en la BD
         /// </summary>
         public Listado(Subasta subasta, float precioBase, DuenoHistorico duenoHistorico, int orden = 0, 
-            float precioVenta = 0, Participante participante = null)
+            int duracion = 0, float precioVenta = 0, Participante participante = null)
         {
             Orden = orden;
             PrecioBase = precioBase;
@@ -36,6 +37,7 @@ namespace Engine.Classes
             DuenoHistoricoColeccionistaID = duenoHistorico.ColeccionistaID;
             DuenoHistoricoFechaRegistro = duenoHistorico.FechaRegistro;
             DuenoHistoricoID = duenoHistorico.ID;
+            DuracionMinutos = duracion;
             if (participante == null)
             {
                 ParticipanteSubastaID = 0;
@@ -54,7 +56,7 @@ namespace Engine.Classes
         public Listado(int id, int orden, float precioBase, float precioVenta, int subastaID, 
             int duenoHistoricoColeccionistaID,
             Nullable<DateTime> duenoHistoricoFechaRegistro, int participanteSubastaID, int duenoHistoricoID, 
-            int participanteIDInscripcion)
+            int participanteIDInscripcion, int duracion)
         {
             ID = id;
             Orden = orden;
@@ -66,6 +68,7 @@ namespace Engine.Classes
             ParticipanteSubastaID = participanteSubastaID;
             DuenoHistoricoID = duenoHistoricoID;
             ParticipanteIDInscripcion = participanteIDInscripcion;
+            DuracionMinutos = duracion;
         }
         #endregion
 
@@ -112,6 +115,10 @@ namespace Engine.Classes
                 {
                     Query += ", participante_subasta_id, participante_id_inscripcion";
                 }
+                if (!(DuracionMinutos == 0))
+                {
+                    Query += ", duracion_min";
+                }
                 Query += ") VALUES (@preciobase, @subastaid, @duenoid, @duenofecha, @duenocoleccionistaid";
                 if (!(Orden == 0))
                 {
@@ -124,6 +131,10 @@ namespace Engine.Classes
                 if (!(ParticipanteIDInscripcion == 0 || ParticipanteSubastaID == 0))
                 {
                     Query += ", @participantesubastaid, @participanteidinscripcion";
+                }
+                if (!(DuracionMinutos == 0))
+                {
+                    Query += ", @duracion";
                 }
                 Query += ") RETURNING id";
 
@@ -146,6 +157,10 @@ namespace Engine.Classes
                 {
                     Script.Parameters.AddWithValue("participantesubastaid", ParticipanteSubastaID);
                     Script.Parameters.AddWithValue("participanteidinscripcion", ParticipanteIDInscripcion);
+                }
+                if (!(DuracionMinutos == 0))
+                {
+                    Script.Parameters.AddWithValue("duracion", DuracionMinutos);
                 }
 
                 Reader = Script.ExecuteReader();

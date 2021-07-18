@@ -299,7 +299,7 @@ namespace Engine.Classes
                 {
                     listado = new Listado(connection.ReadInt(0), connection.ReadInt(1), connection.ReadFloat(2), connection.ReadFloat(3),
                         connection.ReadInt(4), connection.ReadInt(5), connection.ReadDate(6), connection.ReadInt(7), connection.ReadInt(8),
-                        connection.ReadInt(9));
+                        connection.ReadInt(9), connection.ReadInt(10));
                 }
             }
             catch
@@ -896,7 +896,7 @@ namespace Engine.Classes
                 {
                     Listado modell = new Listado(connection.ReadInt(0), connection.ReadInt(1), connection.ReadFloat(2),
                         connection.ReadFloat(3), connection.ReadInt(4), connection.ReadInt(5), connection.ReadDate(6),
-                        connection.ReadInt(7), connection.ReadInt(8), connection.ReadInt(9));
+                        connection.ReadInt(7), connection.ReadInt(8), connection.ReadInt(9), connection.ReadInt(10));
 
                     list.Add(modell);
                 }
