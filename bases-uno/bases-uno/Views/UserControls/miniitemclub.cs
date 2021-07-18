@@ -17,20 +17,21 @@ namespace bases_uno.Views.Components
         public index parent;
         public Club club;
         public Subasta subasta;
+        public bool organizador;
 
-        public miniitemclub(Club club, Subasta subasta ,index parent )
+        public miniitemclub(Club club, Subasta subasta ,index parent, bool organizador)
         {
 
             this.parent = parent;
             this.club = club;
             this.subasta = subasta;
+            this.organizador = organizador;
 
             InitializeComponent();
 
             //Console.WriteLine(club.Telefono);
             label1.Text = club.Nombre;
-            label2.Text = club.Telefono.ToString();
-            label3.Text = Read.Lugar(club.LugarID).Nombre;
+            
 
             Update();
 
@@ -40,7 +41,11 @@ namespace bases_uno.Views.Components
         private void iconButton1_Click(object sender, EventArgs e)
         {
        
-            //subasta.EliminarOrganizacionCaridad(organizacion);
+            if (organizador)
+                subasta.EliminarOrganizador(club);
+            else
+                subasta.EliminarInvitado(club);
+
             parent.InsertForm(new subasta1_2(parent, subasta));
         }
 

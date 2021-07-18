@@ -55,7 +55,7 @@ namespace bases_uno.Views
             for (int i = 0; i < altListCluInv.Count; i++)
             {
                 //Console.WriteLine(altListClu[i].ID);
-                miniitemclub item = new miniitemclub(altListCluInv[i], subasta, parent);
+                miniitemclub item = new miniitemclub(altListCluInv[i], subasta, parent,true);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
@@ -169,7 +169,7 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new subasta1_4(parent, subasta));
+            parent.InsertForm(new subasta1_3(parent, subasta));
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 

@@ -41,6 +41,7 @@ namespace bases_uno.Views
 
             label1.Text = "Subasta: " + subasta.ID;
 
+           
 
             // para los clubes invitados a la subasta
 
@@ -53,8 +54,18 @@ namespace bases_uno.Views
 
             for (int i = 0; i < altListCluOrg.Count; i++)
             {
-                //Console.WriteLine(altListClu[i].ID);
-                miniitemclub item = new miniitemclub(altListCluOrg[i], subasta, parent);
+                Console.WriteLine(altListCluOrg[i].ID);
+                miniitemclub item = new miniitemclub(altListCluOrg[i], subasta, parent, true);
+                item.Dock = DockStyle.Top;
+
+                dipanel3.Controls.Add(item);
+            }
+
+
+            for (int i = 0; i < altListCluInv.Count; i++)
+            {
+                Console.WriteLine(altListCluInv[i].ID);
+                miniitemclub item = new miniitemclub(altListCluInv[i], subasta, parent, false);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
@@ -71,7 +82,15 @@ namespace bases_uno.Views
                 comboBoxClub.Items.Add(item);
             }
 
+            comboBoxType.Items.AddRange(new object[] {
+                "Organizador",
+                "Invitado"
+            });
 
+           
+            
+            
+            
             #region set flags
 
             if (subasta.Cancelado)
@@ -113,7 +132,7 @@ namespace bases_uno.Views
         {
             label11.Text = mensaje;
             iconButton5.Visible = false;
-            btnanadir.Enabled = false;
+            comboBoxType.Items.Remove("Organizador");
             panelAlerta.Visible = true;
         }
 
@@ -125,6 +144,7 @@ namespace bases_uno.Views
                 int clubID = int.Parse(tokens[0]);
 
                 Club club = Read.Club(clubID);
+
 
                 for (int i = 0; i < altListCluOrg.Count; i++)
                 { 
@@ -139,7 +159,14 @@ namespace bases_uno.Views
 
                 }
 
-                subasta.AgregarOrganizador(club);
+                string tipo = Validacion.ValidarCombo(comboBoxType);
+
+                if (tipo == "Organizador") 
+                    subasta.AgregarOrganizador(club);
+
+                else 
+                    subasta.AgregarClubInvitado(club);
+
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 parent.InsertForm(new subasta1_2(parent,subasta));
@@ -176,12 +203,6 @@ namespace bases_uno.Views
 
         #region click botones FontAwesome
 
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            panelAgregar.Visible = true;
-            
-        }
-
         private void btncancelar_Click_1(object sender, EventArgs e)
         {
             parent.InsertForm(new subasta1_2(parent, subasta));
@@ -191,7 +212,20 @@ namespace bases_uno.Views
         {
             Registrar();
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            panelAgregar.Visible = true;
+            comboBoxType.SelectedItem = "Invitado";
+        }
+
+        private void iconButton5_Click_1(object sender, EventArgs e)
+        {
+            panelAgregar.Visible = true;
+            comboBoxType.SelectedItem = "Organizador";
+        }
         #endregion
+
 
     }
 }
