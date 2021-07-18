@@ -482,7 +482,10 @@ namespace Engine.Classes
                 List<Club> clubes = new List<Club>();
                 foreach (int id in ids)
                 {
-                    clubes.Add(Read.Club(id));
+                    if (!(id == 0))
+                    {
+                        clubes.Add(Read.Club(id));
+                    }
                 }
                 return clubes;
             }
@@ -525,7 +528,10 @@ namespace Engine.Classes
                 List<Club> clubes = new List<Club>();
                 foreach (int id in ids)
                 {
-                    clubes.Add(Read.Club(id));
+                    if (!(id == 0))
+                    {
+                        clubes.Add(Read.Club(id));
+                    }
                 }
                 return clubes;
             }
