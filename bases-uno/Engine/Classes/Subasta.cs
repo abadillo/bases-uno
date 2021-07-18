@@ -445,9 +445,9 @@ namespace Engine.Classes
             }
         }
 
-        public Club Organizador()
+        public List<Club> Organizadores()
         {
-            int id = 0;
+            List<int> ids = new List<int>();
             try
             {
                 OpenConnection();
@@ -459,20 +459,26 @@ namespace Engine.Classes
 
                 Reader = Script.ExecuteReader();
 
-                if (Reader.Read())
+                while (Reader.Read())
                 {
-                    id = ReadInt(0);
+                    ids.Add(ReadInt(0));
                 }
             }
             catch
             {
-                id = 0;
+                ids = new List<int>();
             }
             finally
             {
                 CloseConnection();
             }
-            return Read.Club(id);
+
+            List<Club> clubes = new List<Club>();
+            foreach (int id in ids)
+            {
+                clubes.Add(Read.Club(id));
+            }
+            return clubes;
         } 
 
         public List<Club> ClubesInvitados()
@@ -521,6 +527,52 @@ namespace Engine.Classes
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public void EliminarOrganizador(Club club)
+        {
+            try
+            {
+                OpenConnection();
+
+                string Query = "DELETE FROM org_inv " +
+                    "WHERE subasta_id = @id AND club_id_org = @club";
+                Script = new NpgsqlCommand(Query, Connection);
+
+                Script.Parameters.AddWithValue("id", ID);
+                Script.Parameters.AddWithValue("club", club.ID);
+
+                Script.Prepare();
+
+                Script.ExecuteNonQuery();
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
+
+        public void EliminarInvitado(Club club)
+        {
+            try
+            {
+                OpenConnection();
+
+                string Query = "DELETE FROM org_inv " +
+                    "WHERE subasta_id = @id AND club_id_inv = @club";
+                Script = new NpgsqlCommand(Query, Connection);
+
+                Script.Parameters.AddWithValue("id", ID);
+                Script.Parameters.AddWithValue("club", club.ID);
 
                 Script.Prepare();
 
