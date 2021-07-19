@@ -24,6 +24,7 @@ namespace bases_uno.Views
         public bool flagCancelado = false;      // true if cancelado, false if no cancelado
         public bool flagPresencial = false;      // true if presencial, false if virtual
         public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
+        public bool flagCerrada = false;
 
         public subastaplan1(index parent, Subasta subasta)
         {
@@ -86,6 +87,8 @@ namespace bases_uno.Views
             if (subasta.Caridad)
                 flagBenefica = true;
 
+            if (subasta.Cerrado)
+                flagCerrada = true;
             #endregion
 
 
@@ -93,6 +96,11 @@ namespace bases_uno.Views
 
             if (flagPresencial)
                 panelOpcional.Visible = true;
+
+            if (flagCerrada) { 
+               
+                DisableFunciones("Esta subasta fue cerrada, no puede agregar ni modificar ningun atributo incluyendo organizaciones, clubes, objetos o partipantes");
+            }
 
             #endregion
 
@@ -103,9 +111,31 @@ namespace bases_uno.Views
         }
 
         #region Funciones
+        private void DisableFunciones(string mensaje)
+        {
+            label11.Text = mensaje;
+            panelAlerta.Visible = true;
 
-       
-        private void Eliminar()
+
+            iconButton5.Enabled = false;
+            iconButton1.Enabled = false;
+            iconButton14.Enabled = false;
+            iconButton16.Enabled = false;
+            iconButton18.Enabled = false;
+            iconButton2.Enabled = false;
+            iconButton4.Enabled = false;
+            iconButton3.Enabled = false;
+            buttonCancelarEvento.Enabled = false;
+            btncancelar.Enabled = false;
+            btneliminar.Enabled = false;
+            btnmodificar.Enabled = false;
+            tableLayoutPanel1.Visible = false;
+            label14.Visible = false;
+            tableLayoutPanel4.Visible = false;
+
+        }
+
+    private void Eliminar()
         {
 
             DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea eliminar esta Subasta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -332,8 +362,9 @@ namespace bases_uno.Views
             // este no se puede alterar por aqui ya que lleva a eliminacion de muchas cosa
         }
 
+
         #endregion
 
-       
+        
     }
 }

@@ -38,7 +38,7 @@ namespace bases_uno.Views.Components
 
             if (paraInvitados)
             {
-                label3.Text =club.Nombre;
+                label3.Text = club.Nombre;
                 label3_1.Visible = false;
             }
             else
@@ -88,6 +88,11 @@ namespace bases_uno.Views.Components
 
                 label3.Text = "Responsable? ";
                 label3_1.Text = responsable;
+            }
+
+            if (participante.Subasta().Cerrado)
+            {
+                iconButton1.Visible = false;
             }
 
             Update();

@@ -24,12 +24,12 @@ namespace bases_uno.Views
         public List<Club> altListCluOrg;                    // para los clubes organizadores a la subasta
         public List<Club> altListCluInv;                    // para los clubes invitados
         public List<Club> listClu = Read.Clubes();      // para el combo de club
-        
 
-        public bool flagCancelado = false;              // true if cancelado, false if no cancelado
+
+        public bool flagCancelado = false;      // true if cancelado, false if no cancelado
         public bool flagPresencial = false;      // true if presencial, false if virtual
         public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
-
+        public bool flagCerrada = false;    
 
 
         public subastaplan1_2(index parent, Subasta subasta)
@@ -101,6 +101,8 @@ namespace bases_uno.Views
             if (subasta.Caridad)
                 flagBenefica = true;
 
+            if (subasta.Cerrado)
+                flagCerrada = true;
             #endregion
 
 
@@ -116,7 +118,10 @@ namespace bases_uno.Views
                 DisableFunciones("Esta subasta fue cancelada, no puede agregar clubes \nSi observa alguna arriba, algo salio mal");
             }
 
-
+            if (flagCerrada)
+            {
+                DisableFunciones("Esta subasta fue cerrada, no puede agregar ni modificar ningun atributo incluyendo organizaciones, clubes, objetos o partipantes");
+            }
             #endregion
 
 
@@ -129,7 +134,7 @@ namespace bases_uno.Views
 
         private void DisableFunciones(string mensaje)
         {
-            if (flagCancelado)
+            if (flagCancelado || flagCerrada)
                 iconButton1.Visible = false;
 
 

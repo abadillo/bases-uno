@@ -31,6 +31,9 @@ namespace bases_uno.Views
         {
             this.stpanel7 = new System.Windows.Forms.Panel();
             this.dipanel1 = new System.Windows.Forms.Panel();
+            this.panelAlerta = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonCancelarEvento = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -86,6 +89,7 @@ namespace bases_uno.Views
             this.label1 = new System.Windows.Forms.Label();
             this.stpanel7.SuspendLayout();
             this.dipanel1.SuspendLayout();
+            this.panelAlerta.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelOpcional.SuspendLayout();
@@ -115,12 +119,13 @@ namespace bases_uno.Views
             this.stpanel7.Margin = new System.Windows.Forms.Padding(0);
             this.stpanel7.Name = "stpanel7";
             this.stpanel7.Padding = new System.Windows.Forms.Padding(15);
-            this.stpanel7.Size = new System.Drawing.Size(864, 757);
+            this.stpanel7.Size = new System.Drawing.Size(864, 869);
             this.stpanel7.TabIndex = 1;
             // 
             // dipanel1
             // 
             this.dipanel1.AutoScroll = true;
+            this.dipanel1.Controls.Add(this.panelAlerta);
             this.dipanel1.Controls.Add(this.tableLayoutPanel4);
             this.dipanel1.Controls.Add(this.panel13);
             this.dipanel1.Controls.Add(this.tableLayoutPanel1);
@@ -134,8 +139,41 @@ namespace bases_uno.Views
             this.dipanel1.Location = new System.Drawing.Point(15, 108);
             this.dipanel1.Name = "dipanel1";
             this.dipanel1.Padding = new System.Windows.Forms.Padding(0, 0, 18, 0);
-            this.dipanel1.Size = new System.Drawing.Size(834, 634);
+            this.dipanel1.Size = new System.Drawing.Size(834, 746);
             this.dipanel1.TabIndex = 12;
+            // 
+            // panelAlerta
+            // 
+            this.panelAlerta.Controls.Add(this.label11);
+            this.panelAlerta.Controls.Add(this.label7);
+            this.panelAlerta.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelAlerta.Location = new System.Drawing.Point(0, 641);
+            this.panelAlerta.Name = "panelAlerta";
+            this.panelAlerta.Size = new System.Drawing.Size(816, 105);
+            this.panelAlerta.TabIndex = 74;
+            this.panelAlerta.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.LightGray;
+            this.label11.Location = new System.Drawing.Point(0, 38);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(816, 67);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "mensaje";
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label7.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.LightGray;
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(816, 38);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "Alerta";
             // 
             // tableLayoutPanel4
             // 
@@ -894,13 +932,14 @@ namespace bases_uno.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 757);
+            this.ClientSize = new System.Drawing.Size(864, 869);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "subastaplan1";
             this.Text = "8 Bit Subastas";
             this.stpanel7.ResumeLayout(false);
             this.dipanel1.ResumeLayout(false);
+            this.panelAlerta.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelOpcional.ResumeLayout(false);
@@ -986,5 +1025,8 @@ namespace bases_uno.Views
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.CheckBox checkBoxCaridad;
         private System.Windows.Forms.CheckBox checkBoxCancelado;
+        private System.Windows.Forms.Panel panelAlerta;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label7;
     }
 }

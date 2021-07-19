@@ -31,6 +31,9 @@ namespace bases_uno.Views.Components
             label2.Text = organizacion.Mision;
             label3.Text = subasta.Porcentaje(organizacion).ToString() + "%";
 
+            if (subasta.Cerrado)
+                iconButton1.Visible = false;
+
             Update();
 
         }

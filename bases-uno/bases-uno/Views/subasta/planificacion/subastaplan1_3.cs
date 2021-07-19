@@ -26,12 +26,11 @@ namespace bases_uno.Views
         public List<Participante> listPar;
         //public List<Club> ListCluOrg;                    // para los clubes organizadores a la subasta
         public List<Club> ListCluInv;                    // para los clubes invitados
-        //public List<Membresia> ListPar = Read.Membresias();             // para el combo de membresia
-
+                                                         //public List<Membresia> ListPar = Read.Membresias();             // para el combo de membresia
         public bool flagCancelado = false;      // true if cancelado, false if no cancelado
         public bool flagPresencial = false;      // true if presencial, false if virtual
         public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
-
+        public bool flagCerrada = false;
 
 
         public subastaplan1_3(index parent, Subasta subasta)
@@ -56,6 +55,8 @@ namespace bases_uno.Views
             if (subasta.Caridad)
                 flagBenefica = true;
 
+            if (subasta.Cerrado)
+                flagCerrada = true;
             #endregion
 
             #region use flags
@@ -69,12 +70,15 @@ namespace bases_uno.Views
             {
                 DisableFunciones("Esta subasta fue cancelada, no puede agregar partipantes \nSi observa alguna arriba, algo salio mal");
             }
-
+            if (flagCerrada)
+            {
+                DisableFunciones("Esta subasta fue cerrada, no puede agregar ni modificar ningun atributo incluyendo organizaciones, clubes, objetos o partipantes");
+            }
 
             #endregion
 
 
-            
+
             ListCluInv = subasta.ClubesInvitados();
             listPar = subasta.Participantes();
 

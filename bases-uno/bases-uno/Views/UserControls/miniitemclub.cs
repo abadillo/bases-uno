@@ -31,7 +31,9 @@ namespace bases_uno.Views.Components
 
             //Console.WriteLine(club.Telefono);
             label1.Text = club.Nombre;
-            
+
+            if (subasta.Cerrado)
+                iconButton1.Visible = false;
 
             Update();
 

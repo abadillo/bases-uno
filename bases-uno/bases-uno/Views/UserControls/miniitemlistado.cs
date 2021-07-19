@@ -40,6 +40,9 @@ namespace bases_uno.Views.Components
             label2.Text = "Numero: " + listado.Orden.ToString();
             label3.Text = listado.PrecioBase.ToString() + "$";
 
+            if (listado.Subasta().Cerrado)
+                iconButton1.Visible = false;
+
             Update();
 
         }
