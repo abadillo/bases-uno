@@ -753,6 +753,7 @@ namespace Engine.Classes
                 listado.Cerrar();
             }
             ActualizarMontoCaridad();
+            Update();
         }
         #endregion
     }

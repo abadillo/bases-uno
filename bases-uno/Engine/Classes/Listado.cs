@@ -205,7 +205,7 @@ namespace Engine.Classes
                 Script.Parameters.AddWithValue("subastaid", SubastaID);
                 Script.Parameters.AddWithValue("duenoid", DuenoHistoricoID);
                 Script.Parameters.AddWithValue("duenofecha", DuenoHistoricoFechaRegistro);
-                Script.Parameters.AddWithValue("duenoid", DuenoHistoricoColeccionistaID);
+                Script.Parameters.AddWithValue("duenocoleccionistaid", DuenoHistoricoColeccionistaID);
                 if (!(Orden == 0))
                 {
                     Script.Parameters.AddWithValue("orden", Orden);

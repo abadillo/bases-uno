@@ -198,6 +198,19 @@ namespace bases_uno.Views
 
                 coleccionistaGanador = coleccionista;
                 precioMasAlto = precio;
+
+                int id = 0;
+                foreach (Participante participante in subasta.Participantes())
+                {
+                    if (participante.MembresiaColeccionistaID == coleccionistaGanador.ID)
+                    {
+                        id = participante.IDInscripcion;
+                    }
+                    break;
+                }
+                listado.ParticipanteIDInscripcion = id;
+                listado.PrecioVenta = precioMasAlto;
+                listado.Update();
                 
 
                 miniitempuja item = new miniitempuja(coleccionista, precio);
