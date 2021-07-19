@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using bases_uno.Views.Components;
-
+using Engine;
 
 namespace bases_uno.Views
 {
@@ -25,6 +25,7 @@ namespace bases_uno.Views
 
         public subastaadminl(index parent)
         {
+            Validacion.ControlSubastas();
             this.parent = parent;
 
             InitializeComponent();

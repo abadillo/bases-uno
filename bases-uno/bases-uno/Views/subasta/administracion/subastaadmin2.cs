@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Engine;
 
 namespace bases_uno.Views
 {
@@ -20,6 +21,7 @@ namespace bases_uno.Views
 
         public subastaadmin2( index parent, Subasta subasta)
         {
+            Validacion.ControlSubastas();
             this.parent = parent;
             this.subasta = subasta;
             
