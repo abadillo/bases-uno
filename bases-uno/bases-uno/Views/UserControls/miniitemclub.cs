@@ -42,13 +42,33 @@ namespace bases_uno.Views.Components
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-       
-            if (organizador)
-                subasta.EliminarOrganizador(club);
-            else
-                subasta.EliminarInvitado(club);
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea retirar a este club de esta subasta?\n\nSe eliminaran todos los listados y participantes", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            parent.InsertForm(new subastaplan1_2(parent, subasta));
+            if (dialogResult == DialogResult.Yes)
+
+                try
+                {
+
+                    if (organizador)
+                        subasta.EliminarOrganizador(club);
+                    else
+                        subasta.EliminarInvitado(club);
+
+                    parent.InsertForm(new subastaplan1_2(parent, subasta));
+
+                    MessageBox.Show("Retiro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+            
         }
 
        

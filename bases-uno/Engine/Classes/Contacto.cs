@@ -12,7 +12,7 @@ namespace Engine.Classes
         #region Atributes
         public int ID { get; set; } //pk
         public string Email { get; set; } //nullable
-        public int Telefono { get; set; } //nullable
+        public long Telefono { get; set; } //nullable
         public string Plataforma { get; set; }
         public int ClubID { get; set; } //pk
         #endregion
@@ -21,7 +21,7 @@ namespace Engine.Classes
         /// <summary>
         /// Se usa previo a hacer un Insert en la BD
         /// </summary>
-        public Contacto(string plataforma, Club club, string email = null, int telefono = 0)
+        public Contacto(string plataforma, Club club, string email = null,long telefono = 0)
         {
             Email = email;
             Telefono = telefono;
@@ -32,7 +32,7 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor usado por la clase READ, NO USAR
         /// </summary>
-        public Contacto(int id, string plataforma, int clubID, string email = null, int telefono = 0)
+        public Contacto(int id, string plataforma, int clubID, string email = null,long telefono = 0)
         {
             ID = id;
             Email = email;

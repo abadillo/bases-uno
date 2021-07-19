@@ -208,6 +208,8 @@ namespace bases_uno.Views
             int ColeccionistaID = int.Parse(tokens[0]);
 
 
+
+
             Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
           
 
@@ -218,10 +220,10 @@ namespace bases_uno.Views
 
             textBoxPrecio.Text = precio.ToString();
 
-            if (precio > 0 || flagBenefica)
-            {
-                textBoxPrecio.Enabled = false;
-            }
+            //if (precio <= 0 || flagBenefica)
+            //{
+            //    textBoxPrecio.Enabled = false;
+            //}
           
 
                 
@@ -269,11 +271,19 @@ namespace bases_uno.Views
         {
             try
             {
-                string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
-                string tipo = tokens[0];
+                
 
+
+                string[] tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' ');
+               
                 int ColeccionistaID = int.Parse(tokens[0]);
                 Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
+
+
+                tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
+                string tipo = tokens[0];
+
+                
 
                 DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
 
@@ -285,8 +295,9 @@ namespace bases_uno.Views
                 //validar esto
                 float precio = Validacion.ValidarFloat(textBoxPrecio,true);
 
-                
-                if (precio <= 0)
+                // && textBoxPrecio.Enabled == false
+
+                if (precio <= 0 )
                 {
                     throw new Exception("Aqui no se subastan objetos de gratis");
                 }

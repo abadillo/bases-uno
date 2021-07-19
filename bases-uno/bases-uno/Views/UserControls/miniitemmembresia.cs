@@ -99,7 +99,7 @@ namespace bases_uno.Views.Components
 
         }
 
-        private void CerrarMembresia()
+        private void SacarClubSubasta()
         {
             if (participante == null)
             {
@@ -152,7 +152,7 @@ namespace bases_uno.Views.Components
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            CerrarMembresia();
+            SacarClubSubasta();
             // remover este de la lista y refrescar al que lo llamo
             if (participante == null)
             {

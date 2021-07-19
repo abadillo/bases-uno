@@ -86,7 +86,7 @@ namespace bases_uno.Views
                     Validacion.ValidarNull(textBoxPlataforma),
                     club,
                     textBoxUsuarioEmail.Text,
-                    Validacion.ValidarInt(textBoxTelefono,false) 
+                    Validacion.ValidarLong(textBoxTelefono,false) 
                 );
 
 

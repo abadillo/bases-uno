@@ -15,7 +15,7 @@ namespace Engine.Classes
         public string SegundoNombre { get; set; } //nullable
         public string PrimerApellido { get; set; }
         public string SegundoApellido { get; set; } //nullable
-        public int Telefono { get; set; }
+        public long Telefono { get; set; }
         public Nullable<DateTime> FechaNacimiento { get; set; }
         public int LugarNacimiento { get; set; }
         public int LugarResidencia { get; set; }
@@ -27,7 +27,7 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor de la Clase caso tiene o no representante que es Coleccionista
         /// </summary>
-        public Coleccionista(int id, string primerNombre, string primerApellido, int telefono, DateTime fechaNacimiento, Lugar lugarNacimiento,
+        public Coleccionista(int id, string primerNombre, string primerApellido, long telefono, DateTime fechaNacimiento, Lugar lugarNacimiento,
             Lugar lugarResidencia, string segundoNombre = null, string segundoApellido = null, Coleccionista representante = null)
 
         {
@@ -35,7 +35,7 @@ namespace Engine.Classes
             PrimerNombre = primerNombre;
             SegundoApellido = segundoApellido;
             PrimerApellido = primerApellido;
-            SegundoApellido = segundoApellido;
+            SegundoNombre = segundoNombre;
             Telefono = telefono;
             FechaNacimiento = fechaNacimiento;
             LugarNacimiento = lugarNacimiento.ID;
@@ -53,7 +53,7 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor de la Clase caso tiene representante que NO es Coleccionista
         /// </summary>
-        public Coleccionista(int id, string primerNombre, string primerApellido, int telefono, DateTime fechaNacimiento, Lugar lugarNacimiento,
+        public Coleccionista(int id, string primerNombre, string primerApellido, long telefono, DateTime fechaNacimiento, Lugar lugarNacimiento,
             Lugar lugarResidencia, Representante representante, string segundoNombre = null, string segundoApellido = null)
 
         {
@@ -73,7 +73,7 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Coleccionista(int id, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, int telefono,
+        public Coleccionista(int id, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, long telefono,
             Nullable<DateTime> fechaNacimiento, int lugarNacimiento, int representanteID, int representanteColeccionista, int lugarResidencia)
         {
             ID = id;

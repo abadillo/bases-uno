@@ -99,6 +99,41 @@ namespace Engine
 
         }
 
+        public static long ValidarLong(TextBox campo, bool NN)
+        {
+
+            if (!NN && string.IsNullOrEmpty(campo.Text))
+                return 0;
+
+            long tmp;
+
+            if (!long.TryParse(campo.Text, out tmp))
+            {
+                campo.BackColor = Color.FromArgb(232, 81, 94);
+                campo.Focus();
+                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero valido");
+            }
+
+            //Console.WriteLine(tmp);
+
+            if (NN && tmp == 0)
+            {
+                campo.BackColor = Color.FromArgb(232, 81, 94);
+                campo.Focus();
+                throw new ApplicationException("'" + campo.Text + "' en el campo " + campo.Tag + " debe ser un numero valido");
+            }
+
+            if (campo.ReadOnly == false)
+            {
+                campo.BackColor = Color.LightGray;
+            }
+
+
+            return tmp;
+
+        }
+
+
         public static float ValidarFloat(TextBox campo, bool NN)
         {
             if (!NN && string.IsNullOrEmpty(campo.Text))

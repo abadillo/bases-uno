@@ -147,7 +147,7 @@ namespace bases_uno.Views
                 coleccionista.PrimerApellido = Validacion.ValidarNull(textBoxPrimerApellido);
                 coleccionista.SegundoApellido =textBoxSegundoApellido.Text;
                 coleccionista.FechaNacimiento = Validacion.ValidarDateTime(textBoxFechaNacimiento, true);
-                coleccionista.Telefono = Validacion.ValidarInt(textBoxTelefono, true);
+                coleccionista.Telefono = Validacion.ValidarLong(textBoxTelefono, true);
                 coleccionista.LugarNacimiento = Read.Lugar(LugarNID).ID;
                 coleccionista.LugarResidencia = Read.Lugar(LugarRID).ID;
 

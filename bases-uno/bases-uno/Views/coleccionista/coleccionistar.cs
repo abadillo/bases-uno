@@ -111,7 +111,7 @@ namespace bases_uno.Views
                         Validacion.ValidarInt(textBoxDocIdentidad, true),
                         Validacion.ValidarNull(textBoxPrimerNombre),
                         Validacion.ValidarNull(textBoxPrimerApellido),
-                        Validacion.ValidarInt(textBoxTelefono, true),
+                        Validacion.ValidarLong(textBoxTelefono, true),
                         Validacion.ValidarDateTime(textBoxFechaNacimiento, true),
                         Read.Lugar(LugarNID),
                         Read.Lugar(LugarRID),

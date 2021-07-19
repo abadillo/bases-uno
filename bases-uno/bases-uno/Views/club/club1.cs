@@ -68,7 +68,7 @@ namespace bases_uno.Views
                 club.Proposito = textBoxProposito.Text;
                 club.PaginaWeb = textBoxPaginaWeb.Text;
                 club.LugarID = Read.Lugar(LugarID).ID;
-                club.Telefono = Validacion.ValidarInt(textBoxTelefono, true);
+                club.Telefono = Validacion.ValidarLong(textBoxTelefono, true);
 
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea modificar este Club?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 

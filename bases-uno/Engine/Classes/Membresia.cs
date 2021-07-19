@@ -152,30 +152,30 @@ namespace Engine.Classes
                 if (!(FechaRetiro == null))
                 {
                     Query += "fecha_retiro = @fecharetiro ";
-                    if ((Email == null) || (ClubIDLider == 0))
-                    {
-                        Query += " ";
-                    }
-                    else
-                    {
-                        Query += ", ";
-                    }
+                    //if ((Email == null) || (ClubIDLider == 0))
+                    //{
+                    //    Query += " ";
+                    //}
+                    //else
+                    //{
+                    //    Query += ", ";
+                    //}
                 }
                 if (!(Email == null))
                 {
-                    Query += "email_contacto = @email ";
-                    if (ClubIDLider == 0)
-                    {
-                        Query += " ";
-                    }
-                    else
-                    {
-                        Query += ", ";
-                    }
+                    Query += ", email_contacto = @email ";
+                    //if (ClubIDLider == 0)
+                    //{
+                    //    Query += " ";
+                    //}
+                    //else
+                    //{
+                    //    Query += ", ";
+                    //}
                 }
                 if (!(ClubIDLider == 0))
                 {
-                    Query += "club_id_lider = @clublider ";
+                    Query += ", club_id_lider = @clublider ";
                 }
                 Query += "WHERE fecha_ingreso = @fechaingreso AND club_id = @clubid AND " +
                         "coleccionista_documento_identidad = @coleccionistaid";

@@ -13,7 +13,7 @@ namespace Engine.Classes
         public int ID { get; set; }
         public string Nombre { get; set; }
         public Nullable<DateTime> FechaFundacion { get; set; }
-        public int Telefono { get; set; } //nullable
+        public long Telefono { get; set; } //nullable
         public string PaginaWeb { get; set; } //nullable
         public string Proposito { get; set; }
         public int LugarID { get; set; }
@@ -23,7 +23,7 @@ namespace Engine.Classes
         /// <summary>
         /// Usar para hacer un nuevo registro en la BD
         /// </summary>
-        public Club(string nombre,  DateTime fechaFundacion, string proposito,Lugar lugar, int telefono = 0, string paginaWeb = null) 
+        public Club(string nombre,  DateTime fechaFundacion, string proposito,Lugar lugar,long telefono = 0, string paginaWeb = null) 
         {
             FechaFundacion = fechaFundacion;
             Nombre = nombre;
@@ -36,7 +36,7 @@ namespace Engine.Classes
         /// <summary>
         /// Constructor de la clase READ, NO USAR
         /// </summary>
-        public Club(int id, string nombre, Nullable<DateTime> fechaFundacion, string proposito, int lugarID, int telefono = 0, string paginaWeb = null)
+        public Club(int id, string nombre, Nullable<DateTime> fechaFundacion, string proposito, int lugarID,long telefono = 0, string paginaWeb = null)
         {
             ID = id;
             Nombre = nombre;
