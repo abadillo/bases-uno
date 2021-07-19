@@ -270,7 +270,7 @@ INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, 
 INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id, cerrado) VALUES ('1/1/2016', '14:00', '18:00', 'Presencial', FALSE, TRUE, '6', TRUE);
 INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id, cerrado) VALUES ('1/1/2017', '14:00', '18:00', 'Presencial', FALSE, TRUE, '7', TRUE);
 INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id, cerrado) VALUES ('1/1/2018', '14:00', '18:00', 'Presencial', FALSE, TRUE, '8', TRUE);
-INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id, cerrado) VALUES ('1/1/2019', '14:00', '18:00', 'Virtual', TRUE, TRUE, NULL, FALSE);
+INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelado, local_id, cerrado) VALUES ('1/1/2019', '14:00', '18:00', 'Virtual', TRUE, FALSE, NULL, FALSE);
 
 INSERT INTO org_inv (subasta_id, club_id_org, club_id_inv) VALUES ('9', '1', NULL);
 INSERT INTO org_inv (subasta_id, club_id_org, club_id_inv) VALUES ('9', NULL, '3');
