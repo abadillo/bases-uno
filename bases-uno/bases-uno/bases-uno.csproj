@@ -308,6 +308,48 @@
     <Compile Include="Views\representante\representanter.Designer.cs">
       <DependentUpon>representanter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan1.Designer.cs">
+      <DependentUpon>subastaplan1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan1_1.Designer.cs">
+      <DependentUpon>subastaplan1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan1_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan1_2.Designer.cs">
+      <DependentUpon>subastaplan1_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan1_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan1_3.Designer.cs">
+      <DependentUpon>subastaplan1_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan1_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan1_4.Designer.cs">
+      <DependentUpon>subastaplan1_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplan2.Designer.cs">
+      <DependentUpon>subastaplan2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplanl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaplanl.Designer.cs">
+      <DependentUpon>subastaplanl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\subasta\planificacion\subastaplan1_4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -664,6 +706,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\representante\representanter.resx">
       <DependentUpon>representanter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\administracion\subastaplan1.resx">
+      <DependentUpon>subastaplan1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\administracion\subastaplan1_1.resx">
+      <DependentUpon>subastaplan1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\administracion\subastaplan1_2.resx">
+      <DependentUpon>subastaplan1_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\administracion\subastaplan1_3.resx">
+      <DependentUpon>subastaplan1_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\administracion\subastaplan1_4.resx">
+      <DependentUpon>subastaplan1_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\administracion\subastaplan2.resx">
+      <DependentUpon>subastaplan2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\administracion\subastaplanl.resx">
+      <DependentUpon>subastaplanl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\subasta\planificacion\subastaplan1_4.resx">
       <DependentUpon>subastaplan1_4.cs</DependentUpon>
