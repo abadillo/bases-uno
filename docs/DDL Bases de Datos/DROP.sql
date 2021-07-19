@@ -1,38 +1,38 @@
-DROP TABLE clu_int;
+DROP TABLE JAGclu_int;
 
-DROP TABLE contacto;
+DROP TABLE JAGcontacto;
 
-DROP TABLE interes;
+DROP TABLE JAGinteres;
 
-DROP TABLE listado;
+DROP TABLE JAGlistado;
 
-DROP TABLE org_inv;
+DROP TABLE JAGorg_inv;
 
-DROP TABLE org_sub;
+DROP TABLE JAGorg_sub;
 
-DROP TABLE organizacion_caridad;
+DROP TABLE JAGorganizacion_caridad;
 
-DROP TABLE participante;
+DROP TABLE JAGparticipante;
 
-DROP TABLE subasta;
+DROP TABLE JAGsubasta;
 
-DROP TABLE dueno_historico;
+DROP TABLE JAGdueno_historico;
 
-DROP TABLE coleccionable;
+DROP TABLE JAGcoleccionable;
 
-DROP TABLE comic;
+DROP TABLE JAGcomic;
 
-DROP TABLE membresia;
+DROP TABLE JAGmembresia;
 
-DROP TABLE "local";
+DROP TABLE JAGlocal;
 
-DROP TABLE club;
+DROP TABLE JAGclub;
 
-DROP TABLE coleccionista;
+DROP TABLE JAGcoleccionista;
 
-DROP TABLE representante;
+DROP TABLE JAGrepresentante;
 
-DROP TABLE lugar;
+DROP TABLE JAGlugar;
 
 
 
