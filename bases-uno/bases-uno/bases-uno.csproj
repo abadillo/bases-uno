@@ -410,6 +410,12 @@
     <Compile Include="Views\UserControls\itemcoleccionista.Designer.cs">
       <DependentUpon>itemcoleccionista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\itemsubasta2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\itemsubasta2.Designer.cs">
+      <DependentUpon>itemsubasta2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\itemsubasta.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -757,6 +763,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemcoleccionista.resx">
       <DependentUpon>itemcoleccionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\itemsubasta2.resx">
+      <DependentUpon>itemsubasta2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemsubasta.resx">
       <DependentUpon>itemsubasta.cs</DependentUpon>

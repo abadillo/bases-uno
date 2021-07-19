@@ -174,6 +174,7 @@ namespace bases_uno.Views.UserControls.Submenus
             this.buttonListadoAdminSubasta.TabIndex = 13;
             this.buttonListadoAdminSubasta.Text = "Listado (Adminitracion)";
             this.buttonListadoAdminSubasta.UseVisualStyleBackColor = false;
+            this.buttonListadoAdminSubasta.Click += new System.EventHandler(this.buttonListadoAdminSubasta_Click);
             // 
             // buttonRegistroSubasta
             // 

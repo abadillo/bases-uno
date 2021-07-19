@@ -29,16 +29,25 @@ namespace bases_uno.Views
 
             InitializeComponent();
 			
-            label1.Text = "Listado: Subastas";
+            label1.Text = "Listado: Subastas Sin Cerrar";
+
+
 
             for (int i = 0; i < list.Count; i++)
             {
                 /// Console.WriteLine(list[i]);
 
-                itemsubasta item = new itemsubasta(list[i], parent);
-                item.Dock = DockStyle.Top;
+                Subasta subasta = list[i];
 
-                dipanel1.Controls.Add(item);
+                if (!subasta.Cerrado && !subasta.Cancelado)
+                {
+                    itemsubasta2 item = new itemsubasta2(subasta, parent);
+                    item.Dock = DockStyle.Top;
+
+                    dipanel1.Controls.Add(item);
+                }
+
+              
             }
 
 

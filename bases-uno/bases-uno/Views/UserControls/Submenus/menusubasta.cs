@@ -73,6 +73,9 @@ namespace bases_uno.Views.UserControls.Submenus
             ButtonEnable(buttonRegistroLocal, new localr(parent));
         }
 
-       
+        private void buttonListadoAdminSubasta_Click(object sender, EventArgs e)
+        {
+            ButtonEnable(buttonListadoAdminSubasta, new subastaadminl(parent));
+        }
     }
 }
