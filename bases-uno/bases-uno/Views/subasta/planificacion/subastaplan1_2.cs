@@ -29,7 +29,10 @@ namespace bases_uno.Views
         public bool flagCancelado = false;      // true if cancelado, false if no cancelado
         public bool flagPresencial = false;      // true if presencial, false if virtual
         public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
-        public bool flagCerrada = false;    
+        public bool flagCerrada = false;  
+
+        
+        
 
 
         public subastaplan1_2(index parent, Subasta subasta)
@@ -162,6 +165,14 @@ namespace bases_uno.Views
                         throw new Exception("Ya este club es un invitado");
 
                 }
+
+
+                if (altListCluOrg.Count > 0 && !flagBenefica)
+                {
+                    throw new Exception("Solo puede agregar un solo club organizador\n\nPueden haber mas de una si es benefica ");
+                }
+
+
 
                 string tipo = Validacion.ValidarCombo(comboBoxType);
 

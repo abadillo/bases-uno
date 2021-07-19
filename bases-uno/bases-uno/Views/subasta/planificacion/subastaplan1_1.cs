@@ -21,8 +21,8 @@ namespace bases_uno.Views
         public index parent;
         public Subasta subasta;
             
-        public List<OrganizacionCaridad> altListInt;                    // para los organizaciones ya del subasta
-        public List<OrganizacionCaridad> listInt = Read.OrganizacionesCaridad();   // para el combo de organizacion
+        public List<OrganizacionCaridad> altListOrg;                    // para los organizaciones ya del subasta
+        public List<OrganizacionCaridad> ListOrg = Read.OrganizacionesCaridad();   // para el combo de organizacion
 
 
         public bool flagCancelado = false;      // true if cancelado, false if no cancelado
@@ -44,13 +44,13 @@ namespace bases_uno.Views
 
             // para los organizaciones ya del subasta
 
-            altListInt = subasta.OrganizacionesCaridad();
+            altListOrg = subasta.OrganizacionesCaridad();
             
        
-            for (int i = 0; i < altListInt.Count; i++)
+            for (int i = 0; i < altListOrg.Count; i++)
             {
-                //Console.WriteLine(altListInt[i].ID);
-                miniitemorganizacion item = new miniitemorganizacion(altListInt[i], subasta, parent);
+                //Console.WriteLine(altListOrg[i].ID);
+                miniitemorganizacion item = new miniitemorganizacion(altListOrg[i], subasta, parent);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
@@ -59,9 +59,9 @@ namespace bases_uno.Views
 
             // para el combo de organizacion
 
-            for (int i = 0; i < listInt.Count; i++)
+            for (int i = 0; i < ListOrg.Count; i++)
             {
-                OrganizacionCaridad tmp = listInt[i];
+                OrganizacionCaridad tmp = ListOrg[i];
                 string item = tmp.ID + " " + tmp.Nombre;
 
                 comboBoxOrganizacion.Items.Add(item);
@@ -134,12 +134,14 @@ namespace bases_uno.Views
 
                 int porcentaje = int.Parse(Validacion.ValidarCombo(comboBoxPorcentaje));
 
-                for (int i = 0; i < altListInt.Count; i++)
+                for (int i = 0; i < altListOrg.Count; i++)
                 { 
-                    if (organizacion.ID == altListInt[i].ID)          
+                    if (organizacion.ID == altListOrg[i].ID)          
                         throw new Exception("Ya este organizacion esta en la lista");
                     
                 }
+
+                
 
                 subasta.AgregarOrganizacionCaridad(organizacion, porcentaje);
 
@@ -165,9 +167,9 @@ namespace bases_uno.Views
             var porcentajeRestante = 100;
 
 
-            for (int i = 0; i < altListInt.Count; i++)
+            for (int i = 0; i < altListOrg.Count; i++)
             {
-                OrganizacionCaridad tmp = altListInt[i];
+                OrganizacionCaridad tmp = altListOrg[i];
                 porcentajeRestante = porcentajeRestante - subasta.Porcentaje(tmp);
             }
 
