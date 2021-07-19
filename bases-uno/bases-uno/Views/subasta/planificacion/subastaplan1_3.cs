@@ -35,6 +35,7 @@ namespace bases_uno.Views
 
         public subastaplan1_3(index parent, Subasta subasta)
         {
+            Validacion.ControlSubastas();
             this.parent = parent;
             this.subasta = subasta;
 

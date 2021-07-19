@@ -20,6 +20,7 @@ namespace bases_uno.Views
 
         public subastar(  index parent )
         {
+            Validacion.ControlSubastas();
             this.parent = parent;
             InitializeComponent();
             label1.Text = "Registro Subasta";

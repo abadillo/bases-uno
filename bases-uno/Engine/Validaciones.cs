@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Engine.Classes;
 
 namespace Engine
 {
@@ -229,7 +230,18 @@ namespace Engine
 
         }
 
-
+        public static void ControlSubastas()
+        {
+            List<Subasta> subastas = Read.Subastas();
+            TimeSpan hora = new TimeSpan(DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+            foreach (Subasta subasta in subastas)
+            {
+                if (subasta.Fecha <= DateTime.Today && subasta.HoraCierre <= hora && !subasta.Cerrado)
+                {
+                    subasta.Cerrar();
+                }
+            }
+        }
 
         // porque no puedes ser como python :CCCCCCC
         public static bool EstaEnLista (Object obj, List<Object> listObj)
