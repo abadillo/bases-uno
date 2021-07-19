@@ -116,11 +116,11 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new subastaplan1_1(parent, subasta));
+           // parent.InsertForm(new subastaplan1_1(parent, subasta));
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 
-            parent.InsertForm(new subastaplan1_1(parent, subasta));
+            parent.InsertForm(new subastaadmin1_1(parent, subasta));
         }
 
         #endregion
