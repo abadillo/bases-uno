@@ -857,11 +857,17 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM JAG" +
-                        "(SELECT *, MAX(fecha_registro) FROM JAGdueno_historico " +
-                        "GROUP BY comic_id) " +
-                    "WHERE coleccionista_documento_identidad = @coleccionistaid";
+                string Query = "SELECT * " +
+                    "FROM JAGdueno_historico busqueda " +
+                    "JOIN ( " +
+                        "SELECT comic_id , MAX( fecha_registro ) AS fecha_registro " +
+                        "FROM JAGdueno_historico " +
+                        "WHERE comic_id IS NOT NULL AND coleccionista_documento_identidad = @coleccionistaid " +
+                        "GROUP by comic_id) aux " +
+                    "ON aux.comic_id = busqueda.comic_id AND aux.fecha_registro = busqueda.fecha_registro";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("coleccionistaid", coleccionista.ID);
 
                 connection.Reader = connection.Script.ExecuteReader();
 
@@ -887,11 +893,17 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM JAG" +
-                        "(SELECT *, MAX(fecha_registro) FROM JAGdueno_historico " +
-                        "GROUP BY coleccionable_id) " +
-                    "WHERE coleccionista_documento_identidad = @coleccionistaid";
+                string Query = "SELECT * " +
+                    "FROM JAGdueno_historico busqueda " +
+                    "JOIN ( " +
+                        "SELECT coleccionable_id , MAX( fecha_registro ) AS fecha_registro " +
+                        "FROM JAGdueno_historico " +
+                        "WHERE coleccionable_id IS NOT NULL AND coleccionista_documento_identidad = @coleccionistaid " +
+                        "GROUP by coleccionable_id) aux " +
+                    "ON aux.coleccionable_id = busqueda.coleccionable_id AND aux.fecha_registro = busqueda.fecha_registro";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
+
+                connection.Script.Parameters.AddWithValue("coleccionistaid", coleccionista.ID);
 
                 connection.Reader = connection.Script.ExecuteReader();
 

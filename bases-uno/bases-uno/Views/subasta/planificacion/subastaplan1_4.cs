@@ -142,7 +142,7 @@ namespace bases_uno.Views
         {
             try
             {
-                string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
+                string[] tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' ');
                 int DuenoID = int.Parse(tokens[0]);
 
                 Coleccionista coleccionista = Read.Coleccionista(DuenoID);
@@ -152,11 +152,8 @@ namespace bases_uno.Views
 
                 BorrarCombo(comboBoxObjeto);
 
-                for (int i = 0; i < listDueHis.Count; i++)
+                foreach(DuenoHistorico duenoHistorico in listDueHis)
                 {
-
-                    DuenoHistorico duenoHistorico = listDueHis[i];
-
                     if (duenoHistorico.ComicID != 0)
                     {
                         Comic comic = Read.Comic(duenoHistorico.ComicID);
