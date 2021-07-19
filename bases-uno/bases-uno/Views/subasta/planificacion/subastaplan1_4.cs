@@ -86,10 +86,12 @@ namespace bases_uno.Views
             #endregion
 
             List<Club> clubesOrg = subasta.Organizadores();
-            if (subasta.Caridad)
-            {
-                clubesOrg.AddRange(subasta.ClubesInvitados());
-            }
+
+            //if (subasta.Caridad)
+            //{
+            //    clubesOrg.AddRange(subasta.ClubesInvitados());
+            //}
+
             foreach (Club club in clubesOrg)
             {
                 List<Membresia> membresias = Read.Membresias(club);
@@ -98,12 +100,15 @@ namespace bases_uno.Views
                     listOrg.Add(Read.Coleccionista(membresia.ColeccionistaID));
                 }
             }
+            
 
             foreach (Coleccionista coleccionista in listOrg)
             {
                 string item = coleccionista.ID + " " + coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
                 comboBoxColeccionista.Items.Add(item);
             }
+
+
 
             if (flagBenefica)
             {
