@@ -20,19 +20,18 @@ namespace bases_uno.Views
         
         public index parent;
         public Subasta subasta;
-            
-        public List<Club> altListCluOrg;                    // para los clubes organizadores a la subasta
-        public List<Club> altListCluInv;                    // para los clubes invitados
-        public List<Club> listClu = Read.Clubes();      // para el combo de club
 
+        public List<Participante> listPar;
+        public List<Coleccionista> listOrg = new List<Coleccionista>();
 
         public bool flagCancelado = false;      // true if cancelado, false if no cancelado
         public bool flagPresencial = false;      // true if presencial, false if virtual
         public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
-        public bool flagCerrada = false;  
 
-        
-        
+        public List<Listado> listado = null;
+
+
+        public int orden = 0;
 
 
         public subastaadmin1_2(index parent, Subasta subasta)
@@ -45,54 +44,19 @@ namespace bases_uno.Views
             label1.Text = "Subasta: " + subasta.ID;
 
 
-            // para los clubes invitados a la subasta
-
-            altListCluOrg = subasta.Organizadores();
-
-            // para los clubes inivitados a la subasta
-
-            altListCluInv = subasta.ClubesInvitados();
+            listado = subasta.Listados();
 
 
-            for (int i = 0; i < altListCluOrg.Count; i++)
+            for (int i = 0; i < listado.Count; i++)
             {
-                // Console.WriteLine(altListCluOrg[i].ID);
-                miniitemclub item = new miniitemclub(altListCluOrg[i], subasta, parent, true);
-                item.Dock = DockStyle.Top;
-
-                dipanel3.Controls.Add(item);
-            }
-
-
-            for (int i = 0; i < altListCluInv.Count; i++)
-            {
-                // Console.WriteLine(altListCluInv[i].ID);
-                miniitemclub item = new miniitemclub(altListCluInv[i], subasta, parent, false);
+                miniitemlistado item = new miniitemlistado(listado[i], parent);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
+
+
             }
 
-
-            // para el combo de club
-
-            for (int i = 0; i < listClu.Count; i++)
-            {
-                Club tmp = listClu[i];
-                string item = tmp.ID + " " + tmp.Nombre;
-
-                comboBoxClub.Items.Add(item);
-            }
-
-            comboBoxType.Items.AddRange(new object[] {
-                "Organizador",
-                "Invitado"
-            });
-
-           
-            
-            
-            
             #region set flags
 
             if (subasta.Cancelado)
@@ -104,87 +68,228 @@ namespace bases_uno.Views
             if (subasta.Caridad)
                 flagBenefica = true;
 
-            if (subasta.Cerrado)
-                flagCerrada = true;
             #endregion
-
 
             #region use flags
 
+            if (flagBenefica == false || flagPresencial == false)
+            {
+                //DisableFunciones("Esta subasta no es de tipo benefica, por lo tanto no deberia ver ninguna organizacion asociada \nSi observa alguna arriba, algo salio mal");
+            }
+
             if (flagCancelado)
             {
-                DisableFunciones("Esta subasta fue cancelada, no puede agregar clubes \nSi observa alguna arriba, algo salio mal");
+                DisableFunciones("Esta subasta fue cancelada, no puede agregar objetos \nSi observa alguna arriba, algo salio mal");
             }
 
-            if (flagCerrada)
-            {
-                DisableFunciones("Esta subasta fue cerrada, no puede agregar ni modificar ningun atributo incluyendo organizaciones, clubes, objetos o partipantes");
-            }
+
             #endregion
 
+            List<Club> clubesOrg = subasta.Organizadores();
+            if (subasta.Caridad)
+            {
+                clubesOrg.AddRange(subasta.ClubesInvitados());
+            }
+            foreach (Club club in clubesOrg)
+            {
+                List<Membresia> membresias = Read.Membresias(club);
+                foreach (Membresia membresia in membresias)
+                {
+                    listOrg.Add(Read.Coleccionista(membresia.ColeccionistaID));
+                }
+            }
+
+            foreach (Coleccionista coleccionista in listOrg)
+            {
+                string item = coleccionista.ID + " " + coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
+                comboBoxObjeto.Items.Add(item);
+            }
+
+            if (flagBenefica)
+            {
+                listPar = subasta.Participantes();
+
+
+                foreach(Participante participante in listPar)
+                {
+                    Coleccionista coleccionista = participante.Coleccionista();
+
+                    string item = coleccionista.ID + " " + coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
+                    comboBoxColeccionista.Items.Add(item);
+
+                }
+            }
 
             Update();
-
-           
         }
 
         #region Funciones
 
         private void DisableFunciones(string mensaje)
         {
-            if (flagCancelado || flagCerrada)
-                iconButton1.Visible = false;
-
-
-            iconButton5.Visible = false;
-            comboBoxType.Items.Remove("Organizador");
-
             label11.Text = mensaje;
+            iconButton5.Visible = false;
+            btnanadir.Enabled = false;
             panelAlerta.Visible = true;
+        }
+
+        private void LlenarObjetos()
+        {
+            try
+            {
+                string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
+                int DuenoID = int.Parse(tokens[0]);
+
+                Coleccionista coleccionista = Read.Coleccionista(DuenoID);
+
+
+                List<DuenoHistorico> listDueHis = Read.ColeccionActual(coleccionista);
+
+
+
+                for (int i = 0; i < listDueHis.Count; i++)
+                {
+
+                    DuenoHistorico duenoHistorico = listDueHis[i];
+
+                    if (duenoHistorico.ComicID != 0)
+                    {
+                        Comic comic = Read.Comic(duenoHistorico.ComicID);
+
+                        string item = "Comic " + comic.ID + " " + comic.Title;
+                        comboBoxObjeto.Items.Add(item);
+                    }
+                    else
+                    {
+                        Coleccionable coleccionable = Read.Coleccionable(duenoHistorico.ColeccionableID);
+
+                        string item = "Coleccionable " + coleccionable.ID + " " + coleccionable.Nombre;
+                        comboBoxObjeto.Items.Add(item);
+
+                    }
+
+                }
+
+            }
+            catch (Exception)
+            {
+        
+                ////
+            }
+            
+        }
+
+        private void LlenarPrecio()
+        {
+
+            string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
+
+            string tipo = tokens[0];
+
+            int ColeccionistaID = int.Parse(tokens[0]);
+            Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
+
+            DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
+            float precio = duenoHistorico.PrecioDolares;
+
+            textBoxPrecio.Text = precio.ToString();
+
+            if (precio > 0 || flagBenefica)
+            {
+                textBoxPrecio.Enabled = false;
+            }
+          
+
+                
+        }
+
+        private DuenoHistorico BuscarHistorico( Coleccionista coleccionista, string tipo, int idObj )
+        {
+
+            List<DuenoHistorico> listDueHis = Read.ColeccionActual(coleccionista);
+            
+
+
+            for (int i = 0; i < listDueHis.Count; i++)
+            {
+                DuenoHistorico dH = listDueHis[i];
+
+                if (tipo == "Comic")
+                {
+                    int comicID = idObj;
+                    Comic comic = Read.Comic(comicID);
+
+                    if (dH.ComicID == comic.ID)
+                    {
+                        return dH;
+                    }
+                }
+                else
+                {
+                    int coleccionableID =  idObj;
+                    Coleccionable coleccionable = Read.Coleccionable(coleccionableID);
+
+                    if (dH.ColeccionableID == coleccionable.ID)
+                    {
+                        return dH;
+                    }
+                }
+
+                
+
+            }
+
+            return null;
         }
 
         private void Registrar()
         {
             try
             {
-                string[] tokens = Validacion.ValidarCombo(comboBoxClub).Split(' ');
-                int clubID = int.Parse(tokens[0]);
+                string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
 
-                Club club = Read.Club(clubID);
+                string tipo = tokens[0];
+
+                int ColeccionistaID = int.Parse(tokens[0]);
+                Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
 
 
-                for (int i = 0; i < altListCluOrg.Count; i++)
-                { 
-                    if (club.ID == altListCluOrg[i].ID)          
-                        throw new Exception("Ya este club es un organizador");
-                }
+                DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
 
-                for (int i = 0; i < altListCluInv.Count; i++)
+                //for (int i = 0; i < this.listado.Count; i++)
+                //   if (listado[i].DuenoHistoricoID == duenoHistorico.ID)
+                //       throw new Exception("Ya este objeto esta en la lista");
+
+
+                //validar esto
+                float precio = Validacion.ValidarFloat(textBoxPrecio,true);
+
+                
+                if (precio <= 0)
                 {
-                    if (club.ID == altListCluInv[i].ID)
-                        throw new Exception("Ya este club es un invitado");
-
+                    throw new Exception("Aqui no se subastan objetos de gratis");
                 }
 
-
-                if (altListCluOrg.Count > 0 && !flagBenefica)
+                if (flagBenefica && precio < duenoHistorico.PrecioDolares) 
                 {
-                    throw new Exception("Solo puede agregar un solo club organizador\n\nPueden haber mas de una si es benefica ");
+                    throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
+
                 }
 
 
+                Listado listado = new Listado(
+                    subasta,
+                    precio,
+                    duenoHistorico,
+                    subasta.SiguienteNroListado(),
+                    Validacion.ValidarInt(textBoxDuracion,true)
+              
+                ) ;
 
-                string tipo = Validacion.ValidarCombo(comboBoxType);
-
-                if (tipo == "Organizador") 
-                    subasta.AgregarOrganizador(club);
-
-                else 
-                    subasta.AgregarClubInvitado(club);
-
+                listado.Insert();
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                parent.InsertForm(new subastaadmin1_2(parent,subasta));
+                parent.InsertForm(new subastaadmin1_2(parent, subasta));
 
             }
             catch (ApplicationException aex)
@@ -199,24 +304,31 @@ namespace bases_uno.Views
 
         }
 
-       
-       
+
+     
+
         #endregion
 
         #region click botones normales
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new subastaadmin1_3(parent, subasta));
+            //parent.InsertForm(new comic2(parent, comic));
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 
-            parent.InsertForm(new subastaadmin1_1(parent, subasta));
+            parent.InsertForm(new subastaadmin1_2(parent, subasta));
         }
 
         #endregion
 
         #region click botones FontAwesome
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            panelAgregar.Visible = true;
+           
+        }
 
         private void btncancelar_Click_1(object sender, EventArgs e)
         {
@@ -227,20 +339,16 @@ namespace bases_uno.Views
         {
             Registrar();
         }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            panelAgregar.Visible = true;
-            comboBoxType.SelectedItem = "Invitado";
-        }
-
-        private void iconButton5_Click_1(object sender, EventArgs e)
-        {
-            panelAgregar.Visible = true;
-            comboBoxType.SelectedItem = "Organizador";
-        }
         #endregion
 
+        private void comboBoxColeccionista_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LlenarPrecio();
+        }
 
+        private void comboBoxColeccionista_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+            LlenarObjetos();
+        }
     }
 }

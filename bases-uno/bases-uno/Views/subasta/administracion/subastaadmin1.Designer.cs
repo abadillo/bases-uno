@@ -36,11 +36,6 @@ namespace bases_uno.Views
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonCancelarEvento = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btncancelar = new System.Windows.Forms.Button();
-            this.btnmodificar = new System.Windows.Forms.Button();
-            this.btneliminar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelOpcional = new System.Windows.Forms.Panel();
@@ -48,37 +43,29 @@ namespace bases_uno.Views
             this.panel6 = new System.Windows.Forms.Panel();
             this.comboBoxLocal = new System.Windows.Forms.ComboBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.checkBoxCancelado = new System.Windows.Forms.CheckBox();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.checkBoxCaridad = new System.Windows.Forms.CheckBox();
-            this.iconButton18 = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.textBoxID = new System.Windows.Forms.TextBox();
-            this.iconButton14 = new FontAwesome.Sharp.IconButton();
             this.label8 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBoxFecha = new System.Windows.Forms.TextBox();
-            this.iconButton16 = new FontAwesome.Sharp.IconButton();
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.textBoxHoraCierre = new System.Windows.Forms.TextBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.textBoxHoraInicio = new System.Windows.Forms.TextBox();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -91,7 +78,6 @@ namespace bases_uno.Views
             this.dipanel1.SuspendLayout();
             this.panelAlerta.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.panelOpcional.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -127,8 +113,6 @@ namespace bases_uno.Views
             this.dipanel1.AutoScroll = true;
             this.dipanel1.Controls.Add(this.panelAlerta);
             this.dipanel1.Controls.Add(this.tableLayoutPanel4);
-            this.dipanel1.Controls.Add(this.panel13);
-            this.dipanel1.Controls.Add(this.tableLayoutPanel1);
             this.dipanel1.Controls.Add(this.label14);
             this.dipanel1.Controls.Add(this.panel5);
             this.dipanel1.Controls.Add(this.panelOpcional);
@@ -181,7 +165,7 @@ namespace bases_uno.Views
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.Controls.Add(this.buttonCancelarEvento, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 474);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 411);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -202,86 +186,10 @@ namespace bases_uno.Views
             this.buttonCancelarEvento.Name = "buttonCancelarEvento";
             this.buttonCancelarEvento.Size = new System.Drawing.Size(810, 34);
             this.buttonCancelarEvento.TabIndex = 0;
-            this.buttonCancelarEvento.Text = "CANCELAR EVENTO";
+            this.buttonCancelarEvento.Text = "CERRAR EVENTO";
             this.buttonCancelarEvento.UseVisualStyleBackColor = false;
+            this.buttonCancelarEvento.Visible = false;
             this.buttonCancelarEvento.Click += new System.EventHandler(this.buttonCancelarEvento_Click);
-            // 
-            // panel13
-            // 
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 451);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(816, 23);
-            this.panel13.TabIndex = 61;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.btncancelar, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnmodificar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btneliminar, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 411);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(816, 40);
-            this.tableLayoutPanel1.TabIndex = 60;
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.BackColor = System.Drawing.Color.LightGray;
-            this.btncancelar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btncancelar.FlatAppearance.BorderSize = 0;
-            this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncancelar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelar.ForeColor = System.Drawing.Color.Black;
-            this.btncancelar.Location = new System.Drawing.Point(275, 3);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(266, 34);
-            this.btncancelar.TabIndex = 2;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.UseVisualStyleBackColor = false;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click_1);
-            // 
-            // btnmodificar
-            // 
-            this.btnmodificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(103)))), ((int)(((byte)(135)))));
-            this.btnmodificar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnmodificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnmodificar.FlatAppearance.BorderSize = 0;
-            this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmodificar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodificar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnmodificar.Location = new System.Drawing.Point(3, 3);
-            this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(266, 34);
-            this.btnmodificar.TabIndex = 1;
-            this.btnmodificar.Text = "Modificar";
-            this.btnmodificar.UseVisualStyleBackColor = false;
-            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click_1);
-            // 
-            // btneliminar
-            // 
-            this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.btneliminar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btneliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btneliminar.FlatAppearance.BorderSize = 0;
-            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btneliminar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.ForeColor = System.Drawing.Color.LightGray;
-            this.btneliminar.Location = new System.Drawing.Point(547, 3);
-            this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(266, 34);
-            this.btneliminar.TabIndex = 0;
-            this.btneliminar.Text = "ELIMINAR";
-            this.btneliminar.UseVisualStyleBackColor = false;
-            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click_1);
             // 
             // label14
             // 
@@ -293,6 +201,7 @@ namespace bases_uno.Views
             this.label14.Size = new System.Drawing.Size(816, 40);
             this.label14.TabIndex = 59;
             this.label14.Text = "Opciones";
+            this.label14.Visible = false;
             // 
             // panel5
             // 
@@ -352,34 +261,12 @@ namespace bases_uno.Views
             // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.iconButton5);
             this.panel16.Controls.Add(this.label18);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Location = new System.Drawing.Point(0, 0);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(816, 40);
             this.panel16.TabIndex = 50;
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton5.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 35;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton5.Location = new System.Drawing.Point(779, 0);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(37, 40);
-            this.iconButton5.TabIndex = 39;
-            this.iconButton5.UseVisualStyleBackColor = false;
-            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // label18
             // 
@@ -426,7 +313,6 @@ namespace bases_uno.Views
             // panel11
             // 
             this.panel11.Controls.Add(this.checkBoxCancelado);
-            this.panel11.Controls.Add(this.iconButton3);
             this.panel11.Controls.Add(this.label3);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(3, 156);
@@ -441,7 +327,7 @@ namespace bases_uno.Views
             this.checkBoxCancelado.Enabled = false;
             this.checkBoxCancelado.FlatAppearance.BorderSize = 5;
             this.checkBoxCancelado.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCancelado.Location = new System.Drawing.Point(315, 0);
+            this.checkBoxCancelado.Location = new System.Drawing.Point(352, 0);
             this.checkBoxCancelado.Margin = new System.Windows.Forms.Padding(0);
             this.checkBoxCancelado.Name = "checkBoxCancelado";
             this.checkBoxCancelado.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -450,28 +336,6 @@ namespace bases_uno.Views
             this.checkBoxCancelado.Tag = "cancelado";
             this.checkBoxCancelado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxCancelado.UseVisualStyleBackColor = true;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton3.Enabled = false;
-            this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 35;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton3.Location = new System.Drawing.Point(365, 0);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(37, 46);
-            this.iconButton3.TabIndex = 15;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // label3
             // 
@@ -487,7 +351,6 @@ namespace bases_uno.Views
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.iconButton2);
             this.panel4.Controls.Add(this.comboBoxType);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -496,34 +359,14 @@ namespace bases_uno.Views
             this.panel4.Size = new System.Drawing.Size(402, 45);
             this.panel4.TabIndex = 13;
             // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 35;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton2.Location = new System.Drawing.Point(365, 0);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(37, 45);
-            this.iconButton2.TabIndex = 17;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
             // comboBoxType
             // 
             this.comboBoxType.BackColor = System.Drawing.Color.LightGray;
+            this.comboBoxType.Dock = System.Windows.Forms.DockStyle.Right;
             this.comboBoxType.Enabled = false;
             this.comboBoxType.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(111, 0);
+            this.comboBoxType.Location = new System.Drawing.Point(148, 0);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(254, 23);
             this.comboBoxType.TabIndex = 16;
@@ -543,7 +386,6 @@ namespace bases_uno.Views
             // panel12
             // 
             this.panel12.Controls.Add(this.checkBoxCaridad);
-            this.panel12.Controls.Add(this.iconButton18);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(411, 105);
@@ -558,7 +400,7 @@ namespace bases_uno.Views
             this.checkBoxCaridad.Enabled = false;
             this.checkBoxCaridad.FlatAppearance.BorderSize = 5;
             this.checkBoxCaridad.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCaridad.Location = new System.Drawing.Point(315, 0);
+            this.checkBoxCaridad.Location = new System.Drawing.Point(352, 0);
             this.checkBoxCaridad.Margin = new System.Windows.Forms.Padding(0);
             this.checkBoxCaridad.Name = "checkBoxCaridad";
             this.checkBoxCaridad.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -567,27 +409,6 @@ namespace bases_uno.Views
             this.checkBoxCaridad.Tag = "caridad";
             this.checkBoxCaridad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxCaridad.UseVisualStyleBackColor = true;
-            // 
-            // iconButton18
-            // 
-            this.iconButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton18.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton18.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton18.FlatAppearance.BorderSize = 0;
-            this.iconButton18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton18.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton18.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton18.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton18.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton18.IconSize = 35;
-            this.iconButton18.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton18.Location = new System.Drawing.Point(365, 0);
-            this.iconButton18.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton18.Name = "iconButton18";
-            this.iconButton18.Size = new System.Drawing.Size(37, 45);
-            this.iconButton18.TabIndex = 15;
-            this.iconButton18.UseVisualStyleBackColor = false;
-            this.iconButton18.Click += new System.EventHandler(this.iconButton18_Click);
             // 
             // label12
             // 
@@ -604,7 +425,6 @@ namespace bases_uno.Views
             // panel8
             // 
             this.panel8.Controls.Add(this.textBoxID);
-            this.panel8.Controls.Add(this.iconButton14);
             this.panel8.Controls.Add(this.label8);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(3, 3);
@@ -619,36 +439,14 @@ namespace bases_uno.Views
             this.textBoxID.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBoxID.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxID.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxID.Location = new System.Drawing.Point(150, 0);
+            this.textBoxID.Location = new System.Drawing.Point(148, 0);
             this.textBoxID.MaxLength = 50;
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(215, 23);
+            this.textBoxID.Size = new System.Drawing.Size(254, 23);
             this.textBoxID.TabIndex = 16;
             this.textBoxID.Tag = "id";
             this.textBoxID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // iconButton14
-            // 
-            this.iconButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton14.Enabled = false;
-            this.iconButton14.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton14.FlatAppearance.BorderSize = 0;
-            this.iconButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton14.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton14.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton14.IconSize = 35;
-            this.iconButton14.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton14.Location = new System.Drawing.Point(365, 0);
-            this.iconButton14.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton14.Name = "iconButton14";
-            this.iconButton14.Size = new System.Drawing.Size(37, 45);
-            this.iconButton14.TabIndex = 15;
-            this.iconButton14.UseVisualStyleBackColor = false;
-            this.iconButton14.Click += new System.EventHandler(this.iconButton14_Click);
             // 
             // label8
             // 
@@ -665,7 +463,6 @@ namespace bases_uno.Views
             // panel10
             // 
             this.panel10.Controls.Add(this.textBoxFecha);
-            this.panel10.Controls.Add(this.iconButton16);
             this.panel10.Controls.Add(this.label10);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(411, 3);
@@ -684,31 +481,10 @@ namespace bases_uno.Views
             this.textBoxFecha.MaxLength = 50;
             this.textBoxFecha.Name = "textBoxFecha";
             this.textBoxFecha.ReadOnly = true;
-            this.textBoxFecha.Size = new System.Drawing.Size(307, 23);
+            this.textBoxFecha.Size = new System.Drawing.Size(344, 23);
             this.textBoxFecha.TabIndex = 16;
             this.textBoxFecha.Tag = "fecha ";
             this.textBoxFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // iconButton16
-            // 
-            this.iconButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton16.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton16.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton16.FlatAppearance.BorderSize = 0;
-            this.iconButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton16.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton16.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton16.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton16.IconSize = 35;
-            this.iconButton16.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton16.Location = new System.Drawing.Point(365, 0);
-            this.iconButton16.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton16.Name = "iconButton16";
-            this.iconButton16.Size = new System.Drawing.Size(37, 45);
-            this.iconButton16.TabIndex = 15;
-            this.iconButton16.UseVisualStyleBackColor = false;
-            this.iconButton16.Click += new System.EventHandler(this.iconButton16_Click);
             // 
             // label10
             // 
@@ -725,7 +501,6 @@ namespace bases_uno.Views
             // panel7
             // 
             this.panel7.Controls.Add(this.textBoxHoraCierre);
-            this.panel7.Controls.Add(this.iconButton1);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(411, 54);
@@ -740,35 +515,14 @@ namespace bases_uno.Views
             this.textBoxHoraCierre.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBoxHoraCierre.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxHoraCierre.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxHoraCierre.Location = new System.Drawing.Point(150, 0);
+            this.textBoxHoraCierre.Location = new System.Drawing.Point(151, 0);
             this.textBoxHoraCierre.MaxLength = 50;
             this.textBoxHoraCierre.Name = "textBoxHoraCierre";
             this.textBoxHoraCierre.ReadOnly = true;
-            this.textBoxHoraCierre.Size = new System.Drawing.Size(215, 23);
+            this.textBoxHoraCierre.Size = new System.Drawing.Size(251, 23);
             this.textBoxHoraCierre.TabIndex = 16;
             this.textBoxHoraCierre.Tag = "hora cierre";
             this.textBoxHoraCierre.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.Location = new System.Drawing.Point(365, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(37, 45);
-            this.iconButton1.TabIndex = 15;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // label5
             // 
@@ -785,7 +539,6 @@ namespace bases_uno.Views
             // panel9
             // 
             this.panel9.Controls.Add(this.textBoxHoraInicio);
-            this.panel9.Controls.Add(this.iconButton4);
             this.panel9.Controls.Add(this.label6);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(3, 54);
@@ -800,35 +553,14 @@ namespace bases_uno.Views
             this.textBoxHoraInicio.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBoxHoraInicio.Font = new System.Drawing.Font("Roboto", 14F);
             this.textBoxHoraInicio.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxHoraInicio.Location = new System.Drawing.Point(150, 0);
+            this.textBoxHoraInicio.Location = new System.Drawing.Point(148, 0);
             this.textBoxHoraInicio.MaxLength = 50;
             this.textBoxHoraInicio.Name = "textBoxHoraInicio";
             this.textBoxHoraInicio.ReadOnly = true;
-            this.textBoxHoraInicio.Size = new System.Drawing.Size(215, 23);
+            this.textBoxHoraInicio.Size = new System.Drawing.Size(254, 23);
             this.textBoxHoraInicio.TabIndex = 16;
             this.textBoxHoraInicio.Tag = "hora inicio";
             this.textBoxHoraInicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(46)))), ((int)(((byte)(58)))));
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Roboto", 6F);
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.PenSquare;
-            this.iconButton4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(81)))), ((int)(((byte)(94)))));
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 35;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton4.Location = new System.Drawing.Point(365, 0);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(37, 45);
-            this.iconButton4.TabIndex = 15;
-            this.iconButton4.UseVisualStyleBackColor = false;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // label6
             // 
@@ -941,7 +673,6 @@ namespace bases_uno.Views
             this.dipanel1.ResumeLayout(false);
             this.panelAlerta.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.panelOpcional.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -982,47 +713,34 @@ namespace bases_uno.Views
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox textBoxID;
-        private FontAwesome.Sharp.IconButton iconButton14;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox textBoxFecha;
-        private FontAwesome.Sharp.IconButton iconButton16;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panelOpcional;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ComboBox comboBoxLocal;
         private System.Windows.Forms.Panel panel16;
-        private FontAwesome.Sharp.IconButton iconButton5;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox textBoxHoraInicio;
-        private FontAwesome.Sharp.IconButton iconButton4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox textBoxHoraCierre;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel12;
-        private FontAwesome.Sharp.IconButton iconButton18;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btncancelar;
-        private System.Windows.Forms.Button btnmodificar;
-        private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Panel panel11;
-        private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button buttonCancelarEvento;
-        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.CheckBox checkBoxCaridad;
         private System.Windows.Forms.CheckBox checkBoxCancelado;
         private System.Windows.Forms.Panel panelAlerta;

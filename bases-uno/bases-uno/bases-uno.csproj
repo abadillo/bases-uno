@@ -314,29 +314,11 @@
     <Compile Include="Views\subasta\administracion\subastaadmin1.Designer.cs">
       <DependentUpon>subastaadmin1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\subasta\administracion\subastaadmin1_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\subasta\administracion\subastaadmin1_1.Designer.cs">
-      <DependentUpon>subastaadmin1_1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\subasta\administracion\subastaadmin1_2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\subasta\administracion\subastaadmin1_2.Designer.cs">
       <DependentUpon>subastaadmin1_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\subasta\administracion\subastaadmin1_3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\subasta\administracion\subastaadmin1_3.Designer.cs">
-      <DependentUpon>subastaadmin1_3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\subasta\administracion\subastaadmin1_4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\subasta\administracion\subastaadmin1_4.Designer.cs">
-      <DependentUpon>subastaadmin1_4.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\subasta\administracion\subastaadmin2.cs">
       <SubType>Form</SubType>
@@ -349,6 +331,12 @@
     </Compile>
     <Compile Include="Views\subasta\administracion\subastaadminl.Designer.cs">
       <DependentUpon>subastaadminl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaadmin1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\subasta\administracion\subastaadmin1_1.Designer.cs">
+      <DependentUpon>subastaadmin1_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\subasta\planificacion\subastaplan1_4.cs">
       <SubType>Form</SubType>
@@ -421,6 +409,12 @@
     </Compile>
     <Compile Include="Views\UserControls\itemsubasta.Designer.cs">
       <DependentUpon>itemsubasta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemlistado2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\miniitemlistado2.Designer.cs">
+      <DependentUpon>miniitemlistado2.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\miniitemlistado.cs">
       <SubType>UserControl</SubType>
@@ -716,23 +710,17 @@
     <EmbeddedResource Include="Views\subasta\administracion\subastaadmin1.resx">
       <DependentUpon>subastaadmin1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\subasta\administracion\subastaadmin1_1.resx">
-      <DependentUpon>subastaadmin1_1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\subasta\administracion\subastaadmin1_2.resx">
       <DependentUpon>subastaadmin1_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\subasta\administracion\subastaadmin1_3.resx">
-      <DependentUpon>subastaadmin1_3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\subasta\administracion\subastaadmin1_4.resx">
-      <DependentUpon>subastaadmin1_4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\subasta\administracion\subastaadmin2.resx">
       <DependentUpon>subastaadmin2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\subasta\administracion\subastaadminl.resx">
       <DependentUpon>subastaadminl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\subasta\administracion\subastaadmin1_1.resx">
+      <DependentUpon>subastaadmin1_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\subasta\planificacion\subastaplan1_4.resx">
       <DependentUpon>subastaplan1_4.cs</DependentUpon>
@@ -769,6 +757,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\itemsubasta.resx">
       <DependentUpon>itemsubasta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\miniitemlistado2.resx">
+      <DependentUpon>miniitemlistado2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\miniitemlistado.resx">
       <DependentUpon>miniitemlistado.cs</DependentUpon>

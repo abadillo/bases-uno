@@ -102,7 +102,7 @@ namespace bases_uno.Views
             foreach (Coleccionista coleccionista in listOrg)
             {
                 string item = coleccionista.ID + " " + coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
-                comboBoxObjeto.Items.Add(item);
+                comboBoxColeccionista.Items.Add(item);
             }
 
             if (flagBenefica)
@@ -145,7 +145,7 @@ namespace bases_uno.Views
 
                 List<DuenoHistorico> listDueHis = Read.ColeccionActual(coleccionista);
 
-
+                BorrarCombo(comboBoxObjeto);
 
                 for (int i = 0; i < listDueHis.Count; i++)
                 {
@@ -179,6 +179,22 @@ namespace bases_uno.Views
             
         }
 
+        private void BorrarCombo(ComboBox combo)
+        {
+            try
+            {
+
+                combo.Items.Clear();
+            }
+            catch (Exception)
+            {
+
+                //throw;
+
+
+            }
+        }
+
         private void LlenarPrecio()
         {
 
@@ -208,7 +224,6 @@ namespace bases_uno.Views
 
             List<DuenoHistorico> listDueHis = Read.ColeccionActual(coleccionista);
             
-
 
             for (int i = 0; i < listDueHis.Count; i++)
             {

@@ -101,6 +101,11 @@ namespace bases_uno.Views
                
                 DisableFunciones("Esta subasta fue cerrada, no puede agregar ni modificar ningun atributo incluyendo organizaciones, clubes, objetos o partipantes");
             }
+            if (flagCancelado)
+            {
+
+                DisableFunciones("Esta subasta fue cancelada, no puede agregar ni modificar ningun atributo incluyendo organizaciones, clubes, objetos o partipantes");
+            }
 
             #endregion
 

@@ -644,7 +644,10 @@ namespace Engine.Classes
                 OpenConnection();
 
                 string Query = "DELETE FROM org_inv " +
-                    "WHERE subasta_id = @id AND club_id_inv = @club";
+                    "WHERE subasta_id = @id AND club_id_inv = @club; " +
+
+                    "DELETE FROM participante WHERE subasta_id = @id AND MEMBRESIA_CLUB_id = @club";
+
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);

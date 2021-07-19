@@ -117,19 +117,6 @@ namespace bases_uno.Views
             panelAlerta.Visible = true;
 
 
-            iconButton5.Enabled = false;
-            iconButton1.Enabled = false;
-            iconButton14.Enabled = false;
-            iconButton16.Enabled = false;
-            iconButton18.Enabled = false;
-            iconButton2.Enabled = false;
-            iconButton4.Enabled = false;
-            iconButton3.Enabled = false;
-            buttonCancelarEvento.Enabled = false;
-            btncancelar.Enabled = false;
-            btneliminar.Enabled = false;
-            btnmodificar.Enabled = false;
-            tableLayoutPanel1.Visible = false;
             label14.Visible = false;
             tableLayoutPanel4.Visible = false;
 
@@ -324,38 +311,7 @@ namespace bases_uno.Views
             // id no se modifica
         }
 
-        private void iconButton16_Click(object sender, EventArgs e)
-        {
-            Acciones.EnableInput(textBoxFecha, iconButton16);
-        }
-
-       
-
-       
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            Acciones.EnableInput(textBoxHoraInicio, iconButton4);
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            Acciones.EnableInput(textBoxHoraCierre, iconButton1);
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            Acciones.EnableCombo(comboBoxType, iconButton2);
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            Acciones.EnableCombo(comboBoxLocal, iconButton5);
-        }
-
-        private void iconButton18_Click(object sender, EventArgs e)
-        {
-            Acciones.EnableCheck(checkBoxCaridad, iconButton18);
-        }
+      
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
