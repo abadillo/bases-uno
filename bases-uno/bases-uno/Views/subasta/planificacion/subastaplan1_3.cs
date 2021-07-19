@@ -202,7 +202,7 @@ namespace bases_uno.Views
 
         private void btnadelante_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new subastaplan1_3(parent, subasta));
+            parent.InsertForm(new subastaplan1_4(parent, subasta));
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 

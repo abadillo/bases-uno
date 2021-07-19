@@ -157,7 +157,7 @@ namespace Engine.Classes
 
                 string Query = "UPDATE subasta SET fecha = @fecha, hora_inicio = @horainicio, " +
                     "hora_cierre = @horacierre, tipo = @tipo, caridad = @caridad, cancelado = @cancelado, " +
-                    "local_id = @localid, cerraco = @cerrado " +
+                    "local_id = @localid, cerrado = @cerrado " +
                     "WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
