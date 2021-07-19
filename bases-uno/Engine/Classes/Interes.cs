@@ -43,7 +43,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM interes WHERE id = @id";
+                string Query = "DELETE FROM JAGinteres WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -64,7 +64,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO interes (nombre";
+                string Query = "INSERT INTO JAGinteres (nombre";
                 if (!(Descripcion == null))
                 {
                     Query += ", descripcion";
@@ -100,7 +100,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE interes SET nombre = @nombre";
+                string Query = "UPDATE JAGinteres SET nombre = @nombre";
                 if (!(Descripcion == null))
                 {
                     Query += ", descripcion = @descripcion";

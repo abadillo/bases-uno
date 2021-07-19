@@ -43,7 +43,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM coleccionable WHERE id = @id";
+                string Query = "DELETE FROM JAGcoleccionable WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -64,7 +64,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO coleccionable (nombre, descripcion_detallada) " +
+                string Query = "INSERT INTO JAGcoleccionable (nombre, descripcion_detallada) " +
                     "VALUES (@nombre, @descripcion) RETURNING id";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -90,7 +90,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE coleccionable SET nombre = @nombre, descripcion_detallada = @descripcion" +
+                string Query = "UPDATE JAGcoleccionable SET nombre = @nombre, descripcion_detallada = @descripcion" +
                         " WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 

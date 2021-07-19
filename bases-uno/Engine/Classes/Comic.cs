@@ -64,7 +64,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM comic WHERE id = @id";
+                string Query = "DELETE FROM JAGcomic WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -85,7 +85,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO comic (titulo, numero, fecha_publicacion, color, sinopsis, paginas, cubierta, editor";
+                string Query = "INSERT INTO JAGcomic (titulo, numero, fecha_publicacion, color, sinopsis, paginas, cubierta, editor";
                 if (!(Volume == 0))
                 {
                     Query += ", volumen";
@@ -143,14 +143,14 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE comic SET otherData = @otherData " +
+                string Query = "UPDATE JAGcomic SET otherData = @otherData " +
                         "WHERE id = @id";
                 if (Volume == 0)
                 {
                     
                     if (PublicationPrice == 0)
                     {
-                        Query = "UPDATE comic SET titulo = @titulo, numero = @numero, fecha_publicacion = @fecha_publicacion, " +
+                        Query = "UPDATE JAGcomic SET titulo = @titulo, numero = @numero, fecha_publicacion = @fecha_publicacion, " +
                             "color = @color, sinopsis = @sinopsis, paginas = @paginas, cubierta = @cubierta, " +
                             "editor = @editor " +
                             "WHERE id = @id";
@@ -168,7 +168,7 @@ namespace Engine.Classes
                     }
                     else
                     {
-                        Query = "UPDATE comic SET titulo = @titulo, numero = @numero, fecha_publicacion = @fecha_publicacion, " +
+                        Query = "UPDATE JAGcomic SET titulo = @titulo, numero = @numero, fecha_publicacion = @fecha_publicacion, " +
                             "precio_publicacion = @precio_publicacion, color = @color, sinopsis = @sinopsis, paginas = @paginas, " +
                             "cubierta = @cubierta, editor = @editor " +
                             "WHERE id = @id";
@@ -188,7 +188,7 @@ namespace Engine.Classes
                 }
                 else if (PublicationPrice == 0)
                 {
-                    Query = "UPDATE comic SET titulo = @titulo, volumen = @volumen, numero = @numero, " +
+                    Query = "UPDATE JAGcomic SET titulo = @titulo, volumen = @volumen, numero = @numero, " +
                         "fecha_publicacion = @fecha_publicacion, color = @color, sinopsis = @sinopsis, paginas = @paginas, " +
                         "cubierta = @cubierta, editor = @editor " +
                         "WHERE id = @id";
@@ -207,7 +207,7 @@ namespace Engine.Classes
                 }
                 else
                 {
-                    Query = "UPDATE comic SET titulo = @titulo, volumen = @volumen, numero = @numero, " +
+                    Query = "UPDATE JAGcomic SET titulo = @titulo, volumen = @volumen, numero = @numero, " +
                         "fecha_publicacion = @fecha_publicacion, precio_publicacion = @precio_publicacion, color = @color, " +
                         "sinopsis = @sinopsis, paginas = @paginas, cubierta = @cubierta, editor = @editor " +
                         "WHERE id = @id";

@@ -62,7 +62,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM membresia WHERE fecha_ingreso = @fechaingreso AND club_id = @clubid AND " +
+                string Query = "DELETE FROM JAGmembresia WHERE fecha_ingreso = @fechaingreso AND club_id = @clubid AND " +
                     "coleccionista_documento_identidad = @coleccionistaid";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -86,7 +86,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "INSERT INTO membresia (fecha_ingreso, club_id, coleccionista_documento_identidad";
+                string Query = "INSERT INTO JAGmembresia (fecha_ingreso, club_id, coleccionista_documento_identidad";
                 if (!(FechaRetiro == null))
                 {
                     Query += ", fecha_retiro";
@@ -148,7 +148,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE membresia SET ";
+                string Query = "UPDATE JAGmembresia SET ";
                 if (!(FechaRetiro == null))
                 {
                     Query += "fecha_retiro = @fecharetiro ";

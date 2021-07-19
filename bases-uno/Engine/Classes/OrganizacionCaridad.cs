@@ -43,7 +43,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM organizacion_caridad WHERE id = @id";
+                string Query = "DELETE FROM JAGorganizacion_caridad WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -64,7 +64,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query2 = "INSERT INTO organizacion_caridad (nombre, mision) " +
+                string Query2 = "INSERT INTO JAGorganizacion_caridad (nombre, mision) " +
                     "VALUES (@nombre, @mision) RETURNING id";
                 Script = new NpgsqlCommand(Query2, Connection);
 
@@ -90,7 +90,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE organizacion_caridad " +
+                string Query = "UPDATE JAGorganizacion_caridad " +
                     "SET nombre = @nombre, mision = @mision " +
                     "WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);

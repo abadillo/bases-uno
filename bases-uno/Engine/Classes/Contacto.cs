@@ -49,7 +49,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM contacto WHERE id = @id AND club_id = @clubid";
+                string Query = "DELETE FROM JAGcontacto WHERE id = @id AND club_id = @clubid";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -71,7 +71,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO contacto (";
+                string Query = "INSERT INTO JAGcontacto (";
                 if (!(Email == null))
                 {
                     Query += "usuario_email, ";
@@ -123,7 +123,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE contacto SET plataforma = @plataforma";
+                string Query = "UPDATE JAGcontacto SET plataforma = @plataforma";
                 if (!(Email == null))
                 {
                     Query += ", usuario_email = @email";

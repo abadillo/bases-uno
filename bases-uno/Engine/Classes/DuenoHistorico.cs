@@ -80,7 +80,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM dueno_historico WHERE coleccionista_documento_identidad = @coleccionistaid AND fecha_registro = @fecha AND id = @id";
+                string Query = "DELETE FROM JAGdueno_historico WHERE coleccionista_documento_identidad = @coleccionistaid AND fecha_registro = @fecha AND id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -103,7 +103,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO dueno_historico (fecha_registro, coleccionista_documento_identidad, precio_dolar";
+                string Query = "INSERT INTO JAGdueno_historico (fecha_registro, coleccionista_documento_identidad, precio_dolar";
                 if (!(Significado == null))
                 {
                     Query += ", significado";
@@ -168,7 +168,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE dueno_historico SET ";
+                string Query = "UPDATE JAGdueno_historico SET ";
                 if (!(PrecioDolares == 0))
                 {
                     Query += "precio_dolar = @precio";

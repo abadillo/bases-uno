@@ -53,7 +53,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM participante WHERE id_inscripcion = @idinscripcion AND subasta_id = @subastaid";
+                string Query = "DELETE FROM JAGparticipante WHERE id_inscripcion = @idinscripcion AND subasta_id = @subastaid";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("idinscripcion", IDInscripcion);
@@ -75,7 +75,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "INSERT INTO participante (id_inscripcion, subasta_id, " +
+                string Query = "INSERT INTO JAGparticipante (id_inscripcion, subasta_id, " +
                     "membresia_coleccionista_documento_identidad, membresia_club_id, membresia_fecha_ingreso, " +
                     "autorizado) " +
                     "VALUES (@idinscripcion, @subastaid, @membresiaid, @membresiaclub, @membresiafecha, @autorizado)";
@@ -104,7 +104,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE participante " +
+                string Query = "UPDATE JAGparticipante " +
                     "SET membresia_coleccionista_documento_identidad = @membresiaid, " +
                     "membresia_club_id = @membresiaclub, membresia_fecha_ingreso = @membresiafecha, " +
                     "autorizado = @autorizado" +

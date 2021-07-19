@@ -36,7 +36,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM representante WHERE documento_identidad = @id";
+                string Query = "DELETE FROM JAGrepresentante WHERE documento_identidad = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -57,7 +57,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "INSERT INTO representante (documento_identidad, nombre, apellido, fecha_nacimiento) " +
+                string Query = "INSERT INTO JAGrepresentante (documento_identidad, nombre, apellido, fecha_nacimiento) " +
                     "VALUES (@id, @nombre, @apellido, @fecha)";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -82,7 +82,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE representante SET nombre = @nombre, apellido = @apellido, " +
+                string Query = "UPDATE JAGrepresentante SET nombre = @nombre, apellido = @apellido, " +
                     "fecha_nacimiento = @fecha " +
                     "WHERE documento_identidad = @id";
                 Script = new NpgsqlCommand(Query, Connection);

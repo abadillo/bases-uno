@@ -91,7 +91,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM subasta WHERE id = @id";
+                string Query = "DELETE FROM JAGsubasta WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -112,7 +112,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO subasta (fecha, hora_inicio, hora_cierre, tipo, caridad, " +
+                string Query = "INSERT INTO JAGsubasta (fecha, hora_inicio, hora_cierre, tipo, caridad, " +
                     "cancelado, local_id, cerrado) " +
                     "VALUES (@fecha, @horainicio, @horacierre, @tipo, @caridad, @cancelado, @localid, @cerrado) " +
                     "RETURNING id";
@@ -155,7 +155,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE subasta SET fecha = @fecha, hora_inicio = @horainicio, " +
+                string Query = "UPDATE JAGsubasta SET fecha = @fecha, hora_inicio = @horainicio, " +
                     "hora_cierre = @horacierre, tipo = @tipo, caridad = @caridad, cancelado = @cancelado, " +
                     "local_id = @localid, cerrado = @cerrado " +
                     "WHERE id = @id";
@@ -200,7 +200,7 @@ namespace Engine.Classes
                 {
                     OpenConnection();
 
-                    string Query = "INSERT INTO org_sub (subasta_id, organizacion_caridad_id, porcentaje) " +
+                    string Query = "INSERT INTO JAGorg_sub (subasta_id, organizacion_caridad_id, porcentaje) " +
                         "VALUES (@subasta, @organizacion, @porcentaje)";
                     Script = new NpgsqlCommand(Query, Connection);
 
@@ -225,7 +225,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM org_sub " +
+                string Query = "DELETE FROM JAGorg_sub " +
                     "WHERE subasta_id = @subasta AND organizacion_caridad_id = @organizacion";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -265,7 +265,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE org_sub SET monto_recibido = @monto " +
+                string Query = "UPDATE JAGorg_sub SET monto_recibido = @monto " +
                     "WHERE subasta_id = @subasta AND organizacion_caridad_id = @organizacion";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -300,7 +300,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT monto_recibido FROM org_sub " +
+                string Query = "SELECT monto_recibido FROM JAGorg_sub " +
                     "WHERE subasta_id = @subasta AND organizacion_caridad_id = @organizacion";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -345,7 +345,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT organizacion_caridad_id FROM org_sub where subasta_id = @id";
+                string Query = "SELECT organizacion_caridad_id FROM JAGorg_sub where subasta_id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -384,7 +384,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT porcentaje FROM org_sub " +
+                string Query = "SELECT porcentaje FROM JAGorg_sub " +
                     "WHERE subasta_id = @id AND organizacion_caridad_id = @organizacion";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -418,7 +418,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO org_inv (subasta_id, club_id_org) " +
+                string Query = "INSERT INTO JAGorg_inv (subasta_id, club_id_org) " +
                     "VALUES (@subasta, @club)";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -441,7 +441,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO org_inv (subasta_id, club_id_inv) " +
+                string Query = "INSERT INTO JAGorg_inv (subasta_id, club_id_inv) " +
                     "VALUES (@subasta, @club)";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -499,7 +499,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT club_id_org FROM org_inv where subasta_id = @id";
+                string Query = "SELECT club_id_org FROM JAGorg_inv where subasta_id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -545,7 +545,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT club_id_inv FROM org_inv where subasta_id = @id";
+                string Query = "SELECT club_id_inv FROM JAGorg_inv where subasta_id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -590,7 +590,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM org_inv WHERE subasta_id = @id";
+                string Query = "DELETE FROM JAGorg_inv WHERE subasta_id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -611,7 +611,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM org_inv " +
+                string Query = "DELETE FROM JAGorg_inv " +
                     "WHERE subasta_id = @id AND club_id_org = @club";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -643,10 +643,10 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM org_inv " +
+                string Query = "DELETE FROM JAGorg_inv " +
                     "WHERE subasta_id = @id AND club_id_inv = @club; " +
 
-                    "DELETE FROM participante WHERE subasta_id = @id AND MEMBRESIA_CLUB_id = @club";
+                    "DELETE FROM JAGparticipante WHERE subasta_id = @id AND MEMBRESIA_CLUB_id = @club";
 
                 Script = new NpgsqlCommand(Query, Connection);
 

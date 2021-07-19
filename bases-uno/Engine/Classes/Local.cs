@@ -64,7 +64,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM local WHERE id = @id";
+                string Query = "DELETE FROM JAGlocal WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -85,7 +85,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO local (nombre, lugar_id, tipo";
+                string Query = "INSERT INTO JAGlocal (nombre, lugar_id, tipo";
                 if (!(ColeccionistaID == 0))
                 {
                     Query += ", coleccionista_documento_identidad";
@@ -128,7 +128,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE local SET nombre = @nombre, lugar_id = @lugar, tipo = @tipo";
+                string Query = "UPDATE JAGlocal SET nombre = @nombre, lugar_id = @lugar, tipo = @tipo";
                 if (!(ColeccionistaID == 0))
                 {
                     Query += ", coleccionista_documento_identidad = @coleccionistaid";

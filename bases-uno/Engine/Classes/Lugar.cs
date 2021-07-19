@@ -62,7 +62,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM lugar WHERE id = @id";
+                string Query = "DELETE FROM JAGlugar WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -83,7 +83,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO lugar (nombre, tipo";
+                string Query = "INSERT INTO JAGlugar (nombre, tipo";
 
                 if (!(LugarID == 0))
                 {
@@ -128,7 +128,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE lugar SET nombre = @nombre, tipo = @tipo";
+                string Query = "UPDATE JAGlugar SET nombre = @nombre, tipo = @tipo";
                 if (!(LugarID == 0))
                 {
                     Query += ", lugar_id = @lugar_id";

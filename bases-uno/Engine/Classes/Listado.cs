@@ -79,7 +79,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM listado WHERE id = @id AND subasta_id = @subastaid";
+                string Query = "DELETE FROM JAGlistado WHERE id = @id AND subasta_id = @subastaid";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -101,7 +101,7 @@ namespace Engine.Classes
             {
                 Connection.Open();
 
-                string Query = "INSERT INTO listado (precio_base_dolar, subasta_id, dueno_historico_coleccionista_documento_identidad, " +
+                string Query = "INSERT INTO JAGlistado (precio_base_dolar, subasta_id, dueno_historico_coleccionista_documento_identidad, " +
                     "dueno_historico_fecha_registro, dueno_historico_id";
                 if (!(Orden == 0))
                 {
@@ -182,7 +182,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE listado SET precio_base_dolar = @preciobase, dueno_historico_coleccionista_documento_identidad = @duenocoleccionistaid, " +
+                string Query = "UPDATE JAGlistado SET precio_base_dolar = @preciobase, dueno_historico_coleccionista_documento_identidad = @duenocoleccionistaid, " +
                     "dueno_historico_fecha_registro = @duenofecha, dueno_historico_id = @duenoid";
                 if (!(Orden == 0))
                 {

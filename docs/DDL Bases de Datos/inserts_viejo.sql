@@ -1,4 +1,4 @@
-INSERT INTO public.lugar (nombre,tipo,lugar_id) VALUES
+INSERT INTO JAGpublic.lugar (nombre,tipo,lugar_id) VALUES
 	 ('Venezuela','Pais',NULL),
 	 ('Av Santa Rosa, con 3era trasversal','Direccion',3),
 	 ('Distrito Capital','Estado',1),
@@ -7,7 +7,7 @@ INSERT INTO public.lugar (nombre,tipo,lugar_id) VALUES
 	 ('Los teques','Ciudad',3),
 	 ('Mexico','Pais',NULL);
 
-INSERT INTO public.comic (titulo,volumen,numero,fecha_publicacion,precio_publicacion,color,sinopsis,paginas,cubierta,editor) VALUES
+INSERT INTO JAGpublic.comic (titulo,volumen,numero,fecha_publicacion,precio_publicacion,color,sinopsis,paginas,cubierta,editor) VALUES
 	 ('Dark Souls II: Into the Light',1,2,'2017-05-15',30.0,true,'Deep within the Shaded Woods, a lone warrior donning the Faraam Set encounters a man sitting next to a bonfire. The warrior tells the man that he doesn''t want to cause any harm and advises him to extinguish the bonfire as quickly as possible since it could attract other people with murderous intent. The man appreciates the kind words of the warrior and invites him to sit around the fire for a while. He introduces himself as Saulden and then proceeds to ask the warrior why he has come to "these foul lands" to which the warrior only answers that he has come to find a cure for a curse and promptly moves on. Saulden advises against it, telling the curse bearer that "A blade cannot cut the darkness. Only the flame of a fire can do so." The warrior cockily ignores his advice and remarks that Saulden''s sword "belongs to a crestfallen man who hides by his fire", before continuing on his journey',10,false,'Rob Williams'),
 	 ('Contra: The Comic',1,1,'1998-02-05',10.0,false,'With the last remnants of the alien menace nearly eradicated thanks to the hard work of the Earth Government Forces and wonderful citizens like you, the situation is completely under control,',24,true,'unknown'),
 	 ('Cyberpunk 2077: Trauma Team',1,1,'2021-12-02',50.0,true,'Set in the year 2077, the plot follows Nadia, an EMT for the privately owned and heavily militarized healthcare company named Trauma Team International. When a shootout leaves the rest of her team dead, Nadia agrees to continue working for the company',12,true,'Cullen Bunn '),
@@ -19,7 +19,7 @@ INSERT INTO public.comic (titulo,volumen,numero,fecha_publicacion,precio_publica
 	 ('sfdskfm',2,2,'1232-12-12',2.0,true,'fdsfsdfd',2,false,'safsdsdfsaddsfdssdaf'),
 	 ('dsf',NULL,0,'2001-11-11',23123213317245500000,false,'sd',0,false,'sdds');
 
-INSERT INTO public.interes (nombre,descripcion) VALUES
+INSERT INTO JAGpublic.interes (nombre,descripcion) VALUES
 	 ('Consola Nintendo 64','Controles, juegos, accessorios y ediciones limitadas de la consola Nintendo 64'),
 	 ('Juegos de Mesa','Ajedrez, damas chinas, domino, etc'),
 	 ('Tetris NES','Juego clasico desde 1984'),

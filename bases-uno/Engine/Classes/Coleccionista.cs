@@ -98,7 +98,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM coleccionista WHERE documento_identidad = @id";
+                string Query = "DELETE FROM JAGcoleccionista WHERE documento_identidad = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -119,7 +119,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "INSERT INTO coleccionista (documento_identidad, primer_nombre, " +
+                string Query = "INSERT INTO JAGcoleccionista (documento_identidad, primer_nombre, " +
                     "primer_apellido, telefono, fecha_nacimiento, LUGAR_id_nacionalidad, LUGAR_id_direccion";
                 if (!(SegundoNombre == null))
                 {
@@ -207,7 +207,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE coleccionista SET primer_nombre = @primernombre, " +
+                string Query = "UPDATE JAGcoleccionista SET primer_nombre = @primernombre, " +
                     "primer_apellido = @primerapellido, telefono = @telefono, fecha_nacimiento = @fechanacimiento, " +
                     "LUGAR_id_nacionalidad = @lugarnacimiento, LUGAR_id_direccion = @direccion";
                 if (!(SegundoNombre == null))

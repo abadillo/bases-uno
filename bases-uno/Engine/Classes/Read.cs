@@ -20,7 +20,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM modelo WHERE id = @id";
+                string Query = "SELECT * FROM JAGmodelo WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -53,7 +53,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM club WHERE id = @id";
+                string Query = "SELECT * FROM JAGclub WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -86,7 +86,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM coleccionable WHERE id = @id";
+                string Query = "SELECT * FROM JAGcoleccionable WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -118,7 +118,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM coleccionista WHERE documento_identidad = @id";
+                string Query = "SELECT * FROM JAGcoleccionista WHERE documento_identidad = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -152,7 +152,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM comic WHERE id = @id";
+                string Query = "SELECT * FROM JAGcomic WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -185,7 +185,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM contacto WHERE id = @id AND club_id = @clubid";
+                string Query = "SELECT * FROM JAGcontacto WHERE id = @id AND club_id = @clubid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -219,7 +219,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM dueno_historico WHERE coleccionista_documento_identidad = @coleccionistaid AND " +
+                string Query = "SELECT * FROM JAGdueno_historico WHERE coleccionista_documento_identidad = @coleccionistaid AND " +
                     "fecha_registro = @fecha AND id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
@@ -257,7 +257,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM interes WHERE id = @id";
+                string Query = "SELECT * FROM JAGinteres WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -289,7 +289,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM listado WHERE id = @id AND subasta_id = @subastaid";
+                string Query = "SELECT * FROM JAGlistado WHERE id = @id AND subasta_id = @subastaid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -325,7 +325,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM local WHERE id = @id";
+                string Query = "SELECT * FROM JAGlocal WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -358,7 +358,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM lugar WHERE id = @id";
+                string Query = "SELECT * FROM JAGlugar WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -391,7 +391,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM membresia WHERE fecha_ingreso = @fechaingreso AND club_id = @clubid AND " +
+                string Query = "SELECT * FROM JAGmembresia WHERE fecha_ingreso = @fechaingreso AND club_id = @clubid AND " +
                     "coleccionista_documento_identidad = @coleccionistaid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
@@ -429,7 +429,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM membresia WHERE fecha_retiro IS null AND club_id = @clubid AND " +
+                string Query = "SELECT * FROM JAGmembresia WHERE fecha_retiro IS null AND club_id = @clubid AND " +
                     "coleccionista_documento_identidad = @coleccionistaid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
@@ -467,7 +467,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM organizacion_caridad WHERE id = @id";
+                string Query = "SELECT * FROM JAGorganizacion_caridad WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -500,7 +500,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM participante WHERE id_inscripcion = @idinscripcion AND subasta_id = @subastaid";
+                string Query = "SELECT * FROM JAGparticipante WHERE id_inscripcion = @idinscripcion AND subasta_id = @subastaid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("idinscripcion", idInscripcion);
@@ -535,7 +535,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM representante WHERE documento_identidad = @id";
+                string Query = "SELECT * FROM JAGrepresentante WHERE documento_identidad = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -568,7 +568,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM subasta WHERE id = @id";
+                string Query = "SELECT * FROM JAGsubasta WHERE id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", id);
@@ -605,7 +605,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM modelo";
+                string Query = "SELECT * FROM JAGmodelo";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -641,7 +641,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM club";
+                string Query = "SELECT * FROM JAGclub";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -676,7 +676,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM coleccionable";
+                string Query = "SELECT * FROM JAGcoleccionable";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -711,7 +711,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM coleccionista";
+                string Query = "SELECT * FROM JAGcoleccionista";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -749,7 +749,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM comic";
+                string Query = "SELECT * FROM JAGcomic";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -786,7 +786,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM contacto";
+                string Query = "SELECT * FROM JAGcontacto";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -821,7 +821,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM dueno_historico";
+                string Query = "SELECT * FROM JAGdueno_historico";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -857,8 +857,8 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM " +
-                        "(SELECT *, MAX(fecha_registro) FROM dueno_historico " +
+                string Query = "SELECT * FROM JAG" +
+                        "(SELECT *, MAX(fecha_registro) FROM JAGdueno_historico " +
                         "GROUP BY comic_id) " +
                     "WHERE coleccionista_documento_identidad = @coleccionistaid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
@@ -887,8 +887,8 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM " +
-                        "(SELECT *, MAX(fecha_registro) FROM dueno_historico " +
+                string Query = "SELECT * FROM JAG" +
+                        "(SELECT *, MAX(fecha_registro) FROM JAGdueno_historico " +
                         "GROUP BY coleccionable_id) " +
                     "WHERE coleccionista_documento_identidad = @coleccionistaid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
@@ -943,7 +943,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM dueno_historico WHERE comic_id = @comic_id";
+                string Query = "SELECT * FROM JAGdueno_historico WHERE comic_id = @comic_id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("comic_id", comic.ID);
@@ -981,7 +981,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM dueno_historico WHERE COLECCIONABLE_id = @COLECCIONABLE_id";
+                string Query = "SELECT * FROM JAGdueno_historico WHERE COLECCIONABLE_id = @COLECCIONABLE_id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("COLECCIONABLE_id", coleccionable.ID);
@@ -1056,7 +1056,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM interes";
+                string Query = "SELECT * FROM JAGinteres";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -1091,7 +1091,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM listado";
+                string Query = "SELECT * FROM JAGlistado";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -1128,7 +1128,7 @@ namespace Engine.Classes
                 connection.OpenConnection();
 
 
-                string Query = "SELECT * FROM listado Where subasta_id = @subasta_id";
+                string Query = "SELECT * FROM JAGlistado Where subasta_id = @subasta_id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("subasta_id", subasta_id);
@@ -1168,7 +1168,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM local";
+                string Query = "SELECT * FROM JAGlocal";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -1202,7 +1202,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM lugar";
+                string Query = "SELECT * FROM JAGlugar";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -1237,7 +1237,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM membresia";
+                string Query = "SELECT * FROM JAGmembresia";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -1284,7 +1284,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM membresia WHERE CLUB_id = @id";
+                string Query = "SELECT * FROM JAGmembresia WHERE CLUB_id = @id";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Script.Parameters.AddWithValue("id", club.ID);
@@ -1332,7 +1332,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM organizacion_caridad";
+                string Query = "SELECT * FROM JAGorganizacion_caridad";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -1367,7 +1367,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM participante";
+                string Query = "SELECT * FROM JAGparticipante";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -1402,7 +1402,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM representante";
+                string Query = "SELECT * FROM JAGrepresentante";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();
@@ -1437,7 +1437,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM subasta";
+                string Query = "SELECT * FROM JAGsubasta";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
                 connection.Reader = connection.Script.ExecuteReader();

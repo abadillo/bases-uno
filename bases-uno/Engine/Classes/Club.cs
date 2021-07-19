@@ -55,7 +55,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM club WHERE id = @id";
+                string Query = "DELETE FROM JAGclub WHERE id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -76,7 +76,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "INSERT INTO club (fecha_fundacion, proposito, lugar_id, nombre";
+                string Query = "INSERT INTO JAGclub (fecha_fundacion, proposito, lugar_id, nombre";
                 if (!(Telefono == 0))
                 {
                     Query += ", telefono";
@@ -129,7 +129,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "UPDATE club SET fecha_fundacion = @fundacion, nombre = @nombre, ";
+                string Query = "UPDATE JAGclub SET fecha_fundacion = @fundacion, nombre = @nombre, ";
 
                 if (!(Telefono == 0))
                 {
@@ -184,7 +184,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "INSERT INTO clu_int (club_id, interes_id) " +
+                string Query = "INSERT INTO JAGclu_int (club_id, interes_id) " +
                     "VALUES (@club, @interes)";
                 Script = new NpgsqlCommand(Query, Connection);
 
@@ -208,7 +208,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "SELECT interes_id FROM clu_int WHERE club_id = @id";
+                string Query = "SELECT interes_id FROM JAGclu_int WHERE club_id = @id";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("id", ID);
@@ -246,7 +246,7 @@ namespace Engine.Classes
             {
                 OpenConnection();
 
-                string Query = "DELETE FROM clu_int WHERE club_id = @club AND interes_id = @interes";
+                string Query = "DELETE FROM JAGclu_int WHERE club_id = @club AND interes_id = @interes";
                 Script = new NpgsqlCommand(Query, Connection);
 
                 Script.Parameters.AddWithValue("club", ID);
