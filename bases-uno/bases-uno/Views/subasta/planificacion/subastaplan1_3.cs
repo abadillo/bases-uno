@@ -80,11 +80,11 @@ namespace bases_uno.Views
 
 
 
-            foreach (Participante partipante in listPar)
+            foreach (Participante participante in listPar)
             {
-                Membresia membresia = partipante.Membresia();
+                Membresia membresia = participante.Membresia();
 
-                miniitemmembresia item = new miniitemmembresia(membresia, parent, true);
+                miniitemmembresia item = new miniitemmembresia(participante, parent, true);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
@@ -137,8 +137,6 @@ namespace bases_uno.Views
 
 
                 Membresia membresia = Read.Membresia(coleccionista, club);
-
-                Console.WriteLine(membresia.ClubID);
 
                 if (flagBenefica)
                 {

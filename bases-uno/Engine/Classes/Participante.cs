@@ -138,6 +138,11 @@ namespace Engine.Classes
                 MembresiaFechaRegistro);
         }
 
+        public Subasta Subasta()
+        {
+            return Read.Subasta(SubastaID);
+        }
+
         public Coleccionista Coleccionista()
         {
             return Read.Coleccionista(MembresiaColeccionistaID);

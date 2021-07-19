@@ -429,7 +429,7 @@ namespace Engine.Classes
             {
                 connection.OpenConnection();
 
-                string Query = "SELECT * FROM membresia WHERE fecha_retiro = null AND club_id = @clubid AND " +
+                string Query = "SELECT * FROM membresia WHERE fecha_retiro IS null AND club_id = @clubid AND " +
                     "coleccionista_documento_identidad = @coleccionistaid";
                 connection.Script = new NpgsqlCommand(Query, connection.Connection);
 
