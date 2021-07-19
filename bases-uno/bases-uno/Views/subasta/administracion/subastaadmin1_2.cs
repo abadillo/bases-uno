@@ -43,6 +43,8 @@ namespace bases_uno.Views
 
             InitializeComponent();
 
+            
+
             label1.Text = "Subasta: " + subasta.ID;
 
             this.listado = listado;
@@ -105,64 +107,16 @@ namespace bases_uno.Views
             panelAlerta.Visible = true;
         }
 
-        
-
-       
-
-
         private void Actualizar()
         {
             try
             {
-                string[] tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' ');
-                int ColeccionistaID = int.Parse(tokens[0]);
-                Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
-
-
-                // DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
-
-                //for (int i = 0; i < this.listado.Count; i++)
-                //   if (listado[i].DuenoHistoricoID == duenoHistorico.ID)
-                //       throw new Exception("Ya este objeto esta en la lista");
-
-
-                //validar esto
-
-                float precio = Validacion.ValidarFloat(textBoxPrecio,true);
-
-                
-                if (precio <= 0)
-                {
-                    throw new Exception("Aqui no se subastan objetos de gratis");
-                }
-
-                if (flagBenefica && precio < duenoHistorico.PrecioDolares ) 
-                {
-                    throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
-
-                }
-
-                if (precio < precioMasAlto)
-                {
-                    throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
-
-                }
-
-                listado.PrecioVenta = precio;
-                listado.ParticipanteIDInscripcion = coleccionista.ID;
+                listado.PrecioVenta = precioMasAlto;
+                listado.ParticipanteIDInscripcion = coleccionistaGanador.ID;
                 listado.SubastaID = subasta.ID;
 
 
                 listado.Update();
-
-                //Listado listado = new Listado(
-                //    subasta,
-                //    precio,
-                //    duenoHistorico,
-                //    subasta.SiguienteNroListado(),
-                //    Validacion.ValidarInt(textBoxDuracion,true)
-              
-                //) ;
 
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -183,43 +137,53 @@ namespace bases_uno.Views
 
         private void AnadirPuja() {
 
-            string[] tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' ');
-            int ColeccionistaID = int.Parse(tokens[0]);
-            Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
-
-
-            // DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
-
-            //for (int i = 0; i < this.listado.Count; i++)
-            //   if (listado[i].DuenoHistoricoID == duenoHistorico.ID)
-            //       throw new Exception("Ya este objeto esta en la lista");
-
-
-            //validar esto
-
-
-            //if (flagBenefica && precio < duenoHistorico.PrecioDolares)
-            //{
-            //    throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
-
-            //}
-
-            float precio = Validacion.ValidarFloat(textBoxPrecio, true);
-
-            if (precio < precioMasAlto)
+            try
             {
-                throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
+                string[] tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' ');
+                int ColeccionistaID = int.Parse(tokens[0]);
+                Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
 
+
+                // DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
+
+                //for (int i = 0; i < this.listado.Count; i++)
+                //   if (listado[i].DuenoHistoricoID == duenoHistorico.ID)
+                //       throw new Exception("Ya este objeto esta en la lista");
+
+
+                //validar esto
+
+
+                //if (flagBenefica && precio < duenoHistorico.PrecioDolares)
+                //{
+                //    throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
+
+                //}
+
+                float precio = Validacion.ValidarFloat(textBoxPrecio, true);
+
+                if (precio <= precioMasAlto)
+                {
+                    throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
+
+                }
+
+                coleccionistaGanador = coleccionista;
+                precioMasAlto = precio;
+
+                miniitempuja item = new miniitempuja(coleccionista, precio);
+                item.Dock = DockStyle.Top;
+
+                dipanel2.Controls.Add(item);
             }
-
-            coleccionistaGanador = coleccionista;
-            precioMasAlto = precio;
-
-            miniitempuja item = new miniitempuja(coleccionista, precio);
-            item.Dock = DockStyle.Top;
-
-            dipanel2.Controls.Add(item);
-
+            catch (ApplicationException aex)
+            {
+                MessageBox.Show(aex.Message, "Error de tipo de dato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error con base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
      
@@ -258,6 +222,9 @@ namespace bases_uno.Views
             parent.InsertForm(new subastaadmin1_1(parent, subasta));
         }
 
-       
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

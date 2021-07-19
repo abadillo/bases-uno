@@ -335,6 +335,7 @@ namespace bases_uno.Views
             this.label18.Size = new System.Drawing.Size(312, 40);
             this.label18.TabIndex = 37;
             this.label18.Text = "label18";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // panel1
             // 
