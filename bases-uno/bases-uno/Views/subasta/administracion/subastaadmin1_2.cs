@@ -44,14 +44,33 @@ namespace bases_uno.Views
 
             InitializeComponent();
 
-            
+            duenoHistorico = listado.DuenoHistorico();
+
+           
+            if (duenoHistorico.ComicID != 0)
+            {
+                Comic comic = Read.Comic(duenoHistorico.ComicID);
+
+                string item = "Comic " + comic.ID + " " + comic.Title;
+                label18.Text = item;
+            }
+            else
+            {
+                Coleccionable coleccionable = Read.Coleccionable(duenoHistorico.ColeccionableID);
+
+                string item = "Coleccionable " + coleccionable.ID + " " + coleccionable.Nombre;
+                label18.Text = item;
+
+            }
+
 
             label1.Text = "Subasta: " + subasta.ID;
-
+            
             this.listado = listado;
 
             precioMasAlto = listado.PrecioBase;
 
+            
 
             #region set flags
 
@@ -95,10 +114,18 @@ namespace bases_uno.Views
             }
 
 
+            UpdatePrecioText();
+
             Update();
         }
 
         #region Funciones
+        private void UpdatePrecioText() { 
+        
+            label5.Text = precioMasAlto + "$";
+
+        }
+
 
         private void DisableFunciones(string mensaje)
         {
@@ -171,11 +198,14 @@ namespace bases_uno.Views
 
                 coleccionistaGanador = coleccionista;
                 precioMasAlto = precio;
+                
 
                 miniitempuja item = new miniitempuja(coleccionista, precio);
                 item.Dock = DockStyle.Top;
 
                 dipanel2.Controls.Add(item);
+
+                UpdatePrecioText();
             }
             catch (ApplicationException aex)
             {
