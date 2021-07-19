@@ -49,7 +49,7 @@ namespace bases_uno.Views.Components
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            parent.InsertForm(new subastaplan1(parent, subasta));
+            parent.InsertForm(new subastaadmin1(parent, subasta));
         }
 
       

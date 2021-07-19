@@ -42,12 +42,24 @@ namespace bases_uno.Views
             listados = subasta.Listados();
 
 
+
             for (int i = 0; i < listados.Count; i++)
             {
-                miniitemlistado2 item = new miniitemlistado2(listados[i], parent,true);
+
+                Listado listado = listados[i];
+
+                miniitemlistado2 item = new miniitemlistado2(listado, parent);
                 item.Dock = DockStyle.Top;
 
-                dipanel2.Controls.Add(item);
+                if (listado.PrecioVenta != 0)
+
+                    dipanel3.Controls.Add(item);
+                else
+                    dipanel2.Controls.Add(item);
+               
+
+                
+
             }
             
             

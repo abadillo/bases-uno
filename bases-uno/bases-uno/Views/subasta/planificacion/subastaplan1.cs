@@ -265,11 +265,13 @@ namespace bases_uno.Views
                 subasta.LocalID = 0;
             }
 
+
+
             // este puede ser redundante
-            //if (subasta.Caridad)
-            //{
-            //    subasta.Tipo = "Presencial";
-            //}
+            if (subasta.Caridad)
+            {
+                subasta.Tipo = "Presencial";
+            }
 
             if (!(subasta.Caridad))
             {

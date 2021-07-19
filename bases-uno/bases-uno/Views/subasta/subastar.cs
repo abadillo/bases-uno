@@ -70,6 +70,8 @@ namespace bases_uno.Views
 
                 //Console.WriteLine(Read.Local(localID).Nombre);
 
+                
+
                 Subasta subasta = new Subasta(
                     fecha,
                     horaInicio,

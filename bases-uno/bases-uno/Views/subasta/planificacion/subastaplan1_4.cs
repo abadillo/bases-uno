@@ -270,12 +270,10 @@ namespace bases_uno.Views
             try
             {
                 string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
-
                 string tipo = tokens[0];
 
                 int ColeccionistaID = int.Parse(tokens[0]);
                 Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
-
 
                 DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
 

@@ -17,13 +17,17 @@ namespace bases_uno.Views.Components
         public index parent;
         public Listado listado;
         public DuenoHistorico duenoHistorico;
+        public bool permiso = false;
 
-        public miniitemlistado2( Listado listado,index parent, bool permiso )
+        public miniitemlistado2( Listado listado,index parent)
         {
 
             this.parent = parent;
             this.listado = listado;
-            
+
+            if (listado.PrecioVenta != 0)
+                permiso = true;
+
             InitializeComponent();
 
             duenoHistorico = listado.DuenoHistorico();
@@ -39,7 +43,7 @@ namespace bases_uno.Views.Components
 
             label3.Text = listado.PrecioBase.ToString() + "$";
 
-            if (listado.Subasta().Cerrado)
+            if (listado.Subasta().Cerrado || permiso)
                 iconButton1.Visible = false;
 
             Update();
