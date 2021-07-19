@@ -484,7 +484,12 @@ namespace Engine.Classes
 
         private int NextParticipanteID()
         {
-            return Participantes().Count + 1;
+            int cont = 1;
+            while (Read.Participante(cont, this) != null)
+            {
+                cont += 1;
+            }
+            return cont;
         }
 
         public List<Club> Organizadores()
@@ -675,17 +680,14 @@ namespace Engine.Classes
         public int SiguienteNroListado()
         {
             int cont = 1;
-            List<Listado> listados = Read.Listados();
-            foreach (Listado listado in listados) 
+            while (Read.Listado(cont, this) != null)
             {
-                if (listado.SubastaID == ID)
-                {
-                    cont += 1;
-                }
+                cont += 1;
             }
             return cont;
         }
 
+        /*
         public void AgregarParticipantes()
         {
             List<Membresia> invitados = new List<Membresia>();
@@ -703,6 +705,7 @@ namespace Engine.Classes
                 id += 1;
             }
         }
+        */
 
         public void Cancelar()
         {
