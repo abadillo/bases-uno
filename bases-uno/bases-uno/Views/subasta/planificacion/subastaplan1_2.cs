@@ -108,11 +108,6 @@ namespace bases_uno.Views
 
             #region use flags
 
-            if (flagBenefica == false || flagPresencial == false)
-            {
-                DisableFunciones("Esta subasta no es de tipo benefica, por lo tanto no deberia ver ningun club organizador \nSi observa alguna arriba, algo salio mal");
-            }
-
             if (flagCancelado)
             {
                 DisableFunciones("Esta subasta fue cancelada, no puede agregar clubes \nSi observa alguna arriba, algo salio mal");
@@ -139,9 +134,9 @@ namespace bases_uno.Views
 
 
             iconButton5.Visible = false;
+            comboBoxType.Items.Remove("Organizador");
 
             label11.Text = mensaje;
-            comboBoxType.Items.Remove("Organizador");
             panelAlerta.Visible = true;
         }
 

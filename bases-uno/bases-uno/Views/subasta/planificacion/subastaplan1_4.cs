@@ -22,7 +22,7 @@ namespace bases_uno.Views
         public Subasta subasta;
 
         public List<Participante> listPar;
-        public List<Coleccionista> listOrg;
+        public List<Coleccionista> listOrg = new List<Coleccionista>();
 
         public bool flagCancelado = false;      // true if cancelado, false if no cancelado
         public bool flagPresencial = false;      // true if presencial, false if virtual
@@ -57,9 +57,6 @@ namespace bases_uno.Views
 
             }
 
-
-
-
             #region set flags
 
             if (subasta.Cancelado)
@@ -88,51 +85,42 @@ namespace bases_uno.Views
 
             #endregion
 
-
-
-
             List<Club> clubesOrg = subasta.Organizadores();
-
-            for (int i = 0; i < clubesOrg.Count; i++)
+            if (subasta.Caridad)
             {
-                List<Membresia> membresias = Read.Membresias(clubesOrg[i]);
-
-                for (int n = 0; n < membresias.Count; n++) {
-                    listOrg.Add(Read.Coleccionista(membresias[n].ColeccionistaID));
+                clubesOrg.AddRange(subasta.ClubesInvitados());
+            }
+            foreach (Club club in clubesOrg)
+            {
+                List<Membresia> membresias = Read.Membresias(club);
+                foreach (Membresia membresia in membresias)
+                {
+                    listOrg.Add(Read.Coleccionista(membresia.ColeccionistaID));
                 }
-                
             }
 
-            for (int i = 0; i < listOrg.Count; i++)
+            foreach (Coleccionista coleccionista in listOrg)
             {
-                Coleccionista coleccionista = listOrg[i];
-
                 string item = coleccionista.ID + " " + coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
                 comboBoxObjeto.Items.Add(item);
             }
-
-
 
             if (flagBenefica)
             {
                 listPar = subasta.Participantes();
 
 
-                for (int i = 0; i < listPar.Count; i++)
+                foreach(Participante participante in listPar)
                 {
-                    Coleccionista coleccionista = listPar[i].Coleccionista();
+                    Coleccionista coleccionista = participante.Coleccionista();
 
                     string item = coleccionista.ID + " " + coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
-                    comboBoxObjeto.Items.Add(item);
+                    comboBoxColeccionista.Items.Add(item);
 
                 }
             }
-           
-
 
             Update();
-
-           
         }
 
         #region Funciones
