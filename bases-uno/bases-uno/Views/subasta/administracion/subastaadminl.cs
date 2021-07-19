@@ -14,7 +14,7 @@ using bases_uno.Views.Components;
 
 namespace bases_uno.Views
 {
-    public partial class subastaplanl : Form
+    public partial class subastaadminl : Form
     {
 
         public index parent;
@@ -23,7 +23,7 @@ namespace bases_uno.Views
         
         public List<Subasta> list = Read.Subastas();
 
-        public subastaplanl(index parent)
+        public subastaadminl(index parent)
         {
             this.parent = parent;
 

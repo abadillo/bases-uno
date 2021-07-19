@@ -1,7 +1,7 @@
 ﻿
 namespace bases_uno.Views
 {
-    partial class subastaplan2
+    partial class subastaadmin2
     {
         /// <summary>
         /// Required designer variable.
@@ -191,16 +191,16 @@ namespace bases_uno.Views
             // 
             //this.subastaTableAdapter.ClearBeforeFill = true;
             // 
-            // subastaplan2
+            // subastaadmin2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 802);
             this.Controls.Add(this.stpanel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "subastaplan2";
+            this.Name = "subastaadmin2";
             this.Text = "8 Bit Subastas";
-            this.Load += new System.EventHandler(this.subastaplan2_Load);
+            this.Load += new System.EventHandler(this.subastaadmin2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.subastaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.stpanel7.ResumeLayout(false);

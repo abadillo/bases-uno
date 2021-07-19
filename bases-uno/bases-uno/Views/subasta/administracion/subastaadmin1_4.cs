@@ -15,7 +15,7 @@ using bases_uno.Views.Components;
 
 namespace bases_uno.Views
 {
-    public partial class subastaplan1_4 : Form
+    public partial class subastaadmin1_4 : Form
     {
         
         public index parent;
@@ -34,7 +34,7 @@ namespace bases_uno.Views
         public int orden = 0;
 
 
-        public subastaplan1_4(index parent, Subasta subasta)
+        public subastaadmin1_4(index parent, Subasta subasta)
         {
             this.parent = parent;
             this.subasta = subasta;
@@ -289,7 +289,7 @@ namespace bases_uno.Views
                 listado.Insert();
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                parent.InsertForm(new subastaplan1_4(parent, subasta));
+                parent.InsertForm(new subastaadmin1_4(parent, subasta));
 
             }
             catch (ApplicationException aex)
@@ -317,7 +317,7 @@ namespace bases_uno.Views
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 
-            parent.InsertForm(new subastaplan1_3(parent, subasta));
+            parent.InsertForm(new subastaadmin1_3(parent, subasta));
         }
 
         #endregion
@@ -332,7 +332,7 @@ namespace bases_uno.Views
 
         private void btncancelar_Click_1(object sender, EventArgs e)
         {
-            parent.InsertForm(new subastaplan1_4(parent, subasta));
+            parent.InsertForm(new subastaadmin1_4(parent, subasta));
         }
 
         private void btnanadir_Click(object sender, EventArgs e)
