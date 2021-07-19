@@ -201,13 +201,19 @@ namespace bases_uno.Views
         {
 
             string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
-
             string tipo = tokens[0];
+            int objID = int.Parse(tokens[1]);
 
+            tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' ');
             int ColeccionistaID = int.Parse(tokens[0]);
-            Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
 
-            DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
+
+            Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
+          
+
+            DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, objID);
+
+
             float precio = duenoHistorico.PrecioDolares;
 
             textBoxPrecio.Text = precio.ToString();
