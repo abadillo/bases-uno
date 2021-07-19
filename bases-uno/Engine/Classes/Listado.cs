@@ -119,7 +119,7 @@ namespace Engine.Classes
                 {
                     Query += ", duracion_min";
                 }
-                Query += ") VALUES (@preciobase, @subastaid, @duenoid, @duenofecha, @duenocoleccionistaid";
+                Query += ") VALUES (@preciobase, @subastaid, @duenocoleccionistaid, @duenofecha, @duenoid";
                 if (!(Orden == 0))
                 {
                     Query += ", @orden";
