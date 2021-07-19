@@ -16,7 +16,7 @@ namespace bases_uno.Views.Components
                
         public index parent;
         public Listado listado;
-        
+        public DuenoHistorico duenoHistorico;
 
         public miniitemlistado2( Listado listado,index parent, bool permiso )
         {
@@ -26,7 +26,7 @@ namespace bases_uno.Views.Components
             
             InitializeComponent();
 
-            DuenoHistorico duenoHistorico = listado.DuenoHistorico();
+            duenoHistorico = listado.DuenoHistorico();
 
             Comic comic = duenoHistorico.Comic();
             Coleccionable coleccionable = duenoHistorico.Coleccionable();
@@ -37,7 +37,7 @@ namespace bases_uno.Views.Components
                 label1.Text = "Coleccionable: " + coleccionable.Nombre;
 
 
-            label3.Text = listado.PrecioVenta.ToString() + "$";
+            label3.Text = listado.PrecioBase.ToString() + "$";
 
             if (listado.Subasta().Cerrado)
                 iconButton1.Visible = false;
@@ -49,9 +49,9 @@ namespace bases_uno.Views.Components
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            // contacto.Delete();
-            // remover este de la lista y refrescar al que lo llamo
-            //parent.InsertForm(new coleccionista1(parent, Read.Coleccionista(duenoHistorico.ColeccionistaID)));
+            //contacto.Delete();
+            //remover este de la lista y refrescar al que lo llamo
+            parent.InsertForm(new subastaadmin1_2(parent, listado.Subasta(),listado));
         }
 
        

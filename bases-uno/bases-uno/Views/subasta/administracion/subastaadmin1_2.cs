@@ -21,20 +21,22 @@ namespace bases_uno.Views
         public index parent;
         public Subasta subasta;
 
-        public List<Participante> listPar;
+        public float precioMasAlto = 0;
+        public Coleccionista coleccionistaGanador;
+
         public List<Coleccionista> listOrg = new List<Coleccionista>();
+        public List<Participante> listPar = new List<Participante>();
 
         public bool flagCancelado = false;      // true if cancelado, false if no cancelado
         public bool flagPresencial = false;      // true if presencial, false if virtual
         public bool flagBenefica = false;            // true if benefica, false if regular (o virtual)
 
-        public List<Listado> listado = null;
+        public Listado listado;
+        public DuenoHistorico duenoHistorico;
 
 
-        public int orden = 0;
 
-
-        public subastaadmin1_2(index parent, Subasta subasta)
+        public subastaadmin1_2(index parent, Subasta subasta, Listado listado)
         {
             this.parent = parent;
             this.subasta = subasta;
@@ -43,19 +45,10 @@ namespace bases_uno.Views
 
             label1.Text = "Subasta: " + subasta.ID;
 
+            this.listado = listado;
 
-            listado = subasta.Listados();
+            precioMasAlto = listado.PrecioBase;
 
-
-            for (int i = 0; i < listado.Count; i++)
-            {
-                miniitemlistado item = new miniitemlistado(listado[i], parent);
-                item.Dock = DockStyle.Top;
-
-                dipanel2.Controls.Add(item);
-
-
-            }
 
             #region set flags
 
@@ -69,6 +62,7 @@ namespace bases_uno.Views
                 flagBenefica = true;
 
             #endregion
+
 
             #region use flags
 
@@ -85,40 +79,18 @@ namespace bases_uno.Views
 
             #endregion
 
-            List<Club> clubesOrg = subasta.Organizadores();
-            if (subasta.Caridad)
-            {
-                clubesOrg.AddRange(subasta.ClubesInvitados());
-            }
-            foreach (Club club in clubesOrg)
-            {
-                List<Membresia> membresias = Read.Membresias(club);
-                foreach (Membresia membresia in membresias)
-                {
-                    listOrg.Add(Read.Coleccionista(membresia.ColeccionistaID));
-                }
-            }
+           
+           
+            listPar = subasta.Participantes();
 
-            foreach (Coleccionista coleccionista in listOrg)
+            foreach (Participante participante in listPar)
             {
+                Coleccionista coleccionista = participante.Coleccionista();
+
                 string item = coleccionista.ID + " " + coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
-                comboBoxObjeto.Items.Add(item);
+                comboBoxColeccionista.Items.Add(item);
             }
 
-            if (flagBenefica)
-            {
-                listPar = subasta.Participantes();
-
-
-                foreach(Participante participante in listPar)
-                {
-                    Coleccionista coleccionista = participante.Coleccionista();
-
-                    string item = coleccionista.ID + " " + coleccionista.PrimerNombre + " " + coleccionista.PrimerApellido;
-                    comboBoxColeccionista.Items.Add(item);
-
-                }
-            }
 
             Update();
         }
@@ -128,133 +100,26 @@ namespace bases_uno.Views
         private void DisableFunciones(string mensaje)
         {
             label11.Text = mensaje;
-            iconButton5.Visible = false;
+          
             btnanadir.Enabled = false;
             panelAlerta.Visible = true;
         }
 
-        private void LlenarObjetos()
-        {
-            try
-            {
-                string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
-                int DuenoID = int.Parse(tokens[0]);
-
-                Coleccionista coleccionista = Read.Coleccionista(DuenoID);
-
-
-                List<DuenoHistorico> listDueHis = Read.ColeccionActual(coleccionista);
-
-
-
-                for (int i = 0; i < listDueHis.Count; i++)
-                {
-
-                    DuenoHistorico duenoHistorico = listDueHis[i];
-
-                    if (duenoHistorico.ComicID != 0)
-                    {
-                        Comic comic = Read.Comic(duenoHistorico.ComicID);
-
-                        string item = "Comic " + comic.ID + " " + comic.Title;
-                        comboBoxObjeto.Items.Add(item);
-                    }
-                    else
-                    {
-                        Coleccionable coleccionable = Read.Coleccionable(duenoHistorico.ColeccionableID);
-
-                        string item = "Coleccionable " + coleccionable.ID + " " + coleccionable.Nombre;
-                        comboBoxObjeto.Items.Add(item);
-
-                    }
-
-                }
-
-            }
-            catch (Exception)
-            {
         
-                ////
-            }
-            
-        }
 
-        private void LlenarPrecio()
-        {
-
-            string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
-
-            string tipo = tokens[0];
-
-            int ColeccionistaID = int.Parse(tokens[0]);
-            Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
-
-            DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
-            float precio = duenoHistorico.PrecioDolares;
-
-            textBoxPrecio.Text = precio.ToString();
-
-            if (precio > 0 || flagBenefica)
-            {
-                textBoxPrecio.Enabled = false;
-            }
-          
-
-                
-        }
-
-        private DuenoHistorico BuscarHistorico( Coleccionista coleccionista, string tipo, int idObj )
-        {
-
-            List<DuenoHistorico> listDueHis = Read.ColeccionActual(coleccionista);
-            
+       
 
 
-            for (int i = 0; i < listDueHis.Count; i++)
-            {
-                DuenoHistorico dH = listDueHis[i];
-
-                if (tipo == "Comic")
-                {
-                    int comicID = idObj;
-                    Comic comic = Read.Comic(comicID);
-
-                    if (dH.ComicID == comic.ID)
-                    {
-                        return dH;
-                    }
-                }
-                else
-                {
-                    int coleccionableID =  idObj;
-                    Coleccionable coleccionable = Read.Coleccionable(coleccionableID);
-
-                    if (dH.ColeccionableID == coleccionable.ID)
-                    {
-                        return dH;
-                    }
-                }
-
-                
-
-            }
-
-            return null;
-        }
-
-        private void Registrar()
+        private void Actualizar()
         {
             try
             {
-                string[] tokens = Validacion.ValidarCombo(comboBoxObjeto).Split(' ');
-
-                string tipo = tokens[0];
-
+                string[] tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' ');
                 int ColeccionistaID = int.Parse(tokens[0]);
                 Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
 
 
-                DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
+                // DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
 
                 //for (int i = 0; i < this.listado.Count; i++)
                 //   if (listado[i].DuenoHistoricoID == duenoHistorico.ID)
@@ -262,6 +127,7 @@ namespace bases_uno.Views
 
 
                 //validar esto
+
                 float precio = Validacion.ValidarFloat(textBoxPrecio,true);
 
                 
@@ -270,26 +136,37 @@ namespace bases_uno.Views
                     throw new Exception("Aqui no se subastan objetos de gratis");
                 }
 
-                if (flagBenefica && precio < duenoHistorico.PrecioDolares) 
+                if (flagBenefica && precio < duenoHistorico.PrecioDolares ) 
                 {
                     throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
 
                 }
 
+                if (precio < precioMasAlto)
+                {
+                    throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
 
-                Listado listado = new Listado(
-                    subasta,
-                    precio,
-                    duenoHistorico,
-                    subasta.SiguienteNroListado(),
-                    Validacion.ValidarInt(textBoxDuracion,true)
+                }
+
+                listado.PrecioVenta = precio;
+                listado.ParticipanteIDInscripcion = coleccionista.ID;
+                listado.SubastaID = subasta.ID;
+
+
+                listado.Update();
+
+                //Listado listado = new Listado(
+                //    subasta,
+                //    precio,
+                //    duenoHistorico,
+                //    subasta.SiguienteNroListado(),
+                //    Validacion.ValidarInt(textBoxDuracion,true)
               
-                ) ;
+                //) ;
 
-                listado.Insert();
 
                 MessageBox.Show("Registro Exitoso", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                parent.InsertForm(new subastaadmin1_2(parent, subasta));
+                parent.InsertForm(new subastaadmin1_1(parent, subasta));
 
             }
             catch (ApplicationException aex)
@@ -304,6 +181,46 @@ namespace bases_uno.Views
 
         }
 
+        private void AnadirPuja() {
+
+            string[] tokens = Validacion.ValidarCombo(comboBoxColeccionista).Split(' ');
+            int ColeccionistaID = int.Parse(tokens[0]);
+            Coleccionista coleccionista = Read.Coleccionista(ColeccionistaID);
+
+
+            // DuenoHistorico duenoHistorico = BuscarHistorico(coleccionista, tipo, int.Parse(tokens[1]));
+
+            //for (int i = 0; i < this.listado.Count; i++)
+            //   if (listado[i].DuenoHistoricoID == duenoHistorico.ID)
+            //       throw new Exception("Ya este objeto esta en la lista");
+
+
+            //validar esto
+
+
+            //if (flagBenefica && precio < duenoHistorico.PrecioDolares)
+            //{
+            //    throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
+
+            //}
+
+            float precio = Validacion.ValidarFloat(textBoxPrecio, true);
+
+            if (precio < precioMasAlto)
+            {
+                throw new Exception("El precio a subastar debe ser mayor al ultimo precio subastado");
+
+            }
+
+            coleccionistaGanador = coleccionista;
+            precioMasAlto = precio;
+
+            miniitempuja item = new miniitempuja(coleccionista, precio);
+            item.Dock = DockStyle.Top;
+
+            dipanel2.Controls.Add(item);
+
+        }
 
      
 
@@ -317,38 +234,30 @@ namespace bases_uno.Views
         }
         private void btnatras_Click(object sender, EventArgs e)
         { 
-            parent.InsertForm(new subastaadmin1_2(parent, subasta));
+            parent.InsertForm(new subastaadmin1_1(parent, subasta));
         }
 
         #endregion
 
         #region click botones FontAwesome
 
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            panelAgregar.Visible = true;
-           
-        }
-
-        private void btncancelar_Click_1(object sender, EventArgs e)
-        {
-            parent.InsertForm(new subastaadmin1_2(parent, subasta));
-        }
+        
+        
 
         private void btnanadir_Click(object sender, EventArgs e)
         {
-            Registrar();
+            AnadirPuja();
         }
+
         #endregion
 
-        private void comboBoxColeccionista_SelectedValueChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            LlenarPrecio();
+            // cerrar o algo
+            Actualizar();
+            parent.InsertForm(new subastaadmin1_1(parent, subasta));
         }
 
-        private void comboBoxColeccionista_SelectedValueChanged_1(object sender, EventArgs e)
-        {
-            LlenarObjetos();
-        }
+       
     }
 }
