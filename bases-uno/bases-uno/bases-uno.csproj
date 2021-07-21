@@ -129,10 +129,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\DataSets\prueba.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prueba.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DataSets\subasta_jagDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\formprueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\formprueba.Designer.cs">
+      <DependentUpon>formprueba.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\club\club1_3.cs">
       <SubType>Form</SubType>
@@ -624,6 +635,10 @@
       <DependentUpon>menusubasta.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Reports\ComicReport.rdlc" />
+    <EmbeddedResource Include="Reports\formprueba.resx">
+      <DependentUpon>formprueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\pruebaRDLC.rdlc" />
     <EmbeddedResource Include="Reports\ReportInteres.rdlc" />
     <EmbeddedResource Include="Reports\ReportLugar.rdlc" />
     <EmbeddedResource Include="Views\club\club1_3.resx">
@@ -906,6 +921,17 @@
     </None>
     <None Include="Reports\DataSets\DataSet.xss">
       <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSets\prueba.xsc">
+      <DependentUpon>prueba.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSets\prueba.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>prueba.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\prueba.xss">
+      <DependentUpon>prueba.xsd</DependentUpon>
     </None>
     <None Include="Reports\DataSets\subasta_jagDataSet.xsc">
       <DependentUpon>subasta_jagDataSet.xsd</DependentUpon>
