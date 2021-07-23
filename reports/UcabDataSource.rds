@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="UcabDataSource">
+  <ConnectionProperties>
+    <Extension>ODBC</Extension>
+    <ConnectString>Dsn=UcabDataSource</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>e4217706-e5a6-4ddf-a926-fe7b9e9fd191</DataSourceID>
+</RptDataSource>
