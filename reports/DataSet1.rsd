@@ -2,45 +2,63 @@
 <SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSet Name="DataSet1">
     <Query>
-      <DataSourceReference>UcabDataSource</DataSourceReference>
-      <CommandText>Select * from jagsubasta;</CommandText>
+      <DataSourceReference>UCAB_FIN</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@Id">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT        "public".jagcomic.*
+FROM            "public".jagcomic
+WHERE id=@Id</CommandText>
     </Query>
     <Fields>
       <Field Name="id">
         <DataField>id</DataField>
         <rd:TypeName>System.Int32</rd:TypeName>
       </Field>
-      <Field Name="fecha">
-        <DataField>fecha</DataField>
-        <rd:TypeName>System.DateTime</rd:TypeName>
-      </Field>
-      <Field Name="hora_inicio">
-        <DataField>hora_inicio</DataField>
-        <rd:TypeName>System.TimeSpan</rd:TypeName>
-      </Field>
-      <Field Name="hora_cierre">
-        <DataField>hora_cierre</DataField>
-        <rd:TypeName>System.TimeSpan</rd:TypeName>
-      </Field>
-      <Field Name="tipo">
-        <DataField>tipo</DataField>
+      <Field Name="titulo">
+        <DataField>titulo</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
-      <Field Name="caridad">
-        <DataField>caridad</DataField>
+      <Field Name="volumen">
+        <DataField>volumen</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="numero">
+        <DataField>numero</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="fecha_publicacion">
+        <DataField>fecha_publicacion</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="precio_publicacion">
+        <DataField>precio_publicacion</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+      <Field Name="color">
+        <DataField>color</DataField>
         <rd:TypeName>System.Boolean</rd:TypeName>
       </Field>
-      <Field Name="cancelado">
-        <DataField>cancelado</DataField>
+      <Field Name="sinopsis">
+        <DataField>sinopsis</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="paginas">
+        <DataField>paginas</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="cubierta">
+        <DataField>cubierta</DataField>
         <rd:TypeName>System.Boolean</rd:TypeName>
       </Field>
-      <Field Name="local_id">
-        <DataField>local_id</DataField>
-        <rd:TypeName>System.Int32</rd:TypeName>
-      </Field>
-      <Field Name="cerrado">
-        <DataField>cerrado</DataField>
-        <rd:TypeName>System.Boolean</rd:TypeName>
+      <Field Name="editor">
+        <DataField>editor</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
       </Field>
     </Fields>
   </DataSet>
