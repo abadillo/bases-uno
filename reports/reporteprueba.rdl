@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" MustUnderstand="df">
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -80,6 +80,7 @@ FROM            "public".jagsubasta</CommandText>
             </Paragraphs>
             <rd:DefaultName>textbox1</rd:DefaultName>
             <Height>0.43in</Height>
+            <Width>6in</Width>
             <Style>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -121,6 +122,7 @@ FROM            "public".jagsubasta</CommandText>
                               </Paragraphs>
                               <rd:DefaultName>hora_inicio</rd:DefaultName>
                               <Height>0.27in</Height>
+                              <Width>6in</Width>
                               <Style>
                                 <FontFamily />
                                 <PaddingLeft>2pt</PaddingLeft>
@@ -163,6 +165,7 @@ FROM            "public".jagsubasta</CommandText>
                                                 </Paragraphs>
                                                 <rd:DefaultName>hora_cierre</rd:DefaultName>
                                                 <Height>0.24in</Height>
+                                                <Width>6in</Width>
                                                 <Style>
                                                   <FontFamily />
                                                   <PaddingLeft>2pt</PaddingLeft>
@@ -204,6 +207,7 @@ FROM            "public".jagsubasta</CommandText>
                                                                   </Paragraphs>
                                                                   <rd:DefaultName>caridad</rd:DefaultName>
                                                                   <Height>0.21in</Height>
+                                                                  <Width>6in</Width>
                                                                   <Style>
                                                                     <FontFamily />
                                                                     <PaddingLeft>2pt</PaddingLeft>
@@ -260,8 +264,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox2</rd:DefaultName>
-                                                                                <Height>0.22in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -300,8 +302,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox4</rd:DefaultName>
-                                                                                <Height>0.22in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -340,8 +340,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox6</rd:DefaultName>
-                                                                                <Height>0.22in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -383,8 +381,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox8</rd:DefaultName>
-                                                                                <Height>0.22in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -423,8 +419,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox9</rd:DefaultName>
-                                                                                <Height>0.22in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -466,8 +460,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox10</rd:DefaultName>
-                                                                                <Height>0.22in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -512,8 +504,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>tipo</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -553,8 +543,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox11</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -594,8 +582,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox12</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -635,8 +621,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox13</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -676,8 +660,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox14</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -717,8 +699,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox15</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -762,8 +742,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox16</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -800,8 +778,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>cancelado</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -841,8 +817,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox17</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -882,8 +856,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox18</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -923,8 +895,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox19</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -964,8 +934,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox20</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1009,8 +977,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox21</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1046,8 +1012,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox22</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1084,8 +1048,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>cerrado</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1125,8 +1087,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox23</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1166,8 +1126,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox24</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1207,8 +1165,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox25</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1250,8 +1206,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox3</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1285,8 +1239,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox5</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1320,8 +1272,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>textbox7</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1355,8 +1305,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>id</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1393,8 +1341,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>fecha</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1431,8 +1377,6 @@ FROM            "public".jagsubasta</CommandText>
                                                                                   </Paragraph>
                                                                                 </Paragraphs>
                                                                                 <rd:DefaultName>local_id</rd:DefaultName>
-                                                                                <Height>0.21in</Height>
-                                                                                <Width>1in</Width>
                                                                                 <Style>
                                                                                   <Border>
                                                                                     <Color>LightGrey</Color>
@@ -1539,6 +1483,9 @@ FROM            "public".jagsubasta</CommandText>
                                                                   </TablixRowHierarchy>
                                                                   <DataSetName>DataSet1</DataSetName>
                                                                   <Top>0.5in</Top>
+                                                                  <Height>1.06in</Height>
+                                                                  <Width>6in</Width>
+                                                                  <ZIndex>1</ZIndex>
                                                                   <Style>
                                                                     <FontFamily />
                                                                   </Style>
@@ -1584,6 +1531,9 @@ FROM            "public".jagsubasta</CommandText>
                                                   <BreakLocation>End</BreakLocation>
                                                 </PageBreak>
                                                 <Top>0.5in</Top>
+                                                <Height>1.56in</Height>
+                                                <Width>6in</Width>
+                                                <ZIndex>1</ZIndex>
                                                 <Style>
                                                   <FontFamily />
                                                 </Style>
@@ -1629,6 +1579,9 @@ FROM            "public".jagsubasta</CommandText>
                                 <BreakLocation>End</BreakLocation>
                               </PageBreak>
                               <Top>0.5in</Top>
+                              <Height>2.06in</Height>
+                              <Width>6in</Width>
+                              <ZIndex>1</ZIndex>
                               <Style>
                                 <FontFamily />
                                 <FontSize>12pt</FontSize>
@@ -1675,6 +1628,9 @@ FROM            "public".jagsubasta</CommandText>
               <BreakLocation>End</BreakLocation>
             </PageBreak>
             <Top>0.43in</Top>
+            <Height>2.56in</Height>
+            <Width>6in</Width>
+            <ZIndex>1</ZIndex>
             <Style>
               <FontSize>14pt</FontSize>
             </Style>
@@ -1701,6 +1657,6 @@ FROM            "public".jagsubasta</CommandText>
   </ReportParametersLayout>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportUnitType>Invalid</rd:ReportUnitType>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>9a16bf3f-2e56-4573-a6ba-5bfaf646d0d1</rd:ReportID>
 </Report>
