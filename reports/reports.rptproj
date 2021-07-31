@@ -49,6 +49,7 @@
     <Reports>@(Report)</Reports>
   </PropertyGroup>
   <ItemGroup>
+    <DataSet Include="Club.rsd" />
     <DataSet Include="DataSet1.rsd" />
   </ItemGroup>
   <ItemGroup>
@@ -58,8 +59,11 @@
     <DataSource Include="UCAB_FIN.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="Ficha_club.rdl" />
     <Report Include="Ficha_comic.rdl" />
+    <Report Include="Planificacion_anual.rdl" />
     <Report Include="reporteprueba.rdl" />
+    <Report Include="Reporte_historico.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>UCAB_FIN</DataSourceReference>
+      <CommandText>SELECT        "public".jagcomic.titulo, "public".jagcoleccionable.nombre, "public".jagdueno_historico.significado, "public".jagcoleccionista.primer_nombre, 
+                         "public".jagcoleccionista.primer_apellido, "public".jagdueno_historico.precio_dolar
+FROM            "public".jagcomic, "public".jagcoleccionable, "public".jagdueno_historico, "public".jagsubasta, "public".jaglistado, "public".jagcoleccionista
+WHERE        "public".jagcomic.id = "public".jagcoleccionable.id AND "public".jagcomic.id = "public".jagdueno_historico.id AND "public".jagcomic.id = "public".jagsubasta.id AND 
+                         "public".jagcomic.id = "public".jaglistado.id</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="titulo">
+        <DataField>titulo</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="nombre">
+        <DataField>nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="significado">
+        <DataField>significado</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="primer_nombre">
+        <DataField>primer_nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="primer_apellido">
+        <DataField>primer_apellido</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="precio_dolar">
+        <DataField>precio_dolar</DataField>
+        <rd:TypeName>System.Single</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
