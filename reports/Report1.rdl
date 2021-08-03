@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="UCAB_FIN">
+      <rd:DataSourceID>148a2816-e309-4ff9-982c-3019303659f6</rd:DataSourceID>
+      <DataSourceReference>UCAB_FIN</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <rd:ReportID>5e96cdea-471f-4d23-aade-a9756f6cd4d1</rd:ReportID>
+  <Width>5in</Width>
+  <Body>
+    <Height>0.43in</Height>
+    <ColumnSpacing>0.5in</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Style>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <FontSize>24pt</FontSize>
+          <FontWeight>Bold</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Value>Report1</Value>
+        <CanGrow>true</CanGrow>
+        <Height>0.43in</Height>
+      </Textbox>
+      <Table Name="table1">
+        <Top>0.43in</Top>
+        <Style />
+        <Header>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+          <TableRows>
+            <TableRow>
+              <TableCells />
+              <Height>0in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells />
+              <Height>0in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns />
+        <DataSetName>DataSet1</DataSetName>
+      </Table>
+    </ReportItems>
+  </Body>
+  <Language>es-ES</Language>
+  <LeftMargin>1in</LeftMargin>
+  <RightMargin>1in</RightMargin>
+  <TopMargin>1in</TopMargin>
+  <BottomMargin>1in</BottomMargin>
+  <PageWidth>8.5in</PageWidth>
+  <PageHeight>11in</PageHeight>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Fields />
+      <Query>
+        <DataSourceName>UCAB_FIN</DataSourceName>
+        <CommandType>Text</CommandType>
+        <CommandText>SELECT CONCAT(t.primer_nombre,' ',t.segundo_nombre) AS Nombre,
+CONCAT(t.primer_apellido,' ',t.segundo_apellido) AS Apellido,d.fecha_registro, 
+	(SELECT CONCAT(t.primer_nombre,' ',t.segundo_nombre,' ',
+		t.primer_apellido,' ',t.segundo_apellido) AS Nombre_dueno
+		 FROM jagcoleccionista t,jagdueno_historico d, jagcoleccionable c
+                                       WHERE  t.documento_identidad=d.coleccionista_documento_identidad
+                                        AND c.id=d.coleccionable_id
+                                        AND c.id=@id 
+		  ORDER BY d.fecha_registro DESC
+		   LIMIT 1),
+	                  	CASE WHEN c.id &lt;&gt; NULL
+		THEN (SELECT c.titulo FROM jagcomic c,jagdueno_historico h
+			where c.id=h.comic_id
+			AND c.id=1
+			LIMIT 1)
+		ELSE (SELECT c.nombre FROM jagcoleccionable c,jagdueno_historico h
+			where c.id=h.coleccionable_id
+			AND c.id=@id
+			LIMIT 1)
+		END AS Nom_Objeto,d.precio_dolar
+FROM jagcoleccionista t,jagdueno_historico d, jagcoleccionable c
+WHERE t.documento_identidad=d.coleccionista_documento_identidad
+AND (c.id=d.coleccionable_id )
+AND (c.id=@id )
+AND d.fecha_registro &lt;= (SELECT h.fecha_registro FROM jagdueno_historico h,jagcoleccionable c
+			WHERE c.id=h.coleccionable_id
+			ORDER BY d.fecha_registro DESC
+			LIMIT 1)</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <Timeout>0</Timeout>
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -60,6 +60,11 @@ AND jagcomic.id=@id OR jagcoleccionable.id=@id2</CommandText>
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="DataSet2">
+      <SharedDataSet>
+        <SharedDataSetReference>Historico</SharedDataSetReference>
+      </SharedDataSet>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>

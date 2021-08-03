@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>SELECT CONCAT(t.primer_nombre,' ',t.segundo_nombre) AS Nombre,
+CONCAT(t.primer_apellido,' ',t.segundo_apellido) AS Apellido,d.fecha_registro, 
+	(SELECT CONCAT(t.primer_nombre,' ',t.segundo_nombre,' ',
+		t.primer_apellido,' ',t.segundo_apellido) AS Nombre_dueno
+		 FROM jagcoleccionista t,jagdueno_historico d, jagcoleccionable c
+                                       WHERE  t.documento_identidad=d.coleccionista_documento_identidad
+                                        AND c.id=d.coleccionable_id
+                                        AND c.id=@id 
+		  ORDER BY d.fecha_registro DESC
+		   LIMIT 1),
+	                  	CASE WHEN c.id &lt;&gt; NULL									
+		THEN (SELECT c.titulo FROM jagcomic c,jagdueno_historico h
+			where c.id=h.comic_id
+			AND c.id=1
+			LIMIT 1)
+		ELSE (SELECT c.nombre FROM jagcoleccionable c,jagdueno_historico h
+			where c.id=h.coleccionable_id
+			AND c.id=@id
+			LIMIT 1)
+		END AS Nom_Objeto,d.precio_dolar
+FROM jagcoleccionista t,jagdueno_historico d, jagcoleccionable c
+WHERE t.documento_identidad=d.coleccionista_documento_identidad
+AND (c.id=d.coleccionable_id )
+AND (c.id=@id )
+AND d.fecha_registro &lt;= (SELECT fecha_registro FROM jagdueno_historico h,jagcoleccionable c
+			WHERE c.id=h.coleccionable_id
+			ORDER BY d.fecha_registro DESC
+			LIMIT 1)</CommandText>
+    </Query>
+  </DataSet>
+</SharedDataSet>

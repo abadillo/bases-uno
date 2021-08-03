@@ -53,6 +53,7 @@
     <DataSet Include="ClubByID.rsd" />
     <DataSet Include="Clubes.rsd" />
     <DataSet Include="DataSet1.rsd" />
+    <DataSet Include="Historico.rsd" />
     <DataSet Include="NumeroDeMiembrosPorClub.rsd" />
     <DataSet Include="NumeroDeSubastasOrganizadas.rsd" />
   </ItemGroup>
