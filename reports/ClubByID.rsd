@@ -12,7 +12,7 @@
         </DataSetParameter>
       </DataSetParameters>
       <CommandText>SELECT 
-    club.id, to_char(club.fecha_fundacion, 'YYYY-MM-DD') as fecha_fundacion, 
+    club.id, to_char(club.fecha_fundacion, 'DD-MM-YYYY') as fecha_fundacion, 
     club.telefono, 
     club.pagina_web, 
     club.proposito, 
