@@ -50,10 +50,15 @@
   </PropertyGroup>
   <ItemGroup>
     <DataSet Include="Club.rsd" />
+    <DataSet Include="ClubByID.rsd" />
+    <DataSet Include="Clubes.rsd" />
     <DataSet Include="DataSet1.rsd" />
+    <DataSet Include="NumeroDeMiembrosPorClub.rsd" />
+    <DataSet Include="NumeroDeSubastasOrganizadas.rsd" />
   </ItemGroup>
   <ItemGroup>
     <DataSource Include="DataSource1.rds" />
+    <DataSource Include="JLGZ.rds" />
     <DataSource Include="Report.rds" />
     <DataSource Include="UcabDataSource.rds" />
     <DataSource Include="UCAB_FIN.rds" />

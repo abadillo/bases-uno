@@ -2,9 +2,9 @@
 <SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSet Name="DataSet2">
     <Query>
-      <DataSourceReference>UcabDataSource</DataSourceReference>
-      <CommandText>SELECT club.id, to_char(club.fecha_fundacion, 'YYYY-MM-DD') AS fecha_fundacion, club.telefono, club.pagina_web, club.proposito, club.nombre, direccion.nombre AS direccion, estado.nombre AS estado, ciudad.nombre AS ciudad, 
-                  pais.nombre AS pais, responsable.primer_nombre AS primer_nombre_responsable, responsable.segundo_nombre AS segundo_nombre_responsable, responsable.primer_apellido AS primer_apellido_responsable, 
+      <DataSourceReference>JLGZ</DataSourceReference>
+      <CommandText>SELECT club.id, club.fecha_fundacion, club.telefono, club.pagina_web, club.proposito, club.nombre, direccion.nombre AS direccion, estado.nombre AS estado, ciudad.nombre AS ciudad, pais.nombre AS pais, 
+                  responsable.primer_nombre AS primer_nombre_responsable, responsable.segundo_nombre AS segundo_nombre_responsable, responsable.primer_apellido AS primer_apellido_responsable, 
                   responsable.segundo_apellido AS segundo_apellido_responsable
 FROM     "public".jagclub club, "public".jaglugar direccion, "public".jaglugar ciudad, "public".jaglugar estado, "public".jaglugar pais, "public".jagmembresia membresia_responsable, "public".jagcoleccionista responsable
 WHERE  club.lugar_id = direccion.id AND direccion.lugar_id = ciudad.id AND ciudad.lugar_id = estado.id AND estado.lugar_id = pais.id AND club.id = membresia_responsable.club_id AND 
@@ -17,11 +17,7 @@ WHERE  club.lugar_id = direccion.id AND direccion.lugar_id = ciudad.id AND ciuda
       </Field>
       <Field Name="fecha_fundacion">
         <DataField>fecha_fundacion</DataField>
-        <rd:TypeName>System.String</rd:TypeName>
-      </Field>
-      <Field Name="nombre">
-        <DataField>nombre</DataField>
-        <rd:TypeName>System.String</rd:TypeName>
+        <rd:TypeName>System.DateTime</rd:TypeName>
       </Field>
       <Field Name="telefono">
         <DataField>telefono</DataField>
@@ -33,6 +29,10 @@ WHERE  club.lugar_id = direccion.id AND direccion.lugar_id = ciudad.id AND ciuda
       </Field>
       <Field Name="proposito">
         <DataField>proposito</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="nombre">
+        <DataField>nombre</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
       <Field Name="direccion">

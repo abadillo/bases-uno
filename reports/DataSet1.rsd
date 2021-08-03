@@ -2,18 +2,19 @@
 <SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <DataSet Name="DataSet1">
     <Query>
-      <DataSourceReference>UCAB_FIN</DataSourceReference>
+      <DataSourceReference>UcabDataSource</DataSourceReference>
       <DataSetParameters>
-        <DataSetParameter Name="@Id">
+        <DataSetParameter Name="@number_id">
           <ReadOnly>false</ReadOnly>
           <Nullable>false</Nullable>
           <OmitFromQuery>false</OmitFromQuery>
-          <rd:DbType>String</rd:DbType>
+          <rd:DbType>Int32</rd:DbType>
         </DataSetParameter>
       </DataSetParameters>
-      <CommandText>SELECT        "public".jagcomic.*
-FROM            "public".jagcomic
-WHERE id=@Id</CommandText>
+      <CommandText>SELECT "public".jagcomic.*
+FROM     "public".jagcomic
+WHERE  "public".jagcomic.ID = (@number_id)</CommandText>
+      <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
     </Query>
     <Fields>
       <Field Name="id">

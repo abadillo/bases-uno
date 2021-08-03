@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>UcabDataSource</DataSourceReference>
+      <CommandText>SELECT club_id_org, COUNT(club_id_org) AS nro_subastas_organizadas
+FROM "public".jagorg_inv subastas
+GROUP BY subastas.club_id_org</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="club_id_org">
+        <DataField>club_id_org</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="nro_subastas_organizadas">
+        <DataField>nro_subastas_organizadas</DataField>
+        <rd:TypeName>System.Int64</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
