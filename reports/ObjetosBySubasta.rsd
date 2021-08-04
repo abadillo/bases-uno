@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>UcabDataSource</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@id">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>
+SELECT
+	l.orden,
+	
+    concat(co.titulo,cl.nombre) as objeto,
+	
+	to_char(l.precio_base_dolar,'999990.0 $') as precio_base_dolar,
+	to_char(l.precio_base_dolar * 0.84,'999990.0 €') as precio_base_euro,
+	
+	c.documento_identidad,
+	concat(c.primer_nombre,' ',c.primer_apellido) as dueno
+
+
+FROM jaglistado l
+
+JOIN jagdueno_historico dh ON dh.id = l.dueno_historico_id
+JOIN jagcoleccionista c ON c.documento_identidad = dueno_historico_coleccionista_documento_identidad
+left join jagcomic co on co.id = dh.comic_id
+LEFT JOIN jagcoleccionable cl ON cl.id = dh.coleccionable_id
+
+where l.subasta_id = @id
+order by l.orden;
+</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="orden">
+        <DataField>orden</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="objeto">
+        <DataField>objeto</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="documento_identidad">
+        <DataField>documento_identidad</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="dueno">
+        <DataField>dueno</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="precio_base_dolar">
+        <DataField>precio_base_dolar</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="precio_base_euro">
+        <DataField>precio_base_euro</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

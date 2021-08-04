@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>UcabDataSource</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@id">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>select
+	c.documento_identidad,
+	c.primer_nombre,
+	c.primer_apellido,
+	cl.nombre
+from
+	jagparticipante p,
+	jagcoleccionista c,
+	jagclub cl
+
+where
+	p.subasta_id = @id and
+	p.membresia_coleccionista_documento_identidad = c.documento_identidad and
+	p.membresia_club_id = cl.id
+
+order by
+	cl.id</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="documento_identidad">
+        <DataField>documento_identidad</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="primer_nombre">
+        <DataField>primer_nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="primer_apellido">
+        <DataField>primer_apellido</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="nombre">
+        <DataField>nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

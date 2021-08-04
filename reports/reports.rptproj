@@ -58,7 +58,12 @@
     <DataSet Include="Historico.rsd" />
     <DataSet Include="NumeroDeMiembrosPorClub.rsd" />
     <DataSet Include="NumeroDeSubastasOrganizadas.rsd" />
+    <DataSet Include="ObjetosBySubasta.rsd" />
+    <DataSet Include="OrganizadoresBySubasta.rsd" />
+    <DataSet Include="OrgCaridadBySubasta.rsd" />
+    <DataSet Include="ParticipantesBySubasta.rsd" />
     <DataSet Include="PlanificacionByYear.rsd" />
+    <DataSet Include="SubastaByID.rsd" />
   </ItemGroup>
   <ItemGroup>
     <DataSource Include="DataSource1.rds" />
@@ -69,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Report Include="FichaColeccionista.rdl" />
+    <Report Include="FichaEvento.rdl" />
     <Report Include="FichaPlanificacion.rdl" />
     <Report Include="Ficha_club.rdl" />
     <Report Include="Ficha_Club_Bien.rdl" />
