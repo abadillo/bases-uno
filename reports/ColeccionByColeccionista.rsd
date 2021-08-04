@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>UcabDataSource</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@id">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT 
+	to_char(MAX(fecha_registro), 'DD-MM-YYYY') AS fecha_adquisision,
+    CASE
+        WHEN dueno.comic_id IS NOT NULL
+        THEN comic.titulo
+        WHEN dueno.coleccionable_id IS NOT NULL
+        THEN coleccionable.nombre
+    END as nombre
+FROM 
+    jagcomic comic
+        FULL JOIN jagdueno_historico dueno ON comic.id = dueno.comic_id
+            FULL JOIN jagcoleccionable coleccionable on dueno.coleccionable_id = coleccionable.id
+WHERE
+    dueno.coleccionista_documento_identidad = @id
+GROUP BY 
+	dueno.comic_id,
+	dueno.coleccionable_id,
+	comic.titulo,
+	coleccionable.nombre</CommandText>
+      <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+    </Query>
+    <Fields>
+      <Field Name="fecha_adquisision">
+        <DataField>fecha_adquisision</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="nombre">
+        <DataField>nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

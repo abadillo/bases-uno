@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>UcabDataSource</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@id">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT 
+    coleccionista.documento_identidad,
+    coleccionista.primer_nombre,
+    coleccionista.segundo_nombre,
+    coleccionista.primer_apellido,
+    coleccionista.segundo_apellido,
+    coleccionista.telefono,
+    to_char(coleccionista.fecha_nacimiento, 'DD-MM-YYYY') AS fecha_nacimiento,
+    nacionalidad.nombre,
+    CASE 
+        WHEN coleccionista.coleccionista_documento_identidad IS NOT NULL 
+        THEN (
+            SELECT 
+                aux.documento_identidad
+            FROM 
+                jagcoleccionista aux
+            WHERE
+                aux.documento_identidad = coleccionista.coleccionista_documento_identidad
+        )
+        WHEN coleccionista.representante_documento_identidad IS NOT NULL 
+        THEN (
+            SELECT
+                aux.documento_identidad
+            FROM
+                jagrepresentante aux
+            WHERE
+                aux.documento_identidad = coleccionista.representante_documento_identidad
+        )
+        ELSE '0'
+    END AS representante_documento_identidad,
+    CASE 
+        WHEN coleccionista.coleccionista_documento_identidad IS NOT NULL 
+        THEN 'Si'
+        WHEN coleccionista.representante_documento_identidad IS NOT NULL 
+        THEN 'No'
+        ELSE ' '
+    END AS es_representante_coleccionista,
+    direccion.nombre AS direccion, 
+    estado.nombre AS estado, 
+    ciudad.nombre AS ciudad, 
+    pais.nombre AS pais, 
+    CASE 
+        WHEN EXISTS (
+            SELECT 
+                COUNT(participante.subasta_id) AS nro_subastas_participadas
+            FROM
+                jagparticipante participante
+            WHERE
+                participante.membresia_coleccionista_documento_identidad = coleccionista. documento_identidad
+            GROUP BY participante.membresia_coleccionista_documento_identidad
+        )
+        THEN (
+            SELECT 
+                tochar(COUNT(participante.subasta_id)) AS nro_subastas_participadas
+            FROM
+                jagparticipante participante
+            WHERE
+                participante.membresia_coleccionista_documento_identidad = coleccionista. documento_identidad
+            GROUP BY participante.membresia_coleccionista_documento_identidad
+        )
+        ELSE ' '
+    END AS nro_subastas_participadas,
+    CASE
+        WHEN EXISTS (
+            SELECT 
+                club.nombre
+            FROM
+                jagclub club, jagmembresia membresia
+            WHERE
+                club.id = membresia.club_id_lider
+                AND membresia.coleccionista_documento_identidad = coleccionista.documento_identidad
+                AND membresia.fecha_retiro IS NULL
+
+        )
+        THEN (
+            SELECT 
+                club.nombre
+            FROM
+                jagclub club, jagmembresia membresia
+            WHERE
+                club.id = membresia.club_id_lider
+                AND membresia.coleccionista_documento_identidad = coleccionista.documento_identidad
+                AND membresia.fecha_retiro IS NULL
+        )
+        ELSE ' '
+    END AS club_responsable
+FROM 
+    jagcoleccionista coleccionista,
+    jaglugar direccion, 
+    jaglugar ciudad, 
+    jaglugar estado, 
+    jaglugar pais, 
+    jaglugar nacionalidad
+WHERE 
+    coleccionista.lugar_id_direccion = direccion.id 
+    AND direccion.lugar_id = ciudad.id 
+    AND ciudad.lugar_id = estado.id 
+    AND estado.lugar_id = pais.id 
+    AND coleccionista.lugar_id_nacionalidad = nacionalidad.id 
+    AND coleccionista.documento_identidad = @id
+GROUP BY
+    coleccionista.documento_identidad, nacionalidad.nombre, direccion.nombre, estado.nombre, ciudad.nombre, pais.nombre</CommandText>
+      <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+    </Query>
+    <Fields>
+      <Field Name="documento_identidad">
+        <DataField>documento_identidad</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="primer_nombre">
+        <DataField>primer_nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="segundo_nombre">
+        <DataField>segundo_nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="primer_apellido">
+        <DataField>primer_apellido</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="segundo_apellido">
+        <DataField>segundo_apellido</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="telefono">
+        <DataField>telefono</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="fecha_nacimiento">
+        <DataField>fecha_nacimiento</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="nombre">
+        <DataField>nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="representante_documento_identidad">
+        <DataField>representante_documento_identidad</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="es_representante_coleccionista">
+        <DataField>es_representante_coleccionista</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="direccion">
+        <DataField>direccion</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="estado">
+        <DataField>estado</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="club_responsable">
+        <DataField>club_responsable</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ciudad">
+        <DataField>ciudad</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="pais">
+        <DataField>pais</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="nro_subastas_participadas">
+        <DataField>nro_subastas_participadas</DataField>
+        <rd:TypeName>System.Int64</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

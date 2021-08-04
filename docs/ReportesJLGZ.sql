@@ -1,6 +1,6 @@
 --Query Clubes
 SELECT 
-    club.id, to_char(club.fecha_fundacion, 'YYYY-MM-DD') as fecha_fundacion, 
+    club.id, to_char(club.fecha_fundacion, 'DD-MM-YYYY') AS fecha_fundacion, 
     club.telefono, 
     club.pagina_web, 
     club.proposito, 
@@ -88,3 +88,146 @@ WHERE
     AND membresia_responsable.coleccionista_documento_identidad = responsable.documento_identidad
     AND nro_miembros.club_id = club.id 
     AND club.id = @id
+
+--Coleccionistas
+SELECT 
+    coleccionista.documento_identidad,
+    coleccionista.primer_nombre,
+    coleccionista.segundo_nombre,
+    coleccionista.primer_apellido,
+    coleccionista.segundo_apellido,
+    coleccionista.telefono,
+    to_char(coleccionista.fecha_nacimiento, 'DD-MM-YYYY') AS fecha_nacimiento,
+    nacionalidad.nombre,
+    CASE 
+        WHEN coleccionista.coleccionista_documento_identidad IS NOT NULL 
+        THEN (
+            SELECT 
+                to_char(aux.documento_identidad, 9)
+            FROM 
+                jagcoleccionista aux
+            WHERE
+                aux.documento_identidad = coleccionista.coleccionista_documento_identidad
+        )
+        WHEN coleccionista.representante_documento_identidad IS NOT NULL 
+        THEN (
+            SELECT
+                to_char(aux.documento_identidad, 9)
+            FROM
+                jagrepresentante aux
+            WHERE
+                aux.documento_identidad = coleccionista.representante_documento_identidad
+        )
+        ELSE ' '
+    END AS representante_documento_identidad,
+    CASE 
+        WHEN coleccionista.coleccionista_documento_identidad IS NOT NULL 
+        THEN 'Si'
+        WHEN coleccionista.representante_documento_identidad IS NOT NULL 
+        THEN 'No'
+        ELSE ' '
+    END AS es_representante_coleccionista,
+    direccion.nombre AS direccion, 
+    estado.nombre AS estado, 
+    ciudad.nombre AS ciudad, 
+    pais.nombre AS pais, 
+    CASE 
+        WHEN EXISTS (
+            SELECT 
+                COUNT(participante.subasta_id) AS nro_subastas_participadas
+            FROM
+                jagparticipante participante
+            WHERE
+                participante.membresia_coleccionista_documento_identidad = coleccionista. documento_identidad
+            GROUP BY participante.membresia_coleccionista_documento_identidad
+        )
+        THEN (
+            SELECT 
+                COUNT(participante.subasta_id) AS nro_subastas_participadas
+            FROM
+                jagparticipante participante
+            WHERE
+                participante.membresia_coleccionista_documento_identidad = coleccionista. documento_identidad
+            GROUP BY participante.membresia_coleccionista_documento_identidad
+        )
+        ELSE '0'
+    END AS nro_subastas_participadas,
+    CASE
+        WHEN EXISTS (
+            SELECT 
+                club.nombre
+            FROM
+                jagclub club, jagmembresia membresia
+            WHERE
+                club.id = membresia.club_id_lider
+                AND membresia.coleccionista_documento_identidad = coleccionista.documento_identidad
+                AND membresia.fecha_retiro IS NULL
+
+        )
+        THEN (
+            SELECT 
+                club.nombre
+            FROM
+                jagclub club, jagmembresia membresia
+            WHERE
+                club.id = membresia.club_id_lider
+                AND membresia.coleccionista_documento_identidad = coleccionista.documento_identidad
+                AND membresia.fecha_retiro IS NULL
+        )
+        ELSE ' '
+    END AS club_responsable
+FROM 
+    jagcoleccionista coleccionista,
+    jaglugar direccion, 
+    jaglugar ciudad, 
+    jaglugar estado, 
+    jaglugar pais, 
+    jaglugar nacionalidad
+WHERE 
+    coleccionista.lugar_id_direccion = direccion.id 
+    AND direccion.lugar_id = ciudad.id 
+    AND ciudad.lugar_id = estado.id 
+    AND estado.lugar_id = pais.id 
+    AND coleccionista.lugar_id_nacionalidad = nacionalidad.id 
+    AND coleccionista.documento_identidad = @id
+
+SELECT 
+	to_char(MAX(fecha_registro), 'DD-MM-YYYY') AS fecha_adquisision,
+    CASE
+        WHEN dueno.comic_id IS NOT NULL
+        THEN comic.titulo
+        WHEN dueno.coleccionable_id IS NOT NULL
+        THEN coleccionable.nombre
+    END as nombre
+FROM 
+    jagcomic comic
+        FULL JOIN jagdueno_historico dueno ON comic.id = dueno.comic_id
+            FULL JOIN jagcoleccionable coleccionable on dueno.coleccionable_id = coleccionable.id
+WHERE
+    dueno.coleccionista_documento_identidad = @id
+GROUP BY 
+	dueno.comic_id,
+	dueno.coleccionable_id,
+	comic.titulo,
+	coleccionable.nombre
+
+--Planificacion
+SELECT 
+	subasta.id, 
+	to_char(subasta.fecha, 'DD-MM-YYYY') AS fecha,
+    date_part('year', subasta.fecha) as year,
+	to_char(subasta.hora_inicio, 'HH24:MI') AS hora_inicio,
+	to_char(subasta.hora_cierre, 'HH24:MI') AS hora_cierre,
+	subasta.tipo,
+	CASE
+		WHEN subasta.caridad
+		THEN 'Benefica'
+		ELSE 'No Benefica'
+	END AS caridad,
+	"local".nombre AS "local"
+FROM 
+	jagsubasta subasta
+		LEFT JOIN jaglocal "local" ON "local".id = subasta.local_id
+WHERE
+    date_part('year', subasta.fecha) = @year
+ORDER BY subasta.fecha
