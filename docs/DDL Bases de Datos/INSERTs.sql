@@ -247,10 +247,11 @@ INSERT INTO JAGmembresia (fecha_ingreso, fecha_retiro, club_id, club_id_lider, c
 INSERT INTO JAGmembresia (fecha_ingreso, fecha_retiro, club_id, club_id_lider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '7', '7', '2345678', NULL);
 INSERT INTO JAGmembresia (fecha_ingreso, fecha_retiro, club_id, club_id_lider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '8', '8', '14725836', NULL);
 INSERT INTO JAGmembresia (fecha_ingreso, fecha_retiro, club_id, club_id_lider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '9', '9', '25836914', NULL);
-INSERT INTO JAGmembresia (fecha_ingreso, fecha_retiro, club_id, club_id_lider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '1', NULL, '1998456', NULL);
+INSERT INTO JAGmembresia (fecha_ingreso, fecha_retiro, club_id, club_id_lider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', '3/3/2012', '1', NULL, '1998456', NULL);
 INSERT INTO JAGmembresia (fecha_ingreso, fecha_retiro, club_id, club_id_lider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '1', NULL, '12345698', NULL);
 INSERT INTO JAGmembresia (fecha_ingreso, fecha_retiro, club_id, club_id_lider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '4', NULL, '14000001', NULL);
 INSERT INTO JAGmembresia (fecha_ingreso, fecha_retiro, club_id, club_id_lider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2010', NULL, '3', NULL, '12987456', NULL);
+INSERT INTO JAGmembresia (fecha_ingreso, fecha_retiro, club_id, club_id_lider, coleccionista_documento_identidad, email_contacto) VALUES ('3/3/2012', NULL, '3', NULL, '1998456', NULL);
 
 INSERT INTO JAGorganizacion_caridad (nombre, mision) VALUES ('Cruz Roja', 'Salud');
 INSERT INTO JAGorganizacion_caridad (nombre, mision) VALUES ('Casa de Ronald MacDonald', 'Por el bienestar de los chicos');
@@ -274,6 +275,15 @@ INSERT INTO JAGsubasta (fecha, hora_inicio, hora_cierre, tipo, caridad, cancelad
 
 INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('9', '1', NULL);
 INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('9', NULL, '3');
+INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('4', '1', NULL);
+INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('4', NULL, '2');
+INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('3', '3', NULL);
+INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('3', NULL, '5');
+INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('10', NULL, '1');
+INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('8', NULL, '1');
+INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('2', '1', NULL);
+INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('2', NULL, '3');
+INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('2', NULL, '5');
 
 INSERT INTO JAGorg_sub (porcentaje, monto_recibido, organizacion_caridad_id, subasta_id) VALUES ('10', '2101', '9', '9');
 
