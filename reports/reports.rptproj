@@ -58,6 +58,7 @@
     <DataSet Include="Historico.rsd" />
     <DataSet Include="NumeroDeMiembrosPorClub.rsd" />
     <DataSet Include="NumeroDeSubastasOrganizadas.rsd" />
+    <DataSet Include="PlanificacionByYear.rsd" />
   </ItemGroup>
   <ItemGroup>
     <DataSource Include="DataSource1.rds" />
@@ -68,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Report Include="FichaColeccionista.rdl" />
+    <Report Include="FichaPlanificacion.rdl" />
     <Report Include="Ficha_club.rdl" />
     <Report Include="Ficha_comic.rdl" />
     <Report Include="Planificacion_anual.rdl" />

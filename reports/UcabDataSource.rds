@@ -3,6 +3,7 @@
   <ConnectionProperties>
     <Extension>ODBC</Extension>
     <ConnectString>Dsn=UcabDataSource</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
   </ConnectionProperties>
   <DataSourceID>e4217706-e5a6-4ddf-a926-fe7b9e9fd191</DataSourceID>
 </RptDataSource>

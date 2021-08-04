@@ -210,3 +210,24 @@ GROUP BY
 	dueno.coleccionable_id,
 	comic.titulo,
 	coleccionable.nombre
+
+--Planificacion
+SELECT 
+	subasta.id, 
+	to_char(subasta.fecha, 'DD-MM-YYYY') AS fecha,
+    date_part('year', subasta.fecha) as year,
+	to_char(subasta.hora_inicio, 'HH24:MI') AS hora_inicio,
+	to_char(subasta.hora_cierre, 'HH24:MI') AS hora_cierre,
+	subasta.tipo,
+	CASE
+		WHEN subasta.caridad
+		THEN 'Benefica'
+		ELSE 'No Benefica'
+	END AS caridad,
+	"local".nombre AS "local"
+FROM 
+	jagsubasta subasta
+		LEFT JOIN jaglocal "local" ON "local".id = subasta.local_id
+WHERE
+    date_part('year', subasta.fecha) = @year
+ORDER BY subasta.fecha

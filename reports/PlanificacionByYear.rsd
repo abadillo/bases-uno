@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>UcabDataSource</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@year">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT 
+	subasta.id, 
+	to_char(subasta.fecha, 'DD-MM-YYYY') AS fecha,
+    date_part('year', subasta.fecha) as year,
+	to_char(subasta.hora_inicio, 'HH24:MI') AS hora_inicio,
+	to_char(subasta.hora_cierre, 'HH24:MI') AS hora_cierre,
+	subasta.tipo,
+	CASE
+		WHEN subasta.caridad
+		THEN 'Benefica'
+		ELSE 'No Benefica'
+	END AS caridad,
+	"local".nombre AS "local"
+FROM 
+	jagsubasta subasta
+		LEFT JOIN jaglocal "local" ON "local".id = subasta.local_id
+WHERE
+    date_part('year', subasta.fecha) = @year
+ORDER BY subasta.fecha</CommandText>
+      <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+    </Query>
+    <Fields>
+      <Field Name="id">
+        <DataField>id</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="fecha">
+        <DataField>fecha</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="year">
+        <DataField>year</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="hora_inicio">
+        <DataField>hora_inicio</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="hora_cierre">
+        <DataField>hora_cierre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="tipo">
+        <DataField>tipo</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="caridad">
+        <DataField>caridad</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="local">
+        <DataField>local</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
