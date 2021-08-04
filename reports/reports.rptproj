@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Report Include="Ficha_club.rdl" />
+    <Report Include="Ficha_Club_Bien.rdl" />
     <Report Include="Ficha_comic.rdl" />
     <Report Include="Planificacion_anual.rdl" />
     <Report Include="reporteprueba.rdl" />

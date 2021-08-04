@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@id">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT        "public".jagclub.nombre, "public".jagcoleccionista.primer_nombre, "public".jagcoleccionista.segundo_nombre, "public".jagcoleccionista.primer_apellido, 
+                         "public".jagcoleccionista.segundo_apellido
+FROM            "public".jagclub, "public".jagorg_inv, "public".jagsubasta, "public".jagmembresia, "public".jagcoleccionista
+WHERE        "public".jagclub.id = "public".jagorg_inv.club_id_inv AND "public".jagclub.id = "public".jagsubasta.id AND (jagmembresia.club_id = jagclub.id) AND (jagorg_inv.id = @id) 
+                         AND (jagmembresia.coleccionista_documento_identidad = jagcoleccionista.documento_identidad)</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="nombre">
+        <DataField>nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="primer_nombre">
+        <DataField>primer_nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="segundo_nombre">
+        <DataField>segundo_nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="primer_apellido">
+        <DataField>primer_apellido</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="segundo_apellido">
+        <DataField>segundo_apellido</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

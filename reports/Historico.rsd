@@ -4,13 +4,13 @@
     <Query>
       <DataSourceReference>UCAB_FIN</DataSourceReference>
       <CommandText>SELECT CONCAT(t.primer_nombre,' ',t.segundo_nombre) AS Nombre,
-CONCAT(t.primer_apellido,' ',t.segundo_apellido) AS Apellido,d.fecha_registro, 
-	(SELECT CONCAT(t.primer_nombre,' ',t.segundo_nombre,' ',
-		t.primer_apellido,' ',t.segundo_apellido) AS Nombre_dueno
-		 FROM jagcoleccionista t,jagdueno_historico d, jagcoleccionable c
-                                       WHERE  t.documento_identidad=d.coleccionista_documento_identidad
-                                        AND c.id=d.coleccionable_id
-                                        AND c.id=@id 
+CONCAT(t.primer_apellido,' ',t.segundo_apellido) AS Apellido,d.fecha_registro AS Fecha, 
+	(SELECT CONCAT(a.primer_nombre,' ',a.segundo_nombre,' ',
+		a.primer_apellido,' ',a.segundo_apellido) AS Nombre_dueno
+		 FROM jagcoleccionista a,jagdueno_historico d, jagcoleccionable j
+                                       WHERE  a.documento_identidad=d.coleccionista_documento_identidad
+                                        AND j.id=d.coleccionable_id
+                                        AND j.id=@id 
 		  ORDER BY d.fecha_registro DESC
 		   LIMIT 1),
 	                  	CASE WHEN c.id &lt;&gt; NULL
@@ -18,16 +18,16 @@ CONCAT(t.primer_apellido,' ',t.segundo_apellido) AS Apellido,d.fecha_registro,
 			where c.id=h.comic_id
 			AND c.id=1
 			LIMIT 1)
-		ELSE (SELECT c.nombre FROM jagcoleccionable c,jagdueno_historico h
-			where c.id=h.coleccionable_id
-			AND c.id=@id
+		ELSE (SELECT c.nombre FROM jagcoleccionable b,jagdueno_historico h
+			where b.id=h.coleccionable_id
+			AND b.id=@id
 			LIMIT 1)
 		END AS Nom_Objeto,d.precio_dolar
 FROM jagcoleccionista t,jagdueno_historico d, jagcoleccionable c
 WHERE t.documento_identidad=d.coleccionista_documento_identidad
 AND (c.id=d.coleccionable_id )
 AND (c.id=@id )
-AND d.fecha_registro &lt;= (SELECT h.fecha_registro FROM jagdueno_historico h,jagcoleccionable c
+AND d.fecha_registro &lt;= (SELECT h.fecha_registro AS Fecha2 FROM jagdueno_historico h,jagcoleccionable c
 			WHERE c.id=h.coleccionable_id
 			ORDER BY d.fecha_registro DESC
 			LIMIT 1)</CommandText>
