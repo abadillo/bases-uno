@@ -205,13 +205,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox41</rd:DefaultName>
-<<<<<<< HEAD
-            <Top>0.88653in</Top>
-            <Left>7.08963in</Left>
-=======
             <Top>1.88653in</Top>
             <Left>6.90213in</Left>
->>>>>>> 318205ca31a5a91a95b211b6548f7b5bcb8e3070
             <Height>0.25in</Height>
             <Width>0.58114in</Width>
             <ZIndex>1</ZIndex>
@@ -243,13 +238,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox42</rd:DefaultName>
-<<<<<<< HEAD
-            <Top>0.88653in</Top>
-            <Left>2.53838in</Left>
-=======
             <Top>1.88653in</Top>
             <Left>3.36412in</Left>
->>>>>>> 318205ca31a5a91a95b211b6548f7b5bcb8e3070
             <Height>0.25in</Height>
             <Width>0.40754in</Width>
             <ZIndex>2</ZIndex>
@@ -315,13 +305,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox44</rd:DefaultName>
-<<<<<<< HEAD
-            <Top>0.88653in</Top>
-            <Left>2.94592in</Left>
-=======
             <Top>1.88653in</Top>
             <Left>3.91054in</Left>
->>>>>>> 318205ca31a5a91a95b211b6548f7b5bcb8e3070
             <Height>0.25in</Height>
             <Width>0.73739in</Width>
             <ZIndex>4</ZIndex>
@@ -387,13 +372,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox41</rd:DefaultName>
-<<<<<<< HEAD
-            <Top>0.88653in</Top>
-            <Left>7.72633in</Left>
-=======
             <Top>1.88653in</Top>
             <Left>7.53883in</Left>
->>>>>>> 318205ca31a5a91a95b211b6548f7b5bcb8e3070
             <Height>0.25in</Height>
             <Width>0.74781in</Width>
             <ZIndex>6</ZIndex>
@@ -430,13 +410,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox44</rd:DefaultName>
-<<<<<<< HEAD
-            <Top>0.88653in</Top>
-            <Left>3.6972in</Left>
-=======
             <Top>1.88653in</Top>
             <Left>4.70349in</Left>
->>>>>>> 318205ca31a5a91a95b211b6548f7b5bcb8e3070
             <Height>0.25in</Height>
             <Width>1.17489in</Width>
             <ZIndex>7</ZIndex>
@@ -1800,7 +1775,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-<<<<<<< HEAD
           <Textbox Name="Textbox58">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -1823,22 +1797,11 @@
             <Left>4.92765in</Left>
             <Height>0.25in</Height>
             <Width>1.08462in</Width>
-=======
-          <Image Name="Image1">
-            <Source>Embedded</Source>
-            <Value>logoii</Value>
-            <Sizing>FitProportional</Sizing>
-            <Top>0.80083in</Top>
-            <Left>3.99875in</Left>
-            <Height>0.75in</Height>
-            <Width>1.29773in</Width>
->>>>>>> 318205ca31a5a91a95b211b6548f7b5bcb8e3070
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-<<<<<<< HEAD
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1879,10 +1842,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-=======
-            </Style>
-          </Image>
->>>>>>> 318205ca31a5a91a95b211b6548f7b5bcb8e3070
         </ReportItems>
         <Height>5.59771in</Height>
         <Style>
