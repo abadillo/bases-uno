@@ -54,6 +54,7 @@
     <DataSet Include="Clubes.rsd" />
     <DataSet Include="ColeccionByColeccionista.rsd" />
     <DataSet Include="ColeccionistaByID.rsd" />
+    <DataSet Include="ColeccionistaByIDSimp.rsd" />
     <DataSet Include="DataSet1.rsd" />
     <DataSet Include="Historico.rsd" />
     <DataSet Include="NumeroDeMiembrosPorClub.rsd" />
@@ -82,7 +83,7 @@
     <Report Include="Planificacion_anual.rdl" />
     <Report Include="reporteprueba.rdl" />
     <Report Include="Reporte_historico.rdl" />
-    <Report Include="Reporte_Participacion.rdl" />
+    <Report Include="ResumenParticipacion.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

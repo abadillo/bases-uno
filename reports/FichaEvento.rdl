@@ -599,7 +599,7 @@
             <DataSetName>OrganizadoresBySubasta</DataSetName>
             <Top>1.74764in</Top>
             <Left>0.65735in</Left>
-            <Height>0.47917in</Height>
+            <Height>0.47916in</Height>
             <Width>2.4904in</Width>
             <ZIndex>8</ZIndex>
             <Style>
@@ -995,48 +995,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Rectangle Name="Rectangle3">
-            <KeepTogether>true</KeepTogether>
-            <Top>4.51958in</Top>
-            <Left>0.65734in</Left>
-            <Height>0.46875in</Height>
-            <Width>2.6056in</Width>
-            <ZIndex>12</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <BackgroundColor>White</BackgroundColor>
-            </Style>
-          </Rectangle>
-          <Rectangle Name="Rectangle4">
-            <KeepTogether>true</KeepTogether>
-            <Top>4.51958in</Top>
-            <Left>3.26294in</Left>
-            <Height>0.46875in</Height>
-            <Width>2.6056in</Width>
-            <ZIndex>13</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <BackgroundColor>Silver</BackgroundColor>
-            </Style>
-          </Rectangle>
-          <Rectangle Name="Rectangle5">
-            <KeepTogether>true</KeepTogether>
-            <Top>4.51958in</Top>
-            <Left>5.86853in</Left>
-            <Height>0.46875in</Height>
-            <Width>2.6056in</Width>
-            <ZIndex>14</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <BackgroundColor>White</BackgroundColor>
-            </Style>
-          </Rectangle>
           <Tablix Name="Tablix9">
             <TablixBody>
               <TablixColumns>
@@ -1491,7 +1449,7 @@
             <Left>0.65735in</Left>
             <Height>0.46875in</Height>
             <Width>7.81679in</Width>
-            <ZIndex>15</ZIndex>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1520,7 +1478,7 @@
             <Left>0.65735in</Left>
             <Height>0.23958in</Height>
             <Width>7.81679in</Width>
-            <ZIndex>16</ZIndex>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1774,8 +1732,8 @@
             <Top>3.87896in</Top>
             <Left>0.65734in</Left>
             <Height>0.46875in</Height>
-            <Width>7.81679in</Width>
-            <ZIndex>17</ZIndex>
+            <Width>7.8168in</Width>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1804,7 +1762,7 @@
             <Left>0.65734in</Left>
             <Height>0.23958in</Height>
             <Width>7.81679in</Width>
-            <ZIndex>18</ZIndex>
+            <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
