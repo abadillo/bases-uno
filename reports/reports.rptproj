@@ -62,6 +62,7 @@
     <DataSet Include="ObjetosBySubasta.rsd" />
     <DataSet Include="OrganizadoresBySubasta.rsd" />
     <DataSet Include="OrgCaridadBySubasta.rsd" />
+    <DataSet Include="ParticipacionByIDDate.rsd" />
     <DataSet Include="ParticipantesBySubasta.rsd" />
     <DataSet Include="PlanificacionByYear.rsd" />
     <DataSet Include="SubastaByID.rsd" />

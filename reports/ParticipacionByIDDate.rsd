@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>UcabDataSource</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@fecha_inicio">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@fecha_fin">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@documento_identidad">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>String</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>
+
+SELECT
+    s.id as subasta,
+    to_char(s.fecha, 'DD-MM-YYYY') AS fecha,
+    'Vendedor' as rol,
+    c.nombre as club
+from
+    jagsubasta s,
+    jaglistado l,
+    jagdueno_historico dh,
+    jagorg_inv oi,
+    jagclub c,
+    jagmembresia m
+
+where
+    s.fecha between @fecha_inicio and @fecha_fin and
+    l.subasta_id = s.id and
+    l.dueno_historico_id = dh.id and
+    dh.coleccionista_documento_identidad = @documento_identidad and
+    m.coleccionista_documento_identidad = dh.coleccionista_documento_identidad and
+    m.club_id = oi.CLUB_id_org and
+    c.id = oi.CLUB_id_org
+
+group by
+	s.id, s.fecha, c.nombre
+
+
+UNION
+
+SELECT
+    s.id as subasta,
+    to_char(s.fecha, 'DD-MM-YYYY') AS fecha,
+    'Comprador' as rol,
+    c.nombre as club
+from
+    jagsubasta s,
+    jagparticipante p,
+    jagclub c
+
+where
+    s.fecha between  @fecha_inicio and @fecha_fin and
+    p.subasta_id = s.id and
+    p.membresia_coleccionista_documento_identidad = @documento_identidad and
+    p.membresia_club_id = c.id
+
+group by
+	s.id, s.fecha, c.nombre
+
+order by rol desc, fecha</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="subasta">
+        <DataField>subasta</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="fecha">
+        <DataField>fecha</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="rol">
+        <DataField>rol</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="club">
+        <DataField>club</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

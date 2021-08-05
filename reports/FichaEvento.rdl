@@ -27,7 +27,7 @@
         </Field>
         <Field Name="duracion_pujas">
           <DataField>duracion_pujas</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="caridad">
           <DataField>caridad</DataField>
@@ -206,7 +206,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox41</rd:DefaultName>
             <Top>0.88653in</Top>
-            <Left>6.90213in</Left>
+            <Left>7.08963in</Left>
             <Height>0.25in</Height>
             <Width>0.58114in</Width>
             <ZIndex>1</ZIndex>
@@ -239,9 +239,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox42</rd:DefaultName>
             <Top>0.88653in</Top>
-            <Left>3.36412in</Left>
+            <Left>2.53838in</Left>
             <Height>0.25in</Height>
-            <Width>0.47698in</Width>
+            <Width>0.40754in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -266,7 +266,9 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <Top>0.88653in</Top>
@@ -304,7 +306,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox44</rd:DefaultName>
             <Top>0.88653in</Top>
-            <Left>3.91054in</Left>
+            <Left>2.94592in</Left>
             <Height>0.25in</Height>
             <Width>0.73739in</Width>
             <ZIndex>4</ZIndex>
@@ -371,9 +373,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox41</rd:DefaultName>
             <Top>0.88653in</Top>
-            <Left>7.53883in</Left>
+            <Left>7.72633in</Left>
             <Height>0.25in</Height>
-            <Width>0.93531in</Width>
+            <Width>0.74781in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -409,7 +411,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox44</rd:DefaultName>
             <Top>0.88653in</Top>
-            <Left>4.70349in</Left>
+            <Left>3.6972in</Left>
             <Height>0.25in</Height>
             <Width>1.17489in</Width>
             <ZIndex>7</ZIndex>
@@ -1763,6 +1765,73 @@
             <Height>0.23958in</Height>
             <Width>7.81679in</Width>
             <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox58">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Duracion Pujas:</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox41</rd:DefaultName>
+            <Top>0.88653in</Top>
+            <Left>4.92765in</Left>
+            <Height>0.25in</Height>
+            <Width>1.08462in</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox59">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!duracion_pujas.Value, "SubastaByID")</Value>
+                    <Style>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox41</rd:DefaultName>
+            <Top>0.88653in</Top>
+            <Left>6.08171in</Left>
+            <Height>0.25in</Height>
+            <Width>0.884in</Width>
+            <ZIndex>17</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
