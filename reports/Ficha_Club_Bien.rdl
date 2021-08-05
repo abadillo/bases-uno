@@ -500,7 +500,7 @@ INNER JOIN jagclub b ON (b.id=m.club_id AND b.id=@id)</CommandText>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>2.86333in</Top>
+            <Top>2.66541in</Top>
             <Left>0.55778in</Left>
             <Height>0.5in</Height>
             <Width>7.1875in</Width>
