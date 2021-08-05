@@ -1,6 +1,12 @@
 
 
--- FICHA EVENTO
+"FICHA EVENTO por evento"
+
+- el club organizador
+- los participantes compradores con el club representan
+- los objetos a subastar especificando el orden, el precio base en las dos monedas, el dueño del objeto y la duracion total para las pujas
+- En la subasta de **caridad** tambien va la informacion de las organizaciones que recibiran el dinero resultante de las ventas logradas y el % que le corresponde recibir a cada una
+
 
 -- Datos de la subasta y duracion de las pujas (SubastaByID)
 select
@@ -23,7 +29,6 @@ where
 
 group by
     s.id
-
 
 
 -- Organizadores (OrganizadoresBySubasta)
@@ -59,7 +64,6 @@ order by
 
 
 -- Objetos a subasta (ObjetosBySubasta)
-
 SELECT
 	l.orden,
 
@@ -70,7 +74,6 @@ SELECT
 
 	c.documento_identidad,
 	concat(c.primer_nombre,' ',c.primer_apellido) as dueno
-
 
 FROM jaglistado l
 
@@ -83,7 +86,6 @@ where l.subasta_id = 9
 order by l.orden;
 
 -- Organizaciones caridad (OrgCaridadBySubasta)
-
 SELECT
     oc.nombre,
     oc.mision,
@@ -103,12 +105,18 @@ WHERE
 
 
 
--- Resultados Evento
+"Resultados Evento por evento"
+
+- Objetos vendidos: precio alcanzado, nuevo dueño (con su club)
+- Objetos no vendidos
+- En las subastas de caridad, el total otorgado a cada organizacion.
 
 
 
+"Resumen de Participacion por coleccionista y rango fecha"
 
--- Resumen de Participacion
+- . para un periodo de tiempo, mostrar la lista de eventos en los que ha participado especificando el rol que desempeñe en cada uno (vendedor o comprador) y cual club representaba. El resumen debe estar organizado por rol - primero como vendedor, segundo como comprador y en cada caso se debe presentar la informacion cronologicamente.
+
 
 -- Datos coleccionista (ColeccionistaByIDSimp)
 SELECT
