@@ -1112,7 +1112,7 @@
           <BackgroundColor>#1a2631</BackgroundColor>
         </Style>
       </Body>
-      <Width>9.58872in</Width>
+      <Width>9.21875in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
@@ -1131,7 +1131,7 @@
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
+      <NumberOfRows>1</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>

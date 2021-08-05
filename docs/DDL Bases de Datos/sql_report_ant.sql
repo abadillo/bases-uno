@@ -70,7 +70,7 @@ SELECT
     concat(co.titulo,cl.nombre) as objeto,
 
 	to_char(l.precio_base_dolar,'999990.0 $') as precio_base_dolar,
-	to_char(l.precio_base_dolar * 0.84,'999990.0 â‚¬') as precio_base_euro,
+	to_char(l.precio_base_dolar * 0.84,'999990.0 €') as precio_base_euro,
 
 	c.documento_identidad,
 	concat(c.primer_nombre,' ',c.primer_apellido) as dueno
