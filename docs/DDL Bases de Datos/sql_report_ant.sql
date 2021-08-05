@@ -85,11 +85,13 @@ LEFT JOIN jagcoleccionable cl ON cl.id = dh.coleccionable_id
 where l.subasta_id = 9
 order by l.orden;
 
+
 -- Organizaciones caridad (OrgCaridadBySubasta)
 SELECT
     oc.nombre,
     oc.mision,
-    to_char(os.porcentaje,'999%') as porcentaje
+    to_char(os.porcentaje,'999%') as porcentaje,
+    to_char(os.monto_recibido,'999990.0 $') as monto_recibido
 
 FROM
     JAGORGANIZACION_CARIDAD oc,
@@ -104,12 +106,71 @@ WHERE
 
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 "Resultados Evento por evento"
 
 - Objetos vendidos: precio alcanzado, nuevo dueño (con su club)
 - Objetos no vendidos
 - En las subastas de caridad, el total otorgado a cada organizacion.
+
+
+-- Objetos vendido y no vendido (ObjetosVendidosBySubasta)
+SELECT
+    concat(co.titulo,cl.nombre) as objeto,
+   
+	case 
+		when l.precio_vendido_dolar is null
+		then 'No Vendido'
+		else 'Vendido'
+	end as vendido,
+	
+	to_char(l.precio_vendido_dolar ,'999990.0 $') as precio_vendido,
+
+	c.documento_identidad,
+	concat(c.primer_nombre,' ',c.primer_apellido) as nuevo_dueno
+
+FROM jaglistado l
+
+JOIN jagdueno_historico dh ON dh.id = l.dueno_historico_id
+left join jagparticipante p on p.id_inscripcion = l.PARTICIPANTE_id_inscripcion 
+left join jagmembresia m on m.coleccionista_documento_identidad = p.membresia_coleccionista_documento_identidad 
+left join jagcoleccionista c on c.documento_identidad = m.coleccionista_documento_identidad 
+
+left join jagcomic co on co.id = dh.comic_id
+LEFT JOIN jagcoleccionable cl ON cl.id = dh.coleccionable_id
+
+where l.subasta_id = 9
+order by vendido desc
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

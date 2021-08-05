@@ -11,20 +11,24 @@
           <rd:DbType>String</rd:DbType>
         </DataSetParameter>
       </DataSetParameters>
-      <CommandText>-- Organizaciones caridad
+      <CommandText>
 
+-- Organizaciones caridad (OrgCaridadBySubasta)
 SELECT
     oc.nombre,
     oc.mision,
-    to_char(os.porcentaje,'999%') as porcentaje
+    to_char(os.porcentaje,'999%') as porcentaje,
+    to_char(os.monto_recibido,'999990.0 $') as monto_recibido
 
 FROM
     JAGORGANIZACION_CARIDAD oc,
     JAGORG_SUB os
 
 WHERE
-    os.subasta_id = @id  and
+    os.subasta_id = @id and
     os.organizacion_caridad_id = oc.id
+
+
 </CommandText>
     </Query>
     <Fields>
@@ -38,6 +42,10 @@ WHERE
       </Field>
       <Field Name="porcentaje">
         <DataField>porcentaje</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="monto_recibido">
+        <DataField>monto_recibido</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
     </Fields>

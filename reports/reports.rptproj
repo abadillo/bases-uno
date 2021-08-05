@@ -60,6 +60,7 @@
     <DataSet Include="NumeroDeMiembrosPorClub.rsd" />
     <DataSet Include="NumeroDeSubastasOrganizadas.rsd" />
     <DataSet Include="ObjetosBySubasta.rsd" />
+    <DataSet Include="ObjetosVendidosBySubasta.rsd" />
     <DataSet Include="OrganizadoresBySubasta.rsd" />
     <DataSet Include="OrgCaridadBySubasta.rsd" />
     <DataSet Include="ParticipacionByIDDate.rsd" />
@@ -85,6 +86,7 @@
     <Report Include="reporteprueba.rdl" />
     <Report Include="Reporte_historico.rdl" />
     <Report Include="Reporte_Participacion.rdl" />
+    <Report Include="ResultadoEvento.rdl" />
     <Report Include="ResumenParticipacion.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
