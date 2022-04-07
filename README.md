@@ -5,20 +5,21 @@ Se diseñó e implementó un sistema de bases de datos tipo OLTP a través de un
 
 # Base de Datos
 
-![modelo-entidad-relacion](/bases-uno/docs/diagramas/mer/MER_final.png)
+![modelo-entidad-relacion](/docs/diagramas/mer/MER_final.png)
 
 [Scripts de creacion, insercion y eliminacion](https://github.com/abadillo/bases-uno/tree/main/docs/DDL%20Bases%20de%20Datos)
 
 # Aplicación de escritorio programada en C
 
 ## Interfaz de listado de comics
-![listado-comics](/bases-uno/img/listado-comics.png)
+![listado-comics](/img/listado-comics.png)
+
 
 ## Interfaz de datos de subasta
-![datos-subasta](/bases-uno/img/datos-subasta.png)
+![datos-subasta](/img/datos-subasta.png)
 
 ## Interfaz de edición de comic
-![datos-subasta](/bases-uno/img/edicion-comic.png)
+![datos-subasta](/img/edicion-comic.png)
 
 
 
