@@ -279,7 +279,7 @@ INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('4', '1', 
 INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('4', NULL, '2');
 INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('3', '3', NULL);
 INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('3', NULL, '5');
-INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('10', NULL, '1');
+INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('9', NULL, '1');
 INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('8', NULL, '1');
 INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('2', '1', NULL);
 INSERT INTO JAGorg_inv (subasta_id, club_id_org, club_id_inv) VALUES ('2', NULL, '3');
