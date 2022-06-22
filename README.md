@@ -9,7 +9,7 @@ Se diseñó e implementó un sistema de bases de datos tipo OLTP a través de un
 
 [Scripts de creacion, insercion y eliminacion](https://github.com/abadillo/bases-uno/tree/main/docs/DDL%20Bases%20de%20Datos)
 
-# Aplicación de escritorio programada en C
+# Aplicación de escritorio programada en C#
 
 ## Interfaz de listado de comics
 ![listado-comics](/img/listado-comics.png)
@@ -23,7 +23,6 @@ Se diseñó e implementó un sistema de bases de datos tipo OLTP a través de un
 
 
 
-
 # Pasos para ejecutar
 
 1. Crear una base de datos con los [scripts](https://github.com/abadillo/bases-uno/tree/main/docs/DDL%20Bases%20de%20Datos)
@@ -34,6 +33,11 @@ Se diseñó e implementó un sistema de bases de datos tipo OLTP a través de un
 
 4. Ejecutar el archivo 'bases-uno.exe'
 
+# Tecnologías usadas
+
+1. Manejador de Base de Datos: PostgreSQL 10
+2. Framework de Desarrollo: .NET Framework, versión 4.7.2
+3. Generador de Reportes: Microsoft RDLC Report Designer, versión 15.3.1
 
 # Equipo
 
